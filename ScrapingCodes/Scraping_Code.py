@@ -23,10 +23,10 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
-filename="Stored-Scraped-Data/Testing_.xlsx"
+filename="StoredScrapedData/Testing_.xlsx"
 
 df = pd.read_excel(filename)
-urls=pd.read_excel("Stored-Scraped-Data/Product_urls.xlsx")
+urls=pd.read_excel("StoredScrapedData/Product_urls.xlsx")
 no_website=[]
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Comitidy","Retailer"])
 
