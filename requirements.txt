@@ -9,3 +9,8 @@ xlsxWriter==3.1.0
 PyPDF2==3.0.1
 tabula-py==2.7.0
 matplotlib==3.7.0
+pdfplumber
+bs4
+ast
+lxml
+urllib
