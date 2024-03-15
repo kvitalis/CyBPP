@@ -10,7 +10,7 @@ run-name: Adding daily scrape to current CSV
 on:
   schedule:
     # Runs at 11:30 UTC everyday (Cyprus)
-    - cron: "42 10 * * *"
+    - cron: "03 11 * * *"
 
 #
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8 #install the python needed
+          python-version: 3.9 #install the python needed
       - name: Upgrade pip
         run: pip install --upgrade pip
       # Installs the required Python dependencies
