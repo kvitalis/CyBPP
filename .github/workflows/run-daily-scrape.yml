@@ -27,12 +27,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.8 #install the python needed
+      - name: Upgrade pip
+        run: pip install --upgrade pip
       # Installs the required Python dependencies
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Upgrade pip
-        run: pip install --upgrade pip
       - name: execute py script products
         run: |
           python ScrapingCodes/Scraping_Code.py
