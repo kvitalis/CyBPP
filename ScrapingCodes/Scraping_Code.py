@@ -6,7 +6,7 @@ import xlsxwriter
 import urllib.request
 import json
 import tabula as tb
-import PyPDF
+import PyPDF2
 import warnings
 import matplotlib.pyplot as plt
 import numpy as np
