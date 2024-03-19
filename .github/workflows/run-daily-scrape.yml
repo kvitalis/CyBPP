@@ -9,7 +9,6 @@ run-name: Adding daily scrape to current CSV
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    # Runs at 11:30 UTC everyday (Cyprus)
     - cron: "05 06 * * *"
 
 #
@@ -22,7 +21,6 @@ jobs:
         uses: actions/checkout@v3 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
-      # It sets up Python 3.8 on the runner using actions/setup-python@v4.
       - name: setup python
         uses: actions/setup-python@v4
         with:
