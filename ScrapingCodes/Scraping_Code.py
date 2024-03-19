@@ -28,7 +28,7 @@ filename="StoredScrapedData/Testing_.xlsx"
 df = pd.read_excel(filename)
 urls=pd.read_excel("StoredScrapedData/Product_urls.xlsx")
 no_website=[]
-list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Comitidy","Retailer"])
+list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
 
 def results_ikea(u):
@@ -59,7 +59,7 @@ def results_ikea(u):
             new_row.append(name_)
             new_row.append(float(element_soup_3))
             new_row.append(subclass_)
-            new_row.append(comitidy_)
+            new_row.append(division_)
             new_row.append("IKEA")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -69,7 +69,7 @@ for u in range(0,len(urls)):
     Item_url_=urls["Item.url"].iloc[u]
     name_=urls["Name"].iloc[u]
     subclass_=urls["subclass"].iloc[u]
-    comitidy_=urls["Division"].iloc[u]
+    division_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
     if retailer_=="IKEA":
         results_ikea(u)
