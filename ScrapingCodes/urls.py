@@ -17,7 +17,7 @@ def check_url(url):
         return 'ERROR'
 
 # Check each URL and write the result
-df['Status'] = df['URL_Column_Name'].apply(check_url)  # Update 'URL_Column_Name' to your actual URL column name
+df['Confirmed'] = df['Item.url'].apply(check_url)  # Update 'URL_Column_Name' to your actual URL column name
 
 # Save the results back to the Excel file
 df.to_excel(file_path, index=False)
