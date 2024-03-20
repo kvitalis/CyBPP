@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 
 # Load the Excel file
-file_path = 'your_file.xlsx'  # Update this to the path of your Excel file
+file_path = 'StoredScrapedData/Product_urls.xlsx'  # Update this to the path of your Excel file
 df = pd.read_excel(file_path)
 
 # Function to check URL accessibility
