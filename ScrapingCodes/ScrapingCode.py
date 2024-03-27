@@ -1008,15 +1008,16 @@ def resutls_rio(u):
 
 def resutls_ahk(u):
     response = requests.get(Item_url_)
-    
+
+    pdf = "PDFs/AHK.pdf"
     if response.status_code !=200:
         no_website.append(Item_url_)
     else:
     
-        with open("04.01.AHK.pdf", "wb") as f:
+        with open(pdf, "wb") as f:
             f.write(response.content)
 
-        with open("04.01.AHK.pdf", "rb") as f:
+        with open(pdf, "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
@@ -1376,10 +1377,11 @@ def results_pydixa(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     
     else:
-        with open("04.03.Pixida.pdf", "wb") as f:
+        pdf = "PDFs/pixida.pdf"
+        with open(pdf, "wb") as f:
             f.write(response.content)
 
-        with pdfplumber.open("04.03.Pixida.pdf") as pdf:
+        with pdfplumber.open(pdf) as pdf:
             page = pdf.pages[5]  
             text = page.extract_text()
 
@@ -1552,10 +1554,9 @@ def resutls_toyta(u):
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
-    #with open("04.02.ithaki.pdf", "wb") as f:
-    #    f.write(response.content)
+    pdf = "PDFs/ithaki.pdf"
 
-    with pdfplumber.open("04.02.ithaki.pdf") as pdf:
+    with pdfplumber.open(pdf) as pdf:
         first_page = pdf.pages[5]
         text = first_page.extract_text()
         
@@ -1611,10 +1612,11 @@ def results_ithaki(u):
 
 def results_flames(u):
     response = requests.get(Item_url_)
-    with open("04.00.flames.pdf", "wb") as f:
+    pdf = "PDFs/flames.pdf"
+    with open(pdf, "wb") as f:
         f.write(response.content)
 
-    with pdfplumber.open("04.00.flames.pdf") as pdf:
+    with pdfplumber.open(pdf) as pdf:
         first_page = pdf.pages[0]
         text = first_page.extract_text()
 
