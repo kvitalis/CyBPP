@@ -23,7 +23,7 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
-filename="StoredScrapedData/Dataset.xlsx"
+filename="StoredScrapedData/raw_data.xlsx"
 
 #Read necessary data
 df = pd.read_excel(filename)
@@ -931,6 +931,7 @@ def results_primetel(u):
                 new_row.append("Primetel")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def resutls_rio(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1694,8 +1695,6 @@ def resutls_intercity(u):
             new_row.append("Intercity Bus")
             list_.loc[len(list_)] = new_row
 
-
-
 def results_parga(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_,{'headers':header})
@@ -1721,10 +1720,10 @@ def results_parga(u):
         new_row.append("Parga")
         list_.loc[len(list_)] = new_row
 
-
 def results_public(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_,{'headers':header})
+    
     if response.status_code !=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1733,6 +1732,7 @@ def results_public(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    
     else:
         data = response.json()
         data1 = data["prices"]
