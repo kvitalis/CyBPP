@@ -1,0 +1,42 @@
+# Code needed for the scraping process
+
+# Whenever pull request is made targeting branch initialise, csv is reset
+name: run-daily-scrape
+
+# Scraping description
+run-name: Adding daily scrape to current CSV
+
+# Function to add time,day, month to the scraping process
+on:
+  schedule:
+    - cron: "05 08 * * *"
+
+#
+jobs:
+  getdataandrefreshmap:
+    runs-on: ubuntu-latest
+    steps:
+      # It checks out the latest content of your repository
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner.
+        with:
+          fetch-depth: 0
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9 #install the python needed
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+      # Installs the required Python dependencies
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+      - name: execute py script products
+        run: |
+          python ScrapingCodes/Scraping_Code.py
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Scraping Succesfully completed"
+          git push origin HEAD:main
