@@ -1722,10 +1722,9 @@ def results_parga(u):
         list_.loc[len(list_)] = new_row
 
 
-def resutls_public(u):
+def results_public(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_,{'headers':header})
-
     if response.status_code !=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1734,13 +1733,10 @@ def resutls_public(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
-    
         data = response.json()
         data1 = data["prices"]
         sale_Price = data1[0]["salePrice"]
-    
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(sale_Price))
@@ -1748,7 +1744,7 @@ def resutls_public(u):
         new_row.append(comitidy_)
         new_row.append("Public")
         list_.loc[len(list_)] = new_row
-
+        list_["Name"] =list_["Name"].apply(lambda x:x)
 
 
 def results_evdokia(u):
@@ -2085,7 +2081,7 @@ for u in range(0,len(urls)):
     elif retailer_=="Parga":
         results_parga(u)
     elif retailer_=="Public":
-        resutls_public(u)
+        results_public(u)
     elif retailer_=="Evdokia Jewellery":
         results_evdokia(u)
     elif retailer_=="Centropical":
