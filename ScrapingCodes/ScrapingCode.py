@@ -825,7 +825,7 @@ def results_novella(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-
+ 
     if ("404 Page Not Found." in soup.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -834,44 +834,34 @@ def results_novella(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         scripts_1 = soup.find_all('td',{'class':'column-1'},string=True)
         scripts_2 = soup.find_all('td',{'class':'column-2'},string=True)
-
+ 
         for i in range(0,len(scripts_1)):
             new_row=[]
             website_false=[]
-            if ("LADIES CUT" in scripts_1) or ("MEN'S CUT" in scripts_1):
-                if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
-                    price_=scripts_2[i].text.replace('€',"").replace(',','.')
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(comitidy_)
-                    new_row.append("Novella")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-
-                elif (name_=="Men's Services, HAIRCUT Stylist") and (scripts_1[i].text== "MEN'S CUT"):
-                    price_=scripts_2[i].text.replace('€',"").replace(',','.')
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(comitidy_)
-                    new_row.append("Novella")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(comitidy_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
+                price_=scripts_2[i].text.replace('€',"").replace(',','.')
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Novella")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+ 
+            elif (name_=="Men's Services, HAIRCUT Stylist") and (scripts_1[i].text== "MEN'S CUT"):
+                price_=scripts_2[i].text.replace('€',"").replace(',','.')
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Novella")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
 
 
 def results_numbeo(u):
