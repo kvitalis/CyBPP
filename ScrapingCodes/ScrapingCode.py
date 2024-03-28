@@ -23,11 +23,11 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
-filename="StoredScrapedData/raw_data.xlsx"
+filename="StoredScrapedData/raw_data.csv"
 
 #Read necessary data
-df = pd.read_excel(filename)
-urls=pd.read_excel("StoredScrapedData/ProductUrls.xlsx")
+df = pd.read_csv(filename)
+urls=pd.read_csv("StoredScrapedData/ProductsUrls.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -2105,7 +2105,7 @@ print("Elapsed time:", elapsed_time/60, "minute")
 
 
 
-df.to_excel(filename, index=False) 
+df.to_csv(filename, index=False) 
 
 
 
@@ -2113,8 +2113,8 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv(filename, index=False, header=True)
 
-filename2="StoredScrapedData/DailyScrapingErrors.xlsx"
-daily_errors.to_excel(filename2,index=False)
+filename2="StoredScrapedData/DailyScrapingErrors.csv"
+daily_errors.to_csv(filename2,index=False)
 
 
 
