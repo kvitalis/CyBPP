@@ -1998,6 +1998,7 @@ for u in range(0,len(urls)):
     subclass_=urls["Subclass"].iloc[u]
     comitidy_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
+    print(Item_url)
     
 
     if retailer_=="SupermarketCy":
