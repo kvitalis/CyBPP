@@ -2113,3 +2113,6 @@ list_["Price"].astype(float)
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
+combined_df.to_csv(filename, index=False, header=True)
+daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
+daily_errors.to_excel("AnnualScrapingError.csv",index=False)
