@@ -4,12 +4,12 @@
 name: run-daily-scrape
 
 # Scraping description
-run-name: Adding daily scrape to current CSV
+run-name: Update the raw_data.csv file by adding today's scraped data
 
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    - cron: "30 12 * * *" #UTC time
+    - cron: "00 08 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
@@ -37,7 +37,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Scraping Succesfully completed"
+          git commit -m "scraping completed"
           git push origin HEAD:main
       # - name: execute py script calculations
       #   run: |
@@ -46,5 +46,5 @@ jobs:
       #     git config user.name github-actions
       #     git config user.email github-actions@github.com
       #     git add .
-      #     git commit -m "Calculating succesfully completed"
+      #     git commit -m "calculations completed"
       #     git push origin HEAD:main
