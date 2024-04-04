@@ -289,7 +289,7 @@ def results_cyta(u):
                     q=1
         
         if (q==0):
-            element_soup = soup.find_all("h4",{"class":"redPrice text-center"})
+            element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
             text = element_soup[0].get_text()
             price_pattern = r'€(\d+(?:,\d+)?)'  
             matches = re.findall(price_pattern, text) 
