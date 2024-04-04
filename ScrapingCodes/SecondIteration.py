@@ -1730,47 +1730,6 @@ def results_parga(u):
         new_row.append("Parga")
         list_.loc[len(list_)] = new_row
 
-def resutls_public(u):
-    #header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    header = {
-        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache',
-        'Origin': 'https://www.public.cy',
-        'Connection': 'keep-alive',
-        'Referer': 'https://www.public.cy/',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'cross-site',}
-    
-    response = requests.get(Item_url_,{'headers':header})
-
-    if response.status_code !=200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(comitidy_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
-    else:
-    
-        data = response.json()
-        data1 = data["prices"]
-        sale_Price = data1[0]["salePrice"]
-    
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(sale_Price))
-        new_row.append(subclass_)
-        new_row.append(comitidy_)
-        new_row.append("Public")
-        list_.loc[len(list_)] = new_row
-
-
 def results_evdokia(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_,{'headers':header})
@@ -2104,8 +2063,6 @@ for u in range(0,len(urls)):
         resutls_intercity(u)  
     elif retailer_=="Parga":
         results_parga(u)
-    elif retailer_=="Public":
-        resutls_public(u)
     elif retailer_=="Evdokia Jewellery":
         results_evdokia(u)
     elif retailer_=="Centropical":
