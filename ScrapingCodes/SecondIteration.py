@@ -1011,10 +1011,10 @@ def resutls_ahk(u):
         no_website.append(Item_url_)
     else:
     
-        with open("04.01.AHK.pdf", "wb") as f:
+        with open("AHK.pdf", "wb") as f:
             f.write(response.content)
 
-        with open("04.01.AHK.pdf", "rb") as f:
+        with open("AHK.pdf", "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
