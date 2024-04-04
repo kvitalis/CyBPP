@@ -2111,42 +2111,5 @@ for u in range(0,len(urls)):
 #Chanegd the type as float
 list_["Price"].astype(float)
 
-#Ending time
-end_time = time.time()
-elapsed_time = end_time - start_time
-print("Elapsed time:", elapsed_time/60, "minute")
-
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/01.00.BillionPricesProjectProductPrice.csv", index=False, header=True)
-daily_errors.to_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.01.Product_urls_daily_errors.xlsx",index=False)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
