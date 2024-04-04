@@ -1,7 +1,7 @@
 # Code needed for the scraping process
 
 # Whenever pull request is made targeting branch initialise, csv is reset
-name: run-second-iteration
+name: second-iteration
 
 # Scraping description
 run-name: Adding into the raw_data.csv file the scraped data after 2nd iteration
