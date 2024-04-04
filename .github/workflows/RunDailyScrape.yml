@@ -4,7 +4,7 @@
 name: run-daily-scrape
 
 # Scraping description
-run-name: Update the raw_data.csv file by adding today's scraped data
+run-name: Adding today's scraped data into raw_data.csv
 
 # Function to add time,day, month to the scraping process
 on:
