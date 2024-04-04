@@ -1374,10 +1374,11 @@ def results_pydixa(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     
     else:
-        with open("04.03.Pixida.pdf", "wb") as f:
+        pdf = "PDFs/pixida.pdf"
+        with open(pdf, "wb") as f:
             f.write(response.content)
 
-        with pdfplumber.open("04.03.Pixida.pdf") as pdf:
+        with pdfplumber.open(pdf) as pdf:
             page = pdf.pages[5]  
             text = page.extract_text()
 
