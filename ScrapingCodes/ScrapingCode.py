@@ -2097,16 +2097,12 @@ for u in range(0,len(urls)):
 #Chanegd the type as float
 list_["Price"].astype(float)
 
-#Ending time
-end_time = time.time()
-elapsed_time = end_time - start_time
-print("Elapsed time:", elapsed_time/60, "minute")
-
-
+##Ending time
+#end_time = time.time()
+#elapsed_time = end_time - start_time
+#print("Elapsed time:", elapsed_time/60, "minute")
 
 df.to_csv(filename, index=False) 
-
-
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
@@ -2114,9 +2110,3 @@ combined_df.to_csv(filename, index=False, header=True)
 
 filename2="StoredScrapedData/DailyScrapingErrors.csv"
 daily_errors.to_csv(filename2,index=False)
-
-
-
-
-
-
