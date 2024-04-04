@@ -23,9 +23,11 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
+filename="StoredScrapedData/raw_data.csv"
+
 #Read necessary data
-df = pd.read_csv("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/01.00.BillionPricesProjectProductPrice.csv")
-urls=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.00.Product_urls.xlsx")
+df = pd.read_csv(filename)
+urls = pd.read_csv("StoredScrapedData/DailyScrapingErrors.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
