@@ -2120,6 +2120,10 @@ for u in range(0,len(urls)):
         results_musicavenue(u)
     elif retailer_=="Max 7 Taxi":
         resutls_max_7_tax(u)
+    elif retailer_=="leroymerlin":
+        results_leroymerlin(u)
+    elif retailer_=="Entry":
+        results_entry(u)
 
 #Chanegd the type as float
 list_["Price"].astype(float)
