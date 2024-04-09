@@ -112,7 +112,10 @@ def results_alphamega(urls):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
+def results_fuelDaddy(urls):
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
+    bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs, {'headers':header})
     
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
