@@ -113,13 +113,9 @@ def results_alphamega(urls):
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
 
-def results_fuelDaddy(urls):
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
-    bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs, {'headers':header})
     
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
+    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -135,8 +131,11 @@ def results_fuelDaddy(urls):
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
             for brand_name in brand:
                 brand_word = brand_name.get_text(strip = True).upper()
-
-        if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
+        
+        if brand_word:
+            if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
+                brand_word="PETROLINA"
+        else:
             brand_word="PETROLINA"
         
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
@@ -1002,7 +1001,14 @@ def resutls_ahk(u):
 
     pdf = "PDFs/AHK.pdf"
     if response.status_code !=200:
-        no_website.append(Item_url_)
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
     else:
     
         with open(pdf, "wb") as f:
@@ -1500,9 +1506,9 @@ def resutls_toyta(u):
     
     if subclass_=="New motor cars":
         element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
-        price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
     
         if price_:
+            price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -1522,9 +1528,8 @@ def resutls_toyta(u):
         
     elif subclass_=="Second-hand motor cars":
         element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
-        price_=element_name[0].text.replace(",","").replace("€","")
-
         if price_:
+            price_=element_name[0].text.replace(",","").replace("€","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -1953,6 +1958,57 @@ def resutls_max_7_tax(u):
             new_row.append("Max 7 Taxi") 
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_entry(u):
+    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_,{'headers':header})
+    soup = BeautifulSoup(response.content, "html.parser")
+    element_=soup.find("li",{"class":"product-price"})
+    price_=float(element_.text.replace("€","").replace(",","."))
+
+    if response.status_code !=200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(comitidy_)
+        new_row.append("Entry")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_leroymerlin(u):
+    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_,{'headers':header})
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if response.status_code !=200 or ("Η σελίδα που αναζητάτε δεν βρέθηκε." in soup.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_=soup.find_all("span",{"class":"priceBigMain"})
+        price_=element_[0].text.replace("€","").replace(" ","").replace(",",".")
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(comitidy_)
+        new_row.append("Leroy Merlin") 
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Calculation of the process time
 start_time = time.time()
