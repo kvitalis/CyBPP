@@ -102,18 +102,24 @@ RioMareΤόνοςΣεΝερό80g3+1Δωρεάν,"Dried, smoked or salted fish an
 TrataΡέγγαΚαπνιστή160g,"Dried, smoked or salted fish and seafood",trata-regga-kapnisti-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g,"Dried, smoked or salted fish and seafood",flokos-fileto-skoumpri-kapnisto-se-fytiko-ladi-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΚαμήλαΑντζιούγες50g,"Dried, smoked or salted fish and seafood",kamila-antziouges-50g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-KarlaCornedBeef340g,"Dried, salted or smoked meat",karla-corned-beef-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-TulipPorkLuncheonMeat200g,"Dried, salted or smoked meat",tulip-pork-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-TulipChoppedHam200g,"Dried, salted or smoked meat",tulip-chopped-ham-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ZwanLuncheonMeat200g,"Dried, salted or smoked meat",zwan-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ZwanChoppedHamAndPork200g,"Dried, salted or smoked meat",zwan-chopped-ham-and-pork-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ZwanChickenLuncheonMeat200g,"Dried, salted or smoked meat",zwan-chicken-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΡεβύθια400g,"Dried, salted or smoked meat",mesogeios-revythia-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΦασόλιαΚόκκινα400g,"Dried, salted or smoked meat",mesogeios-fasolia-kokkina-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΦασόλιαΆσπρα400g,"Dried, salted or smoked meat",mesogeios-fasolia-aspra-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΣιταροπούλα340g,"Dried, salted or smoked meat",mesogeios-sitaropoula-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΜανιτάριαΦέτες400g,"Dried, salted or smoked meat",mesogeios-manitaria-fetes-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g,"Dried, salted or smoked meat",mesogeios-fasolia-se-saltsa-ntomatas-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KarlaCornedBeef340g,Other meat preparations,karla-corned-beef-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+TulipPorkLuncheonMeat200g,Other meat preparations,tulip-pork-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+TulipChoppedHam200g,Other meat preparations,tulip-chopped-ham-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ZwanLuncheonMeat200g,Other meat preparations,zwan-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ZwanChoppedHamAndPork200g,Other meat preparations,zwan-chopped-ham-and-pork-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ZwanChickenLuncheonMeat200g,Other meat preparations,zwan-chicken-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΡεβύθια400g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-revythia-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΦασόλιαΚόκκινα400g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-fasolia-kokkina-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΦασόλιαΆσπρα400g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-fasolia-aspra-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΣιταροπούλα340g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-sitaropoula-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΜανιτάριαΦέτες400g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-manitaria-fetes-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g,"Dried vegetables, other preserved or processed 
+vegetables",mesogeios-fasolia-se-saltsa-ntomatas-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΝουνούLight400g,Other milk products,nounou-light-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Νουνού400g,Other milk products,nounou-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 NestleMilkmaidΓάλαΖαχαρούχο397g,Other milk products,nestle-milkmaid-gala-zacharoucho-397g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -212,6 +218,185 @@ KelloggsSpecialK335g,Breakfast cereals,kelloggs-special-k-335g,FOOD AND NON-ALCO
 KelloggsMielPopsLoops330g,Breakfast cereals,kelloggs-miel-pops-loops-330g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧοιρινόΣεφταλιές850g,Other meats,choirino-seftalies-850g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΛουκάνικαΧωριάτικα550g,Other meats,loukanika-choriatika-550g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7SeasΚοκκινόψαροΑκέφαλο900g,Frozen fish,7seas-kokkinopsaro-akefalo-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+GelusSteaksΜπακαλιάρου900g,Frozen fish,gelus-steaks-mpakaliarou-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+FishChoiceΣολομόςΕιρηνικούΜερίδες500g,Frozen fish,fish-choice-solomos-eirinikou-merides-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Seas Boque 900g,Frozen fish,7seas-goppa-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Salmon Fresh 2Pcs Max 600g,Frozen fish,solomos-freskos-2tem-max-600g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CrownΑντικολλητικόΤηγάνι30cm,Non-electric kitchen utensils and articles,crown-antikollitiko-tigani-30cm,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+RestoΚατσαρολάκιStainlessSteel18/1014cm,Non-electric kitchen utensils and articles,resto-katsarolaki-me-kapaki-stainless-steel-1810-14cm,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ΚουτάλιαSymphony12Τεμ,Non-electric kitchen utensils and articles,koutalia-precius-12tem,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+WellaflexHairspra2ndDayVolumeExtraStrongHold250ml,Personal grooming treatments,wellaflex-hairspray-2nd-day-volume-echtra-dynato-kratima-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+PalmoliveLong&ShineΣαμπουάνΜεΕλιά350ml,Personal grooming treatments,palmolive-long-shine-sampouan-me-elia-350ml-1,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+AlwaysUltraSecureNightWithWings 24Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",always-ultra-secure-night-me-ftera-24tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+GilletteOriginalΑφρόςΞυρισματος200ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",gillette-original-afros-xyrismatos-200ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+NiveaMenFreshKickAfterShaveBalm100ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",nivea-men-fresh-kick-after-shave-balm-100ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+JohnsonsΜπατονέτες200Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",johnsons-mpatonetes-200tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+TippysΔίσκοιΝτεμακιγιάζ80Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",tippys-diskoi-ntemakigiaz-80tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+NeutroRobertsDeodorantPowderFreshRollOn50ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",neutro-roberts-deodorant-powder-fresh-roll-on-50ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+NiveaMenDeodorantDryImpactSpray150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",nivea-men-deodorant-dry-impact-spray-150ml-2,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+EldaΧαρτίΤουαλέτας24Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",elda-charti-toualetas-24tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+KleenexScottonelle,"Articles for personal hygiene and wellness, esoteric products and beauty products",kleenex-scottonelle-pure-clean-charti-toualetas-248tem-1,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+EliteΧαρτοπετσέτεςΠολυτελείας,"Articles for personal hygiene and wellness, esoteric products and beauty products",elite-chartopetsetes-polyteleias-kitrino-3fylla-40x40cm-25tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+RexΒαμβάκι200g,"Articles for personal hygiene and wellness, esoteric products and beauty products",rex-vamvaki-100g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+ListerineFreshBurst250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",listerine-fresh-burst-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+GarnierSkinActiveMoistureBombTissueMask1Τεμ28g,"Articles for personal hygiene and wellness, esoteric products and beauty products",garnier-skin-active-moisture-bomb-tissue-mask-1tem-28g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+PomPonMakeUpRemovingWipesWithMicellaireWaterForAllSkinTypes20Pcs1+1,"Articles for personal hygiene and wellness, esoteric products and beauty products",pom-pon-mantilakia-ntemakigiaz-me-nero-micellaire-gia-olous-tous-typous-dermatos-20tem-11,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+DermomedArganOilΚρεμοσάπουνο1000ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dermomed-argan-oil-kremosapouno-1000ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+DermomedIrisΚρεμοσάπουνο1000ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dermomed-iris-kremosapouno-1000ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+ColgateMaxFreshCrystalMint75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",colgate-max-fresh-crystal-mint-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+PalmoliveNaturalsTenderSensationSoapBars120g4+2Free,"Articles for personal hygiene and wellness, esoteric products and beauty products",palmolive-naturals-tender-sensation-sapounakia-120g-42-doro,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+EveryDayHyperdryNormalUltraPlus18Τεμ1+1,"Articles for personal hygiene and wellness, esoteric products and beauty products",every-day-hyperdry-normal-ultra-plus-18tem-11,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+AlwaysDailiesNormalToGo20Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",always-dailies-normal-to-go-20tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+GilletteBlueIiPlusSlalomΞυραφάκια10Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",gillette-blue-ii-xyrafakia-10tem-1,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+ΚεοVsopBrandy1L,Spirits and liqueurs,keo-vsop-brandy-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+GordonsDryGin700ml,Spirits and liqueurs,gordons-dry-gin-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+BaileysOriginalLiqueur700ml,Spirits and liqueurs,baileys-original-liqueur-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+AperolAperitivo1L,Spirits and liqueurs,aperol-aperitivo-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+BacardiSuperiorRum700ml,Spirits and liqueurs,bacardi-superior-rum-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+KopparbergStrawberry&LimeCider500ml,Spirits and liqueurs,kopparberg-strawberry-lime-cider-500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+SomersbyAppleCider330ml,Spirits and liqueurs,somersby-apple-cider-330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+3AQuinoa400g,Other cereal products,3a-kinoa-trikolore-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+AgiaSkepiBioOrganicQuinoaSeeds500g,Other cereal products,agia-skepi-bio-organic-kinoa-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+3AParrotSeed450g,Other cereal products,3a-apli-zootrofi-liostrofi-ilianthosporo-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NaturalLifeΤσάιΧαμομήλι20Τεμ,Tea,natural-life-tsai-chamomili-20tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LiptonYellowLabelΤσάι20Τεμ,Tea,lipton-yellow-label-tsai-20tem-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+AhmadTeaΠράσινοΤσάι25Τεμ,Tea,ahmad-tea-prasino-tsai-25tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+AhmadTeaΑγγλικόΠρόγευμα20Τεμ,Tea,ahmad-tea-aggliko-progevma-20tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NescafeClassic200g,Coffee,nescafe-classic-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NescafeClassic100g,Coffee,nescafe-classic-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+JacobsGoldΕπιλεγμένοΧαρμάνι100g,Coffee,jacobs-gold-epilegmeno-charmani-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΛαϊκούΚυπριακόςΚαφέςΧρυσός200g,Coffee,laikou-kypriakos-kafes-chrysos-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΧαραλάμπουςΚυπριακόςΚαφές200g,Coffee,charalampous-kypriakos-kafes-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΛαϊκούΚυπριακόςΚαφέςΧρυσός500g,Coffee,laikou-kypriakos-kafes-chrysos-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+JacobsΕκλεκτός100g,Coffee,jacobs-eklektos-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NescafeAzeraEspresso100g,Coffee,nescafe-azera-espresso-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NescafeClassicDecaf100g,Coffee,nescafe-classic-decaf-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+DouweEgbertsΚαφέςEspresso185g,Coffee,douwe-egberts-kafes-espresso-185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΧαραλάμπουςΚυπριακόςΚαφές500g,Coffee,charalampous-kypriakos-kafes-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CelestCafeClassic200g,Coffee,celest-cafe-classic-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NescafeGoldBlendRoasteryCollectionDarkRoast95g,Coffee,nescafe-gold-blend-roastery-collection-dark-roast-95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PampersActiveBaby740Τεμ,,pampers-active-baby-7-40tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PampersPremiumCare152Τεμ,,pampers-premium-care-1-50tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NannysSensitivePants6Jumbo31Pcs,,nannys-sensitive-pants-6-jumbo-31tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BirdsEyeBreadedCodLargeFillets4Τεμ,Frozen seafood,birds-eye-breaded-cod-large-fillets-4tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReddaSquidRings1kg,Frozen seafood,redda-thrapsala-eirinikou-rodeles-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BlueGreenWaveSquidRings1kg,Frozen seafood,blue-green-wave-kalamari-rodeles-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+EdesmaCrabSticks250g,Frozen seafood,edesma-kavouropsicha-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KolymbiShrimpsJingaPudBlanched500g,Frozen seafood,kolymbi-garides-jinga-apofloiomenes-provrasmenes-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CocaCola8X330ml,Soft drinks,coca-cola-8x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sprite6X330ml,Soft drinks,sprite-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+SchweppesPinkGrapefruit6X330ml,Soft drinks,schweppes-pink-grapefruit-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Fanta6X330ml,Soft drinks,fanta-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7UpLemon&Lime8X330ml,Soft drinks,7up-lemon-lime-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CocaColaZero8X330ml,Soft drinks,coca-cola-zero-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PepsiMaxZeroSugar8X330ml,Soft drinks,pepsi-max-zero-sugar-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+SchweppesLemonade6X330ml,Soft drinks,schweppes-lemonade-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7UpZeroSugar8X330ml,Soft drinks,7up-zero-sugar-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+JordanDentalSticksCleanBetweenRegular40Τεμ,Non-electrical appliances,jordan-dental-sticks-clean-between-regular-40tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+ColgateExtraCleanΟδοντόβουρτσαMedium1Τεμ,Non-electrical appliances,colgate-extra-clean-odontovourtsa-medium-1tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+KeanOrangeJuice1L,Fruit and vegetable juices,kean-chymos-portokali-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanitaOrangeJuice9X250ml,Fruit and vegetable juices,keanita-chymos-portokali-9x250ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanAppleJuice9X250ml,Fruit and vegetable juices,kean-chymos-milo-9x250ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanAppleJuice 1L,Fruit and vegetable juices,kean-chymos-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean5FruitJuice1L,Fruit and vegetable juices,kean-chymos-5-frouta-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeoOrangeJuice1L,Fruit and vegetable juices,keo-chymos-portokali-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LanitisOrangeApricotAppleFruitDrink1L,Fruit and vegetable juices,lanitis-froutopoto-portokali-verikoko-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanOrangeApple&CarrotJuice1L,Fruit and vegetable juices,kean-chymos-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanTomatoJuice1L,Fruit and vegetable juices,kean-chymos-ntomatas-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeanMangoPomegranateJuice1L,Fruit and vegetable juices,kean-chymos-mangko-rodi-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeoAppleJuice1L,Fruit and vegetable juices,keo-chymos-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KeoTomatoJuice1L,Fruit and vegetable juices,keo-chymos-tomata-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LanitisOrangeApricotAppleFruitDrink1L,Fruit and vegetable juices,lanitis-froutopoto-portokali-verikoko-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LanitisOrangeJuiceWithoutBits1L,Fruit and vegetable juices,lanitis-chymos-portokali-choris-kommatakia-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LoelFruitManiaJuice1L,Fruit and vegetable juices,loel-chymos-fruit-mania-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+StrikeAppleFruitDrink1L,Fruit and vegetable juices,strike-froutopoto-milo-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Canderel Sweetener Granular 90g,Artificial sugar substitutes,canderel-glykantiko-se-skoni-90g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+SweetNLowSugarSubstituteGranular80g,Artificial sugar substitutes,sweet-n-low-ypokatastato-zacharis-skoni-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+JotisSweet&BalanceSweetenerWithStevia80g,Artificial sugar substitutes,giotis-sweet-balance-glykantiko-me-stevia-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Seas Mixed Broccoli Carrots Caulliflower 900g,Frozen vegetables other than potatoes and other tubers,7seas-anamikta-mprokolo-karoto-kounoupidi-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Seas Mixed Beans Carrots Celery 900g,Frozen vegetables other than potatoes and other tubers,7seas-anamikta-fasolia-karoto-selino-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7SeasΦασόλιαΞεκούνιαΆσπρα900g,Frozen vegetables other than potatoes and other tubers,7seas-fasolia-xekounia-aspra-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaPeperoniPizza1Pc300g,Pizza and quiche,regina-pitsa-peperoni-1tem-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BuitoniPiccolinisProsciutto9x30g,Pizza and quiche,buitoni-piccolinis-prosciutto-9x30g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaSpecialPizza1Pc330g,Pizza and quiche,regina-pitsa-spesial-1tem-330g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaMargheritaPizza1Pc300g,Pizza and quiche,regina-pitsa-tyri-ntomata-1tem-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cadbury Drinking Chocolate 250g,Cocoa and powdered chocolate,cadbury-rofima-sokolatas-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cadbury Cocoa 125g,Cocoa and powdered chocolate,cadbury-kakao-125g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Humana5CerealsWithBananaNoAddedSugar200g,Baby food,humana-5-dimitriaka-me-mpanana-choris-prosthiki-zacharis-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+HippOrganicBabyCereal100%Rice200g,Baby food,hipp-organic-baby-cereal-100-ryzalevro-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NestleFarineLacteeWithMilk 300g,Baby food,nestle-farin-lakte-me-gala-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+HumanaFarineLacteNoAddedSugar200g,Baby food,humana-farin-lakte-choris-prosthiki-zacharis-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NounouFarineLactee300g-0.20€,Baby food,nounou-farin-lakte-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NounouFruitCream5Fruits&Milk300g-0.20€,Baby food,nounou-froutokrema-5-frouta-gala-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"JotisFarineLactee300g-0,20€",Baby food,giotis-farin-lakte-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NounouFrisogrow3400g,Baby food,nounou-frisogrow-3-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NanOptiproHM-04400g,Baby food,nan-optipro-hm-0-4-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+S26ProgressGold3400g,Baby food,s-26-progress-gold-3-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NounouFrisogrowPlus+4800g,Baby food,nounou-frisogrow-plus-4-800g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"EurekaMassaliasClassicLiquid48Washes2,4L-4€",Cleaning and maintenance products,evrika-massalias-classic-ygro-48-plyseis-24l-4eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+DixanPowerCapsColor40Pcs,Cleaning and maintenance products,dixan-power-caps-color-40tem,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ComfortPureFabricSoftener2L,Cleaning and maintenance products,comfort-pure-malaktiko-rouchon-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+SecretsLavender&YlangYlangFabricSoftener2L-1€,Cleaning and maintenance products,secrets-levanta-ylang-ylang-malaktiko-rouchon-2l-1eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+LenorLaCollectionEscapeConcentrateFabricSoftener55Washes1.155L,Cleaning and maintenance products,lenor-la-collection-escape-sympyknomeno-malaktiko-55-plyseis-1155l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"ArielColorTouchOfLenorFreshnessLiquid70Washes3,850L",Cleaning and maintenance products,ariel-color-touch-of-lenor-freshness-ygro-70-plyseis-3850l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"EurekaActiveCareOceanFreshnessPowder50Washes2,750kg",Cleaning and maintenance products,evrika-active-care-ocean-freshness-skoni-50-plyseis-2750kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ArielAquaPoudreAlpinePowder50Washes3.250kg,Cleaning and maintenance products,ariel-aqua-poudre-alpine-skoni-50-plyseis-3250kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Dettol500ml,Cleaning and maintenance products,dettol-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+CifClassicGeneralCleaningCream750ml,Cleaning and maintenance products,cif-classic-krema-genikou-katharismou-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+RoklinSprayAntibacterialMultipurpose750ml-1€,Cleaning and maintenance products,roklin-spray-antibacterial-polykatharistiko-750ml-1eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+KlinexChlorineGeneralCleaningSpray750ml,Cleaning and maintenance products,klinex-chlorini-spray-pollaplon-chriseon-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+AjaxMultiCleaningSpray4In1500ml,Cleaning and maintenance products,ajax-sprei-polykatharistiko-4-se-1-500ml-1,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+FairyUltraOriginalDishLiquid900ml,Cleaning and maintenance products,fairy-ultra-original-ygro-piaton-900ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+EurekaDishLiquidLemon750ml,Cleaning and maintenance products,evrika-ygro-piaton-lemoni-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"EurekaPlusLemon&MintDishLiquid750ml-0,40€",Cleaning and maintenance products,evrika-plus-lemoni-dyosmo-ygro-piaton-750ml-040eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+PalmoliveUltraFreshLemonDishLiquid500ml,Cleaning and maintenance products,palmolive-ultra-fresh-lemon-ygro-piaton-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ComfortGoldWildOrchid&SandalwoodFabricSoftener2L,Cleaning and maintenance products,comfort-gold-wild-orchid-sandalwood-malaktiko-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ComfortPureFabricSoftener4L,Cleaning and maintenance products,comfort-pure-malaktiko-rouchon-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ComfortGoldLilies&WildBerriesFabricSoftener4L,Cleaning and maintenance products,comfort-gold-lilies-wild-berries-malaktiko-rouchon-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"SouplineActiveFreshSeaBreezeFabricSoftener1,2L",Cleaning and maintenance products,soupline-active-fresh-thalassini-avra-sympyknomeno-malaktiko-12l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"DixanOceanFreshPowder44Washes2,2kg",Cleaning and maintenance products,dixan-freskada-okeanou-skoni-44-plyseis-22kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+"EurekaMassaliasYlangYlang&LavenderLiquid48Washes2,4L-4€",Cleaning and maintenance products,evrika-massalias-ylang-ylang-levanta-ygro-48-plyseis-24l-4eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Keo8X330ml,Lager beer,keo-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+HeinekenCans6X330ml,Lager beer,heineken-cans-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+AlambraCottageCheese200g,Cheese and curd,alampra-cottage-cheese-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+AlambraHGiagiaTraditionalGoatHalloumiP.d.o.600g,Cheese and curd,alampra-i-giagia-aigino-challoumi-pop-600g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+DodoniLightInBrine400g,Cheese and curd,dodoni-elafry-se-almi-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CharalambidesChristisPissourkotikoSheep'sYoghurt800g,Cheese and curd,charalampidis-kristis-pissourkotiko-proveio-giaourti-800g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+DirolloCottageCheese225g,Cheese and curd,dirollo-cottage-cheese-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LaVacheQuiRitOriginal8Pcs,Cheese and curd,la-vache-qui-rit-original-8tem-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PhiladelphiaCottageCheese200g,Cheese and curd,philadelphia-cottage-cheese-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+VepoCheddar10Slices200g,Cheese and curd,vepo-tsentar-10fetes-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+VepoGouda20Slices400g,Cheese and curd,vepo-gkounta-20fetes-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"ΠαπαφιλίπουN-iceΠαγάκια4,5kg",Edible ices and ice cream,papafilipou-n-ice-pagakia-45kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"ΠαπαφιλίπουN-iceΠαγάκια2,7kg",Edible ices and ice cream,papafilipou-n-ice-pagakia-27kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"PapafilipouN-iceIceCubes1,5kg",Edible ices and ice cream,papafilipou-n-ice-pagakia-15kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+RegisAgrinoVanillaChocolateIceCreamCone4Χ135ml,Edible ices and ice cream,regis-pagoto-agrino-chonakia-vanilia-sokolata-4ch135ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+EdesmaVeggieBurgers4Pcs,Ready-made meals,edesma-mpiftekia-lachanikon-4tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaVeggieMaccaroniPastichio425g,Ready-made meals,regina-makaronia-pastitsio-chortofagika-425g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaCanelloni400g,Ready-made meals,regina-kanelonia-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ReginaCanelloni400g,Ready-made meals,regina-kanelonia-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΚεοΛευκόΞηρόΚρασί1L,Wine from grapes,keo-lefko-xiro-krasi-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+MateusRoseΚρασί750ml,Wine from grapes,mateus-rose-krasi-750ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+KeoRedDryWine1L,Wine from grapes,keo-erythro-xiro-krasi-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+EtoshaCharcoal5kg,Coal,etosha-karvouna-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+PyrsosCharcoal5kg,Coal,pyrsos-karvouna-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+Άγιος Νικόλαος 12X500ml,Mineral or spring waters,agios-nikolaos-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Peric Νερό Αγρού 12Χ500ml,Mineral or spring waters,peric-nero-agrou-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"Peric Νερό Αγρού 6Χ1,5L",Mineral or spring waters,peric-nero-agrou-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Κύκκος 12Χ500ml,Mineral or spring waters,kykkos-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"Κύκκος 6Χ1,5L",Mineral or spring waters,kykkos-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"Άγιος Νικόλαος 6X1,5L",Mineral or spring waters,agios-nikolaos-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sevyco Άσπρος Τόνος Σε Ελαιόλαδο 4X95g,Other preserved or processed fish and seafood-based preparations,sevyco-aspros-tonos-se-elaiolado-4x95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sevyco Ροζέ Τόνος Σε Σογιέλαιο 4X200g,Other preserved or processed fish and seafood-based preparations,sevyco-roze-tonos-se-sogielaio-4x200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Rio Mare Τόνος Σε Ελαιόλαδο 2x160g,Other preserved or processed fish and seafood-based preparations,rio-mare-tonos-se-elaiolado-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Rio Mare Τόνος Σε Νερό 3x80g,Other preserved or processed fish and seafood-based preparations,rio-mare-tonos-se-nero-3x80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ηλεκτρονική ζυγαριά αποσκευών έως 50kg & θερμόμετρο,Travel goods,https://www.entry.com.cy/ilektroniki-zygaria-aposkeuwn,MISCELLANEOUS GOODS AND SERVICES,Entry
+"Σωλήνας ντουλάπας Μ200xΠ1,5 cm",Repair of household appliances,https://www.leroymerlin.com.cy/gr/apothikeusi-taktopoiisi/organosi-doulapas/mihanismoi-doulapas/solinas-ntoulapas-m200xp15-cm-61169493?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
+Σετ τηλέφωνο ντους με σπιράλ και στήριγμα Roca Stella,Repair of household appliances,https://www.leroymerlin.com.cy/gr/mpanio/stiles-kai-tilefona-dous/set-tilefona-mpaniou/set-tilefono-ntous-me-spiral-kai-stirigma-roca-stella-17005121?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
+Βούρτσα πιγκάλ SENSEA μαύρο,Repair of household appliances,https://www.leroymerlin.com.cy/gr/mpanio/axesouar-baniou/pigal/vourtsa-pigkal-sensea-mauro-62368726?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
+"IZZY 222873 Caffeccino Φραπεδιέρα, Mαύρο",Other small electric household appliances,https://electroline.com.cy/products/small-appliances/coffee-makers/coffee-mixers/izzy-222873-caffeccino-frappe-maker-black/?query=%CE%A6%CF%81%CE%B1%CF%80%CE%AD%20%CE%9C%CE%AF%CE%BE%CE%B5%CF%81%20%CE%BC%CE%B1%CF%8D%CF%81%CE%BF,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+BRAUN MQ3000WH Smoothie Μπλέντερ Χειρός,Other small electric household appliances,https://electroline.com.cy/products/small-appliances/kitchen-appliances/hand-blenders/braun-mq3000wh-smoothie-hand-blender/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
  R.A.M. OIL CYPRUS LIMITED,,zafoil-services-limited?ref=listtile,,Fuel Daddy
  ADELFOI P &amp; P CHRISTODOULOU LIMITED,,adelfoi-p-p-christodoulou-limited?ref=listtile,,Fuel Daddy
  R.A.M. OIL CYPRUS LIMITED,,ram-oil-cyprus-limited?ref=listtile,,Fuel Daddy
@@ -538,8 +723,8 @@ TAGARP φωτιστικό δαπέδου/διαβάσματος,Lighting equipme
 FORENLIG κασπό εσωτερικού/εξωτερικού χώρου,Garden products,/proioda/diakosmitika-keria-futa/futa-kaspo/kaspo/forenlig-kaspo-eswterikoy-ekswterikoy-xwroy/70454813,RECREATION AND CULTURE,IKEA
 IKEA PS 2002 Ποτιστήρι,Garden products,/proioda/diakosmitika-keria-futa/futa-kaspo/potistiria/ikea-ps-2002-potistiri/60289946,RECREATION AND CULTURE,IKEA
 "STJARNANIS ζαρντινιέρα εξωτερικού χώρου, 43x15 cm",Garden products,/proioda/diakosmitika-keria-futa/futa-kaspo/anthostiles-kai-axesouar-gia-ton-kipo/stjarnanis-zarntiniera-ekswterikoy-xwroy-43x15-cm/20505297,RECREATION AND CULTURE,IKEA
-"PHALAENOPSIS φυτό, Ορχιδέα με 1 βλαστό",Plants and flowers,/proioda/diakosmitika-keria-futa/futa-kaspo/futa/phalaenopsis-fyto-orxidea-me-1-blasto/30320217,RECREATION AND CULTURE,IKEA
-"HYACINTHUS φυτό σε γλάστρα/Υάκινθος 1 βολβός, 8 cm",Plants and flowers,/proioda/diakosmitika-keria-futa/futa-kaspo/futa/hyacinthus-fyto-se-glastra-yakinthos-1-bolbos-8-cm/20535020,RECREATION AND CULTURE,IKEA
+"PHALAENOPSIS φυτό, Ορχιδέα με 1 βλαστό",Plants and flowers,/proioda/phalaenopsis-fyto-orxidea-2-blastoi/10303365,RECREATION AND CULTURE,IKEA
+"HYACINTHUS φυτό σε γλάστρα/Υάκινθος 1 βολβός, 8 cm",Plants and flowers,/proioda/vinterfint-texnito-loyloydi-yakinthos-22-cm/90563707,RECREATION AND CULTURE,IKEA
 "LURVIG μπολ,  0.3 l",Products for pets,/proioda/eidi-gia-katoikidia/lurvig-mpol-0-3-l/00377074,RECREATION AND CULTURE,IKEA
 LURVIG ανακλαστικοί ιμάντες,Products for pets,/proioda/eidi-gia-katoikidia/lurvig-anaklastikoi-imantes/50360698,RECREATION AND CULTURE,IKEA
 LURVIG φτυαράκι άμμου γάτας,Products for pets,/proioda/eidi-gia-katoikidia/lurvig-ftyaraki-ammoy-gatas/00456820,RECREATION AND CULTURE,IKEA
@@ -632,16 +817,16 @@ PurpleMaxMobile,Bundled telecommunication services,https://cablenet.com.cy/mobil
 "THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024",Secondary education,didaktra_idiotikon_mesi_ekpaidefsi.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 "THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),didaktra_idiotikon_mesi_ekpaidefsi.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 "THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),didaktra_idiotikon_mesi_ekpaidefsi.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
-ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
-ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
-ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Letter handling services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Letter handling services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης,Other tobacco products,https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο,Motorized major tools and equipment,garden/garden-power-tools/%ce%b1%ce%bb%cf%85%cf%83%ce%bf%cf%80%cf%81%ce%af%ce%bf%ce%bd%ce%b1/oregon-cs1200-electric-chainsaw-1800w/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-"TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια",Non-motorized small tools,tools/hand-tools-2/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,Miscellaneous small tool accessories,tools/hand-tools-2/hand-tools-set/total-tot-thkthp21176-hand-tools-set-117-pieces/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο,Motorized major tools and equipment,https://electroline.com.cy/products/small-appliances/coffee-makers/coffee-mixers/izzy-222873-caffeccino-frappe-maker-black/?query=%CE%A6%CF%81%CE%B1%CF%80%CE%AD%20%CE%9C%CE%AF%CE%BE%CE%B5%CF%81%20%CE%BC%CE%B1%CF%8D%CF%81%CE%BF,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+"TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια",Non-motorized small tools,https://electroline.com.cy/products/tools/hand-tools-2-small-hand-tools/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,Miscellaneous small tool accessories,https://electroline.com.cy/products/tools/hand-tools-2-small-hand-tools/hand-tools-set/total-tot-thkthp21176-hand-tools-set-117-pieces/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 "EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",Tertiary education,https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf,EDUCATION,European University Cyprus
 adidas men essentials single jersey big logo t-shirt (IC9349,Garments for men,/products/adidas-men-essentials-single-jersey-big-logo-t-shirt-ic9349,CLOTHING AND FOOTWEAR,FamousSports
 adidas men club tennis 3-stripes t-shirt (HN3902),Garments for men,/products/adidas-men-club-tennis-3-stripes-t-shirt-hn3902,CLOTHING AND FOOTWEAR,FamousSports
@@ -694,7 +879,7 @@ Motorex Chain Clean Degreaser Spray  - 500ML,Lubricants,/motorex-chain-clean-deg
 Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,/brake-fluid-dot-5-1-250ml.html,TRANSPORT,MotoRace
 Thumbs up - Tyre Repair Kit ,Maintenance and repair of personal transport equipment,/thumbs-up-tyre-repair-kit-1.html,TRANSPORT,MotoRace
 "Women's Services, HAIRCUT Stylist",Hairdressing for women,https://novella.com.cy/#services,MISCELLANEOUS GOODS AND SERVICES,Novella
-"Men's Services, HAIRCUT Stylist",Hairdressing for men,https://novella.com.cy/#services,MISCELLANEOUS GOODS AND SERVICES,Novella
+"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,https://novella.com.cy/#services,MISCELLANEOUS GOODS AND SERVICES,Novella
 Marlboro 20 Pack,Cigarettes,https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR,ALCOHOLIC BEVERAGES AND TOBACCO,NUMBEO
 HomeFiber 60 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
 HomeFiber 150 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
@@ -854,9 +1039,9 @@ MaggiΖωμόςΛαχανικών176g,"Sauces, condiments",/groceries/food-cupbo
 MaggiΖωμόςΓιαΖυμαρικά132g,"Sauces, condiments",/groceries/food-cupboard/salt-pepper-seasoning-bouillons/bouillons/maggi-vegetable-bouillon-132-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 KnorrΖωμόςΚότας120g,"Sauces, condiments",/groceries/food-cupboard/salt-pepper-seasoning-bouillons/bouillons/knorr-chicken-stock-cubes-120-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 KnorrΖωμόςΛαχανικών120g,"Sauces, condiments",/groceries/food-cupboard/salt-pepper-seasoning-bouillons/bouillons/knorr-vegetable-stock-cubes-120-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-ΆγιοςΓεώργιοςΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο1L,Olive Oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/saint-george-cyprus-extra-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-ΑλφαμέγαΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο2L,Olive Oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/alphamega-cypriot-extra-virgin-olive-oil-2-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-ΣΕΚΕΠΕξαιρετικόΠαρθένοΕλαιόλαδο1L,Olive Oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/sekep-extra-virgin-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+ΆγιοςΓεώργιοςΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο1L,Olive oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/saint-george-cyprus-extra-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+ΑλφαμέγαΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο2L,Olive oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/alphamega-cypriot-extra-virgin-olive-oil-2-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+ΣΕΚΕΠΕξαιρετικόΠαρθένοΕλαιόλαδο1L,Olive oil,/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/sekep-extra-virgin-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 LesieurΗλιανθέλαιο3L,Other edible oils,/groceries/food-cupboard/oils-vinegars-sauces-dressings/cooking-oil/lesieur-sunflower-oil-3-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 AmbrosiaΗλιανθέλαιο2L,Other edible oils,/groceries/food-cupboard/oils-vinegars-sauces-dressings/cooking-oil/ambrosia-sunflower-oil-2-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 AmbrosiaΗλιανθέλαιο3L,Other edible oils,/groceries/food-cupboard/oils-vinegars-sauces-dressings/cooking-oil/ambrosia-sunflower-oil-3-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
@@ -875,12 +1060,18 @@ TulipΤσόπτΧάμ200g,Other meat preparations,/groceries/food-cupboard/pulse
 ZwanΛάντσιονΜητ200g,Other meat preparations,/groceries/food-cupboard/pulses-cans-packet-soup/canned-meat/zwan-luncheon-meat-200-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 ZwanΤσόπτΧαμ&Χοιρινό200g,Other meat preparations,/groceries/food-cupboard/pulses-cans-packet-soup/canned-meat/zwan-chopped-ham-pork-200-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 ZwanLuncheonΚοτόπουλο200g,Other meat preparations,/groceries/food-cupboard/pulses-cans-packet-soup/canned-meat/zwan-chicken-luncheon-meat-200-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-BonduelleΚόκκιναΦασολιά200g,"Dried vegetables, other preserved or processed vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-vegetables/bonduelle-red-beans-200-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-CampagnaΡεβίθια400g,"Dried vegetables, other preserved or processed vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/campagna-chick-peas-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-CampagnaΦασόλιαΆσπρα400g,"Dried vegetables, other preserved or processed vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/campagna-white-beans-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-ΑλφαμέγαΚαλαμπόκι340g,"Dried vegetables, other preserved or processed vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-vegetables/alphamega-sweet-corn-340-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-MorrisonsΦασόλιασεΣάλτσαΝτομάτας410g,"Dried vegetables, other preserved or processed vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/morrisons-baked-beans-in-tomato-sauce-410-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-ΑλφαμέγαΜανιτάριαΚομμένα400g,"Dried vegetables, other preserved or processed vegetables",/groceries//food-cupboard/pulses-cans-packet-soup/canned-vegetables/alphamega-sliced-mushrooms-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+BonduelleΚόκκιναΦασολιά200g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-vegetables/bonduelle-red-beans-200-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+CampagnaΡεβίθια400g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/campagna-chick-peas-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+CampagnaΦασόλιαΆσπρα400g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/campagna-white-beans-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+ΑλφαμέγαΚαλαμπόκι340g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-vegetables/alphamega-sweet-corn-340-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+MorrisonsΦασόλιασεΣάλτσαΝτομάτας410g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries/food-cupboard/pulses-cans-packet-soup/canned-pulses/morrisons-baked-beans-in-tomato-sauce-410-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+ΑλφαμέγαΜανιτάριαΚομμένα400g,"Dried vegetables, other preserved or processed 
+vegetables",/groceries//food-cupboard/pulses-cans-packet-soup/canned-vegetables/alphamega-sliced-mushrooms-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 ΝΟΥΝΟΥΓάλαΣυμπυκνωμένο400g,Other milk products,/groceries/food-cupboard/hot-drinks-milk/long-life-milk/noynoy-evaporated-milk-400-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 NestleΖαχαρούχοΓάλαΣυμπυκνωμένο397g,Other milk products,/groceries/food-cupboard/hot-drinks-milk/long-life-milk/nestle-sweetened-condensed-milk-397-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 ΝουνούΓάλαΖαχαρούχο397g,Other milk products,/groceries/food-cupboard/hot-drinks-milk/long-life-milk/noynoy-sweet-condensed-milk-397-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
