@@ -11,7 +11,7 @@ warnings.simplefilter("ignore")
 today=datetime.today().strftime("%Y-%m-%d")
 
 #Read necessacry data
-raw_data_=pd.read_csv("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/01.00.BillionPricesProjectProductPrice.csv")
+raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
 cpi_division=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.03.CPI-Division.xlsx")
 weight_=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/03.00.Weight_.xlsx")
 index_=pd.read_excel("02.05.Index_2024-04-08.xlsx")
