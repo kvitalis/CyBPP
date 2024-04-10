@@ -119,7 +119,7 @@ def results_fuelDaddy(urls):
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs, {'headers':header})
     
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
+    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -135,8 +135,11 @@ def results_fuelDaddy(urls):
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
             for brand_name in brand:
                 brand_word = brand_name.get_text(strip = True).upper()
-
-        if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
+        
+        if brand_word:
+            if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
+                brand_word="PETROLINA"
+        else:
             brand_word="PETROLINA"
         
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
