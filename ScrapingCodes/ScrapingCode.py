@@ -1510,7 +1510,7 @@ def resutls_toyta(u):
     if subclass_=="New motor cars":
         element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
     
-        if price_:
+        if element_name:
             price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -1531,7 +1531,7 @@ def resutls_toyta(u):
         
     elif subclass_=="Second-hand motor cars":
         element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
-        if price_:
+        if element_name:
             price_=element_name[0].text.replace(",","").replace("€","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
