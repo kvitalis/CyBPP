@@ -12,9 +12,9 @@ today=datetime.today().strftime("%Y-%m-%d")
 
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
-cpi_division=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.03.CPI-Division.xlsx")
-weight_=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/03.00.Weight_.xlsx")
-index_=pd.read_excel("02.05.Index_2024-04-08.xlsx")
+cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
+weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
+index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
 # CPI/ Division
 
@@ -78,7 +78,7 @@ for i in range(0,len(sewagecollection)):
 sew_price_=((larnaca_/larnaca_count)+(nicosia_/nicosia_count)+(limassol_/limassol_count))/3
 group_df.at[index_of_sewagecollection, 'Price'] = sew_price_
 
-weight_=pd.read_excel("/Users/kendeas/Desktop/Test file/Comparison Subclass/03.00.Weight_.xlsx")
+weight_=pd.read_excel("CPI and Inflation Results/03.00.Weight_.xlsx")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
@@ -104,7 +104,7 @@ df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass"
 df_6["Date"] =today
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_excel("02.03.CPI-Division.xlsx",index=False)
+combined_df.to_excel("CPI and Inflation Results/CPI-Division.xlsx",index=False)
 
 # CPI/ General /Infation
 
@@ -120,7 +120,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()/100
 
 #Read excel file
-df_104=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.04.CPI-General-Inflation.xlsx")
+df_104=pd.read_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx")
 
 #Creatited null list and add information
 new_row=[]
