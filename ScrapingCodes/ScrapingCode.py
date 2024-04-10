@@ -1962,14 +1962,10 @@ def resutls_max_7_tax(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_entry(u):
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_,{'headers':header})
-    soup = BeautifulSoup(response.content, "html.parser")
-    element_=soup.find("li",{"class":"product-price"})
-    price_=float(element_.text.replace("€","").replace(",","."))
+def results_costastheodorou(u):
+    response = requests.get(Item_url_)
 
-    if response.status_code !=200:
+    if (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -1979,12 +1975,15 @@ def results_entry(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
     else:
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_=soup.find_all("p",{"class":"price"})
+        price_=element_[0].text.replace("€","")
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(comitidy_)
-        new_row.append("Entry")
+        new_row.append("Costas Theodorou")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2125,8 +2124,8 @@ for u in range(0,len(urls)):
         resutls_max_7_tax(u)
     elif retailer_=="leroymerlin":
         results_leroymerlin(u)
-    elif retailer_=="Entry":
-        results_entry(u)
+    elif retailer_=="Costas Theodorou":
+        results_costastheodorou(u)
 
 #Chanegd the type as float
 list_["Price"].astype(float)
