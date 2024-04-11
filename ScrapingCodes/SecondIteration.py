@@ -61,6 +61,7 @@ def results_supermarketcy(urls):
         list_.loc[len(list_)] = new_row
         list_["Name"] =list_["Name"].apply(lambda x:x)
 
+"""
 def results_alphamega(urls):
     header = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
               "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
@@ -111,7 +112,7 @@ def results_alphamega(urls):
     new_row.append("Alphamega")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
-
+"""
 
 def results_fuelDaddy(urls):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
