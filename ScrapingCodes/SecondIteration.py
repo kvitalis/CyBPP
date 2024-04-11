@@ -828,7 +828,7 @@ def results_novella(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-
+ 
     if ("404 Page Not Found." in soup.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -837,44 +837,34 @@ def results_novella(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         scripts_1 = soup.find_all('td',{'class':'column-1'},string=True)
         scripts_2 = soup.find_all('td',{'class':'column-2'},string=True)
-
+ 
         for i in range(0,len(scripts_1)):
             new_row=[]
             website_false=[]
-            if ("LADIES CUT" in scripts_1) or ("MEN'S CUT" in scripts_1):
-                if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
-                    price_=scripts_2[i].text.replace('€',"").replace(',','.')
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(comitidy_)
-                    new_row.append("Novella")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-
-                elif (name_=="Men's Services, HAIRCUT Stylist") and (scripts_1[i].text== "MEN'S CUT"):
-                    price_=scripts_2[i].text.replace('€',"").replace(',','.')
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(comitidy_)
-                    new_row.append("Novella")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(comitidy_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
+                price_=scripts_2[i].text.replace('€',"").replace(',','.')
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Novella")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+ 
+            elif (name_=="Men's Services, HAIRCUT Stylist") and (scripts_1[i].text== "MEN'S CUT"):
+                price_=scripts_2[i].text.replace('€',"").replace(',','.')
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Novella")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
 
 
 def results_numbeo(u):
@@ -944,6 +934,7 @@ def results_primetel(u):
                 new_row.append("Primetel")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def resutls_rio(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1011,15 +1002,23 @@ def resutls_rio(u):
 
 def resutls_ahk(u):
     response = requests.get(Item_url_)
-    
+
+    pdf = "PDFs/AHK.pdf"
     if response.status_code !=200:
-        no_website.append(Item_url_)
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
     else:
     
-        with open("AHK.pdf", "wb") as f:
+        with open(pdf, "wb") as f:
             f.write(response.content)
 
-        with open("AHK.pdf", "rb") as f:
+        with open(pdf, "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
@@ -1511,9 +1510,9 @@ def resutls_toyta(u):
     
     if subclass_=="New motor cars":
         element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
-        price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
     
-        if price_:
+        if element_name:
+            price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -1533,9 +1532,8 @@ def resutls_toyta(u):
         
     elif subclass_=="Second-hand motor cars":
         element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
-        price_=element_name[0].text.replace(",","").replace("€","")
-
-        if price_:
+        if element_name:
+            price_=element_name[0].text.replace(",","").replace("€","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -1556,10 +1554,9 @@ def resutls_toyta(u):
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
-    #with open("04.02.ithaki.pdf", "wb") as f:
-    #    f.write(response.content)
+    pdf = "PDFs/04.02.ithaki.pdf"
 
-    with pdfplumber.open("04.02.ithaki.pdf") as pdf:
+    with pdfplumber.open(pdf) as pdf:
         first_page = pdf.pages[5]
         text = first_page.extract_text()
         
@@ -1615,10 +1612,11 @@ def results_ithaki(u):
 
 def results_flames(u):
     response = requests.get(Item_url_)
-    with open("04.00.flames.pdf", "wb") as f:
+    pdf = "PDFs/flames.pdf"
+    with open(pdf, "wb") as f:
         f.write(response.content)
 
-    with pdfplumber.open("04.00.flames.pdf") as pdf:
+    with pdfplumber.open(pdf) as pdf:
         first_page = pdf.pages[0]
         text = first_page.extract_text()
 
@@ -1705,8 +1703,6 @@ def resutls_intercity(u):
             new_row.append(comitidy_)
             new_row.append("Intercity Bus")
             list_.loc[len(list_)] = new_row
-
-
 
 def results_parga(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1967,6 +1963,56 @@ def resutls_max_7_tax(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_costastheodorou(u):
+    response = requests.get(Item_url_)
+
+    if (response.status_code !=200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_=soup.find_all("p",{"class":"price"})
+        price_=element_[0].text.replace("€","")
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(comitidy_)
+        new_row.append("Costas Theodorou")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_leroymerlin(u):
+    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_,{'headers':header})
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if response.status_code !=200 or ("Η σελίδα που αναζητάτε δεν βρέθηκε." in soup.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comitidy_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_=soup.find_all("span",{"class":"priceBigMain"})
+        price_=element_[0].text.replace("€","").replace(" ","").replace(",",".")
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(comitidy_)
+        new_row.append("Leroy Merlin") 
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #Calculation of the process time
 start_time = time.time()
 
@@ -1984,12 +2030,11 @@ for u in range(0,len(urls)):
     subclass_=urls["Subclass"].iloc[u]
     comitidy_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
-    
 
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
-    elif retailer_=="Alpha Mega":
-        results_alphamega(u)
+    #elif retailer_=="Alphamega":
+        #results_alphamega(u)
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
@@ -2078,6 +2123,10 @@ for u in range(0,len(urls)):
         results_musicavenue(u)
     elif retailer_=="Max 7 Taxi":
         resutls_max_7_tax(u)
+    elif retailer_=="leroymerlin":
+        results_leroymerlin(u)
+    elif retailer_=="Costas Theodorou":
+        results_costastheodorou(u)
 
 #Chanegd the type as float
 list_["Price"].astype(float)
