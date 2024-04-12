@@ -23,6 +23,8 @@ group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
+print("1")
+
 #Electricity
 electricity_row = group_df[(group_df["Subclass"] == "Electricity")]
 index_of_electricity = electricity_row.index[0]
@@ -34,6 +36,8 @@ group_df.at[index_of_electricity, 'Price'] = ele_price_
 #Water Board
 watersupply_row = group_df[(group_df["Subclass"] == "Water supply")]
 index_of_watersupply = watersupply_row.index[0]
+
+print("2")
 
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
 
@@ -51,6 +55,8 @@ for i in range(0,len(waterboard)):
         
 wat_price_=(larnaca_+nicosia_+limassol_)/3
 group_df.at[index_of_watersupply, 'Price'] = wat_price_
+
+print("3")
 
 #Sewage collection
 sewagecollection_row = group_df[(group_df["Subclass"] == "Sewage collection")]
@@ -78,9 +84,13 @@ for i in range(0,len(sewagecollection)):
 sew_price_=((larnaca_/larnaca_count)+(nicosia_/nicosia_count)+(limassol_/limassol_count))/3
 group_df.at[index_of_sewagecollection, 'Price'] = sew_price_
 
+print("4")
+
 weight_=pd.read_excel("CPI and Inflation Results/03.00.Weight_.xlsx")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
+
+print("5")
 
 df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
@@ -89,19 +99,27 @@ df_3=pd.merge(df_2, weight_, on='Subclass')
 df_3=df_3[["Subclass","Division","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight'}, inplace=True)
 
+print("6")
+
 df_4=df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
+
+print("7")
 
 df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
 
+print("8")
+
 df_6=pd.merge(df_1, df_5, on='Division')
 df_6["Date"]= None
 df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
 df_6["Date"] =today
+
+print("9")
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_excel("CPI and Inflation Results/CPI-Division.xlsx",index=False)
@@ -114,6 +132,8 @@ df_99=index_[["Division","Weight"]]
 df_101=df_6[["Division","CPI Division"]]
 df_102 = df_101.drop_duplicates()
 
+print("10")
+
 #Merged dataframes
 df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
@@ -122,11 +142,15 @@ Cpi_general=df_103["New"].sum()/100
 #Read excel file
 df_104=pd.read_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx")
 
+print("11")
+
 #Creatited null list and add information
 new_row=[]
 new_row.append(today)
 new_row.append(Cpi_general)
 new_row.append(None)
+
+print("12")
 
 #Combinted the two dataframe
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
