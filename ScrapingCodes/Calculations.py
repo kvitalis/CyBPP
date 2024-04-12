@@ -9,8 +9,6 @@ warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
 
-print("1")
-      
 #CALCULATION
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
@@ -19,13 +17,13 @@ cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
 weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
 index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
-print("2")
-
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
 group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
+
+print("2")
 
 group_df = group_df[group_df["Subclass"] != "Electricity"]
 group_df = group_df[group_df["Subclass"] != "Water supply"]
