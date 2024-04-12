@@ -19,8 +19,6 @@ index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
-
-row_data_today.to_csv("CPI and Inflation Results/ken.csv")
 group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
