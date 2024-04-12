@@ -9,13 +9,17 @@ warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
 
+print("1")
+      
 #CALCULATION
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
+raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
 weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
 index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
+print("2")
 
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
@@ -28,6 +32,8 @@ group_df = group_df[group_df["Subclass"] != "Water supply"]
 group_df = group_df[group_df["Subclass"] != "Sewage collection"]
 group_df = group_df.reset_index(drop=True)
 
+print("3")
+
 #Electricity
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
 ele_price_=electricity["Price"].sum()
@@ -37,6 +43,7 @@ new_row.append(ele_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
+print("4")
 
 #Water Board
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
@@ -59,6 +66,8 @@ new_row.append("Water supply")
 new_row.append(wat_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
+
+print("5")
 
 #Sewage collection
 sewagecollection=row_data_today[row_data_today["Subclass"]=="Sewage collection"]
@@ -88,6 +97,8 @@ new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
+print("6")
+
 weight_=pd.read_excel("/Users/kendeas/Desktop/Test file/Comparison Subclass/03.00.Weight_.xlsx")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
@@ -103,7 +114,6 @@ df_4=df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
 
-
 df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
@@ -113,6 +123,8 @@ df_6=pd.merge(df_1, df_5, on='Division')
 df_6["Date"]= None
 df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
 df_6["Date"] =today
+
+print("6")
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_excel("02.03.CPI-Division.xlsx",index=False)
