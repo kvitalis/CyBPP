@@ -8,6 +8,8 @@ from datetime import datetime, timedelta
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
+print("0")
+
 today=datetime.today().strftime("%Y-%m-%d")
 
 #Read necessacry data
