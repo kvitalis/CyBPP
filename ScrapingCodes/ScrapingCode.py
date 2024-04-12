@@ -1668,7 +1668,7 @@ def results_lensescy(u):
         soup = BeautifulSoup(response.content, "html.parser")
         element_name = soup.find_all('div',{"class":"product-price"})
         price_=element_name[0].text.replace("€","").replace(" ","").replace(",",".")
-        new_row.append(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append("Corrective eye-glasses and contact lenses")
