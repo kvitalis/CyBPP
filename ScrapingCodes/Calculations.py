@@ -99,7 +99,7 @@ group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 print("4")
 
-weight_=pd.read_excel("CPI and Inflation Results/03.00.Weight_.xlsx")
+weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
