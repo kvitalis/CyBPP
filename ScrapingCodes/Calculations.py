@@ -20,7 +20,6 @@ index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
 
-"""
 row_data_today.to_csv("CPI and Inflation Results/ken.csv")
 group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
@@ -146,4 +145,3 @@ df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx", index=False)
-"""
