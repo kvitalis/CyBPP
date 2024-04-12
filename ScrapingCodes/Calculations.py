@@ -13,7 +13,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
-raw_data_.to.csv("CPI and Inflation Results/ken.csv")
+raw_data_.to_csv("CPI and Inflation Results/ken.csv")
 cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
 weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
 index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
