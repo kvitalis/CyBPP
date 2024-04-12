@@ -25,20 +25,23 @@ group=row_data_today.groupby("Subclass").mean()
 #group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
+group_df = group_df[group_df["Subclass"] != "Electricity"]
+group_df = group_df[group_df["Subclass"] != "Water supply"]
+group_df = group_df[group_df["Subclass"] != "Sewage collection"]
+group_df = group_df.reset_index(drop=True)
+
 print("1")
 
 #Electricity
-electricity_row = group_df[(group_df["Subclass"] == "Electricity")]
-index_of_electricity = electricity_row.index[1]
-
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
 ele_price_=electricity["Price"].sum()
-group_df.at[index_of_electricity, 'Price'] = ele_price_
+new_row=[]
+new_row.append("Electricity")
+new_row.append(ele_price_)
+group_df.loc[len(group_df)] = new_row
+group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 print("2")
-#Water Board
-watersupply_row = group_df[(group_df["Subclass"] == "Water supply")]
-index_of_watersupply = watersupply_row.index[0]
 
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
 
@@ -55,15 +58,16 @@ for i in range(0,len(waterboard)):
         limassol_+=waterboard.iloc[i]["Price"]
         
 wat_price_=(larnaca_+nicosia_+limassol_)/3
-group_df.at[index_of_watersupply, 'Price'] = wat_price_
+new_row=[]
+new_row.append("Water supply")
+new_row.append(wat_price_)
+group_df.loc[len(group_df)] = new_row
+group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 print("3")
 
-#Sewage collection
-sewagecollection_row = group_df[(group_df["Subclass"] == "Sewage collection")]
-index_of_sewagecollection = sewagecollection_row.index[0]
-
 sewagecollection=row_data_today[row_data_today["Subclass"]=="Sewage collection"]
+
 larnaca_=0
 larnaca_count=0
 nicosia_=0
@@ -83,7 +87,11 @@ for i in range(0,len(sewagecollection)):
         limassol_count+=1
         
 sew_price_=((larnaca_/larnaca_count)+(nicosia_/nicosia_count)+(limassol_/limassol_count))/3
-group_df.at[index_of_sewagecollection, 'Price'] = sew_price_
+new_row=[]
+new_row.append("Sewage collection")
+new_row.append(sew_price_)
+group_df.loc[len(group_df)] = new_row
+group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 print("4")
 
