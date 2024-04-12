@@ -20,9 +20,9 @@ index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
-row_data_today=row_data_today[["Subclass","Name","Price"]]
+row_data_1=row_data_today[["Subclass","Price"]]
 print("ken1")
-group=row_data_today.groupby("Subclass").mean()
+group=row_data_1.groupby("Subclass").mean()
 print("ken2")
 group.reset_index(inplace=True)
 print("ken3")
