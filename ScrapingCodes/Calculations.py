@@ -24,7 +24,8 @@ row_data_today=raw_data_[raw_data_["Date"]==today]
 group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
-print(group_df)
+group_df.reset_index(drop=True, inplace=True)
+group_df.to_excel("PDFs/ken.xlsx", index=True)
 
 print("1")
 
