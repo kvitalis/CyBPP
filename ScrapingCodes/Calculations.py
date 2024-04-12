@@ -22,12 +22,12 @@ row_data_today=raw_data_[raw_data_["Date"]==today]
 group=row_data_today.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
+group_df.to_csv("CPI and Inflation Results/ken.csv")
 
 group_df = group_df[group_df["Subclass"] != "Electricity"]
 group_df = group_df[group_df["Subclass"] != "Water supply"]
 group_df = group_df[group_df["Subclass"] != "Sewage collection"]
 group_df = group_df.reset_index(drop=True)
-group_df.to_csv("CPI and Inflation Results/ken.csv")
 
 #Electricity
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
