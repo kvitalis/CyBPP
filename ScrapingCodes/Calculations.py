@@ -11,10 +11,10 @@ today=datetime.today().strftime("%Y-%m-%d")
 
 #CALCULATION
 #Read necessacry data
-raw_data_=pd.read_csv("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/01.00.BillionPricesProjectProductPrice.csv")
-cpi_division=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.03.CPI-Division.xlsx")
-weight_=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/03.00.Weight_.xlsx")
-index_=pd.read_excel("02.05.Index_2024-04-08.xlsx")
+raw_data_=pd.read_csv("StoredScrapedData/row_data.csv")
+cpi_division=pd.read_excel("StoredScrapedData/CPI-Division.xlsx")
+weight_=pd.read_excel("StoredScrapedData/Weight_.xlsx")
+index_=pd.read_excel("StoredScrapedData/Index_2024-04-08.xlsx")
 
 
 #CPI/DIVISION
@@ -130,7 +130,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()/100
 
 #Read excel file
-df_104=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.04.CPI-General-Inflation.xlsx")
+df_104=pd.read_excel("StoredScrapedData/CPI-General-Inflation.xlsx")
 
 #Creatited null list and add information
 new_row=[]
@@ -142,7 +142,7 @@ new_row.append(None)
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_excel("02.04.CPI-General-Inflation.xlsx", index=False)
+df_106.to_excel("StoredScrapedData/CPI-General-Inflation.xlsx", index=False)
 
 
 
