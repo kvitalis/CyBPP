@@ -30,6 +30,7 @@ group_df = group_df[group_df["Subclass"] != "Water supply"]
 group_df = group_df[group_df["Subclass"] != "Sewage collection"]
 group_df = group_df.reset_index(drop=True)
 group_df.head()
+group_df.to_csv("CPI and Inflation Results/ken.csv")
 
 print("1")
 
