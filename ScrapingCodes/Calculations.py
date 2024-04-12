@@ -11,7 +11,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 
 #CALCULATION
 #Read necessacry data
-raw_data_=pd.read_csv("StoredScrapedData/row_data.csv")
+raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
 cpi_division=pd.read_excel("StoredScrapedData/CPI-Division.xlsx")
 weight_=pd.read_excel("StoredScrapedData/Weight_.xlsx")
 index_=pd.read_excel("StoredScrapedData/Index_2024-04-08.xlsx")
