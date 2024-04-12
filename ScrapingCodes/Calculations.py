@@ -36,6 +36,7 @@ print("1")
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
 ele_price_=electricity["Price"].sum()
 new_row=[]
+new_row.append(len(group_df))
 new_row.append("Electricity")
 new_row.append(ele_price_)
 group_df.loc[len(group_df)] = new_row
@@ -59,6 +60,7 @@ for i in range(0,len(waterboard)):
         
 wat_price_=(larnaca_+nicosia_+limassol_)/3
 new_row=[]
+new_row.append(len(group_df))
 new_row.append("Water supply")
 new_row.append(wat_price_)
 group_df.loc[len(group_df)] = new_row
@@ -88,6 +90,7 @@ for i in range(0,len(sewagecollection)):
         
 sew_price_=((larnaca_/larnaca_count)+(nicosia_/nicosia_count)+(limassol_/limassol_count))/3
 new_row=[]
+new_row.append(len(group_df))
 new_row.append("Sewage collection")
 new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
