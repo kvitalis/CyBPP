@@ -29,17 +29,16 @@ print("1")
 
 #Electricity
 electricity_row = group_df[(group_df["Subclass"] == "Electricity")]
-index_of_electricity = electricity_row.index[0]
+index_of_electricity = electricity_row.index[1]
 
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
 ele_price_=electricity["Price"].sum()
 group_df.at[index_of_electricity, 'Price'] = ele_price_
 
+print("2")
 #Water Board
 watersupply_row = group_df[(group_df["Subclass"] == "Water supply")]
 index_of_watersupply = watersupply_row.index[0]
-
-print("2")
 
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
 
