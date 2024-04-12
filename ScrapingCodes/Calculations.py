@@ -22,7 +22,7 @@ index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
 row_data_today=raw_data_[raw_data_["Date"]==today]
 group=row_data_today.groupby("Subclass").mean()
-#group.reset_index(inplace=True)
+group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
 group_df = group_df[group_df["Subclass"] != "Electricity"]
