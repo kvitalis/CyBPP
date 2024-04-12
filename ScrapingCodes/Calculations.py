@@ -12,9 +12,9 @@ today=datetime.today().strftime("%Y-%m-%d")
 #CALCULATION
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
-cpi_division=pd.read_excel("StoredScrapedData/CPI-Division.xlsx")
-weight_=pd.read_excel("StoredScrapedData/Weight_.xlsx")
-index_=pd.read_excel("StoredScrapedData/Index_2024-04-08.xlsx")
+cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
+weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
+index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
 
 
 #CPI/DIVISION
@@ -142,63 +142,4 @@ new_row.append(None)
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_excel("StoredScrapedData/CPI-General-Inflation.xlsx", index=False)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+df_106.to_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx", index=False)
