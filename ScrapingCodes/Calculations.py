@@ -92,34 +92,28 @@ weight_=pd.read_csv("CPI and Inflation Results/Weight_.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
-print("1")
 df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
-print("2")
 df_3=pd.merge(df_2, weight_, on='Subclass')
 df_3.to_csv("CPI and Inflation Results/ken.csv", index=False)
 df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
-print("3")
 df_4=df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
 
-print("4")
 df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
 
-print("5")
 df_6=pd.merge(df_1, df_5, on='Division')
 df_6["Date"]= None
 df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
 df_6["Date"] =today
 
-print("6")
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_csv("CPI and Inflation Results/CPI-Division.csv",index=False)
 
