@@ -122,7 +122,7 @@ df_6["Date"] =today
 
 print("6")
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_excel("02.03.CPI-Division.xlsx",index=False)
+combined_df.to_excel("CPI and Inflation Results/CPI-Division.xlsx",index=False)
 
 #CPI/ General /Infation
 df_99=index_[["Division","Weight"]]
@@ -137,7 +137,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()/100
 
 #Read excel file
-df_104=pd.read_excel("StoredScrapedData/CPI-General-Inflation.xlsx")
+df_104=pd.read_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx")
 
 #Creatited null list and add information
 new_row=[]
