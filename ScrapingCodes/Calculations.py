@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
+today = today - timedelta(days=1)
 
 #CALCULATION
 #Read necessacry data
@@ -99,6 +100,9 @@ df_2.reset_index(inplace=True)
 
 print("2")
 df_3=pd.merge(df_2, weight_, on='Subclass')
+df_3.to_csv("CPI and Inflation Results/ken.csv", index=False)
+
+"""
 df_3=df_3[["Subclass","Division","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight'}, inplace=True)
 
@@ -149,3 +153,4 @@ df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx", index=False)
+"""
