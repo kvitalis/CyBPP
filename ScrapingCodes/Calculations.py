@@ -8,7 +8,6 @@ from datetime import datetime, timedelta
 warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
-today = today - timedelta(days=1)
 
 #CALCULATION
 #Read necessacry data
