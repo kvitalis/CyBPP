@@ -13,10 +13,9 @@ today=datetime.today().strftime("%Y-%m-%d")
 #Read necessacry data
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
-raw_data_.to_csv("CPI and Inflation Results/ken.csv")
-cpi_division=pd.read_excel("CPI and Inflation Results/CPI-Division.xlsx")
-weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
-index_=pd.read_excel("CPI and Inflation Results/Index_2024-04-08.xlsx")
+cpi_division=pd.read_csv("CPI and Inflation Results/CPI-Division.csv")
+weight_=pd.read_csv("CPI and Inflation Results/Weight_.csv")
+index_=pd.read_csv("CPI and Inflation Results/Index_2024-04-08.csv")
 
 #CPI/DIVISION
 row_data_today=raw_data_[raw_data_["Date"]==today]
@@ -89,7 +88,7 @@ new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
-weight_=pd.read_excel("CPI and Inflation Results/Weight_.xlsx")
+weight_=pd.read_csv("CPI and Inflation Results/Weight_.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
@@ -122,7 +121,7 @@ df_6["Date"] =today
 
 print("6")
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_excel("CPI and Inflation Results/CPI-Division.xlsx",index=False)
+combined_df.to_csv("CPI and Inflation Results/CPI-Division.csv",index=False)
 
 #CPI/ General /Infation
 df_99=index_[["Division","Weight"]]
@@ -136,8 +135,8 @@ df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()/100
 
-#Read excel file
-df_104=pd.read_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx")
+#Read csv file
+df_104=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
 
 #Creatited null list and add information
 new_row=[]
@@ -149,4 +148,4 @@ new_row.append(None)
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_excel("CPI and Inflation Results/CPI-General-Inflation.xlsx", index=False)
+df_106.to_csv("CPI and Inflation Results/CPI-General-Inflation.csv", index=False)
