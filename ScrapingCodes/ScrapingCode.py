@@ -1290,7 +1290,6 @@ def results_CYgar_shop(u):
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     element_name = soup.find_all('div',{"class":"hM4gpp"})
-    price_value=element_name[0].text
 
     if response.status_code !=200:
         website_false.append(name_)
@@ -1302,7 +1301,8 @@ def results_CYgar_shop(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
     else:
-        if price_value:
+        if element_name:
+            price_value=element_name[0].text
             price_match = re.search(r'\d+\.\d+', price_value)
 
             if price_match:
