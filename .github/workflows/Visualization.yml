@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # It checks out the latest content of your repository
-      - name: checkout repo content
+      - name: Checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: 3.9 #install the python needed
@@ -31,7 +31,7 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       
-      - name: execute py script calculations
+      - name: Run Visualization.py
         run: |
           python ScrapingCodes/Visualization.py
           git status
