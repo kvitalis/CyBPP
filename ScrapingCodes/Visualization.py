@@ -15,7 +15,7 @@ plt.title("Evolution of Daily CPI Inflation in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('CPI and Inflation Results/Inflation_CPI.png')
+plt.savefig('CPI and Inflation Results/Inflation_Daily.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
