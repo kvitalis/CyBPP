@@ -9,15 +9,16 @@ warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
 
-#CALCULATION
-#Read necessacry data
+#CALCULATIONS
+
+#Read necessary data 
 raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("CPI and Inflation Results/CPI-Division.csv")
 weight_=pd.read_csv("CPI and Inflation Results/Weight_.csv")
 index_=pd.read_csv("CPI and Inflation Results/Index_2024-04-08.csv")
 
-#CPI/DIVISION
+#DIVISION CPI
 row_data_today=raw_data_[raw_data_["Date"]==today]
 row_data_1=row_data_today[["Subclass","Price"]]
 group=row_data_1.groupby("Subclass").mean()
@@ -117,14 +118,14 @@ df_6["Date"] =today
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_csv("CPI and Inflation Results/CPI-Division.csv",index=False)
 
-#CPI/ General /Infation
+#General CPI Inflation
 df_99=index_[["Division","Weight"]]
 
 #Cleaning Data
 df_101=df_6[["Division","CPI Division"]]
 df_102 = df_101.drop_duplicates()
 
-#Merged dataframes
+#Merge dataframes
 df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()
@@ -132,14 +133,14 @@ Cpi_general=df_103["New"].sum()
 #Read csv file
 df_104=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
 
-#Creatited null list and add information
+#Creat null list and add information
 new_row=[]
 new_row.append(today)
 new_row.append(Cpi_general)
 new_row.append(None)
 
-#Combinted the two dataframe
+#Combine the two dataframes
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
-df_106['Inflation (%)']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
+df_106['Inflation (%)']= 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_csv("CPI and Inflation Results/CPI-General-Inflation.csv", index=False)
