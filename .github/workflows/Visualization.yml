@@ -1,15 +1,15 @@
 # Code needed for the scraping process
 
 # Whenever pull request is made targeting branch initialise, csv is reset
-name: Visualization
+name: calculations
 
 # Scraping description
-run-name: Perform plots of Inflation and CPI General
+run-name: Perform calculations and store results 
 
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    - cron: "35 12 * * *" #UTC time
+    - cron: "00 16 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
@@ -33,7 +33,7 @@ jobs:
       
       - name: execute py script calculations
         run: |
-          python ScrapingCodes/Visualization.py
+          python ScrapingCodes/Calculations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
