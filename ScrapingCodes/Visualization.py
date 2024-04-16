@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 df_=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
-plt.plot(df_['Date'], df_['Inflation'], linestyle='-', marker='o', color='b', label='Inflation')
+plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
 for i, txt in enumerate(df_['Inflation']):
-    plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['Inflation'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('Inflation (%)')
-plt.title("Cyprus' Inflation", fontsize=18)
+plt.title("Cyprus' Inflation (%)", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
