@@ -127,7 +127,7 @@ df_102 = df_101.drop_duplicates()
 #Merged dataframes
 df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
-Cpi_general=df_103["New"].sum()/100
+Cpi_general=df_103["New"].sum()
 
 #Read csv file
 df_104=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
