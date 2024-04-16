@@ -6,7 +6,7 @@ df_=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
 plt.figure(figsize=(10, 6))
 plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
-for i, txt in enumerate(df_['Inflation']):
+for i, txt in enumerate(df_['Inflation (%)']):
     plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
