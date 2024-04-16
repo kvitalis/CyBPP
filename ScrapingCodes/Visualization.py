@@ -25,7 +25,7 @@ for i, txt in enumerate(df_['CPI General']):
     plt.annotate(f'{txt:.5f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
-plt.ylabel('CPI General (08/04/2024=77.4)')
+plt.ylabel('CPI General (08/04/2024 = base)')
 plt.title("Evolution of Daily General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
