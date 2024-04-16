@@ -139,7 +139,7 @@ new_row.append(Cpi_general)
 new_row.append(None)
 
 #Combinted the two dataframe
-df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation'])
+df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
-df_106['Inflation']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
+df_106['Inflation (%)']= (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_csv("CPI and Inflation Results/CPI-General-Inflation.csv", index=False)
