@@ -1,4 +1,4 @@
-# Code needed for the scraping process
+# Code needed for the construction of plots
 
 # Whenever pull request is made targeting branch initialise, csv is reset
 name: visualizations
