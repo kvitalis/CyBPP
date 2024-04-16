@@ -1,8 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_=pd.read_excel("/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/02.04.CPI-General-Inflation.xlsx")
-
+df_=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
 plt.plot(df_['Date'], df_['Inflation'], linestyle='-', marker='o', color='b', label='Inflation')
@@ -16,7 +15,7 @@ plt.title("Cyprus' Inflation", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/05.01.Inflation.png')
+plt.savefig('CPI and Inflation Results/Inflation.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
@@ -31,5 +30,5 @@ plt.title("Cyprus' CPI General", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('/Users/kendeas/Desktop/CypERN/04.Billion Prices Cyprus/05.01.CPI_General.png')
+plt.savefig('CPI and Inflation Results/CPI_General.png')
 plt.show()
