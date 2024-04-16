@@ -11,11 +11,11 @@ for i, txt in enumerate(df_['Inflation (%)']):
 
 plt.xlabel('Date')
 plt.ylabel('Inflation (%)')
-plt.title("Cyprus' Inflation (%)", fontsize=18)
+plt.title("Evolution of Daily CPI Inflation in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('CPI and Inflation Results/Inflation.png')
+plt.savefig('CPI and Inflation Results/Inflation_CPI.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
@@ -25,10 +25,10 @@ for i, txt in enumerate(df_['CPI General']):
     plt.annotate(f'{txt:.5f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
-plt.ylabel('CPI General')
-plt.title("Cyprus' CPI General", fontsize=18)
+plt.ylabel('CPI General (08/04/2024=77.4)')
+plt.title("Evolution of Daily General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('CPI and Inflation Results/CPI_General.png')
+plt.savefig('CPI and Inflation Results/CPI_General_Daily.png')
 plt.show()
