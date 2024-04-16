@@ -24,10 +24,10 @@ group=row_data_1.groupby("Subclass").mean()
 #group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
-group_df = group_df[group_df["Subclass"] != "Electricity"]
-group_df = group_df[group_df["Subclass"] != "Water supply"]
-group_df = group_df[group_df["Subclass"] != "Sewage collection"]
-group_df = group_df.reset_index(drop=True)
+group_df = group_df[group_df["Subclass"] != "Electricity"] #dont take into account the electricity subclass
+group_df = group_df[group_df["Subclass"] != "Water supply"] #dont take into account the Water supply subclass
+group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into account the Sewage Collection subclass
+group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
 
 #Electricity
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
@@ -96,7 +96,7 @@ df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
 df_3=pd.merge(df_2, weight_, on='Subclass')
-df_3.to_csv("CPI and Inflation Results/ken.csv", index=False)
+#df_3.to_csv("CPI and Inflation Results/ken.csv", index=False)
 df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
