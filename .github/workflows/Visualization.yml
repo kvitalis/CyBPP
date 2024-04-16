@@ -9,7 +9,7 @@ run-name: Perform Plots of Inflation and CPI General
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    - cron: "54 11 * * *" #UTC time
+    - cron: "25 12 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
