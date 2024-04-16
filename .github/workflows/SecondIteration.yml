@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # It checks out the latest content of your repository
-      - name: checkout repo content
+      - name: Checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: 3.9 #install the python needed
@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: execute py script products
+      - name: Run SecondIteration.py
         run: |
           python ScrapingCodes/SecondIteration.py
           git status
@@ -39,4 +39,3 @@ jobs:
           git add .
           git commit -m "2nd scraping iteration completed"
           git push origin HEAD:main
-    
