@@ -23,10 +23,8 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
-filename="StoredScrapedData/raw_data.csv"
-
 #Read necessary data
-df = pd.read_csv(filename)
+df = pd.read_csv("StoredScrapedData/raw_data.csv")
 urls = pd.read_csv("StoredScrapedData/DailyScrapingErrors.csv")
 
 #Creative null dataframe
@@ -2134,7 +2132,7 @@ list_["Price"].astype(float)
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv(filename, index=False, header=True)
+combined_df.to_csv("StoredScrapedData/raw_data.csv", index=False, header=True)
 
 annual_errors=pd.read_csv("StoredScrapedData/AnnualScrapingErrors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
