@@ -23,10 +23,8 @@ from tabula import read_pdf
 
 warnings.simplefilter("ignore")
 
-filename="StoredScrapedData/raw_data.csv"
-
 #Read necessary data
-df = pd.read_csv(filename)
+df = pd.read_csv("StoredScrapedData/raw_data.csv")
 urls=pd.read_csv("StoredScrapedData/ProductsUrls.csv")
 
 #Creative null dataframe
@@ -2137,11 +2135,10 @@ list_["Price"].astype(float)
 #elapsed_time = end_time - start_time
 #print("Elapsed time:", elapsed_time/60, "minute")
 
-df.to_csv(filename, index=False) 
+df.to_csv("StoredScrapedData/raw_data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv(filename, index=False, header=True)
+combined_df.to_csv("StoredScrapedData/raw_data.csv", index=False, header=True)
 
-filename2="StoredScrapedData/DailyScrapingErrors.csv"
-daily_errors.to_csv(filename2,index=False)
+daily_errors.to_csv("StoredScrapedData/DailyScrapingErrors.csv",index=False)
