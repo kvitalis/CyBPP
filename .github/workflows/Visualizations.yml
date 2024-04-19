@@ -31,7 +31,7 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       
-      - name: Run Visualization.py
+      - name: Run Visualizations.py
         run: |
           python PythonCodes/Visualizations.py
           git status
