@@ -15,7 +15,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 raw_data_=pd.read_csv("Datasets/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("Results/CPI-Division.csv")
-weight_=pd.read_csv("Datasets/Weight_.csv")
+weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 index_=pd.read_csv("Datasets/Index_2024-04-08.csv")
 
 #DIVISION CPI
@@ -89,7 +89,7 @@ new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
-#weight_=pd.read_csv("Datasets/Weight_.csv")
+#weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
