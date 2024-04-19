@@ -1,7 +1,7 @@
 # Code needed for the scraping process
 
 # Whenever pull request is made targeting branch initialise, csv is reset
-name: run-daily-scrape
+name: run-daily-scraping
 
 # Scraping description
 run-name: Adding today's scraped data into raw_data.csv
