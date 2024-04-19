@@ -12,7 +12,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 #CALCULATIONS
 
 #Read necessary data 
-raw_data_=pd.read_csv("StoredScrapedData/raw_data.csv")
+raw_data_=pd.read_csv("Datasets/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("CPI and Inflation Results/CPI-Division.csv")
 weight_=pd.read_csv("CPI and Inflation Results/Weight_.csv")
