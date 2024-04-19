@@ -131,7 +131,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()
 
 #Read csv file
-df_104=pd.read_csv("Inflation Results/CPI-General-Inflation.csv")
+df_104=pd.read_csv("Results/CPI-General-Inflation.csv")
 
 #Creat null list and add information
 new_row=[]
@@ -143,4 +143,4 @@ new_row.append(None)
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation (%)']= 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_csv("Inflation Results/CPI-General-Inflation.csv", index=False)
+df_106.to_csv("Results/CPI-General-Inflation.csv", index=False)
