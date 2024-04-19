@@ -3,17 +3,31 @@
 
 ## Overview
 
-The Billion Prices Cyprus Scrape project involves scraping prices of around 2500 products from 40 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
+The Billion Prices Cyprus Scrape project involves scraping prices of around 2300 products from 50 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
 
-## Scraping Process
+## Scraping Code(temporary name)
 
-The scraping process is handled by the scrape_tool.py script. It collects information such as product name, price, subclass, retailers, and subclass average. This data is written to the BillionPricesProject_ProductList.csv file. To add supermarket products for scraping without coding, one can directly modify the AlphaMega.csv file.
+The main objective of this project is to collect and analyze the prices of the Cypriot market in various qualities. The specific Python file has been acquired for the collection process of these prices and their storage. At the same time, emphasis is placed on the products for which the prices have not been collected for some reason.
 
-## Calculation Process
+The above file do you call daily from the file RunDailyScraping.yml at 09:00 (UTC Time) and is storaged the prices to the raw_data.csv file (temporary name). The storage is done in the form of a table and has the following order and structural variables: Date,Product Name, Product Price, Subclass, Division and Retailers.
 
-The calculation of mean prices and CPI measures is performed by the calculations.py script. It reads the Ref_weights.csv file, which contains subclass and division weights, names, and means of the reference basket. The script calculates the mean prices (including division and total) for the scraped products of the day and generates the CPI measures. The results are written to the Calculations.csv file, along with the date and time of calculation.
+## SecondIteration (temporary name)
 
-## Scraped Websites
+As mentioned before, there is a need to collect the values from the first test. One of the main reasons why this is done with 100% accurated, is when the companies' websites is unavailable (either for maintenance reasons or due to traffic reasons). To address this specific issue, the price collection procedure is invoked a second time during the day at 15:00 (UTC Time) only for the products for which the daily price was not collected in the preceding procedure. It is important to mention that the file that call this process is the file of SecondIteration.yml.
+
+## Calculation (temporary name)
+
+The existence of the particular file is just as important because it calculates the CPI as well as the daily inflation. These calculations are made exactly as guided by the OneMillionPriceProject. This file is called from the file Calculation.yml, and the time is 16:00 (UTC Time).
+
+## Visualizations (tempory name)
+
+In the above file, the fluctuations of inflation are presented graphically on a daily basis, along with the changes in CPI represented as a time series.All the output information storage as a image file on Datasets folder. File is called from the file Vizualization.yml (Tempory name), and the time is 18:00 (UTC Time).
+
+## Retailers:
+
+In accordance with the statistical superiority of Cyprus and the representativeness of each retailer within various subclasses, presented below are the 52 selected retailers chosen for the development of the data collection code.
+
+It is important to mention that there are retailers that are representative within the Cypriot market, but it was unexpected to collect data from their websites due to the following reasons: firstly, some retailers do not have websites; secondly, some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
 - Adventure Without Limits (AWOL)	https://www.awol.com.cy/ 
 
@@ -94,7 +108,6 @@ The calculation of mean prices and CPI measures is performed by the calculations
 - Wolt (Costa Coffee, Piatsa Gourounaki Nicosia, Pixida Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki, Ocean Basket Paphos, McDonald’s)	https://wolt.com/en/cyp 
 
  
-
 ## GitHub Actions
 
 The project utilizes GitHub Actions to automate the scraping process. The repository contains the following YAML files within the ./github/workflows directory:
