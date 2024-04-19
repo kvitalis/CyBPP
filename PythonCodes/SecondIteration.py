@@ -24,8 +24,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 #Read necessary data
-df = pd.read_csv("StoredScrapedData/raw_data.csv")
-urls = pd.read_csv("StoredScrapedData/DailyScrapingErrors.csv")
+df = pd.read_csv("Datasets/raw_data.csv")
+urls = pd.read_csv("Datasets/DailyScrapingErrors.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -2132,9 +2132,9 @@ list_["Price"].astype(float)
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("StoredScrapedData/raw_data.csv", index=False, header=True)
+combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
 
-annual_errors=pd.read_csv("StoredScrapedData/AnnualScrapingErrors.csv")
+annual_errors=pd.read_csv("Datasets/AnnualScrapingErrors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
 combined_annual=pd.concat([annual_errors, daily_errors], axis=0)
-combined_annual.to_csv("StoredScrapedData/AnnualScrapingErrors.csv", index=False , header=True)
+combined_annual.to_csv("Datasets/AnnualScrapingErrors.csv", index=False , header=True)
