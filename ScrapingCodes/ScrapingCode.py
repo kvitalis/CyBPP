@@ -963,7 +963,7 @@ def resutls_rio(u):
                         new_row.append(float(match.group(2)))
                         new_row.append(subclass_)
                         new_row.append(comitidy_)
-                        new_row.append("Primetel")
+                        new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
                     else:
@@ -986,7 +986,7 @@ def resutls_rio(u):
                         new_row.append(float(price_))
                         new_row.append(subclass_)
                         new_row.append(comitidy_)
-                        new_row.append("Primetel")
+                        new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
                     else:
