@@ -33,7 +33,7 @@ jobs:
       
       - name: Run Calculations.py
         run: |
-          python ScrapingCodes/Calculations.py
+          python PythonCodes/Calculations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
