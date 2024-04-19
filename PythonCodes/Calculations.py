@@ -14,7 +14,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 #Read necessary data 
 raw_data_=pd.read_csv("Datasets/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
-cpi_division=pd.read_csv("CPI and Inflation Results/CPI-Division.csv")
+cpi_division=pd.read_csv("Results/CPI-Division.csv")
 weight_=pd.read_csv("Datasets/Weight_.csv")
 index_=pd.read_csv("Datasets/Index_2024-04-08.csv")
 
@@ -97,7 +97,7 @@ df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
 df_3=pd.merge(df_2, weight_, on='Subclass')
-#df_3.to_csv("CPI and Inflation Results/ken.csv", index=False)
+#df_3.to_csv("Results/ken.csv", index=False)
 df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
@@ -116,7 +116,7 @@ df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass"
 df_6["Date"] =today
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_csv("CPI and Inflation Results/CPI-Division.csv",index=False)
+combined_df.to_csv("Results/CPI-Division.csv",index=False)
 
 #General CPI Inflation
 df_99=index_[["Division","Weight"]]
@@ -131,7 +131,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()
 
 #Read csv file
-df_104=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
+df_104=pd.read_csv("Inflation Results/CPI-General-Inflation.csv")
 
 #Creat null list and add information
 new_row=[]
@@ -143,4 +143,4 @@ new_row.append(None)
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation (%)']= 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_csv("CPI and Inflation Results/CPI-General-Inflation.csv", index=False)
+df_106.to_csv("Inflation Results/CPI-General-Inflation.csv", index=False)
