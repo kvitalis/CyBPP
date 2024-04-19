@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_=pd.read_csv("CPI and Inflation Results/CPI-General-Inflation.csv")
+df_=pd.read_csv("Results/CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
 plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
@@ -15,7 +15,7 @@ plt.title("Evolution of Daily CPI Inflation in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('CPI and Inflation Results/Inflation_Daily.png')
+plt.savefig('Results/Inflation_Daily.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
@@ -30,5 +30,5 @@ plt.title("Evolution of Daily General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('CPI and Inflation Results/CPI_General_Daily.png')
+plt.savefig('Results/CPI_General_Daily.png')
 plt.show()
