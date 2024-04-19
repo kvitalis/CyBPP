@@ -1269,7 +1269,7 @@ def results_meze(u):
             new_row.append(price_)
             new_row.append(subclass_)
             new_row.append(comitidy_)
-            new_row.append("Vasos Psarolimano")
+            new_row.append("Meze Tavern")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
         else:
