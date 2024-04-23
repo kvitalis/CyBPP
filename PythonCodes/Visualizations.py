@@ -33,7 +33,7 @@ plt.tight_layout()
 plt.savefig('Results/CPI_General_Daily.png')
 plt.show()
 
-###EVRY THURSDAY
+## LAST THURSDAY (*this corresponds to the monthly observation*)
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
