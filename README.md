@@ -1,5 +1,5 @@
 
-# Billion Prices Cyprus Scrape Project
+# Cyprus Billion Prices Project
 
 ## Overview
 
