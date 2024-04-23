@@ -19,6 +19,7 @@ def is_last_thursday(date):
 if is_last_thursday(current_date):
     df_current_date=df_[df_["Date"]==current_date]
     df_montly_data = df_montly_data.append(df_current_date, ignore_index=True)
+    df_montly_data["Inflation]=None
     df_montly_data.to_csv("Results Monthly/CPI-General-Inflation-Monthly.csv")
 else:
     pass
