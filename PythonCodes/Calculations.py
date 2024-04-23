@@ -147,7 +147,7 @@ df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation (%)']= 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_csv("Results/CPI-General-Inflation.csv", index=False)
 
-##EVRY LAST THURSDAY
+## LAST THURSDAY (*this corresponds to the monthly observation*)
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -167,7 +167,7 @@ def is_last_thursday(date):
 if is_last_thursday(current_date):
     df_current_date=df_[df_["Date"]==current_date]
     df_montly_data = df_montly_data.append(df_current_date, ignore_index=True)
-    df_montly_data["Inflation (%)"]=None
+    df_montly_data["Inflation (%)"]=None    # NOTE: here write the formula of General CPI change over time 
     df_montly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv")
 else:
     pass
