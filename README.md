@@ -3,7 +3,9 @@
 
 ## Overview
 
-The Billion Prices Cyprus Scrape project involves scraping prices of around 2300 products from 50 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
+The Cyprus 'Billion Prices Project' (https://thebillionpricesproject.com/) is inspired by an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
+
+In particular, the Cyprus BPP involves web-scraping of prices of around 2300 goods and services from 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation.
 
 ## Scraping Code(temporary name)
 
@@ -29,43 +31,61 @@ In accordance with the statistical superiority of Cyprus and the representativen
 
 It is important to mention that there are retailers that are representative within the Cypriot market, but it was unexpected to collect data from their websites due to the following reasons: firstly, some retailers do not have websites; secondly, some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
-- Adventure Without Limits (AWOL)	https://www.awol.com.cy/ 
+1. Adventure Without Limits (AWOL)	https://www.awol.com.cy/ 
 
-- Alphamega	https://www.alphamega.com.cy/ 
+2. Alter Vape	https://altervape.eu/ 
 
-- Alter Vape	https://altervape.eu/ 
+3. Athlokinisi	https://athlokinisi.com.cy/ 
 
-- Athlokinisi	https://athlokinisi.com.cy/ 
+4. Bwell Pharmacy	https://bwell.com.cy/ 
 
-- Bwell Pharmacy	https://bwell.com.cy/ 
+5. Cablenet	https://cablenet.com.cy/
 
-- Cablenet	https://cablenet.com.cy/ 
+6. Centroptical https://centroptical-cyprus.com/
 
-- Consumer Protection Service	https://consumer.gov.cy/gr/ 
+7. Costas Theodorou https://costastheodorou.com.cy/
 
-- Cyprus Energy Regulation Authority (CERA)	https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
+8. Cyprus Energy Regulation Authority (CERA)	https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
 
-- Cyprus Ministry of Education, Sport and Youth	https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+9. Cyprus Ministry of Education, Sport and Youth	https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
-- Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf 
+10. Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf
 
-- Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
+11. Cyprus Public Transport https://www.publictransport.com.cy/
 
-- Epic	https://www.epic.com.cy/en/page/start/home 
+12. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
 
-- E-WHOLESALE	https://www.ewsale.com/tsigaro 
+13. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EN/Pages/default.aspx
 
-- Electroline	https://electroline.com.cy/ 
+14. Electroline	https://electroline.com.cy/ 
 
-- European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf 
+15. Epic	https://www.epic.com.cy/en/page/start/home 
 
-- Famous Sports	https://www.famousports.com/en 
+16. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
 
-- FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
+17. Evdokia Jewellery https://evdokiajewellery.com/
 
-- IKEA	https://www.ikea.com.cy/
+18. E-WHOLESALE	https://www.ewsale.com/tsigaro 
 
-- Marks & Spencer	https://www.marksandspencer.com/cy/ 
+19. Famous Sports	https://www.famousports.com/en 
+
+20. Flames Restaurant and Bar https://flamesrestaurantbar.com/
+    
+21. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
+
+22. IKEA	https://www.ikea.com.cy/
+
+23. Intercity Buses https://intercity-buses.com/en/
+
+24. Ithaki Garden https://www.tripadvisor.com.gr/Restaurant_Review-g190379-d7269566-Reviews-Ithaki_Garden-Larnaca_Larnaka_District.html
+
+25. Lenses CY https://www.lensescy.com/
+
+26. Leroy Merlin https://www.leroymerlin.com.cy/gr/  
+
+27. Marks & Spencer	https://www.marksandspencer.com/cy/
+
+28. Max 7 Taxi https://www.max7taxi.com/ 
 
 - Mazda	https://www.mazda.com.cy/home 
 
