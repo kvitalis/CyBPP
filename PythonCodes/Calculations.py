@@ -18,7 +18,7 @@ raw_data_=pd.read_csv("Datasets/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("Results/CPI-Division.csv")
 weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
-index_=pd.read_csv("Datasets/Index_2024-04-08.csv")
+index_=pd.read_csv("Datasets/Reference_Values.csv")
 
 #DIVISION CPI
 row_data_today=raw_data_[raw_data_["Date"]==today]
