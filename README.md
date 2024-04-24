@@ -31,13 +31,13 @@ In accordance with the statistical superiority of Cyprus and the representativen
 
 It is important to mention that there are retailers that are representative within the Cypriot market, but it was unexpected to collect data from their websites due to the following reasons: firstly, some retailers do not have websites; secondly, some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
-1. Adventure Without Limits (AWOL)	https://www.awol.com.cy/ 
+1. Adventure Without Limits (AWOL) https://www.awol.com.cy/ 
 
-2. Alter Vape	https://altervape.eu/ 
+2. Alter Vape https://altervape.eu/ 
 
-3. Athlokinisi	https://athlokinisi.com.cy/ 
+3. Athlokinisi https://athlokinisi.com.cy/ 
 
-4. Bwell Pharmacy	https://bwell.com.cy/ 
+4. Bwell Pharmacy https://bwell.com.cy/ 
 
 5. Cablenet	https://cablenet.com.cy/
 
@@ -45,9 +45,9 @@ It is important to mention that there are retailers that are representative with
 
 7. Costas Theodorou https://costastheodorou.com.cy/
 
-8. Cyprus Energy Regulation Authority (CERA)	https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
+8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
 
-9. Cyprus Ministry of Education, Sport and Youth	https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+9. Cyprus Ministry of Education, Sport and Youth https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
 10. Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf
 
@@ -59,7 +59,7 @@ It is important to mention that there are retailers that are representative with
 
 14. Electroline	https://electroline.com.cy/ 
 
-15. Epic	https://www.epic.com.cy/en/page/start/home 
+15. Epic https://www.epic.com.cy/en/page/start/home 
 
 16. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
 
@@ -133,7 +133,7 @@ It is important to mention that there are retailers that are representative with
 
 51. Water Board of Limassol (WBL) https://www.wbl.com.cy/el/water-rates 
 
-52. Wolt (Costa Coffee, Starbucks, Pizza Hut, McDonald’s, Ocean Basket, Piatsa Gourounaki Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki)	https://wolt.com/en/cyp 
+52. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
  
 ## GitHub Actions
