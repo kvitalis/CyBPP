@@ -85,47 +85,55 @@ It is important to mention that there are retailers that are representative with
 
 27. Marks & Spencer	https://www.marksandspencer.com/cy/
 
-28. Max 7 Taxi https://www.max7taxi.com/ 
+28. Max 7 Taxi https://www.max7taxi.com/
 
-- Mazda	https://www.mazda.com.cy/home 
+29. MEZE Taverna Restaurant https://www.mezetaverna.com/
+    
+30. Moto Race https://www.motorace.com.cy/
 
-- Moto Race	https://www.motorace.com.cy/ 
+31. Music Avenue https://www.musicavenue.com.cy/  
 
-- Nissan	https://www.nissan.com.cy/ 
+32. Nissan https://www.nissan.com.cy/ 
 
-- Novella Hair Salon	https://novella.com.cy/ 
+33. Novella Hair Mode https://novella.com.cy/ 
 
-- NUMBEO	https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR 
+34. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
 
-- Pizza Hut	https://www.pizzahut.com.cy/ 
+35. Parga Book Center https://www.parga.com.cy/
 
-- Primetel	https://primetel.com.cy/en 
+36. Premier Laundry Services Ltd https://premierlaundry.com.cy/#/ 
 
-- Rio Cinemas	http://www.riocinemas.com.cy/ 
+37. Primetel https://primetel.com.cy/en
 
-- Sewerage Board of Limassol-Amathus (SBLA)	https://www.sbla.com.cy/Sewage-Charges 
+38. Pyxida Fish Tavern https://pyxidafishtavern.com/
 
-- Sewerage Board of Nicosia (SBN)	https://www.sbn.org.cy/el/apoxeteftika-teli 
+39. Rio Cinemas http://www.riocinemas.com.cy/ 
 
-- Sewerage and Drainage Board of Larnaca (LSDB)	https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
+40. Sewerage Board of Limassol-Amathus (SBLA)	https://www.sbla.com.cy/Sewage-Charges 
 
-- Stephanis	https://www.stephanis.com.cy/en 
+41. Sewerage Board of Nicosia (SBN) https://www.sbn.org.cy/el/apoxeteftika-teli 
 
-- Stradivarius	https://www.stradivarius.com/cy/ 
+42. Sewerage and Drainage Board of Larnaca (LSDB) https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
 
-- SupermarketCy	https://www.supermarketcy.com.cy/ 
+43. Stephanis https://www.stephanis.com.cy/en 
 
-- The CYgar Shop	https://www.thecygarshop.com/ 
+44. SupermarketCy https://www.supermarketcy.com.cy/ 
 
-- The Royal Cigars 	https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos 
+45. The CYgar Shop https://www.thecygarshop.com/ 
 
-- Water Board of Nicosia (WBN)	https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/ 
+46. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
 
-- Water Board of Larnaca (LWB)	https://www.lwb.org.cy/en/charges-and-fees.html 
+47. Toyota https://www.toyota.com.cy/
 
-- Water Board of Limassol (WBL)	https://www.wbl.com.cy/el/water-rates 
+48. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
 
-- Wolt (Costa Coffee, Piatsa Gourounaki Nicosia, Pixida Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki, Ocean Basket Paphos, McDonald’s)	https://wolt.com/en/cyp 
+49. Water Board of Nicosia (WBN) https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/ 
+
+50. Water Board of Larnaca (LWB) https://www.lwb.org.cy/en/charges-and-fees.html 
+
+51. Water Board of Limassol (WBL) https://www.wbl.com.cy/el/water-rates 
+
+52. Wolt (Costa Coffee, Starbucks, Pizza Hut, McDonald’s, Ocean Basket, Piatsa Gourounaki Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki)	https://wolt.com/en/cyp 
 
  
 ## GitHub Actions
