@@ -5,7 +5,7 @@
 
 The Cyprus 'Billion Prices Project' (https://thebillionpricesproject.com/) is inspired by an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
 
-In particular, the Cyprus BPP involves web-scraping of prices of around 2300 goods and services from about 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation using standard methods. 
+In particular, the Cyprus BPP involves web-scraping of prices of around 2200 goods and services from about 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation using standard methods. 
 
 ## Scraping Code(temporary name)
 
