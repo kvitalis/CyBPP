@@ -166,7 +166,7 @@ def is_last_thursday(date):
 #Call the function
 if is_last_thursday(current_date):
     df_current_date=df_[df_["Date"]==current_date]
-    df_montly_data = df_montly_data.append(df_current_date, ignore_index=True)
+    df_montly_data = pd.concat([df_current_date, df_montly_data], ignore_index=True)
     df_montly_data["Inflation (%)"]=None    # NOTE: here write the formula of General CPI change over time 
     df_montly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv")
 else:
