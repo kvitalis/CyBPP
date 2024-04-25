@@ -28,7 +28,7 @@ for i, txt in enumerate(df_['CPI General']):
     plt.annotate(f'{txt:.5f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
-plt.ylabel('CPI General (08/04/2024 = base)')
+plt.ylabel('CPI General (25/04/2024 = base)')
 plt.title("Evolution of Daily General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
@@ -40,7 +40,7 @@ plt.show()
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-#Fuction's calculation of last Thursday
+#Function's calculation of last Thursday
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
