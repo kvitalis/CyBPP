@@ -18,7 +18,7 @@ plt.title("Evolution of Daily CPI Inflation in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('Results/Inflation_Daily.png')
+plt.savefig('Results/Daily-Inflation.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
@@ -33,7 +33,7 @@ plt.title("Evolution of Daily General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('Results/CPI_General_Daily.png')
+plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 
 ## LAST THURSDAY (*this corresponds to the monthly observation*)
@@ -61,7 +61,7 @@ if is_last_thursday(current_date):
         plt.xticks(rotation=90) 
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig('Results/Monthly-Inflation_Daily.png')
+        plt.savefig('Results/Monthly-Inflation.png')
         plt.show()
     
     plt.figure(figsize=(10, 6))
@@ -74,7 +74,7 @@ if is_last_thursday(current_date):
         plt.xticks(rotation=90) 
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig('Results/Monthly-CPI_General_Daily.png')
+        plt.savefig('Results/Monthly-CPI-General.png')
         plt.show()
 else:
     pass
