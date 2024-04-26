@@ -1673,7 +1673,7 @@ def results_lensescy(u):
         new_row.append("HEALTH")
         new_row.append("LensesCY")
         list_.loc[len(list_)] = new_row
-        
+
 def resutls_intercity(u):
     url="https://intercity-buses.com/en/routes/"+str(Item_url_)
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1693,7 +1693,7 @@ def resutls_intercity(u):
         table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
         if table_:
             element_=table_.find_all("div",{"class":"td-content"})
-            for ii in range(0,len(element_)):
+            for ii in range(0,2):
                 new_row=[]
                 if ii%2 ==0:
                     name_=element_[ii].text.replace(" ","").replace("\n","").replace("\t","")
@@ -1702,7 +1702,7 @@ def resutls_intercity(u):
                         pass
                     else:
                         new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                        new_row.append(name_)
+                        new_row.append(name_+Item_url_)
                         new_row.append(float(price_))
                         new_row.append(subclass_)
                         new_row.append(comitidy_)
