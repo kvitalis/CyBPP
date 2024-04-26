@@ -1674,7 +1674,6 @@ def results_lensescy(u):
         new_row.append("LensesCY")
         list_.loc[len(list_)] = new_row
 
-
 def resutls_intercity(u):
     url="https://intercity-buses.com/en/routes/"+str(Item_url_)
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1699,13 +1698,16 @@ def resutls_intercity(u):
                 if ii%2 ==0:
                     name_=element_[ii].text.replace(" ","").replace("\n","").replace("\t","")
                     price_=element_[ii+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(comitidy_)
-                    new_row.append("Intercity Buses")
-                    list_.loc[len(list_)] = new_row
+                    if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
+                        pass
+                    else:
+                        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                        new_row.append(name_)
+                        new_row.append(float(price_))
+                        new_row.append(subclass_)
+                        new_row.append(comitidy_)
+                        new_row.append("Intercity Buses")
+                        list_.loc[len(list_)] = new_row
         else:
             website_false.append(name_)
             website_false.append(subclass_)
