@@ -1695,6 +1695,7 @@ def resutls_intercity(u):
         if table_:
             element_=table_.find_all("div",{"class":"td-content"})
             for ii in range(0,len(element_)):
+                new_row=[]
                 if ii%2 ==0:
                     name_=element_[ii].text.replace(" ","").replace("\n","").replace("\t","")
                     price_=element_[ii+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
