@@ -1553,7 +1553,7 @@ def resutls_toyta(u):
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
-    pdf = "PDFs/04.02.ithaki.pdf"
+    pdf = "PDFs/ithaki.pdf"
 
     with pdfplumber.open(pdf) as pdf:
         first_page = pdf.pages[5]
