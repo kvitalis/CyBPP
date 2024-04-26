@@ -1688,20 +1688,31 @@ def resutls_intercity(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
+        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        _name_ = soup.find_all('div',{'class':'td-content'})[0].text.replace(" ","").replace("\n","").replace("\t","")
-        if _name_=="Single":
-            price_= soup.find_all('div',{'class':'td-content'})[1].text
-            price_=price_.replace(" ","").replace("\n","").replace("\t","").replace("€","")
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(comitidy_)
-            new_row.append("Intercity Bus")
-            list_.loc[len(list_)] = new_row
+        table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
+        if table_:
+            element_=table_.find_all("div",{"class":"td-content"})
+            for ii in range(0,len(element_)):
+                if ii%2 ==0:
+                    name_=element_[ii].text.replace(" ","").replace("\n","").replace("\t","")
+                    price_=element_[ii+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(comitidy_)
+                    new_row.append("Intercity Buses")
+                    list_.loc[len(list_)] = new_row
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(comitidy_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_parga(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
