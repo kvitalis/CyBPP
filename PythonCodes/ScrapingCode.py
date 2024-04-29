@@ -1849,7 +1849,6 @@ def results_premier(u):
         price = [item["price"] for item in products]
     
         for i in range(len(names)):
-            print("ok")
             if name_==names[i]:
                 new_row.append(datetime.today().strftime("%Y-%m-%d"))
                 new_row.append(names[i])
