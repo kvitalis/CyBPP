@@ -750,6 +750,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-04-25,"Λάστιχα 55mm 50γρ, Μεσαίο μέγεθος",Other stationery and drawing materials,1.15,RECREATION AND CULTURE,Parga
 2024-04-25,Πιάστρες με διπλό κλιπ 19mm,Other stationery and drawing materials,0.7,RECREATION AND CULTURE,Parga
 2024-04-25,Χρωματιστές καρφίτσες 32mm 25 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2024-04-25,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-04-25,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
 2024-04-25,Τέλος Χρήσης Limassol,Sewage collection,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
 2024-04-25,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
 2024-04-25,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
@@ -764,7 +766,6 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-04-25,Vasos Pharolimano - Sea,"Restaurants, cafes and dancing establishments",29.5,RESTAURANTS AND HOTELS,Vasos Psarolimano
 2024-04-25,Snack Box,Fast food and take away food services,7.0,RESTAURANTS AND HOTELS,Wolt
 2024-04-25,Original Duo with 2 Reg Drinks,Fast food and take away food services,16.0,RESTAURANTS AND HOTELS,Wolt
-2024-04-25,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
 2024-04-25,Nero Freddo Cappuccino,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
 2024-04-25,Nero Cappuccino,"Restaurants, cafes and dancing establishments",3.4,RESTAURANTS AND HOTELS,Wolt
 2024-04-25,Starbucks Freddo Espresso,"Restaurants, cafes and dancing establishments",3.95,RESTAURANTS AND HOTELS,Wolt
@@ -781,7 +782,6 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-04-25,Costa Coffee Freddo Cappuccino Medio,"Restaurants, cafes and dancing establishments",3.3,RESTAURANTS AND HOTELS,Wolt
 2024-04-25,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.5,RESTAURANTS AND HOTELS,Wolt
 2024-04-25,Nero Freddo Espresso,"Restaurants, cafes and dancing establishments",3.6,RESTAURANTS AND HOTELS,Wolt
-2024-04-25,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
 2024-04-25,Argo-x ,New motor cars,17500.0,TRANSPORT,Toyta
 2024-04-25,Yaris Cross,New motor cars,24900.0,TRANSPORT,Toyta
 2024-04-25,Χρωματιστοί συνδετήρες 28mm 50 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
@@ -4374,49 +4374,10 @@ vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2024-04-26,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.578,TRANSPORT,SHELL
 2024-04-26,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.678,TRANSPORT,SHELL
 2024-04-26,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.582,TRANSPORT,STAROIL
-2024-04-27,Dry and Fold Only (up to 6kg),Cleaning of clothing,10.0,CLOTHING AND FOOTWEAR,Premier Laundry
+
+2024-04-27,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
 2024-04-27,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
 2024-04-27,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-27,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-27,Separate Wash & Tumble Dry – Up To 12 Kg,Cleaning of clothing,27.0,CLOTHING AND FOOTWEAR,Premier Laundry
-2024-04-27,Mixed Wash and Tumble Dry – Up To 6 Kg,Cleaning of clothing,15.0,CLOTHING AND FOOTWEAR,Premier Laundry
-2024-04-28,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-28,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-04-28,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-29,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-04-30,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-04-30,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-04-30,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-01,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-01,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-01,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-02,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-02,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-02,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-03,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-03,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-03,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-04,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-04,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-04,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-05,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-05,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-05,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-06,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-06,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-05-06,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-07,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
-2024-05-07,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
-2024-05-07,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
-2024-04-27,Starbucks Freddo Espresso,"Restaurants, cafes and dancing establishments",3.95,RESTAURANTS AND HOTELS,Wolt
 2024-04-28,Σίφουνας Ολικής Ψωμί Κομμένο 780g,Bread,2.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2024-04-28,Σίφουνας Μαύρο Μικρό Ψωμί Κομμένο 500g,Bread,1.76,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2024-04-28,Σίφουνας Κοινό Ψωμί Κομμένο 560g,Bread,1.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -6495,6 +6456,10 @@ vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2024-04-28,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2024-04-28,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2024-04-28,Carrillo Interlude Rothchild Jr. Maduro Natural,Cigars,4.5,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2024-04-28,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-04-28,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-04-28,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+2024-04-28,Τέλος Χρήσης Limassol,Sewage collection,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
 2024-04-28,Ετήσιο Τέλος Nicosia,Sewage collection,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2024-04-28,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2024-04-28,Argo-x ,New motor cars,17500.0,TRANSPORT,Toyta
@@ -6596,7 +6561,33 @@ vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2024-04-28,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
 2024-04-28,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
 2024-04-28,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
-2024-04-28,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
-2024-04-28,Τέλος Χρήσης Limassol,Sewage collection,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
-2024-04-28,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
-2024-04-28,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-04-28,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-04-28,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-04-28,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-04-29,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-04-29,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-04-29,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-04-30,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-04-30,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-04-30,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-01,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-01,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-01,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-02,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-02,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-02,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-03,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-03,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-03,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-04,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-04,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-04,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-05,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-05,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-05,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-06,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-06,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
+2024-05-06,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-07,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-05-07,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-05-07,GIGA Unlimited,Bundled telecommunication services,12.99,COMMUNICATION,Primetel
