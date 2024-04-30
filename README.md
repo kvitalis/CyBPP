@@ -7,7 +7,7 @@ The Cyprus 'Billion Prices Project' (https://thebillionpricesproject.com/) is in
 
 In particular, the Cyprus BPP involves web-scraping of prices of around 2200 goods and services from about 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation using standard methods. 
 
-## Python Codes:
+## Python Codes
 
 ### ScrapingCode (temporary name)
 
@@ -27,7 +27,7 @@ The existence of the particular file is just as important because it calculates 
 
 In the above file, the fluctuations of inflation are presented graphically on a daily basis, along with the changes in CPI represented as a time series.All the output information storage as a image file on Datasets folder. File is called from the file Vizualization.yml (Tempory name), and the time is 18:00 (UTC Time).
 
-## Retailers:
+## Retailers
 
 In accordance with the statistical superiority of Cyprus and the representativeness of each retailer within various subclasses, presented below are the 52 selected retailers chosen for the development of the data collection code.
 
