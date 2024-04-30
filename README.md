@@ -11,17 +11,17 @@ In particular, the Cyprus BPP involves web-scraping of prices of around 2200 goo
 
 ### ScrapingCode (temporary name)
 
-The main objective of this project is to collect and analyze the prices of the Cypriot market in various qualities. The specific Python file has been acquired for the collection process of these prices and their storage. At the same time, emphasis is placed on the products for which the prices have not been collected for some reason.
+Since the main objective of this project is the collection and analysis of the online prices of representative products (goods and services) in the Cypriot market for Consumer Price Index (CPI) Inflation estimation, the 'ScrapingCode.py' file deals with the web scraping of the prices data and its storage. At the same time, emphasis is given on the products for which the data has not been collected for some reason.
 
-The above file do you call daily from the file RunDailyScraping.yml at 09:00 (UTC Time) and is storaged the prices to the raw_data.csv file (temporary name). The storage is done in the form of a table and has the following order and structural variables: Date,Product Name, Product Price, Subclass, Division and Retailers.
+This Python file is called daily from the workflow file 'RunDailyScraping.yml' around 09:00 (UTC Time) and it stores the scraped data of the products in the fixed/pre-selected and representative CPI basket into the 'raw_data.csv' file (temporary name). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
 ### SecondIteration (temporary name)
 
-As mentioned before, there is a need to collect the values from the first test. One of the main reasons why this is done with 100% accurated, is when the companies' websites is unavailable (either for maintenance reasons or due to traffic reasons). To address this specific issue, the price collection procedure is invoked a second time during the day at 15:00 (UTC Time) only for the products for which the daily price was not collected in the preceding procedure. It is important to mention that the file that call this process is the file of SecondIteration.yml.
+As mentioned before, there is a need to collect the values from the first test. One of the main reasons why this is done with 100% accurated, is when the companies' websites is unavailable (either for maintenance reasons or due to traffic reasons). To address this specific issue, the price collection procedure is invoked a second time during the day at 15:00 (UTC time) only for the products for which the daily price was not collected in the preceding procedure. It is important to mention that the file that call this process is the file of SecondIteration.yml.
 
 ### Calculations (temporary name)
 
-The existence of the particular file is just as important because it calculates the CPI as well as the daily inflation. These calculations are made exactly as guided by the OneMillionPriceProject. This file is called from the file Calculation.yml, and the time is 16:00 (UTC Time).
+This file performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. This Python file is called from the workflow file 'Calculations.yml' around 16:00 (UTC time) every day.
 
 ### Visualizations (tempory name)
 
@@ -139,11 +139,13 @@ It is important to mention that there are retailers that are representative with
 
 ## GitHub Actions
 
-The project utilizes GitHub Actions to automate the scraping process. The repository contains the following YML files within the ./github/workflows directory:
+The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the ./github/workflows directory:
 
-### run-daily-scrape.yml: 
-This file schedules the execution of scrape_tool.py and calculations.py scripts on a daily basis.
-### initialise-clear-csv.yml: 
-Whenever a pull request is made targeting the initialise or initialize branch, this file runs initial.py to reset the BillionPricesProject_ProductList.csv file.
-### initialise_clear_calculations.yml: 
-Whenever a pull request is made targeting the initialise_c or initialize_c branch, this file runs initialise_calculations.py to reset the Calculations.csv file.
+### RunDailyScraping.yml: 
+This workflow file schedules the execution of the 'ScrapingCode.py' script around 09:00 (UTC time) every day.
+### SecondIteration.yml: 
+....
+### Calculations.yml: 
+This workflow file schedules the execution of the 'Calculations.py' script around 16:00 (UTC time) every day.
+### Visualizations.yml: 
+This workflow file schedules the execution of the 'Visualizations.py' script around 16:45 (UTC time) every day.
