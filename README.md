@@ -7,21 +7,23 @@ The Cyprus 'Billion Prices Project' (https://thebillionpricesproject.com/) is in
 
 In particular, the Cyprus BPP involves web-scraping of prices of around 2200 goods and services from about 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation using standard methods. 
 
-## Scraping Code(temporary name)
+## Python Codes:
+
+# ScrapingCode (temporary name)
 
 The main objective of this project is to collect and analyze the prices of the Cypriot market in various qualities. The specific Python file has been acquired for the collection process of these prices and their storage. At the same time, emphasis is placed on the products for which the prices have not been collected for some reason.
 
 The above file do you call daily from the file RunDailyScraping.yml at 09:00 (UTC Time) and is storaged the prices to the raw_data.csv file (temporary name). The storage is done in the form of a table and has the following order and structural variables: Date,Product Name, Product Price, Subclass, Division and Retailers.
 
-## SecondIteration (temporary name)
+# SecondIteration (temporary name)
 
 As mentioned before, there is a need to collect the values from the first test. One of the main reasons why this is done with 100% accurated, is when the companies' websites is unavailable (either for maintenance reasons or due to traffic reasons). To address this specific issue, the price collection procedure is invoked a second time during the day at 15:00 (UTC Time) only for the products for which the daily price was not collected in the preceding procedure. It is important to mention that the file that call this process is the file of SecondIteration.yml.
 
-## Calculation (temporary name)
+# Calculations (temporary name)
 
 The existence of the particular file is just as important because it calculates the CPI as well as the daily inflation. These calculations are made exactly as guided by the OneMillionPriceProject. This file is called from the file Calculation.yml, and the time is 16:00 (UTC Time).
 
-## Visualizations (tempory name)
+# Visualizations (tempory name)
 
 In the above file, the fluctuations of inflation are presented graphically on a daily basis, along with the changes in CPI represented as a time series.All the output information storage as a image file on Datasets folder. File is called from the file Vizualization.yml (Tempory name), and the time is 18:00 (UTC Time).
 
@@ -73,7 +75,7 @@ It is important to mention that there are retailers that are representative with
     
 21. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
 
-22. IKEA	https://www.ikea.com.cy/
+22. IKEA https://www.ikea.com.cy/
 
 23. Intercity Buses https://intercity-buses.com/en/
 
@@ -135,10 +137,9 @@ It is important to mention that there are retailers that are representative with
 
 52. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
- 
 ## GitHub Actions
 
-The project utilizes GitHub Actions to automate the scraping process. The repository contains the following YAML files within the ./github/workflows directory:
+The project utilizes GitHub Actions to automate the scraping process. The repository contains the following YML files within the ./github/workflows directory:
 
 ### run-daily-scrape.yml: 
 This file schedules the execution of scrape_tool.py and calculations.py scripts on a daily basis.
@@ -146,4 +147,3 @@ This file schedules the execution of scrape_tool.py and calculations.py scripts 
 Whenever a pull request is made targeting the initialise or initialize branch, this file runs initial.py to reset the BillionPricesProject_ProductList.csv file.
 ### initialise_clear_calculations.yml: 
 Whenever a pull request is made targeting the initialise_c or initialize_c branch, this file runs initialise_calculations.py to reset the Calculations.csv file.
-
