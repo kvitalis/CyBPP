@@ -21,17 +21,15 @@ As mentioned above, there is a need to retrieve the data of the products that wa
 
 ### Calculations (temporary name)
 
-This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'raw_data.csv' and 'Reference_Values.csv' files (Datasets), then performs the appropriate calculations using standard techniques, and finally stores the results in the 'CPI-Division.csv' and 'CPI-General-Inflation.csv' files (Results).
+This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'raw_data.csv' file (Datasets), then performs the appropriate calculations using standard techniques and the 'Weights_Cystat.csv' and 'Reference_Values.csv' files (Datasets), and finally stores the results in the 'CPI-Division.csv' and 'CPI-General-Inflation.csv' files (Results).
 
 ### Visualizations (tempory name)
 
-Finally, the 'Visualizations.py' reads the stored calculations results and constructs the plots of the time evolution of General CPI and Inflation. All the output information storage as a image file on Datasets folder. This Python file is called from the workflows file 'Visualizations.yml' at around 16:45 (UTC time) every day.
+Finally, the 'Visualizations.py' reads the stored calculations results ('CPI-Division.csv' and 'CPI-General-Inflation.csv' files) and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in png formats (Results). This Python file is called from the workflows file 'Visualizations.yml' at around 16:45 (UTC time) every day.
 
 ## Retailers
 
-In accordance with the statistical superiority of Cyprus and the representativeness of each retailer within various subclasses, presented below are the 52 selected retailers chosen for the development of the data collection code.
-
-It is important to mention that there are retailers that are representative within the Cypriot market, but it was unexpected to collect data from their websites due to the following reasons: firstly, some retailers do not have websites; secondly, some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
+According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 52 selected retailers chosen for the development of the Cyprus CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is unexpected to collect data from their websites due to the following main reasons: (i) some retailers do not have websites, and (ii) some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
 1. Adventure Without Limits (AWOL) https://www.awol.com.cy/ 
 
