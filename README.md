@@ -11,21 +11,21 @@ In particular, the Cyprus BPP involves web-scraping of prices of around 2200 goo
 
 ### ScrapingCode (temporary name)
 
-Since the main objective of this project is the collection and analysis of the online prices of representative products (goods and services) in the Cypriot market for Consumer Price Index (CPI) Inflation estimation, the 'ScrapingCode.py' file deals with the web scraping of the prices data and its storage. At the same time, emphasis is given on the products for which the data has not been collected for some reason.
+Since the main objective of this project is the calculation of the Consumer Price Index (CPI) Inflation using the online prices of products (goods and services) in the fixed/pre-selected and representative CPI basket, the first step is the collection of the products' data and its storage. The 'ScrapingCode.py' file deals with the web scraping of this data. This Python file, which is called daily from the workflows file 'RunDailyScraping.yml' at around 09:00 (UTC time), firstly reads the 'ProductsUrls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'raw_data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
-This Python file is called daily from the workflow file 'RunDailyScraping.yml' around 09:00 (UTC Time) and it stores the scraped data of the products in the fixed/pre-selected and representative CPI basket into the 'raw_data.csv' file (temporary name). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+At the same time, emphasis is given on the products for which the data has not been scraped for some reason, e.g. at the time of web-scraping a retailer's website is unavailable either for maintenance reasons or due to traffic reasons. The data of these products are stored in the 'DailyScrapingErrors.csv' file (Datasets) to be retrieved in a subsequent scraping process. 
 
 ### SecondIteration (temporary name)
 
-As mentioned before, there is a need to collect the values from the first test. One of the main reasons why this is done with 100% accurated, is when the companies' websites is unavailable (either for maintenance reasons or due to traffic reasons). To address this specific issue, the price collection procedure is invoked a second time during the day at 15:00 (UTC time) only for the products for which the daily price was not collected in the preceding procedure. It is important to mention that the file that call this process is the file of SecondIteration.yml.
+As mentioned above, there is a need to retrieve the data of the products that was not scraped during the initial procedure. Hence, we run a second scraping iteration  through the 'SecondIteration.py' file about 6 hours after the first scraping. This Python file reads only the 'DailyScrapingErrors.csv' file (Datasets), then it scrapes the available data and finaly stores it in the 'raw_data.csv' file (Datasets). After the second iteration procedure, any data which remains unavailable is stored in the 'MonthlyScrapingErrors.csv' file (Datasets). The 'SecondIteration.py' file is called from the workflows file 'SecondIteration.yml' at around 15:00 (UTC time) every day.
 
 ### Calculations (temporary name)
 
-This file performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. This Python file is called from the workflow file 'Calculations.yml' around 16:00 (UTC time) every day.
+This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'raw_data.csv' and 'Reference_Values.csv' files (Datasets), then performs the appropriate calculations using standard techniques, and finally stores the results in the 'CPI-Division.csv' and 'CPI-General-Inflation.csv' files (Results).
 
 ### Visualizations (tempory name)
 
-In the above file, the fluctuations of inflation are presented graphically on a daily basis, along with the changes in CPI represented as a time series.All the output information storage as a image file on Datasets folder. File is called from the file Vizualization.yml (Tempory name), and the time is 18:00 (UTC Time).
+Finally, the 'Visualizations.py' reads the stored calculations results and constructs the plots of the time evolution of General CPI and Inflation. All the output information storage as a image file on Datasets folder. This Python file is called from the workflows file 'Visualizations.yml' at around 16:45 (UTC time) every day.
 
 ## Retailers
 
@@ -142,10 +142,10 @@ It is important to mention that there are retailers that are representative with
 The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the ./github/workflows directory:
 
 ### RunDailyScraping.yml: 
-This workflow file schedules the execution of the 'ScrapingCode.py' script around 09:00 (UTC time) every day.
+This workflow file schedules the execution of the 'ScrapingCode.py' script at around 09:00 (UTC time) every day.
 ### SecondIteration.yml: 
-....
+This workflow file schedules the execution of the 'SecondIteration.py' script at around 15:00 (UTC time) every day.
 ### Calculations.yml: 
-This workflow file schedules the execution of the 'Calculations.py' script around 16:00 (UTC time) every day.
+This workflow file schedules the execution of the 'Calculations.py' script at around 16:00 (UTC time) every day.
 ### Visualizations.yml: 
-This workflow file schedules the execution of the 'Visualizations.py' script around 16:45 (UTC time) every day.
+This workflow file schedules the execution of the 'Visualizations.py' script at around 16:45 (UTC time) every day.
