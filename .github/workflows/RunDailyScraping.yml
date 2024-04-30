@@ -9,7 +9,7 @@ run-name: Adding today's scraped data into raw_data.csv
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    - cron: "06 10 * * *" #UTC time
+    - cron: "51 10 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
