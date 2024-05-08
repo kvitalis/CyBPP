@@ -1345,8 +1345,8 @@ def results_the_royal_cigars(u):
     
     else:
         element_name = soup.find_all('div',{"class":"itemDetailsPrice"})
-        price_amount=element_name[0].text.replace("€","")
-        if price_amount:
+        if element_name:
+            price_amount=element_name[0].text.replace("€","")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_amount))
