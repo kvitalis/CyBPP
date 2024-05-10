@@ -1452,15 +1452,24 @@ def results_sewerage(u):
             city_="Limassol"
             new_row=[]
             if "Ετήσιο Τέλος" in name_:
-                element_name = soup.find_all('table',{"class":"table table-bordered"})
-                element_name_2 = element_name[0].find_all('tr')[35]
-                desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
+                if "SSL handshake failed" in soup.text:
+                    website_false.append(name_)
+                    website_false.append(subclass_)
+                    website_false.append(Item_url_)
+                    website_false.append(comidity_)
+                    website_false.append(retailer_)
+                    daily_errors.loc[len(daily_errors)] = website_false
+                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                else:
+                    element_name = soup.find_all('table',{"class":"table table-bordered"})
+                    element_name_2 = element_name[0].find_all('tr')[35]
+                    desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
 
-                for lines in desired_lines:
-                    value=float(lines.replace(",","."))
-                    values=value+values
+                    for lines in desired_lines:
+                        value=float(lines.replace(",","."))
+                        values=value+values
                 
-                values=values/2
+                    values=values/2
             
             if "Τέλος Χρήσης" in name_:
                 element_name = soup.find_all('table',{"class":"table table-bordered"})
