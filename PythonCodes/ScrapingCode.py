@@ -2122,8 +2122,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="Toyta":
-        resutls_toyta(u)
+    #elif retailer_=="Toyta":
+     #   resutls_toyta(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
