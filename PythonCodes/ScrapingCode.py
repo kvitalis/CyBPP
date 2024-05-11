@@ -1456,7 +1456,7 @@ def results_sewerage(u):
                     website_false.append(name_)
                     website_false.append(subclass_)
                     website_false.append(Item_url_)
-                    website_false.append(comidity_)
+                    website_false.append(comitidy_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
