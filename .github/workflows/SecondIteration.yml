@@ -1,4 +1,4 @@
-3# Code needed for the 2nd scraping iteration process
+# Code needed for the 2nd scraping iteration process
 
 # Whenever pull request is made targeting branch initialise, csv is reset
 name: second-iteration
