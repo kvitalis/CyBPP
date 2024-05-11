@@ -1482,6 +1482,7 @@ def results_sewerage(u):
                     values=float(lines.replace(",","."))
                     
         elif "Larnaca" in retailer_:
+            print("YES")
             city_="Larnaca"
             new_row=[]
             element_name = soup.find_all('table',{"width":"649"})
