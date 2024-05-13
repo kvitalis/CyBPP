@@ -2199,7 +2199,7 @@ list_["Price"].astype(float)
 
 df.to_csv("Datasets/raw_data.csv", index=False) 
 
-#combined_df = pd.concat([df, list_], axis=0)
-#combined_df.reset_index(drop=True, inplace=True)
-#combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
-#daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
+combined_df = pd.concat([df, list_], axis=0)
+combined_df.reset_index(drop=True, inplace=True)
+combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
+daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
