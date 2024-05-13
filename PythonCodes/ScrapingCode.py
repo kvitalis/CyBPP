@@ -1518,6 +1518,14 @@ def resutls_toyta(u):
         response = requests.get(bs,{'headers':header})
         
         if response.status_code !=200:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(comitidy_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris Cross"})
             element_soup2=element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
@@ -1537,18 +1545,10 @@ def resutls_toyta(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(comidity_)
+                website_false.append(comitidy_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(comidity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                 
     else:    
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1572,7 +1572,7 @@ def resutls_toyta(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(comidity_)
+                website_false.append(comitidy_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
