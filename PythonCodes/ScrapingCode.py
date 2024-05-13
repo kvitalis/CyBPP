@@ -1449,7 +1449,6 @@ def results_sewerage(u):
                         no_website(Item_url_)
         
         elif "Limassol" in retailer_:
-            print("YES")
             city_="Limassol"
             new_row=[]
             if "Ετήσιο Τέλος" in name_:
@@ -1482,7 +1481,6 @@ def results_sewerage(u):
                     values=float(lines.replace(",","."))
                     
         elif "Larnaca" in retailer_:
-            print("YES")
             city_="Larnaca"
             new_row=[]
             element_name = soup.find_all('table',{"width":"649"})
