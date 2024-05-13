@@ -2051,6 +2051,7 @@ for u in range(0,len(urls)):
     #Read the data
     Item_url_=urls["Url"].iloc[u]
     name_=urls["Name"].iloc[u]
+    print(name_)
     subclass_=urls["Subclass"].iloc[u]
     comitidy_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
@@ -2162,7 +2163,7 @@ list_["Price"].astype(float)
 
 df.to_csv("Datasets/raw_data.csv", index=False) 
 
-combined_df = pd.concat([df, list_], axis=0)
-combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
-daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
+#combined_df = pd.concat([df, list_], axis=0)
+#combined_df.reset_index(drop=True, inplace=True)
+#combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
+#daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
