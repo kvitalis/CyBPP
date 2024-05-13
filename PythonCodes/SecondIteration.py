@@ -1503,45 +1503,12 @@ def results_sewerage(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def resutls_toyta(u):
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if subclass_=="New motor cars":
-        element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
-    
-        if element_name:
-            price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(comitidy_)
-            new_row.append("Toyta")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(comidity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    if (name_=="YARIS CROSS"):
+        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+        bs = BeautifulSoup(url_ken, "html.parser")
+        response = requests.get(bs,{'headers':header})
         
-    elif subclass_=="Second-hand motor cars":
-        element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
-        if element_name:
-            price_=element_name[0].text.replace(",","").replace("€","")
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(comitidy_)
-            new_row.append("Toyta")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
+        if response.status_code !=200:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
@@ -1549,8 +1516,79 @@ def resutls_toyta(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris Cross"})
+            element_soup2=element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
 
-
+            for element_ in element_soup2:
+                price_ = float(element_['data-price'])
+            if price_:
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(price_)
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Toyta")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(comitidy_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                
+    else:    
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
+    
+        if subclass_=="New motor cars":
+            element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
+    
+            if element_name:
+                price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Toyta")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(comitidy_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
+        elif subclass_=="Second-hand motor cars":
+            element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
+            if element_name:
+                price_=element_name[0].text.replace(",","").replace("€","")
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(comitidy_)
+                new_row.append("Toyta")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(comitidy_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                
 def results_ithaki(u):
     response = requests.get(Item_url_)
     pdf = "PDFs/ithaki.pdf"
@@ -1607,7 +1645,6 @@ def results_ithaki(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
 
 def results_flames(u):
     response = requests.get(Item_url_)
