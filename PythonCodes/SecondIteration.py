@@ -1505,7 +1505,7 @@ def results_sewerage(u):
 def resutls_toyta(u):
     if (name_=="YARIS CROSS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-        bs = BeautifulSoup(url_ken, "html.parser")
+        bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs,{'headers':header})
         
         if response.status_code !=200:
