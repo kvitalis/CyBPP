@@ -21,7 +21,7 @@ from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
 
-prin("1")
+print("1")
 warnings.simplefilter("ignore")
 
 #Read necessary data
