@@ -30,9 +30,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Run SecondIteration.py
+      - name: Run 02.SecondIteration.py
         run: |
-          python PythonCodes/SecondIteration.py
+          python PythonCodes/02.SecondIteration.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
