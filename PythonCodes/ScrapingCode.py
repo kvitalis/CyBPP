@@ -24,8 +24,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 #Read necessary data
-df = pd.read_csv("Datasets/00_raw_data.csv")
-urls=pd.read_csv("Datasets/01_ProductsUrls.csv")
+df = pd.read_csv("Datasets/raw_data.csv")
+urls=pd.read_csv("Datasets/ProductsUrls.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -2197,9 +2197,9 @@ list_["Price"].astype(float)
 #elapsed_time = end_time - start_time
 #print("Elapsed time:", elapsed_time/60, "minute")
 
-df.to_csv("Datasets/00_raw_data.csv", index=False) 
+df.to_csv("Datasets/raw_data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/00_raw_data.csv", index=False, header=True)
-daily_errors.to_csv("Datasets/02_DailyScrapingErrors.csv",index=False)
+combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
+daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
