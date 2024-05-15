@@ -113,7 +113,7 @@ df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
-df_5["Date]==today
+df_5["Date]=today
 
 df_5_a = pd.concat([df_5, _cpi_])
 df_5_a.to_excel("Results/CPI-Division.csv",index=False)
