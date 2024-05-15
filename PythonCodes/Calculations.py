@@ -20,6 +20,7 @@ raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("Results/CPI-Subclass-Division.csv")
 weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 index_=pd.read_csv("Datasets/Reference_Values.csv")
+_cpi_=pd.read_csv("Results/CPI-Division.csv")
 
 #DIVISION CPI
 row_data_today=raw_data_[raw_data_["Date"]==today]
@@ -112,6 +113,12 @@ df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
+df_5["Date]==today
+
+df_5_a = pd.concat([df_5, _cpi_])
+df_5_a.to_excel("Results/CPI-Division.csv",index=False)
+
+del def_5["Date"]
 
 df_6=pd.merge(df_1, df_5, on='Division')
 df_6["Date"]= None
