@@ -116,7 +116,7 @@ df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, in
 df_5["Date"]=today
 
 df_5_a = pd.concat([df_5, _cpi_])
-df_5_a.to_excel("Results/CPI-Division.csv",index=False)
+df_5_a.to_csv("Results/CPI-Division.csv",index=False)
 
 del def_5["Date"]
 
