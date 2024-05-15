@@ -24,8 +24,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 #Read necessary data
-df = pd.read_csv("Datasets/00_raw_data.csv")
-urls = pd.read_csv("Datasets/02_DailyScrapingErrors.csv")
+df = pd.read_csv("Datasets/raw_data.csv")
+urls = pd.read_csv("Datasets/DailyScrapingErrors.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -2183,9 +2183,9 @@ list_["Price"].astype(float)
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/00_raw_data.csv", index=False, header=True)
+combined_df.to_csv("Datasets/raw_data.csv", index=False, header=True)
 
-annual_errors=pd.read_csv("Datasets/03_MonthlyScrapingErrors.csv")
+annual_errors=pd.read_csv("Datasets/MonthlyScrapingErrors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
 combined_annual=pd.concat([annual_errors, daily_errors], axis=0)
-combined_annual.to_csv("Datasets/03_MonthlyScrapingErrors.csv", index=False , header=True)
+combined_annual.to_csv("Datasets/MonthlyScrapingErrors.csv", index=False , header=True)
