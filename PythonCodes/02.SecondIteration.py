@@ -25,7 +25,7 @@ warnings.simplefilter("ignore")
 
 #Read necessary data
 df = pd.read_csv("Datasets/00.raw_data.csv")
-urls = pd.read_csv("Datasets/DailyScrapingErrors.csv")
+urls = pd.read_csv("Datasets/02.DailyScrapingErrors.csv")
 
 #Creative null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
