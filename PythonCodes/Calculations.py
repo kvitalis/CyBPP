@@ -118,7 +118,7 @@ df_5["Date"]=today
 df_5_a = pd.concat([df_5, _cpi_])
 df_5_a.to_csv("Results/CPI-Division.csv",index=False)
 
-del def_5["Date"]
+del df_5["Date"]
 
 df_6=pd.merge(df_1, df_5, on='Division')
 df_6["Date"]= None
