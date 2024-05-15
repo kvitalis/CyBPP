@@ -31,9 +31,9 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       
-      - name: Run 03_Calculations.py
+      - name: Run Calculations.py
         run: |
-          python PythonCodes/03_Calculations.py
+          python PythonCodes/Calculations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
