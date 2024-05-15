@@ -31,9 +31,9 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       
-      - name: Run 04.Visualizations.py
+      - name: Run 04_Visualizations.py
         run: |
-          python PythonCodes/04.Visualizations.py
+          python PythonCodes/04_Visualizations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
