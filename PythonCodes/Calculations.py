@@ -17,7 +17,7 @@ today=datetime.today().strftime("%Y-%m-%d")
 #Read necessary data 
 raw_data_=pd.read_csv("Datasets/raw_data.csv")
 raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
-cpi_division=pd.read_csv("Results/CPI-Division.csv")
+cpi_division=pd.read_csv("Results/CPI-Subclass-Division.csv")
 weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 index_=pd.read_csv("Datasets/Reference_Values.csv")
 
@@ -119,7 +119,7 @@ df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass"
 df_6["Date"] =today
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_csv("Results/CPI-Division.csv",index=False)
+combined_df.to_csv("Results/CPI-Subclass-Division.csv",index=False)
 
 #General CPI Inflation
 df_99=index_[["Division","Weight"]]
