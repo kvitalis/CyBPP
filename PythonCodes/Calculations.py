@@ -115,7 +115,13 @@ df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
 df_5["Date"]=today
 
+cols = list(df_5.columns)
+cols.insert(0, cols.pop(cols.index('Date')))
+df_5 = df_5[cols]
+df_5['Date'] = pd.to_datetime(df_5['Date']) 
+
 df_5_a = pd.concat([df_5, _cpi_])
+df_5_a = df_5_a.sort_values(by='Date').reset_index(drop=True)
 df_5_a.to_csv("Results/CPI-Division.csv",index=False)
 
 del df_5["Date"]
