@@ -620,6 +620,7 @@ def results_CyPost(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 def results_ewholesale(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -646,7 +647,7 @@ def results_ewholesale(u):
         new_row.append("E-wholesale")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+"""
 
 def results_electroline(u):
     url="https://electroline.com.cy/products/"+Item_url_
