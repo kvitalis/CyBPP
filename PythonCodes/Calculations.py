@@ -121,6 +121,7 @@ df_5 = df_5[cols]
 df_5['Date'] = pd.to_datetime(df_5['Date']) 
 
 df_5_a = pd.concat([df_5, _cpi_])
+df_5_a['Date'] = pd.to_datetime(df_5_a['Date'])
 df_5_a = df_5_a.sort_values(by='Date').reset_index(drop=True)
 df_5_a.to_csv("Results/CPI-Division.csv",index=False)
 
