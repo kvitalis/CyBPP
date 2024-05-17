@@ -2112,6 +2112,8 @@ for u in range(0,len(urls)):
         results_CyMinistryEducation(u)
     elif retailer_=="Cyprus Post":
         results_CyPost(u)
+    #elif retailer_=="E-wholesale":
+     #   results_ewholesale(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="European University Cyprus":
