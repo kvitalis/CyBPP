@@ -1572,7 +1572,7 @@ def resutls_toyta(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
         elif subclass_=="Second-hand motor cars":
-            element_name = soup.find_all('div',{"id":"ContentPlaceHolder1_PriceDiv"})
+            element_name = soup.find_all'div',{"class":"UscCashPricestyles__Cash-sc-1syacqd-0 kGRFHH"}
             if element_name:
                 price_=element_name[0].text.replace(",","").replace("€","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
