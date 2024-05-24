@@ -47,18 +47,24 @@ group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
 
 larnaca_=0
+larnaca_count=0
 nicosia_=0
+nicosia_count=0
 limassol_=0
+limassol_count=0
 
 for i in range(0,len(waterboard)):
     if "Larnaca" in waterboard.iloc[i]["Name"]:
         larnaca_+=waterboard.iloc[i]["Price"]
+        larnaca_count+=1
     if "Nicosia" in waterboard.iloc[i]["Name"]:
         nicosia_+=waterboard.iloc[i]["Price"]
+        nicosia_count+=1
     if "Limassol" in waterboard.iloc[i]["Name"]:
         limassol_+=waterboard.iloc[i]["Price"]
+        limassol_count+=1
         
-wat_price_=(larnaca_+nicosia_+limassol_)/3
+wat_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
 new_row=[]
 new_row.append("Water supply")
 new_row.append(wat_price_)
@@ -78,15 +84,15 @@ limassol_count=0
 for i in range(0,len(sewagecollection)):
     if "Larnaca" in sewagecollection.iloc[i]["Name"]:
         larnaca_+=sewagecollection.iloc[i]["Price"]
-        larnaca_count+=1
+        larnaca_count=1
     if "Nicosia" in sewagecollection.iloc[i]["Name"]:
         nicosia_+=sewagecollection.iloc[i]["Price"]
-        nicosia_count+=1
+        nicosia_count=1
     if "Limassol" in sewagecollection.iloc[i]["Name"]:
         limassol_+=sewagecollection.iloc[i]["Price"]
-        limassol_count+=1
+        limassol_count=1
         
-sew_price_=((larnaca_/larnaca_count)+(nicosia_/nicosia_count)+(limassol_/limassol_count))/3
+sew_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
 new_row=[]
 new_row.append("Sewage collection")
 new_row.append(sew_price_)
