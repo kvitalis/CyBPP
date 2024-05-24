@@ -2191,6 +2191,28 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
+#####
+#Manual data
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X")
+new_row.append(flaot(16700.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X 1.0 litres VVT-i")
+new_row.append(float(17170.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+#####
 
 #Chanegd the type as float
 list_["Price"].astype(float)
