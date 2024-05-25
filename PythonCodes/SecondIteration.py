@@ -2186,6 +2186,26 @@ for u in range(0,len(urls)):
 #Manual data
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Aygo X")
+new_row.append(float(17700.0))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("YARIS CROSS")
+new_row.append(float(28500.0))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Toyota Aygo X")
 new_row.append(float(16700.00))
 new_row.append("Second-hand motor cars")
