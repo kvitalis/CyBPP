@@ -9,8 +9,8 @@ from datetime import datetime, timedelta
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
-today=datetime.today().strftime("%Y-%m-%d")
-#today='2024-05-13'
+#today=datetime.today().strftime("%Y-%m-%d")
+today='2024-05-24'
 
 #CALCULATIONS
 
@@ -56,13 +56,13 @@ limassol_count=0
 for i in range(0,len(waterboard)):
     if "Larnaca" in waterboard.iloc[i]["Name"]:
         larnaca_+=waterboard.iloc[i]["Price"]
-        larnaca_count+=1
+        larnaca_count=1
     if "Nicosia" in waterboard.iloc[i]["Name"]:
         nicosia_+=waterboard.iloc[i]["Price"]
-        nicosia_count+=1
+        nicosia_count=1
     if "Limassol" in waterboard.iloc[i]["Name"]:
         limassol_+=waterboard.iloc[i]["Price"]
-        limassol_count+=1
+        limassol_count=1
         
 wat_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
 new_row=[]
