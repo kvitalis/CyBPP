@@ -1552,11 +1552,10 @@ def resutls_toyta(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                 
     else:    
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs)
-        soup = BeautifulSoup(response.content, "html.parser")
-    
         if subclass_=="New motor cars":
+            bs = BeautifulSoup(Item_url_, "html.parser")
+            response = requests.get(bs)
+            soup = BeautifulSoup(response.content, "html.parser")
             element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
     
             if element_name:
@@ -1579,9 +1578,16 @@ def resutls_toyta(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
         elif subclass_=="Second-hand motor cars":
-            element_name = soup.find_all('div',{"class":"UscCashPricestyles__Cash-sc-1syacqd-0 kGRFHH"})
-            if element_name:
-                price_=element_name[0].text.replace(",","").replace("€","")
+            query ={"component":"used-stock-cars-v2","fetches":[
+                {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
+            ]}
+            headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
+            }
+            response = requests.get(url_new,{'headers':headers})
+            r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
+            price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
+
+            if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
