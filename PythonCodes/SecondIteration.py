@@ -2188,19 +2188,20 @@ for u in range(0,len(urls)):
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
 
-"""
+
 #####
 #Manual data
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Aygo X")
-new_row.append(float(17700.0))
-new_row.append("New motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("Φορητός υπολογιστής ACER TravelMate Spin B3 NX.VN8ET.00D μαύρο")
+new_row.append(float(269.0))
+new_row.append("Personal computers")
+new_row.append("RECREATION AND CULTURE")
+new_row.append("Stephanis") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("YARIS CROSS")
