@@ -2169,8 +2169,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="Toyta":
-        resutls_toyta(u)
+    #elif retailer_=="Toyta":
+    #    resutls_toyta(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
@@ -2200,6 +2200,50 @@ for u in range(0,len(urls)):
 
 #Chanegd the type as float
 list_["Price"].astype(float)
+
+#####
+#Manual data
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Aygo-X")
+new_row.append(float(17700.0))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("YARIS CROSS")
+new_row.append(float(28500.0))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X 2022")
+new_row.append(float(16700.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X 2023")
+new_row.append(float(16700.0))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+####
+
 
 ##Ending time
 #end_time = time.time()
