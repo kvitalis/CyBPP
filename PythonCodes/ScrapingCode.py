@@ -2169,8 +2169,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    #elif retailer_=="Toyta":
-    #    resutls_toyta(u)
+    elif retailer_=="Toyta":
+        resutls_toyta(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
@@ -2201,6 +2201,7 @@ for u in range(0,len(urls)):
 #Chanegd the type as float
 list_["Price"].astype(float)
 
+"""
 #####
 #Manual data
 new_row=[]
@@ -2243,6 +2244,7 @@ new_row.append("Toyta")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 ####
+"""
 
 
 ##Ending time
