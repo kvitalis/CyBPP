@@ -29,7 +29,7 @@ df = pd.read_csv("Datasets/raw_data.csv")
 urls = pd.read_csv("Datasets/DailyScrapingErrors.csv")
 print("2")
 
-#Creative null dataframe
+#Create a null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
@@ -261,7 +261,6 @@ def results_stefanis(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
 def results_cyta(u):
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -318,6 +317,7 @@ def results_cyta(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
 def results_epic(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -496,7 +496,6 @@ def results_bweel_pharmacy(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
 def result_cablenet(u):
     name_=urls["Name"].iloc[u]
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
@@ -586,7 +585,6 @@ def results_CyMinistryEducation(u):
     new_row.append("Cyprus Ministry of Education, Sport and Youth")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
-
 
 def results_CyPost(u):
     
@@ -705,7 +703,6 @@ def result_europeanuniversitycyprus(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
 def results_famoussport(u):
     url = "https://www.famousports.com/en"+Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
@@ -734,7 +731,6 @@ def results_famoussport(u):
         new_row.append("Famous Sports")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
 
 def results_Marks_Spencer(u):
     url="https://www.marksandspencer.com/cy/regular-fit-pure-cotton-crew-neck-t-shirt/p/P60581522.html#index=0"
@@ -791,7 +787,6 @@ def results_moto_race(u):
         new_row.append("Moto Race")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
 
 def results_nissan(u):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
@@ -867,7 +862,6 @@ def results_novella(u):
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-
 
 def results_numbeo(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
@@ -1000,7 +994,6 @@ def resutls_rio(u):
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
 
 def resutls_ahk(u):
     response = requests.get(Item_url_)
@@ -1161,7 +1154,6 @@ def result_water(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
-
 def results_wolt(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1197,7 +1189,6 @@ def results_wolt(u):
             website_false.append(comitidy_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-
 
 def results_vasos(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1237,7 +1228,6 @@ def results_vasos(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
 
 def results_meze(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1283,8 +1273,6 @@ def results_meze(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
-
 
 def results_CYgar_shop(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1711,7 +1699,6 @@ def results_flames(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
-
 def results_lensescy(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1970,9 +1957,6 @@ def resutls_cyprus_transport(u):
                 list_.loc[len(list_)] = row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
-
-
 def results_musicavenue(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_,{'headers':header})
@@ -1998,8 +1982,6 @@ def results_musicavenue(u):
         new_row.append("Musicavenue")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
-
 
 def resutls_max_7_tax(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -2097,7 +2079,7 @@ start_time = time.time()
 for u in range(0,len(urls)):
     print(u)
     
-    #Creative null row each time 
+    #Create null row each time 
     new_row=[]
     website_false=[]
     
@@ -2207,19 +2189,8 @@ for u in range(0,len(urls)):
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
 
-
 #####
-#Manual data
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Φορητός υπολογιστής ACER TravelMate Spin B3 NX.VN8ET.00D μαύρο")
-new_row.append(float(269.0))
-new_row.append("Personal computers")
-new_row.append("RECREATION AND CULTURE")
-new_row.append("Stephanis") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
+#Manually added data
 """
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2253,7 +2224,7 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 #####
 """
 
-#Chanegd the type as float
+#Change the type as float
 list_["Price"].astype(float)
 
 combined_df = pd.concat([df, list_], axis=0)
