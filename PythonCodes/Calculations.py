@@ -174,9 +174,9 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 #Read importnat files
 df_=pd.read_csv("Results/CPI-General-Inflation.csv")
-df_montly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 
-#Fuction's calculation of last Thursday
+#Function's calculation of last Thursday
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
@@ -186,9 +186,10 @@ def is_last_thursday(date):
 
 #Call the function
 if is_last_thursday(current_date):
-    df_current_date=df_[df_["Date"]==current_date]
-    df_montly_data = pd.concat([df_current_date, df_montly_data], ignore_index=True)
-    df_montly_data["Inflation (%)"]=None    # NOTE: here write the formula of General CPI change over time 
-    df_montly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv")
+    df_current_date = df_[df_["Date"] == current_date]
+    df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
+    df_monthly_data = df_monthly_data.sort_values(by ='Date')
+    df_monthly_data["Inflation (%)"] = 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
+    df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
