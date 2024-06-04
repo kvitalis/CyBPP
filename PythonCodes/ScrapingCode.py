@@ -1590,20 +1590,9 @@ def resutls_toyta(u):
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
             soup = BeautifulSoup(response.content, "html.parser")
-            ken = soup.find("div", {"role": "cpdqm_ignore"}).text
-            data = json.loads(ken)
-            price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
+            isnone = soup.find("div", {"role": "cpdqm_ignore"}).text
 
-            if price_:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(comitidy_)
-                new_row.append("Toyta")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
+            if isnone==None:
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
@@ -1611,6 +1600,28 @@ def resutls_toyta(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            
+            else:
+                data = json.loads(isnone)
+                price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
+
+                if price_:
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(comitidy_)
+                    new_row.append("Toyta")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                else:
+                    website_false.append(name_)
+                    website_false.append(subclass_)
+                    website_false.append(Item_url_)
+                    website_false.append(comitidy_)
+                    website_false.append(retailer_)
+                    daily_errors.loc[len(daily_errors)] = website_false
+                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
