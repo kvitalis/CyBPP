@@ -128,10 +128,10 @@ def results_fuelDaddy(urls):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div", {"class":"col-md-7 pump-info-right"})
+        
         for brand_name in element_soup:
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
             for brand_name in brand:
@@ -146,6 +146,7 @@ def results_fuelDaddy(urls):
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
         name_word=name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
+        
         for i in range(len(element_price)):
             price_list=[]
             name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
@@ -196,6 +197,7 @@ def results_ikea(u):
     url_new = "https://www.ikea.com.cy"+Item_url_
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)    
+    
     if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -212,6 +214,7 @@ def results_ikea(u):
             element_soup_1=element_soup[0]
             element_soup_2=element_soup_1.text
             element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
+            
             if "Τρέχουσα τιμή" in element_soup_3:
                 element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
             
@@ -241,7 +244,6 @@ def results_stefanis(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"listing-details-heading"})
@@ -277,7 +279,6 @@ def results_cyta(u):
                     if (ken==name_):
                         price_=element_soup_1[p+1].text.replace("€","").replace(",",".").replace(" /λεπτό","")
                         q=1
-        
         if (q==0):
             element_soup = soup.find_all("div",{"class":"card-body px-1"})
             qq=0
@@ -290,7 +291,6 @@ def results_cyta(u):
                     price_ = matches[0].replace(",",".")
                     qq=1
                     q=1
-        
         if (q==0):
             element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
             text = element_soup[0].get_text()
@@ -308,7 +308,6 @@ def results_cyta(u):
         new_row.append("CYTA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-        
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -321,11 +320,13 @@ def results_cyta(u):
 def results_epic(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    
     if (response.status_code==200):
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup_price = soup.find_all("div",{"class":"price"})
         element_soup_name=soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
         new_row=[]
+       
         for q in range(0,len(element_soup_name)):
             new_row=[]
             _name_=element_soup_name[q].text.strip().replace(" ","")
@@ -369,8 +370,7 @@ def results_Athlokinisi(u):
         website_false.append(comitidy_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("span",{"class":"ammount"})
@@ -382,8 +382,7 @@ def results_Athlokinisi(u):
             website_false.append(comitidy_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
         else:
             price_=float(element_soup[0].text.strip().replace("€",""))
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -417,8 +416,7 @@ def results_awol(u):
         website_false.append(comitidy_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
     else:
         if element_soup[0] is not None:
             amounts_list = element_soup[0].text.split('€')
@@ -450,7 +448,6 @@ def results_alter_Vape(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("span",{"class":"price"})
         price_1=element_soup[0].text.replace("\n","")
@@ -481,7 +478,6 @@ def results_bweel_pharmacy(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
         element_soup_1=element_soup[1].text
@@ -511,7 +507,6 @@ def result_cablenet(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("div",{"class":"plan-price"}) 
 
@@ -522,7 +517,6 @@ def result_cablenet(u):
                 qp=0
             euro_=element_soup[qp].text.count("€")
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
-    
         else:
             element_name = soup.find_all("td")
 
@@ -560,6 +554,7 @@ def results_CyMinistryEducation(u):
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
+        
         for i in range(2,8):
             pdf_[i]= pdf_[i].astype('string')
         
@@ -570,10 +565,12 @@ def results_CyMinistryEducation(u):
     if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
+        
         for i in range(2,8):
             pdf_[i]= pdf_[i].astype('string')
         
         price_ = (float(pdf_[2][22])+float(pdf_[3][22].split()[0])+float(pdf_[3][22].split()[1])+float(pdf_[4][22])+float(pdf_[5][22])+float(pdf_[6][22]))/6
+        
         if ("Ζ ΤΑΞΗ" in name_):
             price_=pdf_[7][22]
     
@@ -635,7 +632,6 @@ def results_ewholesale(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("span",{"data-hook":"formatted-primary-price"}) 
         price_=element_soup[0].text.replace("€","").replace(" ","").replace(",",".")
@@ -664,7 +660,6 @@ def results_electroline(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("ins",{"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
         if element_soup:
@@ -684,9 +679,11 @@ def results_electroline(u):
 def result_europeanuniversitycyprus(u):
     euc = tb.read_pdf(Item_url_, pages = '2',pandas_options={'header': None}, stream=True)
     list_euc = []
+    
     for i in range(0,4):
         new_row=[]
         euc[i][1] = euc[i][1].astype('string')
+        
         for word in euc[i][1].to_list():
             word = word.replace(',','')
             word = int(word)
@@ -719,7 +716,6 @@ def results_famoussport(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-        
         element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
         element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
         price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
@@ -747,7 +743,6 @@ def results_Marks_Spencer(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("span",{"class":"value"})
         price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
@@ -775,7 +770,6 @@ def results_moto_race(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all("span",{"class":"price"})
         price_=element_soup[0].text.replace(",","").replace("€","")
@@ -801,7 +795,6 @@ def results_nissan(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         tree = html.fromstring(response.content)
         price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
@@ -841,6 +834,7 @@ def results_novella(u):
         for i in range(0,len(scripts_1)):
             new_row=[]
             website_false=[]
+            
             if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
                 price_=scripts_2[i].text.replace('€',"").replace(',','.')
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -877,7 +871,6 @@ def results_numbeo(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_soup = soup.find_all('tr',{"class":"tr_standard"})
         for o in range(0,len(element_soup)):
@@ -908,7 +901,6 @@ def results_primetel(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_name = soup.find_all('div',{"class":"top_plan_box"})
         for i in range(0,len(element_name)):
@@ -945,7 +937,6 @@ def resutls_rio(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         element_name = soup.find_all('p',{"style":"text-align: center;"})
         for i in range(0,len(element_name)):
@@ -970,8 +961,7 @@ def resutls_rio(u):
                         website_false.append(comitidy_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
-                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-                        
+                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)         
                 else:
                     amount_match = re.search(r'€(\d+)', element_name[i].text)
 
@@ -1007,7 +997,6 @@ def resutls_ahk(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
     
         with open(pdf, "wb") as f:
@@ -1062,7 +1051,6 @@ def resutls_cera(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:   
         for oo in range(0,len(_names_)-1):
             n1=_names_[oo]+" "+_names_[oo+1]
@@ -1132,7 +1120,6 @@ def result_water(u):
             if (element_name_2[o-2].text=="1") and (element_name_2[o-1].text=="40") and(name_=="Κυβικά ανά μήνα"):
                 price_=float(element_name_2[o].text.replace(",","."))
                 #matches_2= re.findall(r'\d+,\d+', price_)
-
                 #if matches_2:
                 #    price_ = float(matches_2[0].replace(",","."))
     
@@ -1167,7 +1154,6 @@ def results_wolt(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_name = soup.find_all('span',{"data-test-id":"product-modal.price"})
@@ -1204,7 +1190,6 @@ def results_vasos(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         element_name = soup.find_all('p',{"class":"slider-text3"})
         price_=element_name[0].text.replace("\n","").replace(" ","")
@@ -1243,7 +1228,6 @@ def results_meze(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         element_name = soup.find_all('div',{"class":"mprm-simple-view-column mprm-first"})
         for i in range(0,len(element_name)):
@@ -1288,7 +1272,6 @@ def results_CYgar_shop(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         if element_name:
             price_value=element_name[0].text
@@ -1333,7 +1316,6 @@ def results_the_royal_cigars(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         element_name = soup.find_all('div',{"class":"itemDetailsPrice"})
         if element_name:
@@ -1366,17 +1348,18 @@ def results_pydixa(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         pdf = "PDFs/pixida.pdf"
+        
         with open(pdf, "wb") as f:
             f.write(response.content)
-
+        
         with pdfplumber.open(pdf) as pdf:
             page = pdf.pages[5]  
             text = page.extract_text()
 
         matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+        
         if matches:
             new_row.append(datetime.now().strftime('%Y-%m-%d'))        
             new_row.append(name_)
@@ -1409,7 +1392,6 @@ def results_sewerage(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         if "Nicosia" in retailer_:
             new_row=[]
@@ -1442,6 +1424,7 @@ def results_sewerage(u):
         elif "Limassol" in retailer_:
             city_="Limassol"
             new_row=[]
+            
             if "Ετήσιο Τέλος" in name_:
                 element_name = soup.find_all('table',{"class":"table table-bordered"})
                 element_name_2 = element_name[0].find_all('tr')[35]
@@ -1483,7 +1466,6 @@ def results_sewerage(u):
                 for lines in desired_lines:
                     values=float(lines.replace(",","."))
 
-            
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_+" "+city_)
         new_row.append(values)
@@ -1530,8 +1512,7 @@ def resutls_toyta(u):
                 website_false.append(comitidy_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-                
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
     else:    
         if subclass_=="New motor cars":
             bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1559,15 +1540,16 @@ def resutls_toyta(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
         elif subclass_=="Second-hand motor cars":
-            #query ={"component":"used-stock-cars-v2","fetches":[
-            #    {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
-            #]}
-            #headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
-            #}
-            #response = requests.get(Item_url_,{'headers':headers})
-            #r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
-            #price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-
+            """
+            query ={"component":"used-stock-cars-v2","fetches":[
+                {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
+            ]}
+            headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
+            }
+            response = requests.get(Item_url_,{'headers':headers})
+            r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
+            price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
+            """
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
             soup = BeautifulSoup(response.content, "html.parser")
@@ -1581,7 +1563,6 @@ def resutls_toyta(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            
             else:
                 data = json.loads(isnone)
                 price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
@@ -1614,6 +1595,7 @@ def results_ithaki(u):
         
     pattern = r'(\d+.*?\d+\.\d{2})'
     matches = re.findall(pattern, text)
+    
     for match in matches:
         new_row=[]
         website_false=[]
@@ -1664,6 +1646,7 @@ def results_ithaki(u):
 def results_flames(u):
     response = requests.get(Item_url_)
     pdf = "PDFs/flames.pdf"
+    
     with open(pdf, "wb") as f:
         f.write(response.content)
 
@@ -1673,6 +1656,7 @@ def results_flames(u):
 
     lines = text.split('\n')
     desired_line = None
+    
     for line in lines:
         if "Mixed Grill" in line:
             desired_line = line.strip()  
@@ -1712,7 +1696,6 @@ def results_lensescy(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_name = soup.find_all('div',{"class":"product-price"})
@@ -1738,7 +1721,6 @@ def resutls_intercity(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
@@ -1781,7 +1763,6 @@ def results_parga(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         element_=soup.find_all('span',{'class':'productPriceStore'})
         price_=element_[1].text.replace("€","")
@@ -1806,7 +1787,6 @@ def results_evdokia(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
     else:
         price_element = soup.find('p', class_='price')
         bdi_element = price_element.find('bdi')
@@ -1831,7 +1811,6 @@ def resutls_centropical(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         price_element = soup.find('p', class_ = 'price')
         bdi_element = price_element.find('bdi')
@@ -1893,7 +1872,6 @@ def results_premier(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         products = all_data_products['Products']
         names = [item['name'] for item in products]
@@ -1923,11 +1901,11 @@ def resutls_cyprus_transport(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         wrapper = soup.find_all('tbody')[0]
         data = []
+        
         for row in wrapper.find_all('tr'):
             row_data = []
             for cell in row.find_all(['td', 'th']):
@@ -1940,6 +1918,7 @@ def resutls_cyprus_transport(u):
         df1 = df1.drop(6)
         df1 = df1.set_index('Ticket type')
         new_list = []
+        
         for column in df1.columns:  
             for index in df1.index:
                 value = df1.loc[index, column]
@@ -1969,7 +1948,6 @@ def results_musicavenue(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -1995,7 +1973,6 @@ def resutls_max_7_tax(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         table_ = soup.find('table', {"class" :'tbl',"style":"width: 100%;","border":"1","frame":"void","cellspacing":"1","cellpadding":"3","align":"center"})
@@ -2004,7 +1981,6 @@ def resutls_max_7_tax(u):
             pattern = r'Initial charge\s+([\d,]+)\s+([\d,]+)'
         if "Fare per Km" in name_:
             pattern = r'Fare per Km\s+([\d,]+)\s+([\d,]+)'  
-
         matches = re.findall(pattern, table_)
         charges_ = [float(charge.replace(',', '.')) for charge in matches[0]]
         for i in range(0,2):
@@ -2033,7 +2009,6 @@ def results_costastheodorou(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_=soup.find_all("p",{"class":"price"})
@@ -2072,7 +2047,7 @@ def results_leroymerlin(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Calculation of the process time
+#Calculation of the processing time
 start_time = time.time()
 
 #Run the code
@@ -2189,9 +2164,19 @@ for u in range(0,len(urls)):
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
 
-#####
-#Manually added data
 """
+#Manually added data
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Aygo-X")
+new_row.append(float(17700.0))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("YARIS CROSS")
@@ -2204,7 +2189,7 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X")
+new_row.append("Toyota Aygo-X")
 new_row.append(float(16700.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
@@ -2214,14 +2199,33 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X 1.0 litres VVT-i")
+new_row.append("Toyota Aygo-X 1.0 litres VVT-i")
 new_row.append(float(17170.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyta") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-#####
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo-X 2022")
+new_row.append(float(16700.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo-X 2023")
+new_row.append(float(16700.0))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 """
 
 #Change the type as float
