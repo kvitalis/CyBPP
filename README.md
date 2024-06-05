@@ -9,9 +9,9 @@ Here, the BPP methodology is for the first time in the Cypriot economy applied a
 
 ## Python Codes
 
-### 1. Scraping Code (temporary name)
+### 1. Web Scraping (temporary name)
 
-Since the main objective of this project is the calculation of the Consumer Price Index (CPI) Inflation using the online prices of products (goods and services) in the fixed/pre-selected and representative CPI basket, the first step is the collection of the products' data and its storage. The 'ScrapingCode.py' file deals with the web scraping of this data. This Python file, which is called daily from the workflows file 'RunDailyScraping.yml' at around 09:00 (UTC time), firstly reads the 'ProductsUrls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'raw_data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+Since the main objective of this project is the calculation of the Consumer Price Index (CPI) Inflation using the online prices of products (goods and services) in the fixed/pre-selected and representative CPI basket, the first step is the collection of the products' data and its storage. The 'WebScraping.py' file deals with the web scraping of this data. This Python file, which is called daily from the workflows file 'WebScraping.yml' at around 09:00 (UTC time), firstly reads the 'ProductsUrls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'raw_data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
 At the same time, emphasis is given on the products for which the data has not been scraped for some reason, e.g. at the time of web-scraping a retailer's website is unavailable either for maintenance reasons or due to traffic reasons. The data of these products are stored in the 'DailyScrapingErrors.csv' file (Datasets) to be retrieved in a subsequent scraping process. 
 
@@ -137,8 +137,8 @@ According to the representativeness of each product and its retailer within the 
 
 The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the ./github/workflows directory:
 
-### 1. RunDailyScraping.yml: 
-This workflow file schedules the execution of the 'ScrapingCode.py' script at around 09:00 (UTC time) every day.
+### 1. WebScraping.yml: 
+This workflow file schedules the execution of the 'WebScraping.py' script at around 09:00 (UTC time) every day.
 ### 2. SecondIteration.yml: 
 This workflow file schedules the execution of the 'SecondIteration.py' script at around 15:00 (UTC time) every day.
 ### 3. Calculations.yml: 
