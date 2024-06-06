@@ -553,9 +553,14 @@ def results_CyMinistryEducation(u):
         for i in range(2,8):
             pdf_[i]= pdf_[i].astype('string')
         
-        price_ = (float(pdf_[2][6])+float(pdf_[3][6].split()[0])+float(pdf_[3][6].split()[1])+float(pdf_[4][6])+float(pdf_[5][6])+float(pdf_[6][6]))/6
-        if ("Ζ ΤΑΞΗ" in name_):
-            price_=pdf_[7][6]
+        value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
+        value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
+        value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
+        value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
+        value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
+        value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
+        value_7=(float(pdf_[8][4].replace("€",'').replace(".","")))
+        price_=float(value_1+value_2+value_3+value_4+value_5+value_6+value_7)/7
     
     if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
@@ -563,9 +568,14 @@ def results_CyMinistryEducation(u):
         for i in range(2,8):
             pdf_[i]= pdf_[i].astype('string')
         
-        price_ = (float(pdf_[2][22])+float(pdf_[3][22].split()[0])+float(pdf_[3][22].split()[1])+float(pdf_[4][22])+float(pdf_[5][22])+float(pdf_[6][22]))/6
-        if ("Ζ ΤΑΞΗ" in name_):
-            price_=pdf_[7][22]
+        value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
+        value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
+        value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
+        value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
+        value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
+        value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
+        value_7=(float(pdf_[8][15].replace("€",'').replace(".","")))
+        price_=float(value_1+value_2+value_3+value_4+value_5+value_6+value_7)/7
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
