@@ -563,7 +563,7 @@ def results_CyMinistryEducation(u):
         price_=float(value_1+value_2+value_3+value_4+value_5+value_6+value_7)/7
     
     if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
+        pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
         for i in range(2,8):
             pdf_[i]= pdf_[i].astype('string')
