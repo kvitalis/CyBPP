@@ -540,63 +540,54 @@ def results_CyMinistryEducation(u):
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         pdf_ = tb.read_pdf(url, pages = '4',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
+        pdf_ = pdf_[0]
         pdf_[2] = pdf_[2].astype('string')
-        pdf=pdf_[2][1]
-        price_=float(pdf.strip('€*').replace(".", ""))
+        pdf = pdf_[2][1]
+        price_ = float(pdf.strip('€*').replace(".", ""))
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
+        pdf_= pdf_[0]
         pdf_[3] = pdf_[3].astype('string')
-        price_=float(pdf_[3][26].strip('€').replace(".", ""))
+        price_ = float(pdf_[3][26].strip('€').replace(".", ""))
                      
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
+        pdf_ = pdf_[0]
         
         for i in range(2,7):
-            pdf_[i]= pdf_[i].astype('string')
-        
-        value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
-        value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
-        value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
-        value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
-        value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
-        value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
-        
-        price_=float(value_1+value_2+value_3+value_4+value_5+value_6)/6
+            pdf_[i] = pdf_[i].astype('string')
+            value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
+            value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
+            value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
+            value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
+            value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
+            value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
+            price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
+
+    #Ζ ΤΑΞΗ: Post-secondary non-tertiary education (ISCED 4)
+    pdf_[8] = pdf_[8].astype('string')
+    value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
+    price_ = float(value_7)
     
-    if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
+    if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
         
         for i in range(2,7):
-            pdf_[i]= pdf_[i].astype('string')
+            pdf_[i] = pdf_[i].astype('string')
+            value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
+            value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
+            value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
+            value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
+            value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
+            value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
+            price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
         
-        value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
-        value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
-        value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
-        value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
-        value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
-        value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
-        
-        price_=float(value_1+value_2+value_3+value_4+value_5+value_6)/6
-        
-    #Ζ ΤΑΞΗ, Post-secondary non-tertiary education (ISCED 4)
-    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
-        pdf_[8]= pdf_[8].astype('string')
-        value_7=(float(pdf_[8][4].replace("€",'').replace(".",""))) 
-        price_=float(value_7)
-    
-    if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
-        pdf_[8]= pdf_[8].astype('string')
-        value_7=(float(pdf_[8][15].replace("€",'').replace(".",""))) 
-        price_=float(value_7)
+    #Ζ ΤΑΞΗ: Post-secondary non-tertiary education (ISCED 4)
+    pdf_[8] = pdf_[8].astype('string')
+    value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
+    price_ = float(value_7)
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
