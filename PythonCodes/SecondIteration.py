@@ -554,21 +554,22 @@ def results_CyMinistryEducation(u):
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
         pdf_ = pdf_[0]
-        
+
         for i in range(2,7):
             pdf_[i] = pdf_[i].astype('string')
-            value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
-            value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
-            value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
-            value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
-            value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
-            value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
-            price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
+            if subclass_=="Secondary education":
+                value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
+                value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
+                value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
+                value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
+                value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
+                value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
+                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
 
-    #Ζ ΤΑΞΗ: Post-secondary non-tertiary education (ISCED 4)
-    pdf_[8] = pdf_[8].astype('string')
-    value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
-    price_ = float(value_7)
+            if subclass_=="Post-secondary non-tertiary education (ISCED 4)":
+                pdf_[8] = pdf_[8].astype('string')
+                value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
+                price_ = float(value_7)
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
@@ -576,18 +577,19 @@ def results_CyMinistryEducation(u):
         
         for i in range(2,7):
             pdf_[i] = pdf_[i].astype('string')
-            value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
-            value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
-            value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
-            value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
-            value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
-            value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
-            price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
-        
-    #Ζ ΤΑΞΗ: Post-secondary non-tertiary education (ISCED 4)
-    pdf_[8] = pdf_[8].astype('string')
-    value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
-    price_ = float(value_7)
+            if subclass_=="Secondary education":
+                value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
+                value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
+                value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
+                value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
+                value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
+                value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
+                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
+
+            if subclass_=="Post-secondary non-tertiary education (ISCED 4)":
+                pdf_[8] = pdf_[8].astype('string')
+                value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
+                price_ = float(value_7)
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
