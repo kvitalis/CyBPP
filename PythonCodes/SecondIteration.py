@@ -1665,7 +1665,7 @@ def results_flames(u):
     desired_line = None
     
     for line in lines:
-        if "Flames Special Cyprus (Meze)" in line:
+        if "Mixed Grill" in line:
             desired_line = line.strip()  
 
     if desired_line:
