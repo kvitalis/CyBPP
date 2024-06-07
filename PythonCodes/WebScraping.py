@@ -550,6 +550,7 @@ def results_CyMinistryEducation(u):
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
+        
         for i in range(2,7):
             pdf_[i]= pdf_[i].astype('string')
         
@@ -561,15 +562,11 @@ def results_CyMinistryEducation(u):
         value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
         
         price_=float(value_1+value_2+value_3+value_4+value_5+value_6)/6
-        
-        #Ζ ΤΑΞΗ,Post-secondary non-tertiary education (ISCED 4)
-        pdf_[8]= pdf_[8].astype('string')
-        value_7=(float(pdf_[8][4].replace("€",'').replace(".",""))) 
-        price_=float(value_7)
     
     if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
         pdf_=pdf_[0]
+        
         for i in range(2,7):
             pdf_[i]= pdf_[i].astype('string')
         
@@ -582,7 +579,17 @@ def results_CyMinistryEducation(u):
         
         price_=float(value_1+value_2+value_3+value_4+value_5+value_6)/6
         
-        #Ζ ΤΑΞΗ,Post-secondary non-tertiary education (ISCED 4)
+    #Ζ ΤΑΞΗ,Post-secondary non-tertiary education (ISCED 4)
+    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
+        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
+        pdf_=pdf_[0]
+        pdf_[8]= pdf_[8].astype('string')
+        value_7=(float(pdf_[8][4].replace("€",'').replace(".",""))) 
+        price_=float(value_7)
+    
+    if ("Limassol" in name_)and ("ΜΕΣΗΣ" in name_):
+        pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
+        pdf_=pdf_[0]
         pdf_[8]= pdf_[8].astype('string')
         value_7=(float(pdf_[8][15].replace("€",'').replace(".",""))) 
         price_=float(value_7)
