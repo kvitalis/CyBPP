@@ -2181,7 +2181,6 @@ for u in range(0,len(urls)):
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
 
-"""
 #Manually added data
 
 new_row=[]
@@ -2206,8 +2205,8 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo-X")
-new_row.append(float(16700.00))
+new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
+new_row.append(float(13980.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyta") 
@@ -2216,8 +2215,8 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo-X 1.0 litres VVT-i")
-new_row.append(float(17170.00))
+new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
+new_row.append(float(13780.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyta") 
@@ -2226,8 +2225,8 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo-X 2022")
-new_row.append(float(16700.00))
+new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
+new_row.append(float(19600.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyta") 
@@ -2236,14 +2235,23 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo-X 2023")
-new_row.append(float(16700.0))
+new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+new_row.append(float(19240.0))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyta") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+new_row.append(float(18720.0))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyta") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Change the type as float
 list_["Price"].astype(float)
