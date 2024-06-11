@@ -2182,7 +2182,7 @@ for u in range(0,len(urls)):
         results_costastheodorou(u)
 
 #Manually added data
-"""
+
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Aygo-X")
@@ -2252,7 +2252,6 @@ new_row.append("TRANSPORT")
 new_row.append("Toyta") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 
 #Change the type as float
 list_["Price"].astype(float)
