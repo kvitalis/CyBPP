@@ -1816,7 +1816,7 @@ def results_evdokia(u):
         new_row.append("Evdokia Jewellery")
         list_.loc[len(list_)] = new_row
 
-def results_centropical(u):
+def results_centroptical(u):
     response=requests.get(Item_url_, headers = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0"})
     soup = BeautifulSoup(response.content, "html.parser")
     
@@ -1837,7 +1837,7 @@ def results_centropical(u):
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(commotidy_)
-        new_row.append("Centropical")
+        new_row.append("Centroptical")
         list_.loc[len(list_)] = new_row
 
 def results_premier(u):
@@ -2166,8 +2166,8 @@ for u in range(0,len(urls)):
         results_parga(u)
     elif retailer_=="Evdokia Jewellery":
         results_evdokia(u)
-    elif retailer_=="Centropical":
-        results_centropical(u)
+    elif retailer_=="Centroptical":
+        results_centroptical(u)
     elif retailer_=="Premier Laundry":
         results_premier(u)
     elif retailer_=="Cyprus Transport":
