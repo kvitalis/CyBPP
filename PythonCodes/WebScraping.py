@@ -484,7 +484,7 @@ def results_bweel_pharmacy(u):
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(comitidy_)
-        new_row.append("Bwell Pharamcy")
+        new_row.append("Bwell Pharmacy")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
