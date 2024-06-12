@@ -553,10 +553,25 @@ def results_CyMinistryEducation(u):
         price_=price_1+price_2+price_3
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
-        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_= pdf_[0]
-        pdf_[3] = pdf_[3].astype('string')
-        price_ = float(pdf_[3][26].strip('€').replace(".", ""))
+        pdf_ = tb.read_pdf(url_, pages = '1',pandas_options={'header': None}, stream=True)
+        pdf_ = pdf_[0]
+
+        #Annual cost
+        for i in range(0,7):
+            pdf_[i] = pdf_[i].astype('string')
+
+        price_1 = float(pdf_[1][25].strip('€*').replace(".", ""))+float(pdf_[2][25].strip('€*').replace(".", ""))+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0])+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1])+float(pdf_[4][25].strip('€*').replace(".", ""))+float(pdf_[5][25].strip('€*').replace(".", ""))
+        price_1=price_1/6
+
+        #Other cost
+        pdf = pdf_[6][24]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf = pdf_[6][26]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total
+        price_=price_1+price_2+price_3
                      
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
