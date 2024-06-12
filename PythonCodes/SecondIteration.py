@@ -1492,7 +1492,7 @@ def results_sewerage(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_toyta(u):
+def results_toyota(u):
     if (name_=="YARIS CROSS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1519,7 +1519,7 @@ def results_toyta(u):
                 new_row.append(price_)
                 new_row.append(subclass_)
                 new_row.append(commotidy_)
-                new_row.append("Toyta")
+                new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1544,7 +1544,7 @@ def results_toyta(u):
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(commotidy_)
-                new_row.append("Toyta")
+                new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1590,7 +1590,7 @@ def results_toyta(u):
                     new_row.append(float(price_))
                     new_row.append(subclass_)
                     new_row.append(commotidy_)
-                    new_row.append("Toyta")
+                    new_row.append("toyota")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 else:
@@ -2152,8 +2152,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="Toyta":
-        results_toyta(u)
+    elif retailer_=="toyota":
+        results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
@@ -2189,7 +2189,7 @@ new_row.append("Aygo-X")
 new_row.append(float(17700.0))
 new_row.append("New motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2199,7 +2199,7 @@ new_row.append("YARIS CROSS")
 new_row.append(float(28500.0))
 new_row.append("New motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2209,7 +2209,7 @@ new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
 new_row.append(float(13980.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2219,7 +2219,7 @@ new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
 new_row.append(float(13780.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2229,7 +2229,7 @@ new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
 new_row.append(float(19600.00))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2239,7 +2239,7 @@ new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
 new_row.append(float(19240.0))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2249,7 +2249,7 @@ new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
 new_row.append(float(18720.0))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
-new_row.append("Toyta") 
+new_row.append("toyota") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 """
