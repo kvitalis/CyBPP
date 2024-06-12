@@ -535,11 +535,22 @@ def results_CyMinistryEducation(u):
     url="http://archeia.moec.gov.cy/mc/698/"+Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        pdf_ = tb.read_pdf(url, pages = '4',pandas_options={'header': None}, stream=True)
-        pdf_ = pdf_[0]
-        pdf_[2] = pdf_[2].astype('string')
-        pdf = pdf_[2][1]
-        price_ = float(pdf.strip('€*').replace(".", ""))
+        #Annual cost
+        pdf_[3] = pdf_[3].astype('string')
+        pdf = pdf_[3][1]
+        price_1 = float(pdf.strip('€*').replace(".", ""))
+
+        #Other cost
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][0]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][2]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total
+        price_=price_1+price_2+price_3
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
