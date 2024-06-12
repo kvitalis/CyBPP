@@ -1511,7 +1511,7 @@ def results_sewerage(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_toyta(u):
+def results_toyota(u):
     if (name_=="YARIS CROSS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1538,7 +1538,7 @@ def results_toyta(u):
                 new_row.append(price_)
                 new_row.append(subclass_)
                 new_row.append(commodity_)
-                new_row.append("Toyta")
+                new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1563,7 +1563,7 @@ def results_toyta(u):
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(commodity_)
-                new_row.append("Toyta")
+                new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1611,7 +1611,7 @@ def results_toyta(u):
                     new_row.append(float(price_))
                     new_row.append(subclass_)
                     new_row.append(commodity_)
-                    new_row.append("Toyta")
+                    new_row.append("toyota")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 else:
@@ -2176,8 +2176,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    #elif retailer_=="Toyta":
-        #results_toyta(u)
+    #elif retailer_=="toyota":
+        #results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
