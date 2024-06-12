@@ -535,7 +535,7 @@ def results_CyMinistryEducation(u):
     url="http://archeia.moec.gov.cy/mc/698/"+Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        pdf_ = tb.read_pdf(url_, pages = '4',pandas_options={'header': None}, stream=True)
+        pdf_ = tb.read_pdf(url, pages = '4',pandas_options={'header': None}, stream=True)
         pdf_ = pdf_[0]
         
         #Annual cost
@@ -556,7 +556,7 @@ def results_CyMinistryEducation(u):
         price_=price_1+price_2+price_3
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
-        pdf_ = tb.read_pdf(url_, pages = '1',pandas_options={'header': None}, stream=True)
+        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
         pdf_ = pdf_[0]
 
         #Annual cost
