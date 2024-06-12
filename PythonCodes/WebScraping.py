@@ -535,6 +535,9 @@ def results_CyMinistryEducation(u):
     url="http://archeia.moec.gov.cy/mc/698/"+Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
+        pdf_ = tb.read_pdf(url_, pages = '4',pandas_options={'header': None}, stream=True)
+        pdf_ = pdf_[0]
+        
         #Annual cost
         pdf_[3] = pdf_[3].astype('string')
         pdf = pdf_[3][1]
