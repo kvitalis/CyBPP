@@ -1606,7 +1606,7 @@ def results_toyota(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
         elif subclass_=="Second-hand motor cars":
-
+            
             #1st way
             """ 
             query ={"component":"used-stock-cars-v2","fetches":[
@@ -1656,11 +1656,61 @@ def results_toyota(u):
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                     """
-            #3rd way: 
+            
+            #3rd way: Manually added data
+            
+            new_row=[]
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
+            new_row.append(float(13980.00))
+            new_row.append("Second-hand motor cars")
+            new_row.append("TRANSPORT")
+            new_row.append("toyota") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
+            new_row=[]
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
+            new_row.append(float(13780.00))
+            new_row.append("Second-hand motor cars")
+            new_row.append("TRANSPORT")
+            new_row.append("toyota") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+            new_row=[]
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
+            new_row.append(float(19600.00))
+            new_row.append("Second-hand motor cars")
+            new_row.append("TRANSPORT")
+            new_row.append("toyota") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+            new_row=[]
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+            new_row.append(float(19240.0))
+            new_row.append("Second-hand motor cars")
+            new_row.append("TRANSPORT")
+            new_row.append("toyota") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+            new_row=[]
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+            new_row.append(float(18720.0))
+            new_row.append("Second-hand motor cars")
+            new_row.append("TRANSPORT")
+            new_row.append("toyota") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ithaki(u):
+    
     response = requests.get(Item_url_)
     pdf = "PDFs/ithaki.pdf"
 
@@ -1718,6 +1768,7 @@ def results_ithaki(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_flames(u):
+    
     response = requests.get(Item_url_)
 
     #Mixed Grill 
@@ -2237,8 +2288,8 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    #elif retailer_=="toyota":
-        #results_toyota(u)
+    elif retailer_=="toyota":
+        results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
