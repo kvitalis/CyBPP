@@ -761,7 +761,7 @@ def results_Marks_Spencer(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all("span",{"class":"value"})
+        element_soup = soup.find_all("span",{"class":"list-pricecolour"})
         price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
