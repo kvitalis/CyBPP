@@ -1605,7 +1605,7 @@ def results_toyota(u):
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
-        elif subclass_=="Second-hand motor cars":
+        #elif subclass_=="Second-hand motor cars":
             
             #1st way
             """ 
@@ -1656,58 +1656,6 @@ def results_toyota(u):
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                     """
-            
-            #3rd way: Manually added data
-            
-            new_row=[]
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
-            new_row.append(float(13980.00))
-            new_row.append("Second-hand motor cars")
-            new_row.append("TRANSPORT")
-            new_row.append("toyota") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
-            new_row=[]
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
-            new_row.append(float(13780.00))
-            new_row.append("Second-hand motor cars")
-            new_row.append("TRANSPORT")
-            new_row.append("toyota") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-            new_row=[]
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
-            new_row.append(float(19600.00))
-            new_row.append("Second-hand motor cars")
-            new_row.append("TRANSPORT")
-            new_row.append("toyota") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-            new_row=[]
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
-            new_row.append(float(19240.0))
-            new_row.append("Second-hand motor cars")
-            new_row.append("TRANSPORT")
-            new_row.append("toyota") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-            new_row=[]
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
-            new_row.append(float(18720.0))
-            new_row.append("Second-hand motor cars")
-            new_row.append("TRANSPORT")
-            new_row.append("toyota") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ithaki(u):
     
@@ -2318,6 +2266,57 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
+
+#Manually added data            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
+new_row.append(float(13980.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
+new_row.append(float(13780.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
+new_row.append(float(19600.00))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+new_row.append(float(19240.0))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
+new_row.append(float(18720.0))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Change the type as float
 list_["Price"].astype(float)
