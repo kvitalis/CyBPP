@@ -1541,6 +1541,7 @@ def results_sewerage(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_toyota(u):
+    
     if (name_=="YARIS CROSS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1605,8 +1606,9 @@ def results_toyota(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
         elif subclass_=="Second-hand motor cars":
-            
-            """
+
+            #1st way
+            """ 
             query ={"component":"used-stock-cars-v2","fetches":[
                 {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
             ]}
@@ -1617,6 +1619,8 @@ def results_toyota(u):
             price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
             """
             
+            #2nd way
+            """
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
             soup = BeautifulSoup(response.content, "html.parser")
@@ -1651,6 +1655,10 @@ def results_toyota(u):
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                    """
+            #3rd way: 
+
+
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
