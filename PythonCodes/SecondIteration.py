@@ -746,7 +746,7 @@ def results_famoussport(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_Marks_Spencer(u):
-    url="https://www.marksandspencer.com/cy/regular-fit-pure-cotton-crew-neck-t-shirt/p/P60581522.html#index=0"
+    url="https://www.marksandspencer.com/cy"+Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
