@@ -1711,13 +1711,15 @@ def results_ithaki(u):
 
 def results_flames(u):
     response = requests.get(Item_url_)
-    pdf = "PDFs/flames.pdf"
+
+    #Mixed Grill 
+    pdf1 = "PDFs/flames_grilled_dishes.pdf"
     
-    with open(pdf, "wb") as f:
+    with open(pdf1, "wb") as f:
         f.write(response.content)
 
-    with pdfplumber.open(pdf) as pdf:
-        first_page = pdf.pages[0]
+    with pdfplumber.open(pdf1) as pdf:
+        first_page = pdf1.pages[0]
         text = first_page.extract_text()
 
     lines = text.split('\n')
@@ -1726,6 +1728,28 @@ def results_flames(u):
     for line in lines:
         
         if "Mixed Grill" in line:
+            desired_line = line.strip()  
+
+    if desired_line:
+        pattern = r'(\d+\.\d{2})$'
+        price_ = re.findall(pattern, desired_line)
+
+    #Flames Special Cyprus (Meze)
+    pdf2 = "PDFs/flames_cyprus_dishes.pdf"
+    
+    with open(pdf2, "wb") as f:
+        f.write(response.content)
+
+    with pdfplumber.open(pdf2) as pdf:
+        first_page = pdf2.pages[0]
+        text = first_page.extract_text()
+
+    lines = text.split('\n')
+    desired_line = None
+    
+    for line in lines:
+        
+        if "Flames Special Cyprus (Meze)" in line:
             desired_line = line.strip()  
 
     if desired_line:
@@ -1748,7 +1772,7 @@ def results_flames(u):
             website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_lensescy(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
