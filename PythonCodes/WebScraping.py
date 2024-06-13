@@ -1720,7 +1720,7 @@ def results_flames(u):
 
     #Mixed Grill 
     if name_=="Mixed Grill for 2 persons - Famagusta":
-        pdf1 = "/Users/kendeas/Desktop/flames_grilled_dishes.pdf"
+        pdf1 = "PDFs/flames_grilled_dishes.pdf"
     
         with open(pdf1, "wb") as f:
             f.write(response.content)
@@ -1742,7 +1742,7 @@ def results_flames(u):
 
     #Flames Special Cyprus (Meze)
     if name_=="Meat Meze for 2 persons - Famagusta":
-        pdf2 = "/Users/kendeas/Desktop/flames_cyprus_dishes.pdf"
+        pdf2 = "PDFs/flames_cyprus_dishes.pdf"
     
         with open(pdf2, "wb") as f:
             f.write(response.content)
