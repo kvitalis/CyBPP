@@ -1768,70 +1768,72 @@ def results_ithaki(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_flames(u):
-    
     response = requests.get(Item_url_)
 
     #Mixed Grill 
-    pdf1 = "PDFs/flames_grilled_dishes.pdf"
+    if name_=="Mixed Grill for 2 persons - Famagusta":
+        pdf1 = "/Users/kendeas/Desktop/flames_grilled_dishes.pdf"
     
-    with open(pdf1, "wb") as f:
-        f.write(response.content)
+        with open(pdf1, "wb") as f:
+            f.write(response.content)
+        with pdfplumber.open(pdf1) as pdf:
+            first_page = pdf.pages[0]
+            text = first_page.extract_text()
 
-    with pdfplumber.open(pdf1) as pdf:
-        first_page = pdf1.pages[0]
-        text = first_page.extract_text()
-
-    lines = text.split('\n')
-    desired_line = None
+        lines = text.split('\n')
+        desired_line = None
     
-    for line in lines:
-        
-        if "Mixed Grill" in line:
-            desired_line = line.strip()  
-
-    if desired_line:
-        pattern = r'(\d+\.\d{2})$'
-        price_ = re.findall(pattern, desired_line)
+        for line in lines:
+    
+            if "Mixed Grill" in line:
+                desired_line = line.strip()  
+    
+        if desired_line:
+            pattern = r'(\d+\.\d{2})$'
+            price_ = re.findall(pattern, desired_line)
 
     #Flames Special Cyprus (Meze)
-    pdf2 = "PDFs/flames_cyprus_dishes.pdf"
+    if name_=="Meat Meze for 2 persons - Famagusta":
+        pdf2 = "/Users/kendeas/Desktop/flames_cyprus_dishes.pdf"
     
-    with open(pdf2, "wb") as f:
-        f.write(response.content)
-
-    with pdfplumber.open(pdf2) as pdf:
-        first_page = pdf2.pages[0]
-        text = first_page.extract_text()
-
-    lines = text.split('\n')
-    desired_line = None
+        with open(pdf2, "wb") as f:
+            f.write(response.content)
     
-    for line in lines:
-        
-        if "Flames Special Cyprus (Meze)" in line:
-            desired_line = line.strip()  
+        with pdfplumber.open(pdf2) as pdf:
+            first_page = pdf.pages[0]
+            text = first_page.extract_text()
+    
+        lines = text.split('\n')
+        desired_line = None
+    
+        for line in lines:
+    
+            if "Flames Special Cyprus (Meze)" in line:
+                position = lines.index("Flames Special Cyprus (Meze)")
+                correct_line=lines[position+1]
+                desired_line = correct_line.strip()  
+    
+        if desired_line:
+            pattern = r'(\d+\.\d{2})$'
+            price_ = re.findall(pattern, desired_line)
 
-    if desired_line:
-        pattern = r'(\d+\.\d{2})$'
-        price_ = re.findall(pattern, desired_line)
-
-        if price_:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_[-1]))
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("Flames")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    if price_:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_[-1]))
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Flames")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_lensescy(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
