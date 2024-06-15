@@ -25,7 +25,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
 for i, txt in enumerate(df_['CPI General']):
-    plt.annotate(f'{txt:.5f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('CPI General (25/04/2024 = base)')
@@ -67,7 +67,7 @@ if is_last_thursday(current_date):
     plt.figure(figsize=(10, 6))
     plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
     for i, txt in enumerate(df_['CPI General']):
-        plt.annotate(f'{txt:.5f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         plt.xlabel('Date')
         plt.ylabel('CPI General (25/04/2024 = base)')
         plt.title("Monthly Evolution of General CPI in Cyprus", fontsize=18)
