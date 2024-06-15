@@ -1083,11 +1083,12 @@ def results_cera(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_water(u):
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
+    price_=""
+    """
     if "Nicosia" in retailer_:
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
         city_="Nicosia"
         element_name = soup.find_all('div',{"class":"ekit_table_body_container ekit_table_data_ ekit_body_align_center"})
         
@@ -1098,8 +1099,11 @@ def results_water(u):
         
             elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-        
-    elif "Larnaca" in retailer_:
+    """   
+    if "Larnaca" in retailer_:
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
         city_="Larnaca"
         element_name = soup.find_all('td',{"colspan":"3"})
         element_name_2 = soup.find_all('table',{"border":"1","cellspacing":"3","cellpadding":"3"})
@@ -1117,6 +1121,9 @@ def results_water(u):
                 price_=float(element_name_4[o].text.replace(",","."))
     
     elif "Limassol" in retailer_:
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
         city_="Limassol"
         element_name = soup.find_all('table',{"class":"table table-striped table-nonfluid table-bordered table-sm"})
         element_name_2 = element_name[0].find_all('tr')
