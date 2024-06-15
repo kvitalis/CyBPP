@@ -1109,6 +1109,7 @@ def results_cera(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_water(u):
+    price_=""
     """
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
