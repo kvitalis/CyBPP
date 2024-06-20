@@ -723,7 +723,7 @@ def results_europeanuniversitycyprus(u):
     euc = tb.read_pdf(Item_url_, pages = '2',pandas_options={'header': None}, stream=True)
     list_euc = []
     
-    for i in range(0,4):
+    for i in range(0,5):
         new_row=[]
         euc[i][1] = euc[i][1].astype('string')
         
@@ -732,7 +732,7 @@ def results_europeanuniversitycyprus(u):
             word = int(word)
             list_euc.append(word)
     
-        price_=(sum(list_euc)+21000+21900+(8940*5))/(len(list_euc)+7)
+        price_=(sum(list_euc)+21000+21900)/(len(list_euc)+2)
     
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
