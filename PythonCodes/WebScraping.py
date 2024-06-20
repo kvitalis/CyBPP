@@ -2156,6 +2156,41 @@ def results_leroymerlin(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_public(urls):
+    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs,{'headers':header})
+
+    if (response.status_code != 200) or ("Ουπς! Αυτή τη σελίδα μάλλον δεν έπρεπε να τη δεις. Ξεκίνα από την αρχή και ανακάλυψε χιλιάδες είδη τεχνολογίας, ψυχαγωγίας και ειδών σπιτιού!" in response.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        sale_prices = re.findall(r'"salePrice":(\d+\.\d+)', str(soup))
+        if sale_prices:
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append((float(sale_prices[-1])))
+            new_row.append(subclass_)
+            new_row.append(commodity_)  
+            new_row.append("Public")
+            list_.loc[len(list_)] = new_row
+            list_["Name"] =list_["Name"].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
 #Calculation of the process time
 start_time = time.time()
 
@@ -2273,6 +2308,8 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
+    elif retailer_=="Public":
+        results_public(u)
 
 #Manually added data            
 new_row=[]
