@@ -732,16 +732,16 @@ def results_europeanuniversitycyprus(u):
             word = int(word)
             list_euc.append(word)
     
-        price_=(sum(list_euc)+21000+21900)/(len(list_euc)+2)
+    price_=(sum(list_euc)+21000+21900)/(len(list_euc)+2)
     
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(commodity_)
-        new_row.append("European University Cyprus")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
+    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+    new_row.append(name_)
+    new_row.append(float(price_))
+    new_row.append(subclass_)
+    new_row.append(commodity_)
+    new_row.append("European University Cyprus")
+    list_.loc[len(list_)] = new_row
+    list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_famoussport(u):
     url = "https://www.famousports.com/en"+Item_url_
