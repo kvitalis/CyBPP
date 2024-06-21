@@ -844,13 +844,13 @@ def results_nissan(u):
             price_json = price_tree[0]
             price_data = json.loads(price_json)
             if "LVL001" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
-            if "LVL004" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL004']['gradePrice']
-            if "LVL006" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL006']['gradePrice']
-            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
                 price_ = price_data["new-qashqai"]['default']['grades']['LVL001']['gradePrice']
+            if "LVL004" in name_:
+                price_ = price_data["new-qashqai"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL006" in name_:
+                price_ = price_data["new-qashqai"]['default']['grades']['LVL006']['gradePrice']
+            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
+                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
