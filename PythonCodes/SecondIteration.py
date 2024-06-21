@@ -2157,7 +2157,8 @@ def results_public(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
 
-    if (response.status_code != 200) or ("Ουπς! Αυτή τη σελίδα μάλλον δεν έπρεπε να τη δεις. Ξεκίνα από την αρχή και ανακάλυψε χιλιάδες είδη τεχνολογίας, ψυχαγωγίας και ειδών σπιτιού!" in response.text):
+    if (response.status_code != 200) or ("Error" in response.text):
+        print("Error")
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
