@@ -1507,7 +1507,7 @@ def results_sewerage(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_toyota(u):
-    if (name_=="YARIS CROSS"):
+    if (name_=="YARIS CROSS") or (name_=="THE NEW TOYOTA YARIS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs,{'headers':header})
@@ -1516,7 +1516,7 @@ def results_toyota(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1532,7 +1532,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1540,10 +1540,50 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                
+    elif (name_=="THE NEW TOYOTA YARIS"):
+        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs,{'headers':header})
+        
+        if response.status_code !=200:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris"})
+            element_soup2=element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+
+            for element_ in element_soup2:
+                price_ = float(element_['data-price'])
+            if price_:
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(price_)
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("toyota")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(commodity_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
     else:    
         if subclass_=="New motor cars":
             bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1557,7 +1597,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1565,13 +1605,15 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
-        elif subclass_=="Second-hand motor cars":
-            """
+        #elif subclass_=="Second-hand motor cars":
+            
+            #1st way
+            """ 
             query ={"component":"used-stock-cars-v2","fetches":[
                 {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
             ]}
@@ -1580,6 +1622,9 @@ def results_toyota(u):
             response = requests.get(Item_url_,{'headers':headers})
             r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
             price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
+            """
+            
+            #2nd way
             """
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
@@ -1590,7 +1635,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1603,7 +1648,7 @@ def results_toyota(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commotidy_)
+                    new_row.append(commodity_)
                     new_row.append("toyota")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1611,10 +1656,11 @@ def results_toyota(u):
                     website_false.append(name_)
                     website_false.append(subclass_)
                     website_false.append(Item_url_)
-                    website_false.append(commotidy_)
+                    website_false.append(commodity_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                    """
 
 def results_ithaki(u):
     response = requests.get(Item_url_)
