@@ -2157,7 +2157,7 @@ def results_public(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
 
-    if (response.status_code != 200) or ("Error" in response.text):
+    if (response.status_code != 200):
         print("Error")
         website_false.append(name_)
         website_false.append(subclass_)
