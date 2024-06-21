@@ -2134,6 +2134,31 @@ def results_public(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
+def stock_center_results(u):
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+
+    if (response.status_code != 200) or ("Το όχημα αυτό δεν είναι πλέον διαθέσιμο" in response.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_price_=soup.find_all("div",{"class":"price"})
+        price_=element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\n","").replace(".","").replace("€","")
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Stock Center")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Calculation of the processing time
 start_time = time.time()
@@ -2253,6 +2278,8 @@ for u in range(0,len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Public":
         results_public(u)
+    elif retailer_=="Stock Center":
+        stock_center_results(u)
 
 #Change the type as float
 list_["Price"].astype(float)
