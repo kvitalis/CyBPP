@@ -808,25 +808,32 @@ def results_nissan(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
     else:
         tree = html.fromstring(response.content)
         price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
         if price_tree:
             price_json = price_tree[0]
             price_data = json.loads(price_json)
-            price_ = price_data[name_]['default']['grades']['LVL001']['gradePrice']
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(commotidy_)
-            new_row.append("Nissan")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
+            if "LVL001" in name_:
+                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
+            if "LVL004" in name_:
+                price_ = price_data["juke_2019"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL006" in name_:
+                price_ = price_data["juke_2019"]['default']['grades']['LVL006']['gradePrice']
+            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
+                price_ = price_data["new-qashqai"]['default']['grades']['LVL001']['gradePrice']
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Nissan")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_novella(u):
     new_row=[]
