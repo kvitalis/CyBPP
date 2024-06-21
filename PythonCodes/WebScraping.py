@@ -1548,7 +1548,7 @@ def results_sewerage(u):
 
 def results_toyota(u):
     
-    if (name_=="YARIS CROSS"):
+    if (name_=="YARIS CROSS") or (name_=="THE NEW TOYOTA YARIS"):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs,{'headers':header})
