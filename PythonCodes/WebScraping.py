@@ -31,6 +31,56 @@ urls=pd.read_csv("Datasets/ProductsUrls.csv")
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
+#Marias Code
+from ast import Try
+import pandas as pd 
+import re
+from lxml import html, etree
+import requests
+from datetime import datetime
+import time
+import xlsxwriter
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import urllib.request
+import json
+import tabula as tb
+from tabula import read_pdf
+import PyPDF2
+from datetime import date, timedelta
+from urllib.error import URLError
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
+def AlphaMega(u):
+    #for index, am in data_alphaMega.iterrows():
+    options = Options()
+    options.headless = True  # Run Chrome in headless mode
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    url = "https://www.alphamega.com.cy/el/Ï€ÏÎ¿Î¹Î¿Î½Ï„Î±/ÎºÎ±Ï„ÎµÏˆÏ…Î³Î¼ÎµÎ½Î±/ÎºÎ±Ï„ÎµÏˆÏ…Î³Î¼ÎµÎ½Î±-Î³ÎµÏ…Î¼Î±Ï„Î±-Î³Î¹Î±-Ï€Î±ÏÏ„Î¹-ÏÎ±Î²Î¹Î¿Î»ÎµÏ‚/ÏÎ±Î²Î¹Î¿Î»ÎµÏ‚/Ï‡Î±ÏÎ±Î»Î±Î¼Ï€Î¹Î´Î·Ï‚-ÎºÏÎ¹ÏƒÏ„Î·Ï‚-ÏÎ±Î²Î¹Î¿Î»ÎµÏ‚-Î¼Îµ-100-Ï€Î¹ÏƒÏƒÎ¿Ï…ÏÎºÏ‰Ï„Î¹ÎºÎ¿-Ï‡Î±Î»Î»Î¿Ï…Î¼Î¹-400-g"
+    driver.get(url)
+
+    t = driver.find_elements(By.XPATH, "//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']")
+    product_name = (''.join(am['product_name'])).replace(' ', '').strip()
+    
+    if len(t) > 0:
+        product_price = t[0].get_attribute('innerHTML')
+        print(product_price)
+        product_price = product_price.replace('\n', '').replace('\r', '')
+        price_match = re.search(r'"price":\s*"([\d.]+)"', product_price)
+        if price_match:
+            product_price = price_match.group(1) 
+            print(product_price)
+        else:
+            print(f"No price found for product: {product_name}")
+    else:
+        print("Dont Working")
+#End here
+    
 def results_supermarketcy(urls):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
@@ -2281,6 +2331,8 @@ for u in range(0,len(urls)):
     commodity_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
 
+    if retailer_=="Alpha Mega":
+        AlphaMega(u)
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
