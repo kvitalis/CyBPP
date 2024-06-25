@@ -1533,7 +1533,7 @@ def results_toyota(u):
                 new_row.append(price_)
                 new_row.append(subclass_)
                 new_row.append(commodity_)
-                new_row.append("toyota")
+                new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1572,7 +1572,7 @@ def results_toyota(u):
                 new_row.append(price_)
                 new_row.append(subclass_)
                 new_row.append(commodity_)
-                new_row.append("toyota")
+                new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1598,7 +1598,7 @@ def results_toyota(u):
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(commodity_)
-                new_row.append("toyota")
+                new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             else:
@@ -1649,7 +1649,7 @@ def results_toyota(u):
                     new_row.append(float(price_))
                     new_row.append(subclass_)
                     new_row.append(commodity_)
-                    new_row.append("toyota")
+                    new_row.append("Toyota")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 else:
@@ -2306,7 +2306,7 @@ for u in range(0,len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="toyota":
+    elif retailer_=="Toyota":
         results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
