@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
+pip install selenium
 
 warnings.simplefilter("ignore")
 
