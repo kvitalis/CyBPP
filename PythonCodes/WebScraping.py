@@ -2281,8 +2281,6 @@ for u in range(0,len(urls)):
     commodity_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
 
-    if retailer_=="Alpha Mega":
-        AlphaMega(u)
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
