@@ -2152,12 +2152,13 @@ def results_leroymerlin(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 def results_public(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
     price_=""
-    """
+    
     if (response.status_code != 200):
         print("Error")
         website_false.append(name_)
@@ -2169,8 +2170,7 @@ def results_public(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     
     else:
-    """
-    
+
     soup = BeautifulSoup(response.content, "html.parser")
     sale_prices = re.findall(r'"salePrice":(\d+\.\d+)', str(soup))
     if sale_prices:
@@ -2191,6 +2191,7 @@ def results_public(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+"""
 
 def stock_center_results(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
