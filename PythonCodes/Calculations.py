@@ -189,7 +189,7 @@ if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
-    df_monthly_data["Inflation (%)"] = None #100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
+    df_monthly_data["Inflation (%)"] = 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
     df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
