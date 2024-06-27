@@ -2379,12 +2379,13 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
-    elif retailer_=="Public":
-        results_public(u)
+    #elif retailer_=="Public":
+        #results_public(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
 """
 #Manually added data            
+
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
