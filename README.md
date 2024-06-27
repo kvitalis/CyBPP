@@ -21,11 +21,11 @@ As mentioned above, there is a need to retrieve the data of the products that wa
 
 ### 3. Calculations 
 
-This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'raw_data.csv' file (Datasets), then performs the appropriate calculations using standard techniques and the 'Weights_Cystat.csv' and 'Reference_Values.csv' files (Datasets), and finally stores the results in the 'CPI-Division.csv' and 'CPI-General-Inflation.csv' files (Results).
+This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'raw_data.csv' file (Datasets), then performs the appropriate calculations using standard techniques and the 'Weights_Cystat.csv' and 'Reference_Values.csv' files (Datasets), and finally stores the results in the 'CPI-Subclass-Division.csv', 'CPI-Division.csv', and 'CPI-General-Inflation.csv' files (Results).
 
 ### 4. Visualizations 
 
-Finally, the 'Visualizations.py' reads the stored calculations results ('CPI-Division.csv' and 'CPI-General-Inflation.csv' files) and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in png formats (Results). This Python file is called from the workflows file 'Visualizations.yml' at around 16:45 (UTC time) every day.
+Finally, the 'Visualizations.py' reads the 'CPI-General-Inflation.csv' file and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in png formats (Results). This Python file is called from the workflows file 'Visualizations.yml' at around 17:00 (UTC time) every day.
 
 ## Online Retailers
 
