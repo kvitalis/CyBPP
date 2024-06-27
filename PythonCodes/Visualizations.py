@@ -37,6 +37,7 @@ plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 
 ## LAST THURSDAY (*this corresponds to the monthly observation*)
+
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -49,32 +50,37 @@ def is_last_thursday(date):
     return False
 
 if is_last_thursday(current_date):
+    
     df_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     plt.figure(figsize=(10, 6))
     plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
+    
     for i, txt in enumerate(df_['Inflation (%)']):
         plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
-        plt.xlabel('Date')
-        plt.ylabel('Inflation (%)')
-        plt.title("Monthly Evolution of CPI Inflation in Cyprus", fontsize=18)
-        plt.xticks(rotation=90) 
-        plt.grid(True)
-        plt.tight_layout()
-        plt.savefig('Results/Monthly-Inflation.png')
-        plt.show()
+        
+    plt.xlabel('Date')
+    plt.ylabel('Inflation (%)')
+    plt.title("Monthly Evolution of CPI Inflation in Cyprus", fontsize=18)
+    plt.xticks(rotation=90) 
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('Results/Monthly-Inflation.png')
+    plt.show()
     
     plt.figure(figsize=(10, 6))
     plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+    
     for i, txt in enumerate(df_['CPI General']):
         plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
-        plt.xlabel('Date')
-        plt.ylabel('CPI General (27/06/2024 = base)')
-        plt.title("Monthly Evolution of General CPI in Cyprus", fontsize=18)
-        plt.xticks(rotation=90) 
-        plt.grid(True)
-        plt.tight_layout()
-        plt.savefig('Results/Monthly-CPI-General.png')
-        plt.show()
+        
+    plt.xlabel('Date')
+    plt.ylabel('CPI General (27/06/2024 = base)')
+    plt.title("Monthly Evolution of General CPI in Cyprus", fontsize=18)
+    plt.xticks(rotation=90) 
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('Results/Monthly-CPI-General.png')
+    plt.show()
 else:
     pass
