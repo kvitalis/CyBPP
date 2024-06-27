@@ -9,7 +9,7 @@ run-name: Perform calculations and store results
 # Function to add time,day, month to the scraping process
 on:
   schedule:
-    - cron: "53 17 * * *" #UTC time
+    - cron: "46 17 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
