@@ -2334,8 +2334,8 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
-    elif retailer_=="Public":
-        results_public(u)
+    #elif retailer_=="Public":
+        #results_public(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
 
