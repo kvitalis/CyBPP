@@ -2200,7 +2200,7 @@ def results_leroymerlin(u):
         new_row.append("Leroy Merlin") 
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+"""
 def results_public(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2235,7 +2235,7 @@ def results_public(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
+"""
 def stock_center_results(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
