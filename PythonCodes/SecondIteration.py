@@ -1663,6 +1663,7 @@ def results_toyota(u):
                     """
 
 def results_ithaki(u):
+    
     response = requests.get(Item_url_)
     pdf = "PDFs/ithaki.pdf"
 
@@ -1672,11 +1673,10 @@ def results_ithaki(u):
         
     pattern = r'(\d+.*?\d+\.\d{2})'
     matches = re.findall(pattern, text)
-    
     for match in matches:
         new_row=[]
         website_false=[]
-        if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών - Larnaca" in name_):
+        if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών για 2 άτομα - Larnaca"== name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
 
@@ -1685,7 +1685,7 @@ def results_ithaki(u):
                 new_row.append(name_)
                 new_row.append(float(price_[0]))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Ithaki")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1693,12 +1693,12 @@ def results_ithaki(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            
-        elif ("Ποικιλία Θαλασσινών" in match) and ("Ποικιλία Θαλασσινών - Larnaca" in name_):
+        
+        elif ("Ποικιλία Θαλασσινών" in match) and ("Ποικιλία Θαλασσινών για 2 άτομα - Larnaca"==name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
 
@@ -1707,7 +1707,7 @@ def results_ithaki(u):
                 new_row.append(name_)
                 new_row.append(float(price_[0]))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Ithaki")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1715,7 +1715,7 @@ def results_ithaki(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
