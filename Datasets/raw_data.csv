@@ -2085,6 +2085,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-06-27,N-CONNECTA 2TONE-LVL004,New motor cars,35900.0,TRANSPORT,Nissan
 2024-06-27,N-CONNECTA HYBRID 2TONE-LVL006,New motor cars,36900.0,TRANSPORT,Nissan
 2024-06-27,ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD,New motor cars,23500.0,TRANSPORT,Nissan
+2024-06-27,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",28.0,RESTAURANTS AND HOTELS,Ithaki
+2024-06-27,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",12.0,RESTAURANTS AND HOTELS,Ithaki
 2024-06-27,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",35.9,RESTAURANTS AND HOTELS,Flames
 2024-06-27,Meat Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",29.5,RESTAURANTS AND HOTELS,Flames
 2024-06-27,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",27.0,RESTAURANTS AND HOTELS,Pyxida
@@ -2161,7 +2163,9 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-06-27,Carrera 5042/S N9PSP 55-19 145 Polarized,Corrective eye-glasses and contact lenses,145.0,HEALTH,Centroptical
 2024-06-27,Persol – 3128- V 95 4622 145,Corrective eye-glasses and contact lenses,219.0,HEALTH,Centroptical
 2024-06-27,BURBERRY – B 2267 3316 55-18 145,Corrective eye-glasses and contact lenses,298.0,HEALTH,Centroptical
+2024-06-27,Dry and Fold Only (up to 5kg),Cleaning of clothing,10.0,CLOTHING AND FOOTWEAR,Premier Laundry
 2024-06-27,"Wash, Dry and Fold - Delicate (up to 3kg)",Cleaning of clothing,15.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2024-06-27,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,27.0,CLOTHING AND FOOTWEAR,Premier Laundry
 2024-06-27,Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,2.4,TRANSPORT,Cyprus Public Transport
 2024-06-27,Plastic ANONYMOUS Card / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
 2024-06-27,Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
