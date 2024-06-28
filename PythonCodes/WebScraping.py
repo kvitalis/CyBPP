@@ -1723,7 +1723,7 @@ def results_ithaki(u):
     for match in matches:
         new_row=[]
         website_false=[]
-        if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών - Larnaca" in name_):
+        if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών για 2 άτομα - Larnaca"== name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
 
@@ -1744,8 +1744,8 @@ def results_ithaki(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            
-        elif ("Ποικιλία Θαλασσινών" in match) and ("Ποικιλία Θαλασσινών - Larnaca" in name_):
+        
+        elif ("Ποικιλία Θαλασσινών" in match) and ("Ποικιλία Θαλασσινών για 2 άτομα - Larnaca"==name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
 
