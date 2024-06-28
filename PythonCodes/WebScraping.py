@@ -114,11 +114,12 @@ def results_alphamega(urls):
 
 def results_fuelDaddy(urls):
     new_row=[]
+    price_list=[]
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs, {'headers':header})
-    
+        
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -127,7 +128,7 @@ def results_fuelDaddy(urls):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
+        
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div", {"class":"col-md-7 pump-info-right"})
@@ -135,60 +136,60 @@ def results_fuelDaddy(urls):
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
             for brand_name in brand:
                 brand_word = brand_name.get_text(strip = True).upper()
-        
+            
         if brand_word:
             if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
                 brand_word="PETROLINA"
         else:
             brand_word="PETROLINA"
-        
+            
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
         name_word=name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
+        
         for i in range(len(element_price)):
-            price_list=[]
             name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
             price = element_price[i].find(class_ = "pricetag").get_text(strip = True).replace(" €","")
             price_list.append(name)
             price_list.append(price)
         
-            for i in range(1,len(price_list),2):
-                new_row=[]
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        for i in range(1,len(price_list),2):
+            new_row=[]
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    
+            if price_list[i-1]=='Unleaded 95':
+                new_row.append(name_word+" - "+"Αμόλυβδη 95")
+                new_row.append(float(price_list[i].replace(",",".")))
+                new_row.append("Petrol")
+                new_row.append("TRANSPORT")
                 
-                if price_list[i-1]=='Αμόλυβδη 95':
-                    new_row.append(name_word+" - "+price_list[i-1])
-                    new_row.append(float(price_list[i].replace(",",".")))
-                    new_row.append("Petrol")
-                    new_row.append("TRANSPORT")
-            
-                elif price_list[i-1]=='Αμόλυβδη 98':
-                    new_row.append(name_word+" - "+price_list[i-1])
-                    new_row.append(float(price_list[i].replace(",",".")))
-                    new_row.append("Petrol")
-                    new_row.append("TRANSPORT")
-            
-                elif price_list[i-1]=='Πετρέλαιο Κίνησης':
-                    new_row.append(name_word+" - "+price_list[i-1])
-                    new_row.append(float(price_list[i].replace(",",".")))
-                    new_row.append("Diesel")
-                    new_row.append("TRANSPORT")
-             
-                elif price_list[i-1]=='Πετρέλαιο Θέρμανσης':
-                    new_row.append(name_word+" - "+price_list[i-1])
-                    new_row.append(float(price_list[i].replace(",",".")))
-                    new_row.append("Liquid fuels")
-                    new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-               
-                elif price_list[i-1]=='Κηροζίνη':
-                    new_row.append(name_word+" - "+price_list[i-1])
-                    new_row.append(float(price_list[i].replace(",",".")))
-                    new_row.append("Liquid fuels")
-                    new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-            
-                new_row.append(brand_word) 
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+            elif price_list[i-1]=='Unleaded 98':
+                new_row.append(name_word+" - "+'Αμόλυβδη 98')
+                new_row.append(float(price_list[i].replace(",",".")))
+                new_row.append("Petrol")
+                new_row.append("TRANSPORT")
+                
+            elif price_list[i-1]=='Diesel':
+                new_row.append(name_word+" - "+'Πετρέλαιο Κίνησης')
+                new_row.append(float(price_list[i].replace(",",".")))
+                new_row.append("Diesel")
+                new_row.append("TRANSPORT")
+                 
+            elif price_list[i-1]=='Heating Diesel':
+                new_row.append(name_word+" - "+'Πετρέλαιο Θέρμανσης')
+                new_row.append(float(price_list[i].replace(",",".")))
+                new_row.append("Liquid fuels")
+                new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                   
+            elif price_list[i-1]=='Kerosene':
+                new_row.append(name_word+" - "+'Κηροζίνη')
+                new_row.append(float(price_list[i].replace(",",".")))
+                new_row.append("Liquid fuels")
+                new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                
+            new_row.append(brand_word) 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ikea(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
