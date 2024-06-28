@@ -1,12 +1,12 @@
-# Code needed for the construction of plots
+# Workflow for the construction of plots
 
-# Whenever pull request is made targeting branch initialise, csv is reset
+# Whenever pull request is made targeting branch initialisation, csv is reset
 name: visualizations
 
-# Scraping description
+# Workflow's description
 run-name: Construct the plots of Inflation and General CPI 
 
-# Function to add time,day, month to the scraping process
+# Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
     - cron: "03 17 * * *" #UTC time
