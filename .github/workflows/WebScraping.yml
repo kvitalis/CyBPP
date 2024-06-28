@@ -1,12 +1,12 @@
-# Code needed for the scraping process
+# Workflow for the web scraping process
 
-# Whenever pull request is made targeting branch initialise, csv is reset
+# Whenever pull request is made targeting branch initialisation, csv is reset
 name: web-scraping
 
-# Scraping description
+# Workflow's description
 run-name: Adding today's scraped data into raw_data.csv
 
-# Function to add time,day, month to the scraping process
+# Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
     - cron: "03 09 * * *" #UTC time
