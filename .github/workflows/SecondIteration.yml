@@ -1,12 +1,12 @@
-# Code needed for the 2nd scraping iteration process
+# Workflow for the 2nd scraping iteration process
 
-# Whenever pull request is made targeting branch initialise, csv is reset
+# Whenever pull request is made targeting branch initialisation, csv is reset
 name: second-iteration
 
-# Scraping description
+# Workflow's description
 run-name: Adding scraped data of 2nd iteration into raw_data.csv 
 
-# Function to add time,day, month to the scraping process
+# Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
     - cron: "03 15 * * *" #UTC time
