@@ -1,12 +1,12 @@
-# Code needed for the calculations
+# Workflow for the calculations
 
-# Whenever pull request is made targeting branch initialise, csv is reset
+# Whenever pull request is made targeting branch initialisation, csv is reset
 name: calculations
 
-# Scraping description
+# Workflow's description
 run-name: Perform calculations and store results 
 
-# Function to add time,day, month to the scraping process
+# Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
     - cron: "03 16 * * *" #UTC time
