@@ -113,6 +113,7 @@ def results_alphamega(urls):
 """
 
 def results_fuelDaddy(urls):
+    new_row=[]
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
