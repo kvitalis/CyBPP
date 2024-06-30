@@ -71,7 +71,7 @@ According to the representativeness of each product and its retailer within the 
 
 20. Flames Restaurant and Bar https://flamesrestaurantbar.com/
     
-21. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
+21. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Jackoson, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
 
 22. IKEA https://www.ikea.com.cy/
 
