@@ -517,7 +517,7 @@ def results_cablenet(u):
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
         else:
             element_name = soup.find_all("td")
-            price_=0.0025
+            price_=0.025
             """
             for i in range(0,len(element_name)):
                 if element_name[i].text==name_:
