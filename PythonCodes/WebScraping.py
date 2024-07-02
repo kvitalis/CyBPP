@@ -1509,7 +1509,8 @@ def results_sewerage(u):
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                 else:
                     element_name = soup.find_all('table',{"class":"table table-bordered"})
-                    element_name_2 = element_name[0].find_all('tr')[34]
+                    element_name_2 = element_name[0].find_all('tr')
+                    element_name_2=element_name_2[len(element_name_2)-1]
                     desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
 
                     for lines in desired_lines:
