@@ -2352,8 +2352,8 @@ for u in range(0,len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol")or (retailer_=="Sewerage Board of Larnaca"):
-        results_sewerage(u)
+    #elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol")or (retailer_=="Sewerage Board of Larnaca"):
+        #results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Toyota":
