@@ -1120,7 +1120,7 @@ def results_cera(u):
 
 def results_water(u):
     price_=""
-    
+    """
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -1136,7 +1136,7 @@ def results_water(u):
         
             elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-       
+    """ 
     if "Larnaca" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
