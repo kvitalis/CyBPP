@@ -43,7 +43,7 @@ def results_supermarketcy(urls):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -56,7 +56,7 @@ def results_supermarketcy(urls):
         new_row.append(name_wrappers)
         new_row.append(float(value))
         new_row.append(subclass_)
-        new_row.append(commotidy_)  
+        new_row.append(commodity_)  
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] =list_["Name"].apply(lambda x:x)
@@ -108,7 +108,7 @@ def results_alphamega(urls):
     new_row.append(name)
     new_row.append(price)
     new_row.append(subclass_)
-    new_row.append(commotidy_)
+    new_row.append(commodity_)
     new_row.append("Alphamega")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -198,12 +198,11 @@ def results_ikea(u):
     url_new = "https://www.ikea.com.cy"+Item_url_
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)    
-    
     if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -215,7 +214,6 @@ def results_ikea(u):
             element_soup_1=element_soup[0]
             element_soup_2=element_soup_1.text
             element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
-            
             if "Τρέχουσα τιμή" in element_soup_3:
                 element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
             
@@ -226,7 +224,7 @@ def results_ikea(u):
             new_row.append(name_)
             new_row.append(float(element_soup_3))
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("IKEA")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -241,7 +239,7 @@ def results_stefanis(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -259,7 +257,7 @@ def results_stefanis(u):
         new_row.append(name_)
         new_row.append(float(element_soup_2))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Stephanis")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -280,6 +278,7 @@ def results_cyta(u):
                     if (ken==name_):
                         price_=element_soup_1[p+1].text.replace("€","").replace(",",".").replace(" /λεπτό","")
                         q=1
+        
         if (q==0):
             element_soup = soup.find_all("div",{"class":"card-body px-1"})
             qq=0
@@ -292,6 +291,7 @@ def results_cyta(u):
                     price_ = matches[0].replace(",",".")
                     qq=1
                     q=1
+        
         if (q==0):
             element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
             text = element_soup[0].get_text()
@@ -305,15 +305,16 @@ def results_cyta(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("CYTA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+        
     else:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -321,13 +322,11 @@ def results_cyta(u):
 def results_epic(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
-    
     if (response.status_code==200):
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup_price = soup.find_all("div",{"class":"price"})
         element_soup_name=soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
         new_row=[]
-       
         for q in range(0,len(element_soup_name)):
             new_row=[]
             _name_=element_soup_name[q].text.strip().replace(" ","")
@@ -345,7 +344,7 @@ def results_epic(u):
                 new_row.append(_name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -353,7 +352,7 @@ def results_epic(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -368,10 +367,10 @@ def results_Athlokinisi(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("span",{"class":"ammount"})
@@ -380,17 +379,17 @@ def results_Athlokinisi(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
         else:
             price_=float(element_soup[0].text.strip().replace("€",""))
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("Athlokinisi")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -414,7 +413,7 @@ def results_awol(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
@@ -430,7 +429,7 @@ def results_awol(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("AWOL")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -445,7 +444,7 @@ def results_alter_Vape(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -459,13 +458,13 @@ def results_alter_Vape(u):
         new_row.append(name_)
         new_row.append(float(price_1))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Alter Vape")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_bweel_pharmacy(u):
-    url="https://bwell.com.cy/shop/health/"+Item_url_
+def results_bwell_pharmacy(u):
+    url="https://bwell.com.cy/shop/"+Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
@@ -475,7 +474,7 @@ def results_bweel_pharmacy(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -488,7 +487,7 @@ def results_bweel_pharmacy(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Bwell Pharmacy")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -504,7 +503,7 @@ def results_cablenet(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -520,18 +519,20 @@ def results_cablenet(u):
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
         else:
             element_name = soup.find_all("td")
-
+            price_=0.025
+            """
             for i in range(0,len(element_name)):
                 if element_name[i].text==name_:
                     name_=element_name[i].text
                     price=element_name[i+3].text
                     price_=price.split(' ')[0].replace("€","")
+            """       
 
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Cablenet")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -542,15 +543,44 @@ def results_CyMinistryEducation(u):
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         pdf_ = tb.read_pdf(url, pages = '4',pandas_options={'header': None}, stream=True)
         pdf_ = pdf_[0]
-        pdf_[2] = pdf_[2].astype('string')
-        pdf = pdf_[2][1]
-        price_ = float(pdf.strip('€*').replace(".", ""))
+        
+        #Annual cost
+        pdf_[3] = pdf_[3].astype('string')
+        pdf = pdf_[3][1]
+        price_1 = float(pdf.strip('€*').replace(".", ""))
+
+        #Other cost
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][0]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][2]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total
+        price_=price_1+price_2+price_3
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_= pdf_[0]
-        pdf_[3] = pdf_[3].astype('string')
-        price_ = float(pdf_[3][26].strip('€').replace(".", ""))
+        pdf_ = pdf_[0]
+
+        #Annual cost
+        for i in range(0,7):
+            pdf_[i] = pdf_[i].astype('string')
+
+        price_1 = float(pdf_[1][25].strip('€*').replace(".", ""))+float(pdf_[2][25].strip('€*').replace(".", ""))+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0])+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1])+float(pdf_[4][25].strip('€*').replace(".", ""))+float(pdf_[5][25].strip('€*').replace(".", ""))
+        price_1=price_1/6
+
+        #Other cost
+        pdf = pdf_[6][24]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf = pdf_[6][26]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total
+        price_=price_1+price_2+price_3
                      
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
@@ -596,7 +626,7 @@ def results_CyMinistryEducation(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commotidy_)
+    new_row.append(commodity_)
     new_row.append("Cyprus Ministry of Education, Sport and Youth")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -630,7 +660,7 @@ def results_CyPost(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commotidy_)
+    new_row.append(commodity_)
     new_row.append("Cyprus Post")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -652,7 +682,7 @@ def results_ewholesale(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"hM4gpp"}) 
-        price_=element_soup[0].text.replace("€Τιμή","").replace(" ","")
+        price_=element_soup[0].text.replace("€Τιμή","").replace(" ","").replace(",",".")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -661,7 +691,6 @@ def results_ewholesale(u):
         new_row.append("E-wholesale")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
 
 def results_electroline(u):
     url="https://electroline.com.cy/products/"+Item_url_
@@ -674,12 +703,13 @@ def results_electroline(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all("ins",{"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
+        
         if element_soup:
             price_=element_soup[0].text.replace("\n",'').replace("€","")
         else:
@@ -689,7 +719,7 @@ def results_electroline(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Electroline")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -713,7 +743,7 @@ def results_europeanuniversitycyprus(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commotidy_)
+    new_row.append(commodity_)
     new_row.append("European University Cyprus")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -729,7 +759,7 @@ def results_famoussport(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -741,7 +771,7 @@ def results_famoussport(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Famous Sports")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -757,10 +787,10 @@ def results_Marks_Spencer(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
     else:
         element_soup = soup.find_all("span",{"class":"list-pricecolour"})
         price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
@@ -768,7 +798,7 @@ def results_Marks_Spencer(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Marks & Spencer")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -784,10 +814,10 @@ def results_moto_race(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
     else:
         element_soup = soup.find_all("span",{"class":"price"})
         price_=element_soup[0].text.replace(",","").replace("€","")
@@ -795,7 +825,7 @@ def results_moto_race(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Moto Race")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -820,13 +850,13 @@ def results_nissan(u):
             price_json = price_tree[0]
             price_data = json.loads(price_json)
             if "LVL001" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
-            if "LVL004" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL004']['gradePrice']
-            if "LVL006" in name_:
-                price_ = price_data["juke_2019"]['default']['grades']['LVL006']['gradePrice']
-            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
                 price_ = price_data["new-qashqai"]['default']['grades']['LVL001']['gradePrice']
+            if "LVL004" in name_:
+                price_ = price_data["new-qashqai"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL006" in name_:
+                price_ = price_data["new-qashqai"]['default']['grades']['LVL006']['gradePrice']
+            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
+                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -835,7 +865,7 @@ def results_nissan(u):
         new_row.append("Nissan")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+            
 def results_novella(u):
     new_row=[]
     website_false=[]
@@ -848,7 +878,7 @@ def results_novella(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -866,7 +896,7 @@ def results_novella(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -877,7 +907,7 @@ def results_novella(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -892,7 +922,7 @@ def results_numbeo(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -907,7 +937,7 @@ def results_numbeo(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Numbeo")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -922,12 +952,13 @@ def results_primetel(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         element_name = soup.find_all('div',{"class":"top_plan_box"})
+        
         for i in range(0,len(element_name)):
             if element_name[i].text.replace("\n","")==name_:
                 element_name = soup.find_all('div',{"class":"price_plan_box"})
@@ -943,7 +974,7 @@ def results_primetel(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Primetel")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -958,7 +989,7 @@ def results_rio(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -975,7 +1006,7 @@ def results_rio(u):
                         new_row.append(name_+" 3D")
                         new_row.append(float(match.group(2)))
                         new_row.append(subclass_)
-                        new_row.append(commotidy_)
+                        new_row.append(commodity_)
                         new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -983,10 +1014,10 @@ def results_rio(u):
                         website_false.append(name_)
                         website_false.append(subclass_)
                         website_false.append(Item_url_)
-                        website_false.append(commotidy_)
+                        website_false.append(commodity_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
-                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)         
+                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)     
                 else:
                     amount_match = re.search(r'€(\d+)', element_name[i].text)
 
@@ -997,7 +1028,7 @@ def results_rio(u):
                         new_row.append(name_)
                         new_row.append(float(price_))
                         new_row.append(subclass_)
-                        new_row.append(commotidy_)
+                        new_row.append(commodity_)
                         new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1005,34 +1036,33 @@ def results_rio(u):
                         website_false.append(name_)
                         website_false.append(subclass_)
                         website_false.append(Item_url_)
-                        website_false.append(commotidy_)
+                        website_false.append(commodity_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_ahk(u):
     response = requests.get(Item_url_)
-
     pdf = "PDFs/AHK.pdf"
+    
     if response.status_code !=200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
     else:
-    
         with open(pdf, "wb") as f:
             f.write(response.content)
-
         with open(pdf, "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
     
         lines = text.split("\n")
+       
         for line in lines:
             new_row=[]
             if name_ in line:
@@ -1049,7 +1079,7 @@ def results_ahk(u):
                     new_row.append(name_)
                     new_row.append(price_)
                     new_row.append(subclass_)
-                    new_row.append(commotidy_)
+                    new_row.append(commodity_)
                     new_row.append("AHK")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1057,7 +1087,7 @@ def results_ahk(u):
                     website_false.append(name_)
                     website_false.append(subclass_)
                     website_false.append(Item_url_)
-                    website_false.append(commotidy_)
+                    website_false.append(commodity_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1072,7 +1102,7 @@ def results_cera(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1085,14 +1115,14 @@ def results_cera(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Cyprus Energy Regulatory Authority")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_water(u):
     price_=""
-   """ 
+    """
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -1101,13 +1131,14 @@ def results_water(u):
         element_name = soup.find_all('div',{"class":"ekit_table_body_container ekit_table_data_ ekit_body_align_center"})
         
         for qp in range(0,len(element_name)):
+            
             if (element_name[qp].text.replace(" ","").replace("\n","")=="Πάγιο") and (name_=="Πάγιο ανά μήνα"):
                 price_=element_name[1].text.replace(" ","").replace('\n',"").replace(",",".")
                 price_=float(price_)/2
         
             elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-    """  
+    """ 
     if "Larnaca" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -1118,13 +1149,17 @@ def results_water(u):
         element_name_3 = soup.find_all('td',{"style":"text-align: right;"})
     
         for ooo in range(0,len(element_name_2)):
+            
             if (element_name[ooo].text=="Πάγιο") and (name_=="Πάγιο ανά μήνα"):
                 price_=float(element_name_3[ooo].text.replace(",","."))/3
+                
             elif (element_name[ooo].text=="Δικαίωμα Συντήρησης") and (name_=="Δικαίωμα Συντήρησης ανά μήνα"):
                 price_=float(element_name_3[ooo].text.replace(",","."))/3
 
         element_name_4 = soup.find_all('td')
+        
         for o in range(0,len(element_name_4)):
+            
             if (element_name_4[o-3].text=="1") and (element_name_4[o-1].text=="15") and (name_=="Κυβικά ανά μήνα"):
                 price_=float(element_name_4[o].text.replace(",","."))
     
@@ -1135,23 +1170,31 @@ def results_water(u):
         city_="Limassol"
         element_name = soup.find_all('table',{"class":"table table-striped table-nonfluid table-bordered table-sm"})
         element_name_2 = element_name[0].find_all('tr')
+        
         for o in range(0,len(element_name_2)):
+            
             if ("Πάγιο Τέλος" in element_name_2[o].text) and (name_=="Πάγιο ανά μήνα"):
                 price_=element_name_2[o].text
                 matches_1 = re.findall(r'\d+,\d+', price_)
+                
                 if matches_1:
                     price_ = float(matches_1[0].replace(",","."))/4
+            
             elif ("Τέλος Συντήρησης" in element_name_2[o].text) and (name_=="Δικαίωμα Συντήρησης ανά μήνα"):
                 price_=element_name_2[o].text
                 matches_1 = re.findall(r'\d+,\d+', price_)
+                
                 if matches_1:
                     price_ = float(matches_1[0].replace(",","."))/4
 
         element_name_2 = element_name[1].find_all('td') 
+        
         for o in range(0,len(element_name_2)):
+            
             if (element_name_2[o-2].text=="1") and (element_name_2[o-1].text=="40") and(name_=="Κυβικά ανά μήνα"):
                 price_=float(element_name_2[o].text.replace(",","."))
                 #matches_2= re.findall(r'\d+,\d+', price_)
+
                 #if matches_2:
                 #    price_ = float(matches_2[0].replace(",","."))
     
@@ -1160,7 +1203,7 @@ def results_water(u):
         new_row.append(name_+" - "+city_)
         new_row.append(price_)
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Water Board")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1168,7 +1211,7 @@ def results_water(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1182,7 +1225,7 @@ def results_wolt(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1196,7 +1239,7 @@ def results_wolt(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("Wolt")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1204,7 +1247,7 @@ def results_wolt(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
 
@@ -1218,7 +1261,7 @@ def results_vasos(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1233,7 +1276,7 @@ def results_vasos(u):
         new_row.append(name_)
         new_row.append(price_)
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Vasos Psarolimano")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1256,10 +1299,10 @@ def results_meze(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)    
     else:
         element_name = soup.find_all('div',{"class":"mprm-simple-view-column mprm-first"})
         for i in range(0,len(element_name)):
@@ -1268,6 +1311,7 @@ def results_meze(u):
                 price_=element_name_2[0].text.replace("€","")
 
         for i in range(0,len(element_name)):
+            
             if "Fish Meze" in element_name[i].text and ("Fish Meze" in name_):
                 element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
                 price_=element_name_2[0].text.replace("€","")
@@ -1277,7 +1321,7 @@ def results_meze(u):
             new_row.append(name_)
             new_row.append(price_)
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("Meze Tavern")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1285,7 +1329,7 @@ def results_meze(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1300,7 +1344,7 @@ def results_CYgar_shop(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1314,7 +1358,7 @@ def results_CYgar_shop(u):
                 new_row.append(name_)
                 new_row.append(float(price_match.group()))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("The CYgar shop")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1322,7 +1366,7 @@ def results_CYgar_shop(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1330,7 +1374,7 @@ def results_CYgar_shop(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1344,7 +1388,7 @@ def results_the_royal_cigars(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1356,7 +1400,7 @@ def results_the_royal_cigars(u):
             new_row.append(name_)
             new_row.append(float(price_amount))
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("The Royal Cigars")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1364,7 +1408,7 @@ def results_the_royal_cigars(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1376,28 +1420,25 @@ def results_pydixa(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         pdf = "PDFs/pixida.pdf"
-        
         with open(pdf, "wb") as f:
             f.write(response.content)
-        
         with pdfplumber.open(pdf) as pdf:
             page = pdf.pages[5]  
             text = page.extract_text()
 
         matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
-        
         if matches:
             new_row.append(datetime.now().strftime('%Y-%m-%d'))        
             new_row.append(name_)
             new_row.append(float(matches[0]))
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("Pyxida")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1405,7 +1446,7 @@ def results_pydixa(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1420,7 +1461,7 @@ def results_sewerage(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1431,6 +1472,7 @@ def results_sewerage(u):
             element_name = soup.find_all('li',{"style":"padding-left: 30px;"})
             
             if "Ετήσιο Τέλος" in name_:
+                
                 for i in range(0,len(element_name)):
                     price_amount=element_name[i].text
                     match = re.search(r'€(\d+,\d+)', price_amount)
@@ -1444,6 +1486,7 @@ def results_sewerage(u):
             if "Τέλος Χρήσης" in name_:
                 element_name = soup.find_all('p',{"style":"padding-left: 30px;"})
                 new_row=[]
+                
                 for i in range(0,len(element_name)):
                     price_amount=element_name[i].text
                     match = re.search(r'(\d+)', price_amount)
@@ -1458,15 +1501,25 @@ def results_sewerage(u):
             new_row=[]
             
             if "Ετήσιο Τέλος" in name_:
-                element_name = soup.find_all('table',{"class":"table table-bordered"})
-                element_name_2 = element_name[0].find_all('tr')[35]
-                desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
+                if "SSL handshake failed" in soup.text:
+                    website_false.append(name_)
+                    website_false.append(subclass_)
+                    website_false.append(Item_url_)
+                    website_false.append(commodity_)
+                    website_false.append(retailer_)
+                    daily_errors.loc[len(daily_errors)] = website_false
+                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                else:
+                    element_name = soup.find_all('table',{"class":"table table-bordered"})
+                    element_name_2 = element_name[0].find_all('tr')
+                    element_name_2=element_name_2[35]
+                    desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
 
-                for lines in desired_lines:
-                    value=float(lines.replace(",","."))
-                    values=value+values
+                    for lines in desired_lines:
+                        value=float(lines.replace(",","."))
+                        values=value+values
                 
-                values=values/2
+                    values=values/2
             
             if "Τέλος Χρήσης" in name_:
                 element_name = soup.find_all('table',{"class":"table table-bordered"})
@@ -1476,8 +1529,8 @@ def results_sewerage(u):
                 
                 for lines in desired_lines:
                     values=float(lines.replace(",","."))
-                    
-        elif "Larnaca" in retailer_:
+                  
+        if "Larnaca" in retailer_:
             city_="Larnaca"
             new_row=[]
             element_name = soup.find_all('table',{"width":"649"})
@@ -1502,7 +1555,7 @@ def results_sewerage(u):
         new_row.append(name_+" "+city_)
         new_row.append(values)
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Sewerage Board of "+ city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1517,7 +1570,7 @@ def results_toyota(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1533,7 +1586,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1541,7 +1594,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commotidy_)
+                website_false.append(commodity_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1798,7 +1851,7 @@ def results_lensescy(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1823,7 +1876,7 @@ def results_intercity(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1844,14 +1897,14 @@ def results_intercity(u):
                         new_row.append(name_+Item_url_)
                         new_row.append(float(price_))
                         new_row.append(subclass_)
-                        new_row.append(commotidy_)
+                        new_row.append(commodity_)
                         new_row.append("Intercity Buses")
                         list_.loc[len(list_)] = new_row
         else:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commotidy_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1865,7 +1918,7 @@ def results_parga(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1876,7 +1929,7 @@ def results_parga(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Parga")
         list_.loc[len(list_)] = new_row
 
@@ -1889,7 +1942,7 @@ def results_evdokia(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1901,7 +1954,7 @@ def results_evdokia(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Evdokia Jewellery")
         list_.loc[len(list_)] = new_row
 
@@ -1913,7 +1966,7 @@ def results_centroptical(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1925,7 +1978,7 @@ def results_centroptical(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Centroptical")
         list_.loc[len(list_)] = new_row
 
@@ -1974,7 +2027,7 @@ def results_premier(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1984,12 +2037,13 @@ def results_premier(u):
         price = [item["price"] for item in products]
     
         for i in range(len(names)):
+            
             if name_==names[i]:
                 new_row.append(datetime.today().strftime("%Y-%m-%d"))
                 new_row.append(names[i])
                 new_row.append(float(price[i]))
                 new_row.append(subclass_)
-                new_row.append(commotidy_)
+                new_row.append(commodity_)
                 new_row.append("Premier Laundry")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2003,7 +2057,7 @@ def results_cyprus_transport(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2011,7 +2065,6 @@ def results_cyprus_transport(u):
         soup = BeautifulSoup(response.content, "html.parser")
         wrapper = soup.find_all('tbody')[0]
         data = []
-        
         for row in wrapper.find_all('tr'):
             row_data = []
             for cell in row.find_all(['td', 'th']):
@@ -2026,6 +2079,7 @@ def results_cyprus_transport(u):
         new_list = []
         
         for column in df1.columns:  
+            
             for index in df1.index:
                 value = df1.loc[index, column]
                 new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass' : 'Passenger transport by bus and coach', "Division" : 'TRANSPORT', "Retailer": 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
@@ -2050,7 +2104,7 @@ def results_musicavenue(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2062,7 +2116,7 @@ def results_musicavenue(u):
         price_=soup.find_all("bdi")[1].text.replace("€", "").replace(",", "")
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Musicavenue")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2075,7 +2129,7 @@ def results_max_7_tax(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2089,6 +2143,7 @@ def results_max_7_tax(u):
             pattern = r'Fare per Km\s+([\d,]+)\s+([\d,]+)'  
         matches = re.findall(pattern, table_)
         charges_ = [float(charge.replace(',', '.')) for charge in matches[0]]
+        
         for i in range(0,2):
             if i==0:
                 add_="Fixed"
@@ -2099,7 +2154,7 @@ def results_max_7_tax(u):
             new_row.append(name_+add_)
             new_row.append(float(charges_[i]))
             new_row.append(subclass_)
-            new_row.append(commotidy_)
+            new_row.append(commodity_)
             new_row.append("Max 7 Taxi") 
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2111,7 +2166,7 @@ def results_costastheodorou(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2123,7 +2178,7 @@ def results_costastheodorou(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Costas Theodorou")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2137,7 +2192,7 @@ def results_leroymerlin(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2148,52 +2203,46 @@ def results_leroymerlin(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Leroy Merlin") 
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
 """
 def results_public(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
-    price_=""
-    
-    if (response.status_code != 200):
-        print("Error")
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(commotidy_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
-    else:
 
-    soup = BeautifulSoup(response.content, "html.parser")
-    sale_prices = re.findall(r'"salePrice":(\d+\.\d+)', str(soup))
-    if sale_prices:
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append((float(sale_prices[-1])))
-        new_row.append(subclass_)
-        new_row.append(commotidy_)  
-        new_row.append("Public")
-        list_.loc[len(list_)] = new_row
-        list_["Name"] =list_["Name"].apply(lambda x:x)
-    else:
-        print("Error")
+    if (response.status_code != 200) or ("Ουπς! Αυτή τη σελίδα μάλλον δεν έπρεπε να τη δεις. Ξεκίνα από την αρχή και ανακάλυψε χιλιάδες είδη τεχνολογίας, ψυχαγωγίας και ειδών σπιτιού!" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        sale_prices = re.findall(r'"salePrice":(\d+\.\d+)', str(soup))
+        if sale_prices:
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append((float(sale_prices[-1])))
+            new_row.append(subclass_)
+            new_row.append(commodity_)  
+            new_row.append("Public")
+            list_.loc[len(list_)] = new_row
+            list_["Name"] =list_["Name"].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 """
-
 def stock_center_results(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
