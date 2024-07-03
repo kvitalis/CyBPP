@@ -57,7 +57,7 @@ if is_last_thursday(current_date):
     plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
     
     for i, txt in enumerate(df_['Inflation (%)']):
-        plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('Inflation (%)')
@@ -72,7 +72,7 @@ if is_last_thursday(current_date):
     plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
     
     for i, txt in enumerate(df_['CPI General']):
-        plt.annotate(f'{txt:.2f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('CPI General (27/06/2024 = base)')
