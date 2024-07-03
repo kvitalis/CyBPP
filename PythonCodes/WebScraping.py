@@ -2393,24 +2393,24 @@ for u in range(0,len(urls)):
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Yaris - Yaris 1.5 HSD Style+")
-new_row.append(float(13780.00))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
+new_row.append("Πάγιο ανά μήνα - Nicosia")
+new_row.append(float(5.5))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
             
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Yaris - Yaris 1.5 Active CVT")
-new_row.append(float(19600.00))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
+new_row.append("Κυβικά ανά μήνα - Nicosia")
+new_row.append(float(1.0))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-            
+
 #Change the type as float
 list_["Price"].astype(float)
 
