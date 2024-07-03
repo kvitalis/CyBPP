@@ -2352,8 +2352,8 @@ for u in range(0,len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)
-    #elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol")or (retailer_=="Sewerage Board of Larnaca"):
-        #results_sewerage(u)
+    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol")or (retailer_=="Sewerage Board of Larnaca"):
+        results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Toyota":
@@ -2388,18 +2388,8 @@ for u in range(0,len(urls)):
         #results_public(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
-"""
-#Manually added data            
 
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo - Aygo 1.0 x-wave x-shift")
-new_row.append(float(13980.00))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
+#Manually added data            
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2421,27 +2411,6 @@ new_row.append("Toyota")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
             
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
-new_row.append(float(19240.0))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X - Aygo X play Canvas CVT(fleet)")
-new_row.append(float(18720.0))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
-
 #Change the type as float
 list_["Price"].astype(float)
 
