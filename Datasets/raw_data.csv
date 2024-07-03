@@ -12942,8 +12942,6 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-07-02,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-07-02,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-07-02,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Κυβικά ανά μήνα - Limassol,Water supply,0.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
@@ -13084,6 +13082,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-07-02,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
 2024-07-02,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
 2024-07-02,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
+2024-07-02,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-07-02,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-07-02,Ετήσιο Τέλος Nicosia,Sewage collection,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2024-07-02,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2024-07-02,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
