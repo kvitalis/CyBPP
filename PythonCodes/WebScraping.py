@@ -1450,7 +1450,6 @@ def results_pydixa(u):
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
-    price_=""
     values=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -1494,7 +1493,7 @@ def results_sewerage(u):
                         values = float(match.group(1))/100
                     else:
                         no_website(Item_url_)
-        """
+                        
         elif "Limassol" in retailer_:
             city_="Limassol"
             new_row=[]
@@ -1528,7 +1527,7 @@ def results_sewerage(u):
                 
                 for lines in desired_lines:
                     values=float(lines.replace(",","."))
-        """         
+         
         if "Larnaca" in retailer_:
             city_="Larnaca"
             new_row=[]
@@ -1550,24 +1549,15 @@ def results_sewerage(u):
                 for lines in desired_lines:
                     values=float(lines.replace(",","."))
         
-        if price_:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_+" "+city_)
-            new_row.append(values)
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("Sewerage Board of "+ city_)
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_+" "+city_)
+        new_row.append(values)
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Sewerage Board of "+ city_)
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 
 def results_toyota(u):
     if (name_=="YARIS CROSS") or (name_=="Toyota Yaris Cross"):
@@ -2422,6 +2412,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος Limassol")
@@ -2441,6 +2432,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
 
 #Change the type as float
 list_["Price"].astype(float)
