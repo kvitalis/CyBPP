@@ -1451,119 +1451,100 @@ def results_pydixa(u):
 
 def results_sewerage(u):
     values=0
-
-    if response.status_code !=200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(commodity_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    else:
-        if "Nicosia" in retailer_:
-            bs = BeautifulSoup(Item_url_, "html.parser")
-            response = requests.get(bs)
-            soup = BeautifulSoup(response.content, "html.parser")
-            new_row=[]
-            city_="Nicosia"
-            element_name = soup.find_all('li',{"style":"padding-left: 30px;"})
-            
-            if "Ετήσιο Τέλος" in name_:
-                
-                for i in range(0,len(element_name)):
-                    price_amount=element_name[i].text
-                    match = re.search(r'€(\d+,\d+)', price_amount)
-                    if match:
-                        value = float(match.group(1).replace(",","."))
-                        values=value+values
-                    else:
-                        no_website(Item_url_)
-                values=values/3
-            
-            if "Τέλος Χρήσης" in name_:
-                element_name = soup.find_all('p',{"style":"padding-left: 30px;"})
-                new_row=[]
-                
-                for i in range(0,len(element_name)):
-                    price_amount=element_name[i].text
-                    match = re.search(r'(\d+)', price_amount)
-
-                    if match:
-                        values = float(match.group(1))/100
-                    else:
-                        no_website(Item_url_)
-                      
-        elif "Limassol" in retailer_:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            """
-            city_="Limassol"
-            new_row=[]
-            bs = BeautifulSoup(Item_url_, "html.parser")
-            response = requests.get(bs)
-            soup = BeautifulSoup(response.content, "html.parser")
-            
-            if "Ετήσιο Τέλος" in name_:
-                if "SSL handshake failed" in soup.text:
-                    website_false.append(name_)
-                    website_false.append(subclass_)
-                    website_false.append(Item_url_)
-                    website_false.append(commodity_)
-                    website_false.append(retailer_)
-                    daily_errors.loc[len(daily_errors)] = website_false
-                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        
+    if "Nicosia" in retailer_:
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
+        new_row=[]
+        city_="Nicosia"
+        element_name = soup.find_all('li',{"style":"padding-left: 30px;"})    
+        if "Ετήσιο Τέλος" in name_:        
+            for i in range(0,len(element_name)):
+                price_amount=element_name[i].text
+                match = re.search(r'€(\d+,\d+)', price_amount)
+                if match:
+                    value = float(match.group(1).replace(",","."))
+                    values=value+values
                 else:
-                    element_name = soup.find_all('table',{"class":"table table-bordered"})
-                    element_name_2 = element_name[0].find_all('tr')
-                    element_name_2=element_name_2[35]
-                    desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
-
-                    for lines in desired_lines:
-                        value=float(lines.replace(",","."))
-                        values=value+values
-                
-                    values=values/2
+                    no_website(Item_url_)
+            values=values/3
             
-            if "Τέλος Χρήσης" in name_:
-                element_name = soup.find_all('table',{"class":"table table-bordered"})
-                element_name_2 = element_name[1].find_all('tr')
-                element_name_2=element_name_2[len(element_name_2)-1]
-                desired_lines = [element_name_2.find_all('td')[1].get_text()]
-                
-                for lines in desired_lines:
-                    values=float(lines.replace(",","."))
-            """
-         
-        if "Larnaca" in retailer_:
-            city_="Larnaca"
+        if "Τέλος Χρήσης" in name_:
+            element_name = soup.find_all('p',{"style":"padding-left: 30px;"})
             new_row=[]
-            bs = BeautifulSoup(Item_url_, "html.parser")
-            response = requests.get(bs)
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_name = soup.find_all('table',{"width":"649"})
-            element_name_2 = element_name[0].find_all('tr')
-            element_name_2=element_name_2[len(element_name_2)-2]
+                
+            for i in range(0,len(element_name)):
+                price_amount=element_name[i].text
+                match = re.search(r'(\d+)', price_amount)
 
-            if "Ετήσιο Τέλος" in name_:
-                desired_lines = [element_name_2.find_all('td')[2].get_text(),element_name_2.find_all('td')[4].get_text(),element_name_2.find_all('td')[6].get_text()]
+                if match:
+                    values = float(match.group(1))/100
+                else:
+                    no_website(Item_url_)
+                      
+    if "Limassol" in retailer_:
+        city_="Limassol"
+        new_row=[]
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
+            
+        if "Ετήσιο Τέλος" in name_:
+            if "SSL handshake failed" in soup.text:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(commodity_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            else:
+                element_name = soup.find_all('table',{"class":"table table-bordered"})
+                element_name_2 = element_name[0].find_all('tr')
+                element_name_2=element_name_2[35]
+                desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
 
                 for lines in desired_lines:
                     value=float(lines.replace(",","."))
                     values=value+values
+                
+                values=values/2
+            
+        if "Τέλος Χρήσης" in name_:
+            element_name = soup.find_all('table',{"class":"table table-bordered"})
+            element_name_2 = element_name[1].find_all('tr')
+            element_name_2=element_name_2[len(element_name_2)-1]
+            desired_lines = [element_name_2.find_all('td')[1].get_text()]
+                
+            for lines in desired_lines:
+                values=float(lines.replace(",","."))
+         
+    if "Larnaca" in retailer_:
+        city_="Larnaca"
+        new_row=[]
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('table',{"width":"649"})
+        element_name_2 = element_name[0].find_all('tr')
+        element_name_2=element_name_2[len(element_name_2)-2]
 
-                values=values/3
+        if "Ετήσιο Τέλος" in name_:
+            desired_lines = [element_name_2.find_all('td')[2].get_text(),element_name_2.find_all('td')[4].get_text(),element_name_2.find_all('td')[6].get_text()]
 
-            elif "Τέλος Χρήσης" in name_:
-                desired_lines = [element_name_2.find_all('td')[8].get_text()]
-                for lines in desired_lines:
-                    values=float(lines.replace(",","."))
-        
+            for lines in desired_lines:
+                value=float(lines.replace(",","."))
+                values=value+values
+
+            values=values/3
+
+        elif "Τέλος Χρήσης" in name_:
+            desired_lines = [element_name_2.find_all('td')[8].get_text()]
+            for lines in desired_lines:
+                values=float(lines.replace(",","."))
+    
+    if values!=0:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_+" "+city_)
         new_row.append(values)
@@ -1572,6 +1553,14 @@ def results_sewerage(u):
         new_row.append("Sewerage Board of "+ city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 
 def results_toyota(u):
