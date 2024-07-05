@@ -1493,8 +1493,16 @@ def results_sewerage(u):
                         values = float(match.group(1))/100
                     else:
                         no_website(Item_url_)
-                        
+                      
         elif "Limassol" in retailer_:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            """
             city_="Limassol"
             new_row=[]
             
@@ -1527,6 +1535,7 @@ def results_sewerage(u):
                 
                 for lines in desired_lines:
                     values=float(lines.replace(",","."))
+            """
          
         if "Larnaca" in retailer_:
             city_="Larnaca"
