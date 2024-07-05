@@ -1451,10 +1451,7 @@ def results_pydixa(u):
 
 def results_sewerage(u):
     values=0
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-        
+
     if response.status_code !=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1465,6 +1462,9 @@ def results_sewerage(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         if "Nicosia" in retailer_:
+            bs = BeautifulSoup(Item_url_, "html.parser")
+            response = requests.get(bs)
+            soup = BeautifulSoup(response.content, "html.parser")
             new_row=[]
             city_="Nicosia"
             element_name = soup.find_all('li',{"style":"padding-left: 30px;"})
@@ -1505,6 +1505,9 @@ def results_sewerage(u):
             """
             city_="Limassol"
             new_row=[]
+            bs = BeautifulSoup(Item_url_, "html.parser")
+            response = requests.get(bs)
+            soup = BeautifulSoup(response.content, "html.parser")
             
             if "Ετήσιο Τέλος" in name_:
                 if "SSL handshake failed" in soup.text:
@@ -1540,6 +1543,9 @@ def results_sewerage(u):
         if "Larnaca" in retailer_:
             city_="Larnaca"
             new_row=[]
+            bs = BeautifulSoup(Item_url_, "html.parser")
+            response = requests.get(bs)
+            soup = BeautifulSoup(response.content, "html.parser")
             element_name = soup.find_all('table',{"width":"649"})
             element_name_2 = element_name[0].find_all('tr')
             element_name_2=element_name_2[len(element_name_2)-2]
