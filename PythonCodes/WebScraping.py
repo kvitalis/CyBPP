@@ -2359,8 +2359,7 @@ for u in range(0,len(urls)):
     elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca"):
         results_sewerage(u)
     elif retailer_=="Sewerage Board of Limassol":
-        results_sewerage(u)
-        """
+        #results_sewerage(u)
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -2368,7 +2367,6 @@ for u in range(0,len(urls)):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        """
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Toyota":
@@ -2426,7 +2424,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-"""
+
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος Limassol")
@@ -2446,7 +2444,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
+
 
 #Change the type as float
 list_["Price"].astype(float)
