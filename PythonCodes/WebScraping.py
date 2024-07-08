@@ -517,12 +517,12 @@ def results_cablenet(u):
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
         else:
             element_name = soup.find_all("td")
-            for i in element_soup:
+            for i in element_name:
                 if i.text==name_:
-                    value_=element_soup[18].text
+                    value_=element_name[18].text
                     price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
                 if i.text==name_:
-                    value_=element_soup[23].text
+                    value_=element_name[23].text
                     price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
 
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
