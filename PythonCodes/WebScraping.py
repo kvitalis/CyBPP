@@ -2424,7 +2424,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος Limassol")
@@ -2444,7 +2444,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-
+"""
 
 #Change the type as float
 list_["Price"].astype(float)
