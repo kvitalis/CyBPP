@@ -2353,7 +2353,7 @@ for u in range(0,len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol")or (retailer_=="Sewerage Board of Larnaca"):
+    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol") or (retailer_=="Sewerage Board of Larnaca"):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
@@ -2391,7 +2391,7 @@ for u in range(0,len(urls)):
         stock_center_results(u)
 
 #Manually added data            
-"""
+
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -2411,6 +2411,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+
 """
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2431,6 +2432,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
 
 #Change the type as float
 list_["Price"].astype(float)
