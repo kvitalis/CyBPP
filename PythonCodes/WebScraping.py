@@ -2357,17 +2357,6 @@ for u in range(0,len(urls)):
         results_the_royal_cigars(u)
     elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
         results_sewerage(u)
-        """
-        elif retailer_=="Sewerage Board of Limassol":
-        results_sewerage(u)
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(commodity_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        """
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Toyota":
