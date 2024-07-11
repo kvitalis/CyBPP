@@ -21,13 +21,11 @@ from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
 
-print("1")
 warnings.simplefilter("ignore")
 
 #Read necessary data
 df = pd.read_csv("Datasets/raw_data.csv")
 urls = pd.read_csv("Datasets/DailyScrapingErrors.csv")
-print("2")
 
 #Create a null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
