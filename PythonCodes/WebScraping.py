@@ -1518,10 +1518,11 @@ def results_sewerage(u):
                 
             for lines in desired_lines:
                 values=float(lines.replace(",","."))
-         
+    
     if "Larnaca" in retailer_:
         city_="Larnaca"
         new_row=[]
+        """
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
@@ -1542,7 +1543,7 @@ def results_sewerage(u):
             desired_lines = [element_name_2.find_all('td')[8].get_text()]
             for lines in desired_lines:
                 values=float(lines.replace(",","."))
-    
+        """
     if values!=0:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_+" "+city_)
