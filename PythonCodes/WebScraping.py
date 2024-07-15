@@ -1137,6 +1137,9 @@ def results_water(u):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
     """
     if "Larnaca" in retailer_:
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
         element_=soup.find_all("table",{"class":"table-format-left"})
         text_=element_[0].text
         element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
