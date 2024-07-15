@@ -113,7 +113,7 @@ According to the representativeness of each product and its retailer within the 
 
 41. Sewerage Board of Nicosia (SBN) https://www.sbn.org.cy/el/apoxeteftika-teli 
 
-42. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/  
+42. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
 
 43. Stephanis https://www.stephanis.com.cy/en
 
