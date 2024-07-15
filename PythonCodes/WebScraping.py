@@ -1144,7 +1144,6 @@ def results_water(u):
         element_=soup.find_all("table",{"class":"table-format-left"})
         text_=element_[0].text
         element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
-        print(element_1)
         element_2 = re.search(r'Δικαίωμα Συντήρησης(\d+,\d+)',text_)
         element_3 = re.search(r'1Μέχρι15(\d+,\d+)',text_)
         
@@ -1152,7 +1151,6 @@ def results_water(u):
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
                 price_=float(price_1)/3
-                print(price_)
                 
         if name_=="Δικαίωμα Συντήρησης":
             if element_2:
