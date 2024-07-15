@@ -1135,31 +1135,28 @@ def results_water(u):
         
             elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-     
-    if "Larnaca" in retailer_:
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs)
-        soup = BeautifulSoup(response.content, "html.parser")
-        city_="Larnaca"
-        element_name = soup.find_all('td',{"colspan":"3"})
-        element_name_2 = soup.find_all('table',{"border":"1","cellspacing":"3","cellpadding":"3"})
-        element_name_3 = soup.find_all('td',{"style":"text-align: right;"})
-    
-        for ooo in range(0,len(element_name_2)):
-            
-            if (element_name[ooo].text=="Πάγιο") and (name_=="Πάγιο ανά μήνα"):
-                price_=float(element_name_3[ooo].text.replace(",","."))/3
-                
-            elif (element_name[ooo].text=="Δικαίωμα Συντήρησης") and (name_=="Δικαίωμα Συντήρησης ανά μήνα"):
-                price_=float(element_name_3[ooo].text.replace(",","."))/3
-
-        element_name_4 = soup.find_all('td')
-        
-        for o in range(0,len(element_name_4)):
-            
-            if (element_name_4[o-3].text=="1") and (element_name_4[o-1].text=="15") and (name_=="Κυβικά ανά μήνα"):
-                price_=float(element_name_4[o].text.replace(",","."))
     """
+    if "Larnaca" in retailer_:
+        element_=soup.find_all("table",{"class":"table-format-left"})
+        text_=element_[0].text
+        element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
+        element_2 = re.search(r'Δικαίωμα Συντήρησης(\d+,\d+)',text_)
+        element_3 = re.search(r'1Μέχρι15(\d+,\d+)',text_)
+        
+        if name_=="Πάγιο ανά μήνα":
+            if element_1:
+                price_1 = element_1.group(1).replace(",",".")
+                price_=float(price_1)/3
+            
+        if name_=="Δικαίωμα Συντήρησης":
+            if element_2:
+                price_1=element_2.group(1).replace(",",".")
+                price_=float(price_1)/3
+                
+        if name_=="Κυβικά ανά τριμηνία":
+            if element_3:
+                price_1=element_3.group(1).replace("16","").replace(",",".")
+    
     if "Limassol" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
