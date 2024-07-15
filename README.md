@@ -131,11 +131,11 @@ According to the representativeness of each product and its retailer within the 
 
 50. Water Board of Nicosia (WBN) https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/ 
 
-51. Water Board of Larnaca (LWB) https://www.lwb.org.cy/en/charges-and-fees.html 
+51. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
+    
+53. Water Board of Limassol (WBL) https://www.wbl.com.cy/el/water-rates 
 
-52. Water Board of Limassol (WBL) https://www.wbl.com.cy/el/water-rates 
-
-53. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
+54. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
 ## GitHub Actions
 
