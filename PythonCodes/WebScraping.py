@@ -1153,7 +1153,7 @@ def results_water(u):
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
                 
-        if name_=="Κυβικά ανά τριμηνία":
+        if name_=="Κυβικά ανά μήνα":
             if element_3:
                 price_1=element_3.group(1).replace("16","").replace(",",".")
     
