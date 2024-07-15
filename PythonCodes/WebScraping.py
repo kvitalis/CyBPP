@@ -1106,8 +1106,8 @@ def results_cera(u):
     else:   
         for oo in range(0,len(_names_)-1):
             n1=_names_[oo]+" "+_names_[oo+1]
-            if name_ in n1:
-                price_=float(amount_[oo].replace(",","."))/100
+            if name_ == n1:
+                price_=float(amount_[oo])/100
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(price_)
