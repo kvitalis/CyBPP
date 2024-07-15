@@ -45,7 +45,7 @@ According to the representativeness of each product and its retailer within the 
 
 7. Costas Theodorou https://costastheodorou.com.cy/
 
-8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
+8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/el-gr/katanalotes  
 
 9. Cyprus Ministry of Education, Sport and Youth https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
@@ -55,7 +55,7 @@ According to the representativeness of each product and its retailer within the 
 
 12. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
 
-13. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EN/Pages/default.aspx
+13. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EL/regulatedactivities/supply/tariffs/Pages/supply-tariffs.aspx
 
 14. Electroline	https://electroline.com.cy/ 
 
@@ -109,11 +109,11 @@ According to the representativeness of each product and its retailer within the 
 
 39. Rio Cinemas http://www.riocinemas.com.cy/ 
 
-40. Sewerage Board of Limassol-Amathus (SBLA)	https://www.sbla.com.cy/Sewage-Charges 
+40. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
 
 41. Sewerage Board of Nicosia (SBN) https://www.sbn.org.cy/el/apoxeteftika-teli 
 
-42. Sewerage and Drainage Board of Larnaca (LSDB) https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
+42. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/  
 
 43. Stephanis https://www.stephanis.com.cy/en
 
