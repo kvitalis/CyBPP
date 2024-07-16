@@ -1151,15 +1151,18 @@ def results_water(u):
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
                 price_=float(price_1)/3
+                print(price_)
                 
         if name_=="Δικαίωμα Συντήρησης":
             if element_2:
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
+                print(price_)
                 
         if name_=="Κυβικά ανά μήνα":
             if element_3:
                 price_1=element_3.group(1).replace("16","").replace(",",".")
+                print(price_)
     
     if "Limassol" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
