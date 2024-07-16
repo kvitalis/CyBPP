@@ -1153,7 +1153,7 @@ def results_water(u):
                 price_=float(price_1)/3
                 print(price_)
                 
-        if name_=="Δικαίωμα Συντήρησης":
+        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
