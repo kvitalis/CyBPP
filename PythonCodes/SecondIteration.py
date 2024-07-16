@@ -1138,6 +1138,10 @@ def results_water(u):
                 price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
     """
     if "Larnaca" in retailer_:
+        city_="Larnaca"
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
         element_=soup.find_all("table",{"class":"table-format-left"})
         text_=element_[0].text
         element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
@@ -1148,15 +1152,19 @@ def results_water(u):
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
                 price_=float(price_1)/3
-            
-        if name_=="Δικαίωμα Συντήρησης":
+                print(price_)
+                
+        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
+                print(price_)
                 
         if name_=="Κυβικά ανά μήνα":
             if element_3:
                 price_1=element_3.group(1).replace("16","").replace(",",".")
+                print("Working")
+                print(price_)
     
     if "Limassol" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1198,7 +1206,7 @@ def results_water(u):
         new_row.append(name_+" - "+city_)
         new_row.append(price_)
         new_row.append(subclass_)
-        new_row.append(commotidy_)
+        new_row.append(commodity_)
         new_row.append("Water Board")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1206,10 +1214,11 @@ def results_water(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commotidy_)
+        website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
 
 def results_wolt(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -2433,6 +2442,7 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Larnaca")
@@ -2462,6 +2472,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
 
 #===============================================================================
 
