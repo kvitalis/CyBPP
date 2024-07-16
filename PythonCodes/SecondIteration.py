@@ -2402,6 +2402,7 @@ for u in range(0,len(urls)):
 #================================================================================
 #Manually added data            
 
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -2442,7 +2443,6 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Larnaca")
@@ -2462,6 +2462,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2472,7 +2473,6 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 
 #===============================================================================
 
