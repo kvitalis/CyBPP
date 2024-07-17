@@ -1119,23 +1119,25 @@ def results_cera(u):
 
 def results_water(u):
     price_=""
-    """
+    
     if "Nicosia" in retailer_:
-        bs = BeautifulSoup(Item_url_, "html.parser")
+        bs = BeautifulSoup(url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         city_="Nicosia"
-        element_name = soup.find_all('div',{"class":"ekit_table_body_container ekit_table_data_ ekit_body_align_center"})
+        if name_=="Πάγιο ανά μήνα":
+            element_=soup.find_all("div",{"id":"ekit-table-container-9f0855a_wrapper"})
+            pattern = r"Πάγιο(\d{2},\d{2})"
+            text = element_[0].get_text()
+            match = re.search(pattern, text)
         
-        for qp in range(0,len(element_name)):
-            
-            if (element_name[qp].text.replace(" ","").replace("\n","")=="Πάγιο") and (name_=="Πάγιο ανά μήνα"):
-                price_=element_name[1].text.replace(" ","").replace('\n',"").replace(",",".")
-                price_=float(price_)/2
-        
-            elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
-                price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-    """
+            if match:
+                price_ = match.group(1)
+
+        if name_=="Κυβικά ανά μήνα":
+            element_=soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
+            price_=element_[0].text.replace(",",".")
+    
     if "Larnaca" in retailer_:
         city_="Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
