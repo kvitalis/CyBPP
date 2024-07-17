@@ -2402,6 +2402,8 @@ for u in range(0,len(urls)):
 #================================================================================
 #Manually added data            
 
+"""
+#Water Board of Nicosia
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -2422,27 +2424,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-"""
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Ετήσιο Τέλος Larnaca")
-new_row.append(float(0.4433333333333333))
-new_row.append("Sewage collection")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Larnaca") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Τέλος Χρήσης Larnaca")
-new_row.append(float(0.5))
-new_row.append("Sewage collection")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Larnaca") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
+#Water Board of Larnaca
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Larnaca")
@@ -2462,7 +2444,6 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2471,6 +2452,28 @@ new_row.append(float(1.0))
 new_row.append("Water supply")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
+
+#Sewerage Board of Larnaca
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Ετήσιο Τέλος Larnaca")
+new_row.append(float(0.4433333333333333))
+new_row.append("Sewage collection")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Sewerage Board of Larnaca") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Τέλος Χρήσης Larnaca")
+new_row.append(float(0.5))
+new_row.append("Sewage collection")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Sewerage Board of Larnaca") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
