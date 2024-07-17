@@ -14,6 +14,7 @@ today='2024-07-11'
 
 #CALCULATIONS
 
+print("1")
 #Read necessary data 
 raw_data_=pd.read_csv("Datasets/raw_data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
@@ -22,6 +23,7 @@ weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 index_=pd.read_csv("Datasets/Reference_Values.csv")
 _cpi_=pd.read_csv("Results/CPI-Division.csv")
 
+print("2")
 #DIVISION CPI
 row_data_today=raw_data_[raw_data_["Date"]==today]
 row_data_1=row_data_today[["Subclass","Price"]]
@@ -34,6 +36,7 @@ group_df = group_df[group_df["Subclass"] != "Water supply"] #dont take into acco
 group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into account the Sewage Collection subclass
 group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
 
+print("3")
 #Electricity
 electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
 ele_price_=electricity["Price"].sum()
@@ -103,6 +106,7 @@ group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
 
+print("4")
 df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
@@ -111,6 +115,7 @@ df_3=pd.merge(df_2, weight_, on='Subclass')
 df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
+print("5")
 df_4=df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
@@ -126,6 +131,7 @@ cols.insert(0, cols.pop(cols.index('Date')))
 df_5 = df_5[cols]
 df_5['Date'] = pd.to_datetime(df_5['Date']) 
 
+print("6")
 df_5_a = pd.concat([df_5, _cpi_])
 df_5_a['Date'] = pd.to_datetime(df_5_a['Date'])
 df_5_a = df_5_a.sort_values(by='Date').reset_index(drop=True)
@@ -144,6 +150,7 @@ combined_df.to_csv("Results/CPI-Subclass-Division.csv",index=False)
 #General CPI Inflation
 df_99=index_[["Division","Weight"]]
 
+print("7")
 #Cleaning Data
 df_101=df_6[["Division","CPI Division"]]
 df_102 = df_101.drop_duplicates()
@@ -162,6 +169,7 @@ new_row.append(today)
 new_row.append(Cpi_general)
 new_row.append(None)
 
+print("8")
 #Combine the two dataframes
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
