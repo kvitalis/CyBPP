@@ -1151,54 +1151,39 @@ def results_water(u):
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
                 price_=float(price_1)/3
-                print(price_)
                 
         if name_=="Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
-                print(price_)
                 
         if name_=="Κυβικά ανά μήνα":
             if element_3:
                 price_1=element_3.group(1).replace("16","").replace(",",".")
                 print("Working")
-                print(price_)
     
     if "Limassol" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         city_="Limassol"
-        element_name = soup.find_all('table',{"class":"table table-striped table-nonfluid table-bordered table-sm"})
-        element_name_2 = element_name[0].find_all('tr')
         
-        for o in range(0,len(element_name_2)):
-            
-            if ("Πάγιο Τέλος" in element_name_2[o].text) and (name_=="Πάγιο ανά μήνα"):
-                price_=element_name_2[o].text
-                matches_1 = re.findall(r'\d+,\d+', price_)
-                
-                if matches_1:
-                    price_ = float(matches_1[0].replace(",","."))/4
-            
-            elif ("Τέλος Συντήρησης" in element_name_2[o].text) and (name_=="Δικαίωμα Συντήρησης ανά μήνα"):
-                price_=element_name_2[o].text
-                matches_1 = re.findall(r'\d+,\d+', price_)
-                
-                if matches_1:
-                    price_ = float(matches_1[0].replace(",","."))/4
-
-        element_name_2 = element_name[1].find_all('td') 
+        if name_=="Πάγιο ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[3].text.replace("\n","").replace(",",".")
+            price_=float(price_)/4
         
-        for o in range(0,len(element_name_2)):
+        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[5].text.replace("\n","").replace(",",".")
+            price_=float(price_)/4
             
-            if (element_name_2[o-2].text=="1") and (element_name_2[o-1].text=="40") and(name_=="Κυβικά ανά μήνα"):
-                price_=float(element_name_2[o].text.replace(",","."))
-                #matches_2= re.findall(r'\d+,\d+', price_)
-
-                #if matches_2:
-                #    price_ = float(matches_2[0].replace(",","."))
+        if name_=="Κυβικά ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[11].text.replace("\n","").replace(",",".")
     
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
