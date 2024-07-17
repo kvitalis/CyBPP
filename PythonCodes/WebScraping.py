@@ -1440,37 +1440,31 @@ def results_pydixa(u):
 
 def results_sewerage(u):
     values=0
-        
     if "Nicosia" in retailer_:
-        bs = BeautifulSoup(Item_url_, "html.parser")
+        bs = BeautifulSoup(url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         new_row=[]
         city_="Nicosia"
-        element_name = soup.find_all('li',{"style":"padding-left: 30px;"})    
-        if "Ετήσιο Τέλος" in name_:        
-            for i in range(0,len(element_name)):
-                price_amount=element_name[i].text
+        if "Ετήσιο Τέλος" in name_:  
+            element_=soup.find_all("div",{"class":"elementor-element elementor-element-f737ced elementor-widget elementor-widget-text-editor"})
+            element_1=element_[0].find_all("li")
+            for i in range(0,len(element_1)):
+                price_amount=element_1[i].text
                 match = re.search(r'€(\d+,\d+)', price_amount)
                 if match:
                     value = float(match.group(1).replace(",","."))
                     values=value+values
-                else:
-                    no_website(Item_url_)
             values=values/3
-            
+        
         if "Τέλος Χρήσης" in name_:
-            element_name = soup.find_all('p',{"style":"padding-left: 30px;"})
+            element_=soup.find_all("div",{"class":"elementor-element elementor-element-dbb217e elementor-widget elementor-widget-text-editor"})
             new_row=[]
-                
-            for i in range(0,len(element_name)):
-                price_amount=element_name[i].text
+            for i in range(0,len(element_)):
+                price_amount=element_[i].text
                 match = re.search(r'(\d+)', price_amount)
-
                 if match:
                     values = float(match.group(1))/100
-                else:
-                    no_website(Item_url_)
                       
     if "Limassol" in retailer_:
         city_="Limassol"
