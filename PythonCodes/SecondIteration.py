@@ -517,14 +517,13 @@ def results_cablenet(u):
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
         else:
             element_name = soup.find_all("td")
-            price_=0.025
-            """
-            for i in range(0,len(element_name)):
-                if element_name[i].text==name_:
-                    name_=element_name[i].text
-                    price=element_name[i+3].text
-                    price_=price.split(' ')[0].replace("€","")
-            """       
+            for i in element_name:
+                if i.text==name_:
+                    value_=element_name[18].text
+                    price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                if i.text==name_:
+                    value_=element_name[23].text
+                    price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
 
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -1107,8 +1106,8 @@ def results_cera(u):
     else:   
         for oo in range(0,len(_names_)-1):
             n1=_names_[oo]+" "+_names_[oo+1]
-            if name_ in n1:
-                price_=float(amount_[oo].replace(",","."))/100
+            if name_ == n1:
+                price_=float(amount_[oo])/100
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(price_)
@@ -1120,23 +1119,25 @@ def results_cera(u):
 
 def results_water(u):
     price_=""
-    """
+    
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         city_="Nicosia"
-        element_name = soup.find_all('div',{"class":"ekit_table_body_container ekit_table_data_ ekit_body_align_center"})
+        if name_=="Πάγιο ανά μήνα":
+            element_=soup.find_all("div",{"id":"ekit-table-container-9f0855a_wrapper"})
+            pattern = r"Πάγιο(\d{2},\d{2})"
+            text = element_[0].get_text()
+            match = re.search(pattern, text)
         
-        for qp in range(0,len(element_name)):
-            
-            if (element_name[qp].text.replace(" ","").replace("\n","")=="Πάγιο") and (name_=="Πάγιο ανά μήνα"):
-                price_=element_name[1].text.replace(" ","").replace('\n',"").replace(",",".")
-                price_=float(price_)/2
-        
-            elif (element_name[qp-2].text.replace(" ","").replace("\n","")=="1") and (element_name[qp-1].text.replace(" ","").replace("\n","")=="20") and (name_=="Κυβικά ανά μήνα"):
-                price_=element_name[qp].text.replace(" ","").replace("\n","").replace(",",".")
-    """
+            if match:
+                price_ = match.group(1)
+
+        if name_=="Κυβικά ανά μήνα":
+            element_=soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
+            price_=element_[0].text.replace(",",".")
+    
     if "Larnaca" in retailer_:
         city_="Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1152,54 +1153,38 @@ def results_water(u):
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
                 price_=float(price_1)/3
-                print(price_)
                 
         if name_=="Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_1=element_2.group(1).replace(",",".")
                 price_=float(price_1)/3
-                print(price_)
                 
         if name_=="Κυβικά ανά μήνα":
             if element_3:
                 price_1=element_3.group(1).replace("16","").replace(",",".")
-                print("Working")
-                print(price_)
     
     if "Limassol" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         city_="Limassol"
-        element_name = soup.find_all('table',{"class":"table table-striped table-nonfluid table-bordered table-sm"})
-        element_name_2 = element_name[0].find_all('tr')
         
-        for o in range(0,len(element_name_2)):
-            
-            if ("Πάγιο Τέλος" in element_name_2[o].text) and (name_=="Πάγιο ανά μήνα"):
-                price_=element_name_2[o].text
-                matches_1 = re.findall(r'\d+,\d+', price_)
-                
-                if matches_1:
-                    price_ = float(matches_1[0].replace(",","."))/4
-            
-            elif ("Τέλος Συντήρησης" in element_name_2[o].text) and (name_=="Δικαίωμα Συντήρησης ανά μήνα"):
-                price_=element_name_2[o].text
-                matches_1 = re.findall(r'\d+,\d+', price_)
-                
-                if matches_1:
-                    price_ = float(matches_1[0].replace(",","."))/4
-
-        element_name_2 = element_name[1].find_all('td') 
+        if name_=="Πάγιο ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[3].text.replace("\n","").replace(",",".")
+            price_=float(price_)/4
         
-        for o in range(0,len(element_name_2)):
+        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[5].text.replace("\n","").replace(",",".")
+            price_=float(price_)/4
             
-            if (element_name_2[o-2].text=="1") and (element_name_2[o-1].text=="40") and(name_=="Κυβικά ανά μήνα"):
-                price_=float(element_name_2[o].text.replace(",","."))
-                #matches_2= re.findall(r'\d+,\d+', price_)
-
-                #if matches_2:
-                #    price_ = float(matches_2[0].replace(",","."))
+        if name_=="Κυβικά ανά μήνα":
+            element_=soup.find_all("div",{"class":"acd-des"})
+            element_1=element_[2].find_all("td")
+            price_=element_1[11].text.replace("\n","").replace(",",".")
     
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1218,7 +1203,6 @@ def results_water(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
 
 def results_wolt(u):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -1457,37 +1441,31 @@ def results_pydixa(u):
 
 def results_sewerage(u):
     values=0
-        
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         new_row=[]
         city_="Nicosia"
-        element_name = soup.find_all('li',{"style":"padding-left: 30px;"})    
-        if "Ετήσιο Τέλος" in name_:        
-            for i in range(0,len(element_name)):
-                price_amount=element_name[i].text
+        if "Ετήσιο Τέλος" in name_:  
+            element_=soup.find_all("div",{"class":"elementor-element elementor-element-f737ced elementor-widget elementor-widget-text-editor"})
+            element_1=element_[0].find_all("li")
+            for i in range(0,len(element_1)):
+                price_amount=element_1[i].text
                 match = re.search(r'€(\d+,\d+)', price_amount)
                 if match:
                     value = float(match.group(1).replace(",","."))
                     values=value+values
-                else:
-                    no_website(Item_url_)
             values=values/3
-            
+        
         if "Τέλος Χρήσης" in name_:
-            element_name = soup.find_all('p',{"style":"padding-left: 30px;"})
+            element_=soup.find_all("div",{"class":"elementor-element elementor-element-dbb217e elementor-widget elementor-widget-text-editor"})
             new_row=[]
-                
-            for i in range(0,len(element_name)):
-                price_amount=element_name[i].text
+            for i in range(0,len(element_)):
+                price_amount=element_[i].text
                 match = re.search(r'(\d+)', price_amount)
-
                 if match:
                     values = float(match.group(1))/100
-                else:
-                    no_website(Item_url_)
                       
     if "Limassol" in retailer_:
         city_="Limassol"
@@ -2278,20 +2256,21 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Calculation of the processing time
+#Calculation of the process time
 start_time = time.time()
 
 #Run the code
 for u in range(0,len(urls)):
     print(u)
     
-    #Create null row each time 
+    #Creative null row each time 
     new_row=[]
     website_false=[]
     
     #Read the data
     Item_url_=urls["Url"].iloc[u]
     name_=urls["Name"].iloc[u]
+    print(name_)
     subclass_=urls["Subclass"].iloc[u]
     commodity_=urls["Division"].iloc[u]
     retailer_=urls["Retailer"].iloc[u]
@@ -2317,7 +2296,7 @@ for u in range(0,len(urls)):
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)
     elif retailer_=="Bwell Pharmacy":
-        results_bweel_pharmacy(u)
+        results_bwell_pharmacy(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
@@ -2362,7 +2341,7 @@ for u in range(0,len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Limassol") or (retailer_=="Sewerage Board of Larnaca"):
+    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
@@ -2445,6 +2424,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Κυβικά ανά μήνα - Larnaca")
@@ -2454,7 +2434,6 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water Board") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 
 #Sewerage Board of Larnaca
 new_row=[]
