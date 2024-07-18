@@ -1121,7 +1121,7 @@ def results_water(u):
     price_=""
     
     if "Nicosia" in retailer_:
-        bs = BeautifulSoup(url_, "html.parser")
+        bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         city_="Nicosia"
@@ -1442,7 +1442,7 @@ def results_pydixa(u):
 def results_sewerage(u):
     values=0
     if "Nicosia" in retailer_:
-        bs = BeautifulSoup(url_, "html.parser")
+        bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         new_row=[]
