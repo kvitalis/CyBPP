@@ -111,7 +111,7 @@ According to the representativeness of each product and its retailer within the 
 
 40. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
 
-41. Sewerage Board of Nicosia (SBN) https://www.sbn.org.cy/el/apoxeteftika-teli 
+41. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
 
 42. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
 
@@ -129,11 +129,11 @@ According to the representativeness of each product and its retailer within the 
 
 49. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
 
-50. Water Board of Nicosia (WBN) https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/ 
+50. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
 
 51. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
     
-53. Water Board of Limassol (WBL) https://www.wbl.com.cy/el/water-rates 
+53. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
 
 54. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
