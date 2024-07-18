@@ -1133,6 +1133,8 @@ def results_water(u):
         
             if match:
                 price_ = match.group(1)
+                price_=float((price_).replace(",","."))/2
+                print(price_)
 
         if name_=="Κυβικά ανά μήνα":
             element_=soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
