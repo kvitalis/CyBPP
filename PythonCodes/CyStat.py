@@ -1,32 +1,13 @@
+#Important Libraries
 import pandas as pd 
 import re
 import requests
-import time
-import xlsxwriter
-import urllib.request
-import json
-import tabula as tb
-import PyPDF2
-import warnings
 import matplotlib.pyplot as plt
-import numpy as np
-import pdfplumber
-import tabula
-import datetime
 
-from ast import Try
-from lxml import html, etree
-from datetime import datetime
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
-from datetime import date, timedelta
-from urllib.error import URLError
-from tabula import read_pdf
-import fitz
 from docx import Document
-from io import StringIO
 from babel.dates import format_date
-from datetime import date, timedelta
+from datetime import date, timedelta , datetime
 
 #Important funcition
 def cystat(last_results):
@@ -88,10 +69,10 @@ def cystat(last_results):
 
     response = requests.get(url)
     if response.status_code == 200:
-        with open('/Users/kendeas/Desktop/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
+        with open('CyStat/'+str(current_month)+'.docx', 'wb') as file:
             file.write(response.content)
 
-    doc = Document('/Users/kendeas/Desktop/Consumer_Price_Index-'+str(current_month)+'.docx')
+    doc = Document('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
@@ -128,7 +109,7 @@ def cystat(last_results):
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
         df_tables.loc[len(df_tables)-1,"Official (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
         df_tables.loc[len(df_tables)-1,"Online (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
-        df_tables.to_excel("/Users/kendeas/Desktop/CPI_Offline_Vs_Online.xlsx",index=False)
+        df_tables.to_csv("CyStat/CPI_Offline_Vs_Online.csv",index=False)
         
     if match1:
         values_after_gd = match1.groups()
