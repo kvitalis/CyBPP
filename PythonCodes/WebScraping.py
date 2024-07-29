@@ -1711,14 +1711,14 @@ def results_ithaki(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_flames(u):
-    response = requests.get(Item_url_)
+    #response = requests.get(Item_url_)
 
     #Mixed Grill 
     if name_=="Mixed Grill for 2 persons - Famagusta":
         pdf1 = "PDFs/flames_grilled_dishes.pdf"
     
-        with open(pdf1, "wb") as f:
-            f.write(response.content)
+        #with open(pdf1, "wb") as f:
+        #    f.write(response.content)
         with pdfplumber.open(pdf1) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
@@ -1739,8 +1739,8 @@ def results_flames(u):
     if name_=="Meat Meze for 2 persons - Famagusta":
         pdf2 = "PDFs/flames_cyprus_dishes.pdf"
     
-        with open(pdf2, "wb") as f:
-            f.write(response.content)
+        #with open(pdf2, "wb") as f:
+        #    f.write(response.content)
     
         with pdfplumber.open(pdf2) as pdf:
             first_page = pdf.pages[0]
