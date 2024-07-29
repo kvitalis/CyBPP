@@ -30,8 +30,9 @@ from datetime import date, timedelta
 
 #Important funcition
 def cystat(last_results):
+    
     #Read importnat files
-    cystat_=pd.read_excel("/Users/kendeas/Desktop/CPI_Offline_Vs_Online.xlsx")
+    cystat_=pd.read_csv("/Users/kendeas/Desktop/CPI_Offline_Vs_Online.csv")
     online_per_=pd.read_csv("/Users/kendeas/Desktop/Monthly-CPI-General-Inflation.csv")
     
     #Main part of web scrapping 
@@ -87,10 +88,10 @@ def cystat(last_results):
 
     response = requests.get(url)
     if response.status_code == 200:
-        with open('/Users/kendeas/Desktop/Consumer_Price_Index-Jun24-EL-040724.docx', 'wb') as file:
+        with open('/Users/kendeas/Desktop/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
             file.write(response.content)
 
-    doc = Document('/Users/kendeas/Desktop/Consumer_Price_Index-Jun24-EL-040724.docx')
+    doc = Document('/Users/kendeas/Desktop/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
