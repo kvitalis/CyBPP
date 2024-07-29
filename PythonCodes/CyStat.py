@@ -33,7 +33,7 @@ def cystat(last_results):
     
     #Read importnat files
     cystat_=pd.read_csv("CyStat/CPI_Offline_Vs_Online.csv")
-    online_per_=pd.read_csv("/Users/kendeas/Desktop/Monthly-CPI-General-Inflation.csv")
+    online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     #Main part of web scrapping 
     url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
