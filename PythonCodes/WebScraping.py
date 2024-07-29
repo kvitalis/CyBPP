@@ -1654,7 +1654,7 @@ def results_toyota(u):
 
 def results_ithaki(u):
     
-    response = requests.get(Item_url_)
+    #response = requests.get(Item_url_)
     pdf = "PDFs/ithaki.pdf"
 
     with pdfplumber.open(pdf) as pdf:
