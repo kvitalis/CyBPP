@@ -33,7 +33,7 @@ jobs:
       
       - name: Run CyStat.py
         run: |
-          python PythonCodes/Calculations.py
+          python CyStat/CyStat.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
