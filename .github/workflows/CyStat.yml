@@ -1,10 +1,10 @@
-# Workflow for the calculations
+# Workflow for the CyStat's results
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
 name: cystat
 
 # Workflow's description
-run-name: Perform results of CyStat
+run-name: CyStat's results
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
@@ -38,5 +38,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "calculations completed"
+          git commit -m "CyStat's results completed"
           git push origin HEAD:main
