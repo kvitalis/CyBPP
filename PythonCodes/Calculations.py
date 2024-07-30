@@ -215,3 +215,108 @@ if is_last_thursday(current_date):
     df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
+
+def cystat(last_results):
+    
+    #Read importnat files
+    cystat_=pd.read_csv("CyStat/CPI_Offline_Vs_Online.csv")
+    online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    
+    #Main part of web scrapping 
+    url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    element_1=soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
+
+    #Calculation of Month
+    current_date = datetime.now()
+    current_date = datetime.strptime(current_date, "%Y-%m-%d")
+    current_month =current_date.month-1
+    current_year = current_date.year
+    current_day = current_date.day
+    date = datetime(current_year, current_month,current_day)
+    date_=format_date(date, 'MMMM', locale='el')
+
+    #Fix the month
+    if (current_month==6) or (current_month==7):
+        _date_=date_[:4]
+    elif (current_month==5):
+        _date_="Μάιος"
+    else:
+        _date_=date_[:3]
+
+    #Specifed the index of website
+    for jj in range(0,len(element_1)):
+        if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
+            if _date_ in element_1[jj].text:
+                match = re.search(r'%\s*(\S+)', element_1[jj].text)
+                if match:
+                    percentage_value = match.group(1)
+                    if percentage_value==_date_:
+                        corrent_jj=jj
+
+    #Identified the correct document for the current month
+    anchors = element_1[int(corrent_jj)].find_all('a')
+    hrefs = [a.get('href') for a in anchors]
+    for href in hrefs:
+        url_href=href
+        
+
+    #Main part of the documents
+    url_months="https://www.cystat.gov.cy/el"+url_href
+    bs = BeautifulSoup(url_months, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    element_soup = soup.find_all("a")
+    for i in soup.find_all('a'):
+        if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
+            url = i['href']
+
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open('CyStat/'+str(current_month)+'.docx', 'wb') as file:
+            file.write(response.content)
+
+    doc = Document('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx')
+    doc_text = ""
+    for table in doc.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                doc_text += cell.text + "\t"
+            doc_text += "\n"  
+
+    pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
+    match = re.search(pattern, doc_text)
+
+    pattern1 = r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
+    match1 = re.search(pattern1, doc_text)
+
+    if match:
+        cpi_month = match.groups()
+        cpi_month=float(cpi_month[1].replace(",","."))
+        
+        #identified the month CPI General
+        online_per_['Date'] = pd.to_datetime(online_per_['Date'])
+        date_to_find =last_results
+        index = online_per_.index[online_per_['Date'] == date_to_find].tolist()
+        values_12=float(online_per_.loc[index,"CPI General"])
+        
+        calcu_1= (cpi_month*100) /float(117.72)
+        calcu_2= (values_12*100) /float(77.89)
+
+        df_new_empty_ = pd.DataFrame()
+        df_new_empty_.loc[0,"Period"]=str(_date_)+"-24"
+        df_new_empty_.loc[0,"Official (2015=100)"]= float(cpi_month)
+        df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
+        df_new_empty_.loc[0,"Official (27/06/2024=100)"]=calcu_1
+        df_new_empty_.loc[0,"Online (27/06/2024=100)"]=calcu_2
+        
+        df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
+        df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
+        df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
+        df_tables.to_csv("CyStat/General_CPI_Offline_Vs_Online.csv",index=False)
+        
+    if match1:
+        values_after_gd = match1.groups()
+        #print(values_after_gd[1])
