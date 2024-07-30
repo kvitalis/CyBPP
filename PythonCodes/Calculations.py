@@ -193,6 +193,21 @@ if is_last_thursday(current_date):
     df_montly_division=pd.concat([df_5, df_montly_division], ignore_index=True)
     df_montly_division = df_montly_division.sort_values(by ='Date')
 
+    prior_df=df_montly_division[len(df_montly_division)-24:len(df_montly_division)-12]
+    current_df=df_montly_division[len(df_montly_division)-12:len(df_montly_division)]
+    unique_divisions = df_montly_division['Division'].unique()
+
+    for unique_ in unique_divisions:
+        df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
+        df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
+        calcualtion=((df_2-df_1)/df_1)*100
+    
+        index_list = current_df[current_df["Division"]==unique_]["CPI Division"].index.tolist()
+        float_index_list = [int(i) for i in index_list]
+        df_montly_division.loc[float_index_list,"Inflation (%)"]=calculation
+
+    df_montly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
+
     #Monthly-CPI-Genral-inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
