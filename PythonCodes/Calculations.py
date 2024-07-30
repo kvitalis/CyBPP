@@ -200,15 +200,15 @@ if is_last_thursday(current_date):
     for unique_ in unique_divisions:
         df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
         df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
-        calcualtion=((df_2-df_1)/df_1)*100
+        calculation=((df_2-df_1)/df_1)*100
     
         index_list = current_df[current_df["Division"]==unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        df_montly_division.loc[float_index_list,"Inflation (%)"]=calculation
+        df_montly_division.loc[float_index_list,"Monthly Change (%)"]=calculation
 
     df_montly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
-    #Monthly-CPI-Genral-inflation
+    #Monthly-CPI-General-Inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
     df_monthly_data["Inflation (%)"] = 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
