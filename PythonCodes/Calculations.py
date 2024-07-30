@@ -183,6 +183,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 #Read importnat files
 df_=pd.read_csv("Results/CPI-General-Inflation.csv")
 df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+df_montly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
 #Function's calculation of last Thursday
 def is_last_thursday(date):
@@ -195,6 +196,12 @@ def is_last_thursday(date):
 #Call the function
 if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
+    
+    #Monthly-CPI-Division
+    df_montly_division=pd.concat([df_current_date, df_montly_division], ignore_index=True)
+    df_montly_division = df_montly_division.sort_values(by ='Date')
+
+    #Monthly-CPI-Genral-inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
     df_monthly_data["Inflation (%)"] = 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
