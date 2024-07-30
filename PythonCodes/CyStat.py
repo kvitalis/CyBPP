@@ -107,9 +107,9 @@ def cystat(last_results):
         df_new_empty_.loc[0,"Online (27/06/2024=100)"]=calcu_2
         
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
-        df_tables.loc[len(df_tables)-1,"Official (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
-        df_tables.loc[len(df_tables)-1,"Online (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
-        df_tables.to_csv("CyStat/CPI_Offline_Vs_Online.csv",index=False)
+        df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
+        df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
+        df_tables.to_csv("CyStat/General_CPI_Offline_Vs_Online.csv",index=False)
         
     if match1:
         values_after_gd = match1.groups()
