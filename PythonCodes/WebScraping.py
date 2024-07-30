@@ -1351,8 +1351,8 @@ def results_the_royal_cigars(u):
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_pydixa(u):
-    response = requests.get(Item_url_)
-    
+    #response = requests.get(Item_url_)
+    """
     if response.status_code!=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1362,31 +1362,32 @@ def results_pydixa(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-        pdf = "PDFs/pixida.pdf"
-        with open(pdf, "wb") as f:
-            f.write(response.content)
-        with pdfplumber.open(pdf) as pdf:
-            page = pdf.pages[5]  
-            text = page.extract_text()
+    """
+    pdf = "PDFs/pixida.pdf"
+    #with open(pdf, "wb") as f:
+    #    f.write(response.content)
+    with pdfplumber.open(pdf) as pdf:
+        page = pdf.pages[5]  
+        text = page.extract_text()
 
-        matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
-        if matches:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))        
-            new_row.append(name_)
-            new_row.append(float(matches[0]))
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("Pyxida")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+    if matches:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
+        new_row.append(name_)
+        new_row.append(float(matches[0]))
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Pyxida")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
     values=0
