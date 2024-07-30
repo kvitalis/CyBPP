@@ -123,6 +123,7 @@ def is_first_thursday(date):
         last_results = last_results.strftime("%Y-%m-%d")
         cystat(last_results)
     else:
+        print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
         pass
 
 #Call function
