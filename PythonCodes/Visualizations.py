@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from datetime import datetime, timedelta 
 
-df_=pd.read_csv("Results/CPI-General-Inflation.csv")
+df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
 plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
