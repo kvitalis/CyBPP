@@ -17,10 +17,10 @@ today=datetime.today().strftime("%Y-%m-%d")
 #Read necessary data 
 raw_data_=pd.read_csv("Datasets/raw_data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
-cpi_division=pd.read_csv("Results/CPI-Subclass-Division.csv")
+cpi_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
 weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
 index_=pd.read_csv("Datasets/Reference_Values.csv")
-_cpi_=pd.read_csv("Results/CPI-Division.csv")
+_cpi_=pd.read_csv("Results/Daily-CPI-Division.csv")
 
 #DIVISION CPI
 row_data_today=raw_data_[raw_data_["Date"]==today]
@@ -129,7 +129,7 @@ df_5['Date'] = pd.to_datetime(df_5['Date'])
 df_5_a = pd.concat([df_5, _cpi_])
 df_5_a['Date'] = pd.to_datetime(df_5_a['Date'])
 df_5_a = df_5_a.sort_values(by='Date').reset_index(drop=True)
-df_5_a.to_csv("Results/CPI-Division.csv",index=False)
+df_5_a.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 del df_5["Date"]
 
@@ -139,7 +139,7 @@ df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass"
 df_6["Date"] =today
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
-combined_df.to_csv("Results/CPI-Subclass-Division.csv",index=False)
+combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
 #General CPI Inflation
 df_99=index_[["Division","Weight"]]
@@ -154,7 +154,7 @@ df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()
 
 #Read csv file
-df_104=pd.read_csv("Results/CPI-General-Inflation.csv")
+df_104=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 #Creat null list and add information
 new_row=[]
@@ -172,10 +172,10 @@ df_106.to_csv("Results/CPI-General-Inflation.csv", index=False)
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-#Read importnat files
-df_=pd.read_csv("Results/CPI-General-Inflation.csv")
+#Read important files
+df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-df_montly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
+df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
 #Function's calculation of last Thursday
 def is_last_thursday(date):
@@ -191,12 +191,12 @@ if is_last_thursday(current_date):
     
     #Monthly-CPI-Division
     df_5_5=df_5[["Division","CPI Division"]]
-    df_montly_division=pd.concat([df_5_5, df_montly_division], ignore_index=True)
-    df_montly_division = df_montly_division.sort_values(by ='Date')
+    df_monthly_division=pd.concat([df_5_5, df_monthly_division], ignore_index=True)
+    df_monthly_division = df_monthly_division.sort_values(by ='Date')
 
-    prior_df=df_montly_division[len(df_montly_division)-24:len(df_montly_division)-12]
-    current_df=df_montly_division[len(df_montly_division)-12:len(df_montly_division)]
-    unique_divisions = df_montly_division['Division'].unique()
+    prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
+    current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
+    unique_divisions = df_monthly_division['Division'].unique()
 
     for unique_ in unique_divisions:
         df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
@@ -205,9 +205,9 @@ if is_last_thursday(current_date):
     
         index_list = current_df[current_df["Division"]==unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        df_montly_division.loc[float_index_list,"Monthly Change (%)"]=calculation
+        df_monthly_division.loc[float_index_list,"Monthly Change (%)"]=calculation
 
-    df_montly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
+    df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly-CPI-General-Inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
