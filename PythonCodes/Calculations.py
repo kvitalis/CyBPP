@@ -190,7 +190,7 @@ if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
     
     #Monthly-CPI-Division
-    df_montly_division=pd.concat([df_current_date, df_montly_division], ignore_index=True)
+    df_montly_division=pd.concat([df_5, df_montly_division], ignore_index=True)
     df_montly_division = df_montly_division.sort_values(by ='Date')
 
     #Monthly-CPI-Genral-inflation
