@@ -2299,6 +2299,7 @@ list_["Price"].astype(float)
 #elapsed_time = end_time - start_time
 #print("Elapsed time:", elapsed_time/60, "minute")
 
+#Export/Save the scraped data 
 df.to_csv("Datasets/Raw-Data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
