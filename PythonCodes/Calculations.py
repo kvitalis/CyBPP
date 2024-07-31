@@ -1,4 +1,4 @@
-# Important Libraries
+# Important libraries
 import pandas as pd 
 import warnings
 import matplotlib.pyplot as plt
