@@ -110,10 +110,71 @@ def cystat(last_results):
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
         df_tables.to_csv("CyStat/General_CPI_Offline_Vs_Online.csv",index=False)
+    
+    #Division Cpi Offline
+    division_cpi_offline=pd.read_csv("CyStat/Division-CPI-Offline.csv")
+    
+    pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Αλκοολούχα Ποτά και Καπνός\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Ένδυση και Υπόδηση\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Στέγαση, Ύδρευση, Ηλεκτρισμός και Υγραέριο\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Επίπλωση, Οικιακός Εξοπλισμός και Προΐόντα Καθαρισμού\s+([\d,]+)\s+([\d,]+)",
+                  r"Υγεία\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Μεταφορές\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Επικοινωνίες\s+([\d,]+)\s+([\d,]+)",
+                  r"Αναψυχή και Πολιτισμός\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Εκπαίδευση\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Εστιατόρια και Ξενοδοχεία\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
+                  r"Άλλα Αγαθά και Υπηρεσίες\s+([\d,]+)\s+([\d,]+)"
+    ]
+    
+    division_name=["FOOD AND NON-ALCOHOLIC BEVERAGES",
+                   "ALCOHOLIC BEVERAGES AND TOBACCO",
+                   "CLOTHING AND FOOTWEAR",
+                   "HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",
+                   "FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",
+                   "HEALTH",
+                   "TRANSPORT",
+                   "COMMUNICATION",
+                   "RECREATION AND CULTURE",
+                   "EDUCATION",
+                   "RESTAURANTS AND HOTELS",
+                   "MISCELLANEOUS GOODS AND SERVICES"   
+    ]
+    
+    for i in range(0,len(pattern_list)):
+        match_ = re.search(pattern_list[i], doc_text)
+        if (i!=4 or i!=7):
+            if match_:
+                values_after_gd = match_.groups()
+                division_=values_after_gd[1].replace(",",".")
+        else:
+            if match_:
+                values_after_gd = match_.groups(2)
+                division_=values_after_gd[1].replace(",",".")
+         
+        new_row=[]
+        correction_day=current_date- timedelta(days=7)
+        new_row.append(correction_day.strftime("%Y-%m"))
+        new_row.append(division_name[i])
+        new_row.append(float(division_))
+        new_row.append(None)
+        division_cpi_offline.loc[len(division_cpi_offline)] = new_row
+            
+    prior_df=division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
+    current_df=division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
+    unique_divisions = division_cpi_offline['Division'].unique()
         
-    if match1:
-        values_after_gd = match1.groups()
-        #print(values_after_gd[1])
+    for unique_ in unique_divisions: 
+        df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
+        df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
+        calculation=((df_2-df_1)/df_1)*100
+    
+        index_list = current_df[current_df["Division"]==unique_]["CPI Division"].index.tolist()
+        float_index_list = [int(i) for i in index_list]
+        division_cpi_offline.loc[float_index_list,"Monthly Change (%)"]=calculation
+    
+    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
