@@ -9,7 +9,7 @@ from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
-#Important funcition
+#Important function
 def cystat(last_results):
     
     #Read importnat files
