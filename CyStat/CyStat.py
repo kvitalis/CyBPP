@@ -26,9 +26,12 @@ def cystat(last_results):
     #Calculation of the month
     current_date = datetime.now()
     current_date = datetime.strptime(current_date, "%Y-%m-%d")
-    current_month =current_date.month-1
-    current_year = current_date.year
-    current_day = current_date.day
+    correction_day = current_date - timedelta(days=7)
+    
+    current_month =correction_day.month
+    current_year = correction_day.year
+    current_day = correction_day.day
+    
     date = datetime(current_year, current_month,current_day)
     date_=format_date(date, 'MMMM', locale='el')
 
@@ -172,7 +175,32 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = calculation
     
-    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline.csv",index=False)
+    #Append the online resutls-After one week
+    daily_cpi_online=pd.read_csv("/Users/kendeas/Desktop/Daily-CPI-division.csv")
+    daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m")]
+
+    unique_values=daily_cpi_online["Division"].unique()
+    unique_val[-1] = unique_values[-1].strip()
+    for i in range(0,len(unique_values)):
+        indices=division_cpi_offline[division_cpi_offline["Division"]==unique_val[i]].index
+
+        values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i]]["CPI Division"]
+        division_cpi_offline.loc[indices,"Online CPI"]=values_1234.values
+
+    prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
+    current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
+    unique_divisions = division_cpi_offline['Division'].unique()
+
+    for unique_ in unique_divisions: 
+        df_1 = float(prior_df[prior_df["Division"] == unique_]["Online CPI"])
+        df_2 = float(current_df[current_df["Division"] == unique_]["Online CPI"])
+        calculation = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
+
+        index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
+        float_index_list = [int(i) for i in index_list]
+        division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
+        
+    division_cpi_offline.to_csv("/Users/kendeas/Desktop/Division-CPI-Offline.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
