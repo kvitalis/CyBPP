@@ -13,7 +13,7 @@ from datetime import date, timedelta , datetime
 def cystat(last_results):
     
     #Read important files
-    cystat_=pd.read_csv("CyStat/General-CPI-Offline-Vs-Online.csv")
+    cystat_=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
     online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     #Main part of the web scraping 
@@ -110,10 +110,10 @@ def cystat(last_results):
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
-        df_tables.to_csv("CyStat/General-CPI-Offline-Vs-Online.csv",index=False)
+        df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
     
     #Offline/Official CPI per Division
-    division_cpi_offline = pd.read_csv("CyStat/Division-CPI-Offline.csv")
+    division_cpi_offline = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     
     pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
                   r"Αλκοολούχα Ποτά και Καπνός\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
@@ -200,7 +200,7 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
         
-    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline.csv",index=False)
+    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
