@@ -1,3 +1,4 @@
+#Important libraries
 import pandas as pd 
 import re
 import requests
@@ -2171,7 +2172,7 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Calculation of the process time
+#Initialization of the scraping/processing time
 start_time = time.time()
 
 #Run the code
@@ -2292,7 +2293,7 @@ for u in range(0,len(urls)):
 #Change the type as float
 list_["Price"].astype(float)
 
-#Computational time
+#Total computational/processing time
 #end_time = time.time()
 #elapsed_time = end_time - start_time
 #print("Elapsed time:", elapsed_time/60, "minute")
