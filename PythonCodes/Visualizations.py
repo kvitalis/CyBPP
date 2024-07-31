@@ -1,9 +1,11 @@
+# Important libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from datetime import datetime
 from datetime import datetime, timedelta 
 
+# Important data values
 df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
