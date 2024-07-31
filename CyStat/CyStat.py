@@ -176,8 +176,8 @@ def cystat(last_results):
         division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = calculation
     
     #Append the online resutls-After one week
-    daily_cpi_online=pd.read_csv("/Users/kendeas/Desktop/Daily-CPI-division.csv")
-    daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m")]
+    daily_cpi_online=pd.read_csv("/Results/Daily-CPI-Division.csv")
+    daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
 
     unique_values=daily_cpi_online["Division"].unique()
     unique_val[-1] = unique_values[-1].strip()
@@ -200,7 +200,7 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
         
-    division_cpi_offline.to_csv("/Users/kendeas/Desktop/Division-CPI-Offline.csv",index=False)
+    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
