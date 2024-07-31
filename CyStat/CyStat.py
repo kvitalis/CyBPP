@@ -16,7 +16,7 @@ def cystat(last_results):
     cystat_=pd.read_csv("CyStat/General-CPI-Offline-Vs-Online.csv")
     online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
-    #Main part of web scrapping 
+    #Main part of web scraping 
     url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
@@ -40,7 +40,7 @@ def cystat(last_results):
     else:
         _date_=date_[:3]
 
-    #Specifed the index of website
+    #Specify the index of website
     for jj in range(0,len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
             if _date_ in element_1[jj].text:
@@ -50,13 +50,12 @@ def cystat(last_results):
                     if percentage_value==_date_:
                         corrent_jj=jj
 
-    #Identified the correct document for the current month
+    #Identify the correct document for the current month
     anchors = element_1[int(corrent_jj)].find_all('a')
     hrefs = [a.get('href') for a in anchors]
     for href in hrefs:
         url_href=href
         
-
     #Main part of the documents
     url_months="https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
@@ -66,7 +65,7 @@ def cystat(last_results):
     for i in soup.find_all('a'):
         if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
             url = i['href']
-
+            
     response = requests.get(url)
     if response.status_code == 200:
         with open('CyStat/'+str(current_month)+'.docx', 'wb') as file:
@@ -83,24 +82,22 @@ def cystat(last_results):
     pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
 
-    pattern1 = r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
-    match1 = re.search(pattern1, doc_text)
-
     if match:
         cpi_month = match.groups()
         cpi_month=float(cpi_month[1].replace(",","."))
         
         #identified the month CPI General
         online_per_['Date'] = pd.to_datetime(online_per_['Date'])
-        date_to_find =last_results
+        date_to_find = last_results
         index = online_per_.index[online_per_['Date'] == date_to_find].tolist()
-        values_12=float(online_per_.loc[index,"CPI General"])
-        
-        calcu_1= (cpi_month*100) /float(117.72)
-        calcu_2= (values_12*100) /float(77.89)
+        values_12 = float(online_per_.loc[index,"CPI General"])
+
+        #rebase the General CPI
+        calcu_1 = (cpi_month*100) / float(117.72)
+        calcu_2 = (values_12*100) / float(77.89)
 
         df_new_empty_ = pd.DataFrame()
-        correction_day=current_date- timedelta(days=7)
+        correction_day = current_date - timedelta(days=7)
         df_new_empty_.loc[0,"Period"]=correction_day.strftime("%Y-%m")
         df_new_empty_.loc[0,"Official (2015=100)"]= float(cpi_month)
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
