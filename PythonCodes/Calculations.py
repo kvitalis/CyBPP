@@ -43,7 +43,7 @@ new_row.append(ele_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
-#Water Board
+#Water supply
 waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
 
 larnaca_=0
@@ -148,7 +148,7 @@ df_99=index_[["Division","Weight"]]
 df_101=df_6[["Division","CPI Division"]]
 df_102 = df_101.drop_duplicates()
 
-#Merge dataframes
+#Merge data frames
 df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
 Cpi_general=df_103["New"].sum()
@@ -162,7 +162,7 @@ new_row.append(today)
 new_row.append(Cpi_general)
 new_row.append(None)
 
-#Combine the two dataframes
+#Combine the two data frames
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
 df_106['Inflation (%)']= 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
@@ -189,7 +189,7 @@ def is_last_thursday(date):
 if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
     
-    #Monthly-CPI-Division
+    #Monthly CPI per Division
     df_5_5=df_5[["Division","CPI Division"]]
     df_monthly_division=pd.concat([df_5_5, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
@@ -209,7 +209,7 @@ if is_last_thursday(current_date):
 
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
-    #Monthly-CPI-General-Inflation
+    #Monthly CPI General Inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
     df_monthly_data["Inflation (%)"] = 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1)    
