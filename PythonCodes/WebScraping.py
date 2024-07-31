@@ -25,7 +25,7 @@ warnings.simplefilter("ignore")
 
 #Read necessary data
 df = pd.read_csv("Datasets/Raw-Data.csv")
-urls=pd.read_csv("Datasets/ProductsUrls.csv")
+urls=pd.read_csv("Datasets/Products-Urls.csv")
 
 #Create a null dataframe
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -2302,4 +2302,4 @@ df.to_csv("Datasets/Raw-Data.csv", index=False)
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
-daily_errors.to_csv("Datasets/DailyScrapingErrors.csv",index=False)
+daily_errors.to_csv("Datasets/Daily-Scraping-Errors.csv",index=False)
