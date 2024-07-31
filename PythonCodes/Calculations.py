@@ -18,8 +18,8 @@ today=datetime.today().strftime("%Y-%m-%d")
 raw_data_=pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data_['Date'] = pd.to_datetime(raw_data_['Date'], format='%Y-%m-%d')
 cpi_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
-weight_=pd.read_csv("Datasets/Weights_Cystat.csv")
-index_=pd.read_csv("Datasets/Reference_Values.csv")
+weight_=pd.read_csv("Datasets/Weights-Cystat.csv")
+index_=pd.read_csv("Datasets/Reference-Values.csv")
 _cpi_=pd.read_csv("Results/Daily-CPI-Division.csv")
 
 #DIVISION CPI
