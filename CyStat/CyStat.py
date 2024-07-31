@@ -13,7 +13,7 @@ from datetime import date, timedelta , datetime
 def cystat(last_results):
     
     #Read importnat files
-    cystat_=pd.read_csv("CyStat/General_CPI_Offline_Vs_Online.csv")
+    cystat_=pd.read_csv("CyStat/General-CPI-Offline-Vs-Online.csv")
     online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     #Main part of web scrapping 
