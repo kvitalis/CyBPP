@@ -1,3 +1,4 @@
+# Important libraries
 import pandas as pd 
 import re
 import requests
@@ -27,7 +28,7 @@ warnings.simplefilter("ignore")
 df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
-#Create a null dataframe
+#Create a null data frame
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
@@ -58,59 +59,6 @@ def results_supermarketcy(urls):
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] =list_["Name"].apply(lambda x:x)
-
-"""
-def results_alphamega(urls):
-    header = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-              "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-              "Accept-Language":"en-GB,en-US;q=0.9,en;q=0.8",
-              "Accept-Encoding":"gzip, deflate, br, zstd",
-              "Sec-Fetch-Mode":"navigate",
-              "Upgrade-Insecure-Requests":"1",
-              "Sec-Ch-Ua-Mobile":"?0",
-              "Sec-Fetch-Site":"none",
-              "Sec-Fetch-Dest":"document",
-              "Sec-Fetch-User":"?1",
-              "Sec-Ch-Ua-Platform":"macOS",
-             "Cookie":"PriceAndActionsTemplate=PricesAndActionsTemplate; ProductSearchBarContentTemplate=SearchProductsTemplate; productListTemplate=ProductContainer; CookieInformationConsent=%7B%22website_uuid%22%3A%22ea90b431-dd9d-4865-8e36-58636aa46986%22%2C%22timestamp%22%3A%222023-06-15T21%3A39%3A59.041Z%22%2C%22consent_url%22%3A%22https%3A%2F%2Fwww.alphamega.com.cy%2Fel%2F%25CF%2580%25CF%2581%25CE%25BF%25CE%25B9%25CE%25BF%25CE%25BD%25CF%2584%25CE%25B1%2F%25CF%2586%25CF%2581%25CE%25B5%25CF%2583%25CE%25BA%25CE%25B1%2F%25CF%2586%25CE%25BF%25CF%2585%25CF%2581%25CE%25BD%25CE%25BF%25CF%2582%2F%25CF%2588%25CF%2589%25CE%25BC%25CE%25B9%2F%25CF%2588%25CF%2589%25CE%25BC%25CE%25B9-%25CE%25B6%25CE%25B5%25CE%25B1%25CF%2582-400-g%22%2C%22consent_website%22%3A%22alphamega.staging.dynamicweb-cms.com%22%2C%22consent_domain%22%3A%22www.alphamega.com.cy%22%2C%22user_uid%22%3A%22d3f9fbe2-b096-443f-b5e1-805599505663%22%2C%22consents_approved%22%3A%5B%22cookie_cat_necessary%22%2C%22cookie_cat_functional%22%2C%22cookie_cat_statistic%22%2C%22cookie_cat_marketing%22%2C%22cookie_cat_unclassified%22%5D%2C%22consents_denied%22%3A%5B%5D%2C%22user_agent%22%3A%22Mozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F113.0.0.0%20Safari%2F537.36%22%7D; ASP.NET_SessionId=14iuimihn4lz2ibafbjrcfvh; rsa=9E1E1A5D-2E6C-B8A6-8FB8-49C402EEA11E; _gcl_au=1.1.90441651.1708593336; _fbp=fb.2.1708593336575.123936726; _gid=GA1.3.1240817243.1708710009; rsaSession=31A85D7C-11D8-7A64-0A6D-490AAB949819; _ga=GA1.1.1031592513.1708593336; _ga_6L0WTPE54M=GS1.1.1708723542.4.1.1708725180.60.0.0; _uetsid=9686f300d27211eebbbd2b2154132f89; _uetvid=f0609fa0d16211ee8b6499903869154e",
-             "Sec-Ch-Ua":'Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121'}
-    
-    url_new="https://www.alphamega.com.cy/en/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/saint-george-cyprus-extra-virgin-olive-oil-1l"
-    response = requests.get(url_new, headers=header)
-    div_wapper=soup.find_all("div",{"class":"price price--product-page dw-mod"})#,"style":"display: inline;"})
-    div_wapper_string = str(div_wapper)
-    pattern_price = '"price":.*\,'
-    pattern_name= '"name":.*\,'
-    price_ini = re.findall(pattern_price,div_wapper_string)
-    name_ini= re.findall(pattern_name,div_wapper_string)
-    price_pattern = r'"price": "(\d+(?:,\d*)?\.\d+)"'
-    name_pattern=r'"name": "(.*?)",'
-    extracted_names = set()
-
-    # Loop through the prices_list and extract the numeric values using the pattern
-    for price_string in price_ini:
-        match = re.search(price_pattern, price_string)
-        if match:
-            price=float(match.group(1).replace(',', '.'))
-            print(price)
-                
-    for name_string in name_ini:
-        match = re.search(name_pattern, name_string)
-        if match:
-            extracted_names.add(match.group(1))
-
-    name = list(extracted_names)
-        
-    new_row= []
-    new_row.append(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-    new_row.append(name)
-    new_row.append(price)
-    new_row.append(subclass_)
-    new_row.append(commodity_)
-    new_row.append("Alphamega")
-    list_.loc[len(list_)] = new_row
-    list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 
 def results_fuelDaddy(urls):
     new_row=[]
@@ -1134,6 +1082,7 @@ def results_water(u):
             if match:
                 price_ = match.group(1)
                 price_=float((price_).replace(",","."))/2
+                print(price_)
 
         if name_=="Κυβικά ανά μήνα":
             element_=soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
@@ -1403,8 +1352,8 @@ def results_the_royal_cigars(u):
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_pydixa(u):
-    response = requests.get(Item_url_)
-    
+    #response = requests.get(Item_url_)
+    """
     if response.status_code!=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1414,31 +1363,32 @@ def results_pydixa(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-        pdf = "PDFs/pixida.pdf"
-        with open(pdf, "wb") as f:
-            f.write(response.content)
-        with pdfplumber.open(pdf) as pdf:
-            page = pdf.pages[5]  
-            text = page.extract_text()
+    """
+    pdf = "PDFs/pixida.pdf"
+    #with open(pdf, "wb") as f:
+    #    f.write(response.content)
+    with pdfplumber.open(pdf) as pdf:
+        page = pdf.pages[5]  
+        text = page.extract_text()
 
-        matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
-        if matches:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))        
-            new_row.append(name_)
-            new_row.append(float(matches[0]))
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("Pyxida")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+    if matches:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
+        new_row.append(name_)
+        new_row.append(float(matches[0]))
+        new_row.append(subclass_)
+        new_row.append(commodity_)
+        new_row.append("Pyxida")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(commodity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
     values=0
@@ -1763,12 +1713,14 @@ def results_ithaki(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_flames(u):
+    #response = requests.get(Item_url_)
 
     #Mixed Grill 
     if name_=="Mixed Grill for 2 persons - Famagusta":
-        
         pdf1 = "PDFs/flames_grilled_dishes.pdf"
-        
+    
+        #with open(pdf1, "wb") as f:
+        #    f.write(response.content)
         with pdfplumber.open(pdf1) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
@@ -1787,9 +1739,11 @@ def results_flames(u):
 
     #Flames Special Cyprus (Meze)
     if name_=="Meat Meze for 2 persons - Famagusta":
-        
         pdf2 = "PDFs/flames_cyprus_dishes.pdf"
-
+    
+        #with open(pdf2, "wb") as f:
+        #    f.write(response.content)
+    
         with pdfplumber.open(pdf2) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
@@ -2191,42 +2145,7 @@ def results_leroymerlin(u):
         new_row.append("Leroy Merlin") 
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
-def results_public(u):
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs,{'headers':header})
 
-    if (response.status_code != 200) or ("Ουπς! Αυτή τη σελίδα μάλλον δεν έπρεπε να τη δεις. Ξεκίνα από την αρχή και ανακάλυψε χιλιάδες είδη τεχνολογίας, ψυχαγωγίας και ειδών σπιτιού!" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(commodity_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        sale_prices = re.findall(r'"salePrice":(\d+\.\d+)', str(soup))
-        if sale_prices:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append((float(sale_prices[-1])))
-            new_row.append(subclass_)
-            new_row.append(commodity_)  
-            new_row.append("Public")
-            list_.loc[len(list_)] = new_row
-            list_["Name"] =list_["Name"].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(commodity_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-"""
 def stock_center_results(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -2253,9 +2172,6 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Calculation of the process time
-start_time = time.time()
-
 #Run the code
 for u in range(0,len(urls)):
     print(u)
@@ -2274,8 +2190,6 @@ for u in range(0,len(urls)):
 
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
-    #elif retailer_=="Alphamega":
-        #results_alphamega(u)
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
@@ -2370,10 +2284,12 @@ for u in range(0,len(urls)):
         results_leroymerlin(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
-    #elif retailer_=="Public":
-        #results_public(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
+    #elif retailer_=="Public":
+        #results_public(u)
+     #elif retailer_=="Alphamega":
+        #results_alphamega(u)
 
 #================================================================================
 #Manually added data            
@@ -2462,7 +2378,7 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
 
-annual_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
+monthly_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
-combined_annual=pd.concat([annual_errors, daily_errors], axis=0)
-combined_annual.to_csv("Datasets/Monthly-Scraping-Errors.csv", index=False , header=True)
+combined_monthly=pd.concat([monthly_errors, daily_errors], axis=0)
+combined_monthly.to_csv("Datasets/Monthly-Scraping-Errors.csv", index=False , header=True)
