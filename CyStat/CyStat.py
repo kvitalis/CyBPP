@@ -100,7 +100,8 @@ def cystat(last_results):
         calcu_2= (values_12*100) /float(77.89)
 
         df_new_empty_ = pd.DataFrame()
-        df_new_empty_.loc[0,"Period"]=str(_date_)+"-24"
+        correction_day=current_date- timedelta(days=7)
+        df_new_empty_.loc[0,"Period"]=correction_day.strftime("%Y-%m")
         df_new_empty_.loc[0,"Official (2015=100)"]= float(cpi_month)
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
         df_new_empty_.loc[0,"Official (27/06/2024=100)"]=calcu_1
