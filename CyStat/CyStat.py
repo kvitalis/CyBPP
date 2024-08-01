@@ -204,7 +204,7 @@ def cystat(last_results):
     unique_values=daily_cpi_online["Division"].unique()
     for i in range(0,len(unique_values)):
         indices=division_cpi_offline[division_cpi_offline["Division"]==unique_values[i].strip()].index
-        values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i].strip()]["CPI Division"]
+        values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i]]["CPI Division"]
         print(values_1234.values[0])
         division_cpi_offline.loc[indices[-1],"Online CPI"]=values_1234.values[0]
 
