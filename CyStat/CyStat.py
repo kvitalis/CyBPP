@@ -204,10 +204,8 @@ def cystat(last_results):
     unique_values=daily_cpi_online["Division"].unique()
     for i in range(0,len(unique_values)):
         indices=division_cpi_offline[division_cpi_offline["Division"]==unique_values[i].strip()].index
-        print(indices)
         values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i].strip()]["CPI Division"]
-        print(values_1234)
-        division_cpi_offline.loc[indices,"Online CPI"]=values_1234.values
+        division_cpi_offline.loc[indices[-1],"Online CPI"]=values_1234.values
 
     prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
     current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
