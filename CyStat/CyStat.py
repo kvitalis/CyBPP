@@ -198,7 +198,7 @@ def cystat(last_results):
     print("10")
     
     #Append the online results after one week
-    daily_cpi_online=pd.read_csv("/Results/Daily-CPI-Division.csv")
+    daily_cpi_online=pd.read_csv("Results/Daily-CPI-Division.csv")
     daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
 
     unique_values=daily_cpi_online["Division"].unique()
@@ -222,7 +222,7 @@ def cystat(last_results):
 
     print("11")
     
-    division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
+    division_cpi_offline.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
