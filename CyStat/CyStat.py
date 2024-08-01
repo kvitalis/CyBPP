@@ -1,4 +1,5 @@
 #Important libraries
+pip install -r requirements.txt
 import pandas as pd 
 import re
 import requests
