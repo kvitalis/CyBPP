@@ -15,7 +15,8 @@ def cystat(last_results):
     #Read important files
     cystat_=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
     online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-    
+
+    print("1")
     #Main part of the web scraping 
     url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
@@ -23,6 +24,7 @@ def cystat(last_results):
     soup = BeautifulSoup(response.content, "html.parser")
     element_1=soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
 
+    print("2")
     #Calculation of the month
     current_date = datetime.now()
     current_date = datetime.strptime(current_date, "%Y-%m-%d")
@@ -43,6 +45,7 @@ def cystat(last_results):
     else:
         _date_=date_[:3]
 
+    print("3")
     #Specify the index of website
     for jj in range(0,len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
@@ -58,7 +61,8 @@ def cystat(last_results):
     hrefs = [a.get('href') for a in anchors]
     for href in hrefs:
         url_href=href
-        
+
+    print("4")
     #Main part of the documents
     url_months="https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
@@ -74,6 +78,7 @@ def cystat(last_results):
         with open('CyStat/'+str(current_month)+'.docx', 'wb') as file:
             file.write(response.content)
 
+    print("5")
     doc = Document('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
@@ -95,6 +100,7 @@ def cystat(last_results):
         index = online_per_.index[online_per_['Date'] == date_to_find].tolist()
         values_12 = float(online_per_.loc[index,"CPI General"])
 
+        print("6")
         #rebase the General CPI
         calcu_1 = (cpi_month*100) / float(117.72)
         calcu_2 = (values_12*100) / float(77.89)
@@ -106,7 +112,8 @@ def cystat(last_results):
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
         df_new_empty_.loc[0,"Official (27/06/2024=100)"]=calcu_1
         df_new_empty_.loc[0,"Online (27/06/2024=100)"]=calcu_2
-        
+
+        print("7")
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
@@ -161,7 +168,8 @@ def cystat(last_results):
         new_row.append(float(division_))
         new_row.append(None)
         division_cpi_offline.loc[len(division_cpi_offline)] = new_row
-            
+
+    print("8")
     prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
     current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
     unique_divisions = division_cpi_offline['Division'].unique()
@@ -174,7 +182,8 @@ def cystat(last_results):
         index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = calculation
-    
+
+    print("9")
     #Append the online resutls-After one week
     daily_cpi_online=pd.read_csv("/Results/Daily-CPI-Division.csv")
     daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
@@ -197,7 +206,8 @@ def cystat(last_results):
         index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
-        
+
+    print("10")
     division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
 def is_first_thursday(date):
