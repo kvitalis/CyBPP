@@ -131,7 +131,7 @@ def cystat(last_results):
         print("8")
 
     #Offline/Official CPI per Division
-    division_cpi_offline = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
+    division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     
     pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
                   r"Αλκοολούχα Ποτά και Καπνός\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
@@ -180,13 +180,13 @@ def cystat(last_results):
         new_row.append(None)
         new_row.append(None)
         new_row.append(None)
-        division_cpi_offline.loc[len(division_cpi_offline)] = new_row
+        division_cpi.loc[len(division_cpi)] = new_row
 
     print("9")
     
-    prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
-    current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
-    unique_divisions = division_cpi_offline['Division'].unique()
+    prior_df = division_cpi[len(division_cpi)-24:len(division_cpi)-12]
+    current_df = division_cpi[len(division_cpi)-12:len(division_cpi)]
+    unique_divisions = division_cpi['Division'].unique()
         
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Official CPI"])
@@ -195,7 +195,7 @@ def cystat(last_results):
     
         index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
+        division_cpi.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
 
     print("10")
     
@@ -205,14 +205,14 @@ def cystat(last_results):
 
     unique_values=daily_cpi_online["Division"].unique()
     for i in range(0,len(unique_values)):
-        indices=division_cpi_offline[division_cpi_offline["Division"]==unique_values[i].strip()].index
+        indices=division_cpi[division_cpi["Division"]==unique_values[i].strip()].index
         values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i]]["CPI Division"]
         print(values_1234.values[0])
-        division_cpi_offline.loc[indices[-1],"Online CPI"]=values_1234.values[0]
+        division_cpi.loc[indices[-1],"Online CPI"]=values_1234.values[0]
 
-    prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
-    current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
-    unique_divisions = division_cpi_offline['Division'].unique()
+    prior_df = division_cpi[len(division_cpi)-24:len(division_cpi)-12]
+    current_df = division_cpi[len(division_cpi)-12:len(division_cpi)]
+    unique_divisions = division_cpi['Division'].unique()
 
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Online CPI"])
@@ -221,11 +221,11 @@ def cystat(last_results):
 
         index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = round(online_change,2)
+        division_cpi.loc[float_index_list, "Online Monthly Change (%)"] = round(online_change,2)
 
     print("11")
     
-    division_cpi_offline.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
+    division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
