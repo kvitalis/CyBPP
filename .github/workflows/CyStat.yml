@@ -31,6 +31,7 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
           pip install -r requirements.txt
+          pip install python-docx
       
       - name: Run CyStat.py
         run: |
