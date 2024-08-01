@@ -27,7 +27,8 @@ def cystat(last_results):
     print("2")
     #Calculation of the month
     current_date = datetime.now()
-    current_date = datetime.strptime(current_date, "%Y-%m-%d")
+    current_date = current_date.strftime("%Y-%m-%d")
+    ###current_date = datetime.strptime(current_date, "%Y-%m-%d")
     correction_day = current_date - timedelta(days=7)
     
     current_month =correction_day.month
