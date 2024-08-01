@@ -104,26 +104,30 @@ def cystat(last_results):
         values_12 = float(online_per_.loc[index,"CPI General"])
 
         print("6")
+        
         #rebase the General CPI
-        calcu_1 = (cpi_month*100) / float(117.72)
-        calcu_2 = (values_12*100) / float(77.89)
+        rebase_offline = (cpi_month*100) / float(117.72)
+        rebase_online = (values_12*100) / float(77.89)
 
         df_new_empty_ = pd.DataFrame()
         correction_day = current_date - timedelta(days=7)
-        df_new_empty_.loc[0,"Period"]=correction_day.strftime("%Y-%m")
+        df_new_empty_.loc[0,"Period"] = correction_day.strftime("%Y-%m")
         df_new_empty_.loc[0,"Official (2015=100)"]= float(cpi_month)
-        df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
-        df_new_empty_.loc[0,"Official (27/06/2024=100)"]=calcu_1
-        df_new_empty_.loc[0,"Online (27/06/2024=100)"]=calcu_2
-        df_new_empty_.loc[0,"Official Inflation (%)"]=None
-        df_new_empty_.loc[0,"Online Inflation (%)"]=None
+        df_new_empty_.loc[0,"Online (27/06/2024=77.89)"] = values_12
+        df_new_empty_.loc[0,"Official (27/06/2024=100)"] = rebase_offline
+        df_new_empty_.loc[0,"Online (27/06/2024=100)"] = rebase_online
+        df_new_empty_.loc[0,"Official Inflation (%)"] = None
+        df_new_empty_.loc[0,"Online Inflation (%)"] = None
 
         print("7")
+        
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
-        df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (27/06/2024=100)"] - df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]) / df_tables.loc[len(df_tables)-2,"Official (27/06/2024=100)"]
+        df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Official (2015=100)"] - df_tables.loc[len(df_tables)-2,"Official (2015=100)"]) / df_tables.loc[len(df_tables)-2,"Official (2015=100)"]
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = 100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
-    
+
+        print("8")
+
     #Offline/Official CPI per Division
     division_cpi_offline = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     
@@ -174,7 +178,8 @@ def cystat(last_results):
         new_row.append(None)
         division_cpi_offline.loc[len(division_cpi_offline)] = new_row
 
-    print("8")
+    print("9")
+    
     prior_df = division_cpi_offline[len(division_cpi_offline)-24:len(division_cpi_offline)-12]
     current_df = division_cpi_offline[len(division_cpi_offline)-12:len(division_cpi_offline)]
     unique_divisions = division_cpi_offline['Division'].unique()
@@ -188,7 +193,8 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = calculation
 
-    print("9")
+    print("10")
+    
     #Append the online resutls-After one week
     daily_cpi_online=pd.read_csv("/Results/Daily-CPI-Division.csv")
     daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
@@ -212,7 +218,8 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
 
-    print("10")
+    print("11")
+    
     division_cpi_offline.to_csv("/CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
 def is_first_thursday(date):
