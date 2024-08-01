@@ -77,7 +77,8 @@ def cystat(last_results):
             
     response = requests.get(url)
     if response.status_code == 200:
-        with open('CyStat/'+str(current_month)+'.docx', 'wb') as file:
+        with open('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
+            print("Yes/Ok")
             file.write(response.content)
 
     print("5")
