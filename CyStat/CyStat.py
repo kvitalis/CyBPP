@@ -115,6 +115,8 @@ def cystat(last_results):
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"]=values_12
         df_new_empty_.loc[0,"Official (27/06/2024=100)"]=calcu_1
         df_new_empty_.loc[0,"Online (27/06/2024=100)"]=calcu_2
+        df_new_empty_.loc[0,"Official Inflation (%)"]=None
+        df_new_empty_.loc[0,"Online Inflation (%)"]=None
 
         print("7")
         df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
