@@ -176,6 +176,7 @@ def cystat(last_results):
         new_row.append(division_name[i])
         new_row.append(float(division_))
         new_row.append(None)
+        new_row.append(None)
         division_cpi_offline.loc[len(division_cpi_offline)] = new_row
 
     print("9")
