@@ -189,15 +189,15 @@ def cystat(last_results):
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Official CPI"])
         df_2 = float(current_df[current_df["Division"] == unique_]["Official CPI"])
-        calculation = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
+        percentage_change = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
     
         index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = calculation
+        division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = percentage_change
 
     print("10")
     
-    #Append the online resutls-After one week
+    #Append the online results after one week
     daily_cpi_online=pd.read_csv("/Results/Daily-CPI-Division.csv")
     daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
 
