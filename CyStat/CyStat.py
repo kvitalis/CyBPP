@@ -189,11 +189,11 @@ def cystat(last_results):
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Official CPI"])
         df_2 = float(current_df[current_df["Division"] == unique_]["Official CPI"])
-        percentage_change = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
+        official_change = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
     
         index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = percentage_change
+        division_cpi_offline.loc[float_index_list, "Official Monthly Change (%)"] = official_change
 
     print("10")
     
@@ -214,11 +214,11 @@ def cystat(last_results):
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Online CPI"])
         df_2 = float(current_df[current_df["Division"] == unique_]["Online CPI"])
-        calculation = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
+        online_change = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
 
         index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = calculation
+        division_cpi_offline.loc[float_index_list, "Online Monthly Change (%)"] = online_change
 
     print("11")
     
