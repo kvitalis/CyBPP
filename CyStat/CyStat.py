@@ -17,6 +17,7 @@ def cystat(last_results):
     online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 
     print("1")
+   
     #Main part of the web scraping 
     url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
@@ -25,6 +26,7 @@ def cystat(last_results):
     element_1=soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
 
     print("2")
+    
     #Calculation of the month
     current_date = datetime.now()
     current_date = current_date.strftime("%Y-%m-%d")
@@ -48,6 +50,7 @@ def cystat(last_results):
         _date_=date_[:3]
 
     print("3")
+   
     #Specify the index of website
     for jj in range(0,len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
@@ -65,6 +68,7 @@ def cystat(last_results):
         url_href=href
 
     print("4")
+    
     #Main part of the documents
     url_months="https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
@@ -82,6 +86,7 @@ def cystat(last_results):
             file.write(response.content)
 
     print("5")
+    
     doc = Document('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
@@ -112,7 +117,9 @@ def cystat(last_results):
         rebase_online = (values_12*100) / float(77.89)
 
         df_new_empty_ = pd.DataFrame()
+        
         correction_day = current_date - timedelta(days=7)
+        
         df_new_empty_.loc[0,"Period"] = correction_day.strftime("%Y-%m")
         df_new_empty_.loc[0,"Official (2015=100)"]= round(float(cpi_month),2)
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"] = values_12
@@ -131,6 +138,7 @@ def cystat(last_results):
         print("8")
 
     #Offline/Official CPI per Division
+    
     division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     
     pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})",
@@ -199,7 +207,7 @@ def cystat(last_results):
 
     print("10")
     
-    #Append the online results after one week
+    #Online CPI per Division
     daily_cpi_online=pd.read_csv("Results/Daily-CPI-Division.csv")
     daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
 
