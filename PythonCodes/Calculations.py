@@ -101,7 +101,7 @@ group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #weight_=pd.read_csv("Datasets/Weights-Cystat.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
-df_1["Weight_Price_Subclass"]=df_1["Price"]*df_1["Weight"]
+df_1["Weight_Price_Subclass"] = round( df_1["Price"]*df_1["Weight"], 4)
 
 df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
