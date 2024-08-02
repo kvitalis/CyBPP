@@ -1,5 +1,5 @@
 
-# The Cyprus' Billion Prices Project
+# The Cyprus' Billion Prices Project (CyBPP)
 
 ## Overview
 
@@ -158,7 +158,7 @@ CyStat collects the prices of goods and services only in urban districts of Nico
 
 The prices of 805 goods and services are recorded once every month, except for some seasonal products (e.g. vegetables and fruits), meat and fuels, whose prices are collected every week (every Thursday). From January 2016 and onwards, the CPI reference period (base year) is 2015.
 
-The 'Cystat' folder includes all the necessary files for the results comparison between Cyprus' BPP and Cystat on a monthly basis. In particular, the 'Cystat.py' file, which is called from the workflows file 'CyStat.yml' on the first Thursday of each month, reads the 'Products-Urls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'Raw-Data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+The 'Cystat' folder includes all the necessary files for the results comparison between CyBPP and CyStat on a monthly basis. In particular, the 'CyStat.py' file, which is called from the workflows file 'CyStat.yml' on the first Thursday of each month, initially locates the official CPI report file in the CyStat's website (https://www.cystat.gov.cy/en/SubthemeStatistics?id=47), then collects the CPI monthly data presented in Table 1 in the report, and finally stores it in the 'Raw-Data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
 In Figure 1, we show the evolution of the General CPI of Cyprus as estimated by this work (online data) and CYSTAT (official/offline data).
 
