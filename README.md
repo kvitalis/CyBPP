@@ -149,3 +149,6 @@ This workflow file schedules the execution of the 'SecondIteration.py' script at
 This workflow file schedules the execution of the 'Calculations.py' script at around 16:00 (UTC time) every day.
 ### 4. Visualizations.yml: 
 This workflow file schedules the execution of the 'Visualizations.py' script at around 17:00 (UTC time) every day.
+
+## Comparison with the Cyprus Statistical Service (CyStat)
+
