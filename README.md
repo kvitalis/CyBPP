@@ -152,3 +152,5 @@ This workflow file schedules the execution of the 'Visualizations.py' script at 
 
 ## Comparison with the Cyprus Statistical Service (CyStat)
 
+The official CPI measurement is performed by the Cyprus Statistical Service ([CYSTAT](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)), which hires many people to visit about hundreds of stores on a monthly basis to collect the prices (offline).
+
