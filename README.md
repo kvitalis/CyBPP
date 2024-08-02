@@ -152,5 +152,13 @@ This workflow file schedules the execution of the 'Visualizations.py' script at 
 
 ## Comparison with the Cyprus Statistical Service (CyStat)
 
-The official CPI measurement is performed by the Cyprus Statistical Service ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)), which hires many people to visit about hundreds of stores on a monthly basis to collect the prices (offline).
+The official/offline CPI Inflation measurement is performed by the Cyprus Statistical Service ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)), which publishes the results of the current month on the first Thursday of the next month. 
+
+CyStat collects the prices of goods and services only in urban districts of Nicosia, Larnaca, Limassol and Paphos. For each city, the fluctuations in the product prices each month, are weighted according to their population. Specifically, the weights for the four districts are: Nicosia 42%, Limassol 30%, Larnaca 18%, and Paphos 10%. 
+
+The prices of 805 goods and services are recorded once every month, except for some seasonal products (e.g. vegetables and fruits), meat and fuels, whose prices are collected every week (every Thursday). From January 2016 and onwards, the CPI reference period (base year) is 2015.
+
+The 'Cystat' folder includes all the necessary files for the results comparison between Cyprus' BPP and Cystat on a monthly basis. In particular, the 'Cystat.py' file, which is called from the workflows file 'CyStat.yml' on the first Thursday of each month, reads the 'Products-Urls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'Raw-Data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+
+In Figure 1, we show the evolution of the General CPI of Cyprus as estimated by this work (online data) and CYSTAT (official/offline data).
 
