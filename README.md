@@ -3,33 +3,33 @@
 
 ## Overview
 
-The 'Billion Prices Project' ([BPP](https://thebillionpricesproject.com/)) is an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
+The *Billion Prices Project* ([BPP](https://thebillionpricesproject.com/)) is an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
 
-Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2200 goods and services from over 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) Inflation by using standard methods. 
+Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2200 goods and services from over 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
 
 ## Python Codes
 
 ### 1. Web Scraping
 
-Since the main objective of this project is the calculation of the Consumer Price Index (CPI) Inflation using the online prices of products (goods and services) in the fixed/pre-selected and representative CPI basket, the first step is the collection of the products' data and its storage. The 'WebScraping.py' file deals with the web scraping of this data. This Python file, which is called daily from the workflows file 'WebScraping.yml' at around 09:00 (UTC time), firstly reads the 'Products-Urls.csv' file (Datasets), then collects the data available online, and finally stores it in the 'Raw-Data.csv' file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+Since the main objective of this project is the calculation of the CPI Inflation using the online prices of products (goods and services) in the fixed/pre-selected and representative CPI basket, the first step is the collection of the products' data and its storage. The *WebScraping.py* file deals with the web scraping of this data. This Python file, which is called daily from the workflows file *WebScraping.yml* at around 09:00 (UTC time), firstly reads the *Products-Urls.csv* file (Datasets), then collects the data available online, and finally stores it in the *Raw-Data.csv* file (Datasets). The storage is done in the form of a table and has the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
-At the same time, emphasis is given on the products for which the data has not been scraped for some reason, e.g. at the time of web-scraping a retailer's website is unavailable either for maintenance reasons or due to traffic reasons. The data of these products are stored in the 'Daily-Scraping-Errors.csv' file (Datasets) to be retrieved in a subsequent scraping process. 
+At the same time, emphasis is given on the products for which the data has not been scraped for some reason, e.g. at the time of web-scraping a retailer's website is unavailable either for maintenance reasons or due to traffic reasons. The data of these products are stored in the *Daily-Scraping-Errors.csv* file (Datasets) to be retrieved in a subsequent scraping process. 
 
 ### 2. Second Iteration 
 
-As mentioned above, there is a need to retrieve the data of the products that was not scraped during the initial procedure. Hence, we run a second scraping iteration  through the 'SecondIteration.py' file about 6 hours after the first scraping. This Python file reads only the 'Daily-Scraping-Errors.csv' file (Datasets), then it scrapes the available data and finaly stores it in the 'Raw-Data.csv' file (Datasets). After the second iteration procedure, any data which remains unavailable is stored in the 'Monthly-Scraping-Errors.csv' file (Datasets). The 'SecondIteration.py' file is called from the workflows file 'SecondIteration.yml' at around 15:00 (UTC time) every day.
+As mentioned above, there is a need to retrieve the data of the products that was not scraped during the initial procedure. Hence, we run a second scraping iteration  through the *SecondIteration.py* file about 6 hours after the first scraping. This Python file reads only the *Daily-Scraping-Errors.csv* file (Datasets), then it scrapes the available data and finaly stores it in the *Raw-Data.csv* file (Datasets). After the second iteration procedure, any data which remains unavailable is stored in the *Monthly-Scraping-Errors.csv* file (Datasets). The *SecondIteration.py* file is called from the workflows file *SecondIteration.yml* at around 15:00 (UTC time) every day.
 
 ### 3. Calculations 
 
-This Python file, which is called from the workflows file 'Calculations.yml' around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with the Billion Prices Project. To do so, the 'Calculations.py' file first reads the 'Raw-Data.csv' file (Datasets), then performs the appropriate calculations using standard techniques and the 'Weights-Cystat.csv' and 'Reference-Values.csv' files (Datasets), and finally stores the results in the 'CPI-Subclass-Division.csv', 'CPI-Division.csv', and 'CPI-General-Inflation.csv' files (Results).
+This Python file, which is called from the workflows file *Calculations.yml* around 16:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with BPP. To do so, the *Calculations.py* file first reads the *Raw-Data.csv* file (Datasets), then performs the appropriate calculations using standard techniques and the *Weights-Cystat.csv* and *Reference-Values.csv* files (Datasets), and finally stores the results in the *Daily-CPI-Subclass-Division.csv*, *Daily-CPI-Division.csv*, and *Daily-CPI-General-Inflation.csv* files (Results).
 
 ### 4. Visualizations 
 
-Finally, the 'Visualizations.py' reads the 'CPI-General-Inflation.csv' file and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in png formats (Results). This Python file is called from the workflows file 'Visualizations.yml' at around 17:00 (UTC time) every day.
+Finally, the *Visualizations.py* reads the *Daily-CPI-General-Inflation.csv* file and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in PNG formats (Results). This Python file is called from the workflows file *Visualizations.yml* at around 17:00 (UTC time) every day.
 
 ## Online Retailers
 
-According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 53 selected online retailers chosen for the development of the Cyprus CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is unexpected to collect data from their websites due to the following main reasons: (i) some retailers do not have websites, and (ii) some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
+According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 53 selected online retailers chosen for the development of the Cyprus' CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is unexpected to collect data from their websites due to the following main reasons: (i) some retailers do not have websites, and (ii) some have websites but possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
 1. Adventure Without Limits (AWOL) https://www.awol.com.cy/ 
 
@@ -142,22 +142,22 @@ According to the representativeness of each product and its retailer within the 
 The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the ./github/workflows directory:
 
 ### 1. WebScraping.yml: 
-This workflow file schedules the execution of the 'WebScraping.py' script at around 09:00 (UTC time) every day.
+This workflow file schedules the execution of the *WebScraping.py* script at around 09:00 (UTC time) every day.
 ### 2. SecondIteration.yml: 
-This workflow file schedules the execution of the 'SecondIteration.py' script at around 15:00 (UTC time) every day.
+This workflow file schedules the execution of the *SecondIteration.py* script at around 15:00 (UTC time) every day.
 ### 3. Calculations.yml: 
-This workflow file schedules the execution of the 'Calculations.py' script at around 16:00 (UTC time) every day.
+This workflow file schedules the execution of the *Calculations.py* script at around 16:00 (UTC time) every day.
 ### 4. Visualizations.yml: 
-This workflow file schedules the execution of the 'Visualizations.py' script at around 17:00 (UTC time) every day.
+This workflow file schedules the execution of the *Visualizations.py* script at around 17:00 (UTC time) every day.
 
 ## Comparison with the Cyprus Statistical Service (CyStat)
 
-The official/offline CPI Inflation measurement is conducted by the Cyprus Statistical Service ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)). CyStat publishes the (offline) CPI data on the first Thursday of each month, reflecting the inflation rate for the preceding month, year and period. This regular release provides an official and comprehensive overview of price changes in the economy, which is crucial for understanding the cost of living and economic conditions in Cyprus.
+The official/offline CPI Inflation measurement is conducted by the *Cyprus Statistical Service* ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)). CyStat publishes the (offline) CPI data on the first Thursday of each month, reflecting the inflation rate for the preceding month, year and period. This regular release provides an official and comprehensive overview of price changes in the economy, which is crucial for understanding the cost of living and economic conditions in Cyprus.
 
 CyStat collects the prices of goods and services only in urban districts of Nicosia, Larnaca, Limassol and Paphos. For each city, the fluctuations in the product prices each month, are weighted according to their population. Specifically, the weights for the four districts are: Nicosia 42%, Limassol 30%, Larnaca 18%, and Paphos 10%. 
 
 The prices of 805 goods and services are recorded once every month, except for some seasonal products (e.g. vegetables and fruits), meat and fuels, whose prices are collected every week (every Thursday). From January 2016 and onwards, the CPI reference period (base year) is 2015.
 
-The 'CyStat' folder includes all the necessary files for the results comparison between CyBPP and CyStat on a monthly basis. In particular, the 'CyStat.py' file, which is called from the workflows file 'CyStat.yml' on the first Thursday of each month, initially locates the CPI-Inflation report file in the CyStat's website (https://www.cystat.gov.cy/en/SubthemeStatistics?id=47), then collects the official/offline monthly data on the general/total and per division CPIs as presented in Table 1 of the report, and finally stores it along with the corresponding online data of CyBPP in the 'General-CPI-Offline-VS-Online.csv' and 'Division-CPI-Offline-VS-Online.csv' files, respectively.
+The 'CyStat' folder includes all the necessary files for the results comparison between CyBPP and CyStat on a monthly basis. In particular, the *CyStat.py* file, which is called from the workflows file *CyStat.yml* on the first Thursday of each month, initially locates the CPI-Inflation report file in the CyStat's website (https://www.cystat.gov.cy/en/SubthemeStatistics?id=47), then collects the official/offline monthly data on the general/total and per division/category CPIs as presented in Table 1 of the report, and finally stores it along with the corresponding CyBPP online data in the 'General-CPI-Offline-VS-Online.csv' and 'Division-CPI-Offline-VS-Online.csv' files, respectively.
 
-* The following is not done yet: In the 'General-CPI-Offline-VS-Online.png' file, we show the evolution of the monthly General CPI of Cyprus as estimated by CyBPP (online data) and CyStat (offline data). 
+* *The following is not done yet: In the 'General-CPI-Offline-VS-Online.png' file, we show the evolution of the monthly General CPI of Cyprus as estimated by CyBPP (online data) and CyStat (offline data).* 
