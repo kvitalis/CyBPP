@@ -116,7 +116,7 @@ df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
 
 df_5 = pd.merge(index_, df_4, on='Division')
-df_5["CPI Division"]=(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"])*100
+df_5["CPI Division"] = round( 100*(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"]), 4)
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
 df_5["Date"]=today
@@ -134,9 +134,9 @@ df_5_a.to_csv("Results/Daily-CPI-Division.csv",index=False)
 del df_5["Date"]
 
 df_6=pd.merge(df_1, df_5, on='Division')
-df_6["Date"]= None
-df_6=df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
-df_6["Date"] =today
+df_6["Date"] = None
+df_6 = df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
+df_6["Date"] = today
 
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
