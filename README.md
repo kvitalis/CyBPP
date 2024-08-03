@@ -152,7 +152,7 @@ This workflow file schedules the execution of the *Visualizations.py* script at 
 
 ## Comparison with the Cyprus Statistical Service (CyStat)
 
-The official/offline CPI Inflation measurement is conducted by the *Cyprus Statistical Service* ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)). CyStat publishes the (offline) CPI data on the first Thursday of each month, reflecting the inflation rate for the preceding month, year and period. This regular release provides an official and comprehensive overview of price changes in the economy, which is crucial for understanding the cost of living and economic conditions in Cyprus.
+The official/offline CPI Inflation measurement is conducted by the *Cyprus Statistical Service* ([CyStat](https://www.cystat.gov.cy/en/MethodologicalDetails?m=2090)). CyStat publishes the (offline) CPI data on the first Thursday of each month, reflecting the inflation rate for the preceding month. This regular release provides an official and comprehensive overview of price changes in the economy, which is crucial for understanding the cost of living and economic conditions in Cyprus.
 
 CyStat collects the prices of goods and services only in urban districts of Nicosia, Larnaca, Limassol and Paphos. For each city, the fluctuations in the product prices each month, are weighted according to their population. Specifically, the weights for the four districts are: Nicosia 42%, Limassol 30%, Larnaca 18%, and Paphos 10%. 
 
