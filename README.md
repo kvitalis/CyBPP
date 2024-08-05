@@ -1,4 +1,3 @@
-
 # The Cyprus' Billion Prices Project (CyBPP)
 
 ## Overview
@@ -45,7 +44,7 @@ According to the representativeness of each product and its retailer within the 
 
 7. Costas Theodorou https://costastheodorou.com.cy/
 
-8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/el-gr/katanalotes  
+8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/el-gr/katanalotes/details/times-ilektrismou  
 
 9. Cyprus Ministry of Education, Sport and Youth https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
