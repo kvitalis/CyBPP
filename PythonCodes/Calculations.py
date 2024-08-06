@@ -154,7 +154,7 @@ df_102 = df_101.drop_duplicates()
 #General CPI 
 df_103 = pd.merge(df_102, df_99, on='Division')
 df_103["New"] = df_103["CPI Division"] * df_103["Weight"]
-CPI_general = round(df_103["New"].sum(), 5)
+CPI_general = round(df_103["New"].sum(), 4)
 
 #Read csv file
 df_104=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
@@ -208,14 +208,14 @@ if is_last_thursday(current_date):
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 5)
+        df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
 
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly CPI General Inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
-    df_monthly_data["Inflation (%)"] = round(100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1), 5)   
+    df_monthly_data["Inflation (%)"] = round(100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1), 4)   
     df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
