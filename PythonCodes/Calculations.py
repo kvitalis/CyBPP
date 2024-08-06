@@ -99,9 +99,10 @@ new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
+#ECOICOP weights and weighted average prices per Subclass
 #weight_=pd.read_csv("Datasets/Weights-Cystat.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
-df_1["Weight_Price_Subclass"] = round( df_1["Price"]*df_1["Weight"], 4)
+df_1["Weight_Price_Subclass"] = df_1["Price"] * df_1["Weight"]
 
 df_2=df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
@@ -111,12 +112,14 @@ df_3=pd.merge(df_2, weight_, on='Subclass')
 df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
+#Weighted average price per Division
 df_4=df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
 
+#CPI per Division 
 df_5 = pd.merge(index_, df_4, on='Division')
-df_5["CPI Division"] = round( 100*(df_5["Weight_Price_Division_today"]/df_5["Weight_Price_Division_Index"]), 4)
+df_5["CPI Division"] = 100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_Index"]
 df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
 df_5["Date"]=today
@@ -141,17 +144,17 @@ df_6["Date"] = today
 combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
-#General CPI Inflation
+#Total weighted average price
 df_99=index_[["Division","Weight"]]
 
-#Cleaning Data
+#Drop duplicates
 df_101=df_6[["Division","CPI Division"]]
 df_102 = df_101.drop_duplicates()
 
-#Merge data frames
+#General CPI 
 df_103 = pd.merge(df_102, df_99, on='Division')
-df_103["New"]=df_103["CPI Division"]*df_103["Weight"]
-CPI_general = round(df_103["New"].sum(), 4)
+df_103["New"] = df_103["CPI Division"] * df_103["Weight"]
+CPI_general = round(df_103["New"].sum(), 5)
 
 #Read csv file
 df_104=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
@@ -162,10 +165,10 @@ new_row.append(today)
 new_row.append(CPI_general)
 new_row.append(None)
 
-#Combine the two data frames
+#General CPI Inflation
 df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
 df_106= pd.concat([df_104, df_105],ignore_index=True)
-df_106['Inflation (%)'] = round( 100*(df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1), 4)
+df_106['Inflation (%)'] = 100 * (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
 df_106.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
 
 ## LAST THURSDAY (*this corresponds to the monthly observation*)
@@ -201,18 +204,18 @@ if is_last_thursday(current_date):
     for unique_ in unique_divisions:
         df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
         df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
-        percentage_change = round( ((df_2-df_1)/df_1)*100, 4)
+        percentage_change = 100 * (df_2-df_1) / df_1
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
-        df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = percentage_change
+        df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 5)
 
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly CPI General Inflation
     df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
     df_monthly_data = df_monthly_data.sort_values(by ='Date')
-    df_monthly_data["Inflation (%)"] = round( 100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1), 4)    
+    df_monthly_data["Inflation (%)"] = round(100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1), 5)   
     df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
