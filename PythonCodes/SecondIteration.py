@@ -22,6 +22,28 @@ from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
 
+headers = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Alt-Used": "www.alphamega.com.cy",
+    "Connection": "keep-alive",
+    "Host": "www.alphamega.com.cy",
+    "Priority": "u=0, i",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "TE": "trailers",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
+}
+
+res = requests.get("https://www.alphamega.com.cy/Default.aspx?ID=6872&ProductID=796064&VariantID=&Feed=True&redirect=false", headers=headers)
+data=res.json()
+print(data)
+
+"""
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
@@ -2385,3 +2407,5 @@ monthly_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
 combined_monthly=pd.concat([monthly_errors, daily_errors], axis=0)
 combined_monthly.to_csv("Datasets/Monthly-Scraping-Errors.csv", index=False , header=True)
+
+"""
