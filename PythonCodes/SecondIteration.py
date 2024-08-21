@@ -22,28 +22,7 @@ from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
 
-headers = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
-    "Accept-Encoding": "gzip, deflate, br, zstd",
-    "Accept-Language": "en-US,en;q=0.5",
-    "Alt-Used": "www.alphamega.com.cy",
-    "Connection": "keep-alive",
-    "Host": "www.alphamega.com.cy",
-    "Priority": "u=0, i",
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "none",
-    "Sec-Fetch-User": "?1",
-    "TE": "trailers",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
-}
 
-res = requests.get("https://www.alphamega.com.cy/Default.aspx?ID=6872&ProductID=796064&VariantID=&Feed=True&redirect=false", headers=headers)
-data=res.json()
-print(data)
-
-"""
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
@@ -1377,7 +1356,7 @@ def results_the_royal_cigars(u):
 
 def results_pydixa(u):
     #response = requests.get(Item_url_)
-    #""
+    """
     if response.status_code!=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1387,7 +1366,7 @@ def results_pydixa(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-    #""
+    """
     pdf = "PDFs/pixida.pdf"
     #with open(pdf, "wb") as f:
     #    f.write(response.content)
@@ -1482,7 +1461,7 @@ def results_sewerage(u):
     if "Larnaca" in retailer_:
         city_="Larnaca"
         new_row=[]
-        #""
+        """
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
@@ -1503,7 +1482,7 @@ def results_sewerage(u):
             desired_lines = [element_name_2.find_all('td')[8].get_text()]
             for lines in desired_lines:
                 values=float(lines.replace(",","."))
-        #""
+        """
     if values!=0:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_+" "+city_)
@@ -1629,7 +1608,7 @@ def results_toyota(u):
         #elif subclass_=="Second-hand motor cars":
             
             #1st way
-            #"" 
+            """ 
             query ={"component":"used-stock-cars-v2","fetches":[
                 {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
             ]}
@@ -1638,10 +1617,10 @@ def results_toyota(u):
             response = requests.get(Item_url_,{'headers':headers})
             r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
             price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-            #""
+            """
             
             #2nd way
-            #""
+            """
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
             soup = BeautifulSoup(response.content, "html.parser")
@@ -1676,7 +1655,7 @@ def results_toyota(u):
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-                    #""
+                    """
 
 def results_ithaki(u):
     
@@ -2318,7 +2297,7 @@ for u in range(0,len(urls)):
 #================================================================================
 #Manually added data            
 
-#""
+"""
 #Water Board of Nicosia
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2361,7 +2340,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#""
+"""
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Κυβικά ανά μήνα - Larnaca")
@@ -2407,5 +2386,3 @@ monthly_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
 combined_monthly=pd.concat([monthly_errors, daily_errors], axis=0)
 combined_monthly.to_csv("Datasets/Monthly-Scraping-Errors.csv", index=False , header=True)
-
-"""
