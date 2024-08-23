@@ -181,13 +181,34 @@ df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
 #Final Part add on 23/08:
+date_obj = datetime.datetime.strptime(today, "%Y-%m-%d")
+previous_day = date_obj - datetime.timedelta(days=1)
+previous_day_str = previous_day.strftime("%Y-%m-%d")
+
 _df_cpi_=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+prior_df=_df_cpi_[_df_cpi_["Date"] == previous_day_str]
+current_df=_df_cpi_[_df_cpi_["Date"] == date_str]
+unique_divisions = current_df['Division'].unique()
+
+for unique_ in unique_divisions:
+    df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
+    df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
+    percentage_change = 100 * (df_2-df_1) / df_1
+    
+    index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
+    float_index_list = [int(i) for i in index_list]
+    _df_cpi_.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
+
+_df_cpi_.to_csv("Results/Daily-CPI-Division.csv",index=False)
+
+#Subclass
+_df_cpi_subclass=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
 date_obj = datetime.datetime.strptime(today, "%Y-%m-%d")
 previous_day = today - datetime.timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
-prior_df=_df_cpi_[_df_cpi_["Date"] == previous_day_str]
-current_df=_df_cpi_[_df_cpi_["Date"] == date_str]
+prior_df=_df_cpi_subclass[_df_cpi_subclass["Date"] == previous_day_str]
+current_df=_df_cpi_subclass[_df_cpi_subclass["Date"] == date_str]
 unique_divisions = current_df['Subclass'].unique()
 
 for unique_ in unique_divisions:
@@ -197,9 +218,9 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    _df_cpi_.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
+    _df_cpi_subclass.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
 
-_df_cpi_.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
+_df_cpi_subclass.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
 #Function's calculation of last Thursday
 def is_last_thursday(date):
