@@ -181,7 +181,7 @@ df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
 #Final Part add on 23/08:
-date_obj = datetime.datetime.strptime(today, "%Y-%m-%d")
+date_obj = datetime.strptime(today, "%Y-%m-%d")
 previous_day = date_obj - datetime.timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
@@ -203,7 +203,7 @@ _df_cpi_.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 #Subclass
 _df_cpi_subclass=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
-date_obj = datetime.datetime.strptime(today, "%Y-%m-%d")
+date_obj = datetime.strptime(today, "%Y-%m-%d")
 previous_day = today - datetime.timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
