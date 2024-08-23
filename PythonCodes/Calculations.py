@@ -185,7 +185,7 @@ date_obj = datetime.datetime.strptime(today, "%Y-%m-%d")
 previous_day = date_obj - datetime.timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
-_df_cpi_=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+_df_cpi_=pd.read_csv("Results/Daily-CPI-Division.csv")
 prior_df=_df_cpi_[_df_cpi_["Date"] == previous_day_str]
 current_df=_df_cpi_[_df_cpi_["Date"] == date_str]
 unique_divisions = current_df['Division'].unique()
