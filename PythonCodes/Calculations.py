@@ -197,7 +197,7 @@ _df_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 _df_cpi_subclass_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
 
 prior_df=_df_cpi_subclass_division[_df_cpi_subclass_division["Date"] == previous_day_str]
-current_df=_df_cpi_subclass_division[_df_cpi_subclass["Date"] == date_obj]
+current_df=_df_cpi_subclass_division[_df_cpi_subclass_division["Date"] == date_obj]
 unique_divisions = current_df['Subclass'].unique()
 
 for unique_ in unique_divisions:
