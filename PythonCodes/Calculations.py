@@ -197,7 +197,7 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    _df_cpi_.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
+    _df_cpi_.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
 _df_cpi_.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
@@ -218,7 +218,7 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    _df_cpi_subclass.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
+    _df_cpi_subclass.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
 _df_cpi_subclass.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
