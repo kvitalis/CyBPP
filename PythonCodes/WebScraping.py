@@ -141,7 +141,7 @@ def results_fuelDaddy(urls):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_ikea(u):
+def results_IKEA(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.ikea.com.cy"+Item_url_
     bs = BeautifulSoup(url_new, "html.parser")
@@ -210,7 +210,7 @@ def results_stefanis(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_cyta(u):
+def results_CYTA(u):
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -342,7 +342,7 @@ def results_Athlokinisi(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_awol(u):
+def results_AWOL(u):
     p=0
     price_="0"
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
@@ -2198,17 +2198,17 @@ for u in range(0,len(urls)):
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
-        results_ikea(u)
+        results_IKEA(u)
     elif retailer_=="Stephanis":
         results_stefanis(u)
     elif retailer_=="CYTA":
-        results_cyta(u)
+        results_CYTA(u)
     elif retailer_=="Epic":
         results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
-        results_awol(u)
+        results_AWOL(u)
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)
     elif retailer_=="Bwell Pharmacy":
