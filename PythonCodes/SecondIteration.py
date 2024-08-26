@@ -142,7 +142,7 @@ def results_fuelDaddy(urls):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_ikea(u):
+def results_IKEA(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.ikea.com.cy"+Item_url_
     bs = BeautifulSoup(url_new, "html.parser")
@@ -211,7 +211,7 @@ def results_stefanis(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_cyta(u):
+def results_CYTA(u):
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -989,9 +989,9 @@ def results_rio(u):
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
-def results_ahk(u):
+def results_AHK(u):
     response = requests.get(Item_url_)
-    pdf = "PDFs/AHK.pdf"
+    pdf = "PDFs/AHK_Mar2024.pdf"
     
     if response.status_code !=200:
         website_false.append(name_)
@@ -1040,11 +1040,11 @@ def results_ahk(u):
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
-def results_cera(u):
+def results_CERA(u):
     response = requests.get(Item_url_)
-    cera = tb.read_pdf(Item_url_, pages = '8',pandas_options={'header': None}, stream=True)
-    amount_=cera[0][1].to_list()
-    _names_=cera[0][0].to_list()
+    CERA = tb.read_pdf(Item_url_, pages = '8',pandas_options={'header': None}, stream=True)
+    amount_=CERA[0][1].to_list()
+    _names_=CERA[0][0].to_list()
     
     if response.status_code !=200:
         website_false.append(name_)
@@ -2196,11 +2196,11 @@ for u in range(0,len(urls)):
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
-        results_ikea(u)
+        results_IKEA(u)
     elif retailer_=="Stephanis":
         results_stefanis(u)
     elif retailer_=="CYTA":
-        results_cyta(u)
+        results_CYTA(u)
     elif retailer_=="Epic":
         results_epic(u)
     elif retailer_=="Athlokinisi":
@@ -2240,9 +2240,9 @@ for u in range(0,len(urls)):
     elif retailer_=="Rio Cinema":
         results_rio(u)
     elif retailer_=="AHK":
-        results_ahk(u)
+        results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
-        results_cera(u)
+        results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
         results_water(u)
     elif retailer_=="Wolt":
