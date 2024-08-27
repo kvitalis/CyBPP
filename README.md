@@ -138,7 +138,7 @@ According to the representativeness of each product and its retailer within the 
 
 ## GitHub Actions
 
-The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the ./github/workflows directory:
+The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the *.github/workflows* directory:
 
 ### 1. WebScraping.yml: 
 This workflow file schedules the execution of the *WebScraping.py* script at around 09:00 (UTC time) every day.
@@ -157,6 +157,6 @@ CyStat collects the prices of goods and services only in urban districts of Nico
 
 The prices of 805 goods and services are recorded once every month, except for some seasonal products (e.g. vegetables and fruits), meat and fuels, whose prices are collected every week (every Thursday). From January 2016 and onwards, the CPI reference period (base year) is 2015.
 
-The 'CyStat' folder includes all the necessary files for the results comparison between CyBPP and CyStat on a monthly basis. In particular, the *CyStat.py* file, which is called from the workflows file *CyStat.yml* on the first Thursday of each month, initially locates the CPI-Inflation report file in the CyStat's website (https://www.cystat.gov.cy/en/SubthemeStatistics?id=47), then collects the official/offline monthly data on the general/total and per division/category CPIs as presented in Table 1 of the report, and finally stores it along with the corresponding CyBPP online data in the 'General-CPI-Offline-VS-Online.csv' and 'Division-CPI-Offline-VS-Online.csv' files, respectively.
+The 'CyStat' folder includes all the necessary files for the results comparison between CyBPP and CyStat on a monthly basis. In particular, the *CyStat.py* file, which is called from the workflows file *CyStat.yml* on the first Thursday of each month, initially locates the CPI-Inflation report file in the CyStat's website (https://www.cystat.gov.cy/en/SubthemeStatistics?id=47), then collects the official/offline monthly data on the general/total and per division/category CPIs as presented in Table 1 of the report, and finally stores it along with the corresponding CyBPP online data in the *General-CPI-Offline-VS-Online.csv* and *Division-CPI-Offline-VS-Online.csv* files, respectively.
 
-* *The following is not done yet: In the 'General-CPI-Offline-VS-Online.png' file, we show the evolution of the monthly General CPI of Cyprus as estimated by CyBPP (online data) and CyStat (offline data). Similarly, we present the evolution of the offline and online monthly CPI per Division in the 'Division-CPI-Offline-VS-Online.png' file.* 
+* *The following is not done yet: In the General-CPI-Offline-VS-Online.png file, we show the evolution of the monthly General CPI of Cyprus as estimated by CyBPP (online data) and CyStat (offline data). Similarly, we present the evolution of the offline and online monthly CPI per Division in the Division-CPI-Offline-VS-Online.png file.* 
