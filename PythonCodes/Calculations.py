@@ -9,8 +9,8 @@ from datetime import datetime, timedelta
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
-today=datetime.today().strftime("%Y-%m-%d")
-#today='2024-08-12'
+#today=datetime.today().strftime("%Y-%m-%d")
+today='2024-08-25'
 
 #CALCULATIONS
 
