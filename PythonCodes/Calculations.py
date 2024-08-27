@@ -145,19 +145,19 @@ combined_df = pd.concat([cpi_division, df_6], axis=0)
 combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
 #Total weighted average price
-df_99=index_[["Division","Weight"]]
+df_7=index_[["Division","Weight"]]
 
 #Drop duplicates
-df_101=df_6[["Division","CPI Division"]]
-df_102 = df_101.drop_duplicates()
+df_8=df_6[["Division","CPI Division"]]
+df_9 = df_8.drop_duplicates()
 
 #General CPI 
-df_103 = pd.merge(df_102, df_99, on='Division')
-df_103["New"] = df_103["CPI Division"] * df_103["Weight"]
-CPI_general = round(df_103["New"].sum(), 4)
+df_10 = pd.merge(df_9, df_7, on='Division')
+df_10["New"] = df_10["CPI Division"] * df_10["Weight"]
+CPI_general = round(df_10["New"].sum(), 4)
 
 #Read csv file
-df_104=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+df_11=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 #Creat null list and add information
 new_row=[]
@@ -166,10 +166,10 @@ new_row.append(CPI_general)
 new_row.append(None)
 
 #General CPI Inflation
-df_105 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
-df_106= pd.concat([df_104, df_105],ignore_index=True)
-df_106['Inflation (%)'] = 100 * (df_106['CPI General'] - df_106['CPI General'].shift(1)) / df_106['CPI General'].shift(1)
-df_106.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
+df_12 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
+df_13= pd.concat([df_11, df_12],ignore_index=True)
+df_13['Inflation (%)'] = 100 * (df_13['CPI General'] - df_13['CPI General'].shift(1)) / df_13['CPI General'].shift(1)
+df_13.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
 
 #Daily change (%) of the CPI per Division (added on 23/08/2024):
 date_obj = datetime.strptime(today, "%Y-%m-%d")
@@ -233,8 +233,8 @@ if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
     
     #Monthly CPI per Division
-    df_5_5=df_5[["Division","CPI Division"]]
-    df_monthly_division=pd.concat([df_5_5, df_monthly_division], ignore_index=True)
+    df_5_b=df_5[["Division","CPI Division"]]
+    df_monthly_division=pd.concat([df_5_b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
 
     prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
