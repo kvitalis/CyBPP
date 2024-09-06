@@ -177,9 +177,9 @@ previous_day = date_obj - timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
 #Daily-CPI-Division.csv file
-_df_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
-prior_df = _df_cpi_division[_df_cpi_division["Date"] == previous_day_str]
-current_df = _df_cpi_division[_df_cpi_division["Date"] == today]
+df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
+prior_df = df_daily_division[df_daily_division["Date"] == previous_day_str]
+current_df = df_daily_division[df_daily_division["Date"] == today]
 unique_divisions = current_df['Division'].unique()
 
 for unique_ in unique_divisions:
@@ -189,9 +189,9 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    _df_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    df_daily_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-_df_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
+df_daily_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 #Daily-CPI-Subclass-Division.csv file
 df_cpi_subclass_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
@@ -216,7 +216,7 @@ df_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=
 current_date = datetime.now().strftime("%Y-%m-%d")
 
 #Read important files
-df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+df_daily_general=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
@@ -230,7 +230,7 @@ def is_last_thursday(date):
 
 #Call the function
 if is_last_thursday(current_date):
-    df_current_date = df_[df_["Date"] == current_date]
+    df_current_date = df_daily_general[df_daily_general["Date"] == current_date]
     
     #Monthly CPI per Division
     df_5b=df_5[["Division","CPI Division"]]
