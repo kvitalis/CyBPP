@@ -174,8 +174,9 @@ previous_day = date_obj - timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
 
 #Daily-CPI-Division.csv file
-prior_df = df_daily_division[df_daily_division["Date"] == previous_day_str]
-current_df = df_daily_division[df_daily_division["Date"] == today]
+df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
+prior_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == previous_day_str]
+current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today]
 unique_divisions = current_df['Division'].unique()
 
 for unique_ in unique_divisions:
@@ -185,13 +186,14 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    df_daily_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    df_daily_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-df_daily_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
+df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 #Daily-CPI-Subclass-Division.csv file
-prior_df = df_daily_subclass_division[df_daily_subclass_division["Date"] == previous_day_str]
-current_df = df_daily_subclass_division[df_daily_subclass_division["Date"] == today]
+df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
+current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today]
 unique_divisions = current_df['Subclass'].unique()
 
 for unique_ in unique_divisions:
@@ -201,9 +203,9 @@ for unique_ in unique_divisions:
     
     index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    df_daily_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-df_daily_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
+df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
 ## LAST THURSDAY (*this corresponds to the monthly observation*)
 #Current date
