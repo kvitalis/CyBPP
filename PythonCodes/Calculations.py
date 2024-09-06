@@ -129,10 +129,10 @@ cols.insert(0, cols.pop(cols.index('Date')))
 df_5 = df_5[cols]
 df_5['Date'] = pd.to_datetime(df_5['Date']) 
 
-df_5_a = pd.concat([df_5, _cpi_])
-df_5_a['Date'] = pd.to_datetime(df_5_a['Date'])
-df_5_a = df_5_a.sort_values(by='Date').reset_index(drop=True)
-df_5_a.to_csv("Results/Daily-CPI-Division.csv",index=False)
+df_5a = pd.concat([df_5, _cpi_])
+df_5a['Date'] = pd.to_datetime(df_5a['Date'])
+df_5a = df_5a.sort_values(by='Date').reset_index(drop=True)
+df_5a.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 del df_5["Date"]
 
@@ -183,9 +183,9 @@ current_df = _df_cpi_division[_df_cpi_division["Date"] == today]
 unique_divisions = current_df['Division'].unique()
 
 for unique_ in unique_divisions:
-    df_1 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
-    df_2 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
-    percentage_change = 100 * (df_2-df_1) / df_1
+    df_14 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
+    df_15 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+    percentage_change = 100 * (df_15 - df_14) / df_14
     
     index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
@@ -194,22 +194,22 @@ for unique_ in unique_divisions:
 _df_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 #Daily-CPI-Subclass-Division.csv file
-_df_cpi_subclass_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+df_cpi_subclass_division=pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
 
-prior_df=_df_cpi_subclass_division[_df_cpi_subclass_division["Date"] == previous_day_str]
-current_df=_df_cpi_subclass_division[_df_cpi_subclass_division["Date"] == today]
+prior_df=df_cpi_subclass_division[df_cpi_subclass_division["Date"] == previous_day_str]
+current_df=df_cpi_subclass_division[df_cpi_subclass_division["Date"] == today]
 unique_divisions = current_df['Subclass'].unique()
 
 for unique_ in unique_divisions:
-    df_1=float(prior_df[prior_df["Subclass"]==unique_]["CPI Division"])
-    df_2=float(current_df[current_df["Subclass"]==unique_]["CPI Division"])
-    percentage_change = 100 * (df_2-df_1) / df_1            
+    df_16 = float(prior_df[prior_df["Subclass"]==unique_]["CPI Division"])
+    df_17 = float(current_df[current_df["Subclass"]==unique_]["CPI Division"])
+    percentage_change = 100 * (df_17 - df_16) / df_16            
     
     index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
-    _df_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    df_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-_df_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
+df_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
 ## LAST THURSDAY (*this corresponds to the monthly observation*)
 #Current date
@@ -217,7 +217,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 #Read important files
 df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
-df_monthly_data=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
 #Function's calculation of last Thursday
@@ -233,8 +233,8 @@ if is_last_thursday(current_date):
     df_current_date = df_[df_["Date"] == current_date]
     
     #Monthly CPI per Division
-    df_5_b=df_5[["Division","CPI Division"]]
-    df_monthly_division=pd.concat([df_5_b, df_monthly_division], ignore_index=True)
+    df_5b=df_5[["Division","CPI Division"]]
+    df_monthly_division=pd.concat([df_5b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
 
     prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
@@ -242,9 +242,9 @@ if is_last_thursday(current_date):
     unique_divisions = df_monthly_division['Division'].unique()
 
     for unique_ in unique_divisions:
-        df_1=float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
-        df_2=float(current_df[current_df["Division"]==unique_]["CPI Division"])
-        percentage_change = 100 * (df_2-df_1) / df_1
+        df_18 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
+        df_19 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
+        percentage_change = 100 * (df_19 - df_18) / df_18
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
@@ -253,9 +253,9 @@ if is_last_thursday(current_date):
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly CPI General Inflation
-    df_monthly_data = pd.concat([df_current_date, df_monthly_data], ignore_index=True)
-    df_monthly_data = df_monthly_data.sort_values(by ='Date')
-    df_monthly_data["Inflation (%)"] = round(100 * (df_monthly_data['CPI General'] - df_monthly_data['CPI General'].shift(1)) / df_monthly_data['CPI General'].shift(1), 4)   
-    df_monthly_data.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
+    df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
+    df_monthly_general = df_monthly_general.sort_values(by ='Date')
+    df_monthly_general["Inflation (%)"] = round(100 * (df_monthly_general['CPI General'] - df_monthly_general['CPI General'].shift(1)) / df_monthly_general['CPI General'].shift(1), 4)   
+    df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
