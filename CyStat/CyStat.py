@@ -9,6 +9,7 @@ from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
+"""
 #Important function
 def cystat(last_results):
     
@@ -242,6 +243,7 @@ def is_first_thursday(date):
         last_results = date - timedelta(days=7)
         last_results = last_results.strftime("%Y-%m-%d")
         cystat(last_results)
+
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
         pass
@@ -249,3 +251,44 @@ def is_first_thursday(date):
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
 is_first_thursday(current_date)    
+"""
+df=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
+
+#Plot:Official vs Online Index
+plt.figure(figsize=(12, 6))
+plt.plot(df['Period'], df['Official (2015=100)'], label='Official (2015=100)', marker='o', color='red')
+plt.plot(df['Period'], df['Online (27/06/2024=77.89)'], label='Online (27/06/2024=77.89)', marker='o', color='blue')
+plt.xlabel('Period')
+plt.ylabel('Index')
+plt.title('Official vs Online Index')
+plt.legend()
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.savefig('CyStat/Official-vs-Online-Index.png')
+plt.show()
+
+#Plot:Official vs Online Index (Baseline=100)
+plt.figure(figsize=(12, 6))
+plt.plot(df['Period'], df['Official (27/06/2024=100)'], label='Official (27/06/2024=100)', marker='o', color='red')
+plt.plot(df['Period'], df['Online (27/06/2024=100)'], label='Online (27/06/2024=100)', marker='o', color='blue')
+plt.xlabel('Period')
+plt.ylabel('Index')
+plt.title('Official vs Online Index (Baseline=100)')
+plt.legend()
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.savefig('CyStat/Official-vs-Online-Index-(Baseline=100).png')
+plt.show()
+
+#Plot:Official vs Online Inflation
+plt.figure(figsize=(12, 6))
+plt.plot(df['Period'], df['Official Inflation (%)'], label='Official Inflation (%)', marker='o', color='red')
+plt.plot(df['Period'], df['Online Inflation (%)'], label='Online Inflation (%)', marker='o', color='blue')
+plt.xlabel('Period')
+plt.ylabel('Inflation')
+plt.title('Official vs Online Inflation')
+plt.legend()
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.savefig('CyStat/Official-vs-Online-Inflation.png')
+plt.show()
