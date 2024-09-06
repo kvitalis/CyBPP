@@ -101,29 +101,28 @@ group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #ECOICOP weights and weighted average prices per Subclass
-#weight_=pd.read_csv("Datasets/Weights-Cystat.csv")
 df_1 = pd.merge(group_df, weight_, on='Subclass')
 df_1["Weight_Price_Subclass"] = df_1["Price"] * df_1["Weight"]
 
-df_2=df_1.groupby("Subclass").sum()
+df_2 = df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
-df_3=pd.merge(df_2, weight_, on='Subclass')
+df_3 = pd.merge(df_2, weight_, on='Subclass')
 #df_3.to_csv("Results/ken.csv", index=False)
-df_3=df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
+df_3 = df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
 #Weighted average price per Division
-df_4=df_3.groupby("Division").sum()
+df_4 = df_3.groupby("Division").sum()
 df_4.reset_index(inplace=True)
 df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
 
 #Daily CPI per Division 
 df_5 = pd.merge(index_, df_4, on='Division')
 df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_Index"], 4)
-df_5=df_5[["Division","CPI Division","Weight_Price_Division_today"]]
+df_5 = df_5[["Division","CPI Division","Weight_Price_Division_today"]]
 df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
-df_5["Date"]=today
+df_5["Date"] = today
 
 cols = list(df_5.columns)
 cols.insert(0, cols.pop(cols.index('Date')))
