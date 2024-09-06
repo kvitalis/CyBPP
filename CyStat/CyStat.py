@@ -9,7 +9,7 @@ from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
-"""
+
 #Important function
 def cystat(last_results):
     
@@ -251,7 +251,7 @@ def is_first_thursday(date):
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
 is_first_thursday(current_date)    
-"""
+
 df=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
 #Plot:Official vs Online Index
