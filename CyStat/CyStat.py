@@ -199,7 +199,7 @@ def cystat(last_results):
     for unique_ in unique_divisions: 
         df_1 = float(prior_df[prior_df["Division"] == unique_]["Official CPI"])
         df_2 = float(current_df[current_df["Division"] == unique_]["Official CPI"])
-        official_change = ((df_2-df_1)/df_1) * 100  #change (%) of CPI per Division 
+        official_change = ((df_2 - df_1)/df_1) * 100  #change (%) of CPI per Division 
     
         index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
@@ -223,9 +223,9 @@ def cystat(last_results):
     unique_divisions = division_cpi['Division'].unique()
 
     for unique_ in unique_divisions: 
-        df_1 = float(prior_df[prior_df["Division"] == unique_]["Online CPI"])
-        df_2 = float(current_df[current_df["Division"] == unique_]["Online CPI"])
-        online_change = ( (df_2-df_1) / df_1 ) * 100  #change (%) of CPI per Division 
+        df_3 = float(prior_df[prior_df["Division"] == unique_]["Online CPI"])
+        df_4 = float(current_df[current_df["Division"] == unique_]["Online CPI"])
+        online_change = ( (df_4 - df_3) / df_3 ) * 100  #change (%) of CPI per Division 
 
         index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
