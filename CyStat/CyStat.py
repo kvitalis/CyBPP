@@ -237,38 +237,38 @@ def cystat(last_results):
     division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
     df=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
-    #Plot:Official vs Online Index
+    #Plot: Official vs Online General CPI
     plt.figure(figsize=(12, 6))
     plt.plot(df['Period'], df['Official (2015=100)'], label='Official (2015=100)', marker='o', color='red')
     plt.plot(df['Period'], df['Online (27/06/2024=77.89)'], label='Online (27/06/2024=77.89)', marker='o', color='blue')
     plt.xlabel('Period')
-    plt.ylabel('Index')
-    plt.title('Official vs Online Index')
+    plt.ylabel('General CPI')
+    plt.title('Official vs Online General CPI')
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
-    plt.savefig('CyStat/Official-vs-Online-Index.png')
+    plt.savefig('CyStat/Official-vs-Online-General-CPI.png')
     plt.show()
     
-    #Plot:Official vs Online Index (Baseline=100)
+    #Plot: Official vs Online General CPI (rebased)
     plt.figure(figsize=(12, 6))
     plt.plot(df['Period'], df['Official (27/06/2024=100)'], label='Official (27/06/2024=100)', marker='o', color='red')
     plt.plot(df['Period'], df['Online (27/06/2024=100)'], label='Online (27/06/2024=100)', marker='o', color='blue')
     plt.xlabel('Period')
-    plt.ylabel('Index')
-    plt.title('Official vs Online Index (Baseline=100)')
+    plt.ylabel('General CPI (27/06/2024=100)')
+    plt.title('Official vs Online General CPI (rebased)')
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
-    plt.savefig('CyStat/Official-vs-Online-Index-(Baseline=100).png')
+    plt.savefig('CyStat/Official-vs-Online-General-CPI-rebased.png')
     plt.show()
     
-    #Plot:Official vs Online Inflation
+    #Plot: Official vs Online Inflation
     plt.figure(figsize=(12, 6))
-    plt.plot(df['Period'], df['Official Inflation (%)'], label='Official Inflation (%)', marker='o', color='red')
-    plt.plot(df['Period'], df['Online Inflation (%)'], label='Online Inflation (%)', marker='o', color='blue')
+    plt.plot(df['Period'], df['Official Inflation (%)'], label='Official/Offline', marker='o', color='red')
+    plt.plot(df['Period'], df['Online Inflation (%)'], label='Online', marker='o', color='blue')
     plt.xlabel('Period')
-    plt.ylabel('Inflation')
+    plt.ylabel('Inflation (%)')
     plt.title('Official vs Online Inflation')
     plt.legend()
     plt.xticks(rotation=90)
@@ -290,5 +290,3 @@ def is_first_thursday(date):
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
 is_first_thursday(current_date)    
-
-
