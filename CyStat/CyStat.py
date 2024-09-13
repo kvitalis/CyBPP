@@ -9,13 +9,12 @@ from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
-
 #Important function
 def cystat(last_results):
     
     #Read important files
-    cystat_=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
-    online_per_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    general_cpi=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
+    monthly_gen_cpi=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 
     print("1")
    
@@ -105,10 +104,10 @@ def cystat(last_results):
         cpi_month = round(cpi_month, 2)
         
         #identified the month CPI General
-        online_per_['Date'] = pd.to_datetime(online_per_['Date'])
+        monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
-        index = online_per_.index[online_per_['Date'] == date_to_find].tolist()
-        values_12 = float(online_per_.loc[index,"CPI General"])
+        index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
+        values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
         values_12 = round(values_12, 2)
 
         print("6")
@@ -131,7 +130,7 @@ def cystat(last_results):
 
         print("7")
         
-        df_tables = pd.concat([cystat_, df_new_empty_], ignore_index=True)
+        df_tables = pd.concat([general_cpi, df_new_empty_], ignore_index=True)
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Official (2015=100)"] - df_tables.loc[len(df_tables)-2,"Official (2015=100)"]) / df_tables.loc[len(df_tables)-2,"Official (2015=100)"],2)
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
@@ -235,12 +234,12 @@ def cystat(last_results):
     print("11")
     
     division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
-    df=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
+    cystat_gen_cpi=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
     #Plot: Official vs Online General CPI
     plt.figure(figsize=(12, 6))
-    plt.plot(df['Period'], df['Official (2015=100)'], label='Official (2015=100)', marker='o', color='red')
-    plt.plot(df['Period'], df['Online (27/06/2024=77.89)'], label='Online (27/06/2024=77.89)', marker='o', color='blue')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (2015=100)'], label='Official (2015=100)', marker='o', color='red')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=77.89)'], label='Online (27/06/2024=77.89)', marker='o', color='blue')
     plt.xlabel('Period')
     plt.ylabel('General CPI')
     plt.title('Official vs Online General CPI')
@@ -252,8 +251,8 @@ def cystat(last_results):
     
     #Plot: Official vs Online General CPI (rebased)
     plt.figure(figsize=(12, 6))
-    plt.plot(df['Period'], df['Official (27/06/2024=100)'], label='Official (27/06/2024=100)', marker='o', color='red')
-    plt.plot(df['Period'], df['Online (27/06/2024=100)'], label='Online (27/06/2024=100)', marker='o', color='blue')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (27/06/2024=100)'], label='Official (27/06/2024=100)', marker='o', color='red')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=100)'], label='Online (27/06/2024=100)', marker='o', color='blue')
     plt.xlabel('Period')
     plt.ylabel('General CPI (27/06/2024=100)')
     plt.title('Official vs Online General CPI (rebased)')
@@ -265,8 +264,8 @@ def cystat(last_results):
     
     #Plot: Official vs Online Inflation
     plt.figure(figsize=(12, 6))
-    plt.plot(df['Period'], df['Official Inflation (%)'], label='Official/Offline', marker='o', color='red')
-    plt.plot(df['Period'], df['Online Inflation (%)'], label='Online', marker='o', color='blue')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official Inflation (%)'], label='Official/Offline', marker='o', color='red')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online Inflation (%)'], label='Online', marker='o', color='blue')
     plt.xlabel('Period')
     plt.ylabel('Inflation (%)')
     plt.title('Official vs Online Inflation')
