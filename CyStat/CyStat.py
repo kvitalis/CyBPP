@@ -231,9 +231,11 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi.loc[float_index_list, "Online Monthly Change (%)"] = round(online_change,2)
 
-    print("11")
-    
     division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
+
+    print("11")
+
+    #Construct the plots
     cystat_gen_cpi=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
     #Plot: Official vs Online General CPI
@@ -274,6 +276,8 @@ def cystat(last_results):
     plt.grid(True)
     plt.savefig('CyStat/Official-vs-Online-Inflation.png')
     plt.show()
+
+print("12")
 
 def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
