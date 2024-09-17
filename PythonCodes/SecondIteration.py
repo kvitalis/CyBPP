@@ -22,19 +22,18 @@ from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
 
-
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
-#Read necessary data
+# Read necessary data
 df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
-#Create a null data frame
+# Create a null data frame
 daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
-#Define the web-scraping functions for the target retailers
+# Define the web-scraping functions for the target retailers
 def results_supermarketcy(urls):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
@@ -991,7 +990,7 @@ def results_rio(u):
 
 def results_AHK(u):
     response = requests.get(Item_url_)
-    pdf = "PDFs/AHK_Mar2024.pdf"
+    pdf_AHK = "PDFs/AHK_Mar2024.pdf"
     
     if response.status_code !=200:
         website_false.append(name_)
@@ -1002,9 +1001,9 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
     else:
-        with open(pdf, "wb") as f:
+        with open(pdf_AHK, "wb") as f:
             f.write(response.content)
-        with open(pdf, "rb") as f:
+        with open(pdf_AHK, "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
@@ -1367,10 +1366,10 @@ def results_pydixa(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
     """
-    pdf = "PDFs/pixida.pdf"
-    #with open(pdf, "wb") as f:
+    pdf_pixida = "PDFs/pixida.pdf"
+    #with open(pdf_pixida, "wb") as f:
     #    f.write(response.content)
-    with pdfplumber.open(pdf) as pdf:
+    with pdfplumber.open(pdf_pixida) as pdf:
         page = pdf.pages[5]  
         text = page.extract_text()
 
@@ -1660,17 +1659,17 @@ def results_toyota(u):
 def results_ithaki(u):
     
     #response = requests.get(Item_url_)
-    pdf = "PDFs/ithaki.pdf"
+    pdf_ithaki = "PDFs/ithaki.pdf"
 
-    with pdfplumber.open(pdf) as pdf:
+    with pdfplumber.open(pdf_ithaki) as pdf:
         first_page = pdf.pages[5]
         text = first_page.extract_text()
         
     pattern = r'(\d+.*?\d+\.\d{2})'
     matches = re.findall(pattern, text)
     for match in matches:
-        new_row=[]
-        website_false=[]
+        new_row = []
+        website_false = []
         if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών για 2 άτομα - Larnaca"== name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
@@ -1720,11 +1719,11 @@ def results_flames(u):
 
     #Mixed Grill 
     if name_=="Mixed Grill for 2 persons - Famagusta":
-        pdf1 = "PDFs/flames_grilled_dishes.pdf"
+        pdf_flames1 = "PDFs/flames_grilled_dishes.pdf"
     
-        #with open(pdf1, "wb") as f:
+        #with open(pdf_flames1, "wb") as f:
         #    f.write(response.content)
-        with pdfplumber.open(pdf1) as pdf:
+        with pdfplumber.open(pdf_flames1) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
 
@@ -1742,12 +1741,12 @@ def results_flames(u):
 
     #Flames Special Cyprus (Meze)
     if name_=="Meat Meze for 2 persons - Famagusta":
-        pdf2 = "PDFs/flames_cyprus_dishes.pdf"
+        pdf_flames2 = "PDFs/flames_cyprus_dishes.pdf"
     
-        #with open(pdf2, "wb") as f:
+        #with open(pdf_flames2, "wb") as f:
         #    f.write(response.content)
     
-        with pdfplumber.open(pdf2) as pdf:
+        with pdfplumber.open(pdf_flames2) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
     
@@ -2175,7 +2174,7 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Run the code
+# Run the code
 for u in range(0,len(urls)):
     print(u)
     
@@ -2289,13 +2288,9 @@ for u in range(0,len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
-    #elif retailer_=="Public":
-        #results_public(u)
-     #elif retailer_=="Alphamega":
-        #results_alphamega(u)
 
 #================================================================================
-#Manually added data            
+# Manually added data            
 
 """
 #Water Board of Nicosia
@@ -2374,10 +2369,10 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #===============================================================================
 
-#Change the type as float
+# Change the type as float
 list_["Price"].astype(float)
 
-#Export/Save the scraped data
+# Export/Save the scraped data
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
