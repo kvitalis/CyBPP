@@ -1,18 +1,18 @@
-# Important libraries
+#Important libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from datetime import datetime
 from datetime import datetime, timedelta 
 
-# Important data values
-df_=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+#Important data values
+df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
-plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
+plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
-for i, txt in enumerate(df_['Inflation (%)']):
-    plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+for i, txt in enumerate(df_daily['Inflation (%)']):
+    plt.annotate(f'{txt:.3f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('Inflation (%)')
@@ -24,10 +24,10 @@ plt.savefig('Results/Daily-Inflation.png')
 plt.show()
 
 plt.figure(figsize=(10, 6))
-plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
-for i, txt in enumerate(df_['CPI General']):
-    plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+for i, txt in enumerate(df_daily['CPI General']):
+    plt.annotate(f'{txt:.3f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('CPI General (27/06/2024 = base)')
@@ -38,12 +38,14 @@ plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 
-## LAST THURSDAY (*this corresponds to the monthly observation*)
+#========================================================================================================================
+# LAST THURSDAY (*this corresponds to the monthly observation*)
+#========================================================================================================================
 
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-#Function's calculation of last Thursday
+#Function for every last Thursday per month
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
@@ -53,13 +55,13 @@ def is_last_thursday(date):
 
 if is_last_thursday(current_date):
     
-    df_=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     plt.figure(figsize=(10, 6))
-    plt.plot(df_['Date'], df_['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
+    plt.plot(df_monthly['Date'], df_monthly['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
     
-    for i, txt in enumerate(df_['Inflation (%)']):
-        plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    for i, txt in enumerate(df_monthly['Inflation (%)']):
+        plt.annotate(f'{txt:.3f}', (df_monthly['Date'][i], df_monthly['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('Inflation (%)')
@@ -71,10 +73,10 @@ if is_last_thursday(current_date):
     plt.show()
     
     plt.figure(figsize=(10, 6))
-    plt.plot(df_['Date'], df_['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+    plt.plot(df_monthly['Date'], df_monthly['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
     
-    for i, txt in enumerate(df_['CPI General']):
-        plt.annotate(f'{txt:.3f}', (df_['Date'][i], df_['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    for i, txt in enumerate(df_monthly['CPI General']):
+        plt.annotate(f'{txt:.3f}', (df_monthly['Date'][i], df_monthly['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('CPI General (27/06/2024 = base)')
