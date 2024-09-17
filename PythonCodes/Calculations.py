@@ -1,4 +1,4 @@
-# Important libraries
+#Important libraries
 import pandas as pd 
 import warnings
 import matplotlib.pyplot as plt
@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from datetime import datetime, timedelta
 
-# Ignore specific warning
+#Ignore specific warning
 warnings.simplefilter("ignore")
 
 today=datetime.today().strftime("%Y-%m-%d")
@@ -108,7 +108,6 @@ df_2 = df_1.groupby("Subclass").sum()
 df_2.reset_index(inplace=True)
 
 df_3 = pd.merge(df_2, weight_, on='Subclass')
-#df_3.to_csv("Results/ken.csv", index=False)
 df_3 = df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
 df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
 
@@ -207,7 +206,10 @@ for unique_ in unique_divisions:
 
 df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
 
-## LAST THURSDAY (*this corresponds to the monthly observation*)
+#========================================================================================================================
+# LAST THURSDAY (*this corresponds to the monthly observation*)
+#========================================================================================================================
+
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -215,7 +217,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
-#Function's calculation of last Thursday
+#Function for the calculations every last Thursday per month
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
