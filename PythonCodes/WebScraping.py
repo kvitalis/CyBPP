@@ -27,11 +27,11 @@ warnings.simplefilter("ignore")
 
 # Read necessary data
 df = pd.read_csv("Datasets/Raw-Data.csv")
-urls=pd.read_csv("Datasets/Products-Urls.csv")
+urls = pd.read_csv("Datasets/Products-Urls.csv")
 
 # Create a null dataframe
-daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
-list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
+daily_errors = pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
+list_ = pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
 # Define the functions for the web-scraping of the target retailers
 
@@ -2179,7 +2179,7 @@ def stock_center_results(u):
 for u in range(0, len(urls)):
     print(u)
     
-    # Creative null row each time 
+    # Creative a new row each time 
     new_row = []
     website_false = []
     
