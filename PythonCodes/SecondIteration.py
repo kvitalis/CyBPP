@@ -34,6 +34,7 @@ daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"
 list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
 
 # Define the web-scraping functions for the target retailers
+
 def results_supermarketcy(urls):
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
@@ -2175,20 +2176,20 @@ def stock_center_results(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 # Run the code
-for u in range(0,len(urls)):
+for u in range(0, len(urls)):
     print(u)
     
-    #Creative null row each time 
-    new_row=[]
-    website_false=[]
+    # Create a new row each time 
+    new_row = []
+    website_false = []
     
-    #Read the data
-    Item_url_=urls["Url"].iloc[u]
-    name_=urls["Name"].iloc[u]
+    # Read the data
+    Item_url_ = urls["Url"].iloc[u]
+    name_ = urls["Name"].iloc[u]
     print(name_)
-    subclass_=urls["Subclass"].iloc[u]
-    commodity_=urls["Division"].iloc[u]
-    retailer_=urls["Retailer"].iloc[u]
+    subclass_ = urls["Subclass"].iloc[u]
+    commodity_ = urls["Division"].iloc[u]
+    retailer_ = urls["Retailer"].iloc[u]
 
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
