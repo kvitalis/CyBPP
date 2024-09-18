@@ -2175,6 +2175,9 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Initialization of the scraping/processing time
+start_time = time.time()
+
 # Run the code
 for u in range(0, len(urls)):
     print(u)
