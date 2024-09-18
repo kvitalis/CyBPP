@@ -12,8 +12,6 @@ warnings.simplefilter("ignore")
 today=datetime.today().strftime("%Y-%m-%d")
 #today='2024-08-26'
 
-#CALCULATIONS
-
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
@@ -155,7 +153,7 @@ df_10 = pd.merge(df_9, df_7, on='Division')
 df_10["New"] = df_10["CPI Division"] * df_10["Weight"]
 CPI_general = round(df_10["New"].sum(), 4)
 
-#Creat null list and add information
+#Create a new list and add information
 new_row=[]
 new_row.append(today)
 new_row.append(CPI_general)
@@ -167,7 +165,7 @@ df_12 = pd.concat([df_daily_general, df_11],ignore_index=True)
 df_12['Inflation (%)'] = 100 * (df_12['CPI General'] - df_12['CPI General'].shift(1)) / df_12['CPI General'].shift(1)
 df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
 
-#Daily change (%) of the CPI per Division (added on 23/08/2024):
+#Daily change (%) of the CPI per Division 
 date_obj = datetime.strptime(today, "%Y-%m-%d")
 previous_day = date_obj - timedelta(days=1)
 previous_day_str = previous_day.strftime("%Y-%m-%d")
@@ -204,7 +202,7 @@ for unique_ in unique_divisions:
     float_index_list = [int(i) for i in index_list]
     df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
+df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv", index=False)
 
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
@@ -217,7 +215,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
 
-#Function for the calculations every last Thursday per month
+#Function for the calculations to be performed every last Thursday per month
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
