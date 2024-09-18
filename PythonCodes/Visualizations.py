@@ -1,11 +1,11 @@
-#Important libraries
+#Import libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from datetime import datetime
 from datetime import datetime, timedelta 
 
-#Important data values
+#Import data
 df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
@@ -45,7 +45,7 @@ plt.show()
 #Current date
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-#Function for every last Thursday per month
+#Function to run every last Thursday per month
 def is_last_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
