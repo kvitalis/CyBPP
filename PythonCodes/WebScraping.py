@@ -7,7 +7,8 @@ import xlsxwriter
 import urllib.request
 import json
 import tabula as tb
-import PyPDF2
+#import PyPDF2
+import pypdf
 import warnings
 import matplotlib.pyplot as plt
 import numpy as np
@@ -1005,7 +1006,8 @@ def results_AHK(u):
         with open(pdf_AHK, "wb") as f:
             f.write(response.content)
         with open(pdf_AHK, "rb") as f:
-            pdf_reader = PyPDF2.PdfReader(f)
+            #pdf_reader = PyPDF2.PdfReader(f)
+            pdf_reader = pypdf.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
     
