@@ -2179,8 +2179,10 @@ def stock_center_results(u):
 
 def results_cheapbasket():
     url="https://cheapbasket.com.cy/product/"+Item_url_
+    print("a")
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    print("b")
+    #soup = BeautifulSoup(response.text, 'html.parser')
     if (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -2191,7 +2193,6 @@ def results_cheapbasket():
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.text, 'html.parser')
-
         if ("New Products" in soup.get_text()):
             website_false.append(name_)
             website_false.append(subclass_)
@@ -2216,7 +2217,9 @@ def results_cheapbasket():
 
 def results_opacy():
     url_="https://opa.cy/product/" + Item_url_
+    print("a")
     response = requests.get(url_)
+    print("b")
     if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
