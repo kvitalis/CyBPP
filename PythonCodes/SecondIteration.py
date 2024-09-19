@@ -2229,6 +2229,7 @@ def results_opacy():
         soup = BeautifulSoup(response.text, 'html.parser')
         element_=soup.find_all("span",{"class":"product-span price"})
         price_=element_[0].text.replace("Price: €","")
+        print("!")
         
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
