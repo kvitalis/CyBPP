@@ -2179,9 +2179,7 @@ def stock_center_results(u):
 
 def results_cheapbasket(u):
     url="https://cheapbasket.com.cy/product/"+Item_url_
-    print("a")
     response = requests.get(url)
-    print("b")
     #soup = BeautifulSoup(response.text, 'html.parser')
     if (response.status_code != 200):
         website_false.append(name_)
@@ -2217,9 +2215,7 @@ def results_cheapbasket(u):
 
 def results_opacy(u):
     url_="https://opa.cy/product/" + Item_url_
-    print("a")
     response = requests.get(url_)
-    print("b")
     if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -2232,7 +2228,6 @@ def results_opacy(u):
         soup = BeautifulSoup(response.text, 'html.parser')
         element_=soup.find_all("span",{"class":"product-span price"})
         price_=element_[0].text.replace("Price: €","")
-        print("!")
         
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
