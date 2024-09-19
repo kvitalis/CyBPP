@@ -1,4 +1,4 @@
-# Workflow for the calculations
+9# Workflow for the calculations
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
 name: calculations
@@ -9,7 +9,7 @@ run-name: Perform calculations and store results
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "40 21 * * *" #UTC time
+    - cron: "49 21 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
