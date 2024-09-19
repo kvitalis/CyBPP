@@ -2205,15 +2205,14 @@ def results_cheapbasket():
             element_=soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
             element_price=element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
             price_=element_price[0].text.replace("€","").replace(" ","").replace(",",".")
-
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(commodity_)
-                new_row.append("Cheap Basket")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(commodity_)
+            new_row.append("Cheap Basket")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_opacy():
     url_="https://opa.cy/product/" + Item_url_
