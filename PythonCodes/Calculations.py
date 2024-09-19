@@ -15,7 +15,7 @@ today='2024-09-18'
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
-raw_data=raw_data[~(raw_date[retailer_]=="Opa" & raw_data[retailer_]=="Check Basket")]
+raw_data=raw_data[~(raw_data[retailer_]=="Opa" & raw_data[retailer_]=="Check Basket")]
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
