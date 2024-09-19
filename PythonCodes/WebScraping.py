@@ -2177,7 +2177,7 @@ def stock_center_results(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def cheapbasket():
+def results_cheapbasket():
     url="https://cheapbasket.com.cy/product/"+Item_url_
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -2215,7 +2215,7 @@ def cheapbasket():
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def opacy():
+def results_opacy():
     url_="https://opa.cy/product/" + Item_url_
     response = requests.get(url_)
     if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
@@ -2368,9 +2368,9 @@ for u in range(0, len(urls)):
     elif retailer_=="Stock Center":
         stock_center_results(u)
     elif retailer_=="Cheap Basket":
-        cheapbasket(u)
+        results_cheapbasket(u)
     elif retailer_=="Opa":
-        opacy(u)
+        results_opacy(u)
 
 # Change the type as float
 list_["Price"].astype(float)
