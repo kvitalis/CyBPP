@@ -1,4 +1,4 @@
-9# Workflow for the calculations
+# Workflow for the calculations
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
 name: calculations
