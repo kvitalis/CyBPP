@@ -2232,7 +2232,7 @@ def results_opacy(u):
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
-            new_row.append(float(price_)*2)#For the above 5 product, we multiple x2, to have Eur/Kg 
+            new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
             new_row.append(subclass_)
             new_row.append(commodity_)
             new_row.append("Opa")
