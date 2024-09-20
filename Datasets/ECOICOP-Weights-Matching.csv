@@ -35,8 +35,7 @@ ECOICOP CODE,SUBCLASS,DIVISION,2022 WEIGHT(%),MATCHING (1 = YES),MATCHED WEIGHT 
 01.1.6.3,Dried fruit and nuts,FOOD AND NON-ALCOHOLIC BEVERAGES,0.38,1,0.38,
 01.1.7.1,Fresh or chilled vegetables other than potatoes and other tubers,FOOD AND NON-ALCOHOLIC BEVERAGES,1.38,1,1.38,
 01.1.7.2,Frozen vegetables other than potatoes and other tubers,FOOD AND NON-ALCOHOLIC BEVERAGES,0.09,1,0.09,
-01.1.7.3,"Dried vegetables, other preserved or processed 
-vegetables",FOOD AND NON-ALCOHOLIC BEVERAGES,0.36,1,0.36,
+01.1.7.3,"Dried vegetables, other preserved or processed vegetables",FOOD AND NON-ALCOHOLIC BEVERAGES,0.36,1,0.36,
 01.1.7.4,Potatoes,FOOD AND NON-ALCOHOLIC BEVERAGES,0.26,1,0.26,
 01.1.7.5,Crisps,FOOD AND NON-ALCOHOLIC BEVERAGES,0.18,1,0.18,
 01.1.8.1,Sugar,FOOD AND NON-ALCOHOLIC BEVERAGES,0.07,1,0.07,
