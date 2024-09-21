@@ -9,13 +9,13 @@ from datetime import datetime, timedelta
 #Ignore specific warning
 warnings.simplefilter("ignore")
 
-#today=datetime.today().strftime("%Y-%m-%d")
-today='2024-06-28'
+today=datetime.today().strftime("%Y-%m-%d")
+#today='2024-06-28'
 
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
-raw_data=raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #make comment when dont want this on data
+raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
