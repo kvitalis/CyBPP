@@ -474,9 +474,9 @@ while today <= end_date:
     
     #Function for the calculations to be performed every last Thursday per month
     def is_last_thursday(today):
-        date = datetime.strptime(today, "%Y-%m-%d")
-        weekday = date.weekday()
-        if weekday == 3 and date.month != (date + timedelta(days=7)).month:
+        #date = datetime.strptime(today, "%Y-%m-%d")
+        weekday = today.weekday()
+        if weekday == 3 and today.month != (today + timedelta(days=7)).month:
             return True
         return False
     
