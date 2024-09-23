@@ -4,7 +4,7 @@
 name: second-iteration
 
 # Workflow's description
-run-name: Add scraped data of 2nd iteration into raw_data.csv 
+run-name: Add scraped data of 2nd iteration into Raw-Data.csv 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
