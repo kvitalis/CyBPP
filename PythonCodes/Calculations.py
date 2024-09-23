@@ -473,8 +473,8 @@ while today <= end_date:
     df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
     
     #Function for the calculations to be performed every last Thursday per month
-    def is_last_thursday(date):
-        date = datetime.strptime(date, "%Y-%m-%d")
+    def is_last_thursday(today):
+        date = datetime.strptime(today, "%Y-%m-%d")
         weekday = date.weekday()
         if weekday == 3 and date.month != (date + timedelta(days=7)).month:
             return True
