@@ -466,7 +466,7 @@ while today <= end_date:
     #========================================================================================================================
     
     #Current date
-    today = datetime.now().strftime("%Y-%m-%d")
+    #today = datetime.now().strftime("%Y-%m-%d")
     
     #Read important files
     df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
