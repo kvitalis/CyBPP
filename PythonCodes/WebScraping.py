@@ -2312,8 +2312,8 @@ for u in range(0, len(urls)):
         results_novella(u)
     elif retailer_=="NUMBEO":
         results_numbeo(u)
-    elif retailer_=="Primetel":
-        results_primetel(u)
+    #elif retailer_=="Primetel":
+        #results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
     elif retailer_=="AHK":
