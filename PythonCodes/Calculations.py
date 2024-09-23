@@ -265,7 +265,7 @@ end_date = datetime.strptime("2024-09-22", "%Y-%m-%d")
 
 today = start_date
 while today <= end_date:
-    print(today.strftime("%Y-%m-%d"))
+    print(today)
     #today='2024-09-21'
     
     #Read necessary data 
@@ -423,8 +423,7 @@ while today <= end_date:
     df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
     
     #Daily change (%) of the CPI per Division 
-    #date_obj = datetime.strptime(today, "%Y-%m-%d")
-    date_obj = today.strftime("%Y-%m-%d")
+    date_obj = datetime.strptime(today, "%Y-%m-%d")
     previous_day = date_obj - timedelta(days=1)
     previous_day_str = previous_day.strftime("%Y-%m-%d")
     
