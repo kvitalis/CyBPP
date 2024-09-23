@@ -263,7 +263,7 @@ else:
 start_date = datetime.strptime("2024-09-13", "%Y-%m-%d")
 end_date = datetime.strptime("2024-09-22", "%Y-%m-%d")
 
-today_ = start_date.strftime("%Y-%m-%d")
+today_ = start_date
 while today_ <= end_date:
     today=today_.strftime("%Y-%m-%d")
     print(today)
