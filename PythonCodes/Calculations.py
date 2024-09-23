@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 #Ignore specific warning
 warnings.simplefilter("ignore")
 
+"""
 today=datetime.today().strftime("%Y-%m-%d")
 #today='2024-09-21'
 
@@ -255,3 +256,261 @@ if is_last_thursday(current_date):
     df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
+"""
+
+####While function
+
+start_date = datetime.strptime("13-09-2024", "%d-%m-%Y")
+end_date = datetime.strptime("22-09-2024", "%d-%m-%Y")
+
+today = start_date
+while today <= end_date:
+    print(today.strftime("%Y-%m-%d"))
+    #today='2024-09-21'
+    
+    #Read necessary data 
+    raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
+    raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
+    df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+    df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
+    df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+    weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
+    index_ = pd.read_csv("Datasets/Reference-Values.csv")
+    
+    #DIVISION CPI
+    row_data_today=raw_data[raw_data["Date"]==today]
+    row_data_1=row_data_today[["Subclass","Price"]]
+    group=row_data_1.groupby("Subclass").mean()
+    group.reset_index(inplace=True)
+    group_df = pd.DataFrame(group)
+    
+    group_df = group_df[group_df["Subclass"] != "Electricity"] #dont take into account the electricity subclass
+    group_df = group_df[group_df["Subclass"] != "Water supply"] #dont take into account the Water supply subclass
+    group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into account the Sewage Collection subclass
+    group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
+    
+    #Electricity
+    electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
+    ele_price_=electricity["Price"].sum()
+    new_row=[]
+    new_row.append("Electricity")
+    new_row.append(ele_price_)
+    group_df.loc[len(group_df)] = new_row
+    group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
+    
+    #Water supply
+    waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
+    
+    larnaca_=0
+    larnaca_count=0
+    nicosia_=0
+    nicosia_count=0
+    limassol_=0
+    limassol_count=0
+    
+    for i in range(0,len(waterboard)):
+        if "Larnaca" in waterboard.iloc[i]["Name"]:
+            larnaca_+=waterboard.iloc[i]["Price"]
+            larnaca_count=1
+        if "Nicosia" in waterboard.iloc[i]["Name"]:
+            nicosia_+=waterboard.iloc[i]["Price"]
+            nicosia_count=1
+        if "Limassol" in waterboard.iloc[i]["Name"]:
+            limassol_+=waterboard.iloc[i]["Price"]
+            limassol_count=1
+            
+    wat_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
+    new_row=[]
+    new_row.append("Water supply")
+    new_row.append(wat_price_)
+    group_df.loc[len(group_df)] = new_row
+    group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
+    
+    #Sewage collection
+    sewagecollection=row_data_today[row_data_today["Subclass"]=="Sewage collection"]
+    
+    larnaca_=0
+    larnaca_count=0
+    nicosia_=0
+    nicosia_count=0
+    limassol_=0
+    limassol_count=0
+    
+    for i in range(0,len(sewagecollection)):
+        if "Larnaca" in sewagecollection.iloc[i]["Name"]:
+            larnaca_+=sewagecollection.iloc[i]["Price"]
+            larnaca_count=1
+        if "Nicosia" in sewagecollection.iloc[i]["Name"]:
+            nicosia_+=sewagecollection.iloc[i]["Price"]
+            nicosia_count=1
+        if "Limassol" in sewagecollection.iloc[i]["Name"]:
+            limassol_+=sewagecollection.iloc[i]["Price"]
+            limassol_count=1
+            
+    sew_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
+    new_row=[]
+    new_row.append("Sewage collection")
+    new_row.append(sew_price_)
+    group_df.loc[len(group_df)] = new_row
+    group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
+    
+    #ECOICOP weights and weighted average prices per Subclass
+    df_1 = pd.merge(group_df, weight_, on='Subclass')
+    df_1["Weight_Price_Subclass"] = df_1["Price"] * df_1["Weight"]
+    
+    df_2 = df_1.groupby("Subclass").sum()
+    df_2.reset_index(inplace=True)
+    
+    df_3 = pd.merge(df_2, weight_, on='Subclass')
+    df_3 = df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
+    df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
+    
+    #Weighted average price per Division
+    df_4 = df_3.groupby("Division").sum()
+    df_4.reset_index(inplace=True)
+    df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
+    
+    #Daily CPI per Division 
+    df_5 = pd.merge(index_, df_4, on='Division')
+    df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_Index"], 4)
+    df_5 = df_5[["Division","CPI Division","Weight_Price_Division_today"]]
+    df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
+    df_5["Date"] = today
+    
+    cols = list(df_5.columns)
+    cols.insert(0, cols.pop(cols.index('Date')))
+    df_5 = df_5[cols]
+    df_5['Date'] = pd.to_datetime(df_5['Date']) 
+    
+    df_5a = pd.concat([df_5, df_daily_division])
+    df_5a['Date'] = pd.to_datetime(df_5a['Date'])
+    df_5a = df_5a.sort_values(by='Date').reset_index(drop=True)
+    df_5a.to_csv("Results/Daily-CPI-Division.csv",index=False)
+    
+    del df_5["Date"]
+    
+    df_6 = pd.merge(df_1, df_5, on='Division')
+    df_6["Date"] = None
+    df_6 = df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
+    df_6["Date"] = today
+    
+    combined_df = pd.concat([df_daily_subclass_division, df_6], axis=0)
+    combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
+    
+    #Total weighted average price
+    df_7 = index_[["Division","Weight"]]
+    
+    #Drop duplicates
+    df_8 = df_6[["Division","CPI Division"]]
+    df_9 = df_8.drop_duplicates()
+    
+    #General CPI 
+    df_10 = pd.merge(df_9, df_7, on='Division')
+    df_10["New"] = df_10["CPI Division"] * df_10["Weight"]
+    CPI_general = round(df_10["New"].sum(), 4)
+    
+    #Create a new list and add information
+    new_row=[]
+    new_row.append(today)
+    new_row.append(CPI_general)
+    new_row.append(None)
+    
+    #General CPI Inflation
+    df_11 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
+    df_12 = pd.concat([df_daily_general, df_11],ignore_index=True)
+    df_12['Inflation (%)'] = 100 * (df_12['CPI General'] - df_12['CPI General'].shift(1)) / df_12['CPI General'].shift(1)
+    df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
+    
+    #Daily change (%) of the CPI per Division 
+    date_obj = datetime.strptime(today, "%Y-%m-%d")
+    previous_day = date_obj - timedelta(days=1)
+    previous_day_str = previous_day.strftime("%Y-%m-%d")
+    
+    #Daily-CPI-Division.csv file
+    df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
+    prior_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == previous_day_str]
+    current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today]
+    unique_divisions = current_df['Division'].unique()
+    
+    for unique_ in unique_divisions:
+        df_13 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
+        df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        percentage_change = 100 * (df_14 - df_13) / df_13
+        
+        index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
+        float_index_list = [int(i) for i in index_list]
+        df_daily_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    
+    df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
+    
+    #Daily-CPI-Subclass-Division.csv file
+    df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+    prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
+    current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today]
+    unique_divisions = current_df['Subclass'].unique()
+    
+    for unique_ in unique_divisions:
+        df_15 = float(prior_df[prior_df["Subclass"]==unique_]["CPI Division"])
+        df_16 = float(current_df[current_df["Subclass"]==unique_]["CPI Division"])
+        percentage_change = 100 * (df_16 - df_15) / df_15            
+        
+        index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
+        float_index_list = [int(i) for i in index_list]
+        df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
+    
+    df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv", index=False)
+    
+    #========================================================================================================================
+    # LAST THURSDAY (*this corresponds to the monthly observation*)
+    #========================================================================================================================
+    
+    #Current date
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    
+    #Read important files
+    df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
+    
+    #Function for the calculations to be performed every last Thursday per month
+    def is_last_thursday(date):
+        date = datetime.strptime(date, "%Y-%m-%d")
+        weekday = date.weekday()
+        if weekday == 3 and date.month != (date + timedelta(days=7)).month:
+            return True
+        return False
+    
+    #Call the function
+    if is_last_thursday(current_date):
+        df_current_date = df_daily_general[df_daily_general["Date"] == current_date]
+        
+        #Monthly CPI per Division
+        df_5b = df_5[["Division","CPI Division"]]
+        df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
+        df_monthly_division = df_monthly_division.sort_values(by ='Date')
+    
+        prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
+        current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
+        unique_divisions = df_monthly_division['Division'].unique()
+    
+        for unique_ in unique_divisions:
+            df_17 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
+            df_18 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
+            percentage_change = 100 * (df_18 - df_17) / df_17
+        
+            index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
+            float_index_list = [int(i) for i in index_list]
+            df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
+    
+        df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
+    
+        #Monthly CPI General Inflation
+        df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
+        df_monthly_general = df_monthly_general.sort_values(by ='Date')
+        df_monthly_general["Inflation (%)"] = round(100 * (df_monthly_general['CPI General'] - df_monthly_general['CPI General'].shift(1)) / df_monthly_general['CPI General'].shift(1), 4)   
+        df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
+    else:
+        pass
+    
+    current_date += timedelta(days=1)
+
