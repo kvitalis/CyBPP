@@ -260,8 +260,8 @@ else:
 
 ####While function
 
-start_date = datetime.strptime("2024-09-13", "%d-%m-%Y")
-end_date = datetime.strptime("2024-09-22", "%d-%m-%Y")
+start_date = datetime.strptime("2024-09-13", "%Y-%m-%d")
+end_date = datetime.strptime("2024-09-22", "%Y-%m-%d")
 
 today = start_date
 while today <= end_date:
