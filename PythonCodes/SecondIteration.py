@@ -2308,8 +2308,8 @@ for u in range(0, len(urls)):
         results_novella(u)
     elif retailer_=="NUMBEO":
         results_numbeo(u)
-    elif retailer_=="Primetel":
-        results_primetel(u)
+    #elif retailer_=="Primetel":
+        #results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
     elif retailer_=="AHK":
@@ -2442,6 +2442,37 @@ new_row.append(float(0.5))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Larnaca") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Primetel (*back-to-school special offer for new registrations until 2024-09-26*)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited")
+new_row.append(float(14.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited Plus")
+new_row.append(float(17.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited MAX")
+new_row.append(float(22.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
