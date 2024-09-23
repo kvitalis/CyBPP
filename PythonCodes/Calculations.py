@@ -424,7 +424,7 @@ while today <= end_date:
     
     #Daily change (%) of the CPI per Division 
     #date_obj = datetime.strptime(today, "%Y-%m-%d")
-    date_str = today.strftime("%Y-%m-%d")
+    date_obj = today.strftime("%Y-%m-%d")
     previous_day = date_obj - timedelta(days=1)
     previous_day_str = previous_day.strftime("%Y-%m-%d")
     
