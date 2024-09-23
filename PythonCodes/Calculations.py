@@ -261,14 +261,12 @@ else:
 ####While function
 
 start_date = datetime.strptime("2024-09-13", "%Y-%m-%d")
-start_date = start_date.strftime("%Y-%m-%d")
 end_date = datetime.strptime("2024-09-22", "%Y-%m-%d")
-end_date = end_date.strftime("%Y-%m-%d")
 
 today = start_date
 while today <= end_date:
+    today=datetime.strptime(today, "%Y-%m-%d")
     print(today)
-    #today='2024-09-21'
     
     #Read necessary data 
     raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
