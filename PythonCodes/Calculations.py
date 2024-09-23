@@ -467,7 +467,7 @@ while today <= end_date:
     #========================================================================================================================
     
     #Current date
-    current_date = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now().strftime("%Y-%m-%d")
     
     #Read important files
     df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
@@ -482,8 +482,8 @@ while today <= end_date:
         return False
     
     #Call the function
-    if is_last_thursday(current_date):
-        df_current_date = df_daily_general[df_daily_general["Date"] == current_date]
+    if is_last_thursday(today):
+        df_current_date = df_daily_general[df_daily_general["Date"] == today]
         
         #Monthly CPI per Division
         df_5b = df_5[["Division","CPI Division"]]
@@ -513,5 +513,5 @@ while today <= end_date:
     else:
         pass
     
-    current_date += timedelta(days=1)
+    today += timedelta(days=1)
 
