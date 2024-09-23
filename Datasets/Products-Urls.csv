@@ -375,7 +375,7 @@ LaysΑλάτιΞύδι160g,Crisps,lays-alati-xydi-160g, FOOD AND NON-ALCOHOLIC B
 LaysΑλάτι160g,Crisps,/lays-alati-160g, FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ElSaborNachoChipsTexasBbqFlavor225g,Crisps,el-sabor-nacho-chips-texas-bbq-flavor-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 JumboCountryChipsΜεΒαλσάμικοΞύδι&ΚαραμελωμένοΚρεμμύδιΧωρίςΓλουτένη 150g,Crisps,jumbo-country-chips-me-valsamiko-xydi-karamelomeno-kremmydi-choris-glouteni-150g, FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-PelargosΚλασικό3X250g,"Sauces, condiments",pelargos-klasiko-3x250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PelargosΚλασικό500g,"Sauces, condiments",pelargos-klasiko-500g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜιτσίδηΠάσταΝτομάτας4X70g,"Sauces, condiments",mitsidi-pasta-ntomatas-4x70g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 BlossomΠάσταΝτομάτας4X70g,"Sauces, condiments",blossom-pasta-ntomatas-4x70g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 KeanPomiloriΠεραστήΝτομάτα690g,"Sauces, condiments",kean-pomilori-perasti-ntomata-690g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -545,7 +545,7 @@ CrownΑντικολλητικόΤηγάνι30cm,Non-electric kitchen utensils an
 RestoΚατσαρολάκιStainlessSteel18/1014cm,Non-electric kitchen utensils and articles,resto-katsarolaki-me-kapaki-stainless-steel-1810-14cm,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 ΚουτάλιαSymphony12Τεμ,Non-electric kitchen utensils and articles,koutalia-precius-12tem,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 WellaflexHairspra2ndDayVolumeExtraStrongHold200ml,Personal grooming treatments,wellaflex-afros-2nd-day-volume-echtra-dynato-kratima-200ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-PalmoliveAntiDandruffΣαμπουάνΜεΜέντα350ml,Personal grooming treatments,palmolive-anti-dandruff-sampouan-me-menta-350ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+FarcomOxycream30Volumes70ml,Personal grooming treatments,farcom-oxycream-30-volumes-70ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 AlwaysUltraSecureNightΜεΦτερά12Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",always-ultra-secure-night-me-ftera-12tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 GilletteOriginalΑφρόςΞυρισματος200ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",gillette-original-afros-xyrismatos-200ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 NiveaMenFreshKickAfterShaveBalm100ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",nivea-men-fresh-kick-after-shave-balm-100ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
@@ -564,7 +564,7 @@ DermomedIrisΚρεμοσάπουνο1000ml,"Articles for personal hygiene and we
 ColgateHerbalOriginal75ml1+1Δώρο,"Articles for personal hygiene and wellness, esoteric products and beauty products",colgate-herbal-original-75ml-11-doro,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 ColgateTotalActiveFresh75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",colgate-total-active-fresh-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 PalmoliveNaturalsTenderSensationSoapBars120g4+2Free,"Articles for personal hygiene and wellness, esoteric products and beauty products",palmolive-naturals-tender-sensation-sapounakia-120g-42-doro,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-EveryDayHyperdryNormalUltraPlus18Τεμ1+1,"Articles for personal hygiene and wellness, esoteric products and beauty products",every-day-hyperdry-normal-ultra-plus-18tem-11,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+EveryDaySensitiveNormalUltraPlus18Τεμ1+1,"Articles for personal hygiene and wellness, esoteric products and beauty products",every-day-sensitive-normal-ultra-plus-18tem-11,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 AlwaysDailiesExtraProtectLarge26Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",always-dailies-extra-protect-large-26tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 GilletteBlueIiPlusSlalomΞυραφάκια10Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",gillette-blue-ii-plus-slalom-xyrafakia-10tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 ΚεοVsopBrandy1L,Spirits and liqueurs,keo-vsop-brandy-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
@@ -653,7 +653,7 @@ NounouFrisogrowPlus+4800g,Baby food,nounou-frisogrow-plus-4-800g-1,FOOD AND NON-
 "EurekaMassaliasClassicLiquid48Washes2,4L-4€",Cleaning and maintenance products,evrika-massalias-classic-ygro-48-plyseis-24l-4eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 DixanPowerCapsColor40Pcs,Cleaning and maintenance products,dixan-power-caps-color-40tem,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 ComfortPureFabricSoftener2L,Cleaning and maintenance products,comfort-pure-malaktiko-rouchon-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
-SecretsLavender&YlangYlangFabricSoftener2L-1€,Cleaning and maintenance products,secrets-levanta-ylang-ylang-malaktiko-rouchon-2l-1eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+SecretsClassicPureΜαλακτικόΡούχων2L-1€,Cleaning and maintenance products,secrets-classic-pure-malaktiko-rouchon-2l-1eur,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 LenorLaCollectionEscapeConcentrateFabricSoftener55Washes1.155L,Cleaning and maintenance products,lenor-la-collection-escape-sympyknomeno-malaktiko-55-plyseis-1155l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 "ArielColorTouchOfLenorFreshnessLiquid70Washes3,850L",Cleaning and maintenance products,ariel-color-touch-of-lenor-freshness-ygro-70-plyseis-3850l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 "EurekaActiveCareOceanFreshnessPowder50Washes2,750kg",Cleaning and maintenance products,evrika-active-care-ocean-freshness-skoni-50-plyseis-2750kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
