@@ -476,12 +476,12 @@ while today_ <= end_date:
     def is_last_thursday(today_):
         #date = datetime.strptime(today, "%Y-%m-%d")
         weekday = today_.weekday()
-        if weekday == 3 and today_.month != (today_ + timedelta(days=7)).month:
+        if weekday == 3 and today_.month != (today + timedelta(days=7)).month:
             return True
         return False
     
     #Call the function
-    if is_last_thursday(today):
+    if is_last_thursday(today_):
         df_current_date = df_daily_general[df_daily_general["Date"] == today]
         
         #Monthly CPI per Division
