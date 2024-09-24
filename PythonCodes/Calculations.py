@@ -258,15 +258,15 @@ else:
     pass
 """
 
-####While function
+## While loop
 
 start_date = datetime.strptime("2024-09-13", "%Y-%m-%d")
 end_date = datetime.strptime("2024-09-22", "%Y-%m-%d")
 
-today_ = start_date
-while today_ <= end_date:
-    today=today_.strftime("%Y-%m-%d")
-    print(today)
+today_p = start_date
+while today_p <= end_date:
+    today_f = today_p.strftime("%Y-%m-%d")
+    print(today_f)
     
     #Read necessary data 
     raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
@@ -279,9 +279,9 @@ while today_ <= end_date:
     index_ = pd.read_csv("Datasets/Reference-Values.csv")
     
     #DIVISION CPI
-    row_data_today=raw_data[raw_data["Date"]==today_]
-    row_data_1=row_data_today[["Subclass","Price"]]
-    group=row_data_1.groupby("Subclass").mean()
+    row_data_today = raw_data[raw_data["Date"]==today_p]
+    row_data_1 = row_data_today[["Subclass","Price"]]
+    group = row_data_1.groupby("Subclass").mean()
     group.reset_index(inplace=True)
     group_df = pd.DataFrame(group)
     
@@ -376,7 +376,7 @@ while today_ <= end_date:
     df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_Index"], 4)
     df_5 = df_5[["Division","CPI Division","Weight_Price_Division_today"]]
     df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
-    df_5["Date"] = today
+    df_5["Date"] = today_f
     
     cols = list(df_5.columns)
     cols.insert(0, cols.pop(cols.index('Date')))
@@ -393,7 +393,7 @@ while today_ <= end_date:
     df_6 = pd.merge(df_1, df_5, on='Division')
     df_6["Date"] = None
     df_6 = df_6[["Date","Subclass","Division","Price","Weight","Weight_Price_Subclass","Weight_Price_Division","CPI Division"]]
-    df_6["Date"] = today
+    df_6["Date"] = today_f
     
     combined_df = pd.concat([df_daily_subclass_division, df_6], axis=0)
     combined_df.to_csv("Results/Daily-CPI-Subclass-Division.csv",index=False)
@@ -412,7 +412,7 @@ while today_ <= end_date:
     
     #Create a new list and add information
     new_row=[]
-    new_row.append(today)
+    new_row.append(today_f)
     new_row.append(CPI_general)
     new_row.append(None)
     
@@ -423,14 +423,14 @@ while today_ <= end_date:
     df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
     
     #Daily change (%) of the CPI per Division 
-    #date_obj = datetime.strptime(today, "%Y-%m-%d")
-    previous_day =  today_ - timedelta(days=1)
+    #date_obj = datetime.strptime(today_f, "%Y-%m-%d")
+    previous_day =  today_p - timedelta(days=1)
     previous_day_str = previous_day.strftime("%Y-%m-%d")
     
     #Daily-CPI-Division.csv file
     df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
     prior_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == previous_day_str]
-    current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today]
+    current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today_f]
     unique_divisions = current_df['Division'].unique()
     
     for unique_ in unique_divisions:
@@ -447,7 +447,7 @@ while today_ <= end_date:
     #Daily-CPI-Subclass-Division.csv file
     df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
     prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
-    current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today]
+    current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today_f]
     unique_divisions = current_df['Subclass'].unique()
     
     for unique_ in unique_divisions:
@@ -465,24 +465,21 @@ while today_ <= end_date:
     # LAST THURSDAY (*this corresponds to the monthly observation*)
     #========================================================================================================================
     
-    #Current date
-    #today = datetime.now().strftime("%Y-%m-%d")
-    
     #Read important files
     df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
     
     #Function for the calculations to be performed every last Thursday per month
-    def is_last_thursday(today_):
-        #date = datetime.strptime(today, "%Y-%m-%d")
-        weekday = today_.weekday()
-        if weekday == 3 and today_.month != (today_ + timedelta(days=7)).month:
+    def is_last_thursday(date):
+        #date = datetime.strptime(date, "%Y-%m-%d")
+        weekday = date.weekday()
+        if weekday == 3 and date.month != (date + timedelta(days=7)).month:
             return True
         return False
     
     #Call the function
-    if is_last_thursday(today_):
-        df_current_date = df_daily_general[df_daily_general["Date"] == today]
+    if is_last_thursday(today_p):
+        df_current_date = df_daily_general[df_daily_general["Date"] == today_f]
         
         #Monthly CPI per Division
         df_5b = df_5[["Division","CPI Division"]]
@@ -511,5 +508,5 @@ while today_ <= end_date:
         df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
     else:
         pass
-    today_ += timedelta(days=1)
+    today_p += timedelta(days=1)
 
