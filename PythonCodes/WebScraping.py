@@ -145,10 +145,10 @@ def results_fuelDaddy(urls):
 
 def results_IKEA(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    url_new = "https://www.ikea.com.cy"+Item_url_
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs)    
-    if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)  
+
+    if (response.status_code != 200): #or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -156,28 +156,39 @@ def results_IKEA(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("span",{"class":"price__sr-text"})
         
-        if (element_soup):
-            element_soup_1=element_soup[0]
-            element_soup_2=element_soup_1.text
-            element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
-            if "Τρέχουσα τιμή" in element_soup_3:
-                element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
+    else:
+        if ("Προσθήκη στο καλάθι" in response.text):
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup = soup.find_all("span",{"class":"price__sr-text"})
+        
+            if (element_soup):
+                element_soup_1=element_soup[0]
+                element_soup_2=element_soup_1.text
+                element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
+                if "Τρέχουσα τιμή" in element_soup_3:
+                    element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
             
-            if "Αρχική τιμή" in element_soup_3:
-                element_soup_3=element_soup_3.replace("Αρχική τιμή  ","").replace(",",".") 
-                    
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(element_soup_3))
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("IKEA")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
+                if "Αρχική τιμή" in element_soup_3:
+                    element_soup_3=element_soup_3.replace("Αρχική τιμή  ","").replace(",",".")
+                
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(element_soup_3))
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("IKEA")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
 
 def results_stefanis(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
