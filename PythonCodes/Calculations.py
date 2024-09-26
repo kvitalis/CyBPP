@@ -210,7 +210,7 @@ df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",
 #========================================================================================================================
 
 #Current date
-current_date = datetime.now().strftime("%Y-%m-%d")
+current_date = today.strftime("%Y-%m-%d")
 
 #Read important files
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
