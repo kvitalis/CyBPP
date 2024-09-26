@@ -227,22 +227,19 @@ def is_last_thursday(date):
 
 #Call the function
 if is_last_thursday(current_date):
-    df_current_date = df_daily_general[df_daily_general["Date"] == current_date]
+    df_current_date = df_daily_general[df_daily_general["Date"] == today]
     
     #Monthly CPI per Division
-    print("1")
     df_5b = df_5[["Division","CPI Division"]]
     df_5b["Date"]=current_date
     df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
 
-    print("2")
     prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
     current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
     unique_divisions = df_monthly_division['Division'].unique()
 
     for unique_ in unique_divisions:
-        print("3")
         df_17 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
         df_18 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
         percentage_change = 100 * (df_18 - df_17) / df_17
@@ -250,12 +247,10 @@ if is_last_thursday(current_date):
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
-        print("4")
 
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly CPI General Inflation
-    print("5")
     df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
     df_monthly_general = df_monthly_general.sort_values(by ='Date')
     df_monthly_general["Inflation (%)"] = round(100 * (df_monthly_general['CPI General'] - df_monthly_general['CPI General'].shift(1)) / df_monthly_general['CPI General'].shift(1), 4)   
