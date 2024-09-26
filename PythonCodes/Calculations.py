@@ -227,8 +227,8 @@ def is_last_thursday(date):
 
 #Call the function
 if is_last_thursday(current_date):
-    df_current_date = df_daily_general[df_daily_general["Date"] == "2024-09-26"]
-    print(df_current_date)
+    df_daily_general['Date'] = pd.to_datetime(df_daily_general['Date'], format='%Y-%m-%d')
+    df_current_date = df_daily_general[df_daily_general["Date"] == today]
     
     #Monthly CPI per Division
     df_5b = df_5[["Division","CPI Division"]]
