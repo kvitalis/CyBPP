@@ -230,6 +230,7 @@ if is_last_thursday(current_date):
     
     #Monthly CPI per Division
     df_5b = df_5[["Division","CPI Division"]]
+    df_5b["Date"]=current_date
     df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
 
