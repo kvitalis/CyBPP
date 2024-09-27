@@ -43,7 +43,8 @@ plt.show()
 #========================================================================================================================
 
 #Current date
-today_date = datetime.strptime(today, "%Y-%m-%d")
+#today_date = datetime.strptime(today, "%Y-%m-%d")
+today_date ='2024-09-26'
 current_date = today_date.strftime("%Y-%m-%d")
 
 #Read data
