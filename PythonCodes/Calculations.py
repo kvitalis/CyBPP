@@ -452,7 +452,7 @@ while today_p <= end_date:
     #Daily-CPI-Subclass-Division.csv file
     df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
     prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
-    current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today_f]
+    current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today_p]
     unique_divisions = current_df['Subclass'].unique()
     
     for unique_ in unique_divisions:
@@ -471,7 +471,7 @@ while today_p <= end_date:
     #========================================================================================================================
     
     #Read important files
-    today_date=datetime.strptime(today, "%Y-%m-%d")
+    today_date=datetime.strptime(today_f, "%Y-%m-%d")
     current_date = today_date.strftime("%Y-%m-%d")
     
     #Read important files
