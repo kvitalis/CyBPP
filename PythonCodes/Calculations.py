@@ -523,4 +523,3 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-"""
