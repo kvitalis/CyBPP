@@ -177,7 +177,7 @@ df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 prior_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == previous_day_str]
 current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today]
 unique_divisions = current_df['Division'].unique()
-
+"""
 for unique_ in unique_divisions:
     df_13 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
     df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
@@ -186,7 +186,7 @@ for unique_ in unique_divisions:
     index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
     df_daily_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
-
+"""
 df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 
 #Daily-CPI-Subclass-Division.csv file
@@ -194,7 +194,7 @@ df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Divisio
 prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
 current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today]
 unique_divisions = current_df['Subclass'].unique()
-
+"""
 for unique_ in unique_divisions:
     df_15 = float(prior_df[prior_df["Subclass"]==unique_]["CPI Division"])
     df_16 = float(current_df[current_df["Subclass"]==unique_]["CPI Division"])
@@ -203,7 +203,7 @@ for unique_ in unique_divisions:
     index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
     float_index_list = [int(i) for i in index_list]
     df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
-
+"""
 df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv", index=False)
 
 #========================================================================================================================
@@ -243,7 +243,7 @@ if is_last_thursday(current_date):
     prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
     current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
     unique_divisions = df_monthly_division['Division'].unique()
-
+    """
     for unique_ in unique_divisions:
         df_17 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
         df_18 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
@@ -252,7 +252,7 @@ if is_last_thursday(current_date):
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
-
+    """
     df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
 
     #Monthly CPI General Inflation
