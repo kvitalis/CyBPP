@@ -43,19 +43,21 @@ plt.show()
 #========================================================================================================================
 
 #Current date
-current_date = datetime.now().strftime("%Y-%m-%d")
+today_date = datetime.strptime(today, "%Y-%m-%d")
+current_date = today_date.strftime("%Y-%m-%d")
+
+#Read data
+df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 
 #Function to run every last Thursday per month
 def is_last_thursday(date):
-    date = datetime.strptime(date, "%Y-%m-%d")
+    #date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date + timedelta(days=7)).month:
         return True
     return False
 
 if is_last_thursday(current_date):
-    
-    df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
     
     plt.figure(figsize=(10, 6))
     plt.plot(df_monthly['Date'], df_monthly['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
