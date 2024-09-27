@@ -265,7 +265,7 @@ else:
 """
 ## While loop
 
-start_date = datetime.strptime("2024-07-28", "%Y-%m-%d")
+start_date = datetime.strptime("2024-06-28", "%Y-%m-%d")
 end_date = datetime.strptime("2024-09-26", "%Y-%m-%d")
 
 today_p = start_date
