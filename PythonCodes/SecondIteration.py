@@ -158,7 +158,7 @@ def results_IKEA(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
         
     else:
-        if ("Προσθήκη στο καλάθι" in response.text):
+        if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup = soup.find_all("span",{"class":"price__sr-text"})
         
