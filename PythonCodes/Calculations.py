@@ -12,6 +12,7 @@ warnings.simplefilter("ignore")
 today=datetime.today().strftime("%Y-%m-%d")
 #today='2024-09-25'
 
+
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
@@ -216,6 +217,7 @@ current_date = today_date.strftime("%Y-%m-%d")
 #Read important files
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
+df_daily_general=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 #Function for the calculations to be performed every last Thursday per month
 def is_last_thursday(date):
@@ -227,14 +229,16 @@ def is_last_thursday(date):
 
 #Call the function
 if is_last_thursday(current_date):
-    df_daily_general['Date'] = pd.to_datetime(df_daily_general['Date'], format='%Y-%m-%d')
-    df_current_date = df_daily_general[df_daily_general["Date"] == today]
+    df_current_date = df_daily_general.tail(1)
     
     #Monthly CPI per Division
     df_5b = df_5[["Division","CPI Division"]]
     df_5b["Date"]=current_date
     df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
+    cols = list(df_monthly_division.columns)
+    cols.insert(0, cols.pop(cols.index('Date')))
+    df_monthly_division = df_monthly_division[cols]
 
     prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
     current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
