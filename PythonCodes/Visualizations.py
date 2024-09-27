@@ -44,15 +44,15 @@ plt.show()
 
 #Current date
 #today_date = datetime.strptime(today, "%Y-%m-%d")
-today_date ='2024-09-26'
-current_date = today_date.strftime("%Y-%m-%d")
+current_date ='2024-09-26'
+#current_date = today_date.strftime("%Y-%m-%d")
 
 #Read data
 df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
 
 #Function to run every last Thursday per month
 def is_last_thursday(date):
-    #date = datetime.strptime(date, "%Y-%m-%d")
+    date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date + timedelta(days=7)).month:
         return True
