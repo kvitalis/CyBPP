@@ -2455,7 +2455,8 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Primetel (*back-to-school special offer for new registrations until 2024-09-26*)
+#Primetel 
+#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-09-26*)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
@@ -2481,6 +2482,37 @@ new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited MAX")
 new_row.append(float(22.99))
 new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Internet access provision services
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("HomeFiber 60 MBPS")
+new_row.append(float(14.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("HomeFiber 100 MBPS")
+new_row.append(float(19.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("HomeFiber 150 MBPS")
+new_row.append(float(25.99))
+new_row.append("Internet access provision services")
 new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
 list_.loc[len(list_)] = new_row
