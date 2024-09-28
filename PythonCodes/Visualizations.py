@@ -43,8 +43,8 @@ plt.show()
 #========================================================================================================================
 
 #Current date
-current_date = '2024-09-26'
-#current_date = today_date.strftime("%Y-%m-%d")
+#current_date = '2024-09-26'
+current_date = today_date.strftime("%Y-%m-%d")
 
 #Read data
 df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
