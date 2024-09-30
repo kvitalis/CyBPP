@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 #Ignore specific warning
 warnings.simplefilter("ignore")
 
+"""
 today=datetime.today().strftime("%Y-%m-%d")
 #today='2024-09-27'
 
@@ -264,8 +265,8 @@ else:
 """
 ## While loop
 
-start_date = datetime.strptime("2024-06-28", "%Y-%m-%d")
-end_date = datetime.strptime("2024-09-26", "%Y-%m-%d")
+start_date = datetime.strptime("2024-09-23", "%Y-%m-%d")
+end_date = datetime.strptime("2024-09-30", "%Y-%m-%d")
 
 today_p = start_date
 while today_p <= end_date:
@@ -522,4 +523,4 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-"""
+
