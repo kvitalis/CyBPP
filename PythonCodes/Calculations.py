@@ -16,7 +16,6 @@ today = datetime.today().strftime("%Y-%m-%d")
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
 #raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
-raw_data = raw_data[~(raw_data["Retailer"]=="Opa")] #exclude these retailers' data 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
@@ -168,14 +167,15 @@ df_12['Inflation (%)'] = 100 * (df_12['CPI General'] - df_12['CPI General'].shif
 df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
 
 #Daily change (%) of the CPI per Division 
-current_date_obj = datetime.strptime(today, "%Y-%m-%d")
-previous_day_obj = current_date_obj - timedelta(days=1)
+current_day_obj = datetime.strptime(today, "%Y-%m-%d")
+current_day_str = current_day_obj.strftime("%Y-%m-%d")
+previous_day_obj = current_day_obj - timedelta(days=1)
 previous_day_str = previous_day_obj.strftime("%Y-%m-%d")
 
 #Daily-CPI-Division.csv file
 df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 prior_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == previous_day_str]
-current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == today]
+current_df = df_daily_cpi_division[df_daily_cpi_division["Date"] == current_day_str]
 unique_divisions = current_df['Division'].unique()
 
 for unique_ in unique_divisions:
@@ -192,7 +192,7 @@ df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
 #Daily-CPI-Subclass-Division.csv file
 df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
 prior_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == previous_day_str]
-current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == today]
+current_df = df_daily_cpi_subclass_division[df_daily_cpi_subclass_division["Date"] == current_day_str]
 unique_divisions = current_df['Subclass'].unique()
 
 for unique_ in unique_divisions:
