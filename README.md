@@ -4,7 +4,7 @@
 
 The *Billion Prices Project* ([BPP](https://thebillionpricesproject.com/)) is an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
 
-Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2500 goods and services from over 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
+Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2200 goods and services from over 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
 
 ## Python Codes
 
