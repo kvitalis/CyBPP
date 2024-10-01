@@ -15,7 +15,7 @@ today = datetime.today().strftime("%Y-%m-%d")
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
-#raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
+raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
 df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
