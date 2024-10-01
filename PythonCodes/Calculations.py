@@ -9,8 +9,8 @@ from datetime import datetime, timedelta
 #Ignore specific warning
 warnings.simplefilter("ignore")
 
-#today=datetime.today().strftime("%Y-%m-%d")
-today='2024-10-01'
+today = datetime.today().strftime("%Y-%m-%d")
+#today = '2024-10-01'
 
 #Read necessary data 
 raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
@@ -167,9 +167,9 @@ df_12['Inflation (%)'] = 100 * (df_12['CPI General'] - df_12['CPI General'].shif
 df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
 
 #Daily change (%) of the CPI per Division 
-date_obj = datetime.strptime(today, "%Y-%m-%d")
-previous_day = date_obj - timedelta(days=1)
-previous_day_str = previous_day.strftime("%Y-%m-%d")
+current_date_obj = datetime.strptime(today, "%Y-%m-%d")
+previous_day_obj = current_date_obj - timedelta(days=1)
+previous_day_str = previous_day_obj.strftime("%Y-%m-%d")
 
 #Daily-CPI-Division.csv file
 df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
@@ -210,8 +210,8 @@ df_daily_cpi_subclass_division.to_csv("Results/Daily-CPI-Subclass-Division.csv",
 #========================================================================================================================
 
 #Current date
-today_date = datetime.strptime(today, "%Y-%m-%d")
-current_date = today_date.strftime("%Y-%m-%d")
+current_date_obj = datetime.strptime(today, "%Y-%m-%d")
+current_date_str = current_date_obj.strftime("%Y-%m-%d")
 
 #Read important files
 df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
@@ -227,12 +227,12 @@ def is_last_thursday(date):
     return False
 
 #Call the function
-if is_last_thursday(current_date):
+if is_last_thursday(current_date_str):
     df_current_date = df_daily_general.tail(1)
     
     #Monthly CPI per Division
     df_5b = df_5[["Division","CPI Division"]]
-    df_5b["Date"]=current_date
+    df_5b["Date"] = current_date_str
     df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
     df_monthly_division = df_monthly_division.sort_values(by ='Date')
     cols = list(df_monthly_division.columns)
@@ -427,9 +427,8 @@ while today_p <= end_date:
     df_12.to_csv("Results/Daily-CPI-General-Inflation.csv", index=False)
     
     #Daily change (%) of the CPI per Division 
-    #date_obj = datetime.strptime(today_f, "%Y-%m-%d")
-    previous_day =  today_p - timedelta(days=1)
-    previous_day_str = previous_day.strftime("%Y-%m-%d")
+    previous_day_obj =  today_p - timedelta(days=1)
+    previous_day_str = previous_day_obj.strftime("%Y-%m-%d")
     
     #Daily-CPI-Division.csv file
     df_daily_cpi_division = pd.read_csv("Results/Daily-CPI-Division.csv")
