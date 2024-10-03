@@ -231,8 +231,8 @@ def cystat(last_results):
     
     #Plot: Official vs Online General CPI (rebased)
     plt.figure(figsize=(12, 6))
-    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (27/06/2024=100)'], label='Official (27/06/2024=100)', marker='o', color='red')
-    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=100)'], label='Online (27/06/2024=100)', marker='o', color='blue')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (27/06/2024=100)'], label='Official', marker='o', color='red')
+    plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=100)'], label='Online', marker='o', color='blue')
     plt.xlabel('Period')
     plt.ylabel('General CPI (27/06/2024=100)')
     plt.title('Official vs Online General CPI (rebased)')
