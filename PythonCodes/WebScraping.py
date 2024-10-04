@@ -190,7 +190,7 @@ def results_IKEA(u):
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 
-def results_stefanis(u):
+def results_stephanis(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new="https://www.stephanis.com.cy/en"+str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
@@ -2286,7 +2286,7 @@ for u in range(0, len(urls)):
     elif retailer_=="IKEA":
         results_IKEA(u)
     elif retailer_=="Stephanis":
-        results_stefanis(u)
+        results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
     elif retailer_=="Epic":
