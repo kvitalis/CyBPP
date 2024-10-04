@@ -320,7 +320,7 @@ def results_epic(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)
                 
             if name_=="5G Unlimited Max":
-                price_=element_[3].text.replace("€","")
+                price_=element_[1].text.replace("€","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
