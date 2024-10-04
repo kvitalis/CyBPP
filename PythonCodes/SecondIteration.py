@@ -293,7 +293,7 @@ def results_epic(u):
                 if (name_1[i].text==name_):
                     price_=price_1[i-2].text.replace("€","")
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(_name_)
+                    new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
                     new_row.append(commodity_)
