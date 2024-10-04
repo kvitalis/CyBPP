@@ -304,6 +304,7 @@ def results_epic(u):
                     pass
 
         elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+            soup = BeautifulSoup(response.content, "html.parser")
             element_=soup.find_all("div",{"class":"price"})
             new_row=[]
             
