@@ -2434,7 +2434,7 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Sewerage Board of Larnaca
+#Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος Larnaca")
@@ -2456,7 +2456,7 @@ list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Primetel 
-#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-09*)
+#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-09: https://primetel.com.cy/back-to-school*)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
@@ -2487,7 +2487,7 @@ new_row.append("Primetel")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Internet access provision services
+#Internet access provision services (https://primetel.com.cy/home-fiber-plans-en)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("HomeFiber 60 MBPS")
@@ -2518,7 +2518,7 @@ new_row.append("Primetel")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Stock Center - The Used Car Experts
+#Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc 1")
