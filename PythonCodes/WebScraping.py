@@ -470,15 +470,17 @@ def results_cablenet(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all("div",{"class":"plan-price"}) 
-
-        if (name_=="PurpleInternet") or (name_=="PurpleMaxMobile"):
+        # Internet access provision services	
+        if (name_=="PurpleInternet") or (name_=="PurpleMaxMobile"): 
             if name_=="PurpleInternet":
                 qp=1
+        # Bundled telecommunication services
             if name_=="PurpleMaxMobile":
                 qp=0
             euro_=element_soup[qp].text.count("€")
             price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
-        else:
+        else: 
+            # Wireless telephone services	
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text==name_:
