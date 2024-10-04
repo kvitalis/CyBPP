@@ -2455,7 +2455,7 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Primetel 
+## Primetel 
 #Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-09: https://primetel.com.cy/back-to-school*)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2513,6 +2513,28 @@ new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("HomeFiber 150 MBPS")
 new_row.append(float(25.99))
 new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Wired telephone services (https://primetel.com.cy/telephony-services)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Calls to other providers landline")
+new_row.append(float(0.03))
+new_row.append("Wired telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Wireless telephone services (https://primetel.com.cy/telephony-services)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Calls to other providers landline")
+new_row.append(float(0.095))
+new_row.append("Wireless telephone services")
 new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
 list_.loc[len(list_)] = new_row
