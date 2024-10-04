@@ -289,7 +289,8 @@ def results_epic(u):
             name_1=element_[0].find_all("th")
             price_1=element_[0].find_all("td")
             for i in range(0,len(name_1)):
-                if (name_1[i].text=="To fixed telephony lines of other providers")|(name_1[i].text=="To mobile telephony lines of other providers"):
+                new_row=[]
+                if (name_1[i].text==name_):
                     price_=price_1[i-2].text.replace("€","")
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(_name_)
@@ -299,23 +300,34 @@ def results_epic(u):
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-
+                else:
+                    pass
 
         elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
             element_=soup.find_all("div",{"class":"price"})
+            new_row=[]
+            
             if name_=="5G Unlimited Max Plus":
                 price_=element_[0].text.replace("€","")
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("Epic")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+                
             if name_=="5G Unlimited Max":
                 price_=element_[3].text.replace("€","")
-            
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(_name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(commodity_)
-            new_row.append("Epic")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("Epic")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
                     
         else:
             soup = BeautifulSoup(response.content, "html.parser")
