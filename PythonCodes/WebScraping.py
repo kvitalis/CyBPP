@@ -229,17 +229,18 @@ def results_CYTA(u):
     response = requests.get(bs)
     if (response.status_code==200):
         soup = BeautifulSoup(response.content, "html.parser")
+        # Wired/Wireless telephone services	
         element_soup = soup.find_all("div",{"class":"table-responsive"})
         for o in range(0,len(element_soup)):
             if "Κλήσεις προς" in element_soup[o].text:
-                element_=element_soup[o]
+                element_ = element_soup[o]
                 element_soup_1 = element_.find_all("td")
                 for p in range(0, len(element_soup_1)):
                     ken=element_soup_1[p].text
                     if (ken==name_):
                         price_=element_soup_1[p+1].text.replace("€","").replace(",",".").replace(" /λεπτό","")
                         q=1
-        
+        # Internet access provision services	
         if (q==0):
             element_soup = soup.find_all("div",{"class":"card-body px-1"})
             qq=0
@@ -252,7 +253,7 @@ def results_CYTA(u):
                     price_ = matches[0].replace(",",".")
                     qq=1
                     q=1
-        
+        # Bundled telecommunication services
         if (q==0):
             element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
             text = element_soup[0].get_text()
@@ -278,7 +279,7 @@ def results_CYTA(u):
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_epic(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
