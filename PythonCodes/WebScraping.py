@@ -918,13 +918,14 @@ def results_primetel(u):
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        # Internet access provision services & Bundled telecommunication services	
         element_name = soup.find_all('div',{"class":"top_plan_box"})
-        
         for i in range(0,len(element_name)):
-            if element_name[i].text.replace("\n","")==name_:
-                element_name = soup.find_all('div',{"class":"price_plan_box"})
+            
+            if element_name[i].text.replace("\n","") == name_ :
+                element_name = soup.find_all('div',{"class":"price_plan_box"}) 	
                 price_=element_name[i].text.replace("\n","").replace(" ","")
                 price_=price_.split("€")
                 
