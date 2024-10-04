@@ -20,7 +20,7 @@ today = datetime.today().strftime("%Y-%m-%d")
 #raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=1)
 
 raw_data = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
+raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
@@ -281,12 +281,18 @@ while today_p <= end_date:
     print(today_f)
     
     #Read necessary data 
-    raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    #raw_data['Date'] = pd.to_datetime(raw_data['Date'], format='%Y-%m-%d')
+    
+    #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=1) # !!! FIX THIS SINCE IT DOESN'T WORK !!!
+    
     raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
+    
     df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
     df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
     df_daily_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
+    
     weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
     index_ = pd.read_csv("Datasets/Reference-Values.csv")
     
