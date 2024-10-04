@@ -285,31 +285,79 @@ def results_epic(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     if (response.status_code==200):
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup_price = soup.find_all("div",{"class":"price"})
-        element_soup_name=soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
-        new_row=[]
-        for q in range(0,len(element_soup_name)):
+        if (name_=="To fixed telephony lines of other providers")|(name_=="To mobile telephony lines of other providers"):
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_=soup.find_all("table",{"class":"yellow-top-zebra"})
+            name_1=element_[0].find_all("th")
+            price_1=element_[0].find_all("td")
+            for i in range(0,len(name_1)):
+                new_row=[]
+                if (name_1[i].text==name_):
+                    price_=price_1[i-2].text.replace("€","")
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(commodity_)
+                    new_row.append("Epic")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                else:
+                    pass
+
+        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_=soup.find_all("div",{"class":"price"})
             new_row=[]
-            _name_=element_soup_name[q].text.strip().replace(" ","")
             
-            if _name_=="InternetandTelephony10":
-                qp=0
-            if _name_=="InternetandTelephony20":
-                qp=2
-            if _name_=="InternetandTelephony50":
-                qp=6
-        
-            if _name_==name_.replace(" ",""):
-                price_=element_soup_price[qp].text.replace("€","").replace(" ","")
+            if name_=="5G Unlimited Max Plus":
+                price_=element_[0].text.replace("€","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(_name_)
+                new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(commodity_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
+                
+            if name_=="5G Unlimited Max":
+                price_=element_[3].text.replace("€","")
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("Epic")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+                    
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup_price = soup.find_all("div",{"class":"price"})
+            element_soup_name=soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
+            new_row=[]
+            for q in range(0,len(element_soup_name)):
+                new_row=[]
+                _name_=element_soup_name[q].text.strip().replace(" ","")
+                
+                if _name_=="InternetandTelephony10":
+                    qp=0
+                if _name_=="InternetandTelephony20":
+                    qp=2
+                if _name_=="InternetandTelephony50":
+                    qp=6
+            
+                if _name_==name_.replace(" ",""):
+                    price_=element_soup_price[qp].text.replace("€","").replace(" ","")
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(_name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(commodity_)
+                    new_row.append("Epic")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
         website_false.append(name_)
         website_false.append(subclass_)
