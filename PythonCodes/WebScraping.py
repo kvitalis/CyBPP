@@ -27,7 +27,10 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("Datasets/Raw-Data.csv")
+#df = pd.read_csv("Datasets/Raw-Data.csv")
+raw_data_q3=pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_q4=pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+df = pd.concat([raw_data_q3, draw_data_q4f2], axis=1)
 urls = pd.read_csv("Datasets/Products-Urls.csv")
 
 # Create a null dataframe
