@@ -26285,16 +26285,16 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-10-07,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
 2024-10-07,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-10-07,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0302,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2024-10-07,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.006500000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2024-10-07,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.0065,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-10-07,Κόστος Προμήθειας,Electricity,6.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-10-07,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
 2024-10-07,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-10-07,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-10-07,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-10-07,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-10-07,Κυβικά ανά μήνα - Nicosia,Water supply,1.00,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-10-07,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-10-07,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-10-07,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-10-07,Κυβικά ανά μήνα - Limassol,Water supply,0.90,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-10-07,Κυβικά ανά μήνα - Limassol,Water supply,0.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-10-07,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.45,RESTAURANTS AND HOTELS,Wolt
 2024-10-07,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.5,RESTAURANTS AND HOTELS,Wolt
 2024-10-07,Costa Coffee Freddo Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.3,RESTAURANTS AND HOTELS,Wolt
@@ -26315,8 +26315,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-10-07,KFC Original Duo with 2 Reg Drinks,Fast food and take away food services,16.5,RESTAURANTS AND HOTELS,Wolt
 2024-10-07,KFC Snack Box,Fast food and take away food services,7.0,RESTAURANTS AND HOTELS,Wolt
 2024-10-07,Fish Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",32.5,RESTAURANTS AND HOTELS,Vasos Psarolimano
-2024-10-07,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",21.00,RESTAURANTS AND HOTELS,Meze Tavern
-2024-10-07,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",25.00,RESTAURANTS AND HOTELS,Meze Tavern
+2024-10-07,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",21.0,RESTAURANTS AND HOTELS,Meze Tavern
+2024-10-07,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",25.0,RESTAURANTS AND HOTELS,Meze Tavern
 2024-10-07,Machetero Petit Corona,Cigars,3.2,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
 2024-10-07,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2024-10-07,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
@@ -26710,3 +26710,18 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-10-07,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8.0,TRANSPORT,AWOL
 2024-10-07,KTM 50 SX FACTORY EDITION 2023,Motor cycles,4890.0,TRANSPORT,Moto Race
 2024-10-07,KTM RC 125 Black 2024,Motor cycles,7500.0,TRANSPORT,Moto Race
+2024-10-07,KAOKEY KAO-K88 Κλαδευτικό Αλυσοπρίονο Μπαταρίας 24V,Motorized major tools and equipment,89.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2024-10-07,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-10-07,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-10-07,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-10-07,GIGA Unlimited,Bundled telecommunication services,14.99,COMMUNICATION,Primetel
+2024-10-07,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-10-07,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2024-10-07,HomeFiber 60 MBPS,Internet access provision services,14.99,COMMUNICATION,Primetel
+2024-10-07,HomeFiber 100 MBPS,Internet access provision services,19.99,COMMUNICATION,Primetel
+2024-10-07,HomeFiber 150 MBPS,Internet access provision services,25.99,COMMUNICATION,Primetel
+2024-10-07,Calls to other providers landline,Wired telephone services,0.03,COMMUNICATION,Primetel
+2024-10-07,Calls to other providers landline,Wireless telephone services,0.095,COMMUNICATION,Primetel
+2024-10-07,NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc 1,Second-hand motor cars,12300.0,TRANSPORT,Stock Center
+2024-10-07,NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc 2,Second-hand motor cars,12300.0,TRANSPORT,Stock Center
+2024-10-07,SKODA FABIA 1.0 PETROL AUTOMATIC 1000cc,Second-hand motor cars,9200.0,TRANSPORT,Stock Center
