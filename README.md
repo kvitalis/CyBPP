@@ -10,7 +10,7 @@ Here, the BPP methodology is for the first time in the Cypriot economy applied a
 
 ### 1. Web Scraping
 
-The main objective of this project is the calculation of the CPI Inflation using the online prices of products (goods and services) in a fixed/pre-selected and representative basket of Cypriot consumers. In doing so, the first step is the collection of the products' necessary data and its storage. The *WebScraping.py* file deals with the web scraping of this data. This Python file, which is called daily from the workflows file *WebScraping.yml* at around 07:30 (UTC time), firstly reads the *Products-Urls.csv* file (Datasets), then collects/scrapes the data available online, and finally stores it in the *Raw-Data.csv* file (Datasets); we note that for size reasons, we divide this full dataset file into quarterly subsets starting from 2024Q3 (27/06/2024 - 26/09/2024). The storage is done in a tabular form with the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
+The main objective of this project is the calculation of the CPI Inflation using the online prices of products (goods and services) in a fixed/pre-selected and representative basket of Cypriot consumers. In doing so, the first step is the collection of the products' necessary data and its storage. The *WebScraping.py* file deals with the web scraping of this data. This Python file, which is called daily from the workflows file *WebScraping.yml* at around 08:00 (UTC time), firstly reads the *Products-Urls.csv* file (Datasets), then collects/scrapes the data available online, and finally stores it in the *Raw-Data.csv* file (Datasets); we note that for size reasons, we divide this full dataset file into quarterly subsets starting from 2024Q3 (27/06/2024 - 26/09/2024). The storage is done in a tabular form with the following order and structure: Date, Name, Price, Subclass, Division and Retailer.
 
 At the same time, emphasis is given on the products for which the data has not been scraped for some reason. For instance, at the time of web-scraping the retailer's website is unavailable either for maintenance or traffic reasons. The info of these products is stored in the *Daily-Scraping-Errors.csv* file (Datasets) to be retrieved in a subsequent scraping process. 
 
@@ -141,7 +141,7 @@ According to the representativeness of each product and its retailer within the 
 The project utilizes GitHub Actions to automate the web data scraping and Index calculation processes. The repository contains the following YML files within the *.github/workflows* directory:
 
 ### 1. WebScraping.yml: 
-This workflow file schedules the execution of the *WebScraping.py* script at around 07:30 (UTC time) every day.
+This workflow file schedules the execution of the *WebScraping.py* script at around 08:00 (UTC time) every day.
 ### 2. SecondIteration.yml: 
 This workflow file schedules the execution of the *SecondIteration.py* script at around 13:00 (UTC time) every day.
 ### 3. Calculations.yml: 
