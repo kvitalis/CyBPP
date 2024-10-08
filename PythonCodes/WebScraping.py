@@ -29,12 +29,8 @@ warnings.simplefilter("ignore")
 # Read necessary data
 
 #df = pd.read_csv("Datasets/Raw-Data.csv")
-
-#raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#df = pd.concat([raw_data_24q3, raw_data_24q4], axis=1) # !!! FIX THIS SINCE IT DOESN'T WORK !!!
-
 df = pd.read_csv("Datasets/Raw-Data-24q4.csv")
+
 urls = pd.read_csv("Datasets/Products-Urls.csv")
 
 # Create a null dataframe
@@ -2451,8 +2447,10 @@ print("Elapsed time:", elapsed_time/60, "minute")
 
 # Export/Save the scraped data 
 df.to_csv("Datasets/Raw-Data-24q4.csv", index=False) 
+#df.to_csv("Datasets/Raw-Data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data-24q4.csv", index=False, header=True)
+#combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
 daily_errors.to_csv("Datasets/Daily-Scraping-Errors.csv",index=False)
