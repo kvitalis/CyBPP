@@ -18,9 +18,7 @@ today = datetime.today().strftime("%Y-%m-%d")
 
 raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) # !!! FIX THIS SINCE IT DOESN'T WORK !!!
-
-#raw_data = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) #concatenate/combine by rows the quarterly subsets into a full raw data set
 
 raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
 
@@ -285,9 +283,10 @@ while today_p <= end_date:
     #Read necessary data 
     
     #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    
     raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) # !!! FIX THIS SINCE IT DOESN'T WORK !!!
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) #concatenate/combine by rows the quarterly subsets into a full raw data set
     
     raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
     
