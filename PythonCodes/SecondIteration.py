@@ -29,12 +29,8 @@ warnings.simplefilter("ignore")
 # Read necessary data
 
 #df = pd.read_csv("Datasets/Raw-Data.csv")
-
-#raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#df = pd.concat([raw_data_24q3, raw_data_24q4], axis=1) # !!! FIX THIS SINCE IT DOESN'T WORK !!!
-
 df = pd.read_csv("Datasets/Raw-Data-24q4.csv")
+
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
 # Create a null data frame
@@ -2634,6 +2630,7 @@ list_["Price"].astype(float)
 # Export/Save the scraped data
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
+#combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
 combined_df.to_csv("Datasets/Raw-Data-24q4.csv", index=False, header=True)
 
 monthly_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
