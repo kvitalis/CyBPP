@@ -2507,7 +2507,7 @@ list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 ## Primetel 
-#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-09: https://primetel.com.cy/back-to-school*)
+#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-13: https://primetel.com.cy/back-to-school*)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
