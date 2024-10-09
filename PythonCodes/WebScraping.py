@@ -984,7 +984,9 @@ def results_primetel(u):
                     price_=price_[2].replace("month","")
                 else:
                     price_=price_[0]
-                    
+         
+                ## ***** WRITE THE SCRAPING CODE FOR WIRED AND WIRELESS TELEPHONE SERVICES (https://primetel.com.cy/telephony-services)            
+                
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
