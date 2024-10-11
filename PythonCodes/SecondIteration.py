@@ -2594,16 +2594,6 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 #Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc")
-new_row.append(float(12300))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("SKODA FABIA 1.0 PETROL AUTOMATIC 1000cc")
 new_row.append(float(9200))
 new_row.append("Second-hand motor cars")
