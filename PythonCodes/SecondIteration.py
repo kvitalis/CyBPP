@@ -2369,8 +2369,8 @@ for u in range(0, len(urls)):
         results_novella(u)
     elif retailer_=="NUMBEO":
         results_numbeo(u)
-    #elif retailer_=="Primetel":
-        #results_primetel(u)
+    elif retailer_=="Primetel":
+        results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
     elif retailer_=="AHK":
@@ -2506,70 +2506,8 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-## Primetel 
-#Bundled telecommunication services (*back-to-school special offer for new registrations until 2024-10-13: https://primetel.com.cy/back-to-school*)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited")
-new_row.append(float(14.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited Plus")
-new_row.append(float(17.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited MAX")
-new_row.append(float(22.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Internet access provision services (https://primetel.com.cy/home-fiber-plans-en)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("HomeFiber 60 MBPS")
-new_row.append(float(14.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("HomeFiber 100 MBPS")
-new_row.append(float(19.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("HomeFiber 150 MBPS")
-new_row.append(float(25.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Wired telephone services (https://primetel.com.cy/telephony-services)
+## Primetel (https://primetel.com.cy/telephony-services)
+#Wired telephone services 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Calls to other providers landline")
@@ -2580,7 +2518,7 @@ new_row.append("Primetel")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Wireless telephone services (https://primetel.com.cy/telephony-services)
+#Wireless telephone services 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Calls to other providers landline")
