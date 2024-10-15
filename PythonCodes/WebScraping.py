@@ -985,7 +985,7 @@ def results_primetel(u):
                 else:
                     price_=price_[0]
          
-                ## ***** WRITE THE SCRAPING CODE FOR WIRED AND WIRELESS TELEPHONE SERVICES (https://primetel.com.cy/telephony-services)            
+                # *** WRITE THE SCRAPING CODE FOR WIRED AND WIRELESS TELEPHONE SERVICES (https://primetel.com.cy/telephony-services)            
                 
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
@@ -2380,8 +2380,8 @@ for u in range(0, len(urls)):
         results_novella(u)
     elif retailer_=="NUMBEO":
         results_numbeo(u)
-    #elif retailer_=="Primetel":
-        #results_primetel(u)
+    elif retailer_=="Primetel":
+        results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
     elif retailer_=="AHK":
