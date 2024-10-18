@@ -965,29 +965,64 @@ def results_primetel(u):
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_name = soup.find_all('div',{"class":"top_plan_box"})
         
-        for i in range(0,len(element_name)):
-            if element_name[i].text.replace("\n","")==name_:
-                element_name = soup.find_all('div',{"class":"price_plan_box"})
-                price_=element_name[i].text.replace("\n","").replace(" ","")
-                price_=price_.split("€")
+        # Internet access provision services & Bundled telecommunication services	
+        if (name_=="HomeFiber 60 MBPS")|(name_=="HomeFiber 100 MBPS")|(name_=="HomeFiber 150 MBPS")|(name_=="GIGA Unlimited")|(name_=="GIGA Unlimited Plus")|(name_=="GIGA Unlimited MAX"):
+            element_ = soup.find_all('div',{"class":"top_plan_box"})
+            
+            for i in range(0,len(element_)):
                 
-                if len(price_)>2:
-                    price_=price_[2].replace("month","")
-                else:
-                    price_=price_[0]
+                if element_[i].text.replace("\n","") == name_ :
+                    element_ = soup.find_all('div',{"class":"price_plan_box"}) 	
+                    price_=element_[i].text.replace("\n","").replace(" ","")
+                    price_=price_.split("€")
                     
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(commodity_)
-                new_row.append("Primetel")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+                    if len(price_)>2:
+                        price_=price_[2].replace("month","")
+                    else:
+                        price_=price_[0]          
+                    
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(commodity_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x) 
+                
+                else:
+                    pass
+        
+        # Wired & Wireless Telephone Services           
+        elif (name_=="Calls to other providers landline")|(name_=="Calls to other providers mobile"):
+            
+            element_ = soup.find_all("table",{"id":"call_rates"},{"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
+            element_td = element_[0].find_all("td")
+                
+            if name_ == "Calls to other providers landline" :
+                    price_ = element_td[9].text.replace("\n","").replace(" ","").replace("€","").replace("/minute","")
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(commodity_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                    
+            if name_ == "Calls to other providers mobile" :
+                    price_ = element_td[11].text.replace("\n","").replace(" ","").replace("€","").replace("/minute.Minimumcharge1minute","")
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(commodity_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_rio(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
