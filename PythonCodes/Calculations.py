@@ -269,7 +269,10 @@ if is_last_thursday(current_date_str):
     df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
-"""
+"""    
+########################################################################################################################################################################################
+# If you want to recalculate everything from the beginning (reference date), then run the following while loop :
+
 ## While loop
 
 start_date = datetime.strptime("2024-09-23", "%Y-%m-%d")
@@ -536,4 +539,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
+########################################################################################################################################################################################    
 """
