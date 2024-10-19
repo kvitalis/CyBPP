@@ -1091,7 +1091,7 @@ def results_rio(u):
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_AHK(u):
-    pdf_AHK = "PDFs/AHK_Mar2024.pdf"
+        pdf_AHK = "PDFs/AHK_Mar2024.pdf"
     """
     response = requests.get(Item_url_)
     if response.status_code !=200:
@@ -1105,13 +1105,15 @@ def results_AHK(u):
     else:
         with open(pdf_AHK, "wb") as f:
             f.write(response.content)
-    """
-        with open(pdf_AHK_Mar2024, "rb") as f:
+        with open(pdf_AHK, "rb") as f:
             #pdf_reader = PyPDF2.PdfReader(f)
             pdf_reader = pypdf.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
-    
+    """
+        with pdfplumber.open(pdf_AHK) as pdf:
+        page = pdf.pages[2]  
+        text = page.extract_text()
         lines = text.split("\n")
        
         for line in lines:
