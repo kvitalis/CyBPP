@@ -1092,7 +1092,6 @@ def results_rio(u):
 
 def results_AHK(u):
     pdf_AHK = "PDFs/AHK_Mar2024.pdf"
-    """
     response = requests.get(Item_url_)
     if response.status_code !=200:
         website_false.append(name_)
@@ -1110,13 +1109,10 @@ def results_AHK(u):
             pdf_reader = pypdf.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
-    """
-    with pdfplumber.open(pdf_AHK) as pdf:
-    page = pdf.pages[2]  
-    text = page.extract_text()
-    lines = text.split("\n")
+    
+        lines = text.split("\n")
        
-    for line in lines:
+        for line in lines:
             new_row=[]
             if name_ in line:
                 ken=line.strip()
