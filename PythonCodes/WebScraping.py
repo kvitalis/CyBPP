@@ -2416,8 +2416,8 @@ for u in range(0, len(urls)):
         results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
-    elif retailer_=="AHK":
-        results_AHK(u)
+    #elif retailer_=="AHK":
+        #results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
