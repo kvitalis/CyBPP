@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 warnings.simplefilter("ignore")
 
 #today = datetime.today().strftime("%Y-%m-%d")
-today = '2024-10-29'
+today = '2024-10-19'
 
 #Read necessary data 
 
