@@ -2408,8 +2408,8 @@ for u in range(0, len(urls)):
         results_primetel(u)
     elif retailer_=="Rio Cinema":
         results_rio(u)
-    elif retailer_=="AHK":
-        results_AHK(u)
+    #elif retailer_=="AHK":
+        #results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
@@ -2575,7 +2575,6 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-"""
 #AHK (https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Pages/supply-tariffs.aspx)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2616,7 +2615,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("AHK") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
+
 #===============================================================================
 
 # Change the type as float
