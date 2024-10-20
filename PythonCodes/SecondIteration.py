@@ -2575,6 +2575,48 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+"""
+#AHK (https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Pages/supply-tariffs.aspx)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα")
+new_row.append(float(0.1035))
+new_row.append("Electricity")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("AHK") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κόστος Δικτύου για κάθε παρεχόμενη μονάδα")
+new_row.append(float(0.0305))
+new_row.append("Electricity")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("AHK") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα")
+new_row.append(float(0.0065))
+new_row.append("Electricity")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("AHK") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κόστος Προμήθειας")
+new_row.append(float(6.08))
+new_row.append("Electricity")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("AHK") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+"""
 #===============================================================================
 
 # Change the type as float
