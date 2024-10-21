@@ -1094,17 +1094,17 @@ def results_AHK(u):
     response = requests.get(Item_url_)
     pdf_AHK = "PDFs/AHK_Mar2024.pdf"
     
-    if response.status_code !=200:
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
-        with open(pdf_AHK, "wb") as f:
-            f.write(response.content)
+        #with open(pdf_AHK, "wb") as f:
+            #f.write(response.content)
         with open(pdf_AHK, "rb") as f:
             #pdf_reader = PyPDF2.PdfReader(f)
             pdf_reader = pypdf.PdfReader(f)
@@ -1114,9 +1114,9 @@ def results_AHK(u):
         lines = text.split("\n")
        
         for line in lines:
-            new_row=[]
+            new_row = []
             if name_ in line:
-                ken=line.strip()
+                ken = line.strip()
                 match = re.search(r'\d+,\d+', ken)
                 if match:
                     
@@ -1140,7 +1140,7 @@ def results_AHK(u):
                     website_false.append(commodity_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
-                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                    daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_CERA(u):
     response = requests.get(Item_url_)
