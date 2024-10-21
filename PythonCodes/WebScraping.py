@@ -1103,6 +1103,8 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
+        with open(pdf_AHK, "wb") as f:
+            f.write(response.content)
         with open(pdf_AHK, "rb") as f:
             #pdf_reader = PyPDF2.PdfReader(f)
             pdf_reader = pypdf.PdfReader(f)
@@ -1141,14 +1143,12 @@ def results_AHK(u):
                     daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 """
 def results_AHK(u):
-    
     pdf_AHK = "C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/AHK_Mar2024.pdf"
     
     with open(pdf_AHK, "rb") as f:
-            pdf_reader = pypdf.PdfReader(f)
-            page = pdf_reader.pages[2]
-            text = page.extract_text()
-    
+        pdf_reader = pypdf.PdfReader(f)
+        page = pdf_reader.pages[2]
+        text = page.extract_text()
     lines = text.split("\n")
        
     for line in lines:
@@ -1156,13 +1156,11 @@ def results_AHK(u):
         if name_ in line:
             ken = line.strip()
             match = re.search(r'\d+,\d+', ken)
-            if match:  
-                
+            if match:     
                 if "για" in ken:
                     price_ = float(match.group(0).replace(",","."))/100
                 else:
                     price_ = float(match.group(0).replace(",","."))   
-                
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(price_)
@@ -1495,8 +1493,9 @@ def results_the_royal_cigars(u):
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_pydixa(u):
-    #response = requests.get(Item_url_)
+    pdf_pixida = "PDFs/pixida.pdf"
     """
+    response = requests.get(Item_url_)
     if response.status_code!=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1507,7 +1506,6 @@ def results_pydixa(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
     """
-    pdf_pixida = "PDFs/pixida.pdf"
     #with open(pdf_pixida, "wb") as f:
     #    f.write(response.content)
     with pdfplumber.open(pdf_pixida) as pdf:
@@ -1799,7 +1797,6 @@ def results_toyota(u):
 
 def results_ithaki(u):
     
-    #response = requests.get(Item_url_)
     pdf_ithaki = "PDFs/ithaki.pdf"
 
     with pdfplumber.open(pdf_ithaki) as pdf:
@@ -1808,9 +1805,11 @@ def results_ithaki(u):
         
     pattern = r'(\d+.*?\d+\.\d{2})'
     matches = re.findall(pattern, text)
+    
     for match in matches:
         new_row = []
         website_false = []
+        
         if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών για 2 άτομα - Larnaca"== name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
