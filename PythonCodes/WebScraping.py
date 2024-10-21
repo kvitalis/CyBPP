@@ -1089,7 +1089,7 @@ def results_rio(u):
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
+"""
 def results_AHK(u):
     response = requests.get(Item_url_)
     pdf_AHK = "PDFs/AHK_Mar2024.pdf"
@@ -1103,8 +1103,6 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
-        #with open(pdf_AHK, "wb") as f:
-            #f.write(response.content)
         with open(pdf_AHK, "rb") as f:
             #pdf_reader = PyPDF2.PdfReader(f)
             pdf_reader = pypdf.PdfReader(f)
@@ -1141,6 +1139,46 @@ def results_AHK(u):
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+"""
+def results_AHK(u):
+    
+    pdf_AHK = "C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/AHK_Mar2024.pdf"
+    
+    with open(pdf_AHK, "rb") as f:
+            pdf_reader = pypdf.PdfReader(f)
+            page = pdf_reader.pages[2]
+            text = page.extract_text()
+    
+    lines = text.split("\n")
+       
+    for line in lines:
+        new_row = []
+        if name_ in line:
+            ken = line.strip()
+            match = re.search(r'\d+,\d+', ken)
+            if match:  
+                
+                if "για" in ken:
+                    price_ = float(match.group(0).replace(",","."))/100
+                else:
+                    price_ = float(match.group(0).replace(",","."))   
+                
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(price_)
+                new_row.append(subclass_)
+                new_row.append(commodity_)
+                new_row.append("AHK")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(commodity_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_CERA(u):
     response = requests.get(Item_url_)
