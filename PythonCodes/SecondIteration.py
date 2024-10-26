@@ -2654,6 +2654,17 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Toyota Aygo X (https://www.toyota.com.cy/new-cars/aygo-x)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X")
+new_row.append(float(17700))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
