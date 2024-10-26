@@ -2665,6 +2665,17 @@ new_row.append("Toyota")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Internet and Telephony 10 (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 10")
+new_row.append(float(24.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
