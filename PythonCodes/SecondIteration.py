@@ -283,8 +283,10 @@ def results_CYTA(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_epic(u):
+    
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    
     if (response.status_code==200):
         if (name_=="To fixed telephony lines of other providers")|(name_=="To mobile telephony lines of other providers"):
             soup = BeautifulSoup(response.content, "html.parser")
@@ -305,8 +307,8 @@ def results_epic(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 else:
                     pass
-
-        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+        
+        if (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
             soup = BeautifulSoup(response.content, "html.parser")
             element_=soup.find_all("div",{"class":"price"})
             new_row=[]
@@ -332,7 +334,7 @@ def results_epic(u):
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-                    
+        """            
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup_price = soup.find_all("div",{"class":"price"})
@@ -359,6 +361,7 @@ def results_epic(u):
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
+        """
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -366,7 +369,7 @@ def results_epic(u):
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_Athlokinisi(u):
     url="https://athlokinisi.com.cy"+Item_url_
@@ -2665,11 +2668,31 @@ new_row.append("Toyota")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Internet and Telephony 10 (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
+#Epic (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Internet and Telephony 10")
 new_row.append(float(24.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 20")
+new_row.append(float(29.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 50")
+new_row.append(float(39.99))
 new_row.append("Internet access provision services")
 new_row.append("COMMUNICATION")
 new_row.append("Epic") 
