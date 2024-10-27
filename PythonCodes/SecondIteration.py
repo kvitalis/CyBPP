@@ -290,9 +290,9 @@ def results_epic(u):
     if (response.status_code==200):
         if (name_=="To fixed telephony lines of other providers")|(name_=="To mobile telephony lines of other providers"):
             soup = BeautifulSoup(response.content, "html.parser")
-            element_=soup.find_all("table",{"class":"yellow-top-zebra"})
-            name_1=element_[0].find_all("th")
-            price_1=element_[0].find_all("td")
+            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            name_1 = element_[0].find_all("th")
+            price_1 = element_[0].find_all("td")
             for i in range(0,len(name_1)):
                 new_row=[]
                 if (name_1[i].text==name_):
@@ -300,6 +300,9 @@ def results_epic(u):
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
+                    
+                    print(price_)
+                    
                     new_row.append(subclass_)
                     new_row.append(commodity_)
                     new_row.append("Epic")
@@ -307,17 +310,20 @@ def results_epic(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 else:
                     pass
-        
-        if (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+
+        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
             soup = BeautifulSoup(response.content, "html.parser")
-            element_=soup.find_all("div",{"class":"price"})
-            new_row=[]
+            element_ = soup.find_all("div",{"class":"price"})
+            new_row = []
             
             if name_=="5G Unlimited Max Plus":
                 price_=element_[0].text.replace("€","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
+                
+                print(price_)
+                
                 new_row.append(subclass_)
                 new_row.append(commodity_)
                 new_row.append("Epic")
@@ -329,20 +335,23 @@ def results_epic(u):
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
+                
+                print(price_)
+                
                 new_row.append(subclass_)
                 new_row.append(commodity_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-        """            
+                    
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup_price = soup.find_all("div",{"class":"price"})
-            element_soup_name=soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
-            new_row=[]
+            element_soup_name = soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
+            new_row = []
             for q in range(0,len(element_soup_name)):
-                new_row=[]
-                _name_=element_soup_name[q].text.strip().replace(" ","")
+                new_row = []
+                _name_ = element_soup_name[q].text.strip().replace(" ","")
                 
                 if _name_=="InternetandTelephony10":
                     qp=0
@@ -356,12 +365,14 @@ def results_epic(u):
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(_name_)
                     new_row.append(float(price_))
+                    
+                    print(price_)
+                    
                     new_row.append(subclass_)
                     new_row.append(commodity_)
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-        """
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -372,6 +383,7 @@ def results_epic(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_Athlokinisi(u):
+    
     url="https://athlokinisi.com.cy"+Item_url_
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
@@ -2411,8 +2423,8 @@ for u in range(0, len(urls)):
         results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    elif retailer_=="Epic":
-        results_epic(u)
+    #elif retailer_=="Epic":
+        #results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
@@ -2694,6 +2706,47 @@ new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Internet and Telephony 50")
 new_row.append(float(39.99))
 new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To fixed telephony lines of other providers")
+new_row.append(float(0.03))
+new_row.append("Wired telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To mobile telephony lines of other providers")
+new_row.append(float(0.05))
+new_row.append("Wireless telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max Plus")
+new_row.append(float(24.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max")
+new_row.append(float(19.99))
+new_row.append("Bundled telecommunication services")
 new_row.append("COMMUNICATION")
 new_row.append("Epic") 
 list_.loc[len(list_)] = new_row
