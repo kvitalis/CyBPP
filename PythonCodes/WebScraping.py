@@ -285,8 +285,10 @@ def results_CYTA(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_epic(u):
+    
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    
     if (response.status_code==200):
         if (name_=="To fixed telephony lines of other providers")|(name_=="To mobile telephony lines of other providers"):
             soup = BeautifulSoup(response.content, "html.parser")
@@ -308,7 +310,7 @@ def results_epic(u):
                 else:
                     pass
 
-        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+        else: (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
             soup = BeautifulSoup(response.content, "html.parser")
             element_=soup.find_all("div",{"class":"price"})
             new_row=[]
@@ -334,7 +336,7 @@ def results_epic(u):
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-                    
+        """            
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup_price = soup.find_all("div",{"class":"price"})
@@ -361,6 +363,7 @@ def results_epic(u):
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
+        """
     else:
         website_false.append(name_)
         website_false.append(subclass_)
