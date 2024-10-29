@@ -2429,8 +2429,8 @@ for u in range(0, len(urls)):
         results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    elif retailer_=="Epic":
-        results_epic(u)
+    #elif retailer_=="Epic":
+        #results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
