@@ -2495,8 +2495,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)
-    elif retailer_=="Intercity Buses":
-        results_intercity(u)  
+    #elif retailer_=="Intercity Buses":
+        #results_intercity(u)  
     elif retailer_=="Parga":
         results_parga(u)
     elif retailer_=="Evdokia Jewellery":
