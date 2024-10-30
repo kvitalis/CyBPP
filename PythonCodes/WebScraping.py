@@ -1978,7 +1978,7 @@ def results_intercity(u):
         soup = BeautifulSoup(response.content, "html.parser")
         table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
         if table_:
-            element_=table_.find_all("div",{"class":"td-content"})
+            element_=table_.find_all("div",{"class":"td-content"}) #td-content-wrapper   ####Kyriako apla alaxe to touto, apla alaxe to class
             for ii in range(0,2):
                 new_row=[]
                 if ii%2 ==0:
