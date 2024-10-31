@@ -1960,6 +1960,7 @@ def results_lensescy(u):
         list_.loc[len(list_)] = new_row
 
 def results_intercity(u):
+    
     url="https://intercity-buses.com/en/routes/"+str(Item_url_)
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(url,{'headers':header})
@@ -1976,7 +1977,7 @@ def results_intercity(u):
         soup = BeautifulSoup(response.content, "html.parser")
         table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
         if table_:
-            element_=table_.find_all("div",{"class":"td-content"})
+            element_=table_.find_all("div",{"class":"td-content-wrapper"})
             for ii in range(0,2):
                 new_row=[]
                 if ii%2 ==0:
@@ -2423,8 +2424,8 @@ for u in range(0, len(urls)):
         results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    #elif retailer_=="Epic":
-        #results_epic(u)
+    elif retailer_=="Epic":
+        results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
@@ -2489,8 +2490,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)
-    #elif retailer_=="Intercity Buses":
-        #results_intercity(u)  
+    elif retailer_=="Intercity Buses":
+        results_intercity(u)  
     elif retailer_=="Parga":
         results_parga(u)
     elif retailer_=="Evdokia Jewellery":
@@ -2520,6 +2521,97 @@ for u in range(0, len(urls)):
 # Manually added data            
 
 """
+#Intercity Buses (https://intercity-buses.com/en/routes/)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/")
+new_row.append(float(4.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/")
+new_row.append(float(7.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/")
+new_row.append(float(4.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/")
+new_row.append(float(4.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/")
+new_row.append(float(4.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/")
+new_row.append(float(9.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/")
+new_row.append(float(8.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #AHK (https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Pages/supply-tariffs.aspx)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2749,97 +2841,6 @@ new_row.append(float(19.99))
 new_row.append("Bundled telecommunication services")
 new_row.append("COMMUNICATION")
 new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Intercity Buses (https://intercity-buses.com/en/routes/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/")
-new_row.append(float(5.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/")
-new_row.append(float(5.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/")
-new_row.append(float(7.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/")
-new_row.append(float(9.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/")
-new_row.append(float(8.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
