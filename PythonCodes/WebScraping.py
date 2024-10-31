@@ -322,7 +322,7 @@ def results_epic(u):
                 else:
                     pass
 
-        if (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
+        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
 
             element_ = soup.find_all("div",{"class":"price"})
             new_row = []
@@ -347,12 +347,13 @@ def results_epic(u):
                 new_row.append(commodity_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-        """           
+                list_['Name'] = list_['Name'].apply(lambda x:x)        
+        
         else:
             element_soup_price = soup.find_all("div",{"class":"price"})
             element_soup_name = soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
             new_row = []
+            
             for q in range(0,len(element_soup_name)):
                 new_row = []
                 _name_ = element_soup_name[q].text.strip().replace(" ","")
@@ -374,7 +375,7 @@ def results_epic(u):
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-        """
+    
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -2470,8 +2471,8 @@ for u in range(0, len(urls)):
         results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    elif retailer_=="Epic":
-        results_epic(u)
+    #elif retailer_=="Epic":
+        #results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
