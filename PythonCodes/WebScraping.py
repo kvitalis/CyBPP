@@ -1962,6 +1962,7 @@ def results_lensescy(u):
         list_.loc[len(list_)] = new_row
 
 def results_intercity(u):
+    
     url="https://intercity-buses.com/en/routes/"+str(Item_url_)
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(url,{'headers':header})
@@ -1978,7 +1979,7 @@ def results_intercity(u):
         soup = BeautifulSoup(response.content, "html.parser")
         table_=soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
         if table_:
-            element_=table_.find_all("div",{"class":"td-content"}) #td-content-wrapper   ####Kyriako apla alaxe to touto, apla alaxe to class
+            element_=table_.find_all("div",{"class":"td-content-wrapper"}) 
             for ii in range(0,2):
                 new_row=[]
                 if ii%2 ==0:
@@ -2429,8 +2430,8 @@ for u in range(0, len(urls)):
         results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    #elif retailer_=="Epic":
-        #results_epic(u)
+    elif retailer_=="Epic":
+        results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="AWOL":
@@ -2495,8 +2496,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)
-    #elif retailer_=="Intercity Buses":
-        #results_intercity(u)  
+    elif retailer_=="Intercity Buses":
+        results_intercity(u)  
     elif retailer_=="Parga":
         results_parga(u)
     elif retailer_=="Evdokia Jewellery":
