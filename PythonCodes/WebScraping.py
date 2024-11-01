@@ -2449,7 +2449,7 @@ start_time = time.time()
 for u in range(0, len(urls)):
     print(u)
     
-    # Creative a new row each time 
+    # Create a new row each time 
     new_row = []
     website_false = []
     
