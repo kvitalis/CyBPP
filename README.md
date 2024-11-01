@@ -16,15 +16,15 @@ At the same time, emphasis is given on the products for which the data has not b
 
 ### 2. Second Iteration 
 
-As mentioned above, there is a need to retrieve the data of the products that was not scraped during the initial procedure. Hence, we run a second scraping iteration  through the *SecondIteration.py* file several hours after the first scraping. This Python file reads only the *Daily-Scraping-Errors.csv* file (Datasets), then it scrapes the available data and finaly stores it in the *Raw-Data.csv* file (Datasets). After the second iteration procedure, any data which remains unavailable is stored in the *Monthly-Scraping-Errors.csv* file (Datasets); this file is useful for the allocation of products that are no longer available (e.g. seasonal or out-of-stock products) and their replacement with the most similar available at the time. The *SecondIteration.py* file is called from the workflows file *SecondIteration.yml* at around 13:00 (UTC time) every day.
+As mentioned above, there is a need to retrieve the data of the products that was not scraped during the initial procedure. Hence, we run a second scraping iteration  through the *SecondIteration.py* file several hours after the first scraping. This Python file reads only the *Daily-Scraping-Errors.csv* file (Datasets), then it scrapes the available data and finaly stores it in the *Raw-Data.csv* file (Datasets). After the second iteration procedure, any data which remains unavailable is stored in the *Monthly-Scraping-Errors.csv* file (Datasets); this file is useful for the allocation of products that are no longer available (e.g. seasonal or out-of-stock products) and their replacement with the most similar available at the time. The *SecondIteration.py* file is called from the workflows file *SecondIteration.yml* at around 14:00 (UTC time) every day.
 
 ### 3. Calculations 
 
-This Python file, which is called from the workflows file *Calculations.yml* around 14:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with BPP. To do so, the *Calculations.py* file first reads the *Raw-Data.csv* file (Datasets), then performs the appropriate calculations using standard techniques and the *Weights-Cystat.csv* and *Reference-Values.csv* files (Datasets), and finally stores the results in the *Daily-CPI-Subclass-Division.csv*, *Daily-CPI-Division.csv*, and *Daily-CPI-General-Inflation.csv* files (Results).
+This Python file, which is called from the workflows file *Calculations.yml* around 15:00 (UTC time) every day, performs all the calculations needed for the construction of the General CPI and the estimation of CPI Inflation on a daily basis using standard methods in line with BPP. To do so, the *Calculations.py* file first reads the *Raw-Data.csv* file (Datasets), then performs the appropriate calculations using standard techniques and the *Weights-Cystat.csv* and *Reference-Values.csv* files (Datasets), and finally stores the results in the *Daily-CPI-Subclass-Division.csv*, *Daily-CPI-Division.csv*, and *Daily-CPI-General-Inflation.csv* files (Results).
 
 ### 4. Visualizations 
 
-Finally, the *Visualizations.py* reads the *Daily-CPI-General-Inflation.csv* file and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in PNG formats (Results). This Python file is called from the workflows file *Visualizations.yml* at around 15:00 (UTC time) every day.
+Finally, the *Visualizations.py* reads the *Daily-CPI-General-Inflation.csv* file and constructs the plots of the time evolution of General CPI and Inflation in Cyprus in PNG formats (Results). This Python file is called from the workflows file *Visualizations.yml* at around 16:00 (UTC time) every day.
 
 ## Online Retailers
 
@@ -143,11 +143,11 @@ The project utilizes GitHub Actions to automate the web data scraping and Index 
 ### 1. WebScraping.yml: 
 This workflow file schedules the execution of the *WebScraping.py* script at around 08:00 (UTC time) every day.
 ### 2. SecondIteration.yml: 
-This workflow file schedules the execution of the *SecondIteration.py* script at around 13:00 (UTC time) every day.
+This workflow file schedules the execution of the *SecondIteration.py* script at around 14:00 (UTC time) every day.
 ### 3. Calculations.yml: 
-This workflow file schedules the execution of the *Calculations.py* script at around 14:00 (UTC time) every day.
+This workflow file schedules the execution of the *Calculations.py* script at around 15:00 (UTC time) every day.
 ### 4. Visualizations.yml: 
-This workflow file schedules the execution of the *Visualizations.py* script at around 15:00 (UTC time) every day.
+This workflow file schedules the execution of the *Visualizations.py* script at around 16:00 (UTC time) every day.
 
 ## Comparison with the Cyprus Statistical Service (CyStat)
 
