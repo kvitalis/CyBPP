@@ -2899,6 +2899,16 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("SUZUKI BALENO 1.2 MANUAL 1200cc")
+new_row.append(float(8000))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Stock Center") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
