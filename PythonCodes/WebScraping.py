@@ -198,7 +198,7 @@ def results_IKEA(u):
 def results_stephanis(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    url_new="https://www.stephanis.com.cy/en"+str(Item_url_)
+    url_new = "https://www.stephanis.com.cy/en"+str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
     
@@ -209,17 +209,18 @@ def results_stephanis(u):
         website_false.append(commodity_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"listing-details-heading"})
-        if (len(element_soup)<2):
-            element_soup_1=element_soup[0]
+        
+        if (len(element_soup) < 2):
+            element_soup_1 = element_soup[0]
         else:
-            element_soup_1=element_soup[1]
+            element_soup_1 = element_soup[1]
             
-        element_soup_1=element_soup_1.text
-        element_soup_2=element_soup_1.replace("€","").replace(",",".")
+        element_soup_1 = element_soup_1.text
+        element_soup_2 = element_soup_1.replace("€","").replace(",",".")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(element_soup_2))
