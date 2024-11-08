@@ -219,11 +219,11 @@ def results_stephanis(u):
         else:
             element_soup_1 = element_soup[1]
             
-        element_soup_1 = element_soup_1.text
-        element_soup_2 = element_soup_1.replace("€","").replace(",",".")
+        element_soup_2 = element_soup_1.text
+        price_ = element_soup_2.replace("€","")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(float(element_soup_2))
+        new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(commodity_)
         new_row.append("Stephanis")
