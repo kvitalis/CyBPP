@@ -50,7 +50,7 @@ def results_supermarketcy(urls):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -63,7 +63,7 @@ def results_supermarketcy(urls):
         new_row.append(name_wrappers)
         new_row.append(float(value))
         new_row.append(subclass_)
-        new_row.append(commodity_)  
+        new_row.append(division_)  
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] =list_["Name"].apply(lambda x:x)
@@ -81,7 +81,7 @@ def results_fuelDaddy(urls):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -158,7 +158,7 @@ def results_IKEA(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -182,7 +182,7 @@ def results_IKEA(u):
                 new_row.append(name_)
                 new_row.append(float(element_soup_3))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("IKEA")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -190,7 +190,7 @@ def results_IKEA(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -206,7 +206,7 @@ def results_stephanis(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -225,7 +225,7 @@ def results_stephanis(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Stephanis")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -279,7 +279,7 @@ def results_CYTA(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("CYTA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -288,7 +288,7 @@ def results_CYTA(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -316,7 +316,7 @@ def results_epic(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -334,7 +334,7 @@ def results_epic(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -345,7 +345,7 @@ def results_epic(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Epic")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)        
@@ -372,7 +372,7 @@ def results_epic(u):
                     new_row.append(_name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Epic")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -381,7 +381,7 @@ def results_epic(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -397,7 +397,7 @@ def results_Athlokinisi(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -409,7 +409,7 @@ def results_Athlokinisi(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
@@ -419,7 +419,7 @@ def results_Athlokinisi(u):
             new_row.append(name_)
             new_row.append(price_)
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Athlokinisi")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -444,7 +444,7 @@ def results_AWOL(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
@@ -460,7 +460,7 @@ def results_AWOL(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("AWOL")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -476,7 +476,7 @@ def results_alter_Vape(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -490,7 +490,7 @@ def results_alter_Vape(u):
         new_row.append(name_)
         new_row.append(float(price_1))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Alter Vape")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -507,7 +507,7 @@ def results_bwell_pharmacy(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -520,7 +520,7 @@ def results_bwell_pharmacy(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Bwell Pharmacy")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -537,7 +537,7 @@ def results_cablenet(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -567,7 +567,7 @@ def results_cablenet(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Cablenet")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -661,7 +661,7 @@ def results_CyMinistryEducation(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commodity_)
+    new_row.append(division_)
     new_row.append("Cyprus Ministry of Education, Sport and Youth")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -695,7 +695,7 @@ def results_CyPost(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commodity_)
+    new_row.append(division_)
     new_row.append("Cyprus Post")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -710,7 +710,7 @@ def results_ewholesale(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
@@ -723,7 +723,7 @@ def results_ewholesale(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("E-wholesale")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -740,7 +740,7 @@ def results_electroline(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -756,7 +756,7 @@ def results_electroline(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Electroline")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -781,7 +781,7 @@ def results_europeanuniversitycyprus(u):
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
-    new_row.append(commodity_)
+    new_row.append(division_)
     new_row.append("European University Cyprus")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -798,7 +798,7 @@ def results_famoussport(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -810,7 +810,7 @@ def results_famoussport(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Famous Sports")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -827,7 +827,7 @@ def results_Marks_Spencer(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)   
@@ -838,7 +838,7 @@ def results_Marks_Spencer(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Marks & Spencer")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -855,7 +855,7 @@ def results_moto_race(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
@@ -866,7 +866,7 @@ def results_moto_race(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Moto Race")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -881,7 +881,7 @@ def results_nissan(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
@@ -905,7 +905,7 @@ def results_nissan(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Nissan")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -923,7 +923,7 @@ def results_novella(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -941,7 +941,7 @@ def results_novella(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -952,7 +952,7 @@ def results_novella(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -968,7 +968,7 @@ def results_numbeo(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -983,7 +983,7 @@ def results_numbeo(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Numbeo")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -999,7 +999,7 @@ def results_primetel(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -1024,7 +1024,7 @@ def results_primetel(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x) 
@@ -1044,7 +1044,7 @@ def results_primetel(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1055,7 +1055,7 @@ def results_primetel(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1071,7 +1071,7 @@ def results_rio(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1088,7 +1088,7 @@ def results_rio(u):
                         new_row.append(name_+" 3D")
                         new_row.append(float(match.group(2)))
                         new_row.append(subclass_)
-                        new_row.append(commodity_)
+                        new_row.append(division_)
                         new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1096,7 +1096,7 @@ def results_rio(u):
                         website_false.append(name_)
                         website_false.append(subclass_)
                         website_false.append(Item_url_)
-                        website_false.append(commodity_)
+                        website_false.append(division_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)     
@@ -1110,7 +1110,7 @@ def results_rio(u):
                         new_row.append(name_)
                         new_row.append(float(price_))
                         new_row.append(subclass_)
-                        new_row.append(commodity_)
+                        new_row.append(division_)
                         new_row.append("Rio Cinema")
                         list_.loc[len(list_)] = new_row
                         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1118,7 +1118,7 @@ def results_rio(u):
                         website_false.append(name_)
                         website_false.append(subclass_)
                         website_false.append(Item_url_)
-                        website_false.append(commodity_)
+                        website_false.append(division_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1131,7 +1131,7 @@ def results_AHK(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
@@ -1162,7 +1162,7 @@ def results_AHK(u):
                     new_row.append(name_)
                     new_row.append(price_)
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("AHK")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1170,7 +1170,7 @@ def results_AHK(u):
                     website_false.append(name_)
                     website_false.append(subclass_)
                     website_false.append(Item_url_)
-                    website_false.append(commodity_)
+                    website_false.append(division_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -1198,7 +1198,7 @@ def results_AHK(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("AHK")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1206,7 +1206,7 @@ def results_AHK(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -1222,7 +1222,7 @@ def results_CERA(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1235,7 +1235,7 @@ def results_CERA(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Cyprus Energy Regulatory Authority")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1316,7 +1316,7 @@ def results_water(u):
         new_row.append(name_+" - "+city_)
         new_row.append(price_)
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Water Board")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1324,7 +1324,7 @@ def results_water(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1338,7 +1338,7 @@ def results_wolt(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1352,7 +1352,7 @@ def results_wolt(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Wolt")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1360,7 +1360,7 @@ def results_wolt(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
 
@@ -1375,7 +1375,7 @@ def results_vasos(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1390,7 +1390,7 @@ def results_vasos(u):
         new_row.append(name_)
         new_row.append(price_)
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Vasos Psarolimano")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1414,7 +1414,7 @@ def results_meze(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)    
@@ -1436,7 +1436,7 @@ def results_meze(u):
             new_row.append(name_)
             new_row.append(price_)
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Meze Tavern")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1444,7 +1444,7 @@ def results_meze(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1460,7 +1460,7 @@ def results_CYgar_shop(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1474,7 +1474,7 @@ def results_CYgar_shop(u):
                 new_row.append(name_)
                 new_row.append(float(price_match.group()))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("The CYgar shop")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1482,7 +1482,7 @@ def results_CYgar_shop(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1490,7 +1490,7 @@ def results_CYgar_shop(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1505,7 +1505,7 @@ def results_the_royal_cigars(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1517,7 +1517,7 @@ def results_the_royal_cigars(u):
             new_row.append(name_)
             new_row.append(float(price_amount))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("The Royal Cigars")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1525,7 +1525,7 @@ def results_the_royal_cigars(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1539,7 +1539,7 @@ def results_pydixa(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1557,7 +1557,7 @@ def results_pydixa(u):
         new_row.append(name_)
         new_row.append(float(matches[0]))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Pyxida")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1565,7 +1565,7 @@ def results_pydixa(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1612,7 +1612,7 @@ def results_sewerage(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1667,7 +1667,7 @@ def results_sewerage(u):
         new_row.append(name_+" "+city_)
         new_row.append(values)
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Sewerage Board of "+ city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1675,7 +1675,7 @@ def results_sewerage(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1691,7 +1691,7 @@ def results_toyota(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1707,7 +1707,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1715,7 +1715,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1729,7 +1729,7 @@ def results_toyota(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1746,7 +1746,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(price_)
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1754,7 +1754,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1772,7 +1772,7 @@ def results_toyota(u):
                 new_row.append(name_)
                 new_row.append(float(price_))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Toyota")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1780,7 +1780,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1810,7 +1810,7 @@ def results_toyota(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1823,7 +1823,7 @@ def results_toyota(u):
                     new_row.append(name_)
                     new_row.append(float(price_))
                     new_row.append(subclass_)
-                    new_row.append(commodity_)
+                    new_row.append(division_)
                     new_row.append("Toyota")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1831,7 +1831,7 @@ def results_toyota(u):
                     website_false.append(name_)
                     website_false.append(subclass_)
                     website_false.append(Item_url_)
-                    website_false.append(commodity_)
+                    website_false.append(division_)
                     website_false.append(retailer_)
                     daily_errors.loc[len(daily_errors)] = website_false
                     daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1861,7 +1861,7 @@ def results_ithaki(u):
                 new_row.append(name_)
                 new_row.append(float(price_[0]))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Ithaki")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1869,7 +1869,7 @@ def results_ithaki(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1883,7 +1883,7 @@ def results_ithaki(u):
                 new_row.append(name_)
                 new_row.append(float(price_[0]))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Ithaki")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1891,7 +1891,7 @@ def results_ithaki(u):
                 website_false.append(name_)
                 website_false.append(subclass_)
                 website_false.append(Item_url_)
-                website_false.append(commodity_)
+                website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -1951,7 +1951,7 @@ def results_flames(u):
         new_row.append(name_)
         new_row.append(float(price_[-1]))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Flames")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -1959,7 +1959,7 @@ def results_flames(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -1974,7 +1974,7 @@ def results_lensescy(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2000,7 +2000,7 @@ def results_intercity(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2021,14 +2021,14 @@ def results_intercity(u):
                         new_row.append(name_+Item_url_)
                         new_row.append(float(price_))
                         new_row.append(subclass_)
-                        new_row.append(commodity_)
+                        new_row.append(division_)
                         new_row.append("Intercity Buses")
                         list_.loc[len(list_)] = new_row
         else:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2043,7 +2043,7 @@ def results_parga(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2054,7 +2054,7 @@ def results_parga(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Parga")
         list_.loc[len(list_)] = new_row
 
@@ -2068,7 +2068,7 @@ def results_evdokia(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2080,7 +2080,7 @@ def results_evdokia(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Evdokia Jewellery")
         list_.loc[len(list_)] = new_row
 
@@ -2093,7 +2093,7 @@ def results_centroptical(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2105,7 +2105,7 @@ def results_centroptical(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Centroptical")
         list_.loc[len(list_)] = new_row
 
@@ -2155,7 +2155,7 @@ def results_premier(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2171,7 +2171,7 @@ def results_premier(u):
                 new_row.append(names[i])
                 new_row.append(float(price[i]))
                 new_row.append(subclass_)
-                new_row.append(commodity_)
+                new_row.append(division_)
                 new_row.append("Premier Laundry")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2186,7 +2186,7 @@ def results_cyprus_transport(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2234,7 +2234,7 @@ def results_musicavenue(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2246,7 +2246,7 @@ def results_musicavenue(u):
         price_=soup.find_all("bdi")[1].text.replace("€", "").replace(",", "")
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Musicavenue")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2260,7 +2260,7 @@ def results_max_7_tax(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2285,7 +2285,7 @@ def results_max_7_tax(u):
             new_row.append(name_+add_)
             new_row.append(float(charges_[i]))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Max 7 Taxi") 
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2297,7 +2297,7 @@ def results_costastheodorou(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2309,7 +2309,7 @@ def results_costastheodorou(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Costas Theodorou")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2324,7 +2324,7 @@ def results_leroymerlin(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2335,7 +2335,7 @@ def results_leroymerlin(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Leroy Merlin") 
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2349,7 +2349,7 @@ def stock_center_results(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2362,7 +2362,7 @@ def stock_center_results(u):
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
-        new_row.append(commodity_)
+        new_row.append(division_)
         new_row.append("Stock Center")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2377,7 +2377,7 @@ def results_cheapbasket(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2388,7 +2388,7 @@ def results_cheapbasket(u):
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(commodity_)
+            website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2401,7 +2401,7 @@ def results_cheapbasket(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Cheap Basket")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2415,7 +2415,7 @@ def results_opacy(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
@@ -2429,7 +2429,7 @@ def results_opacy(u):
             new_row.append(name_)
             new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Opa")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2438,7 +2438,7 @@ def results_opacy(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Opa")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -2459,7 +2459,7 @@ for u in range(0, len(urls)):
     name_ = urls["Name"].iloc[u]
     print(name_)
     subclass_ = urls["Subclass"].iloc[u]
-    commodity_ = urls["Division"].iloc[u]
+    division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
 
     if retailer_=="SupermarketCy":
