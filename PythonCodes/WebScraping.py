@@ -2468,8 +2468,8 @@ for u in range(0, len(urls)):
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
         results_IKEA(u)
-    #elif retailer_=="Stephanis":
-        #results_stephanis(u)
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
     #elif retailer_=="Epic":
@@ -2520,8 +2520,8 @@ for u in range(0, len(urls)):
         results_wolt(u)
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
-    #elif retailer_=="Meze Tavern":
-        #results_meze(u)
+    elif retailer_=="Meze Tavern":
+        results_meze(u)
     elif retailer_=="The CYgar shop":
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
