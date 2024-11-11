@@ -1532,7 +1532,7 @@ def results_the_royal_cigars(u):
 
 def results_pydixa(u):
     
-    pdf_pixida = "PDFs/pixida.pdf"
+    pdf_pixida = "PDFs/Pixida-Nic-En-Mar2023.pdf"
     """
     response = requests.get(Item_url_)
     if response.status_code!=200:
@@ -1571,7 +1571,6 @@ def results_pydixa(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
-    
     values=0
     
     if "Nicosia" in retailer_:
@@ -1839,7 +1838,7 @@ def results_toyota(u):
 
 def results_ithaki(u):
     
-    pdf_ithaki = "PDFs/ithaki.pdf"
+    pdf_ithaki = "PDFs/ithaki-2024.pdf"
 
     with pdfplumber.open(pdf_ithaki) as pdf:
         first_page = pdf.pages[5]
@@ -1901,7 +1900,7 @@ def results_flames(u):
 
     #Mixed Grill 
     if name_=="Mixed Grill for 2 persons - Famagusta":
-        pdf_flames1 = "PDFs/flames_grilled_dishes.pdf"
+        pdf_flames1 = "PDFs/flames-grill-specialities-Mar2024.pdf"
     
         #with open(pdf_flames1, "wb") as f:
         #    f.write(response.content)
@@ -1923,7 +1922,7 @@ def results_flames(u):
 
     #Flames Special Cyprus (Meze)
     if name_=="Meat Meze for 2 persons - Famagusta":
-        pdf_flames2 = "PDFs/flames_cyprus_dishes.pdf"
+        pdf_flames2 = "PDFs/flames-cyprus-dishes-Mar2024.pdf"
     
         #with open(pdf_flames2, "wb") as f:
         #    f.write(response.content)
@@ -2520,8 +2519,8 @@ for u in range(0, len(urls)):
         results_wolt(u)
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
-    elif retailer_=="Meze Tavern":
-        results_meze(u)
+    #elif retailer_=="Meze Tavern":
+        #results_meze(u)
     elif retailer_=="The CYgar shop":
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
