@@ -1531,8 +1531,8 @@ def results_the_royal_cigars(u):
 
 def results_pydixa(u):
     
-    pdf_pixida = "PDFs/pixida.pdf"
-    """
+    pdf_pixida = "PDFs/Pixida-Nic-En-Mar2023.pdf"
+    '''
     response = requests.get(Item_url_)
     if response.status_code!=200:
         website_false.append(name_)
@@ -1543,9 +1543,9 @@ def results_pydixa(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
-    """
-    #with open(pdf_pixida, "wb") as f:
-    #    f.write(response.content)
+    with open(pdf_pixida, "wb") as f:
+        f.write(response.content)
+    '''
     with pdfplumber.open(pdf_pixida) as pdf:
         page = pdf.pages[5]  
         text = page.extract_text()
@@ -1567,7 +1567,7 @@ def results_pydixa(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
     
@@ -1838,7 +1838,7 @@ def results_toyota(u):
 
 def results_ithaki(u):
     
-    pdf_ithaki = "PDFs/ithaki.pdf"
+    pdf_ithaki = "PDFs/ithaki-2024.pdf"
 
     with pdfplumber.open(pdf_ithaki) as pdf:
         first_page = pdf.pages[5]
@@ -1896,14 +1896,11 @@ def results_ithaki(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_flames(u):
-    #response = requests.get(Item_url_)
 
     #Mixed Grill 
-    if name_=="Mixed Grill for 2 persons - Famagusta":
-        pdf_flames1 = "PDFs/flames_grilled_dishes.pdf"
+    if name_ == "Mixed Grill for 2 persons - Famagusta":
+        pdf_flames1 = "PDFs/flames-grill-specialities-Mar2024.pdf"
     
-        #with open(pdf_flames1, "wb") as f:
-        #    f.write(response.content)
         with pdfplumber.open(pdf_flames1) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
@@ -1921,11 +1918,8 @@ def results_flames(u):
             price_ = re.findall(pattern, desired_line)
 
     #Flames Special Cyprus (Meze)
-    if name_=="Meat Meze for 2 persons - Famagusta":
-        pdf_flames2 = "PDFs/flames_cyprus_dishes.pdf"
-    
-        #with open(pdf_flames2, "wb") as f:
-        #    f.write(response.content)
+    if name_ == "Meat Meze for 2 persons - Famagusta":
+        pdf_flames2 = "PDFs/flames-cyprus-dishes-Mar2024.pdf"
     
         with pdfplumber.open(pdf_flames2) as pdf:
             first_page = pdf.pages[0]
@@ -1938,7 +1932,7 @@ def results_flames(u):
     
             if "Flames Special Cyprus (Meze)" in line:
                 position = lines.index("Flames Special Cyprus (Meze)")
-                correct_line=lines[position+1]
+                correct_line = lines[position+1]
                 desired_line = correct_line.strip()  
     
         if desired_line:
