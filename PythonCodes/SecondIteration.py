@@ -2883,6 +2883,27 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Meze Taverna (https://mezetaverna.com/wp-content/uploads/2024/11/MEZE-TAVERNA-ENGLISH-MENU.pdf)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Meat Meze for 2 persons - Limassol")
+new_row.append(float(22))
+new_row.append("Restaurants, cafes and dancing establishments")
+new_row.append("RESTAURANTS AND HOTELS")
+new_row.append("Meze Tavern") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fish Meze for 2 persons - Limassol")
+new_row.append(float(25))
+new_row.append("Restaurants, cafes and dancing establishments")
+new_row.append("RESTAURANTS AND HOTELS")
+new_row.append("Meze Tavern") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
