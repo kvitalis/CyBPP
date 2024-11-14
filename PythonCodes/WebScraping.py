@@ -1703,9 +1703,6 @@ def results_toyota(u):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
-                
-            print(price_)
-                
             new_row.append(subclass_)
             new_row.append(commodity_)
             new_row.append("Toyota")
@@ -1734,9 +1731,6 @@ def results_toyota(u):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
-                
-            print(price_)
-                
             new_row.append(subclass_)
             new_row.append(commodity_)
             new_row.append("Toyota")
@@ -1765,9 +1759,6 @@ def results_toyota(u):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
-            
-            print(price_)
-            
             new_row.append(subclass_)
             new_row.append(commodity_)
             new_row.append("Toyota")
