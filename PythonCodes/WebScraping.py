@@ -1763,10 +1763,11 @@ def results_toyota(u):
             bs = BeautifulSoup(Item_url_, "html.parser")
             response = requests.get(bs)
             soup = BeautifulSoup(response.content, "html.parser")
-            element_name = soup.find_all('span',{"data-test-id":"model-keyspecs-price-card-cash-price-value"})
-    
-            if element_name:
-                price_=element_name[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
+            element_price_ = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            elememnt_price_1=element_price_[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            
+            if elememnt_price_1:
+                price_=elememnt_price_1[0].text.replace("€","").replace(",","").replace("\n","").replace(" ","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
