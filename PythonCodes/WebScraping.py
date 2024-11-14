@@ -1766,12 +1766,19 @@ def results_toyota(u):
             element_price_ = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
             elememnt_price_1=element_price_[0].find_all("span",{"class":"cmp-mega-menu__price"})
 
-            if (len(element_soup) < 2):
-                element_soup_1 = element_soup[0]
+            if elememnt_price_1 and 'data-price' in elememnt_price_1[0].attrs:
+                price_ = elememnt_price_1[0]['data-price']
+
             else:
-                element_soup_1 = element_soup[1]
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(division_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
             
-            if elememnt_price_1:
+            if price_:
                 price_=elememnt_price_1.text.replace("€","").replace(",","").replace("\n","").replace(" ","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
