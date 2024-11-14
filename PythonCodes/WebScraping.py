@@ -1681,50 +1681,121 @@ def results_sewerage(u):
 
 def results_toyota(u):
     
-    if name_=="Toyota Yaris Cross":
+    if name_ == "The New Toyota Yaris Cross":
+        
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs,{'headers':header})
         
-        if response.status_code !=200:
+        if response.status_code != 200:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
-            website_false.append(division_)
+            website_false.append(commodity_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris Cross"})
-            element_soup2=element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-
-            for element_ in element_soup2:
-                price_ = float(element_['data-price'])
-            if price_:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(price_)
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Toyota")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            price_ = element_soup2[0]['data-price']
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
                 
-    elif (name_=="THE NEW TOYOTA YARIS"):
+            print(price_)
+                
+            new_row.append(subclass_)
+            new_row.append(commodity_)
+            new_row.append("Toyota")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+    if name_ == "The New Toyota Yaris":
+        
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs,{'headers':header})
         
-        if response.status_code !=200:
+        if response.status_code != 200:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris"})
+            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            price_ = element_soup2[0]['data-price']
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+                
+            print(price_)
+                
+            new_row.append(subclass_)
+            new_row.append(commodity_)
+            new_row.append("Toyota")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        
+    if name_ == "Toyota Aygo X":
+            
+        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs,{'headers':header})
+        
+        if response.status_code != 200:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            price_ = float(element_soup2[0]['data-price'])
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            
+            print(price_)
+            
+            new_row.append(subclass_)
+            new_row.append(commodity_)
+            new_row.append("Toyota")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+                  
+    #if subclass_=="Second-hand motor cars":
+        
+        #1st way
+        """ 
+        query ={"component":"used-stock-cars-v2","fetches":[
+        {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
+        ]}
+        headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
+        }
+        response = requests.get(Item_url_,{'headers':headers})
+        r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
+        price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
+        """
+        
+        #2nd way
+        """
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs)
+        soup = BeautifulSoup(response.content, "html.parser")
+        isnone = soup.find("div", {"role": "cpdqm_ignore"}).text
+
+        if isnone==None:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
@@ -1732,54 +1803,10 @@ def results_toyota(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
         else:
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris"})
-            element_soup2=element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-
-            for element_ in element_soup2:
-                price_ = float(element_['data-price'])
+            data = json.loads(isnone)
+            price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
             if price_:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(price_)
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Toyota")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
-    else:    
-        if subclass_=="New motor cars":
-            bs = BeautifulSoup(Item_url_, "html.parser")
-            response = requests.get(bs)
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_price_ = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
-            elememnt_price_1=element_price_[0].find_all("span",{"class":"cmp-mega-menu__price"})
-
-            if elememnt_price_1 and 'data-price' in elememnt_price_1[0].attrs:
-                price_ = elememnt_price_1[0]['data-price']
-
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            
-            if price_:
-                price_=price_.replace("€","").replace(",","").replace("\n","").replace(" ","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1796,58 +1823,7 @@ def results_toyota(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
-        #elif subclass_=="Second-hand motor cars":
-            
-            #1st way
-            """ 
-            query ={"component":"used-stock-cars-v2","fetches":[
-                {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
-            ]}
-            headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
-            }
-            response = requests.get(Item_url_,{'headers':headers})
-            r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
-            price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-            """
-            
-            #2nd way
-            """
-            bs = BeautifulSoup(Item_url_, "html.parser")
-            response = requests.get(bs)
-            soup = BeautifulSoup(response.content, "html.parser")
-            isnone = soup.find("div", {"role": "cpdqm_ignore"}).text
-
-            if isnone==None:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-            else:
-                data = json.loads(isnone)
-                price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
-
-                if price_:
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Toyota")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-                else:
-                    website_false.append(name_)
-                    website_false.append(subclass_)
-                    website_false.append(Item_url_)
-                    website_false.append(division_)
-                    website_false.append(retailer_)
-                    daily_errors.loc[len(daily_errors)] = website_false
-                    daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-                    """
+                """
 
 def results_ithaki(u):
     
