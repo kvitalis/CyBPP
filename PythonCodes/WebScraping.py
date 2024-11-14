@@ -1779,7 +1779,7 @@ def results_toyota(u):
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
             
             if price_:
-                price_=elememnt_price_1.text.replace("€","").replace(",","").replace("\n","").replace(" ","")
+                price_=price_.replace("€","").replace(",","").replace("\n","").replace(" ","")
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
