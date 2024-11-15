@@ -1754,7 +1754,8 @@ def results_toyota(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            #element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Aygo x"})
             element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
             price_ = float(element_soup2[0]['data-price'])
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
