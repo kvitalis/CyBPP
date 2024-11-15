@@ -1753,7 +1753,8 @@ def results_toyota(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            #element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Aygo x"})
             element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
             price_ = float(element_soup2[0]['data-price'])
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2539,17 +2540,6 @@ for u in range(0, len(urls)):
 # Manually added data            
 
 """
-#Toyota Aygo X (https://www.toyota.com.cy/new-cars/aygo-x)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X")
-new_row.append(float(17700))
-new_row.append("New motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 #Intercity Buses (https://intercity-buses.com/en/routes/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
