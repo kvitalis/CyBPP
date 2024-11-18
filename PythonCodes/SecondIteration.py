@@ -2540,6 +2540,17 @@ for u in range(0, len(urls)):
 # Manually added data            
 
 """
+#Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("SEAT IBIZA 1.0 MANUAL 1000cc")
+new_row.append(float(9000))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Stock Center") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #Intercity Buses (https://intercity-buses.com/en/routes/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -2870,17 +2881,6 @@ new_row.append(float(22.99))
 new_row.append("Bundled telecommunication services")
 new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("SEAT IBIZA 1.0 MANUAL 1000cc")
-new_row.append(float(9000))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
