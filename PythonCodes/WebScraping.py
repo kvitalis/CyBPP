@@ -1,4 +1,4 @@
-# Important libraries
+# Important libraries 
 import pandas as pd 
 import re
 import requests
@@ -2505,8 +2505,8 @@ for u in range(0, len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    #elif retailer_=="Toyota":
-        #results_toyota(u)
+    elif retailer_=="Toyota":
+        results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
