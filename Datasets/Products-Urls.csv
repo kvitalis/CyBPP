@@ -717,13 +717,14 @@ MateusRoseΚρασί750ml,Wine from grapes,mateus-rose-krasi-750ml,ALCOHOLIC BEV
 KeoRedDryWine1L,Wine from grapes,keo-erythro-xiro-krasi-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 EtoshaCharcoal5kg,Coal,etosha-karvouna-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
 PyrsosCharcoal5kg,Coal,pyrsos-karvouna-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
-ΆγιοςΝικόλαος12X500ml,Mineral or spring waters,agios-nikolaos-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-"ΆγιοςΝικόλαος6X1,5L",Mineral or spring waters,agios-nikolaos-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-PericΝερόΑγρού12Χ500ml,Mineral or spring waters,peric-nero-agrou-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-"PericΝερόΑγρού6Χ1,5L",Mineral or spring waters,peric-nero-agrou-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-Κύκκος12Χ500ml,Mineral or spring waters,kykkos-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-"Κύκκος6Χ1,5L",Mineral or spring waters,kykkos-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"AgiosNikolaos6X1,5L",Mineral or spring waters,agios-nikolaos-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+AgiosNikolaos12X500ml,Mineral or spring waters,agios-nikolaos-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "Agros6Χ1,5L",Mineral or spring waters,agros-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agros12X500ml,Mineral or spring waters,agros-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PericNeroAgrou12Χ500ml,Mineral or spring waters,peric-nero-agrou-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"PericNeroAgrou6Χ1,5L",Mineral or spring waters,peric-nero-agrou-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kykkos12Χ500ml,Mineral or spring waters,kykkos-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"Kykkos6Χ1,5L",Mineral or spring waters,kykkos-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g,Other preserved or processed fish and seafood-based preparations,sevyco-aspros-tonos-se-elaiolado-4x95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SevycoΡοζέΤόνοςΣεΣογιέλαιο4X200g,Other preserved or processed fish and seafood-based preparations,sevyco-roze-tonos-se-sogielaio-4x200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 RioMareΤόνοςΣεΕλαιόλαδο2x160g,Other preserved or processed fish and seafood-based preparations,rio-mare-tonos-se-elaiolado-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1052,11 +1053,7 @@ Toyota Yaris - Yaris 1.5 Active CVT,Second-hand motor cars,https://www.toyota.co
 Toyota Aygo X - Aygo X play Canvas CVT (fleet),Second-hand motor cars,https://www.toyota.com.cy/used-cars/pdp.toyota-aygo-x-2023-5-door-hatchback-automatic-petrol-41b93baf-544e-4bfd-bee4-dc7c78e4330d,TRANSPORT,Toyota
 Toyota Aygo X - Aygo X play Canvas CVT (fleet),Second-hand motor cars,https://www.toyota.com.cy/used-cars/pdp.toyota-aygo-x-2023-5-door-hatchback-automatic-petrol-0737c1ff-aa9b-4cc4-9920-44c802a3e195,TRANSPORT,Toyota
 NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53806,TRANSPORT,Stock Center
-SEAT ARONA 1.0cc TSI AUTOMATIC PETROL 1000cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53762,TRANSPORT,Stock Center
-SKODA OCTAVIA 1.4cc PETROL AUTOMATIC 1400cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC51875,TRANSPORT,Stock Center
 NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc 2,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53892,TRANSPORT,Stock Center
-OPEL CORSA PETROL MANUAL 1200cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53850,TRANSPORT,Stock Center
-VOLKSWAGEN POLO 1.0 TSI DSG 1000cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53878,TRANSPORT,Stock Center
 VOLKSWAGEN POLO 1.0 PETROL MANUAL 1000cc,Second-hand motor cars,https://www.stock-center.com.cy/el/searchresults/vehicle/SC53955,TRANSPORT,Stock Center
 ACENTA-LVL001,New motor cars,https://www.nissan.com.cy/vehicles/new-vehicles/Qashqai-2022/specs.html,TRANSPORT,Nissan
 N-CONNECTA 2TONE-LVL004,New motor cars,https://www.nissan.com.cy/vehicles/new-vehicles/Qashqai-2022/specs.html,TRANSPORT,Nissan
