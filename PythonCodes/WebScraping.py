@@ -1449,6 +1449,7 @@ def results_meze(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
+'''
 def results_CYgar_shop(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1456,17 +1457,17 @@ def results_CYgar_shop(u):
     soup = BeautifulSoup(response.content, "html.parser")
     element_name = soup.find_all('div',{"class":"hM4gpp"})
 
-    if response.status_code !=200:
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         if element_name:
-            price_value=element_name[0].text
+            price_value = element_name[0].text
             price_match = re.search(r'\d+\.\d+', price_value)
 
             if price_match:
@@ -1485,7 +1486,7 @@ def results_CYgar_shop(u):
                 website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             website_false.append(name_)
             website_false.append(subclass_)
@@ -1493,8 +1494,35 @@ def results_CYgar_shop(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+'''
 
+def results_CYgar_shop(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_name = soup.find_all('div',{"class":"hM4gpp"})
+        price_ = element_name[0].text.replace('€','').replace('Price','')
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("The CYgar shop")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+            
 def results_the_royal_cigars(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
