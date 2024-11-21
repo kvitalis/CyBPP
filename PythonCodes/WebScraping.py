@@ -730,9 +730,8 @@ def results_ewholesale(u):
 
 def results_electroline(u):
     
-    url = "https://electroline.com.cy/products/"+Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
@@ -2466,8 +2465,8 @@ for u in range(0, len(urls)):
         results_CyPost(u)
     elif retailer_=="E-wholesale":
         results_ewholesale(u)
-    #elif retailer_=="Electroline":
-        #results_electroline(u)
+    elif retailer_=="Electroline":
+        results_electroline(u)
     elif retailer_=="European University Cyprus":
         results_europeanuniversitycyprus(u)
     elif retailer_=="FamousSports":
