@@ -729,9 +729,8 @@ def results_ewholesale(u):
 
 def results_electroline(u):
     
-    url="https://electroline.com.cy/products/"+Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
@@ -742,15 +741,15 @@ def results_electroline(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all("ins",{"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
         
         if element_soup:
-            price_=element_soup[0].text.replace("\n",'').replace("€","")
+            price_ = element_soup[0].text.replace("\n",'').replace("€","")
         else:
             element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
-            price_=element_soup[0].text.replace("\n","").replace("€","")
+            price_ = element_soup[0].text.replace("\n","").replace("€","")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2903,6 +2902,17 @@ new_row.append(float(25))
 new_row.append("Restaurants, cafes and dancing establishments")
 new_row.append("RESTAURANTS AND HOTELS")
 new_row.append("Meze Tavern") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+## Electroline (*Black Friday Offer* --> https://electroline.com.cy/en/products/home-appliances/washing-dryers/washing-machines/bosch-wge03200by-washing-machine-8kg-white/) 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("BOSCH WGE03200BY Washing Machine 8kg White")
+new_row.append(float(550))
+new_row.append("Clothes washing machines, clothes drying machines and dish washing machines")
+new_row.append("FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ")
+new_row.append("Electroline") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
