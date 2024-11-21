@@ -1699,8 +1699,8 @@ def results_toyota(u):
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris Cross"})
-            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            price_ = element_soup2[0]['data-price']
+            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            price_ = element_soup[0]['data-price']
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
@@ -1727,8 +1727,8 @@ def results_toyota(u):
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris"})
-            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            price_ = element_soup2[0]['data-price']
+            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            price_ = element_soup[0]['data-price']
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
@@ -1755,9 +1755,10 @@ def results_toyota(u):
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             #element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
+            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
+            #price_ = float(element_soup2[0]['data-price'])
             element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Aygo x"})
-            element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            price_ = float(element_soup2[0]['data-price'])
+            price_ = element_soup[0]['data-price']
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
