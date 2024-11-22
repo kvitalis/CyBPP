@@ -198,7 +198,7 @@ def results_IKEA(u):
 def results_stephanis(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    url_new = "https://www.stephanis.com.cy/en"+str(Item_url_)
+    url_new = "https://www.stephanis.com.cy/en" + str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
     
@@ -215,15 +215,14 @@ def results_stephanis(u):
         element_soup = soup.find_all("div",{"class":"listing-details-heading"})
         
         if (len(element_soup) < 2):
-            element_soup_1 = element_soup[0]
+            element_soup = element_soup[0]
         else:
-            element_soup_1 = element_soup[1]
-            
-        element_soup_2 = element_soup_1.text
-        price_ = element_soup_2.replace("€","")
+            element_soup = element_soup[1]
+        price_ = element_soup.text.replace("€","").replace("\n","")
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(float(price_))
+        new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
         new_row.append("Stephanis")
