@@ -2874,11 +2874,42 @@ new_row.append("Meze Tavern")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Toyota (https://www.toyota.com.cy/new-cars)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Toyota Aygo X")
+new_row.append(float(17700))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("The New Toyota Yaris")
+new_row.append(float(24900))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("The New Toyota Yaris Cross")
+new_row.append(float(27900))
+new_row.append("New motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 ###########################################################################################################################
 # Black Friday Offers 
 ###########################################################################################################################
 
-#Primetel (https://primetel.com.cy/giga-unlimited	--> https://primetel.com.cy/online-prosfora-kinitis-black-friday-en) 
+#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/online-prosfora-kinitis-black-friday-en) 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
