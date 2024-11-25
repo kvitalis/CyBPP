@@ -1706,6 +1706,7 @@ def results_sewerage(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
+'''
 def results_toyota(u):
     
     if name_ == "The New Toyota Yaris Cross":
@@ -1844,6 +1845,44 @@ def results_toyota(u):
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                 """
+'''
+
+def results_toyota(u):
+        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+        bs = BeautifulSoup(Item_url_, "html.parser")
+        response = requests.get(bs,{'headers':header})
+        
+        if response.status_code != 200:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(commodity_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        else:
+            soup = BeautifulSoup(response.content, "html.parser")
+            # Find the div with the relevant data attribute
+            data_div = soup.find('div', class_='dnb-sales-hero-outer-container').find('div', attrs={'data-component-props': True})
+            # Extract the value of the data-component-props attribute
+            data_component_props = data_div['data-component-props']    
+            # Unescape the JSON string
+            data_component_props = data_component_props.replace('&quot;', '"')    
+            # Parse the JSON data
+            data = json.loads(data_component_props)
+            # Extract the TotalPrice from financeConfig
+            finance_config_str = data['salesHeroDto'].get('financeConfig', '')
+            finance_config = json.loads(finance_config_str)
+            price_ = finance_config.get('TotalPrice')
+            
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_) 
+            new_row.append(subclass_)
+            new_row.append(commodity_)
+            new_row.append("Toyota")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ithaki(u):
     
@@ -2532,8 +2571,8 @@ for u in range(0, len(urls)):
         results_sewerage(u)
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    #elif retailer_=="Toyota":
-        #results_toyota(u)
+    elif retailer_=="Toyota":
+        results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
