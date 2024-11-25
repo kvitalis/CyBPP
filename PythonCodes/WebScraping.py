@@ -2470,8 +2470,8 @@ for u in range(0, len(urls)):
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
         results_IKEA(u)
-    #elif retailer_=="Stephanis":
-        #results_stephanis(u)
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
     #elif retailer_=="Epic":
