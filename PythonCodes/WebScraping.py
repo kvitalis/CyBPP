@@ -1862,22 +1862,6 @@ def results_toyota(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             soup = BeautifulSoup(response.content, "html.parser")
-            '''
-            # Find the outer container
-            data_div_outer = soup.find('div', class_='dnb-sales-hero-outer-container')
-            # Find the div with the data-component-props attribute inside
-            data_div = data_div_outer.find('div', attrs={'data-component-props': True})
-            # Extract the value of the data-component-props attribute
-            data_component_props = data_div['data-component-props']
-            # Unescape the JSON string
-            data_component_props = data_component_props.replace('&quot;', '"')
-            # Parse the JSON data
-            data = json.loads(data_component_props)
-            # Extract the TotalPrice from financeConfig    
-            finance_config_str = data['salesHeroDto'].get('financeConfig', '')     
-            finance_config = json.loads(finance_config_str)
-            price_ = finance_config.get('TotalPrice')
-            '''
             # Find the div with the relevant data attribute
             data_div = soup.find('div', class_='dnb-sales-hero-outer-container').find('div', attrs={'data-component-props': True})
             # Extract the value of the data-component-props attribute
@@ -1891,7 +1875,6 @@ def results_toyota(u):
             finance_config = json.loads(finance_config_str)
             price_ = finance_config.get('TotalPrice')
             
-            print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_) 
@@ -2526,8 +2509,8 @@ for u in range(0, len(urls)):
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
         results_IKEA(u)
-    elif retailer_=="Stephanis":
-        results_stephanis(u)
+    #elif retailer_=="Stephanis":
+        #results_stephanis(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
     #elif retailer_=="Epic":
