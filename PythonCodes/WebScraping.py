@@ -1877,6 +1877,7 @@ def results_toyota(u):
             finance_config_str = data['salesHeroDto'].get('financeConfig', '')
             finance_config = json.loads(finance_config_str)
             price_ = finance_config.get('TotalPrice')
+            print(price_)
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
