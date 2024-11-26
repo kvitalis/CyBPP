@@ -1799,14 +1799,14 @@ def results_toyota(u):
         
         #1st way
         """ 
-        query ={"component":"used-stock-cars-v2","fetches":[
+        query = {"component":"used-stock-cars-v2","fetches":[
         {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
         ]}
         headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
         }
         response = requests.get(Item_url_,{'headers':headers})
         r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
-        price_=r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
+        price_ = r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
         """
         
         #2nd way
@@ -1816,14 +1816,14 @@ def results_toyota(u):
         soup = BeautifulSoup(response.content, "html.parser")
         isnone = soup.find("div", {"role": "cpdqm_ignore"}).text
 
-        if isnone==None:
+        if isnone == None:
             website_false.append(name_)
             website_false.append(subclass_)
             website_false.append(Item_url_)
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             data = json.loads(isnone)
             price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
@@ -1843,7 +1843,7 @@ def results_toyota(u):
                 website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
                 """
 '''
 
@@ -1862,6 +1862,7 @@ def results_toyota(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
             soup = BeautifulSoup(response.content, "html.parser")
+            '''
             # Find the outer container
             data_div_outer = soup.find('div', class_='dnb-sales-hero-outer-container')
             # Find the div with the data-component-props attribute inside
@@ -1876,7 +1877,6 @@ def results_toyota(u):
             finance_config_str = data['salesHeroDto'].get('financeConfig', '')     
             finance_config = json.loads(finance_config_str)
             price_ = finance_config.get('TotalPrice')
-            print(price_)
             '''
             # Find the div with the relevant data attribute
             data_div = soup.find('div', class_='dnb-sales-hero-outer-container').find('div', attrs={'data-component-props': True})
@@ -1890,7 +1890,8 @@ def results_toyota(u):
             finance_config_str = data['salesHeroDto'].get('financeConfig', '')
             finance_config = json.loads(finance_config_str)
             price_ = finance_config.get('TotalPrice')
-            '''
+            
+            print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_) 
