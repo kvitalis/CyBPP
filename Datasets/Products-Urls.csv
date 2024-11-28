@@ -327,7 +327,7 @@ ANGIO TRADING LIMITED,,ram-oil-cyprus-limited-57?ref=maptile,,
 ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ,Other bakery products,sifounas-eliopita-sfoliata-1-tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςΚέικΓεωγραφίας750g,Other bakery products,sifounas-keik-geografias-750g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςMixΣιροπιαστά410g,Other bakery products,sifounas-mix-siropiasta-410g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-MonettiOvenBakedBruschetteChipsΝτομάταΕλιά&Ρίγανη70g,Other bakery products,monetti-oven-baked-bruschette-chips-ntomata-elia-rigani-70g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CorinaCheetosPizza34g,Other bakery products,corina-cheetos-pizza-34g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 BakandysΚουλλούρκαΤραγανάταΣιταρένια300g,Other bakery products,bakandys-koullourka-traganata-sitarenia-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜαρίαςΠαξιμάδιαΓλυκανίσου300g,Other bakery products,marias-paximadia-glykanisou-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 JohnsofΚρουτόνια320g,Other bakery products,johnsof-kroutonia-320g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -411,7 +411,7 @@ LesieurΗλιανθέλαιο3L,Other edible oils,lesieur-ilianthelaio-3l,FOOD A
 AmbrosiaΣογιέλαιο4L,Other edible oils,ambrosia-sogielaio-4l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 AmbrosiaΚαλαμποκέλαιο1L,Other edible oils,ambrosia-kalampokelaio-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 AmbrosiaΚαλαμποκέλαιο3L,Other edible oils,ambrosia-kalampokelaio-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΔέσποιναΛάδιΣαλάτας1L,Other edible oils,despoina-ladi-salatas-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΔέσποιναΜείγμαΦυτικώνΕλαίων60%Ελαιόλαδο1L,Other edible oils,despoina-meigma-fytikon-elaion-60-elaiolado-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΆγιοςΓεώργιοςLivioΠυρηνέλαιο1L,Other edible oils,agios-georgios-livio-pyrinelaio-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 HuilorΚραμβέλαιο3L,Other edible oils,huilor-kramvelaio-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g,"Dried, smoked or salted fish and seafood",sevyco-aspros-tonos-se-elaiolado-4x95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -583,7 +583,7 @@ NeutroRobertsDeodorantPowderFreshRollOn50ml,"Articles for personal hygiene and w
 NiveaMenDeodorantDryImpactSpray150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",nivea-men-deodorant-dry-impact-spray-150ml-2,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 EldaΧαρτίΤουαλέτας24Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",elda-charti-toualetas-24tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 KleenexScottonelle,"Articles for personal hygiene and wellness, esoteric products and beauty products",kleenex-scottonelle-pure-clean-charti-toualetas-248tem-1,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-RexΒαμβάκι200g,"Articles for personal hygiene and wellness, esoteric products and beauty products",rex-vamvaki-100g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+SensiSoftZig ZagPreCutΒαμβάκι150g,"Articles for personal hygiene and wellness, esoteric products and beauty products",sensi-soft-zig-zag-pre-cut-vamvaki-150g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 ListerineKidsSmartRinseMildBerry250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",listerine-kids-smart-rinse-mild-berry-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 GarnierSkinActiveMoistureBombTissueMask1Τεμ28g,"Articles for personal hygiene and wellness, esoteric products and beauty products",garnier-skin-active-moisture-bomb-tissue-mask-1tem-28g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 PomPonΜαντηλάκιαΝτεμακιγιάζΜεArganOilΓιαΌλουςΤουςΤύπουςΔέρματος20Τεμ1+1,"Articles for personal hygiene and wellness, esoteric products and beauty products",pom-pon-mantilakia-ntemakigiaz-me-argan-oil-gia-olous-tous-typous-dermatos-20tem-11,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
@@ -674,8 +674,8 @@ Humana5CerealsWithBananaNoAddedSugar200g,Baby food,humana-5-dimitriaka-me-mpanan
 HippOrganicBabyCereal100%Rice200g,Baby food,hipp-organic-baby-cereal-100-ryzalevro-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 NestleFarineLacteeWithMilk 300g,Baby food,nestle-farin-lakte-me-gala-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 HumanaFarineLacteNoAddedSugar200g,Baby food,humana-farin-lakte-choris-prosthiki-zacharis-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-NounouFarineLactee300g-0.20€,Baby food,nounou-farin-lakte-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-NounouFruitCream5Fruits&Milk300g-0.20€,Baby food,nounou-froutokrema-5-frouta-gala-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+HumanaGoodnightΦαρίνΛακτέΟλικήςΑλέσεως&ΜπανάναΧωρίςΠροσθήκηΖάχαρης200g,Baby food,humana-goodnight-farin-lakte-olikis-aleseos-mpanana-choris-prosthiki-zacharis-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΝουνούΦρουτόκρεμα3Φρούτα&Γάλα300g-0.20€,Baby food,nounou-froutokrema-3-frouta-gala-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "JotisFarineLactee300g-0,20€",Baby food,giotis-farin-lakte-300g-020eur,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 NounouFrisogrow3400g,Baby food,nounou-frisogrow-3-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 NanOptiproHM-04400g,Baby food,nan-optipro-hm-0-4-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -733,7 +733,7 @@ AgiosNikolaos12X500ml,Mineral or spring waters,agios-nikolaos-12x500ml,FOOD AND 
 Agros12X500ml,Mineral or spring waters,agros-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 PericNeroAgrou12Χ500ml,Mineral or spring waters,peric-nero-agrou-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "PericNeroAgrou6Χ1,5L",Mineral or spring waters,peric-nero-agrou-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-Kykkos12Χ500ml,Mineral or spring waters,kykkos-12ch500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΒίκοςΝερό12X500ml,Mineral or spring waters,vikos-nero-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "Kykkos6Χ1,5L",Mineral or spring waters,kykkos-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g,Other preserved or processed fish and seafood-based preparations,sevyco-aspros-tonos-se-elaiolado-4x95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SevycoΡοζέΤόνοςΣεΣογιέλαιο4X200g,Other preserved or processed fish and seafood-based preparations,sevyco-roze-tonos-se-sogielaio-4x200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
