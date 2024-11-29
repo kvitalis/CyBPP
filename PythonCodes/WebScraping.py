@@ -2348,8 +2348,8 @@ def results_costastheodorou(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_=soup.find_all("p",{"class":"price"})
-        price_=element_[0].text.replace("€","")
+        element_name = soup.find_all("p",{"class":"price"})
+        price_ = element_name[0].text.replace("€","").split('\xa0')[0]
         new_row.append(datetime.today().strftime("%Y-%m-%d"))
         new_row.append(name_)
         new_row.append(float(price_))
