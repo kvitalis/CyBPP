@@ -212,13 +212,23 @@ def results_stephanis(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("div",{"class":"listing-details-heading"})
         
-        if (len(element_soup) < 2):
-            element_soup = element_soup[0]
+        ##Testing Time - KM - 05/12/2024
+        #element_soup = soup.find_all("div",{"class":"listing-details-heading"})
+        #if (len(element_soup) < 2):
+        #    element_soup = element_soup[0]
+        #else:
+        #    element_soup = element_soup[1]
+        #price_ = element_soup.text.replace("€","").replace("\n","")
+
+        ##
+        element_soup = soup.find_all("div",{"class":"listing-details-heading"})
+        sales_element=element_soup[0].find_all("div",{"class":"listing-details-heading large-now-price with-sale"})
+        
+        if sales_element:
+            price_=sales_element[0].text.replace("€","").replace("\n","")
         else:
-            element_soup = element_soup[1]
-        price_ = element_soup.text.replace("€","").replace("\n","")
+            price_=element_soup[-1].text.replace("€","").replace("\n","")
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
