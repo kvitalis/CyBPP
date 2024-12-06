@@ -2378,7 +2378,7 @@ def stock_center_results(u):
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(float(price_))
+        new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
         new_row.append("Stock Center")
