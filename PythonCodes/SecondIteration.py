@@ -2368,12 +2368,14 @@ def stock_center_results(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_price_=soup.find_all("div",{"class":"price"})
-        price_=element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\n","").replace(".","").replace("€","")
+        element_price_ = soup.find_all("div",{"class":"price"})
+        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\r","").replace("\n","").replace(".","").replace("€","")
+        print(price_)
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
