@@ -2524,8 +2524,8 @@ for u in range(0, len(urls)):
         results_AWOL(u)
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)
-    #elif retailer_=="Bwell Pharmacy":
-        #results_bwell_pharmacy(u)
+    elif retailer_=="Bwell Pharmacy":
+        results_bwell_pharmacy(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
@@ -2594,8 +2594,8 @@ for u in range(0, len(urls)):
         results_premier(u)
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
-   # elif retailer_=="Music Avenue":
-        #results_musicavenue(u)
+    elif retailer_=="Music Avenue":
+        results_musicavenue(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
     elif retailer_=="leroymerlin":
