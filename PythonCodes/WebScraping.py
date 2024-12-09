@@ -495,7 +495,7 @@ def results_alter_Vape(u):
 
 def results_bwell_pharmacy(u):
     
-    url="https://bwell.com.cy/shop/"+Item_url_
+    url = "https://bwell.com.cy/shop/" + Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
@@ -511,8 +511,8 @@ def results_bwell_pharmacy(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        element_soup_1=element_soup[1].text
-        price_=element_soup_1.replace("€","")
+        element_soup_1 = element_soup[1].text
+        price_ = element_soup_1.replace("€","")
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -525,13 +525,13 @@ def results_bwell_pharmacy(u):
 
 def results_cablenet(u):
     
-    name_=urls["Name"].iloc[u]
+    name_ = urls["Name"].iloc[u]
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    if response.status_code !=200:
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -2524,8 +2524,8 @@ for u in range(0, len(urls)):
         results_AWOL(u)
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)
-    elif retailer_=="Bwell Pharmacy":
-        results_bwell_pharmacy(u)
+    #elif retailer_=="Bwell Pharmacy":
+        #results_bwell_pharmacy(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
