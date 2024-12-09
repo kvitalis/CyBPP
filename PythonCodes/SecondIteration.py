@@ -2983,17 +2983,6 @@ new_row.append("Primetel")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Electroline (https://electroline.com.cy/en/products/home-appliances/washing-dryers/washing-machines/bosch-wge03200by-washing-machine-8kg-white/) 
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("BOSCH WGE03200BY Washing Machine 8kg White")
-new_row.append(float(550))
-new_row.append("Clothes washing machines, clothes drying machines and dish washing machines")
-new_row.append("FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ")
-new_row.append("Electroline") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 #===============================================================================
 
 # Change the type as float
