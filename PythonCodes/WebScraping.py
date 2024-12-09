@@ -2524,8 +2524,8 @@ for u in range(0, len(urls)):
         results_AWOL(u)
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)
-    #elif retailer_=="Bwell Pharmacy":
-        #results_bwell_pharmacy(u)
+    elif retailer_=="Bwell Pharmacy":
+        results_bwell_pharmacy(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
