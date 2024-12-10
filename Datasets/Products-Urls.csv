@@ -1,5 +1,6 @@
 Name,Subclass,Url,Division,Retailer
 FLYING HORSE cabin luggage,Travel goods,https://costastheodorou.com.cy/product/flying-horse-cabin-luggage-7/,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+FLYING HORSE cabin luggage,Travel goods,https://costastheodorou.com.cy/product/flying-horse-cabin-luggage-7/,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
 FANTOM – Spinner 4 wheels – Cabin – Front Loader,Travel goods,https://costastheodorou.com.cy/product/fantom-spinner-4-wheels-cabin-front-loader/,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
 Toyota Aygo X,New motor cars,https://www.toyota.com.cy/new-cars/aygo-x,TRANSPORT,Toyota
 The New Toyota Yaris Cross,New motor cars,https://www.toyota.com.cy/new-cars/yaris-cross,TRANSPORT,Toyota
@@ -789,6 +790,12 @@ IKEA PS 2002 Ποτιστήρι,Garden products,https://www.ikea.com.cy/proioda/
 UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,https://www.ikea.com.cy/proioda/utsadd-loytrino-paixnidi-gia-skylo/10570877/,"RECREATION AND CULTURE",IKEA
 UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,https://www.ikea.com.cy/proioda/utsadd-loytrino-paixnidi-gia-skylo/30570876/,"RECREATION AND CULTURE",IKEA
 UTSADD άγκιστρο/γάτα,Products for pets,https://www.ikea.com.cy/proioda/utsadd-agkistro-gata/50567788/,"RECREATION AND CULTURE",IKEA    
+HÄGRANDE μπρίκι 700 ml,"Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/hagrande-mpriki-700-ml/00485059/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+MIDDAGSMAT κατσαρόλα με καπάκι 2 l,"Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/middagsmat-katsarola-me-kapaki-2-l/10463702/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,https://www.ikea.com.cy/proioda/tarno-ptyssomeni-karekla/90095428/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου 37x45 cm,Garden furniture,https://www.ikea.com.cy/proioda/nammaro-skampo-ptyssomeno-ekswterikoy-xwroy-37x45-cm/70510300/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,https://www.ikea.com.cy/proioda/neiden-skeletos-krebatioy-140x200-cm/39248608/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,https://www.ikea.com.cy/proioda/songesand-syrtariera-me-3-syrtaria/90366839/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 Refrigerator TESLA RD2100MS1 silver,"Refrigerators, freezers and fridge-freezers",/products/white-goods/refrigeration/refrigerators/370045,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",/products/white-goods/refrigeration/freezers/356984,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",/products/366721,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
@@ -1399,8 +1406,6 @@ BOSCH WPG23108GB Dryer 8 kg White,"Clothes washing machines, clothes drying mach
 WILSON WDW1447WH4.UK Free Standing Dishwasher 60 cm White,"Clothes washing machines, clothes drying machines and dish washing machines",https://electroline.com.cy/en/products/home-appliances/dish-washer/dishwashers-free-standing10115/wilson-wdw1447wh4-uk-free-standing-dishwasher-60-cm-white/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Cookers,https://electroline.com.cy/products/small-appliances/electric-ovens-hobs/microwave-ovens/midea-mp012lw-wh-microwave-oven-white/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Cookers,https://electroline.com.cy/products/small-appliances/electric-ovens-hobs/small-kitchen-ovens-grillers/life-221-0153-mini-oven-with-2-hobs/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-HÄGRANDE μπρίκι 700 ml,"Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/hagrande-mpriki-700-ml/00485059/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-MIDDAGSMAT κατσαρόλα με καπάκι 2 l,"Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/middagsmat-katsarola-me-kapaki-2-l/10463702/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 Fishing Tool Set 70pcs HI 66258,Equipment for sport,/products/gaming/fun-and-smart-games/outdoor-games-toys/395806,RECREATION AND CULTURE,Stephanis
 Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,/products/gaming/fun-and-smart-games/outdoor-games-toys/356079,RECREATION AND CULTURE,Stephanis
 THOMSON M151 Μικρόφωνο για Καραόκε Aσημί,"Equipment for the reception, recording and reproduction of sound",https://electroline.com.cy/products/sound-vision/sound/microphones/thomson-m151-dynamic-microphone-for-karaoke-silver/,RECREATION AND CULTURE,Electroline
@@ -1408,10 +1413,6 @@ SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for th
 HOPESTAR P40 Mini Bluetooth Ηχείο Μαύρο,"Equipment for the reception, recording and reproduction of sound",https://electroline.com.cy/products/new-products/hopestar-p40-mini-bluetooth-speaker-black/,RECREATION AND CULTURE,Electroline
 LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Food processing appliances,https://electroline.com.cy/products/small-appliances/kitchen-appliances/food-proccessors/life-221-0296-sous-chef-gallery-food-processor/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 KENWOOD FDP22.130GY MultiPro Go Πολυμίξερ,Food processing appliances,https://electroline.com.cy/products/small-appliances/kitchen-appliances/multi-mixers/kenwood-fdp22-130gy-multipro-go-multi-mixer/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,https://www.ikea.com.cy/proioda/tarno-ptyssomeni-karekla/90095428/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου 37x45 cm,Garden furniture,https://www.ikea.com.cy/proioda/nammaro-skampo-ptyssomeno-ekswterikoy-xwroy-37x45-cm/70510300/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,https://www.ikea.com.cy/proioda/neiden-skeletos-krebatioy-140x200-cm/39248608/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,https://www.ikea.com.cy/proioda/songesand-syrtariera-me-3-syrtaria/90366839/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 Leon 6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Κεο 6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Stella Artois 6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
