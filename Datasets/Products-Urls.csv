@@ -515,7 +515,11 @@ SpryΦυτικόΜαγειρικόΠροιόν350g,Confectionery products,spry-f
 "ΧταπόδιΦρέσκο1Τεμ1,300kg",Fresh or chilled fish,chtapodi-fresko-1tem-1300kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΚαλαμάριΚαθαρισμένο1kg,Fresh or chilled fish,kalamari-katharismeno-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 BertiΕλαφρύ1.5%ΓάλαΜακράςΔιαρκείας1L,Preserved milk,berti-elafry-15-gala-makras-diarkeias-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BertiΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L,Preserved milk,berti-plires-35-gala-makras-diarkeias-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜάναΓάλαΖαχαρούχο397g,Preserved milk,mana-gala-zacharoucho-397g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+MulikFullCreamΓάλαΣοκολάτα500ml,Preserved milk,mulik-full-cream-gala-sokolata-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KokoOriginalCoconutMilk1L,Preserved milk,koko-original-rofima-karydas-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+OatlyBaristaOatDrink500ml,Preserved milk,oatly-barista-rofima-vromis-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΛανίτηςΕλαφρύΓάλα2L,Low fat milk,lanitis-elafry-gala-2l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "ΛανίτηςΕλαφρύΓάλα1,5L",Low fat milk,lanitis-elafry-gala-15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L,Low fat milk,charalampidis-kristis-delact-gala-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -753,16 +757,14 @@ WhiskasFishFavouritesSalmonTunaInJelly4x85g,Products for pets,whiskas-fish-favou
 WhiskasWithTunaInLoaf400g,Products for pets,whiskas-me-tono-se-pate-400g,RECREATION AND CULTURE,SupermarketCy
 3AMilletSeed800g,Products for pets,3a-apli-zootrofi-millet-kechri-kitrino-800g,RECREATION AND CULTURE,SupermarketCy
 3AParrotSeed450g,Products for pets,3a-apli-zootrofi-liostrofi-ilianthosporo-450g,RECREATION AND CULTURE,SupermarketCy
-Leon 6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Κεο 6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Stella Artois 6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Carlsberg 8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Νεφέλη Κοτόπουλο Τεμαχισμένο 2.5kg,Poultry,nefeli-kotopoulo-temachismeno-25kg,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Νεφέλη Κοτόπουλο Φιλέτο 800g,Poultry,nefeli-kotopoulo-fileto-800g,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Berti Πλήρες 3.5% Γάλα Μακράς Διαρκείας 1L,Preserved milk,berti-plires-35-gala-makras-diarkeias-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Mulik Full Cream Γάλα Σοκολάτα 500ml,Preserved milk,mulik-full-cream-gala-sokolata-500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-Χοιρινό Σνίτσελ Πανέ 700g,Other meats,choirino-snitsel-pane-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-Παστουρμάς 500g,Other meats,pastourmas-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+ΝεφέληΚοτόπουλοΤεμαχισμένο2.5kg,Poultry,nefeli-kotopoulo-temachismeno-25kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΝεφέληΚοτόπουλοΦιλέτο800g,Poultry,nefeli-kotopoulo-fileto-800g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ΧοιρινόΣνίτσελΠανέ700g,Other meats,choirino-snitsel-pane-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Παστουρμάς500g,Other meats,pastourmas-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "Σωλήνας ντουλάπας Μ200xΠ1,5 cm",Repair of household appliances,https://www.leroymerlin.com.cy/gr/apothikeusi-taktopoiisi/organosi-doulapas/mihanismoi-doulapas/solinas-ntoulapas-m200xp15-cm-61169493?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
 Σετ τηλέφωνο ντους με σπιράλ και στήριγμα Roca Stella,Repair of household appliances,https://www.leroymerlin.com.cy/gr/mpanio/stiles-kai-tilefona-dous/set-tilefona-mpaniou/set-tilefono-ntous-me-spiral-kai-stirigma-roca-stella-17005121?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
 Βούρτσα πιγκάλ SENSEA μαύρο,Repair of household appliances,https://www.leroymerlin.com.cy/gr/mpanio/axesouar-baniou/pigal/vourtsa-pigkal-sensea-mauro-62368726?ref=reccodo-search,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",leroymerlin
