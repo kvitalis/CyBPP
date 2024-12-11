@@ -68,6 +68,7 @@ def results_supermarketcy(urls):
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)
 
+'''
 def results_alphamega(urls):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -103,6 +104,7 @@ def results_alphamega(urls):
         new_row.append("Alphamega")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)   
+'''
 
 def results_fuelDaddy(urls):
     
@@ -2576,8 +2578,8 @@ for u in range(0, len(urls)):
 
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
-    elif retailer_=="Alphamega":
-        results_alphamega(u)
+    #elif retailer_=="Alphamega":
+        #results_alphamega(u)
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
     elif retailer_=="IKEA":
