@@ -2614,10 +2614,10 @@ for u in range(0, len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
-    elif retailer_=="Cheap Basket":
-        results_cheapbasket(u)
-    elif retailer_=="Opa":
-        results_opacy(u)
+    #elif retailer_=="Cheap Basket":
+        #results_cheapbasket(u)
+    #elif retailer_=="Opa":
+        #results_opacy(u)
 
 #================================================================================
 # Manually added data            
