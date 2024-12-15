@@ -2658,8 +2658,8 @@ for u in range(0, len(urls)):
         results_intercity(u)  
     elif retailer_=="Parga":
         results_parga(u)
-    elif retailer_=="Evdokia Jewellery":
-        results_evdokia(u)
+    #elif retailer_=="Evdokia Jewellery":
+        #results_evdokia(u)
     elif retailer_=="Centroptical":
         results_centroptical(u)
     elif retailer_=="Premier Laundry":
