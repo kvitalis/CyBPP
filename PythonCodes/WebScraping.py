@@ -945,6 +945,48 @@ def results_nissan(u):
     response = requests.get(Item_url_, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
     
+    if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
+    else:
+        tree = html.fromstring(response.content)
+        price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
+        
+        if price_tree:
+            price_json = price_tree[0]
+            price_data = json.loads(price_json)
+            if "LVL001" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL001']['gradePrice']
+            if "LVL004" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL005" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL005']['gradePrice']
+            if name_ == "NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE":
+                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
+        
+        print(price_)
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Nissan")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+'''
+def results_nissan(u):
+    
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    response = requests.get(Item_url_, headers=headers)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
     if ("THIS IS A DEAD END..." in response.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -977,7 +1019,8 @@ def results_nissan(u):
         new_row.append("Nissan")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-            
+'''
+
 def results_novella(u):
     
     new_row=[]
