@@ -641,6 +641,7 @@ def results_cablenet(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
+    
     url="http://archeia.moec.gov.cy/mc/698/"+Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
@@ -979,47 +980,6 @@ def results_nissan(u):
         new_row.append("Nissan")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
-'''
-def results_nissan(u):
-    
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-    response = requests.get(Item_url_, headers=headers)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if ("THIS IS A DEAD END..." in response.text) or (response.status_code !=200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
-    else:
-        tree = html.fromstring(response.content)
-        price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
-        
-        if price_tree:
-            price_json = price_tree[0]
-            price_data = json.loads(price_json)
-            if "LVL001" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL001']['gradePrice']
-            if "LVL004" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL004']['gradePrice']
-            if "LVL006" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL006']['gradePrice']
-            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
-                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
-        
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Nissan")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
 
 def results_novella(u):
     
@@ -1559,54 +1519,6 @@ def results_meze(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
-'''
-def results_CYgar_shop(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    element_name = soup.find_all('div',{"class":"hM4gpp"})
-
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        if element_name:
-            price_value = element_name[0].text
-            price_match = re.search(r'\d+\.\d+', price_value)
-
-            if price_match:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_match.group()))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("The CYgar shop")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-'''
 
 def results_CYgar_shop(u):
     
