@@ -269,6 +269,7 @@ def results_stephanis(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CYTA(u):
+    
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -913,14 +914,14 @@ def results_nissan(u):
     response = requests.get(Item_url_, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    if ("THIS IS A DEAD END..." in response.text) or (response.status_code !=200):
+    if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)  
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
         tree = html.fromstring(response.content)
         price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
@@ -929,13 +930,15 @@ def results_nissan(u):
             price_json = price_tree[0]
             price_data = json.loads(price_json)
             if "LVL001" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL001']['gradePrice']
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL001']['gradePrice']
             if "LVL004" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL004']['gradePrice']
-            if "LVL006" in name_:
-                price_ = price_data["new-qashqai"]['default']['grades']['LVL006']['gradePrice']
-            if name_=="ACENTA COMFORT 1.3L DIG-T 158bhp Mild Hybrid AUTO 2WD":
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL005" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL005']['gradePrice']
+            if name_ == "NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE":
                 price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
+        
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -1490,46 +1493,26 @@ def results_CYgar_shop(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    element_name = soup.find_all('div',{"class":"hM4gpp"})
-
-    if response.status_code !=200:
+    
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        if element_name:
-            price_value=element_name[0].text
-            price_match = re.search(r'\d+\.\d+', price_value)
-
-            if price_match:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_match.group()))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("The CYgar shop")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        element_name = soup.find_all('div',{"class":"hM4gpp"})
+        price_ = element_name[0].text.replace('€','').replace('Price','')
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("The CYgar shop")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_the_royal_cigars(u):
     
