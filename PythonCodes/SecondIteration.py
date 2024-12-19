@@ -27,10 +27,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-
-#df = pd.read_csv("Datasets/Raw-Data.csv")
 df = pd.read_csv("Datasets/Raw-Data-24q4.csv")
-
+#df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
 # Create a null data frame
@@ -39,9 +37,9 @@ list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retaile
 
 # Define the web-scraping functions for the target retailers
 
-def results_supermarketcy(urls):
+def results_supermarketcy(u):
     
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs,{'headers':header})
@@ -53,7 +51,7 @@ def results_supermarketcy(urls):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
@@ -69,7 +67,7 @@ def results_supermarketcy(urls):
         list_["Name"] =list_["Name"].apply(lambda x:x)
 
 '''
-def results_alphamega(urls):
+def results_alphamega(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -106,7 +104,7 @@ def results_alphamega(urls):
         list_["Name"] = list_["Name"].apply(lambda x:x)   
 '''
 
-def results_fuelDaddy(urls):
+def results_fuelDaddy(u):
     
     new_row=[]
     price_list=[]
@@ -2407,9 +2405,8 @@ def stock_center_results(u):
 
 def results_cheapbasket(u):
     
-    url="https://cheapbasket.com.cy/product/"+Item_url_
+    url = "https://cheapbasket.com.cy/product/" + Item_url_
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -2430,11 +2427,11 @@ def results_cheapbasket(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
         else:
-            element_=soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
-            element_price=element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
-            price_=element_price[0].text.replace("€","").replace(" ","").replace(",",".")
+            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
+            element_price = element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
+            price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
+            
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -2446,7 +2443,7 @@ def results_cheapbasket(u):
 
 def results_opacy(u):
     
-    url_="https://opa.cy/product/" + Item_url_
+    url_ = "https://opa.cy/product/" + Item_url_
     response = requests.get(url_)
     
     if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
@@ -2459,8 +2456,8 @@ def results_opacy(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.text, 'html.parser')
-        element_=soup.find_all("span",{"class":"product-span price"})
-        price_=element_[0].text.replace("Price: €","")
+        element_ = soup.find_all("span",{"class":"product-span price"})
+        price_ = element_[0].text.replace("Price: €","")
         
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
