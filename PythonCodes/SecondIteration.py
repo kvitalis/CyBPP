@@ -2969,10 +2969,10 @@ list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 ###########################################################################################################################
-# Black Friday Offers 
+# Christmas Offers 
 ###########################################################################################################################
 
-#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/online-prosfora-kinitis-black-friday-en) 
+#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/giga-unlimited-xmas24-en) 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
