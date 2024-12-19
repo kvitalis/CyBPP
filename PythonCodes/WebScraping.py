@@ -39,7 +39,7 @@ list_ = pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retai
 
 # Define the functions for the web-scraping of the target retailers
 
-def results_supermarketcy(urls):
+def results_supermarketcy(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
@@ -69,7 +69,7 @@ def results_supermarketcy(urls):
         list_["Name"] = list_["Name"].apply(lambda x:x)
 
 '''
-def results_alphamega(urls):
+def results_alphamega(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -106,7 +106,7 @@ def results_alphamega(urls):
         list_["Name"] = list_["Name"].apply(lambda x:x)   
 '''
 
-def results_fuelDaddy(urls):
+def results_fuelDaddy(u):
     
     new_row=[]
     price_list=[]
