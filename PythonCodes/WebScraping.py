@@ -2532,107 +2532,107 @@ for u in range(0, len(urls)):
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
-        #results_alphamega(u)
+        #results_alphamega(u)    
+    #elif retailer_=="Cheap Basket":
+        #results_cheapbasket(u)
+    #elif retailer_=="Opa":
+        #results_opacy(u)    
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
+    elif retailer_=="Costas Theodorou":
+        results_costastheodorou(u)
+    elif retailer_=="Parga":
+        results_parga(u)    
+    elif retailer_=="leroymerlin":
+        results_leroymerlin(u)   
     #elif retailer_=="IKEA":
         #results_IKEA(u)
     #elif retailer_=="Stephanis":
         #results_stephanis(u)
+    elif retailer_=="Electroline":
+        results_electroline(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
+    elif retailer_=="Cablenet":
+        results_cablenet(u)  
+    elif retailer_=="Primetel":
+        results_primetel(u)    
     #elif retailer_=="Epic":
         #results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
-    elif retailer_=="AWOL":
-        results_AWOL(u)
-    elif retailer_=="Alter Vape":
-        results_alter_Vape(u)
+    elif retailer_=="FamousSports":
+        results_famoussport(u) 
+    elif retailer_=="Marks&Spencer":
+        results_Marks_Spencer(u)    
     elif retailer_=="Bwell Pharmacy":
         results_bwell_pharmacy(u)
-    elif retailer_=="Cablenet":
-        results_cablenet(u)
+    elif retailer_=="Novella":
+        results_novella(u) 
+    elif retailer_=="Evdokia Jewellery":
+        results_evdokia(u)
+     elif retailer_=="LensesCY":
+        results_lensescy(u)    
+    elif retailer_=="Centroptical":
+        results_centroptical(u)
+    elif retailer_=="Premier Laundry":
+        results_premier(u)
+    elif retailer_=="Music Avenue":
+        results_musicavenue(u)    
+    elif retailer_=="Rio Cinema":
+        results_rio(u)    
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
         results_CyMinistryEducation(u)
+    elif retailer_=="European University Cyprus":
+        results_europeanuniversitycyprus(u)    
     elif retailer_=="Cyprus Post":
         results_CyPost(u)
-    elif retailer_=="E-wholesale":
-        results_ewholesale(u)
-    elif retailer_=="Electroline":
-        results_electroline(u)
-    elif retailer_=="European University Cyprus":
-        results_europeanuniversitycyprus(u)
-    elif retailer_=="FamousSports":
-        results_famoussport(u)
-    elif retailer_=="Marks&Spencer":
-        results_Marks_Spencer(u)
-    elif retailer_=="MotoRace":
-        results_moto_race(u)
-    elif retailer_=="Nissan":
-        results_nissan(u)
-    elif retailer_=="Novella":
-        results_novella(u)
-    elif retailer_=="NUMBEO":
-        results_numbeo(u)
-    elif retailer_=="Primetel":
-        results_primetel(u)
-    elif retailer_=="Rio Cinema":
-        results_rio(u)
     elif retailer_=="AHK":
         results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
         results_water(u)
+    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
+        results_sewerage(u)    
+    elif retailer_=="MotoRace":
+        results_moto_race(u)
+    elif retailer_=="AWOL":
+        results_AWOL(u)    
+    elif retailer_=="Toyota":
+        results_toyota(u)    
+    elif retailer_=="Nissan":
+        results_nissan(u)
+     elif retailer_=="Stock Center":
+        stock_center_results(u)    
+    elif retailer_=="Alter Vape":
+        results_alter_Vape(u)    
+    elif retailer_=="The CYgar shop":
+        results_CYgar_shop(u)
+    elif retailer_=="The royal cigars":
+        results_the_royal_cigars(u)  
+     elif retailer_=="E-wholesale":
+        results_ewholesale(u)    
+    elif retailer_=="NUMBEO":
+        results_numbeo(u)
     elif retailer_=="Wolt":
         results_wolt(u)
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
     #elif retailer_=="Meze Tavern":
-        #results_meze(u)
-    elif retailer_=="The CYgar shop":
-        results_CYgar_shop(u)
-    elif retailer_=="The royal cigars":
-        results_the_royal_cigars(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
-        results_sewerage(u)
+        #results_meze(u)    
     elif retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="Toyota":
-        results_toyota(u)
     elif retailer_=="Ithaki":
         results_ithaki(u)
     elif retailer_=="Flames":
         results_flames(u)
-    elif retailer_=="LensesCY":
-        results_lensescy(u)
     elif retailer_=="Intercity Buses":
         results_intercity(u)  
-    elif retailer_=="Parga":
-        results_parga(u)
-    elif retailer_=="Evdokia Jewellery":
-        results_evdokia(u)
-    elif retailer_=="Centroptical":
-        results_centroptical(u)
-    elif retailer_=="Premier Laundry":
-        results_premier(u)
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
-    elif retailer_=="Music Avenue":
-        results_musicavenue(u)
     elif retailer_=="Max 7 Taxi":
-        results_max_7_tax(u)
-    elif retailer_=="leroymerlin":
-        results_leroymerlin(u)
-    elif retailer_=="Costas Theodorou":
-        results_costastheodorou(u)
-    elif retailer_=="Stock Center":
-        stock_center_results(u)
-    elif retailer_=="Cheap Basket":
-        results_cheapbasket(u)
-    elif retailer_=="Opa":
-        results_opacy(u)
+        results_max_7_tax(u)    
 
 # Change the type as float
 list_["Price"].astype(float)
