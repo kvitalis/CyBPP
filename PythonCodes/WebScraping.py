@@ -2438,9 +2438,8 @@ def stock_center_results(u):
 
 def results_cheapbasket(u):
     
-    url="https://cheapbasket.com.cy/product/"+Item_url_
+    url = "https://cheapbasket.com.cy/product/" + Item_url_
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -2449,7 +2448,7 @@ def results_cheapbasket(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -2460,12 +2459,11 @@ def results_cheapbasket(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         else:
-            element_=soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
-            element_price=element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
-            price_=element_price[0].text.replace("€","").replace(" ","").replace(",",".")
+            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
+            element_price = element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
+            price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -2477,7 +2475,7 @@ def results_cheapbasket(u):
 
 def results_opacy(u):
     
-    url_="https://opa.cy/product/" + Item_url_
+    url_ = "https://opa.cy/product/" + Item_url_
     response = requests.get(url_)
     
     if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
@@ -2487,11 +2485,11 @@ def results_opacy(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.text, 'html.parser')
-        element_=soup.find_all("span",{"class":"product-span price"})
-        price_=element_[0].text.replace("Price: €","")
+        element_ = soup.find_all("span",{"class":"product-span price"})
+        price_ = element_[0].text.replace("Price: €","")
         
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2537,8 +2535,8 @@ for u in range(0, len(urls)):
         #results_alphamega(u)
     elif retailer_=="Fuel Daddy":
         results_fuelDaddy(u)
-    elif retailer_=="IKEA":
-        results_IKEA(u)
+    #elif retailer_=="IKEA":
+        #results_IKEA(u)
     #elif retailer_=="Stephanis":
         #results_stephanis(u)
     elif retailer_=="CYTA":
@@ -2631,10 +2629,10 @@ for u in range(0, len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)
-    #elif retailer_=="Cheap Basket":
-        #results_cheapbasket(u)
-    #elif retailer_=="Opa":
-        #results_opacy(u)
+    elif retailer_=="Cheap Basket":
+        results_cheapbasket(u)
+    elif retailer_=="Opa":
+        results_opacy(u)
 
 # Change the type as float
 list_["Price"].astype(float)
