@@ -38,4 +38,4 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "e-kalathi scraping completed"
-          git push origin H
+          git push origin HEAD:main
