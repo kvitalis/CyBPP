@@ -2571,7 +2571,7 @@ for u in range(0, len(urls)):
         results_novella(u) 
     elif retailer_=="Evdokia Jewellery":
         results_evdokia(u)
-     elif retailer_=="LensesCY":
+    elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
         results_centroptical(u)
@@ -2603,7 +2603,7 @@ for u in range(0, len(urls)):
         results_toyota(u)    
     elif retailer_=="Nissan":
         results_nissan(u)
-     elif retailer_=="Stock Center":
+    elif retailer_=="Stock Center":
         stock_center_results(u)    
     elif retailer_=="Alter Vape":
         results_alter_Vape(u)    
@@ -2611,7 +2611,7 @@ for u in range(0, len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)  
-     elif retailer_=="E-wholesale":
+    elif retailer_=="E-wholesale":
         results_ewholesale(u)    
     elif retailer_=="NUMBEO":
         results_numbeo(u)
