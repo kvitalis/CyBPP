@@ -33,8 +33,8 @@ df = pd.read_csv("Datasets/Raw-Data-24q4.csv")
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
 # Create a null data frame
-daily_errors=pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
-list_=pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retailer"])
+daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
+list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Retailer"])
 
 # Define the web-scraping functions for the target retailers
 
