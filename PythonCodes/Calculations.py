@@ -14,13 +14,16 @@ today = datetime.today().strftime("%Y-%m-%d")
 
 #Read necessary data 
 
-#raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-
 raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) #concatenate/combine by rows the quarterly subsets into a full raw data set
+#raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
-# Exclude the data of the following retailers:
+# Concatenate/combine by rows the quarterly subsets into a full raw data set
+raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) 
+#raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1], axis=0) 
+#raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+
+# Exclude the data of the following retailers
 #raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))]  
 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
@@ -285,14 +288,17 @@ while today_p <= end_date:
     print(today_f)
     
     #Read necessary data 
-    
-    #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    
+        
     raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-24q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-24q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data = pd.concat([raw_data_24q3, raw_data_24q4], axis=0) #concatenate/combine by rows the quarterly subsets into a full raw data set
-    
-    raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] #exclude these retailers' data 
+    raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+
+    # Concatenate/combine by rows the quarterly subsets into a full raw data set
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1], axis=0) 
+    #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+
+    #Exclude the data of the following retailers: 
+    #raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] 
     
     df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
     df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
