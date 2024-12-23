@@ -61,6 +61,10 @@ Rocky Patel Tubo Sampler 6 Cig.,Cigars,https://fetch.com.cy/shop/stores/Nicosia/
 Perdomo 10Th Anniversary Maduro Super Toro,Cigars,https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/511874/Perdomo%2010th%20Anniversary%20MADURO%20Super%20Toro,ALCOHOLIC BEVERAGES AND TOBACCO,The royal cigars
 Carrillo Interlude Rothchild Jr. Maduro Natural,Cigars,https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/280001/CARRILLO%20INTERLUDE%20ROTHCHILD%20JR%20MADURO%20NATURAL,ALCOHOLIC BEVERAGES AND TOBACCO,The royal cigars
 Marlboro 20 Pack,Cigarettes,https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR,ALCOHOLIC BEVERAGES AND TOBACCO,NUMBEO
+Κλήσεις προς σταθερό,Wired telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
+Κλήσεις προς κινητό,Wireless telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
+MobileInternetHome1,Internet access provision services,https://www.cyta.com.cy/mobile-internet,COMMUNICATION,CYTA
+FREEDOM,Bundled telecommunication services,https://www.cyta.com.cy/freedom-plans,COMMUNICATION,CYTA
 To fixed telephony lines of other providers,Wired telephone services,https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony,COMMUNICATION,Epic
 To mobile telephony lines of other providers,Wireless telephone services,https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony,COMMUNICATION,Epic
 5G Unlimited Max Plus,Bundled telecommunication services,https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans,COMMUNICATION,Epic
@@ -68,6 +72,18 @@ To mobile telephony lines of other providers,Wireless telephone services,https:/
 Internet and Telephony 10,Internet access provision services,https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony,COMMUNICATION,Epic
 Internet and Telephony 20,Internet access provision services,https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony,COMMUNICATION,Epic
 Internet and Telephony 50,Internet access provision services,https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony,COMMUNICATION,Epic
+HomeFiber 60 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
+HomeFiber 150 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
+HomeFiber 100 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
+GIGA Unlimited,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
+GIGA Unlimited Plus,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
+GIGA Unlimited MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
+Calls to other providers landline,Wired telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
+Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
+Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
+Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
+PurpleInternet,Internet access provision services,https://cablenet.com.cy/internet/purple-internet/,COMMUNICATION,Cablenet
+PurpleMaxMobile,Bundled telecommunication services,https://cablenet.com.cy/mobile/purple-max-mobile/,COMMUNICATION,Cablenet
 PETROLINA (HOLDINGS) PUBLIC LIMITED 23831601,,petrolina-holdings-public-limited-49?ref=maptile,,Fuel Daddy
 ΑΔΕΛΦΟΙ ΑΡΤΥΜΑΤΑ (ΠΡΩΤΑΡΑΣ) ΛΙΜΙΤΕΔ - 23814200,,adelfoi-artymata-protaras-limited-1?ref=maptile,,Fuel Daddy
 PETROLINA (HOLDINGS) PUBLIC LIMITED,,petrolina-holdings-public-limited-45?ref=maptile,,Fuel Daddy
@@ -889,10 +905,6 @@ Fishing Tool Set 70pcs HI 66258,Equipment for sport,/products/gaming/fun-and-sma
 Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,/products/gaming/fun-and-smart-games/outdoor-games-toys/356079,RECREATION AND CULTURE,Stephanis
 Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,/products/small-appliances/kitchen-household/kettles/368537,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,/products/small-appliances/kitchen-household/blenders/382286,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-Κλήσεις προς σταθερό,Wired telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
-Κλήσεις προς κινητό,Wireless telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
-MobileInternetHome1,Internet access provision services,https://www.cyta.com.cy/mobile-internet,COMMUNICATION,CYTA
-FREEDOM,Bundled telecommunication services,https://www.cyta.com.cy/freedom-plans,COMMUNICATION,CYTA
 "PUMA ESSENTIALS 10"" MENS SHORTS",Garments for men,/product_details.php?pid=111601&type=groups,CLOTHING AND FOOTWEAR,Athlokinisi
 ADIDAS SHORTS,Garments for men,/product_details.php?pid=183132&type=groups,CLOTHING AND FOOTWEAR,Athlokinisi
 NORTH FACE MENS,Garments for men,/product_details.php?pid=171131&type=groups,CLOTHING AND FOOTWEAR,Athlokinisi
@@ -944,10 +956,6 @@ On Call Plus II Blood Glucose Meter + 50 test strips,Other medical products n.e.
 Flaem RespirAir nebulizer,Other therapeutic appliances and equipment,health-and-home/medical-devices/flaem-respirair-nebulizer/,HEALTH,Bwell Pharmacy
 Gamma Nemo nebulizer,Other therapeutic appliances and equipment,health-and-home/medical-devices/gamma-nemo-nebulizer/,HEALTH,Bwell Pharmacy
 dr Frei Turbo Car Nebulizer System,Other therapeutic appliances and equipment,health-and-home/medical-devices/dr-frei-turbo-car-nebulizer-system/,HEALTH,Bwell Pharmacy
-Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
-Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
-PurpleInternet,Internet access provision services,https://cablenet.com.cy/internet/purple-internet/,COMMUNICATION,Cablenet
-PurpleMaxMobile,Bundled telecommunication services,https://cablenet.com.cy/mobile/purple-max-mobile/,COMMUNICATION,Cablenet
 "THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",Pre-primary education (ISCED-97 level 0),didaktra_idiotikon_nipiagogeion.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 "THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",Primary education (ISCED-97 level 1),didaktra_idiotikon_dimotikon_scholeion.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 "THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,didaktra_idiotikon_mesi_ekpaidefsi.pdf,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
@@ -1050,14 +1058,6 @@ KTM 50 SX FACTORY EDITION 2023,Motor cycles,/ktm-50-sx-factory-edition-2023.html
 KTM RC 125 Black 2024,Motor cycles,/ktm-rc-125-black-2024.html,TRANSPORT,MotoRace
 "Women's Services, HAIRCUT Stylist",Hairdressing for women,https://novella.com.cy/#services,MISCELLANEOUS GOODS AND SERVICES,Novella
 "Men's Services, HAIRCUT Stylist",Hairdressing for men and children,https://novella.com.cy/#services,MISCELLANEOUS GOODS AND SERVICES,Novella
-HomeFiber 60 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
-HomeFiber 150 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
-HomeFiber 100 MBPS,Internet access provision services,https://primetel.com.cy/home-fiber-plans-en,COMMUNICATION,Primetel
-GIGA Unlimited,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
-GIGA Unlimited Plus,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
-GIGA Unlimited MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
-Calls to other providers landline,Wired telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
-Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
 Adults,"Cinemas, theatres, concerts",https://www.riopremiercinemas.com.cy/price-policy/,RECREATION AND CULTURE,Rio Cinema
 Children,"Cinemas, theatres, concerts",https://www.riopremiercinemas.com.cy/price-policy/,RECREATION AND CULTURE,Rio Cinema
 Senior 64,"Cinemas, theatres, concerts",https://www.riopremiercinemas.com.cy/price-policy/,RECREATION AND CULTURE,Rio Cinema
