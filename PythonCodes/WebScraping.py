@@ -364,6 +364,107 @@ def results_epic(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    soup = BeautifulSoup(response.content,"html.parser")
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        if name_ == "5G Unlimited Max Plus":
+            element_ = soup.find_all("div",{"class":"price"})
+            price_ = element_[0].text.replace("€","")
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        if name_ == "5G Unlimited Max":
+            element_ = soup.find_all("div",{"class":"price"})
+            price_ = element_[1].text.replace("€","")
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)  
+        if name_ == "To fixed telephony lines of other providers":
+            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            price_ = element_[0].find_all("td")[2].text.replace('€','')
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)      
+        if name_ == "To mobile telephony lines of other providers":
+            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            price_ = element_[0].find_all("td")[3].text.replace('€','')
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)  
+        if name_ == "Internet and Telephony 10":
+            element_ = soup.find_all("div",{"class":"price"})
+            price_ = element_[0].text.replace('€','')
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        if name_ == "Internet and Telephony 20":
+            element_ = soup.find_all("div",{"class":"price"})
+            price_ = element_[2].text.replace('€','')
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)    
+        if name_ == "Internet and Telephony 50":
+            element_ = soup.find_all("div",{"class":"price"})
+            price_ = element_[6].text.replace('€','')
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Epic")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)  
+
+'''
+def results_epic(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if (response.status_code==200):
@@ -452,22 +553,23 @@ def results_epic(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+'''
 
 def results_Athlokinisi(u):
     
-    url="https://athlokinisi.com.cy"+Item_url_
+    url = "https://athlokinisi.com.cy" + Item_url_
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    if (response.status_code !=200):
+    if (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("span",{"class":"ammount"})
@@ -479,7 +581,7 @@ def results_Athlokinisi(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
         else:
             price_=float(element_soup[0].text.strip().replace("€",""))
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
