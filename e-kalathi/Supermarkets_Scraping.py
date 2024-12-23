@@ -195,7 +195,7 @@ def results_epic(u):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
-        website_false.append(commodity_)
+        website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
@@ -208,7 +208,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -220,7 +220,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
@@ -232,7 +232,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)      
@@ -244,7 +244,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
@@ -256,7 +256,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
@@ -268,7 +268,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)    
@@ -280,7 +280,7 @@ def results_epic(u):
             new_row.append(name_)
             new_row.append(float(price_))
             new_row.append(subclass_)
-            new_row.append(commodity_)
+            new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
