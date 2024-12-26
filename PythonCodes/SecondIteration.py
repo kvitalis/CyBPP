@@ -27,8 +27,7 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("Datasets/Raw-Data-24q4.csv")
-#df = pd.read_csv("Datasets/Raw-Data-2025Q1.csv")
+df = pd.read_csv("Datasets/Raw-Data-2025Q1.csv")
 #df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Daily-Scraping-Errors.csv")
 
@@ -3114,9 +3113,8 @@ list_["Price"].astype(float)
 # Export/Save the scraped data
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
+combined_df.to_csv("Datasets/Raw-Data-2025Q1.csv", index=False, header=True)
 #combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
-combined_df.to_csv("Datasets/Raw-Data-24q4.csv", index=False, header=True)
-#combined_df.to_csv("Datasets/Raw-Data-2025Q1.csv", index=False, header=True)
 
 monthly_errors=pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"]=datetime.now().strftime('%Y-%m-%d')
