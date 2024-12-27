@@ -4,7 +4,7 @@
 name: supermarkets-scraping
 
 # Workflow's description
-run-name: e-kalathi-scraping 
+run-name: e-kalathi scraping 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
