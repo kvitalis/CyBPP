@@ -4469,7 +4469,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-12-29,6 x Instaflow 5000+ ρουφηξιές / puffs TPD Ηλεκτρονικά Τσιγάρα μίας χρήσης,Other tobacco products,49.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
 2024-12-29,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
 2024-12-29,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2024-12-29,Machetero Petit Corona,Cigars,3.20,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2024-12-29,Machetero Petit Corona,Cigars,3.2,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
 2024-12-29,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2024-12-29,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2024-12-29,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
@@ -6264,16 +6264,16 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-12-29,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
 2024-12-29,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-12-29,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0305,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2024-12-29,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.006500000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2024-12-29,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.0065,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-12-29,Κόστος Προμήθειας,Electricity,6.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2024-12-29,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
 2024-12-29,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-12-29,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-12-29,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-12-29,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-12-29,Κυβικά ανά μήνα - Nicosia,Water supply,1.00,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-12-29,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-12-29,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-12-29,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2024-12-29,Κυβικά ανά μήνα - Limassol,Water supply,0.90,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-12-29,Κυβικά ανά μήνα - Limassol,Water supply,0.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2024-12-29,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.45,RESTAURANTS AND HOTELS,Wolt
 2024-12-29,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.5,RESTAURANTS AND HOTELS,Wolt
 2024-12-29,Costa Coffee Freddo Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.3,RESTAURANTS AND HOTELS,Wolt
@@ -6389,3 +6389,11 @@ Date,Name,Subclass,Price,Division,Retailer
 2024-12-29,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
 2024-12-29,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
 2024-12-29,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
+2024-12-29,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2024-12-29,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-12-29,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2024-12-29,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",22.0,RESTAURANTS AND HOTELS,Meze Tavern
+2024-12-29,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",25.0,RESTAURANTS AND HOTELS,Meze Tavern
+2024-12-29,GIGA Unlimited,Bundled telecommunication services,14.99,COMMUNICATION,Primetel
+2024-12-29,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2024-12-29,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
