@@ -184,7 +184,35 @@ def results_opacy(u):
             new_row.append("Opa")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
-         
+
+def results_metro(u):
+    
+    url = "https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" + Item_url_
+    response = requests.get(url)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        element_ = soup.find_all("span", {"data-test-id":"product-modal.price"})
+        price_ = element_[0].text.replace('€','')
+        print(price_)
+            
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("METRO")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)            
+
 #Initialization of the scraping/processing time
 start_time = time.time()
 
@@ -211,7 +239,9 @@ for u in range(0, len(urls)):
     elif retailer_ == "Cheap Basket":
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
-        results_opacy(u)     
+        results_opacy(u)
+    elif retailer_ == "METRO":
+        results_metro(u)    
     
 # Change the type as float
 list_["Price"].astype(float)
