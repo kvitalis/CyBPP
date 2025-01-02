@@ -275,7 +275,7 @@ else:
 '''  
 
 ########################################################################################################################################################################################
-# If you want to recalculate everything from the beginning (reference date), then run the following while loop :
+# If you want to recalculate everything between two specific dates, then run the following while loop :
 ########################################################################################################################################################################################
 
 start_date = datetime.strptime("2024-12-21", "%Y-%m-%d")
