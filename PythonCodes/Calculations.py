@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
+'''
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-01-01'
 
@@ -271,13 +272,14 @@ if is_last_thursday(current_date_str):
     df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
-  
+'''  
+
 ########################################################################################################################################################################################
 # If you want to recalculate everything from the beginning (reference date), then run the following while loop :
 ########################################################################################################################################################################################
-'''
-start_date = datetime.strptime("2024-09-23", "%Y-%m-%d")
-end_date = datetime.strptime("2024-09-30", "%Y-%m-%d")
+
+start_date = datetime.strptime("2024-12-21", "%Y-%m-%d")
+end_date = datetime.strptime("2025-01-01", "%Y-%m-%d")
 
 today_p = start_date
 
@@ -313,9 +315,9 @@ while today_p <= end_date:
     group.reset_index(inplace=True)
     group_df = pd.DataFrame(group)
     
-    group_df = group_df[group_df["Subclass"] != "Electricity"] #dont take into account the electricity subclass
-    group_df = group_df[group_df["Subclass"] != "Water supply"] #dont take into account the Water supply subclass
-    group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into account the Sewage Collection subclass
+    group_df = group_df[group_df["Subclass"] != "Electricity"] #don't take into account the Electricity subclass
+    group_df = group_df[group_df["Subclass"] != "Water supply"] #don't take into account the Water supply subclass
+    group_df = group_df[group_df["Subclass"] != "Sewage collection"] #don't take into account the Sewage collection subclass
     group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
     
     #Electricity
@@ -469,7 +471,7 @@ while today_p <= end_date:
         float_index_list = [int(i) for i in index_list]
         df_daily_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
     
-    df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv",index=False)
+    df_daily_cpi_division.to_csv("Results/Daily-CPI-Division.csv", index=False)
     
     # Daily-CPI-Subclass-Division.csv file
     df_daily_cpi_subclass_division = pd.read_csv("Results/Daily-CPI-Subclass-Division.csv")
@@ -478,8 +480,8 @@ while today_p <= end_date:
     unique_divisions = current_df['Subclass'].unique()
     
     for unique_ in unique_divisions:
-        df_15 = float(prior_df[prior_df["Subclass"]==unique_]["CPI Division"])
-        df_16 = float(current_df[current_df["Subclass"]==unique_]["CPI Division"])
+        df_15 = float(prior_df[prior_df["Subclass"] == unique_]["CPI Division"])
+        df_16 = float(current_df[current_df["Subclass"] == unique_]["CPI Division"])
         percentage_change = 100 * (df_16 - df_15) / df_15            
         
         index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
@@ -493,13 +495,13 @@ while today_p <= end_date:
     #========================================================================================================================
     
     # Read important files
-    today_date=datetime.strptime(today_f, "%Y-%m-%d")
+    today_date = datetime.strptime(today_f, "%Y-%m-%d")
     current_date = today_date.strftime("%Y-%m-%d")
     
     # Read important files
-    df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-    df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
-    df_daily_general=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+    df_monthly_general = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    df_monthly_division = pd.read_csv("Results/Monthly-CPI-Division.csv")
+    df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
     
     # Function for the calculations to be performed every last Thursday per month
     def is_last_thursday(date):
@@ -515,27 +517,27 @@ while today_p <= end_date:
         
         # Monthly CPI per Division
         df_5b = df_5[["Division","CPI Division"]]
-        df_5b["Date"]=current_date
+        df_5b["Date"] = current_date
         df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index=True)
         df_monthly_division = df_monthly_division.sort_values(by ='Date')
         cols = list(df_monthly_division.columns)
         cols.insert(0, cols.pop(cols.index('Date')))
         df_monthly_division = df_monthly_division[cols]
     
-        prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
-        current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
+        prior_df = df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
+        current_df = df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
         unique_divisions = df_monthly_division['Division'].unique()
         
         for unique_ in unique_divisions:
-            df_17 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
-            df_18 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
+            df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
+            df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
             percentage_change = 100 * (df_18 - df_17) / df_17
         
             index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
             float_index_list = [int(i) for i in index_list]
             df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
     
-        df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
+        df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv", index=False)
     
         # Monthly CPI General Inflation
         df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
@@ -547,4 +549,3 @@ while today_p <= end_date:
     today_p += timedelta(days=1)
 
 ####################################################    End of the while loop    ################################################################################################################    
-'''
