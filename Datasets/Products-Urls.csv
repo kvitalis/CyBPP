@@ -372,13 +372,13 @@ SONSIRE HOLDINGS LTD,,sonsire-holdings-ltd-4?ref=maptile,,Fuel Daddy
 G.M. (LEONTIOS) LIMITED,,gm-leontios-limited-1?ref=maptile,,Fuel Daddy
 Eleni Savva,,eleni-savva-1?ref=maptile,,Fuel Daddy
 Yiannakis Aspri & Sons Ltd,,yiannakis-aspri-sons-ltd-1?ref=maptile,,Fuel Daddy
-LEFKIOS NICOLAOU ENTERPRISES LIMITED,,petrolina-holdings-public-limited-78?ref=maptile,,Fuel Daddy
-DOUBLE N. GAS STATION LIMITED,,di-forces-trading-ltd-1?ref=maptile,,Fuel Daddy
-"SOFT ""N"" FOAMY CAR WASH LIMITED",,demetris-xandris-developments-ltd-1?ref=maptile,,Fuel Daddy
-STAROIL (CYPRUS) LTD,,petrolina-holdings-public-limited-56?ref=maptile,,Fuel Daddy
-I.G. MAKRIS ENTERPRISES LTD,,staroil-cyprus-ltd-15?ref=maptile,,Fuel Daddy
-ANGIO TRADING LIMITED,,ram-oil-cyprus-limited-57?ref=maptile,,Fuel Daddy
-ΑΔΕΛΦΟΙ Π & Π ΧΡΙΣΤΟΔΟΥΛΟΥ ΛΙΜΙΤΕΔ,,petrolina-holdings-public-limited-82?ref=maptile,,Fuel Daddy
+LEFKIOS NICOLAOU ENTERPRISES LIMITED,,petrolina-holdings-public-limited-78?ref=maptile,,
+DOUBLE N. GAS STATION LIMITED,,di-forces-trading-ltd-1?ref=maptile,,
+"SOFT ""N"" FOAMY CAR WASH LIMITED",,demetris-xandris-developments-ltd-1?ref=maptile,,
+STAROIL (CYPRUS) LTD,,petrolina-holdings-public-limited-56?ref=maptile,,
+I.G. MAKRIS ENTERPRISES LTD,,staroil-cyprus-ltd-15?ref=maptile,,
+ANGIO TRADING LIMITED,,ram-oil-cyprus-limited-57?ref=maptile,,
+ΑΔΕΛΦΟΙ Π & Π ΧΡΙΣΤΟΔΟΥΛΟΥ ΛΙΜΙΤΕΔ,,petrolina-holdings-public-limited-82?ref=maptile,,
 ΣίφουναςΟλικήςΨωμίΚομμένο780g,Bread,sifounas-olikis-psomi-kommeno-780g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g,Bread,sifounas-mavro-mikro-psomi-kommeno-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςΚοινόΨωμίΚομμένο560g,Bread,sifounas-koino-psomi-kommeno-560g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -835,6 +835,7 @@ Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",/pro
 Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",/products/366721,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",/products/387598,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",/products/white-goods/washing-and-drying/freestanding-dishwashers/370038,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",/products/home-appliances/washing-and-drying/tumble-dryer/389077,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,/products/389407,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Microwave oven Turntable MATESTAR MM-720CW white,Cookers,/products/white-goods/cooking-and-baking/microwaves/356917,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",/products/home-appliances/cooling-and-heating/air-conditioners/355452,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
@@ -897,7 +898,6 @@ Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,/products/home-applian
 Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",/products/sound-and-vision/action-cameras-and-accessories/action-cameras/363277,RECREATION AND CULTURE,Stephanis
 Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",/products/sound-and-vision/action-cameras-and-accessories/action-cameras/366541,RECREATION AND CULTURE,Stephanis
 Kitchen machine BOSCH MCM3200W white,Food processing appliances,/products/home-appliances/mixers/mixers-kitchen-machines/333439,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",/products/home-appliances/washing-and-drying/tumble-dryer/389077,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 Fishing Tool Set 70pcs HI 66258,Equipment for sport,/products/gaming/fun-and-smart-games/outdoor-games-toys/395806,RECREATION AND CULTURE,Stephanis
 Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,/products/gaming/fun-and-smart-games/outdoor-games-toys/356079,RECREATION AND CULTURE,Stephanis
 Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,/products/small-appliances/kitchen-household/kettles/368537,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
