@@ -2667,8 +2667,8 @@ for u in range(0, len(urls)):
         results_Marks_Spencer(u)    
     elif retailer_=="Bwell Pharmacy":
         results_bwell_pharmacy(u)
-    elif retailer_=="Novella":
-        results_novella(u) 
+    #elif retailer_=="Novella":
+        #results_novella(u) 
     elif retailer_=="Evdokia Jewellery":
         results_evdokia(u)
     elif retailer_=="LensesCY":
