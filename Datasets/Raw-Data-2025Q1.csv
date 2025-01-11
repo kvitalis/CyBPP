@@ -31092,7 +31092,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-01-11,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
 2025-01-11,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
 2025-01-11,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-01-11,Machetero Petit Corona,Cigars,3.20,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2025-01-11,Machetero Petit Corona,Cigars,3.2,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
 2025-01-11,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2025-01-11,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2025-01-11,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
@@ -33101,16 +33101,16 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-01-11,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
 2025-01-11,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2025-01-11,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0305,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2025-01-11,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.006500000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-01-11,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.0065,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2025-01-11,Κόστος Προμήθειας,Electricity,6.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2025-01-11,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
 2025-01-11,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-01-11,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-01-11,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-01-11,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-01-11,Κυβικά ανά μήνα - Nicosia,Water supply,1.00,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-01-11,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-01-11,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-01-11,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-01-11,Κυβικά ανά μήνα - Limassol,Water supply,0.90,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-01-11,Κυβικά ανά μήνα - Limassol,Water supply,0.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-01-11,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.45,RESTAURANTS AND HOTELS,Wolt
 2025-01-11,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.5,RESTAURANTS AND HOTELS,Wolt
 2025-01-11,Costa Coffee Freddo Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.3,RESTAURANTS AND HOTELS,Wolt
@@ -33222,3 +33222,12 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-01-11,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
 2025-01-11,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
 2025-01-11,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
+2025-01-11,Ψαλίδι essentials 13cm,Other stationery and drawing materials,1.2,RECREATION AND CULTURE,Parga
+2025-01-11,Χάρτινοι φάκελοι αλληλογραφιάς Α4 - 25 τεμάχια,Other stationery and drawing materials,4.4,RECREATION AND CULTURE,Parga
+2025-01-11,Ευριπίδη Ελένη Γ΄ γυμνασίου,Educational text books,15.35,RECREATION AND CULTURE,Parga
+2025-01-11,Νεοελληνική γλώσσα & λογοτεχνία Β’ λυκείου,Educational text books,16.9,RECREATION AND CULTURE,Parga
+2025-01-11,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-01-11,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2025-01-11,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2025-01-11,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",22.0,RESTAURANTS AND HOTELS,Meze Tavern
+2025-01-11,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",25.0,RESTAURANTS AND HOTELS,Meze Tavern
