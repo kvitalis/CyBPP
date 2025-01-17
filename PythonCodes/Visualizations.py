@@ -12,7 +12,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
 for i, txt in enumerate(df_daily['Inflation (%)']):
-    plt.annotate(f'{txt:.3f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('Inflation (%)')
@@ -27,7 +27,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
 for i, txt in enumerate(df_daily['CPI General']):
-    plt.annotate(f'{txt:.3f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('CPI General (27/06/2024 = base)')
@@ -63,7 +63,7 @@ if is_last_thursday(current_date):
     plt.plot(df_monthly['Date'], df_monthly['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
     
     for i, txt in enumerate(df_monthly['Inflation (%)']):
-        plt.annotate(f'{txt:.3f}', (df_monthly['Date'][i], df_monthly['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('Inflation (%)')
@@ -78,7 +78,7 @@ if is_last_thursday(current_date):
     plt.plot(df_monthly['Date'], df_monthly['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
     
     for i, txt in enumerate(df_monthly['CPI General']):
-        plt.annotate(f'{txt:.3f}', (df_monthly['Date'][i], df_monthly['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
     plt.xlabel('Date')
     plt.ylabel('CPI General (27/06/2024 = base)')
