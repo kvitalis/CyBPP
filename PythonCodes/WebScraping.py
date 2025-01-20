@@ -1412,75 +1412,70 @@ def results_CERA(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_water(u):
-    price_=""
     
     if "Nicosia" in retailer_:
+        city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        city_="Nicosia"
-        if name_=="Πάγιο ανά μήνα":
-            element_=soup.find_all("div",{"id":"ekit-table-container-9f0855a_wrapper"})
-            pattern = r"Πάγιο(\d{2},\d{2})"
-            text = element_[0].get_text()
-            match = re.search(pattern, text)
         
+        if name_ == "Πάγιο ανά μήνα":
+            element = soup.find_all("div",{"id":"ekit-table-container-9f0855a_wrapper"})
+            pattern = r"Πάγιο(\d{2},\d{2})"
+            text = element[0].get_text()
+            match = re.search(pattern, text)
             if match:
                 price_ = match.group(1)
-                price_=float((price_).replace(",","."))/2
-                print(price_)
-
-        if name_=="Κυβικά ανά μήνα":
-            element_=soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
-            price_=element_[0].text.replace(",",".")
+                price_ = float((price_).replace(",","."))/2
+        if name_ == "Κυβικά ανά μήνα":
+            element = soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
+            price_ = element[0].text.replace(",",".")
     
     if "Larnaca" in retailer_:
-        city_="Larnaca"
+        city_ = "Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        element_=soup.find_all("table",{"class":"table-format-left"})
-        text_=element_[0].text
+        
+        element = soup.find_all("table",{"class":"table-format-left"})
+        text_ = element[0].text
         element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
         element_2 = re.search(r'Δικαίωμα Συντήρησης(\d+,\d+)',text_)
         element_3 = re.search(r'1Μέχρι15(\d+,\d+)',text_)
         
-        if name_=="Πάγιο ανά μήνα":
+        if name_ == "Πάγιο ανά μήνα":
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
-                price_=float(price_1)/3
-                
-        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
+                price_ = float(price_1)/3
+        if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
-                price_1=element_2.group(1).replace(",",".")
-                price_=float(price_1)/3
-                
-        if name_=="Κυβικά ανά μήνα":
+                price_2 = element_2.group(1).replace(",",".")
+                price_ = float(price_2)/3
+        if name_ == "Κυβικά ανά μήνα":
             if element_3:
-                price_1=element_3.group(1).replace("16","").replace(",",".")
+                price_3 = element_3.group(1).replace(",",".")
+                price_ = round(float(price_3),2)
     
     if "Limassol" in retailer_:
+        city_ = "Limassol"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        city_="Limassol"
         
-        if name_=="Πάγιο ανά μήνα":
-            element_=soup.find_all("div",{"class":"acd-des"})
-            element_1=element_[2].find_all("td")
-            price_=element_1[3].text.replace("\n","").replace(",",".")
-            price_=float(price_)/4
-        
-        if name_=="Δικαίωμα Συντήρησης ανά μήνα":
-            element_=soup.find_all("div",{"class":"acd-des"})
-            element_1=element_[2].find_all("td")
-            price_=element_1[5].text.replace("\n","").replace(",",".")
-            price_=float(price_)/4
-            
-        if name_=="Κυβικά ανά μήνα":
-            element_=soup.find_all("div",{"class":"acd-des"})
-            element_1=element_[2].find_all("td")
-            price_=element_1[11].text.replace("\n","").replace(",",".")
+        if name_ == "Πάγιο ανά μήνα":
+            element = soup.find_all("div",{"class":"acd-des"})
+            element_1 = element[2].find_all("td")
+            price_1 = element_1[3].text.replace("\n","").replace(",",".")
+            price_ = float(price_1)/4
+        if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
+            element = soup.find_all("div",{"class":"acd-des"})
+            element_1 = element[2].find_all("td")
+            price_1 = element_1[5].text.replace("\n","").replace(",",".")
+            price_ = float(price_1)/4
+        if name_ == "Κυβικά ανά μήνα":
+            element = soup.find_all("div",{"class":"acd-des"})
+            element_1 = element[2].find_all("td")
+            price_ = element_1[11].text.replace("\n","").replace(",",".")
     
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1498,10 +1493,11 @@ def results_water(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_wolt(u):
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
     
