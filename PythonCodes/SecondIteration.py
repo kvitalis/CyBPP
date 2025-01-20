@@ -3042,7 +3042,6 @@ new_row.append("Water Board")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Water Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Κυβικά ανά μήνα - Larnaca")
