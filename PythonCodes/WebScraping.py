@@ -1683,7 +1683,7 @@ def results_the_royal_cigars(u):
 
 def results_pydixa(u):
     
-    pdf_pixida = "PDFs/Pixida-Nic-En-Mar2023.pdf"
+    pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
     '''
     response = requests.get(Item_url_)
     if response.status_code!=200:
