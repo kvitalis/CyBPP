@@ -1662,7 +1662,7 @@ def results_pydixa(u):
         f.write(response.content)
     '''
     with pdfplumber.open(pdf_pixida) as pdf:
-        page = pdf.pages[5]  
+        page = pdf.pages[4]  
         text = page.extract_text()
 
     matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
