@@ -163,7 +163,8 @@ def cystat(last_results):
             if match_:
                 values_after_gd = match_.groups(2)
                 division_=values_after_gd[1].replace(",",".")
-         
+       
+        print(division_)
         new_row = []
         correction_day = current_date - timedelta(days=7)
         new_row.append(correction_day.strftime("%Y-%m"))
