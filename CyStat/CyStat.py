@@ -84,7 +84,7 @@ def cystat(last_results):
             for cell in row.cells:
                 doc_text += cell.text + "\t"
             doc_text += "\n"  
-    #print(doc_text)
+    print(doc_text)
     pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
 
