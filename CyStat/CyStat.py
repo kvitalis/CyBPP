@@ -71,13 +71,19 @@ def cystat(last_results):
         if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
             url = i['href']
 
+    if len(current_month)==1:
+        current_month="0"+str(current_month)
+    else:
+        pass
+        
     response = requests.get(url)
+    ####SOS####
+    ####When the year change, also please change manual 2025
     if response.status_code == 200:
-        with open('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
-            print("Yes/Ok")
+        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
             file.write(response.content)
-    
-    doc = Document('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx')
+        
+    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
