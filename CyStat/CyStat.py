@@ -13,15 +13,15 @@ from datetime import date, timedelta , datetime
 def cystat(last_results):
     
     #Read important files
-    general_cpi=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
-    monthly_gen_cpi=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+    general_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
+    monthly_gen_cpi = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
    
     #Main part of the web scraping 
-    url_new="https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
+    url_new = "https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    element_1=soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
+    element_1 = soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
     
     #Calculation of the month
     current_date = datetime.now()
@@ -30,12 +30,12 @@ def cystat(last_results):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
     correction_day = current_date - timedelta(days=7)
     
-    current_month =correction_day.month
+    current_month = correction_day.month
     current_year = correction_day.year
     current_day = correction_day.day
     
     date = datetime(current_year, current_month,current_day)
-    date_=format_date(date, 'MMMM', locale='el')
+    date_ = format_date(date, 'MMMM', locale='el')
 
     #Fix the month
     if (current_month==6) or (current_month==7):
@@ -62,7 +62,7 @@ def cystat(last_results):
         url_href=href
 
     #Main part of the documents
-    url_months="https://www.cystat.gov.cy/el"+url_href
+    url_months = "https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -71,19 +71,19 @@ def cystat(last_results):
         if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
             url = i['href']
 
-    if len(current_month)==1:
+    if len(current_month) == 1:
         current_month="0"+str(current_month)
     else:
         pass
         
     response = requests.get(url)
-    ####SOS####
-    ####When the year change, also please change manual 2025
+    
+    ## *IMPORTANT NOTE* : Remember to change manually the Consumer_Price_Index_year every new year !!!
     if response.status_code == 200:
-        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
+        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'-'+str(current_year)+'.docx', 'wb') as file:
             file.write(response.content)
         
-    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx')
+    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'-'+str(current_year)+'.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
@@ -91,16 +91,17 @@ def cystat(last_results):
                 doc_text += cell.text + "\t"
             doc_text += "\n"  
     #print(doc_text)
+    
     pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
 
     if match:
-        print("perna")
+        print("OK")
         cpi_month = match.groups()
         cpi_month=float(cpi_month[1].replace(",","."))
         cpi_month = round(cpi_month, 2)
         
-        #identified the month CPI General
+        #identify the monthly General CPI
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
@@ -116,7 +117,7 @@ def cystat(last_results):
         correction_day = current_date - timedelta(days=7)
         
         df_new_empty_.loc[0,"Period"] = correction_day.strftime("%Y-%m")
-        df_new_empty_.loc[0,"Official (2015=100)"]= round(float(cpi_month),2)
+        df_new_empty_.loc[0,"Official (2015=100)"] = round(float(cpi_month),2)
         df_new_empty_.loc[0,"Online (27/06/2024=77.89)"] = values_12
         df_new_empty_.loc[0,"Official (27/06/2024=100)"] = round(rebase_offline,2)
         df_new_empty_.loc[0,"Online (27/06/2024=100)"] = round(rebase_online,2)
@@ -127,6 +128,8 @@ def cystat(last_results):
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Official (2015=100)"] - df_tables.loc[len(df_tables)-2,"Official (2015=100)"]) / df_tables.loc[len(df_tables)-2,"Official (2015=100)"],2)
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
+
+    general_cpi.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
     #Offline/Official CPI per Division
     
@@ -166,12 +169,12 @@ def cystat(last_results):
             if match_:
                 print(i)
                 values_after_gd = match_.groups()
-                division_=values_after_gd[1].replace(",",".")
+                division_ = values_after_gd[1].replace(",",".")
         else:
             if match_:
                 print(i)
                 values_after_gd = match_.groups(2)
-                division_=values_after_gd[1].replace(",",".")
+                division_ = values_after_gd[1].replace(",",".")
        
         new_row = []
         correction_day = current_date - timedelta(days=7)
@@ -197,15 +200,15 @@ def cystat(last_results):
         division_cpi.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
     
     #Online CPI per Division
-    daily_cpi_online=pd.read_csv("Results/Daily-CPI-Division.csv")
-    daily_cpi_online=daily_cpi_online[daily_cpi_online["Date"]==correction_day.strftime("%Y-%m-%d")]
+    daily_cpi_online = pd.read_csv("Results/Daily-CPI-Division.csv")
+    daily_cpi_online = daily_cpi_online[daily_cpi_online["Date"] == correction_day.strftime("%Y-%m-%d")]
 
-    unique_values=daily_cpi_online["Division"].unique()
+    unique_values = daily_cpi_online["Division"].unique()
     for i in range(0,len(unique_values)):
-        indices=division_cpi[division_cpi["Division"]==unique_values[i].strip()].index
-        values_1234=daily_cpi_online[daily_cpi_online["Division"]==unique_values[i]]["CPI Division"]
+        indices = division_cpi[division_cpi["Division"] == unique_values[i].strip()].index
+        values_1234 = daily_cpi_online[daily_cpi_online["Division"] == unique_values[i]]["CPI Division"]
         print(values_1234.values[0])
-        division_cpi.loc[indices[-1],"Online CPI"]=values_1234.values[0]
+        division_cpi.loc[indices[-1],"Online CPI"] = values_1234.values[0]
 
     prior_df = division_cpi[len(division_cpi)-24:len(division_cpi)-12]
     current_df = division_cpi[len(division_cpi)-12:len(division_cpi)]
@@ -222,8 +225,8 @@ def cystat(last_results):
 
     division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv",index=False)
 
-    #Construct the plots
-    cystat_gen_cpi=pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
+    #Construct the plots/visualizations
+    cystat_gen_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
     #Plot: Official vs Online General CPI
     plt.figure(figsize=(12, 6))
