@@ -276,7 +276,7 @@ def is_first_thursday(date):
         cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
-        break
+        #break
 
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
