@@ -80,10 +80,10 @@ def cystat(last_results):
     
     ## *IMPORTANT NOTE* : Remember to change manually the Consumer_Price_Index_year every new year !!!
     if response.status_code == 200:
-        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'-'+str(current_year)+'.docx', 'wb') as file:
+        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
             file.write(response.content)
         
-    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'-'+str(current_year)+'.docx')
+    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
@@ -98,7 +98,7 @@ def cystat(last_results):
     if match:
         print("OK")
         cpi_month = match.groups()
-        cpi_month=float(cpi_month[1].replace(",","."))
+        cpi_month = float(cpi_month[1].replace(",","."))
         cpi_month = round(cpi_month, 2)
         
         #identify the monthly General CPI
@@ -129,7 +129,7 @@ def cystat(last_results):
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
-    general_cpi.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
+        #general_cpi.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
     #Offline/Official CPI per Division
     
@@ -276,7 +276,7 @@ def is_first_thursday(date):
         cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
-        #break
+        break
 
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
