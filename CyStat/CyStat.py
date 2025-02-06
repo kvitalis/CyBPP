@@ -61,7 +61,6 @@ def cystat(last_results):
     for href in hrefs:
         url_href=href
 
-    print("1")
     #Main part of the documents
     url_months="https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
@@ -72,7 +71,6 @@ def cystat(last_results):
         if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
             url = i['href']
 
-    print("2")
     response = requests.get(url)
     if response.status_code == 200:
         with open('CyStat/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
