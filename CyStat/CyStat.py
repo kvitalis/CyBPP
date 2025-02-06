@@ -89,6 +89,7 @@ def cystat(last_results):
     match = re.search(pattern, doc_text)
 
     if match:
+        print("perna")
         cpi_month = match.groups()
         cpi_month=float(cpi_month[1].replace(",","."))
         cpi_month = round(cpi_month, 2)
