@@ -84,7 +84,7 @@ def cystat(last_results):
             for cell in row.cells:
                 doc_text += cell.text + "\t"
             doc_text += "\n"  
-    print(doc_text)
+    #print(doc_text)
     pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
 
@@ -157,14 +157,15 @@ def cystat(last_results):
         match_ = re.search(pattern_list[i], doc_text)
         if (i!=4 or i!=7): 
             if match_:
+                print(i)
                 values_after_gd = match_.groups()
                 division_=values_after_gd[1].replace(",",".")
         else:
             if match_:
+                print(i)
                 values_after_gd = match_.groups(2)
                 division_=values_after_gd[1].replace(",",".")
        
-        print(division_)
         new_row = []
         correction_day = current_date - timedelta(days=7)
         new_row.append(correction_day.strftime("%Y-%m"))
