@@ -478,7 +478,7 @@ MelissaΚριθαράκιΧόνδρο500g,Pasta products and couscous,melissa-kr
 ΜιτσίδηΣπαγέττι500g,Pasta products and couscous,mitsidi-spagetti-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜιτσίδηΚριθαράκι500g,Pasta products and couscous,mitsidi-kritharaki-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜιτσίδηΜακαρόνιαΑ500g,Pasta products and couscous,mitsidi-makaronia-a-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΜιτσίδηΧωριάτικαΜακαρόνια500g,Pasta products and couscous,mitsidi-choriatika-makaronia-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+MitsidesWholeWheatMezzaniA500g,Pasta products and couscous,mitsidi-olikis-alesis-makaronia-a-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΘίιαμβοςΣπαγέττο500g,Pasta products and couscous,thiiamvos-spagetto-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 3ΑΡύζιΠάρποιλτ1kg,Rice,bens-original-ryzi-makrykokko-10-lepta-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg,Rice,bens-original-ryzi-makrykokko-10-lepta-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -637,18 +637,19 @@ ZitaΣτραγγιστό1kg,Yoghurt,zita-straggisto-1kg,FOOD AND NON-ALCOHOLIC B
 ZitaΣτραγγιστόΆπαχο0%1kg,Yoghurt,zita-straggisto-apacho-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧαραλαμπίδηςΚρίστηςΣτραγγάτοΆπαχο0%1kg,Yoghurt,charalampidis-kristis-straggato-apacho-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΑλάμπραΠρόβειοΓιαούρτιΗΓιαγιά700g,Yoghurt,alampra-proveio-giaourti-i-giagia-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-LurpakΑνάλατοΒούτυρο250g,Butter,lurpak-analato-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-KerrygoldΑλατισμένοΒούτυρο250g,Butter,kerrygold-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-LurpakΑλατισμένοΒούτυρο250g,Butter,lurpak-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LurpakSaltedButter250g,Butter,lurpak-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+KerrygoldSaltedButter250g,Butter,kerrygold-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LurpakSoftUnsaltedButter225g,Butter,lurpak-soft-analato-voutyro-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LurpakSoftSaltedButter225g,Butter,lurpak-soft-alatismeno-voutyro-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 VitaliteLightΜαργαρίνη500g,Margarine and other vegetable fats,vitalite-light-margarini-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g,Margarine and other vegetable fats,charalampidis-kristis-original-margarini-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g,Margarine and other vegetable fats,charalampidis-kristis-light-margarini-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FloraOriginal100%Φυτικό450g,Margarine and other vegetable fats,flora-original-100-fytiko-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FloraLight100%Φυτικό450g,Margarine and other vegetable fats,flora-light-100-fytiko-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜινέρβαΦαστSoftLight220g,Margarine and other vegetable fats,minerva-fast-soft-light-220g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-VasilicoEggsΑυγάΜεσσαία15Τεμ,Eggs,vasilico-eggs-avga-messaia-15tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-NikiforouEggsΑχυρώναSizeM12Τεμ,Eggs,nikiforou-eggs-achyrona-size-m-12tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-NikiforouEggsΑχυρώναSizeM18Τεμ,Eggs,nikiforou-eggs-achyrona-size-m-18tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+VasilicoEggsMediumEggs15Pcs,Eggs,vasilico-eggs-avga-messaia-15tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+NikiforouEggsBarnEggsSizeM12Pcs,Eggs,nikiforou-eggs-achyrona-size-m-12tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+TzioniFarmMediumEggs12Pcs,Eggs,farma-tzioni-avga-messaia-12tem,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 QuakerΝιφάδεςΒρώμης500g,Breakfast cereals,quaker-nifades-vromis-500g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 QuakerΤραγανέςΜπουκιέςΒρώμηΦρούτα450g,Breakfast cereals,quaker-traganes-mpoukies-vromi-frouta-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 OreoO'sCereal350g,Breakfast cereals,oreo-os-cereal-350g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
