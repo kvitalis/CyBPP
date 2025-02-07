@@ -71,8 +71,8 @@ def cystat(last_results):
         if i.find('span') and "Λήψη Αρχείου Word" in i.find('span').text:
             url = i['href']
 
-    if len(current_month) == 1:
-        current_month="0"+str(current_month)
+    if len(str(current_month)) == 1:
+        current_month = "0" + str(current_month)
     else:
         pass
         
@@ -91,8 +91,10 @@ def cystat(last_results):
                 doc_text += cell.text + "\t"
             doc_text += "\n"  
     #print(doc_text)
-    
-    pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
+
+    # *IMPORTANT NOTE*: Check the pattern_list when the CYSTAT official report docx has changes w.r.t the previous release !!! 
+    pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d+,\d+)\s+(\d+,\d+)"
+    #pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
 
     if match:
@@ -132,21 +134,21 @@ def cystat(last_results):
         #general_cpi.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
     #Offline/Official CPI per Division
-    
     division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
-    
-    pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Αλκοολούχα Ποτά και Καπνός\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Ένδυση και Υπόδηση\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Στέγαση, Ύδρευση, Ηλεκτρισμός και Υγραέριο\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Επίπλωση, Οικιακός Εξοπλισμός και Προΐόντα Καθαρισμού\s+([\d,]+)\s+([\d,]+)",
-                  r"Υγεία\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Μεταφορές\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Επικοινωνίες\s+([\d,]+)\s+([\d,]+)",
-                  r"Αναψυχή και Πολιτισμός\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Εκπαίδευση\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Εστιατόρια και Ξενοδοχεία\s+(\d+,\d+)\s+(\d+,\d+)",
-                  r"Άλλα Αγαθά και Υπηρεσίες\s+(\d+,\d+)\s+(\d+,\d+)"
+
+    # *IMPORTANT NOTE*: Check the pattern_list when the CYSTAT official report docx has changes w.r.t the previous release !!! 
+    pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d+,\d+)\s+(\d+,\d+)", #0
+                  r"Αλκοολούχα Ποτά και Καπνός\s+(\d+,\d+)\s+(\d+,\d+)", #1
+                  r"Ένδυση και Υπόδηση\s+(\d+,\d+)\s+(\d+,\d+)", #2
+                  r"Στέγαση, Ύδρευση, Ηλεκτρισμός και Υγραέριο\s+(\d+,\d+)\s+(\d+,\d+)", #3
+                  r"Επίπλωση, Οικιακός Εξοπλισμός και Προΐόντα Καθαρισμού\s+([\d,]+)\s+([\d,]+)", #4 (*** i != 4)
+                  r"Υγεία\s+(\d+,\d+)\s+(\d+,\d+)", #5
+                  r"Μεταφορές\s+(\d+,\d+)\s+(\d+,\d+)", #6
+                  r"Επικοινωνίες\s+([\d,]+)\s+([\d,]+)", #7 (*** i != 7)
+                  r"Αναψυχή και Πολιτισμός\s+(\d+,\d+)\s+(\d+,\d+)", #8
+                  r"Εκπαίδευση\s+(\d+,\d+)\s+(\d+,\d+)", #9
+                  r"Εστιατόρια και Ξενοδοχεία\s+(\d+,\d+)\s+(\d+,\d+)", #10
+                  r"Άλλα Αγαθά και Υπηρεσίες\s+(\d+,\d+)\s+(\d+,\d+)" #11
     ]
     
     division_name=["FOOD AND NON-ALCOHOLIC BEVERAGES",
@@ -268,7 +270,8 @@ def cystat(last_results):
     plt.show()
 
 def is_first_thursday(date):
-    date = datetime.strptime(date, "%Y-%m-%d")
+    #date = datetime.strptime(date, "%Y-%m-%d")
+    date = '2025-02-06'
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
         last_results = date - timedelta(days=7)
@@ -276,7 +279,7 @@ def is_first_thursday(date):
         cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
-        #break
+        pass #break
 
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
