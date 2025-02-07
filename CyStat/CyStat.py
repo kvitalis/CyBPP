@@ -11,11 +11,7 @@ from datetime import date, timedelta , datetime
 
 #Important function
 def cystat(last_results):
-    
-    #Read important files
-    general_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
-    monthly_gen_cpi = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-   
+       
     #Main part of the web scraping 
     url_new = "https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
@@ -91,8 +87,8 @@ def cystat(last_results):
                 doc_text += cell.text + "\t"
             doc_text += "\n"  
     #print(doc_text)
-
-    # *IMPORTANT NOTE*: Check the pattern_list when the CYSTAT official report docx has changes w.r.t the previous release !!! 
+    
+    # *IMPORTANT NOTE*: Check the pattern and the pattern_list below whenever the CYSTAT's official report .docx has changes w.r.t the previous release !!! 
     pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d+,\d+)\s+(\d+,\d+)"
     #pattern = r"Γενικός Δείκτης Τιμών Καταναλωτή\s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2})"
     match = re.search(pattern, doc_text)
@@ -104,6 +100,7 @@ def cystat(last_results):
         cpi_month = round(cpi_month, 2)
         
         #identify the monthly General CPI
+        monthly_gen_cpi = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
@@ -117,6 +114,8 @@ def cystat(last_results):
         df_new_empty_ = pd.DataFrame()
         
         correction_day = current_date - timedelta(days=7)
+
+        general_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
         
         df_new_empty_.loc[0,"Period"] = correction_day.strftime("%Y-%m")
         df_new_empty_.loc[0,"Official (2015=100)"] = round(float(cpi_month),2)
@@ -125,19 +124,17 @@ def cystat(last_results):
         df_new_empty_.loc[0,"Online (27/06/2024=100)"] = round(rebase_online,2)
         df_new_empty_.loc[0,"Official Inflation (%)"] = None
         df_new_empty_.loc[0,"Online Inflation (%)"] = None
-        
+
         df_tables = pd.concat([general_cpi, df_new_empty_], ignore_index=True)
         df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Official (2015=100)"] - df_tables.loc[len(df_tables)-2,"Official (2015=100)"]) / df_tables.loc[len(df_tables)-2,"Official (2015=100)"],2)
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
-        #general_cpi.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
-
     #Offline/Official CPI per Division
     division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
 
     # *IMPORTANT NOTE*: Check the pattern_list when the CYSTAT official report docx has changes w.r.t the previous release !!! 
-    pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d+,\d+)\s+(\d+,\d+)", #0
+    pattern_list=[r"Τρόφιμα και μη Αλκοολούχα Ποτά\s+(\d+,\d+)\s+(\d+,\d+)", #0  #previously: \s+(\d{3},\d{2})\s+(\d{3},\d{2})\s+(\d{1},\d{2})\s+([-]?\d{1},\d{2})\s+(\d{1},\d{2}) 
                   r"Αλκοολούχα Ποτά και Καπνός\s+(\d+,\d+)\s+(\d+,\d+)", #1
                   r"Ένδυση και Υπόδηση\s+(\d+,\d+)\s+(\d+,\d+)", #2
                   r"Στέγαση, Ύδρευση, Ηλεκτρισμός και Υγραέριο\s+(\d+,\d+)\s+(\d+,\d+)", #3
@@ -206,6 +203,7 @@ def cystat(last_results):
     daily_cpi_online = daily_cpi_online[daily_cpi_online["Date"] == correction_day.strftime("%Y-%m-%d")]
 
     unique_values = daily_cpi_online["Division"].unique()
+    
     for i in range(0,len(unique_values)):
         indices = division_cpi[division_cpi["Division"] == unique_values[i].strip()].index
         values_1234 = daily_cpi_online[daily_cpi_online["Division"] == unique_values[i]]["CPI Division"]
@@ -270,7 +268,7 @@ def cystat(last_results):
     plt.show()
 
 def is_first_thursday(date):
-    date = '2025-02-06'
+    #date = '2025-02-06'
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
@@ -279,7 +277,7 @@ def is_first_thursday(date):
         cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
-        pass #break
+        pass 
 
 #Call the function
 current_date = datetime.now().strftime("%Y-%m-%d")
