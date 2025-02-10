@@ -3170,7 +3170,7 @@ new_row.append("RESTAURANTS AND HOTELS")
 new_row.append("Meze Tavern") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
+
 #European University Cyprus (https://euc.ac.cy/en/admissions/tuition-fees/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3181,7 +3181,6 @@ new_row.append("EDUCATION")
 new_row.append("European University Cyprus") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
 #===============================================================================
 
 # Change the type as float
