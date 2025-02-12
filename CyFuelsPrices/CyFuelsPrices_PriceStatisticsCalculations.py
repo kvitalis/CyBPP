@@ -31,27 +31,32 @@ df_data = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
 df_stats = pd.read_csv("CyFuelsPrices/CyFuelsPrices_PriceStatistics.csv")
 
 df_12=df_data[df_data["Date"]=="2025-02-11"]
+new_row=[]
 
 #Unleaded 95
 df_23 = df_12[df_12["Fuel Type"] == "Unleaded 95"]
 average_unleaded_95=df_23.mean()
+new_row.append(average_unleaded_95)
 
 #Unleaded 95
 df_23 = df_12[df_12["Fuel Type"] == "Unleaded 98"]
 average_unleaded_98=df_23.mean()
+new_row.append(average_unleaded_98)
 
 #Diesel
-df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
-average_unleaded_98=df_23.mean()
+df_23 = df_12[df_12["Fuel Type"] == "Diesel"]
+average_diesel=df_23.mean()
+new_row.append(average_diesel)
 
-#XXXXXX
-df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
-average_unleaded_98=df_23.mean()
+#Heating Diesel
+df_23 = df_12[df_12["Fuel Type"] == "Heating Diesel"]
+avegage_heating_diesel=df_23.mean()
+new_row.append(avegage_heating_diesel)
 
-#XXXXXX
-df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
-average_unleaded_98=df_23.mean()
-
+#Kerosene
+df_23 = df_12[df_12["Fuel Type"] == "Kerosene"]
+average_kerosene=df_23.mean()
+new_row.append(average_kerosene)
 
 #fuel_group = df_data.groupby("Fuel Type").mean()
 #average_price = fuel_group["Price"].mean()
