@@ -27,5 +27,6 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
+df_data = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
+df_stats = pd.read_csv("CyFuelsPrices/CyFuelsPrices_PriceStatistics.csv")
 
