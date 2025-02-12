@@ -9,7 +9,7 @@ run-name: Calculation of average fuels prices
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "57 20 * * *" #UTC time
+    - cron: "59 20 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
@@ -32,7 +32,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       - name: Run Fuels_ScrapingCode.py
         run: |
-          python CyFuelsPrices/Fuels_ScrapingCode.py
+          python CyFuelsPrices/Fuels_PriceStatisticsCalculations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
