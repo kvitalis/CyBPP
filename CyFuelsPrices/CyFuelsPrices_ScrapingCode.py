@@ -32,7 +32,7 @@ urls = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ProductsList.csv")
 
 # Create a null dataframe
 daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
-scraped_data = pd.DataFrame(columns = ["Date","Name","Price","Fuel Type","Subclass","Division","Retailer"])
+scraped_data = pd.DataFrame(columns = ["Date","Name","Price","Fuel Type","Subclass","Division","Retailer","District"])
 
 # Define the functions for the web-scraping of the target retailers
 
@@ -88,6 +88,7 @@ def results_FuelDaddy(u):
                 new_row.append("Unleaded 95")
                 new_row.append("Petrol")
                 new_row.append("TRANSPORT")
+                new_row.append(brand_word) 
                 new_row.append(distric_)
                 
             elif price_list[i-1] == 'Unleaded 98':
@@ -96,6 +97,7 @@ def results_FuelDaddy(u):
                 new_row.append('Unleaded 98')
                 new_row.append("Petrol")
                 new_row.append("TRANSPORT")
+                new_row.append(brand_word) 
                 new_row.append(distric_)
                 
             elif price_list[i-1] == 'Diesel':
@@ -104,6 +106,7 @@ def results_FuelDaddy(u):
                 new_row.append('Diesel')
                 new_row.append("Diesel")
                 new_row.append("TRANSPORT")
+                new_row.append(brand_word) 
                 new_row.append(distric_)
                  
             elif price_list[i-1] == 'Heating Diesel':
@@ -112,6 +115,7 @@ def results_FuelDaddy(u):
                 new_row.append('Heating Diesel')
                 new_row.append("Liquid fuels")
                 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                new_row.append(brand_word) 
                 new_row.append(distric_)
                    
             elif price_list[i-1] == 'Kerosene':
@@ -120,9 +124,9 @@ def results_FuelDaddy(u):
                 new_row.append('Kerosene')
                 new_row.append("Liquid fuels")
                 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                new_row.append(brand_word) 
                 new_row.append(distric_)
-                
-            new_row.append(brand_word) 
+            
             scraped_data.loc[len(scraped_data)] = new_row
             scraped_data['Name'] = scraped_data['Name'].apply(lambda x:x)
     
