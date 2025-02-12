@@ -3,16 +3,16 @@ import pandas as pd
 import re
 import requests
 import time
-#import xlsxwriter
+import xlsxwriter
 import urllib.request
 import json
-#import tabula as tb
+import tabula as tb
 #import PyPDF2
-#import pypdf
+import pypdf
 import warnings
 import matplotlib.pyplot as plt
 import numpy as np
-#import pdfplumber
+import pdfplumber
 
 from ast import Try
 from lxml import html, etree
