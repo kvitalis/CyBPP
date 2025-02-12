@@ -30,3 +30,7 @@ warnings.simplefilter("ignore")
 df_data = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
 df_stats = pd.read_csv("CyFuelsPrices/CyFuelsPrices_PriceStatistics.csv")
 
+fuel_group = df_data.groupby("Fuel Type").mean()
+average_price = fuel_group["Price"].mean()
+print(average_price)
+#df_stats.loc[len(df_stats)]=[,,,,,]
