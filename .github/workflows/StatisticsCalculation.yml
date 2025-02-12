@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Run Fuels_ScrapingCode.py
+      - name: Run Fuels_PriceStatisticsCalculations.py
         run: |
           python CyFuelsPrices/Fuels_PriceStatisticsCalculations.py
           git status
