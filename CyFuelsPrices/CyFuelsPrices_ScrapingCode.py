@@ -3,16 +3,16 @@ import pandas as pd
 import re
 import requests
 import time
-#import xlsxwriter
+import xlsxwriter
 import urllib.request
 import json
-#import tabula as tb
+import tabula as tb
 #import PyPDF2
-#import pypdf
+import pypdf
 import warnings
 import matplotlib.pyplot as plt
 import numpy as np
-#import pdfplumber
+import pdfplumber
 
 from ast import Try
 from lxml import html, etree
@@ -21,14 +21,14 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
-#from tabula import read_pdf
+from tabula import read_pdf
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/FuelDaddy/Popular_locations/CyFuelsPrices_ScrapedData.csv")
-urls = pd.read_csv("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/FuelDaddy/Popular_locations/CyFuelsPrices_ProductsList.csv")
+df = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
+urls = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ProductsList.csv")
 
 # Create a null dataframe
 daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
@@ -152,9 +152,9 @@ elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time/60, "minute")
 
 # Export/Save the scraped data 
-df.to_csv("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/FuelDaddy/Popular_locations/CyFuelsPrices_ScrapedData.csv", index = False) 
+df.to_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv", index = False) 
 
 combined_df = pd.concat([df, scraped_data], axis = 0)
 combined_df.reset_index(drop = True, inplace = True)
-combined_df.to_csv("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/FuelDaddy/Popular_locations/CyFuelsPrices_ScrapedData.csv", index = False, header = True)
-daily_errors.to_csv("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/FuelDaddy/Popular_locations/CyFuelsPrices_DailyScrapingErrors.csv", index = False)
+combined_df.to_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv", index = False, header = True)
+daily_errors.to_csv("CyFuelsPrices/CyFuelsPrices_DailyScrapingErrors.csv", index = False)
