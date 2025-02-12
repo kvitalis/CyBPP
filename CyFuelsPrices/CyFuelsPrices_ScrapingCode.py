@@ -148,7 +148,7 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-    distric_  = urls["District"].iloc[u]
+    district_  = urls["District"].iloc[u]
     
     if retailer_ == "FuelDaddy":
         results_FuelDaddy(u)  
