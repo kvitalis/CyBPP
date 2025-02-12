@@ -58,6 +58,9 @@ df_23 = df_12[df_12["Fuel Type"] == "Kerosene"]
 average_kerosene=df_23.mean()
 new_row.append(average_kerosene)
 
+list_.loc[len(list_)] = new_row
+list_["Date"] = list_["Date"].apply(lambda x:x)
+
 #fuel_group = df_data.groupby("Fuel Type").mean()
 #average_price = fuel_group["Price"].mean()
 #print(average_price)
