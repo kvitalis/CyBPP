@@ -27,8 +27,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df_data = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
-df_stats = pd.read_csv("CyFuelsPrices/CyFuelsPrices_PriceStatistics.csv")
+df_data = pd.read_csv("CyFuelsPrices/Fuels_ScrapedData.csv")
+df_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
 
 df_12=df_data[df_data["Date"]=="2025-02-11"]
 new_row=[]
