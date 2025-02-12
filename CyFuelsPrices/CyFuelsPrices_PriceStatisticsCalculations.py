@@ -31,9 +31,27 @@ df_data = pd.read_csv("CyFuelsPrices/CyFuelsPrices_ScrapedData.csv")
 df_stats = pd.read_csv("CyFuelsPrices/CyFuelsPrices_PriceStatistics.csv")
 
 df_12=df_data[df_data["Date"]=="2025-02-11"]
+
+#Unleaded 95
 df_23 = df_12[df_12["Fuel Type"] == "Unleaded 95"]
-average_price_value_23=df_23.mean()
-print(average_price_value_23)
+average_unleaded_95=df_23.mean()
+
+#Unleaded 95
+df_23 = df_12[df_12["Fuel Type"] == "Unleaded 98"]
+average_unleaded_98=df_23.mean()
+
+#Diesel
+df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
+average_unleaded_98=df_23.mean()
+
+#XXXXXX
+df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
+average_unleaded_98=df_23.mean()
+
+#XXXXXX
+df_23 = df_12[df_12["Fuel Type"] == ""Diesel"]
+average_unleaded_98=df_23.mean()
+
 
 #fuel_group = df_data.groupby("Fuel Type").mean()
 #average_price = fuel_group["Price"].mean()
