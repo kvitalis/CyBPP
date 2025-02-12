@@ -30,9 +30,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Run CyFuelsPrices_ScrapingCode.py
+      - name: Run Fuels_ScrapingCode.py
         run: |
-          python CyFuelsPrices/CyFuelsPrices_ScrapingCode.py
+          python CyFuelsPrices/Fuels_ScrapingCode.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
