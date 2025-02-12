@@ -88,6 +88,7 @@ def results_FuelDaddy(u):
                 new_row.append("Unleaded 95")
                 new_row.append("Petrol")
                 new_row.append("TRANSPORT")
+                new_row.append(distric_)
                 
             elif price_list[i-1] == 'Unleaded 98':
                 new_row.append(name_word)
@@ -95,6 +96,7 @@ def results_FuelDaddy(u):
                 new_row.append('Unleaded 98')
                 new_row.append("Petrol")
                 new_row.append("TRANSPORT")
+                new_row.append(distric_)
                 
             elif price_list[i-1] == 'Diesel':
                 new_row.append(name_word)
@@ -102,6 +104,7 @@ def results_FuelDaddy(u):
                 new_row.append('Diesel')
                 new_row.append("Diesel")
                 new_row.append("TRANSPORT")
+                new_row.append(distric_)
                  
             elif price_list[i-1] == 'Heating Diesel':
                 new_row.append(name_word)
@@ -109,6 +112,7 @@ def results_FuelDaddy(u):
                 new_row.append('Heating Diesel')
                 new_row.append("Liquid fuels")
                 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                new_row.append(distric_)
                    
             elif price_list[i-1] == 'Kerosene':
                 new_row.append(name_word)
@@ -116,6 +120,7 @@ def results_FuelDaddy(u):
                 new_row.append('Kerosene')
                 new_row.append("Liquid fuels")
                 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+                new_row.append(distric_)
                 
             new_row.append(brand_word) 
             scraped_data.loc[len(scraped_data)] = new_row
@@ -139,6 +144,7 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
+    distric_  = urls["District"].iloc[u]
     
     if retailer_ == "FuelDaddy":
         results_FuelDaddy(u)  
