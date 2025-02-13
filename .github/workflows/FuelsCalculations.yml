@@ -1,10 +1,10 @@
-# Workflow for the Cyprus fuels prices scraping process
+# Workflow for the Cyprus fuels prices statistics claculations
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
-name: Caluclation-avarge-fuels-prices
+name: fuels-prices-statistics-calculations
 
 # Workflow's description
-run-name: Calculation of average fuels prices 
+run-name: Calculation of fuels prices statistics
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
@@ -37,5 +37,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "fuels prices scraping completed"
+          git commit -m "fuels calculations completed"
           git push origin HEAD:main
