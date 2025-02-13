@@ -51,23 +51,20 @@ def results_FuelDaddy(u):
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
+        website_false.append(district_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div", {"class":"col-md-7 pump-info-right"})
+        
         for brand_name in element_soup:
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
+            
             for brand_name in brand:
                 brand_word = brand_name.get_text(strip = True).upper()
-        '''    
-        if brand_word:
-            if brand_word=="Πετρολίνα" or (brand_word=="ΠΕΤΡΟΛΊΝΑ"):
-                brand_word="PETROLINA"
-        else:
-            brand_word="PETROLINA"
-        '''    
+        
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
         name_word = name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
