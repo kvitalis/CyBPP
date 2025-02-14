@@ -85,6 +85,6 @@ plt.title('Evolution of the daily average fuels prices in Cyprus')
 plt.legend()
 plt.xticks(rotation=90)
 plt.grid(True)
-plt.savefig('CyFuelsPrices/Fuels_Prices_Statistics_Evolution.png')
+plt.savefig('CyFuelsPrices/Fuels_Prices_Average_Evolution.png')
 plt.show()
 
