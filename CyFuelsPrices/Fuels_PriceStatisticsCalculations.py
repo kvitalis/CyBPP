@@ -68,3 +68,23 @@ print(kerosene_avg)
 ## Save and export the fuels prices statistics calculations
 df_stats.loc[len(df_stats)] = [today, unleaded95_avg, unleaded98_avg, diesel_avg, heatingdiesel_avg, kerosene_avg]
 df_stats.to_csv("CyFuelsPrices/Fuels_PriceStatistics.csv", index = False)
+
+## Visualizations/Plots
+fuels_prices_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
+
+#Evolution of the daily AVERAGE fuels prices
+plt.figure(figsize=(12, 6))
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusAverage'], label='Unleaded 95 - Cyprus Average', marker='o', color='red')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusAverage'], label='Unleaded 98 - Cyprus Average', marker='o', color='blue')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusAverage'], label='Diesel - Cyprus Average', marker='o', color='black')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusAverage'], label='Heating Diesel - Cyprus Average', marker='o', color='brown')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusAverage'], label='Kerosene - Cyprus Average', marker='o', color='green')
+plt.xlabel('Date')
+plt.ylabel('Price (€/L)')
+plt.title('Evolution of the daily average fuels prices in Cyprus')
+plt.legend()
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.savefig('CyFuelsPrices/Fuels_Prices_Statistics_Evolution.png')
+plt.show()
+
