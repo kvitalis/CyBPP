@@ -4,7 +4,7 @@
 name: fuels-prices-statistics-calculations
 
 # Workflow's description
-run-name: Calculation of fuels prices statistics
+run-name: fuels prices statistics calculations
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
