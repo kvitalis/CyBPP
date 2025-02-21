@@ -2697,8 +2697,8 @@ for u in range(0, len(urls)):
         results_parga(u)    
     elif retailer_=="leroymerlin":
         results_leroymerlin(u)   
-    #elif retailer_=="IKEA":
-        #results_IKEA(u)
+    elif retailer_=="IKEA":
+        results_IKEA(u)
     #elif retailer_=="Stephanis":
         #results_stephanis(u)
     elif retailer_=="Electroline":
