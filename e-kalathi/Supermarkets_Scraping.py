@@ -71,14 +71,14 @@ def results_alphamega(u):
         new_row.append("Alphamega")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)  
-        
+'''        
 def results_supermarketcy(u):
-    '''
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs,{'headers':header})
-    '''
+    
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs,{'headers':header})
+    
     url_ = "https://www.supermarketcy.com.cy/" + Item_url_
     response = requests.get(url_)
            
@@ -106,7 +106,7 @@ def results_supermarketcy(u):
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)  
-
+'''
 def results_cheapbasket(u):
     
     url = "https://cheapbasket.com.cy/product/" + Item_url_
@@ -238,12 +238,10 @@ for u in range(0, len(urls)):
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
-    '''
-    elif retailer_ == "SupermarketCy":
-        results_supermarketcy(u)    
+    #elif retailer_ == "SupermarketCy":
+        #results_supermarketcy(u)    
     elif retailer_ == "METRO":
         results_metro(u)    
-    '''
     
 # Change the type as float
 list_["Price"].astype(float)
