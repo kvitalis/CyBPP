@@ -2709,8 +2709,8 @@ for u in range(0, len(urls)):
         results_cablenet(u)  
     elif retailer_=="Primetel":
         results_primetel(u)    
-    elif retailer_=="Epic":
-        results_epic(u)
+   # elif retailer_=="Epic":
+        #results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="FamousSports":
