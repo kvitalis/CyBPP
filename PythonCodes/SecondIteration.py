@@ -2950,78 +2950,6 @@ new_row.append("AHK")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Epic (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 10")
-new_row.append(float(24.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 20")
-new_row.append(float(29.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 50")
-new_row.append(float(39.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To fixed telephony lines of other providers")
-new_row.append(float(0.03))
-new_row.append("Wired telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To mobile telephony lines of other providers")
-new_row.append(float(0.05))
-new_row.append("Wireless telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max Plus")
-new_row.append(float(24.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max")
-new_row.append(float(19.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 ## Primetel (https://primetel.com.cy/telephony-services)
 #Wired telephone services 
 new_row=[]
@@ -3179,6 +3107,80 @@ new_row.append(float(22.99))
 new_row.append("Bundled telecommunication services")
 new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
+#new url: https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 10")
+new_row.append(float(24.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 20")
+new_row.append(float(29.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Internet and Telephony 50")
+new_row.append(float(39.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#new url: https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To fixed telephony lines of other providers")
+new_row.append(float(0.03))
+new_row.append("Wired telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To mobile telephony lines of other providers")
+new_row.append(float(0.05))
+new_row.append("Wireless telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max Plus")
+new_row.append(float(24.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max")
+new_row.append(float(19.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
