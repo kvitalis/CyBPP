@@ -344,6 +344,7 @@ def results_epic(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        #Bundled telecommunication services
         if name_ == "5G Unlimited Max Plus":
             element_ = soup.find_all("div",{"class":"price"})
             price_ = element_[0].text.replace("€","")
@@ -368,9 +369,15 @@ def results_epic(u):
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
+        #Wireless and Wired telephone services
         if name_ == "To fixed telephony lines of other providers":
             element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
-            price_ = element_[0].find_all("td")[2].text.replace('€','')
+            data = element_[0].text.replace("€","")
+            pattern = r"To fixed telephony lines of other providers.*?\n(\d+\.\d+)$" 
+            match = re.search(pattern, data, re.MULTILINE)
+            if match:
+                value = match.group(1) # Extract the captured group 
+            price_ = float(value) 
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -382,7 +389,12 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)      
         if name_ == "To mobile telephony lines of other providers":
             element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
-            price_ = element_[0].find_all("td")[3].text.replace('€','')
+            data = element_[0].text.replace("€","")
+            pattern = r"To mobile telephony lines of other providers.*?\n(\d+\.\d+)$" 
+            match = re.search(pattern, data, re.MULTILINE)
+            if match:
+                value = match.group(1) # Extract the captured group 
+            price_ = float(value) 
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -391,10 +403,16 @@ def results_epic(u):
             new_row.append(division_)
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)  
-        if name_ == "Internet and Telephony 10":
-            element_ = soup.find_all("div",{"class":"price"})
-            price_ = element_[0].text.replace('€','')
+            list_['Name'] = list_['Name'].apply(lambda x:x) 
+        #Internet access provision services    
+        if name_ == "Broadband Homebox 1":
+            element_ = soup.find_all("table",{"class":"yellow-top"})
+            data = element_[0].text.replace("€","")
+            pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
+            match = re.search(pattern, data, re.MULTILINE)
+            if match:
+                value = match.group(1) # Extract the captured group (1st value)
+            price_ = float(value)
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -404,9 +422,14 @@ def results_epic(u):
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
-        if name_ == "Internet and Telephony 20":
-            element_ = soup.find_all("div",{"class":"price"})
-            price_ = element_[2].text.replace('€','')
+        if name_ == "Broadband Homebox 2":
+            element_ = soup.find_all("table",{"class":"yellow-top"})
+            data = element_[0].text.replace("€","")
+            pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
+            match = re.search(pattern, data, re.MULTILINE)
+            if match:
+                value = match.group(2) # Extract the captured group (2nd value)
+            price_ = float(value)
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -416,9 +439,14 @@ def results_epic(u):
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)    
-        if name_ == "Internet and Telephony 50":
-            element_ = soup.find_all("div",{"class":"price"})
-            price_ = element_[6].text.replace('€','')
+        if name_ == "Broadband Homebox 3":
+            element_ = soup.find_all("table",{"class":"yellow-top"})
+            data = element_[0].text.replace("€","")
+            pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
+            match = re.search(pattern, data, re.MULTILINE)
+            if match:
+                value = match.group(3) # Extract the captured group (3rd value)
+            price_ = float(value)
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -428,101 +456,6 @@ def results_epic(u):
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
-
-'''
-def results_epic(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if (response.status_code==200):
-        
-        if (name_=="To fixed telephony lines of other providers")|(name_=="To mobile telephony lines of other providers"):
-            
-            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
-            name_1 = element_[0].find_all("th")
-            price_1 = element_[0].find_all("td")
-            
-            for i in range(0,len(name_1)):
-                new_row=[]
-                
-                if (name_1[i].text==name_):
-                    price_=price_1[i-2].text.replace("€","")
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Epic")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-                else:
-                    pass
-
-        elif (name_=="5G Unlimited Max Plus")|(name_=="5G Unlimited Max"):
-
-            element_ = soup.find_all("div",{"class":"price"})
-            new_row = []
-            
-            if name_ == "5G Unlimited Max Plus":
-                price_ = element_[0].text.replace("€","")
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Epic")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-                
-            if name_ == "5G Unlimited Max":
-                price_ = element_[1].text.replace("€","")
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Epic")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)        
-        
-        else:
-            element_soup_price = soup.find_all("div",{"class":"price"})
-            element_soup_name = soup.find_all("div",{"class":"mtn-name mtn-name-bb"})
-            new_row = []
-            
-            for q in range(0,len(element_soup_name)):
-                new_row = []
-                _name_ = element_soup_name[q].text.strip().replace(" ","")
-                
-                if _name_=="InternetandTelephony10":
-                    qp=0
-                if _name_=="InternetandTelephony20":
-                    qp=2
-                if _name_=="InternetandTelephony50":
-                    qp=6
-            
-                if _name_==name_.replace(" ",""):
-                    price_=element_soup_price[qp].text.replace("€","").replace(" ","")
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(_name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Epic")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-    
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-'''
 
 def results_Athlokinisi(u):
     
@@ -3035,6 +2968,79 @@ new_row.append("EDUCATION")
 new_row.append("European University Cyprus") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Broadband Homebox 1")
+new_row.append(float(29.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Broadband Homebox 2")
+new_row.append(float(29.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Broadband Homebox 3")
+new_row.append(float(29.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To fixed telephony lines of other providers")
+new_row.append(float(0.03))
+new_row.append("Wired telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("To mobile telephony lines of other providers")
+new_row.append(float(0.05))
+new_row.append("Wireless telephone services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max Plus")
+new_row.append(float(24.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("5G Unlimited Max")
+new_row.append(float(19.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Epic") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
 
 #Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
@@ -3079,7 +3085,7 @@ new_row.append("Meze Tavern")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/st-valentines-online-exclusive) 
+#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/carnival-mobile-online-offer) 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("GIGA Unlimited")
@@ -3107,80 +3113,6 @@ new_row.append(float(22.99))
 new_row.append("Bundled telecommunication services")
 new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony)
-#new url: https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 10")
-new_row.append(float(24.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 20")
-new_row.append(float(29.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Internet and Telephony 50")
-new_row.append(float(39.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#new url: https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To fixed telephony lines of other providers")
-new_row.append(float(0.03))
-new_row.append("Wired telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To mobile telephony lines of other providers")
-new_row.append(float(0.05))
-new_row.append("Wireless telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max Plus")
-new_row.append(float(24.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max")
-new_row.append(float(19.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
