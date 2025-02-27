@@ -2448,7 +2448,7 @@ def results_leroymerlin(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_=soup.find_all("span",{"class":"priceBigMain"})
         price_=element_[0].text.replace("€","").replace(" ","").replace(",",".")
@@ -2594,7 +2594,7 @@ for u in range(0, len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Parga":
         results_parga(u)    
-    elif retailer_=="leroymerlin":
+    elif retailer_=="Leroy Merlin":
         results_leroymerlin(u)   
     elif retailer_=="IKEA":
         results_IKEA(u)
