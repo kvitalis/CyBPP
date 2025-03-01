@@ -641,28 +641,27 @@ def results_cablenet(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all("div",{"class":"plan-price"}) 
         # Internet access provision services	
-        if (name_=="PurpleInternet") or (name_=="PurpleMaxMobile"): 
-            if name_=="PurpleInternet":
-                qp=1
+        if name_ == "PurpleInternet": 
+            element_soup = soup.find_all("div",{"class":"plan-price"}) 
+            euro_ = element_soup[1].text.count("€")
+            price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
         # Bundled telecommunication services
-            if name_=="PurpleMaxMobile":
-                qp=0
-            euro_=element_soup[qp].text.count("€")
-            price_=float(element_soup[qp].text.replace(" ",'').split("€")[euro_].split("/")[0])
+        if name_ == "PurpleMaxMobile":
+            element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"})
+            price_ = float(element_soup[1].text.replace("μετά €","").replace("/μήνα ",""))
         else: 
-            # Wireless telephone services	
+        # Wired and Wireless telephone services	
             element_name = soup.find_all("td")
             for i in element_name:
-                if i.text==name_:
-                    value_=element_name[18].text
-                    price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-                if i.text==name_:
-                    value_=element_name[23].text
-                    price_=value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                if i.text == name_:
+                    value_ = element_name[18].text
+                    price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                if i.text == name_:
+                    value_ = element_name[23].text
+                    price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
 
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -2638,8 +2637,8 @@ for u in range(0, len(urls)):
         results_electroline(u)
     elif retailer_=="CYTA":
         results_CYTA(u)
-    #elif retailer_=="Cablenet":
-        #results_cablenet(u)  
+    elif retailer_=="Cablenet":
+        results_cablenet(u)  
     elif retailer_=="Primetel":
         results_primetel(u)    
     elif retailer_=="Epic":
