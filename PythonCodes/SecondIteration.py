@@ -1105,8 +1105,8 @@ def results_primetel(u):
                 new_row.append("Primetel")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x) 
-                
-             elif name_ == "GIGA Unlimited Plus" :
+             '''   
+             if name_ == "GIGA Unlimited Plus" :
                  text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
                  pattern = r"(\d+\.\d+)"
                  match = re.search(pattern, text)
@@ -1119,8 +1119,8 @@ def results_primetel(u):
                  new_row.append("Primetel")
                  list_.loc[len(list_)] = new_row
                  list_['Name'] = list_['Name'].apply(lambda x:x)    
-             
-             elif name_ == "GIGA Unlimited MAX" :
+             '''
+             if name_ == "GIGA Unlimited MAX" :
                  text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
                  pattern = r"(\d+\.\d+)"
                  match = re.search(pattern, text)
