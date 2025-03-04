@@ -1110,20 +1110,25 @@ def results_primetel(u):
     else:
         # Bundled telecommunication services	
         if (name_=="GIGA Unlimited")|(name_=="GIGA Unlimited Plus")|(name_=="GIGA Unlimited MAX"):
-            element_ = soup.find_all('div',{"class":"top_plan_box"})
-
-            for i in range(0, len(element_)):
-                
-                if element_[i].text.replace("\n","") == name_ :
-                    element_ = soup.find_all('div',{"class":"price_plan_box"}) 	
-                    price_ = element_[i].text.replace("\n","").replace(" ","")
-                    price_ = price_.split("€")
-                    
-                    if len(price_) > 2:
-                        price_ = price_[2].replace("month","")
-                    else:
-                        price_ = price_[0]          
-                    
+            
+            #element_ = soup.find_all('div',{"class":"top_plan_box"})
+            #for i in range(0, len(element_)):
+                #if element_[i].text.replace("\n","") == name_ :
+                    #element_ = soup.find_all('div',{"class":"price_plan_box"}) 	
+                    #price_ = element_[i].text.replace("\n","").replace(" ","")
+                    #price_ = price_.split("€")
+                    #if len(price_) > 2:
+                        #price_ = price_[2].replace("month","")
+                    #else:
+                        #price_ = price_[0]
+            
+            element_ = soup.find_all('div',{"class":"price_plan_box"})
+            
+            if name_ == "GIGA Unlimited" :
+                    text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
+                    pattern = r"(\d+\.\d+)"
+                    match = re.search(pattern, text)
+                    price_ = match.group(1) 
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1133,8 +1138,33 @@ def results_primetel(u):
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x) 
                 
-                else:
-                    pass
+             if name_ == "GIGA Unlimited Plus" :
+                    text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
+                    pattern = r"(\d+\.\d+)"
+                    match = re.search(pattern, text)
+                    price_ = match.group(1) 
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)    
+             
+             if name_ == "GIGA Unlimited MAX" :
+                    text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
+                    pattern = r"(\d+\.\d+)"
+                    match = re.search(pattern, text)
+                    price_ = match.group(1) 
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)  
 
         # Wired & Wireless Telephone Services           
         elif (name_=="Calls to other providers landline")|(name_=="Calls to other providers mobile"):
@@ -1144,7 +1174,6 @@ def results_primetel(u):
                 
             if name_ == "Calls to other providers landline" :
                     price_ = element_td[9].text.replace("\n","").replace(" ","").replace("€","").replace("/minute","")
-                    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1156,7 +1185,6 @@ def results_primetel(u):
                     
             if name_ == "Calls to other providers mobile" :
                     price_ = element_td[11].text.replace("\n","").replace(" ","").replace("€","").replace("/minute.Minimumcharge1minute","")        
-
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1176,8 +1204,6 @@ def results_primetel(u):
                     match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_0)
                     if match:
                         price_ = match.group(2)
-                    print(price_)    
-                    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1191,9 +1217,7 @@ def results_primetel(u):
                     text_1 = element_[1].text
                     match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_1)
                     if match:
-                        price_ = match.group(2)
-                    print(price_)    
-                    
+                        price_ = match.group(2)  
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1208,8 +1232,6 @@ def results_primetel(u):
                     match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_2)
                     if match:
                         price_ = match.group(2)
-                    print(price_)    
-                    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
