@@ -1093,46 +1093,46 @@ def results_primetel(u):
             element_ = soup.find_all('div',{"class":"price_plan_box"})
             
             if name_ == "GIGA Unlimited" :
-                    text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
-                    pattern = r"(\d+\.\d+)"
-                    match = re.search(pattern, text)
-                    price_ = match.group(1) 
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x) 
+                text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
+                pattern = r"(\d+\.\d+)"
+                match = re.search(pattern, text)
+                price_ = match.group(1) 
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Primetel")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x) 
                 
-             if name_ == "GIGA Unlimited Plus" :
-                    text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
-                    pattern = r"(\d+\.\d+)"
-                    match = re.search(pattern, text)
-                    price_ = match.group(1) 
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)    
+             elif name_ == "GIGA Unlimited Plus" :
+                 text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
+                 pattern = r"(\d+\.\d+)"
+                 match = re.search(pattern, text)
+                 price_ = match.group(1) 
+                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                 new_row.append(name_)
+                 new_row.append(float(price_))
+                 new_row.append(subclass_)
+                 new_row.append(division_)
+                 new_row.append("Primetel")
+                 list_.loc[len(list_)] = new_row
+                 list_['Name'] = list_['Name'].apply(lambda x:x)    
              
-             if name_ == "GIGA Unlimited MAX" :
-                    text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
-                    pattern = r"(\d+\.\d+)"
-                    match = re.search(pattern, text)
-                    price_ = match.group(1) 
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)  
+             elif name_ == "GIGA Unlimited MAX" :
+                 text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
+                 pattern = r"(\d+\.\d+)"
+                 match = re.search(pattern, text)
+                 price_ = match.group(1) 
+                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                 new_row.append(name_)
+                 new_row.append(float(price_))
+                 new_row.append(subclass_)
+                 new_row.append(division_)
+                 new_row.append("Primetel")
+                 list_.loc[len(list_)] = new_row
+                 list_['Name'] = list_['Name'].apply(lambda x:x)  
 
         # Wired & Wireless Telephone Services           
         elif (name_=="Calls to other providers landline")|(name_=="Calls to other providers mobile"):
