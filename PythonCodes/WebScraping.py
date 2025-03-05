@@ -2636,8 +2636,8 @@ for u in range(0, len(urls)):
         results_fuelDaddy(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
-    elif retailer_=="Parga":
-        results_parga(u)    
+    #elif retailer_=="Parga":
+        #results_parga(u)    
     elif retailer_=="Leroy Merlin":
         results_leroymerlin(u)   
     #elif retailer_=="IKEA":
