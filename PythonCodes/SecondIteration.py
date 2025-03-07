@@ -535,7 +535,7 @@ def results_AWOL(u):
         new_row.append("AWOL")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+'''
 def results_alter_Vape(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
@@ -565,7 +565,7 @@ def results_alter_Vape(u):
         new_row.append("Alter Vape")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+'''
 def results_bwell_pharmacy(u):
     
     url="https://bwell.com.cy/shop/"+Item_url_
@@ -2666,8 +2666,8 @@ for u in range(0, len(urls)):
         results_nissan(u)
     elif retailer_=="Stock Center":
         stock_center_results(u)    
-    elif retailer_=="Alter Vape":
-        results_alter_Vape(u)    
+    #elif retailer_=="Alter Vape":
+        #results_alter_Vape(u)    
     elif retailer_=="The CYgar shop":
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
