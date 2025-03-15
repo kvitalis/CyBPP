@@ -1192,8 +1192,7 @@ def results_primetel(u):
                     text_4 = element_[4].text
                     match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_4)
                     if match:
-                        price_ = match.group(1)
-                    print(price_)    
+                        price_ = match.group(1)   
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1208,7 +1207,6 @@ def results_primetel(u):
                     match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_5)
                     if match:
                         price_ = match.group(1)
-                    print(price_)    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
