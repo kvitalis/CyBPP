@@ -1152,15 +1152,15 @@ def results_primetel(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
         
         # Internet access provision services 
-        elif (name_=="Fiber & TV 200MBPS")|(name_=="Fiber & TV 300MBPS")|(name_=="Fiber & TV 500MBPS"):
+        elif (name_=="Fiber Family & 200Mbps")|(name_=="Fiber Entertainment & 200Mbps"):
 
-            element_ = soup.find_all("div",{"class":"price_plan_box"})
+            element_ = soup.find_all("div",{"class":"price_tv_pack"})
                 
-            if name_ == "Fiber & TV 200MBPS" :
-                    text_0 = element_[0].text
-                    match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_0)
+            if name_ == "Fiber Family & 200Mbps" :
+                    text_4 = element_[4].text
+                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_4)
                     if match:
-                        price_ = match.group(2)
+                        price_ = match.group(1)   
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1169,12 +1169,12 @@ def results_primetel(u):
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-
-            if name_ == "Fiber & TV 300MBPS" :
-                    text_1 = element_[1].text
-                    match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_1)
+            
+            if name_ == "Fiber Entertainment & 200Mbps" :
+                    text_5 = element_[5].text
+                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_5)
                     if match:
-                        price_ = match.group(2)  
+                        price_ = match.group(1)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1182,21 +1182,7 @@ def results_primetel(u):
                     new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-
-            if name_ == "Fiber & TV 500MBPS" :
-                    text_2 = element_[2].text
-                    match = re.search(r'€(\d+\.\d+)€(\d+\.\d+)', text_2)
-                    if match:
-                        price_ = match.group(2)
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                    list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 def results_rio(u):
     
