@@ -832,19 +832,19 @@ def results_electroline(u):
 
 def results_europeanuniversitycyprus(u):
     
-    euc = tb.read_pdf(Item_url_, pages = '2',pandas_options={'header': None}, stream=True)
-    list_euc = []
+    euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     
-    for i in range(0,5):
-        new_row=[]
+    list_euc = []
+    imax = 4 #be careful to set this value correctly when the new year tuition fees are published 
+    for i in range(0, imax): 
+        new_row = []
         euc[i][1] = euc[i][1].astype('string')
-        
         for word in euc[i][1].to_list():
             word = word.replace(',','')
             word = int(word)
             list_euc.append(word)
     
-    price_=(sum(list_euc)+21000+21900)/(len(list_euc)+2)
+    price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
