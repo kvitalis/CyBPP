@@ -749,7 +749,7 @@ def results_CyMinistryEducation(u):
         for i in range(2,7):
             pdf_[i] = pdf_[i].astype('string')
             if subclass_ == "Secondary education":
-                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
+                #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
                 value_1 = (float(pdf_[2][15].replace("€",'').replace(".","")))
                 value_2 = (float(pdf_[3][15].replace("€",'').replace(".","")))
                 value_3 = (float(pdf_[4][15].replace("€",'').replace(".","")))
@@ -759,7 +759,7 @@ def results_CyMinistryEducation(u):
                 price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
 
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
+                #THE GRAMMAR SCHOOL (LIMASSOL): Ζ΄ τάξη
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
