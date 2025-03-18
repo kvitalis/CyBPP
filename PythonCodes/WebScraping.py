@@ -674,10 +674,11 @@ def results_cablenet(u):
 
 def results_CyMinistryEducation(u):
     
-    url="http://archeia.moec.gov.cy/mc/698/"+Item_url_
+    url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        pdf_ = tb.read_pdf(url, pages = '4',pandas_options={'header': None}, stream=True)
+        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
+        pdf_ = tb.read_pdf(url, pages = '4', pandas_options = {'header': None}, stream = True)
         pdf_ = pdf_[0]
         
         #Annual cost
@@ -685,7 +686,7 @@ def results_CyMinistryEducation(u):
         pdf = pdf_[3][1]
         price_1 = float(pdf.strip('€*').replace(".", ""))
 
-        #Other cost
+        #Other costs
         pdf_[5] = pdf_[5].astype('string')
         pdf = pdf_[5][0]
         price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
@@ -694,66 +695,71 @@ def results_CyMinistryEducation(u):
         pdf = pdf_[5][2]
         price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
         
-        #Total
-        price_=price_1+price_2+price_3
+        #Total cost
+        price_ = price_1 + price_2 + price_3
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:
-        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
+        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
+        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
         pdf_ = pdf_[0]
 
         #Annual cost
         for i in range(0,7):
             pdf_[i] = pdf_[i].astype('string')
 
-        price_1 = float(pdf_[1][25].strip('€*').replace(".", ""))+float(pdf_[2][25].strip('€*').replace(".", ""))+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0])+float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1])+float(pdf_[4][25].strip('€*').replace(".", ""))+float(pdf_[5][25].strip('€*').replace(".", ""))
-        price_1=price_1/6
+        price_1 = float(pdf_[1][25].strip('€*').replace(".", "")) + float(pdf_[2][25].strip('€*').replace(".", "")) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0]) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1]) + float(pdf_[4][25].strip('€*').replace(".", "")) + float(pdf_[5][25].strip('€*').replace(".", ""))
+        price_1 = price_1 / 6
 
-        #Other cost
+        #Other costs
         pdf = pdf_[6][24]
         price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
 
         pdf = pdf_[6][26]
         price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
         
-        #Total
-        price_=price_1+price_2+price_3
+        #Total cost
+        price_ = price_1 + price_2 + price_3
                      
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '1',pandas_options={'header': None}, stream=True)
+        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
         pdf_ = pdf_[0]
 
         for i in range(2,7):
             pdf_[i] = pdf_[i].astype('string')
-            if subclass_=="Secondary education":
-                value_1=(float(pdf_[2][4].replace("€",'').replace(".","")))
-                value_2=(float(pdf_[3][4].replace("€",'').replace(".","")))
-                value_3=(float(pdf_[4][4].replace("€",'').replace(".","")))
-                value_4=(float(pdf_[5][4].replace("€",'').replace(".","")))
-                value_5=(float(pdf_[6][4].replace("€",'').replace(".","")))
-                value_6=(float(pdf_[7][4].replace("€",'').replace(".","")))
+            if subclass_ == "Secondary education":
+                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
+                value_1 = (float(pdf_[2][4].replace("€",'').replace(".","")))
+                value_2 = (float(pdf_[3][4].replace("€",'').replace(".","")))
+                value_3 = (float(pdf_[4][4].replace("€",'').replace(".","")))
+                value_4 = (float(pdf_[5][4].replace("€",'').replace(".","")))
+                value_5 = (float(pdf_[6][4].replace("€",'').replace(".","")))
+                value_6 = (float(pdf_[7][4].replace("€",'').replace(".","")))
                 price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
 
-            if subclass_=="Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '2',pandas_options={'header': None}, stream=True)
-        pdf_=pdf_[0]
+        pdf_ = tb.read_pdf(url, pages = '2', pandas_options = {'header': None}, stream = True)
+        pdf_ = pdf_[0]
         
         for i in range(2,7):
             pdf_[i] = pdf_[i].astype('string')
-            if subclass_=="Secondary education":
-                value_1=(float(pdf_[2][15].replace("€",'').replace(".","")))
-                value_2=(float(pdf_[3][15].replace("€",'').replace(".","")))
-                value_3=(float(pdf_[4][15].replace("€",'').replace(".","")))
-                value_4=(float(pdf_[5][15].replace("€",'').replace(".","")))
-                value_5=(float(pdf_[6][15].replace("€",'').replace(".","")))
-                value_6=(float(pdf_[7][15].replace("€",'').replace(".","")))
+            if subclass_ == "Secondary education":
+                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
+                value_1 = (float(pdf_[2][15].replace("€",'').replace(".","")))
+                value_2 = (float(pdf_[3][15].replace("€",'').replace(".","")))
+                value_3 = (float(pdf_[4][15].replace("€",'').replace(".","")))
+                value_4 = (float(pdf_[5][15].replace("€",'').replace(".","")))
+                value_5 = (float(pdf_[6][15].replace("€",'').replace(".","")))
+                value_6 = (float(pdf_[7][15].replace("€",'').replace(".","")))
                 price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
 
-            if subclass_=="Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
