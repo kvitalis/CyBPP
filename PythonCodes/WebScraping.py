@@ -865,12 +865,12 @@ def results_electroline(u):
 def results_europeanuniversitycyprus(u):
     
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
+    
     list_euc = []
     imax = 4 #be careful to set this value correctly when the new year tuition fees are published 
     for i in range(0, imax): 
         new_row = []
         euc[i][1] = euc[i][1].astype('string')
-        
         for word in euc[i][1].to_list():
             word = word.replace(',','')
             word = int(word)
