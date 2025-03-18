@@ -830,59 +830,106 @@ def results_electroline(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_europeanuniversitycyprus(u):
+def results_CyMinistryEducation(u):
     
-    euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
+    url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
-    list_euc = []
-    imax = 4 #be careful to set this value correctly when the new year tuition fees are published 
-    for i in range(0, imax): 
-        new_row = []
-        euc[i][1] = euc[i][1].astype('string')
-        for word in euc[i][1].to_list():
-            word = word.replace(',','')
-            word = int(word)
-            list_euc.append(word)
+    if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
+        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
+        pdf_ = tb.read_pdf(url, pages = '4', pandas_options = {'header': None}, stream = True)
+        pdf_ = pdf_[0]
+        
+        #Annual cost
+        pdf_[3] = pdf_[3].astype('string')
+        pdf = pdf_[3][1]
+        price_1 = float(pdf.strip('€*').replace(".", ""))
+
+        #Other costs
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][0]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf_[5] = pdf_[5].astype('string')
+        pdf = pdf_[5][2]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total cost
+        price_ = price_1 + price_2 + price_3
     
-    price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
+    if "ΔΗΜΟΤΙΚΩΝ" in name_:
+        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
+        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
+        pdf_ = pdf_[0]
+
+        #Annual cost
+        for i in range(0,7):
+            pdf_[i] = pdf_[i].astype('string')
+
+        price_1 = float(pdf_[1][25].strip('€*').replace(".", "")) + float(pdf_[2][25].strip('€*').replace(".", "")) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0]) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1]) + float(pdf_[4][25].strip('€*').replace(".", "")) + float(pdf_[5][25].strip('€*').replace(".", ""))
+        price_1 = price_1 / 6
+
+        #Other costs
+        pdf = pdf_[6][24]
+        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
+
+        pdf = pdf_[6][26]
+        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
+        
+        #Total cost
+        price_ = price_1 + price_2 + price_3
+                     
+    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
+        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
+        pdf_ = pdf_[0]
+
+        for i in range(2,7):
+            pdf_[i] = pdf_[i].astype('string')
+            if subclass_ == "Secondary education":
+                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
+                value_1 = (float(pdf_[2][4].replace("€",'').replace(".","")))
+                value_2 = (float(pdf_[3][4].replace("€",'').replace(".","")))
+                value_3 = (float(pdf_[4][4].replace("€",'').replace(".","")))
+                value_4 = (float(pdf_[5][4].replace("€",'').replace(".","")))
+                value_5 = (float(pdf_[6][4].replace("€",'').replace(".","")))
+                value_6 = (float(pdf_[7][4].replace("€",'').replace(".","")))
+                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
+
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
+                pdf_[8] = pdf_[8].astype('string')
+                value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
+                price_ = float(value_7)
+    
+    if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
+        pdf_ = tb.read_pdf(url, pages = '2', pandas_options = {'header': None}, stream = True)
+        pdf_ = pdf_[0]
+        
+        for i in range(2,7):
+            pdf_[i] = pdf_[i].astype('string')
+            if subclass_ == "Secondary education":
+                #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
+                value_1 = (float(pdf_[2][15].replace("€",'').replace(".","")))
+                value_2 = (float(pdf_[3][15].replace("€",'').replace(".","")))
+                value_3 = (float(pdf_[4][15].replace("€",'').replace(".","")))
+                value_4 = (float(pdf_[5][15].replace("€",'').replace(".","")))
+                value_5 = (float(pdf_[6][15].replace("€",'').replace(".","")))
+                value_6 = (float(pdf_[7][15].replace("€",'').replace(".","")))
+                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
+
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                #THE GRAMMAR SCHOOL (LIMASSOL): Ζ΄ τάξη
+                pdf_[8] = pdf_[8].astype('string')
+                value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
+                price_ = float(value_7)
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(float(price_))
     new_row.append(subclass_)
     new_row.append(division_)
-    new_row.append("European University Cyprus")
+    new_row.append("Cyprus Ministry of Education, Sport and Youth")
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_famoussport(u):
-    
-    url = "https://www.famousports.com/en"+Item_url_
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    bs = BeautifulSoup(url, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if (response.status_code !=200) or ("Oops! Page Not Found!" in soup.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-    else:
-        element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
-        element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
-        price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Famous Sports")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_Marks_Spencer(u):
     
