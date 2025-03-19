@@ -16,9 +16,12 @@ today = datetime.today().strftime("%Y-%m-%d")
 raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+#raw_data_25q2 = pd.read_csv("Datasets/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Concatenate/combine by rows the quarterly subsets into a full raw data set
-raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1], axis=0) 
+raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1
+                      #,raw_data_25q2
+                     ], axis=0) 
 #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Exclude the data of the following retailers
@@ -296,9 +299,12 @@ while today_p <= end_date:
     raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    #raw_data_25q2 = pd.read_csv("Datasets/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Concatenate/combine by rows the quarterly subsets into a full raw data set:
-    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1], axis=0) 
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1
+                          #,raw_data_25q2
+                          ], axis=0) 
     #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Exclude the data of the following retailers: 
