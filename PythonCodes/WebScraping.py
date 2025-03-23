@@ -893,9 +893,9 @@ def results_europeanuniversitycyprus(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_famoussport(u):
+def results_famousports(u):
     
-    url = "https://www.famousports.com/en"+Item_url_
+    url = "https://www.famousports.com/en" + Item_url_
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
@@ -908,11 +908,11 @@ def results_famoussport(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
         element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
-        price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
+        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2648,8 +2648,8 @@ for u in range(0, len(urls)):
         results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
-    elif retailer_=="FamousSports":
-        results_famoussport(u) 
+    elif retailer_=="Famous Sports":
+        results_famousports(u) 
     elif retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
     elif retailer_=="Bwell Pharmacy":
