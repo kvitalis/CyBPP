@@ -931,6 +931,31 @@ def results_CyMinistryEducation(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_europeanuniversitycyprus(u):
+    
+    euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
+    
+    list_euc = []
+    imax = 4 #be careful to set this value correctly when the new year tuition fees are published 
+    for i in range(0, imax): 
+        new_row = []
+        euc[i][1] = euc[i][1].astype('string')
+        for word in euc[i][1].to_list():
+            word = word.replace(',','')
+            word = int(word)
+            list_euc.append(word)
+    
+    price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
+    
+    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+    new_row.append(name_)
+    new_row.append(float(price_))
+    new_row.append(subclass_)
+    new_row.append(division_)
+    new_row.append("European University Cyprus")
+    list_.loc[len(list_)] = new_row
+    list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_famousports(u):
     
     url = "https://www.famousports.com/en" + Item_url_
