@@ -931,6 +931,35 @@ def results_CyMinistryEducation(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_famousports(u):
+    
+    url = "https://www.famousports.com/en" + Item_url_
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    bs = BeautifulSoup(url, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if (response.status_code !=200) or ("Oops! Page Not Found!" in soup.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
+        element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
+        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Famous Sports")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_Marks_Spencer(u):
     
     url="https://www.marksandspencer.com/cy"+Item_url_
