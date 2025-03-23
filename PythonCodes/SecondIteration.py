@@ -2655,8 +2655,8 @@ for u in range(0, len(urls)):
         results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
-    elif retailer_=="FamousSports":
-        results_famoussport(u) 
+    elif retailer_=="Famous Sports":
+        results_famousports(u) 
     elif retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
     elif retailer_=="Bwell Pharmacy":
