@@ -487,8 +487,6 @@ while today_p <= end_date:
     unique_divisions = current_df['Subclass'].unique()
     
     for unique_ in unique_divisions:
-        #df_15 = prior_df[prior_df["Subclass"] == unique_]["CPI Division"]
-        #df_16 = current_df[current_df["Subclass"] == unique_]["CPI Division"]
         df_15 = float(prior_df[prior_df["Subclass"] == unique_]["CPI Division"])
         df_16 = float(current_df[current_df["Subclass"] == unique_]["CPI Division"])
         percentage_change = 100 * (df_16 - df_15) / df_15            
