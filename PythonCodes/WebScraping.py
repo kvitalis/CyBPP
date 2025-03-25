@@ -2698,8 +2698,8 @@ for u in range(0, len(urls)):
         results_CYgar_shop(u)
     elif retailer_=="The royal cigars":
         results_the_royal_cigars(u)  
-    elif retailer_=="E-wholesale":
-        results_ewholesale(u)    
+   # elif retailer_=="E-wholesale":
+        #results_ewholesale(u)    
     elif retailer_=="NUMBEO":
         results_numbeo(u)
     elif retailer_=="Wolt":
