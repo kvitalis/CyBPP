@@ -1,10 +1,10 @@
 Date,Name,Subclass,Price,Division,Retailer
-2025-03-28,GLOSTAD διθέσιος καναπές,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,GLOSTAD διθέσιος καναπές,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,MELLTORP/ADDE τραπέζι και 4 καρέκλες,Household furniture,106.96,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,"BAGGEBO βιβλιοθήκη, 50x30x80 cm",Other furniture and furnishings,24.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,"GURSKEN ντουλάπα, 49x55x186 cm",Other furniture and furnishings,69.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm",Other furniture and furnishings,49.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,"KNARREVIK κομοδίνο, 37x28 cm",Other furniture and furnishings,9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
@@ -31,56 +31,56 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,4.99,RECREATION AND CULTURE,IKEA
 2025-03-28,HÄGRANDE μπρίκι 700 ml,"Cutlery, flatware and silverware",12.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,MIDDAGSMAT κατσαρόλα με καπάκι 2 l,"Cutlery, flatware and silverware",9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-28,NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου 37x45 cm,Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-28,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-28,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Microwave oven Turntable MATESTAR MM-720CW white,Cookers,74.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Vacuum Cleaner MATESTAR MAT-3813R red,Cleaning equipment,59.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Mixer for frappe OSIO OMM-2211 BL black,"Coffee machines, tea makers and similar appliances",11.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Electric pot for Cyprus coffee OSIO OCP-2502BR black/red,"Coffee machines, tea makers and similar appliances",18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Kettle SENCOR SWK 1748WH white,"Coffee machines, tea makers and similar appliances",22.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Iron BLAUPUNKT HSI201BL white/blue,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Toaster MATESTAR MAT-6002W white,Toasters and grills,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114,COMMUNICATION,Stephanis
+2025-03-28,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114.0,COMMUNICATION,Stephanis
 2025-03-28,Back Cover Case for Samsung Galaxy A13 4G CELLY GELSKIN1022 transparent,Mobile telephone equipment,11.95,COMMUNICATION,Stephanis
 2025-03-28,Cable USB-A male/USB-C male 2.0 1.2m OSIO OTU-5912B black,Mobile telephone equipment,6.5,COMMUNICATION,Stephanis
-2025-03-28,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38,RECREATION AND CULTURE,Stephanis
+2025-03-28,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38.0,RECREATION AND CULTURE,Stephanis
 2025-03-28,Portable speaker YENKEE,"Equipment for the reception, recording and reproduction of sound",22.95,RECREATION AND CULTURE,Stephanis
 2025-03-28,Earphones with microphone SAMSUNG EO-IA500BBEGWW black,"Equipment for the reception, recording and reproduction of sound",13.95,RECREATION AND CULTURE,Stephanis
-2025-03-28,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89,RECREATION AND CULTURE,Stephanis
-2025-03-28,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335,RECREATION AND CULTURE,Stephanis
-2025-03-28,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465,RECREATION AND CULTURE,Stephanis
-2025-03-28,Laptop LENOVO IdeaPad 1 15AMN7 82VG00DQCY grey,Personal computers,549,RECREATION AND CULTURE,Stephanis
+2025-03-28,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Laptop LENOVO IdeaPad 1 15AMN7 82VG00DQCY grey,Personal computers,549.0,RECREATION AND CULTURE,Stephanis
 2025-03-28,Case for laptop 13.3 RIVACASE Tivoli 8720 gray,Accessories for information processing equipment,23.95,RECREATION AND CULTURE,Stephanis
 2025-03-28,Cleaning Kit SENCOR,Accessories for information processing equipment,7.5,RECREATION AND CULTURE,Stephanis
 2025-03-28,Accessory kit PRO-MOUNTS Bag of Mounts PM2013GP99,Accessories for information processing equipment,18.95,RECREATION AND CULTURE,Stephanis
-2025-03-28,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12,RECREATION AND CULTURE,Stephanis
-2025-03-28,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-28,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-28,Hair clipper REMINGTON HC5150,Electric appliances for personal care,47.5,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-28,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-28,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-28,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-28,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-28,Smartwatch Strap για XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR8002GL orange,Clocks and watches,28.95,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-28,Board Game 50/50 QUIZ - Animals,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-28,Board Game 50/50 QUIZ - Wolrd,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-28,Board Game ZITO! Ninja Academy T-ZIT-51609,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
 2025-03-28,Board Game 50/50 Games - Athletics,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-28,Board Game ZITO! Rent A Hero T-ZIT-51308,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
-2025-03-28,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Iron TESLA IR200R red,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Iron SENCOR SSI 2027BL white/blue,Irons,18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Iron SENCOR SSI 6100GR green/white,Irons,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
@@ -96,44 +96,44 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Εκπαιδευτικό παιδικό βιβλίο Μαθαίνω Να Γράφω - Τους Αριθμούς,Educational text books,3.75,RECREATION AND CULTURE,Stephanis
 2025-03-28,Toy PLAYMOBIL Special Plus: Mermaid 9355,Toys and celebration articles,4.25,RECREATION AND CULTURE,Stephanis
 2025-03-28,Toy PLAYMOBIL 1.2.3: Construction Worker with Wheelbarrow 70409,Toys and celebration articles,4.75,RECREATION AND CULTURE,Stephanis
-2025-03-28,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55,RECREATION AND CULTURE,Stephanis
-2025-03-28,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65,RECREATION AND CULTURE,Stephanis
-2025-03-28,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65.0,RECREATION AND CULTURE,Stephanis
+2025-03-28,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,Fishing Tool Set 70pcs HI 66258,Equipment for sport,11.35,RECREATION AND CULTURE,Stephanis
 2025-03-28,Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,12.3,RECREATION AND CULTURE,Stephanis
-2025-03-28,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-28,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-28,"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",Tertiary education,11758.46154,EDUCATION,European University Cyprus
-2025-03-28,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",Pre-primary education (ISCED-97 level 0),6915,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
-2025-03-28,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",Primary education (ISCED-97 level 1),7215,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
-2025-03-28,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,8650,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
-2025-03-28,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),8850,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-03-28,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",Pre-primary education (ISCED-97 level 0),6915.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-03-28,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",Primary education (ISCED-97 level 1),7215.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-03-28,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,8650.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-03-28,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),8850.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 2025-03-28,"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,7833.333333,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
-2025-03-28,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),9150,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-03-28,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),9150.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
 2025-03-28,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Letter handling services,0.41,COMMUNICATION,Cyprus Post
 2025-03-28,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Letter handling services,0.64,COMMUNICATION,Cyprus Post
 2025-03-28,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,2.1,COMMUNICATION,Cyprus Post
-2025-03-28,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,4,COMMUNICATION,Cyprus Post
+2025-03-28,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,4.0,COMMUNICATION,Cyprus Post
 2025-03-28,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,11.9,COMMUNICATION,Cyprus Post
 2025-03-28,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,21.65,COMMUNICATION,Cyprus Post
-2025-03-28,KTM SX-E 1.20 Factory Edition 2023,Motor cycles,3300,TRANSPORT,Moto Race
-2025-03-28,KTM 125 Enduro R Orange 2025,Motor cycles,5990,TRANSPORT,Moto Race
-2025-03-28,KTM 390 ADVENTURE 2023 - Black,Motor cycles,7990,TRANSPORT,Moto Race
-2025-03-28,KTM RC 125 Black 2024,Motor cycles,7500,TRANSPORT,Moto Race
-2025-03-28,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72,TRANSPORT,Moto Race
-2025-03-28,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136,TRANSPORT,Moto Race
+2025-03-28,KTM SX-E 1.20 Factory Edition 2023,Motor cycles,3300.0,TRANSPORT,Moto Race
+2025-03-28,KTM 125 Enduro R Orange 2025,Motor cycles,5990.0,TRANSPORT,Moto Race
+2025-03-28,KTM 390 ADVENTURE 2023 - Black,Motor cycles,7990.0,TRANSPORT,Moto Race
+2025-03-28,KTM RC 125 Black 2024,Motor cycles,7500.0,TRANSPORT,Moto Race
+2025-03-28,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72.0,TRANSPORT,Moto Race
+2025-03-28,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136.0,TRANSPORT,Moto Race
 2025-03-28,BRENTA - SEMI METALLIC PAD - 621SM1/FA115,Spare parts for personal transport equipment,5.9,TRANSPORT,Moto Race
 2025-03-28,RK 420MS Non Sealed Chain - Natural Color - 94L,Spare parts for personal transport equipment,12.5,TRANSPORT,Moto Race
 2025-03-28,Black Sport Mirror Set 006-8MM-R/R,Spare parts for personal transport equipment,15.5,TRANSPORT,Moto Race
-2025-03-28,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Spare parts for personal transport equipment,32,TRANSPORT,Moto Race
-2025-03-28,Progrip PG2500 Fork Boots-Blue,Spare parts for personal transport equipment,25,TRANSPORT,Moto Race
-2025-03-28,ARROW STAINLESS STEEL CLAMP PROTECTION,Spare parts for personal transport equipment,3,TRANSPORT,Moto Race
+2025-03-28,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Spare parts for personal transport equipment,32.0,TRANSPORT,Moto Race
+2025-03-28,Progrip PG2500 Fork Boots-Blue,Spare parts for personal transport equipment,25.0,TRANSPORT,Moto Race
+2025-03-28,ARROW STAINLESS STEEL CLAMP PROTECTION,Spare parts for personal transport equipment,3.0,TRANSPORT,Moto Race
 2025-03-28,Motorex Four Stroke 4T 10W/40 1L,Lubricants,10.7,TRANSPORT,Moto Race
-2025-03-28,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12,TRANSPORT,Moto Race
+2025-03-28,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12.0,TRANSPORT,Moto Race
 2025-03-28,Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,13.2,TRANSPORT,Moto Race
 2025-03-28,Thumbs up - Tyre Repair Kit,Maintenance and repair of personal transport equipment,8.14,TRANSPORT,Moto Race
 2025-03-28,Μηχανικό μολύβι 0.5 λιλά χρώμα,Other stationery and drawing materials,0.45,RECREATION AND CULTURE,Parga
@@ -141,7 +141,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Στυλό Διαρκείας Μπλέ Bic Cristal Medium,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
 2025-03-28,Μαρκαδόρος ασπροπίνακα με στρογγυλή μύτη - μπλε,Other stationery and drawing materials,0.95,RECREATION AND CULTURE,Parga
 2025-03-28,Σετ highlighter Fluo Peps - 4 χρώματα,Other stationery and drawing materials,3.2,RECREATION AND CULTURE,Parga
-2025-03-28,Σβηστήρι-Γόμα Grip 2001,Other stationery and drawing materials,2,RECREATION AND CULTURE,Parga
+2025-03-28,Σβηστήρι-Γόμα Grip 2001,Other stationery and drawing materials,2.0,RECREATION AND CULTURE,Parga
 2025-03-28,Διορθωτικό Στυλό 8ml,Other stationery and drawing materials,0.85,RECREATION AND CULTURE,Parga
 2025-03-28,Ψαλίδι essentials 13cm,Other stationery and drawing materials,1.2,RECREATION AND CULTURE,Parga
 2025-03-28,Χρωματιστοί συνδετήρες 28mm 50 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
@@ -183,34 +183,34 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,"Σωλήνας ντουλάπας Μ200xΠ1,5 cm",Repair of household appliances,6.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
 2025-03-28,Σετ τηλέφωνο ντους με σπιράλ και στήριγμα Roca Stella,Repair of household appliances,29.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
 2025-03-28,Βούρτσα πιγκάλ SENSEA μαύρο,Repair of household appliances,2.59,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
-2025-03-28,FLYING HORSE cabin luggage,Travel goods,45,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
-2025-03-28,FANTOM – Spinner 4 wheels – Cabin – Front Loader,Travel goods,95,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
-2025-03-28,VOLKSWAGEN GOLF 1.0 AUTOMATIC 1000cc,Second-hand motor cars,11000,TRANSPORT,Stock Center
-2025-03-28,KIA PICANTO PETROL MANUAL 1000cc,Second-hand motor cars,10500,TRANSPORT,Stock Center
-2025-03-28,KIA RIO 1.2cc MANUAL PETROL 1200cc,Second-hand motor cars,12700,TRANSPORT,Stock Center
-2025-03-28,SEAT ARONA 1.0cc TSI AUTOMATIC PETROL 1000cc,Second-hand motor cars,14500,TRANSPORT,Stock Center
-2025-03-28,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900,TRANSPORT,Nissan
-2025-03-28,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900,TRANSPORT,Nissan
-2025-03-28,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900,TRANSPORT,Nissan
-2025-03-28,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000,TRANSPORT,Nissan
-2025-03-28,Toyota Aygo X,New motor cars,17700,TRANSPORT,Toyota
-2025-03-28,The New Toyota Yaris Cross,New motor cars,27900,TRANSPORT,Toyota
-2025-03-28,The New Toyota Yaris,New motor cars,24900,TRANSPORT,Toyota
-2025-03-28,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-03-28,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-03-28,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-03-28,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,15,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-03-28,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
-2025-03-28,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,FLYING HORSE cabin luggage,Travel goods,45.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-03-28,FANTOM – Spinner 4 wheels – Cabin – Front Loader,Travel goods,95.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-03-28,VOLKSWAGEN GOLF 1.0 AUTOMATIC 1000cc,Second-hand motor cars,11000.0,TRANSPORT,Stock Center
+2025-03-28,KIA PICANTO PETROL MANUAL 1000cc,Second-hand motor cars,10500.0,TRANSPORT,Stock Center
+2025-03-28,KIA RIO 1.2cc MANUAL PETROL 1200cc,Second-hand motor cars,12700.0,TRANSPORT,Stock Center
+2025-03-28,SEAT ARONA 1.0cc TSI AUTOMATIC PETROL 1000cc,Second-hand motor cars,14500.0,TRANSPORT,Stock Center
+2025-03-28,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900.0,TRANSPORT,Nissan
+2025-03-28,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900.0,TRANSPORT,Nissan
+2025-03-28,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900.0,TRANSPORT,Nissan
+2025-03-28,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000.0,TRANSPORT,Nissan
+2025-03-28,Toyota Aygo X,New motor cars,17700.0,TRANSPORT,Toyota
+2025-03-28,The New Toyota Yaris Cross,New motor cars,27900.0,TRANSPORT,Toyota
+2025-03-28,The New Toyota Yaris,New motor cars,24900.0,TRANSPORT,Toyota
+2025-03-28,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,15.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-03-28,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
 2025-03-28,Machetero Petit Corona,Cigars,3.2,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
-2025-03-28,Rocky Patel Sixty Toro,Cigars,22,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
-2025-03-28,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
-2025-03-28,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-03-28,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-03-28,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-03-28,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2025-03-28,Carrillo Interlude Rothchild Jr. Maduro Natural,Cigars,4.5,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
 2025-03-28,Marlboro 20 Pack,Cigarettes,4.99,ALCOHOLIC BEVERAGES AND TOBACCO,Numbeo
 2025-03-28,Κλήσεις προς σταθερό,Wired telephone services,0.032,COMMUNICATION,CYTA
 2025-03-28,Κλήσεις προς κινητό,Wireless telephone services,0.057,COMMUNICATION,CYTA
-2025-03-28,MobileInternetHome1,Internet access provision services,35,COMMUNICATION,CYTA
+2025-03-28,MobileInternetHome1,Internet access provision services,35.0,COMMUNICATION,CYTA
 2025-03-28,FREEDOM,Bundled telecommunication services,22.4,COMMUNICATION,CYTA
 2025-03-28,To fixed telephony lines of other providers,Wired telephone services,0.03,COMMUNICATION,Epic
 2025-03-28,To mobile telephony lines of other providers,Wireless telephone services,0.05,COMMUNICATION,Epic
@@ -227,8 +227,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Calls to other providers mobile,Wireless telephone services,0.095,COMMUNICATION,Primetel
 2025-03-28,Cablenet Mobile Service,Wireless telephone services,0.025,COMMUNICATION,Cablenet
 2025-03-28,Cablenet Fixed Service,Wired telephone services,0.025,COMMUNICATION,Cablenet
-2025-03-28,PurpleInternet,Internet access provision services,30,COMMUNICATION,Cablenet
-2025-03-28,PurpleMaxMobile,Bundled telecommunication services,17,COMMUNICATION,Cablenet
+2025-03-28,PurpleInternet,Internet access provision services,30.0,COMMUNICATION,Cablenet
+2025-03-28,PurpleMaxMobile,Bundled telecommunication services,17.0,COMMUNICATION,Cablenet
 2025-03-28,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,PETROLINA
 2025-03-28,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.447,TRANSPORT,PETROLINA
 2025-03-28,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.465,TRANSPORT,PETROLINA
@@ -1578,7 +1578,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Σίφουνας Ολικής Ψωμί Κομμένο 780g,Bread,2.4,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Σίφουνας Μαύρο Μικρό Ψωμί Κομμένο 500g,Bread,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Σίφουνας Κοινό Ψωμί Κομμένο 560g,Bread,1.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2025-03-28,Σίφουνας Κοινό Ψωμί Κομμένο 970g,Bread,2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Σίφουνας Κοινό Ψωμί Κομμένο 970g,Bread,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Σίφουνας Άσπρο Ψωμί 560g,Bread,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Σίφουνας Άσπρο Ψωμί 970g,Bread,2.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Σίφουνας Πίττες Άσπρες Μεγάλες 5Τεμ 550g,Other bakery products,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1686,7 +1686,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Νουνού 10X15g,Other milk products,1.42,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Νουνού Light 400g,Other milk products,1.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Νουνού Γάλα Ζαχαρούχο 397g,Other milk products,2.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2025-03-28,Μάνα Γάλα Ζαχαρούχο 397g,Other milk products,2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Μάνα Γάλα Ζαχαρούχο 397g,Other milk products,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Χαραλαμπίδης Κρίστης Κρέμα Γάλακτος 250ml,Other milk products,2.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Heinz Σούπα Μινεστρόνι 400g,Other food products n.e.c.,2.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Heinz Σούπα Λαχανικών 400g,Other food products n.e.c.,2.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1738,12 +1738,12 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Μύρτιλα 125g,Fresh or chilled fruit,3.36,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Μήλα Κίτρινα Delicious 1kg,Fresh or chilled fruit,2.67,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Μήλα Royal Gala 1kg,Fresh or chilled fruit,2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2025-03-28,Πορτοκάλια Merlin 1kg,Fresh or chilled fruit,3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Πορτοκάλια Merlin 1kg,Fresh or chilled fruit,3.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Πορτοκάλια Για Χυμό 2kg,Fresh or chilled fruit,2.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Ανανάς 1Τεμ,Fresh or chilled fruit,3.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Μάνγκο 1Τεμ,Fresh or chilled fruit,2.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Καρύδα 1Τεμ,Fresh or chilled fruit,1.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2025-03-28,Μάνα Γάλα Ζαχαρούχο 397g,Preserved milk,2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Μάνα Γάλα Ζαχαρούχο 397g,Preserved milk,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Mulik Full Cream Γάλα Σοκολάτα 500ml,Preserved milk,1.88,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Koko Original Ρόφημα Καρύδας 1L,Preserved milk,2.09,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2025-03-28,Oatly Barista Ρόφημα Βρώμης 500ml,Preserved milk,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1958,7 +1958,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,"Soupline Active Fresh Θαλασσινή Αύρα Συμπυκνωμένο Μαλακτικό 1,2L",Cleaning and maintenance products,3.84,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 2025-03-28,Lenor La Collection Escape Συμπυκνωμένο Μαλακτικό 55 Πλύσεις 1.155L,Cleaning and maintenance products,4.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 2025-03-28,"Ariel Color Touch Of Lenor Freshness Υγρό 70 Πλύσεις 3,850L",Cleaning and maintenance products,16.45,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
-2025-03-28,"Dixan Φρεσκάδα Ωκεανού Σκόνη 44 Πλύσεις 2,2kg",Cleaning and maintenance products,11,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-03-28,"Dixan Φρεσκάδα Ωκεανού Σκόνη 44 Πλύσεις 2,2kg",Cleaning and maintenance products,11.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 2025-03-28,"Εύρηκα Active Care Ocean Freshness Σκόνη 50 Πλύσεις 2,750kg",Cleaning and maintenance products,7.19,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 2025-03-28,Dixan Power Caps Color 40Τεμ,Cleaning and maintenance products,11.47,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 2025-03-28,Ariel Aqua Poudre Alpine Σκόνη 50 Πλύσεις 3.250kg,Cleaning and maintenance products,11.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
@@ -2008,14 +2008,14 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Κεο 6X330ml,Lager beer,6.25,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 2025-03-28,Stella Artois 6X330ml,Lager beer,7.99,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 2025-03-28,Carlsberg 8X330ml,Lager beer,7.98,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-2025-03-28,"PUMA ESSENTIALS 10"" MENS SHORTS",Garments for men,21,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,"PUMA ESSENTIALS 10"" MENS SHORTS",Garments for men,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,ADIDAS SHORTS,Garments for men,17.5,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,NORTH FACE MENS,Garments for men,85,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,PUMA CA PRO CLASSIC SHOES,Footwear for men,70,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,NORTH FACE MENS,Garments for men,85.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,PUMA CA PRO CLASSIC SHOES,Footwear for men,70.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,NIKE AIR MAX DAWN MENS SHOES,Footwear for men,80.5,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,ADIDAS M20 SHORT,Garments for women,21,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,ADIDAS OPT ST,Garments for women,28,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,ADIDAS W WINRS,Garments for women,21,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,ADIDAS M20 SHORT,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,ADIDAS OPT ST,Garments for women,28.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,ADIDAS W WINRS,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,PUMA DARE TO FEELIN XTRA WOMENS OVERSIZED TEE,Garments for women,28.5,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,PUMA ESS+ LOVE IS LOVE RELAXED TEE,Garments for women,20.25,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,NIKE WMNS FS LITE RUN 3,Footwear for women,42.45,CLOTHING AND FOOTWEAR,Athlokinisi
@@ -2023,25 +2023,25 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,NIKE LITTLE GIRLS BOXY TEE & BIKE SHORT SET,Garments for infants (0 to 2 years) and children (3 to 13 years),46.5,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,ADIDAS RUNFALCON 3.0 K,Footwear for infants and children,31.5,CLOTHING AND FOOTWEAR,Athlokinisi
 2025-03-28,SKECHERS TWISTY BRIGHTS 2.0 GIRLS SHOES,Footwear for infants and children,69.95,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,HERSCHEL LITTLE AMERICA BACKPACK,Clothing accessories,91,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,ADIDAS BASEB CLASS TRE,Clothing accessories,20,CLOTHING AND FOOTWEAR,Athlokinisi
-2025-03-28,ORBEA - ONNA 29 40,Bicycles,699,TRANSPORT,AWOL
-2025-03-28,ORBEA - ONNA 29 50,Bicycles,599,TRANSPORT,AWOL
+2025-03-28,HERSCHEL LITTLE AMERICA BACKPACK,Clothing accessories,91.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,ADIDAS BASEB CLASS TRE,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-03-28,ORBEA - ONNA 29 40,Bicycles,699.0,TRANSPORT,AWOL
+2025-03-28,ORBEA - ONNA 29 50,Bicycles,599.0,TRANSPORT,AWOL
 2025-03-28,CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,18.2,TRANSPORT,AWOL
-2025-03-28,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26,TRANSPORT,AWOL
+2025-03-28,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26.0,TRANSPORT,AWOL
 2025-03-28,SPECIALIZED - FAST TRAK SPORT,Tyres,18.2,TRANSPORT,AWOL
 2025-03-28,SPECIALIZED - S-Works Turbo T2/T5,Tyres,48.3,TRANSPORT,AWOL
-2025-03-28,Pulifren - Disc Brake Cleaner,Lubricants,9,TRANSPORT,AWOL
-2025-03-28,BARBIERI - REPAIR KIT FOR TUBELESS,Maintenance and repair of personal transport equipment,10,TRANSPORT,AWOL
-2025-03-28,Barbieri - Bike Cleaner Non-Foaming 750ml,Maintenance and repair of personal transport equipment,10,TRANSPORT,AWOL
-2025-03-28,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8,TRANSPORT,AWOL
+2025-03-28,Pulifren - Disc Brake Cleaner,Lubricants,9.0,TRANSPORT,AWOL
+2025-03-28,BARBIERI - REPAIR KIT FOR TUBELESS,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-03-28,Barbieri - Bike Cleaner Non-Foaming 750ml,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-03-28,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8.0,TRANSPORT,AWOL
 2025-03-28,Physiomer Throat Spray 20 ml,Pharmaceutical products,11.99,HEALTH,Bwell Pharmacy
 2025-03-28,Strepsils Lemon Sugar Free Lozenges 24,Pharmaceutical products,6.5,HEALTH,Bwell Pharmacy
 2025-03-28,Tilman Thymo Throat Spray 24ml,Pharmaceutical products,7.85,HEALTH,Bwell Pharmacy
 2025-03-28,Prospan Syrup,Pharmaceutical products,6.96,HEALTH,Bwell Pharmacy
 2025-03-28,Octiset Antiseptic Cutaneous Solution Spray 50ml,Pharmaceutical products,8.99,HEALTH,Bwell Pharmacy
 2025-03-28,Bepanthol (Bepanthene) Hydrogel Burn Care 50gr,Pharmaceutical products,11.97,HEALTH,Bwell Pharmacy
-2025-03-28,Pharmasept Flogo Barrier Protect Cream 50ml,Pharmaceutical products,8,HEALTH,Bwell Pharmacy
+2025-03-28,Pharmasept Flogo Barrier Protect Cream 50ml,Pharmaceutical products,8.0,HEALTH,Bwell Pharmacy
 2025-03-28,Perskindol Cool Gel 250 ml,Pharmaceutical products,10.9,HEALTH,Bwell Pharmacy
 2025-03-28,Arthrostop Cream 100ml,Pharmaceutical products,13.8,HEALTH,Bwell Pharmacy
 2025-03-28,Vitabiotics Pregnacare Liquid 200ml,Pregnancy tests and mechanical contraceptive devices,19.15,HEALTH,Bwell Pharmacy
@@ -2050,8 +2050,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Orthomol Natal Pre 30 capsules,Pregnancy tests and mechanical contraceptive devices,23.95,HEALTH,Bwell Pharmacy
 2025-03-28,Geratherm Rapid Digital Thermometer,Other medical products n.e.c.,14.61,HEALTH,Bwell Pharmacy
 2025-03-28,Braun Thermoscan 3 Digital Ear Thermometer,Other medical products n.e.c.,46.41,HEALTH,Bwell Pharmacy
-2025-03-28,Oxywatch Finger Pulse Oximeter,Other medical products n.e.c.,44,HEALTH,Bwell Pharmacy
-2025-03-28,Nissei Comfort Blood Pressure Monitor,Other medical products n.e.c.,89,HEALTH,Bwell Pharmacy
+2025-03-28,Oxywatch Finger Pulse Oximeter,Other medical products n.e.c.,44.0,HEALTH,Bwell Pharmacy
+2025-03-28,Nissei Comfort Blood Pressure Monitor,Other medical products n.e.c.,89.0,HEALTH,Bwell Pharmacy
 2025-03-28,On Call Plus II Blood Glucose Meter + 50 test strips,Other medical products n.e.c.,29.9,HEALTH,Bwell Pharmacy
 2025-03-28,Flaem RespirAir nebulizer,Other therapeutic appliances and equipment,114.12,HEALTH,Bwell Pharmacy
 2025-03-28,Gamma Nemo nebulizer,Other therapeutic appliances and equipment,97.82,HEALTH,Bwell Pharmacy
@@ -2059,7 +2059,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,BORMANN PRO BBP2400 Πριόνι Κλαδέματος Μπαταρίας Solo 12V,Motorized major tools and equipment,29.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,KAOKEY KAO-K88 Κλαδευτικό Αλυσοπρίονο Μπαταρίας 24V,Motorized major tools and equipment,89.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,BORMANN PRO BBP4300 Φυσητήρας Μπαταρίας Solo 20V,Motorized major tools and equipment,29.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,RYOBI RLM13E33S Χλοοκοπτική Ηλεκτρική Μηχανή 1300W,Motorized major tools and equipment,129,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,RYOBI RLM13E33S Χλοοκοπτική Ηλεκτρική Μηχανή 1300W,Motorized major tools and equipment,129.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,BLACK & DECKER KS501-QS Σέγα Ηλεκτρική 400W,Motorized major tools and equipment,32.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,TACTIX MER-205604 Σετ Kατσαβίδια 12 Tεμάχια,Non-motorized small tools,17.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,ATL TEL34102 Σφυρί 200gr,Non-motorized small tools,4.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
@@ -2069,76 +2069,76 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,BORMANN BHT5020 Σετ Εργαλεία Χειρός 102 Τεμάχια,Miscellaneous small tool accessories,44.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,Miscellaneous small tool accessories,65.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,TOTAL TOT-THKTAC01120 Σετ Εργαλεία Χειρός 120 Τεμάχια,Miscellaneous small tool accessories,79.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,BOSCH WGE03200BY Washing Machine 8kg White,"Clothes washing machines, clothes drying machines and dish washing machines",550,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,BOSCH WGE03200BY Washing Machine 8kg White,"Clothes washing machines, clothes drying machines and dish washing machines",550.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,"IZZY 222873 Caffeccino Φραπεδιέρα, Mαύρο",Other small electric household appliances,39.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,NUTRIBULLET NBP003NBL Φορητό Μπλέντερ Μπλε,Other small electric household appliances,40,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,BOSCH WPG23108GB Dryer 8 kg White,"Clothes washing machines, clothes drying machines and dish washing machines",499,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,WILSON WDW1447WH4.UK Free Standing Dishwasher 60 cm White,"Clothes washing machines, clothes drying machines and dish washing machines",389,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Cookers,79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Cookers,119,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,NUTRIBULLET NBP003NBL Φορητό Μπλέντερ Μπλε,Other small electric household appliances,40.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,BOSCH WPG23108GB Dryer 8 kg White,"Clothes washing machines, clothes drying machines and dish washing machines",499.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,WILSON WDW1447WH4.UK Free Standing Dishwasher 60 cm White,"Clothes washing machines, clothes drying machines and dish washing machines",389.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Cookers,79.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Cookers,119.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,HAMA 00139905 MIC-P35 Allround Μικρόφωνο για PC και Notebook 3.5 mm Jack Plug,"Equipment for the reception, recording and reproduction of sound",14.99,RECREATION AND CULTURE,Electroline
-2025-03-28,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound",10,RECREATION AND CULTURE,Electroline
+2025-03-28,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound",10.0,RECREATION AND CULTURE,Electroline
 2025-03-28,HOPESTAR P40 Mini Bluetooth Ηχείο Μαύρο,"Equipment for the reception, recording and reproduction of sound",29.95,RECREATION AND CULTURE,Electroline
 2025-03-28,LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Food processing appliances,129.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
-2025-03-28,KENWOOD FDP301WH MultiPro Πολυμίξερ,Food processing appliances,89,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-03-28,KENWOOD FDP301WH MultiPro Πολυμίξερ,Food processing appliances,89.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,BORMANN ELITE BBQ1050 Ψησταριά Επιτραπέζια Ηλεκτρική 2000W,Toasters and grills,22.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,CLATRONIC TA 3802 Τοστιέρα για 4 Φέτες,Toasters and grills,39.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
 2025-03-28,Bdtk Men Co T-Shirt Ss,Garments for men,13.1,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,adidas men seasonal essentials monogram graphic t-shirt (IS1827),Garments for men,17.5,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Reebok Men Running 2-1 Short,Garments for men,22.5,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Champion Men Shorts,Garments for men,24.95,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,adidas kids breaknet 2.0 (IG0504),Footwear for men,40,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,adidas kids breaknet 2.0 (IG0504),Footwear for men,40.0,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Bdtk Women Co Bdtk Women Slim Tshirt (1221-902028) (1231-900028),Garments for women,12.45,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,adidas women adidas sportswear future icons winners 3.0 t-sh,Garments for women,17.5,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Bdtk Women Shorts (1231-902105),Garments for women,22.45,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,adidas women train essentials train cotton 3-stripes crop ta,Garments for women,12.5,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,adidas women's duramo sl shoes,Footwear for women,52,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,adidas women court platform shoes (GW9786),Footwear for women,30,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,adidas women's duramo sl shoes,Footwear for women,52.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,adidas women court platform shoes (GW9786),Footwear for women,30.0,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Reebok Women Flexagon Energy Tr 4 (IE4495),Footwear for women,38.5,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,Quiksilver Boy T-Shirts Radical Flag Ss Youth EQBZT04616-WB,Garments for infants (0 to 2 years) and children (3 to 13 years),16.7,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,Quiksilver Keller - Zip-Up Polar Fleece Hoodie for Boys 8-16,Garments for infants (0 to 2 years) and children (3 to 13 years),28,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,New Balance Kids Boy 480 - Shoes Classics Gradeschool,Footwear for infants and children,64,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,Quiksilver Keller - Zip-Up Polar Fleece Hoodie for Boys 8-16,Garments for infants (0 to 2 years) and children (3 to 13 years),28.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,New Balance Kids Boy 480 - Shoes Classics Gradeschool,Footwear for infants and children,64.0,CLOTHING AND FOOTWEAR,Famous Sports
 2025-03-28,New Balance Kids Girl 515 - Classics Preschool (PC515RH),Footwear for infants and children,32.48,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,adidas unisex performance cushioned low socks 3 pairs (IC951),Clothing accessories,13,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,Asics Unisex Lite-Show Run Crew Sock,Clothing accessories,20,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,adidas unisex aeroready training running baseball cap (HT203),Clothing accessories,20,CLOTHING AND FOOTWEAR,Famous Sports
-2025-03-28,Pure Cotton Crew Neck T-Shirt,Garments for men,12,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Regular Fit Trouser with Active Waist,Garments for men,26,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,adidas unisex performance cushioned low socks 3 pairs (IC951),Clothing accessories,13.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,Asics Unisex Lite-Show Run Crew Sock,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,adidas unisex aeroready training running baseball cap (HT203),Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-03-28,Pure Cotton Crew Neck T-Shirt,Garments for men,12.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Regular Fit Trouser with Active Waist,Garments for men,26.0,CLOTHING AND FOOTWEAR,Marks & Spencer
 2025-03-28,3pk Cotton Rich Assorted Pattern Trunks,Garments for men,29.5,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Suede Slip-On Loafers,Footwear for men,79,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Suede Moccasin Slippers,Footwear for men,35,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women,25,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Suede Slip-On Loafers,Footwear for men,79.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Suede Moccasin Slippers,Footwear for men,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women,25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
 2025-03-28,Straight Leg Trousers with Stretch,Garments for women,27.5,CLOTHING AND FOOTWEAR,Marks & Spencer
 2025-03-28,3pk Wired Full Cup T-Shirt Bras A-E,Garments for women,39.5,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Leather Trim Flatform Square Toe Loafers,Footwear for women,55,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,35,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,5pk Pure Cotton Sleepsuits (5 lbs - 3 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,4pk Pure Cotton Booties (0-1 Yrs),Footwear for infants and children,13,CLOTHING AND FOOTWEAR,Marks & Spencer
-2025-03-28,Brushed Pencil Pleat Blackout Temperature Smart Curtains,Furnishing fabrics and curtains,53,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,53,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Velvet Ribbed Eyelet Blackout Curtains,Furnishing fabrics and curtains,69,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Pure Cotton Tufted Floral Bedding Set,Bed linen,75,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Supremely Washable 18 Tog All Seasons Duvet,Bed linen,99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Sierra Pure Cotton Embroidered Bedding Set,Bed linen,99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen,53,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Super Plush Pure Cotton Towel,Table linen and bathroom linen,75,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Leather Trim Flatform Square Toe Loafers,Footwear for women,55.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,5pk Pure Cotton Sleepsuits (5 lbs - 3 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,4pk Pure Cotton Booties (0-1 Yrs),Footwear for infants and children,13.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-03-28,Brushed Pencil Pleat Blackout Temperature Smart Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Velvet Ribbed Eyelet Blackout Curtains,Furnishing fabrics and curtains,69.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Pure Cotton Tufted Floral Bedding Set,Bed linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Supremely Washable 18 Tog All Seasons Duvet,Bed linen,99.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Sierra Pure Cotton Embroidered Bedding Set,Bed linen,99.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,Super Plush Pure Cotton Towel,Table linen and bathroom linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
 2025-03-28,Pure Cotton Tablecloth,Table linen and bathroom linen,22.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
 2025-03-28,Pure Cotton Embroidered Bee Table Runner,Table linen and bathroom linen,19.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,Pure Cotton Geometric Towel,Table linen and bathroom linen,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
-2025-03-28,"Women's Services, HAIRCUT Stylist",Hairdressing for women,30,MISCELLANEOUS GOODS AND SERVICES,Novella
-2025-03-28,"Women's Services, HAIRCUT Stylist",Hairdressing for women,25,MISCELLANEOUS GOODS AND SERVICES,Novella
-2025-03-28,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,26,MISCELLANEOUS GOODS AND SERVICES,Novella
-2025-03-28,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,23,MISCELLANEOUS GOODS AND SERVICES,Novella
-2025-03-28,Adults,"Cinemas, theatres, concerts",9,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Adults 3D,"Cinemas, theatres, concerts",10,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Children,"Cinemas, theatres, concerts",7,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Children 3D,"Cinemas, theatres, concerts",8,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Senior 64,"Cinemas, theatres, concerts",7,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Senior 64 3D,"Cinemas, theatres, concerts",8,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Students,"Cinemas, theatres, concerts",7,RECREATION AND CULTURE,Rio Cinema
-2025-03-28,Students 3D,"Cinemas, theatres, concerts",8,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Pure Cotton Geometric Towel,Table linen and bathroom linen,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-03-28,"Women's Services, HAIRCUT Stylist",Hairdressing for women,30.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-03-28,"Women's Services, HAIRCUT Stylist",Hairdressing for women,25.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-03-28,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,26.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-03-28,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,23.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-03-28,Adults,"Cinemas, theatres, concerts",9.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Adults 3D,"Cinemas, theatres, concerts",10.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Children,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Children 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Senior 64,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Senior 64 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Students,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-03-28,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
 2025-03-28,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2025-03-28,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0305,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2025-03-28,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.0065,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
@@ -2146,10 +2146,10 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
 2025-03-28,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-03-28,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-03-28,Κυβικά ανά μήνα - Larnaca,Water supply,1,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-03-28,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-03-28,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-03-28,Κυβικά ανά μήνα - Nicosia,Water supply,1,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
-2025-03-28,Πάγιο ανά μήνα - Limassol,Water supply,4,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-03-28,Κυβικά ανά μήνα - Nicosia,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-03-28,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-03-28,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-03-28,Κυβικά ανά μήνα - Limassol,Water supply,0.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
 2025-03-28,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.5,RESTAURANTS AND HOTELS,Wolt
@@ -2170,13 +2170,13 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Nero Freddo Espresso,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
 2025-03-28,Nero Freddo Cappuccino,"Restaurants, cafes and dancing establishments",3.8,RESTAURANTS AND HOTELS,Wolt
 2025-03-28,KFC Original Duo with 2 Reg Drinks,Fast food and take away food services,16.5,RESTAURANTS AND HOTELS,Wolt
-2025-03-28,KFC Snack Box,Fast food and take away food services,7,RESTAURANTS AND HOTELS,Wolt
+2025-03-28,KFC Snack Box,Fast food and take away food services,7.0,RESTAURANTS AND HOTELS,Wolt
 2025-03-28,Fish Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",32.5,RESTAURANTS AND HOTELS,Vasos Psarolimano
-2025-03-28,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",28,RESTAURANTS AND HOTELS,Ithaki
-2025-03-28,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",12,RESTAURANTS AND HOTELS,Ithaki
+2025-03-28,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",28.0,RESTAURANTS AND HOTELS,Ithaki
+2025-03-28,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",12.0,RESTAURANTS AND HOTELS,Ithaki
 2025-03-28,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",35.9,RESTAURANTS AND HOTELS,Flames
 2025-03-28,Meat Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",29.5,RESTAURANTS AND HOTELS,Flames
-2025-03-28,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",27,RESTAURANTS AND HOTELS,Pyxida
+2025-03-28,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",27.0,RESTAURANTS AND HOTELS,Pyxida
 2025-03-28,Ετήσιο Τέλος Nicosia,Sewage collection,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2025-03-28,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 2025-03-28,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
@@ -2187,50 +2187,50 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-28,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
 2025-03-28,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
 2025-03-28,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,4,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,7,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,4,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,4,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,4,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,9,TRANSPORT,Intercity Buses
-2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,8,TRANSPORT,Intercity Buses
-2025-03-28,Elisa – Ασημένιο Μενταγιόν Σταυρός (925),Jewellery,22,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Stainless Steel Σταυρός,Jewellery,35,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Ανδρικό Βραχιόλι,Jewellery,35,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Σκουλαρίκια Κορώνα από Ασήμι 925,Jewellery,15,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,"Ασημένιο 925 κολιέ ροζάριο, επιχρυσωμένο με μαύρους κρυστάλλους",Jewellery,30,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Δαχτυλίδι από Ασήμι 925,Jewellery,30,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Andy – Βραχιόλι με αλυσίδα από ασήμι 925,Jewellery,45,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,Leyla – Κολιέ ( 925 – Επίχρυσο 14Κ ),Jewellery,30,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,PETITE SHEFFIELD,Clocks and watches,149,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,OOZOO Vintage,Clocks and watches,99,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
-2025-03-28,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Corrective eye-glasses and contact lenses,149,HEALTH,Centroptical
-2025-03-28,Carrera 5042/S N9PSP 55-19 145 Polarized,Corrective eye-glasses and contact lenses,145,HEALTH,Centroptical
-2025-03-28,Persol – 3128- V 95 4622 145,Corrective eye-glasses and contact lenses,229,HEALTH,Centroptical
-2025-03-28,BURBERRY – B 2267 3316 55-18 145,Corrective eye-glasses and contact lenses,298,HEALTH,Centroptical
-2025-03-28,Dry and Fold Only (up to 5kg),Cleaning of clothing,9,CLOTHING AND FOOTWEAR,Premier Laundry
-2025-03-28,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,35,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,4.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,7.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,4.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,4.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,4.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,9.0,TRANSPORT,Intercity Buses
+2025-03-28,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2025-03-28,Elisa – Ασημένιο Μενταγιόν Σταυρός (925),Jewellery,22.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Stainless Steel Σταυρός,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Ανδρικό Βραχιόλι,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Σκουλαρίκια Κορώνα από Ασήμι 925,Jewellery,15.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,"Ασημένιο 925 κολιέ ροζάριο, επιχρυσωμένο με μαύρους κρυστάλλους",Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Δαχτυλίδι από Ασήμι 925,Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Andy – Βραχιόλι με αλυσίδα από ασήμι 925,Jewellery,45.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,Leyla – Κολιέ ( 925 – Επίχρυσο 14Κ ),Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,PETITE SHEFFIELD,Clocks and watches,149.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,OOZOO Vintage,Clocks and watches,99.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-03-28,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Corrective eye-glasses and contact lenses,149.0,HEALTH,Centroptical
+2025-03-28,Carrera 5042/S N9PSP 55-19 145 Polarized,Corrective eye-glasses and contact lenses,145.0,HEALTH,Centroptical
+2025-03-28,Persol – 3128- V 95 4622 145,Corrective eye-glasses and contact lenses,229.0,HEALTH,Centroptical
+2025-03-28,BURBERRY – B 2267 3316 55-18 145,Corrective eye-glasses and contact lenses,298.0,HEALTH,Centroptical
+2025-03-28,Dry and Fold Only (up to 5kg),Cleaning of clothing,9.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-03-28,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,35.0,CLOTHING AND FOOTWEAR,Premier Laundry
 2025-03-28,Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,2.4,TRANSPORT,Cyprus Public Transport
 2025-03-28,Plastic ANONYMOUS Card / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
 2025-03-28,Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
-2025-03-28,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89,RECREATION AND CULTURE,Musicavenue
-2025-03-28,YAMAHA P125B STAGE PIANO,Musical instruments,690,RECREATION AND CULTURE,Musicavenue
-2025-03-28,YAMAHA KEYBOARD PSRF52,Musical instruments,135,RECREATION AND CULTURE,Musicavenue
-2025-03-28,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325,RECREATION AND CULTURE,Musicavenue
-2025-03-28,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339,RECREATION AND CULTURE,Musicavenue
-2025-03-28,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485,RECREATION AND CULTURE,Musicavenue
+2025-03-28,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89.0,RECREATION AND CULTURE,Musicavenue
+2025-03-28,YAMAHA P125B STAGE PIANO,Musical instruments,690.0,RECREATION AND CULTURE,Musicavenue
+2025-03-28,YAMAHA KEYBOARD PSRF52,Musical instruments,135.0,RECREATION AND CULTURE,Musicavenue
+2025-03-28,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325.0,RECREATION AND CULTURE,Musicavenue
+2025-03-28,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339.0,RECREATION AND CULTURE,Musicavenue
+2025-03-28,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485.0,RECREATION AND CULTURE,Musicavenue
 2025-03-28,Initial chargeFixed,Passenger transport by taxi and hired car with driver,3.42,TRANSPORT,Max 7 Taxi
 2025-03-28,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
 2025-03-28,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
 2025-03-28,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
-2025-03-29,GLOSTAD διθέσιος καναπές,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,GLOSTAD διθέσιος καναπές,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,MELLTORP/ADDE τραπέζι και 4 καρέκλες,Household furniture,106.96,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,"BAGGEBO βιβλιοθήκη, 50x30x80 cm",Other furniture and furnishings,24.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,"GURSKEN ντουλάπα, 49x55x186 cm",Other furniture and furnishings,69.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm",Other furniture and furnishings,49.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,"KNARREVIK κομοδίνο, 37x28 cm",Other furniture and furnishings,9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
@@ -2257,56 +2257,56 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-29,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,4.99,RECREATION AND CULTURE,IKEA
 2025-03-29,HÄGRANDE μπρίκι 700 ml,"Cutlery, flatware and silverware",12.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,MIDDAGSMAT κατσαρόλα με καπάκι 2 l,"Cutlery, flatware and silverware",9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-29,NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου 37x45 cm,Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-29,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Microwave oven Turntable MATESTAR MM-720CW white,Cookers,74.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Vacuum Cleaner MATESTAR MAT-3813R red,Cleaning equipment,59.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Mixer for frappe OSIO OMM-2211 BL black,"Coffee machines, tea makers and similar appliances",11.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Electric pot for Cyprus coffee OSIO OCP-2502BR black/red,"Coffee machines, tea makers and similar appliances",18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Kettle SENCOR SWK 1748WH white,"Coffee machines, tea makers and similar appliances",22.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Iron BLAUPUNKT HSI201BL white/blue,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Toaster MATESTAR MAT-6002W white,Toasters and grills,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114,COMMUNICATION,Stephanis
+2025-03-29,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114.0,COMMUNICATION,Stephanis
 2025-03-29,Back Cover Case for Samsung Galaxy A13 4G CELLY GELSKIN1022 transparent,Mobile telephone equipment,11.95,COMMUNICATION,Stephanis
 2025-03-29,Cable USB-A male/USB-C male 2.0 1.2m OSIO OTU-5912B black,Mobile telephone equipment,6.5,COMMUNICATION,Stephanis
-2025-03-29,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38,RECREATION AND CULTURE,Stephanis
+2025-03-29,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38.0,RECREATION AND CULTURE,Stephanis
 2025-03-29,Portable speaker YENKEE,"Equipment for the reception, recording and reproduction of sound",22.95,RECREATION AND CULTURE,Stephanis
 2025-03-29,Earphones with microphone SAMSUNG EO-IA500BBEGWW black,"Equipment for the reception, recording and reproduction of sound",13.95,RECREATION AND CULTURE,Stephanis
-2025-03-29,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89,RECREATION AND CULTURE,Stephanis
-2025-03-29,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335,RECREATION AND CULTURE,Stephanis
-2025-03-29,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465,RECREATION AND CULTURE,Stephanis
-2025-03-29,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,Personal computers,549,RECREATION AND CULTURE,Stephanis
+2025-03-29,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,Personal computers,549.0,RECREATION AND CULTURE,Stephanis
 2025-03-29,Case for laptop 13.3 RIVACASE Tivoli 8720 gray,Accessories for information processing equipment,23.95,RECREATION AND CULTURE,Stephanis
 2025-03-29,Cleaning Kit SENCOR,Accessories for information processing equipment,7.5,RECREATION AND CULTURE,Stephanis
 2025-03-29,Accessory kit PRO-MOUNTS Bag of Mounts PM2013GP99,Accessories for information processing equipment,18.95,RECREATION AND CULTURE,Stephanis
-2025-03-29,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12,RECREATION AND CULTURE,Stephanis
-2025-03-29,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-29,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-29,Hair clipper REMINGTON HC5150,Electric appliances for personal care,47.5,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-29,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-29,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-29,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-29,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-29,Smartwatch Strap για XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR8002GL orange,Clocks and watches,28.95,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-29,Board Game 50/50 QUIZ - Animals,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-29,Board Game 50/50 QUIZ - Wolrd,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-29,Board Game ZITO! Ninja Academy T-ZIT-51609,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
 2025-03-29,Board Game 50/50 Games - Athletics,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-29,Board Game ZITO! Rent A Hero T-ZIT-51308,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
-2025-03-29,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Iron TESLA IR200R red,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Iron SENCOR SSI 2027BL white/blue,Irons,18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Iron SENCOR SSI 6100GR green/white,Irons,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
@@ -2322,23 +2322,23 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-29,Εκπαιδευτικό παιδικό βιβλίο Μαθαίνω Να Γράφω - Τους Αριθμούς,Educational text books,3.75,RECREATION AND CULTURE,Stephanis
 2025-03-29,Toy PLAYMOBIL Special Plus: Mermaid 9355,Toys and celebration articles,4.25,RECREATION AND CULTURE,Stephanis
 2025-03-29,Toy PLAYMOBIL 1.2.3: Construction Worker with Wheelbarrow 70409,Toys and celebration articles,4.75,RECREATION AND CULTURE,Stephanis
-2025-03-29,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55,RECREATION AND CULTURE,Stephanis
-2025-03-29,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65,RECREATION AND CULTURE,Stephanis
-2025-03-29,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65.0,RECREATION AND CULTURE,Stephanis
+2025-03-29,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-29,Fishing Tool Set 70pcs HI 66258,Equipment for sport,11.35,RECREATION AND CULTURE,Stephanis
 2025-03-29,Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,12.3,RECREATION AND CULTURE,Stephanis
-2025-03-29,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-29,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,GLOSTAD διθέσιος καναπές,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-29,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-29,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,GLOSTAD διθέσιος καναπές,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,MELLTORP/ADDE τραπέζι και 4 καρέκλες,Household furniture,106.96,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-30,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,"BAGGEBO βιβλιοθήκη, 50x30x80 cm",Other furniture and furnishings,24.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-30,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,"GURSKEN ντουλάπα, 49x55x186 cm",Other furniture and furnishings,69.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm",Other furniture and furnishings,49.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,"KNARREVIK κομοδίνο, 37x28 cm",Other furniture and furnishings,9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
@@ -2365,56 +2365,56 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-30,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,4.99,RECREATION AND CULTURE,IKEA
 2025-03-30,HÄGRANDE μπρίκι 700 ml,"Cutlery, flatware and silverware",12.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,MIDDAGSMAT κατσαρόλα με καπάκι 2 l,"Cutlery, flatware and silverware",9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-30,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 2025-03-30,NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου 37x45 cm,Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-2025-03-30,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,NEIDEN σκελετός κρεβατιού 140X200 cm,Household furniture,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-30,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-03-30,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Dishwasher TESLA WD631M white,"Clothes washing machines, clothes drying machines and dish washing machines",325.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,114.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Microwave oven Turntable MATESTAR MM-720CW white,Cookers,74.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Air Conditioner with Inverter TESLA TA36FFML-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Vacuum Cleaner MATESTAR MAT-3813R red,Cleaning equipment,59.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Mixer for frappe OSIO OMM-2211 BL black,"Coffee machines, tea makers and similar appliances",11.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Electric pot for Cyprus coffee OSIO OCP-2502BR black/red,"Coffee machines, tea makers and similar appliances",18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Kettle SENCOR SWK 1748WH white,"Coffee machines, tea makers and similar appliances",22.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Iron BLAUPUNKT HSI201BL white/blue,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Toaster MATESTAR MAT-6002W white,Toasters and grills,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114,COMMUNICATION,Stephanis
+2025-03-30,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114.0,COMMUNICATION,Stephanis
 2025-03-30,Back Cover Case for Samsung Galaxy A13 4G CELLY GELSKIN1022 transparent,Mobile telephone equipment,11.95,COMMUNICATION,Stephanis
 2025-03-30,Cable USB-A male/USB-C male 2.0 1.2m OSIO OTU-5912B black,Mobile telephone equipment,6.5,COMMUNICATION,Stephanis
-2025-03-30,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38,RECREATION AND CULTURE,Stephanis
+2025-03-30,Action camera 4K Outdoor Sports Ultra HD 606481 black,"Equipment for the reception, recording and reproduction of sound and vision",38.0,RECREATION AND CULTURE,Stephanis
 2025-03-30,Portable speaker YENKEE,"Equipment for the reception, recording and reproduction of sound",22.95,RECREATION AND CULTURE,Stephanis
 2025-03-30,Earphones with microphone SAMSUNG EO-IA500BBEGWW black,"Equipment for the reception, recording and reproduction of sound",13.95,RECREATION AND CULTURE,Stephanis
-2025-03-30,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89,RECREATION AND CULTURE,Stephanis
-2025-03-30,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335,RECREATION AND CULTURE,Stephanis
-2025-03-30,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465,RECREATION AND CULTURE,Stephanis
-2025-03-30,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,Personal computers,549,RECREATION AND CULTURE,Stephanis
+2025-03-30,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Laptop BLACKVIEW Acebook 8 grey,Personal computers,335.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Laptop ASUS Vivobook 15 X1504ZA-BQ638W 90NB1022-M01KJ0 silver,Personal computers,465.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,Personal computers,549.0,RECREATION AND CULTURE,Stephanis
 2025-03-30,Case for laptop 13.3 RIVACASE Tivoli 8720 gray,Accessories for information processing equipment,23.95,RECREATION AND CULTURE,Stephanis
 2025-03-30,Cleaning Kit SENCOR,Accessories for information processing equipment,7.5,RECREATION AND CULTURE,Stephanis
 2025-03-30,Accessory kit PRO-MOUNTS Bag of Mounts PM2013GP99,Accessories for information processing equipment,18.95,RECREATION AND CULTURE,Stephanis
-2025-03-30,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12,RECREATION AND CULTURE,Stephanis
-2025-03-30,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-30,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,55.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-30,Hair clipper REMINGTON HC5150,Electric appliances for personal care,47.5,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-30,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36,MISCELLANEOUS GOODS AND SERVICES,Stephanis
-2025-03-30,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-30,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-03-30,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45.0,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-30,Smartwatch Strap για XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR8002GL orange,Clocks and watches,28.95,MISCELLANEOUS GOODS AND SERVICES,Stephanis
 2025-03-30,Board Game 50/50 QUIZ - Animals,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-30,Board Game 50/50 QUIZ - Wolrd,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-30,Board Game ZITO! Ninja Academy T-ZIT-51609,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
 2025-03-30,Board Game 50/50 Games - Athletics,Games and hobbies,6.5,RECREATION AND CULTURE,Stephanis
 2025-03-30,Board Game ZITO! Rent A Hero T-ZIT-51308,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
-2025-03-30,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",425.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Iron TESLA IR200R red,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Iron SENCOR SSI 2027BL white/blue,Irons,18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Iron SENCOR SSI 6100GR green/white,Irons,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
@@ -2430,14 +2430,21 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-03-30,Εκπαιδευτικό παιδικό βιβλίο Μαθαίνω Να Γράφω - Τους Αριθμούς,Educational text books,3.75,RECREATION AND CULTURE,Stephanis
 2025-03-30,Toy PLAYMOBIL Special Plus: Mermaid 9355,Toys and celebration articles,4.25,RECREATION AND CULTURE,Stephanis
 2025-03-30,Toy PLAYMOBIL 1.2.3: Construction Worker with Wheelbarrow 70409,Toys and celebration articles,4.75,RECREATION AND CULTURE,Stephanis
-2025-03-30,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55,RECREATION AND CULTURE,Stephanis
-2025-03-30,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65,RECREATION AND CULTURE,Stephanis
-2025-03-30,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Vacuum cleaner SENCOR SVC 5501BK black,Cleaning equipment,65.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65.0,RECREATION AND CULTURE,Stephanis
+2025-03-30,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
 2025-03-30,Fishing Tool Set 70pcs HI 66258,Equipment for sport,11.35,RECREATION AND CULTURE,Stephanis
 2025-03-30,Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,12.3,RECREATION AND CULTURE,Stephanis
-2025-03-30,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
-2025-03-30,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-30,Blender/Chopper TESLA Delight Series HB510BWS blue/white,Other small electric household appliances,55.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-03-28,5G Unlimited Max,Bundled telecommunication services,19.99,COMMUNICATION,Epic
+2025-03-28,Νουνού Light 10X15g,Other milk products,1.42,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Φαρμακάς Νερό 12x500ml,Mineral or spring waters,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-03-28,Ετήσιο Τέλος Larnaca,Sewage collection,0.4433333333333333,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2025-03-28,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+2025-03-28,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",23.0,RESTAURANTS AND HOTELS,Meze Tavern
+2025-03-28,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",26.0,RESTAURANTS AND HOTELS,Meze Tavern
