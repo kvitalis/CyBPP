@@ -11146,3 +11146,776 @@ Date,Name,Subclass,Price,Division,Retailer
 2025-04-01,Τέλος Χρήσης Larnaca,Sewage collection,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
 2025-04-01,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",23.0,RESTAURANTS AND HOTELS,Meze Tavern
 2025-04-01,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",26.0,RESTAURANTS AND HOTELS,Meze Tavern
+2025-04-02,"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",Tertiary education,11758.461538461539,EDUCATION,European University Cyprus
+2025-04-02,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",Pre-primary education (ISCED-97 level 0),6915.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",Primary education (ISCED-97 level 1),7215.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,8650.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),8850.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025",Secondary education,7833.333333333333,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),9150.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-04-02,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Letter handling services,0.41,COMMUNICATION,Cyprus Post
+2025-04-02,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Letter handling services,0.64,COMMUNICATION,Cyprus Post
+2025-04-02,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,2.1,COMMUNICATION,Cyprus Post
+2025-04-02,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,4.0,COMMUNICATION,Cyprus Post
+2025-04-02,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,11.9,COMMUNICATION,Cyprus Post
+2025-04-02,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,21.65,COMMUNICATION,Cyprus Post
+2025-04-02,KTM SX-E 1.20 Factory Edition 2023,Motor cycles,3300.0,TRANSPORT,Moto Race
+2025-04-02,KTM 125 Enduro R Orange 2025,Motor cycles,5990.0,TRANSPORT,Moto Race
+2025-04-02,KTM 390 ADVENTURE 2023 - Black,Motor cycles,7990.0,TRANSPORT,Moto Race
+2025-04-02,KTM RC 125 Black 2024,Motor cycles,7500.0,TRANSPORT,Moto Race
+2025-04-02,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72.0,TRANSPORT,Moto Race
+2025-04-02,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136.0,TRANSPORT,Moto Race
+2025-04-02,BRENTA - SEMI METALLIC PAD - 621SM1/FA115,Spare parts for personal transport equipment,5.9,TRANSPORT,Moto Race
+2025-04-02,RK 420MS Non Sealed Chain - Natural Color - 94L,Spare parts for personal transport equipment,12.5,TRANSPORT,Moto Race
+2025-04-02,Black Sport Mirror Set 006-8MM-R/R,Spare parts for personal transport equipment,15.5,TRANSPORT,Moto Race
+2025-04-02,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Spare parts for personal transport equipment,32.0,TRANSPORT,Moto Race
+2025-04-02,Progrip PG2500 Fork Boots-Blue,Spare parts for personal transport equipment,25.0,TRANSPORT,Moto Race
+2025-04-02,ARROW STAINLESS STEEL CLAMP PROTECTION,Spare parts for personal transport equipment,3.0,TRANSPORT,Moto Race
+2025-04-02,Motorex Four Stroke 4T 10W/40 1L,Lubricants,10.7,TRANSPORT,Moto Race
+2025-04-02,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12.0,TRANSPORT,Moto Race
+2025-04-02,Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,13.2,TRANSPORT,Moto Race
+2025-04-02,Thumbs up - Tyre Repair Kit,Maintenance and repair of personal transport equipment,8.14,TRANSPORT,Moto Race
+2025-04-02,Μηχανικό μολύβι 0.5 λιλά χρώμα,Other stationery and drawing materials,0.45,RECREATION AND CULTURE,Parga
+2025-04-02,Μολύβι γραφής 2H,Other stationery and drawing materials,0.5,RECREATION AND CULTURE,Parga
+2025-04-02,Στυλό Διαρκείας Μπλέ Bic Cristal Medium,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-04-02,Μαρκαδόρος ασπροπίνακα με στρογγυλή μύτη - μπλε,Other stationery and drawing materials,0.95,RECREATION AND CULTURE,Parga
+2025-04-02,Σετ highlighter Fluo Peps - 4 χρώματα,Other stationery and drawing materials,3.2,RECREATION AND CULTURE,Parga
+2025-04-02,Σβηστήρι-Γόμα Grip 2001,Other stationery and drawing materials,2.0,RECREATION AND CULTURE,Parga
+2025-04-02,Διορθωτικό Στυλό 8ml,Other stationery and drawing materials,0.85,RECREATION AND CULTURE,Parga
+2025-04-02,Ψαλίδι essentials 13cm,Other stationery and drawing materials,1.2,RECREATION AND CULTURE,Parga
+2025-04-02,Χρωματιστοί συνδετήρες 28mm 50 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-04-02,Χρωματιστές καρφίτσες 32mm 25 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-04-02,Πιάστρες με διπλό κλιπ 19mm,Other stationery and drawing materials,0.7,RECREATION AND CULTURE,Parga
+2025-04-02,"Λάστιχα 55mm 50γρ, Μεσαίο μέγεθος",Other stationery and drawing materials,1.15,RECREATION AND CULTURE,Parga
+2025-04-02,Χάρτινοι φάκελοι αλληλογραφιάς Α4 - 25 τεμάχια,Other stationery and drawing materials,4.4,RECREATION AND CULTURE,Parga
+2025-04-02,Χαρτάκια κίτρινα σημειώσεων 50mm x 75mm,Other stationery and drawing materials,0.5,RECREATION AND CULTURE,Parga
+2025-04-02,Σύρματα συρραπτικών No 10,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-04-02,Μίνι συρραπτικό Νο. 24/6,Other stationery and drawing materials,1.35,RECREATION AND CULTURE,Parga
+2025-04-02,Διατρητικό 10 φύλλων,Other stationery and drawing materials,3.35,RECREATION AND CULTURE,Parga
+2025-04-02,Το προξενιό της Ιουλίας,Fiction books,18.25,RECREATION AND CULTURE,Parga
+2025-04-02,Το ναυάγιο,Fiction books,18.65,RECREATION AND CULTURE,Parga
+2025-04-02,Το μωρό της σοφίτας,Fiction books,19.35,RECREATION AND CULTURE,Parga
+2025-04-02,Από μένα αυτά…,Other non-fiction books,8.75,RECREATION AND CULTURE,Parga
+2025-04-02,"Φιλαράκια, εραστές και το μεγάλο, φριχτό πράγμα",Other non-fiction books,23.2,RECREATION AND CULTURE,Parga
+2025-04-02,Να βρω ξανά του νήματος την άκρη...,Other non-fiction books,9.2,RECREATION AND CULTURE,Parga
+2025-04-02,Η τέχνη του να έχεις πάντα δίκιο,Other non-fiction books,5.75,RECREATION AND CULTURE,Parga
+2025-04-02,Ο πλουσιότερος άνθρωπος της Βαβυλώνας,Other non-fiction books,6.5,RECREATION AND CULTURE,Parga
+2025-04-02,Διαλειμματική νηστεία και αποφυγή νόσων,Other non-fiction books,10.9,RECREATION AND CULTURE,Parga
+2025-04-02,Διδακτική,Educational text books,24.2,RECREATION AND CULTURE,Parga
+2025-04-02,Μαθαίνω να φροντίζω τον εαυτό μου,Educational text books,10.7,RECREATION AND CULTURE,Parga
+2025-04-02,Ροζάννα,Educational text books,13.5,RECREATION AND CULTURE,Parga
+2025-04-02,Η παιδεία παίζει,Educational text books,24.3,RECREATION AND CULTURE,Parga
+2025-04-02,Το δώρο,Educational text books,13.85,RECREATION AND CULTURE,Parga
+2025-04-02,Το μυστικό: Καθημερινά μαθήματα ζωής,Educational text books,14.75,RECREATION AND CULTURE,Parga
+2025-04-02,Το σύγχρονο λεξικό τσέπης για μαθητές δημοτικού,Educational text books,9.9,RECREATION AND CULTURE,Parga
+2025-04-02,Γλωσσικά μυστήρια στη Β΄ δημοτικού,Educational text books,7.75,RECREATION AND CULTURE,Parga
+2025-04-02,Τεστάκια γλώσσας Γ΄δημοτικού,Educational text books,9.8,RECREATION AND CULTURE,Parga
+2025-04-02,Γλώσσα Δ΄ δημοτικού,Educational text books,17.7,RECREATION AND CULTURE,Parga
+2025-04-02,Γίνομαι άριστος στη γλώσσα Ε΄ δημοτικού,Educational text books,12.7,RECREATION AND CULTURE,Parga
+2025-04-02,Τεστάκια μαθηματικών Στ' δημοτικού,Educational text books,8.75,RECREATION AND CULTURE,Parga
+2025-04-02,Το λυσάρι. Α γυμνασίου,Educational text books,25.15,RECREATION AND CULTURE,Parga
+2025-04-02,Kείμενα νεοελληνικής λογοτεχνίας Β΄ γυμνασίου,Educational text books,18.65,RECREATION AND CULTURE,Parga
+2025-04-02,Ευριπίδη Ελένη Γ΄ γυμνασίου,Educational text books,15.35,RECREATION AND CULTURE,Parga
+2025-04-02,Νέα ελληνικά Α΄λυκείου,Educational text books,21.7,RECREATION AND CULTURE,Parga
+2025-04-02,Νεοελληνική γλώσσα & λογοτεχνία Β’ λυκείου,Educational text books,16.9,RECREATION AND CULTURE,Parga
+2025-04-02,Νέα ελληνικά Γ΄ λυκείου,Educational text books,26.7,RECREATION AND CULTURE,Parga
+2025-04-02,"Σωλήνας ντουλάπας Μ200xΠ1,5 cm",Repair of household appliances,6.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-04-02,Σετ τηλέφωνο ντους με σπιράλ και στήριγμα Roca Stella,Repair of household appliances,29.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-04-02,Βούρτσα πιγκάλ SENSEA μαύρο,Repair of household appliances,2.59,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-04-02,FLYING HORSE cabin luggage,Travel goods,45.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-04-02,FANTOM – Spinner 4 wheels – Cabin – Front Loader,Travel goods,95.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-04-02,VOLKSWAGEN GOLF 1.0 AUTOMATIC 1000cc,Second-hand motor cars,11000.0,TRANSPORT,Stock Center
+2025-04-02,KIA PICANTO PETROL MANUAL 1000cc,Second-hand motor cars,10500.0,TRANSPORT,Stock Center
+2025-04-02,KIA RIO 1.2cc MANUAL PETROL 1200cc,Second-hand motor cars,12700.0,TRANSPORT,Stock Center
+2025-04-02,SEAT ARONA 1.0cc TSI AUTOMATIC PETROL 1000cc,Second-hand motor cars,14500.0,TRANSPORT,Stock Center
+2025-04-02,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900.0,TRANSPORT,Nissan
+2025-04-02,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900.0,TRANSPORT,Nissan
+2025-04-02,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900.0,TRANSPORT,Nissan
+2025-04-02,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000.0,TRANSPORT,Nissan
+2025-04-02,Toyota Aygo X,New motor cars,17700.0,TRANSPORT,Toyota
+2025-04-02,The New Toyota Yaris Cross,New motor cars,27900.0,TRANSPORT,Toyota
+2025-04-02,The New Toyota Yaris,New motor cars,24900.0,TRANSPORT,Toyota
+2025-04-02,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,15.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-04-02,Machetero Petit Corona,Cigars,3.20,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2025-04-02,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-04-02,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-04-02,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-04-02,Carrillo Interlude Rothchild Jr. Maduro Natural,Cigars,4.5,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-04-02,Marlboro 20 Pack,Cigarettes,5.0,ALCOHOLIC BEVERAGES AND TOBACCO,Numbeo
+2025-04-02,Κλήσεις προς σταθερό,Wired telephone services,0.032,COMMUNICATION,CYTA
+2025-04-02,Κλήσεις προς κινητό,Wireless telephone services,0.057,COMMUNICATION,CYTA
+2025-04-02,MobileInternetHome1,Internet access provision services,35.0,COMMUNICATION,CYTA
+2025-04-02,FREEDOM,Bundled telecommunication services,22.4,COMMUNICATION,CYTA
+2025-04-02,To fixed telephony lines of other providers,Wired telephone services,0.06,COMMUNICATION,Epic
+2025-04-02,To mobile telephony lines of other providers,Wireless telephone services,0.1,COMMUNICATION,Epic
+2025-04-02,5G Unlimited Max Plus,Bundled telecommunication services,24.99,COMMUNICATION,Epic
+2025-04-02,5G Unlimited Max,Bundled telecommunication services,19.99,COMMUNICATION,Epic
+2025-04-02,Broadband Homebox 1,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-04-02,Broadband Homebox 2,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-04-02,Broadband Homebox 3,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-04-02,Fiber Family & 200Mbps,Internet access provision services,37.99,COMMUNICATION,Primetel
+2025-04-02,Fiber Entertainment & 200Mbps,Internet access provision services,21.99,COMMUNICATION,Primetel
+2025-04-02,GIGA Unlimited,Bundled telecommunication services,14.99,COMMUNICATION,Primetel
+2025-04-02,GIGA Unlimited Plus,Bundled telecommunication services,17.99,COMMUNICATION,Primetel
+2025-04-02,GIGA Unlimited MAX,Bundled telecommunication services,22.99,COMMUNICATION,Primetel
+2025-04-02,Calls to other providers landline,Wired telephone services,0.03,COMMUNICATION,Primetel
+2025-04-02,Calls to other providers mobile,Wireless telephone services,0.095,COMMUNICATION,Primetel
+2025-04-02,Cablenet Mobile Service,Wireless telephone services,0.025,COMMUNICATION,Cablenet
+2025-04-02,Cablenet Fixed Service,Wired telephone services,0.025,COMMUNICATION,Cablenet
+2025-04-02,PurpleInternet,Internet access provision services,30.0,COMMUNICATION,Cablenet
+2025-04-02,PurpleMaxMobile,Bundled telecommunication services,17.0,COMMUNICATION,Cablenet
+2025-04-02,Σίφουνας Ολικής Ψωμί Κομμένο 780g,Bread,2.4,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Μαύρο Μικρό Ψωμί Κομμένο 500g,Bread,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Κοινό Ψωμί Κομμένο 560g,Bread,1.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Κοινό Ψωμί Κομμένο 970g,Bread,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Άσπρο Ψωμί 560g,Bread,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Άσπρο Ψωμί 970g,Bread,2.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Πίττες Άσπρες Μεγάλες 5Τεμ 550g,Other bakery products,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Ψωμί Φέτες Τόστ Άσπρο Μικρό 700g,Other bakery products,2.21,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Φραντζολάκια Στρογγυλά 4Τεμ,Other bakery products,1.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Φραντζολάκια Μακρόστενα Μεγάλα 4Τεμ,Other bakery products,1.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Κρουασάν Βουτύρου 1Τεμ,Other bakery products,1.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Λουκανικόπιτα 1Τεμ,Other bakery products,2.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Πίτα Σάτζιης Με Μέλι 1Τεμ,Other bakery products,1.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Ελιόπιτα Σφολιάτα 1 Τεμ,Other bakery products,2.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Κέικ Γεωγραφίας 750g,Other bakery products,10.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σίφουνας Mix Σιροπιαστά 410g,Other bakery products,5.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bakandys Κουλλούρκα Τραγανάτα Σιταρένια 300g,Other bakery products,2.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μαρίας Παξιμάδια Γλυκανίσου 300g,Other bakery products,2.39,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Johnsof Κρουτόνια 320g,Other bakery products,3.32,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Elite Φρυγανιές Σταρένιες 500g 3+1 Δώρο,Other bakery products,2.7,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bakandys Κρουτόνια 250g,Other bakery products,3.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Barilla Σπαγγέτι No 5 500g,Pasta products and couscous,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Melissa Σπαγγέτι No 6 500g,Pasta products and couscous,1.47,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Melissa Κριθαράκι Χόνδρο 500g,Pasta products and couscous,1.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Σπαγέττι 500g,Pasta products and couscous,1.46,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Κριθαράκι 500g,Pasta products and couscous,1.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Μακαρόνια Α 500g,Pasta products and couscous,1.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Θρίαμβος Χωριάτικα Μακαρόνια 500g,Pasta products and couscous,1.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Θίιαμβος Σπαγέττο 500g,Pasta products and couscous,1.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bens Original Ρύζι Μακρύκοκκο 10 Λεπτά 1kg,Rice,5.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bens Original Ρύζι Μακρύκοκκο 10 Λεπτά 1kg,Rice,5.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Tilda Ρυζι Μπασματι 1kg,Rice,6.16,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Ρύζι Μπασμάτι 1kg,Rice,4.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Tilda Ρύζι Fragrant Jasmine 1kg,Rice,5.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αφοί Α. Κεπόλα Πουργούρι 1kg,Rice,2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μτσίδη Πουργούρι Για Κούπες & Σαλάτες 500g,Rice,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Natural Life Αποφλειωμένο Πουργούρι Πιλάφι 500g,Rice,0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αφοί Α. Κεπόλα Πουργούρι Ολικής Αλέσεως 500g,Rice,1.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Πουργούρι 1kg,Rice,3.51,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Πουργούρι 500g,Rice,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sailor Αλάτι 250g,"Salt, spices and culinary herbs",0.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Πιπέρι Μαύρο Σπαστό 34g,"Salt, spices and culinary herbs",1.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Κανέλα Αλεσμένη 34g,"Salt, spices and culinary herbs",1.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Πάπρικα Καπνιστή 30g,"Salt, spices and culinary herbs",1.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Κουρκουμάς Κιτρινόριζα 30g,"Salt, spices and culinary herbs",1.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Knorr Aromat Μείγμα Λαχανικών & Μυρωδικών 90g,"Salt, spices and culinary herbs",2.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Διάφορα Βότανα 12g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Σκόρδο Τριμμένος 40g,"Salt, spices and culinary herbs",1.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Ρίγανη 30g,"Salt, spices and culinary herbs",1.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Θυμάρι 10g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Κόλιανδρος Σκόνη 20g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Μαϊδανός 10g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Βασιλικός 10g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Άνηθος 10g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Δεντρολίβανο Λάσμαρι 10g,"Salt, spices and culinary herbs",0.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λειβαδιώτη Πράσινη Σφραγίδα Αμύγδαλα 120g,Dried fruit and nuts,2.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Serano Κάσιους Ωμά 140g,Dried fruit and nuts,3.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λειβαδιώτη Καρυδόψιχα 140g,Dried fruit and nuts,3.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Serano Φουντούκια Ωμά 150g,Dried fruit and nuts,3.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Serano Φιστικόψιχα Ψημένη & Αλατισμένη 200g,Dried fruit and nuts,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λειβαδιώτη Αποξηραμένα Σύκα 300g,Dried fruit and nuts,4.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αμαλία Χρυσόμηλα Αποξηραμένα 250g,Dried fruit and nuts,4.19,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Καρπός Από Τη Γη Μας Αποξηραμένα Δαμάσκηνα Με Κουκούτσι 400g,Dried fruit and nuts,4.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αμαλία Φοινίκια Τυνησίας 250g,Dried fruit and nuts,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Serano Σταφίδες 300g,Dried fruit and nuts,2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Serano Snackin' Good Αποξηραμένα Δαμάσκηνα Χωρίς Κουκούτσι Χωρίς Πρόσθετη Ζάχαρη 250g,Dried fruit and nuts,3.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Royal Bee Μέλι 475g,"Jams, marmalades and honey",3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Mavroudes Μέλι 380g,"Jams, marmalades and honey",3.03,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Το Τζιβέρτι Μέλι Ανθέων Squeeze 485g,"Jams, marmalades and honey",5.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Όρος Μαχαιρά Μέλι Θυμαρίσιο Squeeze 480g,"Jams, marmalades and honey",7.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blossom Μαρμελάδα Μερίδες 6x30g,"Jams, marmalades and honey",1.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nutella 200g,"Jams, marmalades and honey",2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Df Ταχίνι 250g,"Jams, marmalades and honey",2.52,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Όλυμπος Super Spread Φυστικοβούτυρο Τραγανό 350g,"Jams, marmalades and honey",3.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλάμπους Γαριδάκια Με Τυρί 10X22g,Crisps,2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lays Αλάτι Ξύδι 160g,Crisps,2.12,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lays Αλάτι 160g,Crisps,2.12,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,El Sabor Nacho Chips Texas Bbq Flavor 225g,Crisps,2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Jumbo Country Chips Με Βαλσάμικο Ξύδι & Καραμελωμένο Κρεμμύδι Χωρίς Γλουτένη 150g,Crisps,2.26,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Pelargos Κλασικό 500g,"Sauces, condiments",1.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Πάστα Ντομάτας 4X70g,"Sauces, condiments",2.31,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blossom Πάστα Ντομάτας 4X70g,"Sauces, condiments",2.19,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Pomilori Περαστή Ντομάτα 690g,"Sauces, condiments",1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sws Πάστα Ντομάτας 425g,"Sauces, condiments",2.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Περαστή Ντομάτα 3x500g,"Sauces, condiments",3.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Maggi Ζωμός Κότας 12Τεμ,"Sauces, condiments",1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Maggi Ζωμός Λαχανικών 16Τεμ,"Sauces, condiments",2.91,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Maggi Ζωμός Για Ζυμαρικά 12Τεμ,"Sauces, condiments",2.74,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Knorr Ζωμός Κότας 12Τεμ,"Sauces, condiments",1.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Knorr Ζωμός Λαχανικών 12Τεμ,"Sauces, condiments",1.83,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Άγιος Γεώργιος Ελληνικό Εξαιρετικό Παρθένο Ελαιόλαδο 1L,Olive oil,10.28,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Άγιος Γεώργιος Κορωνέικο Εξαιρετικό Παρθένο Ελαιόλαδο 1L,Olive oil,10.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σεκέπ Παρθένο Ελαιόλαδο 1L,Olive oil,10.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ελιοχώρι Εξαιρετικό Παρθένο Ελαιόλαδο 1L,Olive oil,14.41,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ambrosia Ηλιανθέλαιο 1L,Other edible oils,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ambrosia Ηλιανθέλαιο 3L,Other edible oils,7.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ambrosia Σογιέλαιο 4L,Other edible oils,9.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ambrosia Καλαμποκέλαιο 1L,Other edible oils,4.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ambrosia Καλαμποκέλαιο 3L,Other edible oils,11.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Δέσποινα Μείγμα Φυτικών Ελαίων 60% Ελαιόλαδο 1L,Other edible oils,4.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Άγιος Γεώργιος Livio Πυρηνέλαιο 1L,Other edible oils,5.91,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Huilor Κραμβέλαιο 3L,Other edible oils,8.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μεσόγειος Ρεβύθια 400g,"Dried vegetables, other preserved or processed vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μεσόγειος Φασόλια Κόκκινα 400g,"Dried vegetables, other preserved or processed vegetables",1.19,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Cirio Φασόλια Άσπρα 400g -20%,"Dried vegetables, other preserved or processed vegetables",1.51,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μεσόγειος Σιταροπούλα 340g,"Dried vegetables, other preserved or processed vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μεσόγειος Μανιτάρια Ολόκληρα 400g,"Dried vegetables, other preserved or processed vegetables",1.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μεσόγειος Φασόλια Σε Σάλτσα Ντομάτας 400g,"Dried vegetables, other preserved or processed vegetables",0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού 10X15g,Other milk products,1.42,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού Light 10X15g,Other milk products,1.42,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού Light 400g,Other milk products,1.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού Γάλα Ζαχαρούχο 397g,Other milk products,2.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μάνα Γάλα Ζαχαρούχο 397g,Other milk products,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Κρέμα Γάλακτος 250ml,Other milk products,2.6,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Heinz Σούπα Μινεστρόνι 400g,Other food products n.e.c.,2.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Heinz Σούπα Λαχανικών 400g,Other food products n.e.c.,2.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lotus Caramelised 2X250g Special Offer,Other food products n.e.c.,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Φρου Φρου Morning Coffee 150g,Other food products n.e.c.,1.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kinder Σοκολάτα 4Τεμ 50g,Other food products n.e.c.,0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Oreo 154g,Other food products n.e.c.,1.67,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Παπαδοπούλου Γεμιστά Κρέμα Βανίλιας 200g,Other food products n.e.c.,1.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Εμμέλεια Λευκή Κρυσταλλική Ζάχαρη 1kg,Sugar,1.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Natural Life Ζάχαρη Άχνη 500g,Sugar,1.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carnation Spices Ζάχαρη Άχνη 500g,Sugar,1.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Αλεύρι Για Όλες Τις Χρήσεις 1kg,Flours and other cereals,1.37,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Αλεύρι Φαρίνα 00 1kg,Flours and other cereals,2.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Αλεύρι Χωριάτικο 1kg,Flours and other cereals,1.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μιτσίδη Αλεύρι Φαρίνα Ζαχαροπλαστικής 1kg,Flours and other cereals,2.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αδελφοί Καζάζη Αλεύρι Φαρίνα 00 1kg,Flours and other cereals,1.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αδελφοί Καζάζη Αλεύρι Για Όλες Τις Χρήσεις 1kg,Flours and other cereals,1.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bakandys Σοκολάτα Γάλακτος Κουβερτούρα 4x37.5g,Chocolate,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bakandys Άσπρη Σοκολάτα Κουβερτούρα 4x37.5g,Chocolate,1.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Royal Baking Powder 113g,Confectionery products,1.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Στέλλα Ανθόνερο Κιτρόμηλο 500ml,Confectionery products,1.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αμαλία Νησιαστέ 400g,Confectionery products,0.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Carltona Άμυλο Αραβοσίτου 450g,Confectionery products,2.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Bakandys Σαβουαγιάρ 200g,Confectionery products,2.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γιώτης Μαγιά Στιγμής 3x8g,Confectionery products,1.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αμαλία Ινδοκάρυδο Αλεσμένο 250g,Confectionery products,1.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Spry Φυτικό Μαγειρικό Προιόν 350g,Confectionery products,3.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αγρού Ροδόσταγμα 500ml,Confectionery products,4.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ντομάτες 1kg,Fresh or chilled vegetables other than potatoes and other tubers,1.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αγγουράκια Χωραφιού 1kg,Fresh or chilled vegetables other than potatoes and other tubers,5.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λεμόνια Κίτρινα 1kg,Fresh or chilled vegetables other than potatoes and other tubers,1.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κρεμμύδια Κόκκινα Ακαθάριστα 1kg,Fresh or chilled vegetables other than potatoes and other tubers,1.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αγγουράκια 1kg,Fresh or chilled vegetables other than potatoes and other tubers,4.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ντοματίνια Μίνι Φοινικωτά 500g,Fresh or chilled vegetables other than potatoes and other tubers,3.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αβοκάντο 1kg,Fresh or chilled vegetables other than potatoes and other tubers,4.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μαρούλι Ρομάνα Δέσμη 1Τεμ,Fresh or chilled vegetables other than potatoes and other tubers,0.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Πιπεριές Χρωματιστές 4Τεμ,Fresh or chilled vegetables other than potatoes and other tubers,4.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Πατάτες Κυπριακές Νέας Σoδειάς 2kg,Potatoes,3.43,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Φρέσκες Πατάτες Κομμένες 1,5kg",Potatoes,4.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Φρέσκες Πατάτες Κομμένες Wedges 1,5kg",Potatoes,3.19,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μπανάνες Εισαγωγής 1kg,Fresh or chilled fruit,2.09,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μήλα Pink Lady 1kg,Fresh or chilled fruit,3.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Πράσινο Σταφύλι Thomson 500g,Fresh or chilled fruit,3.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κόκκινο Σταφύλι 500g,Fresh or chilled fruit,3.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μήλα Granny Smith 1kg,Fresh or chilled fruit,3.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αχλάδια Krystalia 1kg,Fresh or chilled fruit,3.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μήλα Κόκκινα Delicious 1kg,Fresh or chilled fruit,2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μύρτιλα 125g,Fresh or chilled fruit,3.36,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μήλα Κίτρινα Delicious 1kg,Fresh or chilled fruit,2.67,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μήλα Royal Gala 1kg,Fresh or chilled fruit,2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Πορτοκάλια Merlin 1kg,Fresh or chilled fruit,3.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Πορτοκάλια Για Χυμό 2kg,Fresh or chilled fruit,2.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ανανάς 1Τεμ,Fresh or chilled fruit,3.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μάνγκο 1Τεμ,Fresh or chilled fruit,2.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Καρύδα 1Τεμ,Fresh or chilled fruit,1.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μάνα Γάλα Ζαχαρούχο 397g,Preserved milk,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Mulik Full Cream Γάλα Σοκολάτα 500ml,Preserved milk,1.88,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Koko Original Ρόφημα Καρύδας 1L,Preserved milk,2.09,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Oatly Barista Ρόφημα Βρώμης 500ml,Preserved milk,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λανίτης Ελαφρύ Γάλα 2L,Low fat milk,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Λανίτης Ελαφρύ Γάλα 1,5L",Low fat milk,2.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Delact Γάλα 1L,Low fat milk,1.82,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Ελαφρύ Γάλα 2L,Low fat milk,3.14,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Ελαφρύ Γάλα 1L,Low fat milk,1.58,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Χαραλαμπίδης Κρίστης Ελαφρύ Γάλα 1,5L",Low fat milk,2.37,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λανίτης Πλήρες Γάλα 2L,Whole milk,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Πλήρες Γάλα 2L,Whole milk,3.14,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Στραγγάτο 1kg,Yoghurt,4.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Zita Στραγγιστό 1kg,Yoghurt,4.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Zita Στραγγιστό Άπαχο 0% 1kg,Yoghurt,4.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Στραγγάτο Άπαχο 0% 1kg,Yoghurt,4.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αλάμπρα Πρόβειο Γιαούρτι Η Γιαγιά 700g,Yoghurt,3.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lurpak Αλατισμένο Βούτυρο 250g,Butter,4.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kerrygold Αλατισμένο Βούτυρο 250g,Butter,4.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lurpak Soft Ανάλατο Βούτυρο 225g,Butter,4.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lurpak Soft Αλατισμένο Βούτυρο 225g,Butter,4.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Vitalite Light Μαργαρίνη 500g,Margarine and other vegetable fats,3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Original Μαργαρίνη 500g,Margarine and other vegetable fats,3.37,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Light Μαργαρίνη 500g,Margarine and other vegetable fats,3.34,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Flora Original 100% Φυτικό 450g,Margarine and other vegetable fats,3.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Flora Light 100% Φυτικό 450g,Margarine and other vegetable fats,3.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μινέρβα Φαστ Soft Light 220g,Margarine and other vegetable fats,1.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Vasilico Eggs Αυγά Μεσσαία 15Τεμ,Eggs,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nikiforou Eggs Αχυρώνα Size M 12Τεμ,Eggs,3.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Φάρμα Τζιώνη Αυγά Μεσσαία 12Τεμ,Eggs,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Quaker Νιφάδες Βρώμης 500g,Breakfast cereals,3.1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Quaker Τραγανές Μπουκιές Βρώμη Φρούτα 450g,Breakfast cereals,4.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Oreo O's Cereal 350g,Breakfast cereals,4.04,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kelloggs Corn Flakes 375g,Breakfast cereals,3.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kelloggs Coco Pops Jumbos 375g,Breakfast cereals,3.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kelloggs Coco Pops Chocos 550g,Breakfast cereals,5.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kelloggs Special K 335g,Breakfast cereals,4.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kelloggs Crunchy Nut 375g,Breakfast cereals,4.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χοιρινό Κιμάς Μερί 500g,Pork,3.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Χοιρινό Μπριζόλα Λαιμός 4Τεμ 1,200kg",Pork,8.34,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Χοιρινό Σούβλα Λαιμός Λαπάς Με Κόκκαλο 1,1kg",Pork,8.37,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αρνί Για Σούβλα 1kg,Lamb and goat,12.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Αρνί Παϊδάκια Για Σχάρα 1,1kg",Lamb and goat,20.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αρνίσιο Συκώτι 600g,Lamb and goat,7.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Βοδινό Κιμάς 500g,Beef and veal,5.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Βοδινό Συκώτι 500g,Beef and veal,4.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Βοδινό Κύβοι 500g,Beef and veal,4.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κοτόπουλο Φιλέτο 1000g,Poultry,9.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Κοτόπουλο Ολόκληρο 2,8kg",Poultry,13.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Νεφέλη Κοτόπουλο Τεμαχισμένο 2,5kg",Poultry,12.38,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νεφέλη Κοτόπουλο Φιλέτο 800g,Poultry,7.16,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Παστουρμάς 500g,Other meats,7.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χοιρινό Σεφταλιές 850g,Other meats,6.92,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λουκάνικα Χωριάτικα 550g,Other meats,6.88,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χρυσοδάλια Καπνιστό Στήθος Γαλοπούλας Φέτες 200g,"Dried, salted or smoked meat",3.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χρυσοδάλια Λούντζα Καπνιστή Φέτες 300g,"Dried, salted or smoked meat",5.36,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γρηγορίου Ζαμπόν Φέτες 300g,"Dried, salted or smoked meat",4.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γρηγορίου Γαλοπούλα Καπνιστή Φέτες 200g,"Dried, salted or smoked meat",3.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γρηγορίου Σαλάμι Extra 300g,"Dried, salted or smoked meat",2.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Snack Σαλάμι Καπνιστό 500g,"Dried, salted or smoked meat",4.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Snack Ζαμπόν Φέτες 500g,"Dried, salted or smoked meat",3.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Snack Γαλοπούλα Καπνιστή Φέτες 500g,"Dried, salted or smoked meat",6.62,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Snack Λούντζα Φέτες 150g,"Dried, salted or smoked meat",2.88,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Snack Μπέικον Φέτες 300g,"Dried, salted or smoked meat",4.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Karla Corned Beef 340g,Other meat preparations,3.39,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Tulip Pork Luncheon Meat 200g,Other meat preparations,2.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Tulip Chopped Ham 200g,Other meat preparations,3.14,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Zwan Luncheon Meat Γαλοπούλας Με Μπαχαρικά 200g,Other meat preparations,2.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Zwan Chopped Ham And Pork 200g,Other meat preparations,3.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Zwan Βοδινό Luncheon Meat Hot & Spicy 200g,Other meat preparations,2.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,7Seas Κοκκινόψαρο Φιλέτο 800g,Frozen fish,7.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,7Seas Κοκκινόψαρο Ακέφαλο 900g,Frozen fish,6.3,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blue Green Wave Φιλέτο Παγκάσιους 1kg,Frozen fish,5.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,7Seas Γόππα 900g,Frozen fish,4.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σολωμός Φρέσκος 2Τεμ Max 600g,Frozen fish,14.97,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Τσιπούρα Φρέσκια Καθαρισμένη 3Τεμ Max 1,700kg",Fresh or chilled fish,16.92,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Σουπιές Καθαρισμένες 1kg,Fresh or chilled fish,12.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Χταπόδι Φρέσκο 1Τεμ 1,300kg",Fresh or chilled fish,21.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Καλαμάρι Καθαρισμένο 1kg,Fresh or chilled fish,12.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Trata Τόνος Σε Νερό 2Χ160g,Other preserved or processed fish and seafood-based preparations,5.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Trata Τόνος Σε Ελαιόλαδο 2Χ160g,Other preserved or processed fish and seafood-based preparations,5.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sevyco Τόνος Σε Νερό 4X200g,Other preserved or processed fish and seafood-based preparations,7.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sevyco Ροζέ Τόνος Σε Σογιέλαιο 4X200g,Other preserved or processed fish and seafood-based preparations,6.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Rio Mare Τόνος Σε Ελαιόλαδο 2x160g,Other preserved or processed fish and seafood-based preparations,5.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Rio Mare Τόνος Σε Νερό 2x160g,Other preserved or processed fish and seafood-based preparations,5.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Καμήλα Σαρδελάκια Σε Ηλιανθέλαιο 120g,"Dried, smoked or salted fish and seafood",1.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Wiko Φιλέτα Ρέγγας Σε Σάλτσα Ντομάτας 200g,"Dried, smoked or salted fish and seafood",2.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Flokos Φιλέτο Σκουμπρί Καπνιστό Σε Φυτικό Λάδι 160g,"Dried, smoked or salted fish and seafood",3.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Καμήλα Αντζιούγες 50g,"Dried, smoked or salted fish and seafood",1.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Crown Αντικολλητικό Τηγάνι 30cm,Non-electric kitchen utensils and articles,22.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Resto Τηγάνι Stainless Steel 18/10 20cm,Non-electric kitchen utensils and articles,16.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Theoglass Αλουμίνιο Ταψί Στρογγυλό 28x9.5cm 1Τεμ,Non-electric kitchen utensils and articles,13.75,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Κουτάλια Precius 12Τεμ,Non-electric kitchen utensils and articles,14.75,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Syoss Αφρός Volume Lift Έξτρα Δυνατό Κράτημα 250ml,Personal grooming treatments,4.65,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Wella Blondor Ξανθιστική Σκόνη 10g,Personal grooming treatments,1.95,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Loreal Elvive Hydra Hyaluronic Μάσκα Για Αφυδατωμένα Μαλλιά 300ml,Personal grooming treatments,6.35,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Loreal Invisi Fix Gel 6 Πολύ Δυνατό Κράτημα 150ml,Personal grooming treatments,5.59,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Taft Super Glue Styling Gel 14 150ml,Personal grooming treatments,3.78,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Farcom Oxycream 30 Volumes 70ml,Personal grooming treatments,1.45,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Farcom Oxycream 40 Volumes 70ml,Personal grooming treatments,1.45,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Farcom Oxycream 20 Volumes 70ml,Personal grooming treatments,1.45,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Always Ultra Secure Night Με Φτερά 12Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.21,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Gillette Original Αφρός Ξυρισματος 200ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.34,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Str8 Ahead After Shave Lotion 100ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",9.6,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Septona Bio Μπατονέτες Βιοδιασπώμενες Σακκουλάκι 100Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",0.99,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Tippys Δίσκοι Ντεμακιγιάζ 80Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.05,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Neutro Roberts Deodorant Powder Fresh Roll On 50ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",3.3,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Lux Secret Poppy Κρεμοσάπουνο 380ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.85,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Nivea Men Deodorant Dry Impact Spray 150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",3.95,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Elda Χαρτί Τουαλέτας 24Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",8.5,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Rex Χαρτί Τουαλέτας 48Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",10.99,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Sensi Soft Zig Zag Pre Cut Βαμβάκι 150g,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.05,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Listerine Fresh Burst 250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.97,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Garnier Skin Active Moisture Bomb Tissue Mask 1Τεμ 28g,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.19,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Garnier Skin Active Aloe Refreshing Gel Wash Για Κανονικές/Μικτές Επιδερμίδες 150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",5.65,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Dermomed Freschezza White Musk Αφρόλουτρο 650ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.22,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Aquafresh Fresh & Minty 2x75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",3.08,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Sensodyne Complete Protection Cool Mint 75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",3.52,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Dettol Soft On Skin Soothe Lavender & Violet Blossom Κρεμοσάπουνο 250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",3.71,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Every Day Hyperdry Super Ultra Plus 18Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.39,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Always Dailies Fresh & Protect Normal Fresh Scent 30Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",2.37,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Gillette Blue Ii Plus Slalom Ξυραφάκια 10Τεμ,"Articles for personal hygiene and wellness, esoteric products and beauty products",5.52,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Κεο Vsop Brandy 1L,Spirits and liqueurs,12.49,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Gordons Dry Gin 700ml,Spirits and liqueurs,16.15,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Baileys Original Liqueur 700ml,Spirits and liqueurs,17.95,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Aperol Aperitivo 1L,Spirits and liqueurs,17.75,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Bacardi Superior Rum 700ml,Spirits and liqueurs,15.95,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Kopparberg Strawberry & Lime Cider 500ml,Spirits and liqueurs,1.95,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Αγία Σκέπη Bio Organic Κινόα 500g,Other cereal products,4.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Natural Life Λιναρόσπορος 300g,Other cereal products,1.7,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Natural Life Σπόροι Chia 340g,Other cereal products,3.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αγία Σκέπη Bio Organic Φαγόπυρος 500g,Other cereal products,3.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Natural Life Τσάι Χαμομήλι 20Τεμ,Tea,1.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Lipton Yellow Label Τσάι 20Τεμ,Tea,1.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ahmad Tea Πράσινο Τσάι 25Τεμ,Tea,1.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Ahmad Tea Αγγλικό Πρόγευμα 20Τεμ,Tea,1.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nescafe Classic 200g,Coffee,6.83,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nescafe Classic 100g,Coffee,4.19,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Jacobs Εκλεκτός 100g,Coffee,5.24,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λαϊκού Κυπριακός Καφές Χρυσός 200g,Coffee,4.01,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλάμπους Κυπριακός Καφές 200g,Coffee,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λαϊκού Κυπριακός Καφές Χρυσός 500g,Coffee,9.51,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nescafe Azera Freddo Espresso Intenso 90g,Coffee,7.02,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nescafe Classic Decaf 100g,Coffee,4.92,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Douwe Egberts Καφές Espresso 185g,Coffee,9.74,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλάμπους Κυπριακός Καφές 500g,Coffee,9.98,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Celest Cafe Classic 200g,Coffee,5.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nescafe Gold 95g,Coffee,4.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Birds Eye Breaded Cod Large Fillets 4Τεμ,Frozen seafood,13.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Royal Blue Θράψαλο Ροδέλα 1kg,Frozen seafood,7.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blue Green Wave Καλαμάρι Ροδέλες 1kg,Frozen seafood,7.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Edesma Καβουρόψιχα 250g,Frozen seafood,2.24,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Castle Black Tiger Γαρίδες 16/20 1kg,Frozen seafood,8.77,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Coca Cola 8X330ml,Soft drinks,5.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sprite 6X330ml,Soft drinks,4.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Schweppes Pink Grapefruit 6X330ml,Soft drinks,5.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,7Up Lemon & Lime 8X330ml,Soft drinks,5.46,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Coca Cola Zero 8X330ml,Soft drinks,5.9,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Pepsi 8X330ml,Soft drinks,4.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Schweppes Σόδα 6X330ml,Soft drinks,4.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,7Up Zero Sugar 8X330ml,Soft drinks,5.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Jordan Dental Sticks Clean Between Regular 40Τεμ,Non-electrical appliances,3.9,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Colgate Pro Gum Health Οδοντικό Νήμα 50m,Non-electrical appliances,3.45,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Jordan Expert Clean Οδοντόβουρτσα Medium 1Τεμ,Non-electrical appliances,2.35,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Oral B Οδοντόβουρτσα Junior Star Wars 6-12 Χρονών Soft 1Τεμ,Non-electrical appliances,2.35,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+2025-04-02,Kean Χυμός Πορτοκάλι 1L,Fruit and vegetable juices,2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κεανίτα Χυμός Πορτοκάλι 9X250ml,Fruit and vegetable juices,4.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός Μήλο 9X250ml,Fruit and vegetable juices,5.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός Μήλο 1L,Fruit and vegetable juices,1.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός 5 Φρούτα 1L,Fruit and vegetable juices,1.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κεο Χυμός Πορτοκάλι 1L,Fruit and vegetable juices,1.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λανίτης Χυμός Πορτοκάλι Με Κοματάκια 1L,Fruit and vegetable juices,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός Μήλο 1L,Fruit and vegetable juices,1.8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός Ντομάτας 1L,Fruit and vegetable juices,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Χυμός Μάνγκο Ρόδι 1L,Fruit and vegetable juices,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κεο Χυμός Μήλο 1L,Fruit and vegetable juices,1.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κεο Χυμός Τομάτα 1L,Fruit and vegetable juices,1.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λανίτης Φρουτοποτό Πορτοκάλι Βερίκοκο Μήλο 1L,Fruit and vegetable juices,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λοέλ Χυμός Fruit Mania 1L,Fruit and vegetable juices,1.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Kean Κράνμπερι Φρουτοποτό 1L,Fruit and vegetable juices,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Canderel Γλυκαντικό Σε Σκόνη 90g,Artificial sugar substitutes,5.41,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Sweet N Low Υποκατάστατο Ζάχαρης Σκόνη 80g,Artificial sugar substitutes,5.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γιώτης Sweet & Balance Γλυκαντικό Με Στέβια 80g,Artificial sugar substitutes,4.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μπάρμπα Στάθης Ανάμικτη Σαλάτα Λαχανικών 450g,Frozen vegetables other than potatoes and other tubers,2.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μπάρμπα Στάθης Bio Αρακάς 450g,Frozen vegetables other than potatoes and other tubers,3.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Μπάρμπα Στάθης Λαχανάκια Βρυξελλών 450g,Frozen vegetables other than potatoes and other tubers,2.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blue Green Wave Ανάμικτα Λαχανικά 900g,Frozen vegetables other than potatoes and other tubers,3.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γρηγορίου Pizza Μαργαρίτα 1Τεμ 430g,Pizza and quiche,4.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Γρηγορίου Pizza Ζαμπόν Μπέικον 1Τεμ 460g,Pizza and quiche,5.31,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Πίτσα Σπέσιαλ 1Τεμ 330g,Pizza and quiche,3.2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Πίτσα Τυρί & Ντομάτα 1Τεμ 300g,Pizza and quiche,2.72,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Πίτσα Πεπερόνι 1Τεμ 300g,Pizza and quiche,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Πίτσα Χορτοφαγική 1Τεμ 350g,Pizza and quiche,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Cadbury Ρόφημα Σοκολάτας 250g,Cocoa and powdered chocolate,2.59,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Cadbury Κακάο 125g,Cocoa and powdered chocolate,2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Blossom Κακάο 100g,Cocoa and powdered chocolate,2.55,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Λαϊκού Jolly Κακάο 100g,Cocoa and powdered chocolate,2.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Humana 5 Δημητριακα Με Μπανάνα Χωρίς Προσθήκη Ζάχαρης 200g,Baby food,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Hipp Organic Baby Cereal 100% Ρυζάλευρο 200g,Baby food,4.36,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nestle Φαρίν Λακτέ Με Γάλα 300g,Baby food,4.27,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Humana Φαρίν Λακτέ Χωρίς Προσθήκη Ζάχαρης 200g,Baby food,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Humana Goodnight Φαρίν Λακτέ Ολικής Αλέσεως & Μπανάνα Χωρίς Προσθήκη Ζάχαρης 200g,Baby food,4.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nestle Δημητριακά Με Φρούτα & Γάλα 400g,Baby food,6.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Hipp Organic Baby Cereal 100% Multi Grain Χωρίς Γάλα 200g,Baby food,4.36,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού Frisogrow 3 400g,Baby food,10.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Nan Optipro HM- 0 4 400g,Baby food,12.23,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,S 26 Progress Gold 3 400g,Baby food,10.62,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Νουνού Frisogrow Plus+ 4 800g,Baby food,21.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Comfort Gold Blueberries & Purple Orchid Μαλακτικό 2L,Cleaning and maintenance products,3.8,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Comfort Gold Lilies & Wild Berries Μαλακτικό Ρούχων 4L,Cleaning and maintenance products,6.63,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Comfort Pure Μαλακτικό Ρούχων 2L,Cleaning and maintenance products,3.27,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Comfort Pure Μαλακτικό Ρούχων 4L,Cleaning and maintenance products,5.59,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,"Soupline Active Fresh Θαλασσινή Αύρα Συμπυκνωμένο Μαλακτικό 1,2L",Cleaning and maintenance products,3.84,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Lenor La Collection Escape Συμπυκνωμένο Μαλακτικό 55 Πλύσεις 1.155L,Cleaning and maintenance products,4.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,"Ariel Color Touch Of Lenor Freshness Υγρό 70 Πλύσεις 3,850L",Cleaning and maintenance products,16.45,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,"Dixan Φρεσκάδα Ωκεανού Σκόνη 44 Πλύσεις 2,2kg",Cleaning and maintenance products,11.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,"Εύρηκα Active Care Ocean Freshness Σκόνη 50 Πλύσεις 2,750kg",Cleaning and maintenance products,7.19,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Dixan Power Caps Color 40Τεμ,Cleaning and maintenance products,11.47,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Ariel Aqua Poudre Alpine Σκόνη 50 Πλύσεις 3.250kg,Cleaning and maintenance products,11.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Dettol Power & Fresh Spray Citrus 500ml,Cleaning and maintenance products,4.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Cif Classic Κρέμα Γενικού Καθαρισμού 500ml,Cleaning and maintenance products,2.75,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Roklin Antibacterial Spray Για Το Μπάνιο 750ml,Cleaning and maintenance products,2.61,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Klinex Χλωρίνη Spray Πολλαπλών Χρήσεων 750ml,Cleaning and maintenance products,4.15,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Ajax Σπρέι Πολυκαθαριστικό 4 Σε 1 500ml,Cleaning and maintenance products,3.65,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Fairy Ultra Lemon Υγρό Πιάτων 900ml,Cleaning and maintenance products,3.65,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Εύρηκα Υγρό Πιάτων Λεμόνι 750ml,Cleaning and maintenance products,1.59,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Εύρηκα Υγρό Πιάτων Με Ξύδι 750ml,Cleaning and maintenance products,2.2,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Palmolive Ultra Fresh Lemon Υγρό Πιάτων 500ml,Cleaning and maintenance products,1.98,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+2025-04-02,Κεο 8X330ml,Lager beer,7.75,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Heineken Cans 6X330ml,Lager beer,5.19,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Αλάμπρα Η Γιαγιά Αιγινό Χαλλούμι Π.ο.π 600g,Cheese and curd,9.84,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Δωδώνη Ελαφρύ Σε Άλμη 400g,Cheese and curd,7.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Χαραλαμπίδης Κρίστης Πισσουρκώτικο Πρόβειο Γιαούρτι 800g,Cheese and curd,3.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Arla Natural Τυρί Κρέμα 200g,Cheese and curd,2.39,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,La Vache Qui Rit Original 8Τεμ,Cheese and curd,3.35,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Philadelphia 200g,Cheese and curd,3.02,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Vepo Τσένταρ 10Φέτες 200g,Cheese and curd,3.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Vepo Γκούντα 20Φέτες 400g,Cheese and curd,4.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Παπαφιλίπου N-ice Παγάκια 4,5kg",Edible ices and ice cream,4.07,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Παπαφιλίπου N-ice Παγάκια 2,7kg",Edible ices and ice cream,3.05,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Παπαφιλίπου N-ice Παγάκια 1,5kg",Edible ices and ice cream,2.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regis Παγωτό Agrino Mini Χωνάκια 8Χ35ml,Edible ices and ice cream,3.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Edesma Μπιφτέκια Λαχανικών 4Τεμ,Ready-made meals,5.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Μακαρόνια Παστίτσιο Χορτοφαγικά 425g,Ready-made meals,4.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Κανελόνια 400g,Ready-made meals,4.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Regina Κανελόνια 400g,Ready-made meals,4.49,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Κεο Λευκό Ξηρό Κρασί 1L,Wine from grapes,2.59,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Mateus Rose Κρασί 750ml,Wine from grapes,4.99,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Κεο Ερυθρό Ξηρό Κρασί 1L,Wine from grapes,5.7,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Etosha Κάρβουνα 5kg,Coal,6.95,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+2025-04-02,Πυρσός Κάρβουνα 5kg,Coal,5.99,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+2025-04-02,"Άγιος Νικόλαος 6X1,5L",Mineral or spring waters,2.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Άγιος Νικόλαος 12X500ml,Mineral or spring waters,3.29,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Αγρός 6X1,5L",Mineral or spring waters,2.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Αγρός 12X500ml,Mineral or spring waters,3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Φαρμακάς Νερό 12x500ml,Mineral or spring waters,1.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,"Κύκκος 6Χ1,5L",Mineral or spring waters,2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2025-04-02,Pedigree Dentastix Medium 3Τεμ,Products for pets,2.22,RECREATION AND CULTURE,SupermarketCy
+2025-04-02,Cesar Clasicos Με Τρυφερό Κοτόπουλο 150g,Products for pets,1.65,RECREATION AND CULTURE,SupermarketCy
+2025-04-02,Whiskas Fish Favourites Σολωμό Τόνο Σε Ζελέ 4x85g,Products for pets,2.59,RECREATION AND CULTURE,SupermarketCy
+2025-04-02,Simba Special Pack Μπουκιές 4x100g,Products for pets,1.89,RECREATION AND CULTURE,SupermarketCy
+2025-04-02,Tatrapet Fantasia Οστά Σουπιάς Για Πουλία Που Τραγουδούν 1Τεμ,Products for pets,2.25,RECREATION AND CULTURE,SupermarketCy
+2025-04-02,Leon 6X500ml,Lager beer,7.35,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Κεο 6X330ml,Lager beer,6.25,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Stella Artois 6X330ml,Lager beer,7.99,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,Carlsberg 8X330ml,Lager beer,7.98,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+2025-04-02,"PUMA ESSENTIALS 10"" MENS SHORTS",Garments for men,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS SHORTS,Garments for men,17.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,NORTH FACE MENS,Garments for men,85.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,PUMA CA PRO CLASSIC SHOES,Footwear for men,70.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,NIKE AIR MAX DAWN MENS SHOES,Footwear for men,80.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS M20 SHORT,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS OPT ST,Garments for women,28.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS W WINRS,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,PUMA DARE TO FEELIN XTRA WOMENS OVERSIZED TEE,Garments for women,28.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,PUMA ESS+ LOVE IS LOVE RELAXED TEE,Garments for women,20.25,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,NIKE WMNS FS LITE RUN 3,Footwear for women,42.45,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,NIKE JORDAN LITTLE KIDSAIR GRAPHIC CREW SET,Garments for infants (0 to 2 years) and children (3 to 13 years),59.9,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,NIKE LITTLE GIRLS BOXY TEE & BIKE SHORT SET,Garments for infants (0 to 2 years) and children (3 to 13 years),46.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS RUNFALCON 3.0 K,Footwear for infants and children,31.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,SKECHERS TWISTY BRIGHTS 2.0 GIRLS SHOES,Footwear for infants and children,69.95,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,HERSCHEL LITTLE AMERICA BACKPACK,Clothing accessories,91.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ADIDAS BASEB CLASS TRE,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-04-02,ORBEA - ONNA 29 40,Bicycles,699.0,TRANSPORT,AWOL
+2025-04-02,ORBEA - ONNA 29 50,Bicycles,599.0,TRANSPORT,AWOL
+2025-04-02,CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,18.2,TRANSPORT,AWOL
+2025-04-02,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26.0,TRANSPORT,AWOL
+2025-04-02,SPECIALIZED - FAST TRAK SPORT,Tyres,18.2,TRANSPORT,AWOL
+2025-04-02,SPECIALIZED - S-Works Turbo T2/T5,Tyres,48.3,TRANSPORT,AWOL
+2025-04-02,Pulifren - Disc Brake Cleaner,Lubricants,9.0,TRANSPORT,AWOL
+2025-04-02,BARBIERI - REPAIR KIT FOR TUBELESS,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-04-02,Barbieri - Bike Cleaner Non-Foaming 750ml,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-04-02,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8.0,TRANSPORT,AWOL
+2025-04-02,Physiomer Throat Spray 20 ml,Pharmaceutical products,11.99,HEALTH,Bwell Pharmacy
+2025-04-02,Strepsils Lemon Sugar Free Lozenges 24,Pharmaceutical products,6.5,HEALTH,Bwell Pharmacy
+2025-04-02,Tilman Thymo Throat Spray 24ml,Pharmaceutical products,7.85,HEALTH,Bwell Pharmacy
+2025-04-02,Prospan Syrup,Pharmaceutical products,6.96,HEALTH,Bwell Pharmacy
+2025-04-02,Octiset Antiseptic Cutaneous Solution Spray 50ml,Pharmaceutical products,8.99,HEALTH,Bwell Pharmacy
+2025-04-02,Bepanthol (Bepanthene) Hydrogel Burn Care 50gr,Pharmaceutical products,11.97,HEALTH,Bwell Pharmacy
+2025-04-02,Pharmasept Flogo Barrier Protect Cream 50ml,Pharmaceutical products,8.0,HEALTH,Bwell Pharmacy
+2025-04-02,Perskindol Cool Gel 250 ml,Pharmaceutical products,10.9,HEALTH,Bwell Pharmacy
+2025-04-02,Arthrostop Cream 100ml,Pharmaceutical products,13.8,HEALTH,Bwell Pharmacy
+2025-04-02,Vitabiotics Pregnacare Liquid 200ml,Pregnancy tests and mechanical contraceptive devices,19.15,HEALTH,Bwell Pharmacy
+2025-04-02,Biocare Methyl Pregnancy Multinutrient 60 Caps,Pregnancy tests and mechanical contraceptive devices,34.76,HEALTH,Bwell Pharmacy
+2025-04-02,Vitabiotics Pregnacare Plus 56 tabs,Pregnancy tests and mechanical contraceptive devices,28.39,HEALTH,Bwell Pharmacy
+2025-04-02,Orthomol Natal Pre 30 capsules,Pregnancy tests and mechanical contraceptive devices,23.95,HEALTH,Bwell Pharmacy
+2025-04-02,Geratherm Rapid Digital Thermometer,Other medical products n.e.c.,14.61,HEALTH,Bwell Pharmacy
+2025-04-02,Braun Thermoscan 3 Digital Ear Thermometer,Other medical products n.e.c.,46.41,HEALTH,Bwell Pharmacy
+2025-04-02,Oxywatch Finger Pulse Oximeter,Other medical products n.e.c.,44.0,HEALTH,Bwell Pharmacy
+2025-04-02,Nissei Comfort Blood Pressure Monitor,Other medical products n.e.c.,89.0,HEALTH,Bwell Pharmacy
+2025-04-02,On Call Plus II Blood Glucose Meter + 50 test strips,Other medical products n.e.c.,29.9,HEALTH,Bwell Pharmacy
+2025-04-02,Flaem RespirAir nebulizer,Other therapeutic appliances and equipment,114.12,HEALTH,Bwell Pharmacy
+2025-04-02,Gamma Nemo nebulizer,Other therapeutic appliances and equipment,97.82,HEALTH,Bwell Pharmacy
+2025-04-02,dr Frei Turbo Car Nebulizer System,Other therapeutic appliances and equipment,122.27,HEALTH,Bwell Pharmacy
+2025-04-02,BORMANN PRO BBP2400 Πριόνι Κλαδέματος Μπαταρίας Solo 12V,Motorized major tools and equipment,29.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,KAOKEY KAO-K88 Κλαδευτικό Αλυσοπρίονο Μπαταρίας 24V,Motorized major tools and equipment,89.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BORMANN PRO BBP4300 Φυσητήρας Μπαταρίας Solo 20V,Motorized major tools and equipment,29.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,RYOBI RLM13E33S Χλοοκοπτική Ηλεκτρική Μηχανή 1300W,Motorized major tools and equipment,109.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BLACK & DECKER KS501-QS Σέγα Ηλεκτρική 400W,Motorized major tools and equipment,32.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,TACTIX MER-205604 Σετ Kατσαβίδια 12 Tεμάχια,Non-motorized small tools,17.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,ATL TEL34102 Σφυρί 200gr,Non-motorized small tools,4.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,KAPRIOL KAP33623 Σετ Γερμανικά Κλειδιά,Non-motorized small tools,9.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,ASSIST ASS003 Μέτρο 3m,Non-motorized small tools,1.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BORMANN PRO BPP2472 Γάντια Εργασίας,Non-motorized small tools,0.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BORMANN BHT5020 Σετ Εργαλεία Χειρός 102 Τεμάχια,Miscellaneous small tool accessories,44.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,Miscellaneous small tool accessories,65.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,TOTAL TOT-THKTAC01120 Σετ Εργαλεία Χειρός 120 Τεμάχια,Miscellaneous small tool accessories,79.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BOSCH WGE03200BY Washing Machine 8kg White,"Clothes washing machines, clothes drying machines and dish washing machines",550.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,"IZZY 222873 Caffeccino Φραπεδιέρα, Mαύρο",Other small electric household appliances,39.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,NUTRIBULLET NBP003NBL Φορητό Μπλέντερ Μπλε,Other small electric household appliances,40.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BOSCH WPG23108GB Dryer 8 kg White,"Clothes washing machines, clothes drying machines and dish washing machines",499.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,WILSON WDW1447WH4.UK Free Standing Dishwasher 60 cm White,"Clothes washing machines, clothes drying machines and dish washing machines",389.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Cookers,79.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Cookers,119.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,HAMA 00139905 MIC-P35 Allround Μικρόφωνο για PC και Notebook 3.5 mm Jack Plug,"Equipment for the reception, recording and reproduction of sound",14.99,RECREATION AND CULTURE,Electroline
+2025-04-02,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound",10.0,RECREATION AND CULTURE,Electroline
+2025-04-02,HOPESTAR P40 Mini Bluetooth Ηχείο Μαύρο,"Equipment for the reception, recording and reproduction of sound",29.95,RECREATION AND CULTURE,Electroline
+2025-04-02,LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Food processing appliances,129.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,KENWOOD FDP301WH MultiPro Πολυμίξερ,Food processing appliances,89.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,BORMANN ELITE BBQ1050 Ψησταριά Επιτραπέζια Ηλεκτρική 2000W,Toasters and grills,19.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,CLATRONIC TA 3802 Τοστιέρα για 4 Φέτες,Toasters and grills,29.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-04-02,Bdtk Men Co T-Shirt Ss,Garments for men,13.1,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas men seasonal essentials monogram graphic t-shirt (IS1827),Garments for men,17.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Reebok Men Running 2-1 Short,Garments for men,22.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Champion Men Shorts,Garments for men,24.95,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas kids breaknet 2.0 (IG0504),Footwear for men,40.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Bdtk Women Co Bdtk Women Slim Tshirt (1221-902028) (1231-900028),Garments for women,12.45,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas women adidas sportswear future icons winners 3.0 t-sh,Garments for women,17.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas women train essentials train cotton 3-stripes crop ta,Garments for women,12.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas women's duramo sl shoes,Footwear for women,52.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas women court platform shoes (GW9786),Footwear for women,30.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Reebok Women Flexagon Energy Tr 4 (IE4495),Footwear for women,38.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Quiksilver Boy T-Shirts Radical Flag Ss Youth EQBZT04616-WB,Garments for infants (0 to 2 years) and children (3 to 13 years),16.7,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Quiksilver Keller - Zip-Up Polar Fleece Hoodie for Boys 8-16,Garments for infants (0 to 2 years) and children (3 to 13 years),28.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,New Balance Kids Boy 480 - Shoes Classics Gradeschool,Footwear for infants and children,64.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,New Balance Kids Girl 515 - Classics Preschool (PC515RH),Footwear for infants and children,32.48,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas unisex performance cushioned low socks 3 pairs (IC951),Clothing accessories,13.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Asics Unisex Lite-Show Run Crew Sock,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,adidas unisex aeroready training running baseball cap (HT203),Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-04-02,Pure Cotton Crew Neck T-Shirt,Garments for men,12.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Regular Fit Trouser with Active Waist,Garments for men,26.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,3pk Cotton Rich Assorted Pattern Trunks,Garments for men,29.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Suede Slip-On Loafers,Footwear for men,79.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Suede Moccasin Slippers,Footwear for men,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women,25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Straight Leg Trousers with Stretch,Garments for women,27.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,3pk Wired Full Cup T-Shirt Bras A-E,Garments for women,39.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Leather Trim Flatform Square Toe Loafers,Footwear for women,55.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,5pk Pure Cotton Sleepsuits (5 lbs - 3 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,4pk Pure Cotton Booties (0-1 Yrs),Footwear for infants and children,13.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-04-02,Brushed Pencil Pleat Blackout Temperature Smart Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Velvet Ribbed Eyelet Blackout Curtains,Furnishing fabrics and curtains,69.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Pure Cotton Tufted Floral Bedding Set,Bed linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Supremely Washable 18 Tog All Seasons Duvet,Bed linen,99.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Sierra Pure Cotton Embroidered Bedding Set,Bed linen,99.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Super Plush Pure Cotton Towel,Table linen and bathroom linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Pure Cotton Tablecloth,Table linen and bathroom linen,22.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Pure Cotton Embroidered Bee Table Runner,Table linen and bathroom linen,19.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,Pure Cotton Geometric Towel,Table linen and bathroom linen,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-04-02,"Women's Services, HAIRCUT Stylist",Hairdressing for women,30.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-04-02,"Women's Services, HAIRCUT Stylist",Hairdressing for women,25.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-04-02,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,26.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-04-02,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,23.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-04-02,Adults,"Cinemas, theatres, concerts",9.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Adults 3D,"Cinemas, theatres, concerts",10.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Children,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Children 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Senior 64,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Senior 64 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Students,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-04-02,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-04-02,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0305,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-04-02,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.006500000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-04-02,Κόστος Προμήθειας,Electricity,6.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-04-02,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
+2025-04-02,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Κυβικά ανά μήνα - Nicosia,Water supply,1.00,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Κυβικά ανά μήνα - Limassol,Water supply,0.90,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-04-02,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.5,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.55,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Costa Coffee Freddo Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.35,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Costa Coffee Freddo Espresso Primo,"Restaurants, cafes and dancing establishments",3.35,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Ocean Basket Platter For 2,Fast food and take away food services,35.5,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,McDonald's Sharebox,Fast food and take away food services,19.45,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,McDonald's Big Mac,Fast food and take away food services,7.7,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,McDonald's McChicken,Fast food and take away food services,7.7,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Pizza Hut Special,Fast food and take away food services,9.65,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Pizza Hut Classic,Fast food and take away food services,7.95,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Pizza Hut Margarita,Fast food and take away food services,6.8,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Starbucks Cappuccino,"Restaurants, cafes and dancing establishments",4.3,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Starbucks Freddo Cappuccino,"Restaurants, cafes and dancing establishments",4.25,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Starbucks Freddo Espresso,"Restaurants, cafes and dancing establishments",3.95,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Nero Cappuccino,"Restaurants, cafes and dancing establishments",3.8,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Nero Freddo Espresso,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Nero Freddo Cappuccino,"Restaurants, cafes and dancing establishments",3.8,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,KFC Original Duo with 2 Reg Drinks,Fast food and take away food services,16.5,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,KFC Snack Box,Fast food and take away food services,7.0,RESTAURANTS AND HOTELS,Wolt
+2025-04-02,Fish Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",32.5,RESTAURANTS AND HOTELS,Vasos Psarolimano
+2025-04-02,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",28.0,RESTAURANTS AND HOTELS,Ithaki
+2025-04-02,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",12.0,RESTAURANTS AND HOTELS,Ithaki
+2025-04-02,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",35.9,RESTAURANTS AND HOTELS,Flames
+2025-04-02,Meat Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",29.5,RESTAURANTS AND HOTELS,Flames
+2025-04-02,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",27.0,RESTAURANTS AND HOTELS,Pyxida
+2025-04-02,Ετήσιο Τέλος Nicosia,Sewage collection,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+2025-04-02,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+2025-04-02,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+2025-04-02,Τέλος Χρήσης Limassol,Sewage collection,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+2025-04-02,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2025-04-02,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2025-04-02,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
+2025-04-02,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
+2025-04-02,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
+2025-04-02,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2025-04-02,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2025-04-02,Elisa – Ασημένιο Μενταγιόν Σταυρός (925),Jewellery,22.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Stainless Steel Σταυρός,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Ανδρικό Βραχιόλι,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Σκουλαρίκια Κορώνα από Ασήμι 925,Jewellery,15.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,"Ασημένιο 925 κολιέ ροζάριο, επιχρυσωμένο με μαύρους κρυστάλλους",Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Δαχτυλίδι από Ασήμι 925,Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Andy – Βραχιόλι με αλυσίδα από ασήμι 925,Jewellery,45.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,Leyla – Κολιέ ( 925 – Επίχρυσο 14Κ ),Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,PETITE SHEFFIELD,Clocks and watches,149.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,OOZOO Vintage,Clocks and watches,99.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-04-02,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Corrective eye-glasses and contact lenses,149.0,HEALTH,Centroptical
+2025-04-02,Carrera 5042/S N9PSP 55-19 145 Polarized,Corrective eye-glasses and contact lenses,145.0,HEALTH,Centroptical
+2025-04-02,Persol – 3128- V 95 4622 145,Corrective eye-glasses and contact lenses,229.0,HEALTH,Centroptical
+2025-04-02,BURBERRY – B 2267 3316 55-18 145,Corrective eye-glasses and contact lenses,298.0,HEALTH,Centroptical
+2025-04-02,Dry and Fold Only (up to 5kg),Cleaning of clothing,9.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-04-02,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,35.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-04-02,Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,2.4,TRANSPORT,Cyprus Public Transport
+2025-04-02,Plastic ANONYMOUS Card / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
+2025-04-02,Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
+2025-04-02,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,YAMAHA P125B STAGE PIANO,Musical instruments,690.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,YAMAHA KEYBOARD PSRF52,Musical instruments,135.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485.0,RECREATION AND CULTURE,Musicavenue
+2025-04-02,Initial chargeFixed,Passenger transport by taxi and hired car with driver,3.42,TRANSPORT,Max 7 Taxi
+2025-04-02,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
+2025-04-02,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
+2025-04-02,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
