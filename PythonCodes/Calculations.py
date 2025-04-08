@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-'''
+
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-01-02'
 
@@ -278,7 +278,6 @@ if is_last_thursday(current_date_str):
     df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
-
 '''
 ########################################################################################################################################################################################
 # If you want to recalculate everything between two specific dates, then run the following while loop :
@@ -556,5 +555,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-
+'''
 ####################################################    End of the while loop    ################################################################################################################    
