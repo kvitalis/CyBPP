@@ -1,8 +1,6 @@
 Date,Event,Update
 2024-06-27,Initialize the CPI basket and set a new reference date,Yes
 2024-07-09,We add 4 newly available cars from Stock Center since 7 previous cars were sold,Yes
-2024-07-26,We add 2 newly available cars from Stock Center since 2 previous cars were sold; The price of 1 personal computer substantially reduces,Yes
-2024-08-07,We add 4 newly available cars from Stock Center,Yes
 2024-08-09,We replace 7 products from Stephanis and 1 product from MotoRace; We enrich 8 subclasses of SupermarketCy that contain only 1 product with more products,Yes
 2024-10-01,The government is abolishing zero VAT on basic consumer goods,No
 2024-11-04,The government is bringing back the zero VAT on basic consumer goods until 2025-12-31,No
