@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-
+'''
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-01-02'
 
@@ -25,7 +25,7 @@ raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2
 #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Exclude the data of the following retailers
-#raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))]  
+#raw_data = raw_data[~ ( (raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket") )]  
 
 df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
@@ -284,7 +284,7 @@ else:
 ########################################################################################################################################################################################
 
 start_date = datetime.strptime("2024-08-01", "%Y-%m-%d")
-end_date = datetime.strptime("2025-04-08", "%Y-%m-%d")
+end_date = datetime.strptime("2025-04-09", "%Y-%m-%d")
 
 today_p = start_date
 
@@ -307,7 +307,7 @@ while today_p <= end_date:
     #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Exclude the data of the following retailers: 
-    #raw_data = raw_data[~((raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket"))] 
+    #raw_data = raw_data[~ ( (raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket") )] 
     
     df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
     df_daily_division = pd.read_csv("Results/Daily-CPI-Division.csv")
@@ -555,5 +555,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-'''
+
 ####################################################    End of the while loop    ################################################################################################################    
