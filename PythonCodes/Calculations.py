@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-'''
+
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-01-02'
 
@@ -555,5 +555,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-
 ####################################################    End of the while loop    ################################################################################################################    
+'''
