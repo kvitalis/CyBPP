@@ -9,7 +9,7 @@ run-name: Add today's scraped data into Raw-Data.csv
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "17 07 * * *" #UTC time
+    - cron: "02 07 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
