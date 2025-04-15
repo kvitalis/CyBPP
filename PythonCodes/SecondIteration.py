@@ -565,37 +565,35 @@ def results_AWOL(u):
         new_row.append("AWOL")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
-def results_alter_Vape(u):
+
+def results_AlterVape(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
 
-    if ("Page not found" in response.text) or (response.status_code !=200):
+    if ("Page not found" in response.text) or (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all("span",{"class":"price"})
-        price_1=element_soup[0].text.replace("\n","")
-        if "Sale price" in price_1:
-            price_1=price_1.replace("Sale price€","").replace(",",'.')
-
+        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        price_ = element_soup[0].text.replace("\n","").replace("\xa0€","").replace(",",'.')
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(float(price_1))
+        new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)
         new_row.append("Alter Vape")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
+
 def results_bwell_pharmacy(u):
     
     url = "https://bwell.com.cy/shop/" + Item_url_
@@ -1633,20 +1631,20 @@ def results_CYgar_shop(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
             
-def results_the_royal_cigars(u):
+def results_royal_cigars(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    if response.status_code !=200:
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_name = soup.find_all('div',{"class":"itemDetailsPrice"})
         if element_name:
@@ -1666,7 +1664,7 @@ def results_the_royal_cigars(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_pydixa(u):
     
@@ -2689,12 +2687,12 @@ for u in range(0, len(urls)):
         results_nissan(u)
     elif retailer_=="Stock Center":
         results_stock_center(u)    
-    #elif retailer_=="Alter Vape":
-        #results_alter_Vape(u)    
+    elif retailer_=="Alter Vape":
+        results_AlterVape(u)    
     elif retailer_=="The CYgar shop":
         results_CYgar_shop(u)
-    elif retailer_=="The royal cigars":
-        results_the_royal_cigars(u)  
+    elif retailer_=="The Royal Cigars":
+        results_royal_cigars(u)  
     elif retailer_=="E-wholesale":
         results_ewholesale(u)    
     elif retailer_=="NUMBEO":
