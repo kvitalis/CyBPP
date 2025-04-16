@@ -104,10 +104,10 @@ def results_alphamega(u):
         list_["Name"] = list_["Name"].apply(lambda x:x)   
 '''
 
-def results_fuelDaddy(u):
+def results_FuelDaddy(u):
     
-    new_row=[]
-    price_list=[]
+    new_row = []
+    price_list = []
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
     bs = BeautifulSoup(url_new, "html.parser")
@@ -120,7 +120,7 @@ def results_fuelDaddy(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         
     else:
         soup = BeautifulSoup(response.content, "html.parser")
@@ -137,7 +137,7 @@ def results_fuelDaddy(u):
             brand_word="PETROLINA"
             
         name = element_soup[0].find_all("div",{"class" : "col-sm-9"})
-        name_word=name[0].text.strip().replace("\n","")
+        name_word = name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
         
         for i in range(len(element_price)):
@@ -147,7 +147,7 @@ def results_fuelDaddy(u):
             price_list.append(price)
         
         for i in range(1,len(price_list),2):
-            new_row=[]
+            new_row = []
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     
             if price_list[i-1]=='Unleaded 95':
@@ -2620,7 +2620,7 @@ for u in range(0, len(urls)):
     #elif retailer_=="Opa":
         #results_opacy(u)    
     elif retailer_=="Fuel Daddy":
-        results_fuelDaddy(u)
+        results_FuelDaddy(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
     elif retailer_=="Parga":
