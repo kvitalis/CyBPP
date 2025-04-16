@@ -104,7 +104,7 @@ def results_alphamega(u):
         list_["Name"] = list_["Name"].apply(lambda x:x)   
 '''
 
-def results_FuelDaddy(u):
+def results_fueldaddy(u):
     
     new_row = []
     price_list = []
@@ -2621,8 +2621,8 @@ for u in range(0, len(urls)):
         #results_cheapbasket(u)
     #elif retailer_=="Opa":
         #results_opacy(u)    
-    elif retailer_=="Fuel Daddy":
-        results_FuelDaddy(u)
+    #elif retailer_=="Fuel Daddy":
+    #    results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
     elif retailer_=="Parga":
