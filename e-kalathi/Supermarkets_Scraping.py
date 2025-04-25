@@ -231,15 +231,15 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-
-    if retailer_ == "Alphamega":
-        results_alphamega(u)    
-    elif retailer_ == "Cheap Basket":
+  
+    if retailer_ == "Cheap Basket":
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
     #elif retailer_ == "SupermarketCy":
-        #results_supermarketcy(u)    
+        #results_supermarketcy(u)  
+    #elif retailer_ == "Alphamega":
+        #results_alphamega(u)  
     #elif retailer_ == "METRO":
         #results_metro(u)    
     
