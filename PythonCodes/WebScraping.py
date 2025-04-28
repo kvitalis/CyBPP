@@ -2597,7 +2597,7 @@ def results_opacy(u):
 #Initialization of the scraping/processing time
 start_time = time.time()
 
-# Run the code
+# Run the web-scraping code
 for u in range(0, len(urls)):
     print(u)
     
