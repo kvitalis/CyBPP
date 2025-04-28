@@ -3137,6 +3137,47 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+#Max 7 Taxi ()
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Initial chargeFixed")
+new_row.append(float(3.42))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Initial chargeVariable")
+new_row.append(float(4.36))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fare per KmFixed")
+new_row.append(float(0.73))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fare per KmVariable")
+new_row.append(float(0.85))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
