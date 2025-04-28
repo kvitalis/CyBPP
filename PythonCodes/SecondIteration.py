@@ -2595,7 +2595,7 @@ def results_opacy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-# Run the code
+# Run the web-scraping code
 for u in range(0, len(urls)):
     print(u)
     
@@ -2748,6 +2748,47 @@ new_row.append(float(27900))
 new_row.append("New motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Toyota") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Max 7 Taxi (https://www.max7taxi.com/?mod=info&show=excursions)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Initial chargeFixed")
+new_row.append(float(3.42))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Initial chargeVariable")
+new_row.append(float(4.36))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fare per KmFixed")
+new_row.append(float(0.73))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fare per KmVariable")
+new_row.append(float(0.85))
+new_row.append("Passenger transport by taxi and hired car with driver")
+new_row.append("TRANSPORT")
+new_row.append("Max 7 Taxi") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -2906,69 +2947,6 @@ new_row.append("Primetel")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/consumer/pricing/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Πάγιο ανά μήνα - Nicosia")
-new_row.append(float(5.5))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κυβικά ανά μήνα - Nicosia")
-new_row.append(float(1.0))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Water Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Πάγιο ανά μήνα - Larnaca")
-new_row.append(float(3.35))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Δικαίωμα Συντήρησης ανά μήνα - Larnaca")
-new_row.append(float(1.9))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κυβικά ανά μήνα - Larnaca")
-new_row.append(float(1.0))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#European University Cyprus (https://euc.ac.cy/en/admissions/tuition-fees/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025")
-new_row.append(float(11735.2))
-new_row.append("Tertiary education")
-new_row.append("EDUCATION")
-new_row.append("European University Cyprus") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 #Epic (https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3072,6 +3050,69 @@ new_row.append("COMMUNICATION")
 new_row.append("Primetel") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#European University Cyprus (https://euc.ac.cy/en/admissions/tuition-fees/)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025")
+new_row.append(float(11735.2))
+new_row.append("Tertiary education")
+new_row.append("EDUCATION")
+new_row.append("European University Cyprus") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/consumer/pricing/)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Πάγιο ανά μήνα - Nicosia")
+new_row.append(float(5.5))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κυβικά ανά μήνα - Nicosia")
+new_row.append(float(1.0))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Water Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Πάγιο ανά μήνα - Larnaca")
+new_row.append(float(3.35))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Δικαίωμα Συντήρησης ανά μήνα - Larnaca")
+new_row.append(float(1.9))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κυβικά ανά μήνα - Larnaca")
+new_row.append(float(1.0))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
 
 #Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
@@ -3134,47 +3175,6 @@ new_row.append(float(12700))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Max 7 Taxi (https://www.max7taxi.com/?mod=info&show=excursions)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Initial chargeFixed")
-new_row.append(float(3.42))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Initial chargeVariable")
-new_row.append(float(4.36))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Fare per KmFixed")
-new_row.append(float(0.73))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Fare per KmVariable")
-new_row.append(float(0.85))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
