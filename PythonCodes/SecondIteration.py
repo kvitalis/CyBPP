@@ -3137,7 +3137,7 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Max 7 Taxi ()
+#Max 7 Taxi (https://www.max7taxi.com/?mod=info&show=excursions)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Initial chargeFixed")
