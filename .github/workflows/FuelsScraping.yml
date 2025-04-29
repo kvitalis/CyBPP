@@ -9,7 +9,7 @@ run-name: fuels prices scraping
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    #- cron: "41 08 * * *" #UTC time
+    - cron: "01 10 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
