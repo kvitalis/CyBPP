@@ -279,6 +279,20 @@ def is_first_thursday(date):
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
         pass 
 
-#Call the function
+def is_second_thursday(date_str):
+    date = datetime.strptime(date_str, "%Y-%m-%d")
+    first_day = date.replace(day=1)
+    days_to_thursday = (3 - first_day.weekday() + 7) % 7
+    first_thursday = first_day + timedelta(days=days_to_thursday)
+    second_thursday = first_thursday + timedelta(days=7)
+    if date.date() == second_thursday.date():
+       print("ΕΙΝΑΙ Η ΔΕΥΤΕΡΗ ΠΕΜΠΤΗ ΤΟΥ ΜΗΝΑ")
+       last_results = last_results.strftime("%Y-%m-%d")
+       cystat(second_thursday.strftime("%Y-%m-%d"))  # Αν θες να κάνεις κάτι
+    else:
+       print("ΔΕΝ ΕΙΝΑΙ Η ΔΕΥΤΕΡΗ ΠΕΜΠΤΗ ΤΟΥ ΜΗΝΑ")
+       pass
+
 current_date = datetime.now().strftime("%Y-%m-%d")
-is_first_thursday(current_date)    
+#is_first_thursday(current_date) #na figi to # otan theloume tin proti mera tou mina   
+is_second_thursday(current_date) # na gini comments otan dent theloume tin deuteri mera tou mina
