@@ -30,7 +30,7 @@ def cystat(last_results):
     current_year = correction_day.year
     current_day = correction_day.day
     
-    date = datetime(current_year, current_month,current_day)
+    date = datetime(current_year, current_month, current_day)
     date_ = format_date(date, 'MMMM', locale='el')
 
     #Fix the month
@@ -55,7 +55,7 @@ def cystat(last_results):
     anchors = element_1[int(corrent_jj)].find_all('a')
     hrefs = [a.get('href') for a in anchors]
     for href in hrefs:
-        url_href=href
+        url_href = href
 
     #Main part of the documents
     url_months = "https://www.cystat.gov.cy/el"+url_href
@@ -269,10 +269,10 @@ def cystat(last_results):
 
 def is_first_thursday(date):
     date = '2025-05-01'
-    #date = datetime.strptime(date, "%Y-%m-%d")
-    weekday = date.weekday()
-    if weekday == 3 and date.month != (date - timedelta(days=7)).month:
-        first_thursday = date - timedelta(days=7)
+    date_strp = datetime.strptime(date, "%Y-%m-%d")
+    weekday = date_strp.weekday()
+    if weekday == 3 and date_strp.month != (date_strp - timedelta(days=7)).month:
+        first_thursday = date_strp - timedelta(days=7)
         last_results = first_thursday.strftime("%Y-%m-%d")
         cystat(last_results)
     else:
@@ -280,12 +280,12 @@ def is_first_thursday(date):
         pass 
 
 def is_second_thursday(date):
-    date = datetime.strptime(date, "%Y-%m-%d")
-    first_day = date.replace(day=1)
+    date_strp = datetime.strptime(date, "%Y-%m-%d")
+    first_day = date_strp.replace(day=1)
     days_to_thursday = (3 - first_day.weekday() + 7) % 7
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
-    if date.date() == second_thursday.date():
+    if date_strp.date() == second_thursday.date():
        print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
        last_results = second_thursday.strftime("%Y-%m-%d")
        cystat(last_results) 
