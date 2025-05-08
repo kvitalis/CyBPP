@@ -289,7 +289,7 @@ def is_second_thursday(date):
     second_thursday = first_thursday + timedelta(days=7)
     last_results = second_thursday.strftime("%Y-%m-%d")
     cystat(last_results)
-       """
+    """
     if date.date() == second_thursday.date():
        print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
        last_results = second_thursday.strftime("%Y-%m-%d")
@@ -297,7 +297,7 @@ def is_second_thursday(date):
     else:
        print("TODAY IS NOT THE SECOND THURSDAY OF THE MONTH")
        pass
-       """
+    """
 
 current_date = datetime.now().strftime("%Y-%m-%d")
 
