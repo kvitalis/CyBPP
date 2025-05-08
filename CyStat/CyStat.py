@@ -272,8 +272,8 @@ def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
-        last_results = date - timedelta(days=7)
-        last_results = last_results.strftime("%Y-%m-%d")
+        first_thursday = date - timedelta(days=7)
+        last_results = first_thursday.strftime("%Y-%m-%d")
         cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
@@ -287,7 +287,8 @@ def is_second_thursday(date):
     second_thursday = first_thursday + timedelta(days=7)
     if date.date() == second_thursday.date():
        print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
-       cystat(second_thursday.strftime("%Y-%m-%d")) 
+       last_results = second_thursday.strftime("%Y-%m-%d")
+       cystat(last_results) 
     else:
        print("TODAY IS NOT THE SECOND THURSDAY OF THE MONTH")
        pass
