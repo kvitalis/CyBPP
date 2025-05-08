@@ -268,11 +268,11 @@ def cystat(last_results):
     plt.show()
 
 def is_first_thursday(date):
-    date = '2025-05-01'
-    date_strp = datetime.strptime(date, "%Y-%m-%d")
-    weekday = date_strp.weekday()
-    if weekday == 3 and date_strp.month != (date_strp - timedelta(days=7)).month:
-        first_thursday = date_strp - timedelta(days=7)
+    #date = '2025-02-06'
+    date = datetime.strptime(date, "%Y-%m-%d")
+    weekday = date.weekday()
+    if weekday == 3 and date.month != (date - timedelta(days=7)).month:
+        first_thursday = date - timedelta(days=7)
         last_results = first_thursday.strftime("%Y-%m-%d")
         cystat(last_results)
     else:
@@ -280,12 +280,12 @@ def is_first_thursday(date):
         pass 
 
 def is_second_thursday(date):
-    date_strp = datetime.strptime(date, "%Y-%m-%d")
-    first_day = date_strp.replace(day=1)
+    date = datetime.strptime(date, "%Y-%m-%d")
+    first_day = date.replace(day=1)
     days_to_thursday = (3 - first_day.weekday() + 7) % 7
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
-    if date_strp.date() == second_thursday.date():
+    if date.date() == second_thursday.date():
        print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
        last_results = second_thursday.strftime("%Y-%m-%d")
        cystat(last_results) 
@@ -294,5 +294,6 @@ def is_second_thursday(date):
        pass
 
 current_date = datetime.now().strftime("%Y-%m-%d")
-is_first_thursday(current_date)   
+#is_first_thursday(current_date)   
 #is_second_thursday(current_date) 
+cystat(current_date)
