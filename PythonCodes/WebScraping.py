@@ -2635,8 +2635,8 @@ for u in range(0, len(urls)):
         #results_stephanis(u)
     elif retailer_=="Electroline":
         results_electroline(u)
-    elif retailer_=="CYTA":
-        results_CYTA(u)
+   # elif retailer_=="CYTA":
+       # results_CYTA(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)  
     elif retailer_=="Primetel":
