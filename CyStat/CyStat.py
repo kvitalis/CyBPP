@@ -40,7 +40,7 @@ def cystat(last_results):
         _date_="Μάιος"
     else:
         _date_=date_[:3]
-       
+
     _date_="Απρ"
     #Specify the index of website
     for jj in range(0,len(element_1)):
@@ -286,6 +286,9 @@ def is_second_thursday(date):
     days_to_thursday = (3 - first_day.weekday() + 7) % 7
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
+    last_results = second_thursday.strftime("%Y-%m-%d")
+    cystat(last_results)
+       """
     if date.date() == second_thursday.date():
        print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
        last_results = second_thursday.strftime("%Y-%m-%d")
@@ -293,6 +296,7 @@ def is_second_thursday(date):
     else:
        print("TODAY IS NOT THE SECOND THURSDAY OF THE MONTH")
        pass
+       """
 
 current_date = datetime.now().strftime("%Y-%m-%d")
 
