@@ -41,7 +41,7 @@ def cystat(last_results):
     else:
         _date_=date_[:3]
 
-    _date_="Απρ"
+    #_date_="Απρ" manual allagi otan i proti pempti einai argia
     #Specify the index of website
     for jj in range(0,len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
@@ -104,7 +104,7 @@ def cystat(last_results):
         monthly_gen_cpi = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         #date_to_find = last_results
-        date_to_find = "2025-04-24"
+        #date_to_find = "2025-04-24" # na mpei manual i teleutai pempti tou mina 
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
         values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
         values_12 = round(values_12, 2)
@@ -289,17 +289,8 @@ def is_second_thursday(date):
     second_thursday = first_thursday + timedelta(days=7)
     last_results = second_thursday.strftime("%Y-%m-%d")
     cystat(last_results)
-    """
-    if date.date() == second_thursday.date():
-       print("TODAY IS THE SECOND THURSDAY OF THE MONTH")
-       last_results = second_thursday.strftime("%Y-%m-%d")
-       cystat(last_results) 
-    else:
-       print("TODAY IS NOT THE SECOND THURSDAY OF THE MONTH")
-       pass
-    """
 
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-#is_first_thursday(current_date)   
-is_second_thursday(current_date)
+is_first_thursday(current_date)   
+#is_second_thursday(current_date)
