@@ -293,11 +293,7 @@ def is_second_thursday(date):
        print("TODAY IS NOT THE SECOND THURSDAY OF THE MONTH")
        pass
 
-def is_thursday(date):
-    date = '2025-05-08'
-    cystat(date)
-
 current_date = datetime.now().strftime("%Y-%m-%d")
-is_thursday(current_date)  
+
 #is_first_thursday(current_date)   
-#is_second_thursday(current_date)
+is_second_thursday(current_date)
