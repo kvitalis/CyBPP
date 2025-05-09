@@ -40,8 +40,10 @@ def cystat(last_results):
         _date_="Μάιος"
     else:
         _date_=date_[:3]
-
-    #_date_="Απρ" manual allagi otan i proti pempti einai argia
+    
+    #*NOTE*: Change manually when the first Thursday of the month is a public holiday
+    #_date_="Απρ" 
+    
     #Specify the index of website
     for jj in range(0,len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
