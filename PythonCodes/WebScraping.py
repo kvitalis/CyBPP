@@ -2667,8 +2667,8 @@ for u in range(0, len(urls)):
         results_rio(u)    
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
         results_CyMinistryEducation(u)
-    #elif retailer_=="European University Cyprus":
-    #    results_europeanuniversitycyprus(u)    
+    elif retailer_=="European University Cyprus":
+        results_europeanuniversitycyprus(u)    
     elif retailer_=="Cyprus Post":
         results_CyPost(u)
     elif retailer_=="AHK":
