@@ -298,6 +298,57 @@ def results_stephanis(u):
 
 def results_CYTA(u):
     
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if (response.status_code == 200):
+        soup = BeautifulSoup(response.content, "html.parser")
+        
+        # Wired/Wireless telephone services	
+        if (name_=="Κλήσεις προς σταθερό") | (name_=="Κλήσεις προς κινητό") :
+            element_soup = soup.find_all("div",{"class":"table-responsive"})
+            element_ = element_soup[1].text
+            prices_ = re.findall(r'€(\d+,\d+)', element_)
+            if name_=="Κλήσεις προς σταθερό":
+                price_ = prices_[0].replace(",",".")
+            if name_=="Κλήσεις προς κινητό":
+                price_ = prices_[3].replace(",",".")
+        
+        # Internet access provision services	
+        elif name_=="Mobile Internet Home 1" :
+            element_soup = soup.find_all("div",{"class":"card-body px-1"})
+            element_ = element_soup[0].text
+            prices_ = re.findall(r'€(\d+,\d+)', element_)
+            price_ = prices_[0].replace(",",".")
+            
+        # Bundled telecommunication services
+        elif name_=="FREEDOM" :
+            element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
+            element_ = element_soup[0].text
+            prices_ = re.findall(r'€(\d+,\d+)', element_)
+            price_ = prices_[0].replace(",",".")
+            
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("CYTA")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+        
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        
+'''
+def results_CYTA(u):
+    
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -358,6 +409,7 @@ def results_CYTA(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+'''
 
 def results_epic(u):
     
@@ -2616,11 +2668,11 @@ for u in range(0, len(urls)):
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
-        #results_alphamega(u)    
+    #    results_alphamega(u)    
     #elif retailer_=="Cheap Basket":
-        #results_cheapbasket(u)
+    #    results_cheapbasket(u)
     #elif retailer_=="Opa":
-        #results_opacy(u)    
+    #    results_opacy(u)    
     #elif retailer_=="Fuel Daddy":
     #    results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
@@ -2630,13 +2682,13 @@ for u in range(0, len(urls)):
     elif retailer_=="Leroy Merlin":
         results_leroymerlin(u)   
     #elif retailer_=="IKEA":
-        #results_IKEA(u)
+    #    results_IKEA(u)
     #elif retailer_=="Stephanis":
-        #results_stephanis(u)
+    #    results_stephanis(u)
     elif retailer_=="Electroline":
         results_electroline(u)
-   # elif retailer_=="CYTA":
-       # results_CYTA(u)
+    elif retailer_=="CYTA":
+        results_CYTA(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)  
     elif retailer_=="Primetel":
@@ -2688,7 +2740,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Nissan":
         results_nissan(u)
     #elif retailer_=="Stock Center":
-        #results_stock_center(u)    
+    #    results_stock_center(u)    
     elif retailer_=="Alter Vape":
         results_AlterVape(u)    
     elif retailer_=="The CYgar shop":
@@ -2704,7 +2756,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
     #elif retailer_=="Meze Tavern":
-        #results_meze(u)    
+    #    results_meze(u)    
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Ithaki":
