@@ -294,5 +294,5 @@ def is_second_thursday(date):
 
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-is_first_thursday(current_date)   
-#is_second_thursday(current_date)
+is_first_thursday(current_date)  #activate if the first Thursday of the month is NOT a public holiday 
+#is_second_thursday(current_date) #activate if the first Thursday of the month is a public holiday 
