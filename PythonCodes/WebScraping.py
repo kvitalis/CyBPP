@@ -311,15 +311,18 @@ def results_CYTA(u):
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             if name_=="Κλήσεις προς σταθερό":
                 price_ = prices_[0].replace(",",".")
+                print(price_)
             if name_=="Κλήσεις προς κινητό":
                 price_ = prices_[3].replace(",",".")
-        
+                print(price_)
+                
         # Internet access provision services	
         elif name_=="Mobile Internet Home 1" :
             element_soup = soup.find_all("div",{"class":"card-body px-1"})
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
+            print(price_)
             
         # Bundled telecommunication services
         elif name_=="FREEDOM" :
@@ -327,6 +330,7 @@ def results_CYTA(u):
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
+            print(price_)
             
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
