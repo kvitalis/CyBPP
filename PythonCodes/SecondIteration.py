@@ -3174,7 +3174,7 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("KIA PICANTO 1.0cc AUTOMATIC PETROL 1000cc")
-new_row.append(float(11600))
+new_row.append(float(11300))
 new_row.append("Second-hand motor cars")
 new_row.append("TRANSPORT")
 new_row.append("Stock Center") 
