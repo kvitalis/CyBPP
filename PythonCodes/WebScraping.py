@@ -2567,6 +2567,7 @@ def results_stock_center(u):
         soup = BeautifulSoup(response.content, "html.parser")
         element_price_ = soup.find_all("div",{"class":"price"})
         price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\n","").replace(".","").replace("€","")
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2743,8 +2744,8 @@ for u in range(0, len(urls)):
         results_toyota(u)    
     elif retailer_=="Nissan":
         results_nissan(u)
-    #elif retailer_=="Stock Center":
-    #    results_stock_center(u)    
+    elif retailer_=="Stock Center":
+        results_stock_center(u)    
     elif retailer_=="Alter Vape":
         results_AlterVape(u)    
     elif retailer_=="The CYgar shop":
