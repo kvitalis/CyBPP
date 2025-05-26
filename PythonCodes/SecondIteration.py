@@ -3190,7 +3190,7 @@ new_row.append("TRANSPORT")
 new_row.append("Stock Center") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-
+'''
 
 #Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
 new_row=[]
@@ -3233,7 +3233,7 @@ new_row.append("RESTAURANTS AND HOTELS")
 new_row.append("Meze Tavern") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
+
 #===============================================================================
 
 # Change the type as float
