@@ -38,9 +38,8 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 
 def results_alphamega(u):
     
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs,{'headers':header})
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers=header)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -51,7 +50,7 @@ def results_alphamega(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        soup = BeautifulSoup(response.content, "html.parser")
+        soup = BeautifulSoup(response.text, "html.parser")
         element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
         # Extract the script tag content
         script_tag = element_soup[0].find('script')
@@ -232,16 +231,16 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
   
-    if retailer_ == "Cheap Basket":
+    if retailer_ == "Alphamega":
+        results_alphamega(u)  
+    #elif retailer_ == "METRO":
+        #results_metro(u)    
+    elif retailer_ == "Cheap Basket":
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
     #elif retailer_ == "SupermarketCy":
         #results_supermarketcy(u)  
-    #elif retailer_ == "Alphamega":
-        #results_alphamega(u)  
-    #elif retailer_ == "METRO":
-        #results_metro(u)    
     
 # Change the type as float
 list_["Price"].astype(float)
