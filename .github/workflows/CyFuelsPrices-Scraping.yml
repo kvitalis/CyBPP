@@ -5,7 +5,7 @@
 name: fuels-prices-scraping
 
 # Workflow's description
-run-name: Fuels prices sraping completed
+run-name: fuels prices sraping
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
