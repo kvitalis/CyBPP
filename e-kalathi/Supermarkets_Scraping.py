@@ -37,8 +37,9 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 # Define the functions for the web-scraping of the target retailers
 
 def results_alphamega(u):
-    
-    header = {"User-Agent": "Mozilla/5.0"}
+
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #header = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(Item_url_, headers=header)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
@@ -50,7 +51,8 @@ def results_alphamega(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        soup = BeautifulSoup(response.text, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
         # Extract the script tag content
         script_tag = element_soup[0].find('script')
