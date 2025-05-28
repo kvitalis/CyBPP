@@ -106,14 +106,14 @@ def results_alphamega(u):
 
 def results_fueldaddy(u):
     
-    new_row = []
-    price_list = []
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
     url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    response = requests.get(url_new, headers=header)
+    price_list = []
         
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
+        print("No URL")
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -2678,8 +2678,8 @@ for u in range(0, len(urls)):
     #    results_cheapbasket(u)
     #elif retailer_=="Opa":
     #    results_opacy(u)    
-    #elif retailer_=="Fuel Daddy":
-    #    results_fueldaddy(u)
+    elif retailer_=="Fuel Daddy":
+        results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
     elif retailer_=="Parga":
