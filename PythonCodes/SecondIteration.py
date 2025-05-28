@@ -70,8 +70,7 @@ def results_supermarketcy(u):
 def results_alphamega(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs,{'headers':header})
+    response = requests.get(Item_url_, headers=header)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
