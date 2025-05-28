@@ -4,7 +4,7 @@
 name: fuels-prices-scraping
 
 # Workflow's description
-run-name: fuels prices sraping
+run-name: CyFuelsPrices sraping
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
@@ -37,6 +37,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "fuels prices scraping completed"
+          git commit -m "CyFuelsPrices scraping completed"
           git push origin HEAD:main
 
