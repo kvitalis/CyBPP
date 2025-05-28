@@ -9,7 +9,7 @@ run-name: fuels prices statistics calculations
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "14 06 * * *" #UTC time
+    - cron: "07 37 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
