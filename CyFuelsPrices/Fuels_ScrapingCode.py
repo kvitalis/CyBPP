@@ -38,14 +38,14 @@ scraped_data = pd.DataFrame(columns = ["Date","Name","Price","Fuel Type","Subcla
 
 def results_FuelDaddy(u):
     
-    new_row = []
-    price_list = []
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
     url_ = str(Item_url_)
-    bs = BeautifulSoup(url_, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    response = requests.get(url_, headers=header)
+    price_list = []
         
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
+        print("No URL")
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -124,6 +124,7 @@ def results_FuelDaddy(u):
                 new_row.append(brand_word) 
                 new_row.append(district_)
             
+            print(new_row)
             scraped_data.loc[len(scraped_data)] = new_row
             scraped_data['Name'] = scraped_data['Name'].apply(lambda x:x)
     
