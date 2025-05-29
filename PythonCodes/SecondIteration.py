@@ -3174,16 +3174,6 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 #Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("KIA PICANTO 1.0cc AUTOMATIC PETROL 1000cc")
-new_row.append(float(11300))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("KIA RIO 1.2cc MANUAL PETROL 1200cc")
 new_row.append(float(12700))
 new_row.append("Second-hand motor cars")
@@ -3192,6 +3182,17 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
+
+#Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("KIA PICANTO 1.0cc AUTOMATIC PETROL 1000cc")
+new_row.append(float(11300))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Stock Center") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
 new_row=[]
