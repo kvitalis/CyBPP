@@ -183,11 +183,10 @@ def results_fueldaddy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_IKEA(u):
+def results_ikea(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
+    response = requests.get(Item_url_, headers=header)
 
     if (response.status_code != 200): #or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
         website_false.append(name_)
@@ -214,7 +213,7 @@ def results_IKEA(u):
         list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 '''
-def results_IKEA(u):
+def results_ikea(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -266,9 +265,8 @@ def results_stephanis(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     url_new = "https://www.stephanis.com.cy/en" + str(Item_url_)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs)
-    
+    response = requests.get(url_new, headers=header)
+
     if (response.status_code != 200) or ("This product is no longer available" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -295,7 +293,7 @@ def results_stephanis(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_CYTA(u):
+def results_cyta(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -350,7 +348,7 @@ def results_CYTA(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         
 '''
-def results_CYTA(u):
+def results_cyta(u):
     
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -580,7 +578,7 @@ def results_Athlokinisi(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_AWOL(u):
+def results_awol(u):
     
     p=0
     price_="0"
@@ -2685,14 +2683,14 @@ for u in range(0, len(urls)):
         results_parga(u)    
     elif retailer_=="Leroy Merlin":
         results_leroymerlin(u)   
-    #elif retailer_=="IKEA":
-    #    results_IKEA(u)
-    #elif retailer_=="Stephanis":
-    #    results_stephanis(u)
+    elif retailer_=="IKEA":
+        results_ikea(u)
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
-        results_CYTA(u)
+        results_cyta(u)
     elif retailer_=="Cablenet":
         results_cablenet(u)  
     elif retailer_=="Primetel":
@@ -2738,7 +2736,7 @@ for u in range(0, len(urls)):
     elif retailer_=="MotoRace":
         results_moto_race(u)
     elif retailer_=="AWOL":
-        results_AWOL(u)    
+        results_awol(u)    
     elif retailer_=="Toyota":
         results_toyota(u)    
     elif retailer_=="Nissan":
