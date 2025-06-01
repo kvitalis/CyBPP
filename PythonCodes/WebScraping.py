@@ -1662,15 +1662,18 @@ def results_meze(u):
     doc = Document(file_path)
     for para in doc.paragraphs:
         text_=para.text
-        match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-        if match:
-            value = match.group(1)
-            price_=value.replace("€","").replace(" ","")
 
-    match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-    if match:
-        value = match.group(1)
-        price_=value.replace("€","").replace(" ","")
+        if name_=="Meat Meze for 2 persons - Limassol":
+            match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+            if match:
+                value = match.group(1)
+                price_=value.replace("€","").replace(" ","")
+
+        if name_="Fish Meze for 2 persons - Limassol"
+            match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+            if match:
+                value = match.group(1)
+                price_=value.replace("€","").replace(" ","")
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
@@ -1681,7 +1684,6 @@ def results_meze(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
     
-
 def results_CYgar_shop(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
