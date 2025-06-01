@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
+from docx import Document
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
@@ -1612,12 +1613,12 @@ def results_vasos(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_meze(u):
-    
+    """
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header},verify=False)
     soup = BeautifulSoup(response.content, "html.parser")
-
+    
     if response.status_code !=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1638,7 +1639,7 @@ def results_meze(u):
             if "Fish Meze" in element_name[i].text and ("Fish Meze" in name_):
                 element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
                 price_=element_name_2[0].text.replace("€","")
-        
+
         if price_:
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
@@ -1656,6 +1657,30 @@ def results_meze(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+    """
+    file_path = "PDFs/meze_tavern.docx"
+    doc = Document(file_path)
+    for para in doc.paragraphs:
+        text_=para.text
+        match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+        if match:
+            value = match.group(1)
+            price_=value.replace("€","").replace(" ","")
+
+    match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+    if match:
+        value = match.group(1)
+        price_=value.replace("€","").replace(" ","")
+    
+    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+    new_row.append(name_)
+    new_row.append(price_)
+    new_row.append(subclass_)
+    new_row.append(division_)
+    new_row.append("Meze Tavern")
+    list_.loc[len(list_)] = new_row
+    list_['Name'] = list_['Name'].apply(lambda x:x)
+    
 
 def results_CYgar_shop(u):
     
