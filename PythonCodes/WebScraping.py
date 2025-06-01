@@ -2784,8 +2784,8 @@ for u in range(0, len(urls)):
         results_wolt(u)
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
-    #elif retailer_=="Meze Tavern":
-    #    results_meze(u)    
+    elif retailer_=="Meze Tavern":
+        results_meze(u)    
     elif retailer_=="Pyxida":
         results_pydixa(u)
     elif retailer_=="Ithaki":
