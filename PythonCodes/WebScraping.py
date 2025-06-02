@@ -1661,19 +1661,21 @@ def results_meze(u):
     file_path = "PDFs/meze_tavern.docx"
     doc = Document(file_path)
     for para in doc.paragraphs:
-        text_=para.text
+        text_ = para.text
 
-        if name_=="Meat Meze for 2 persons - Limassol":
+        if name_ == "Meat Meze for 2 persons - Limassol":
             match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
             if match:
                 value = match.group(1)
-                price_=value.replace("€","").replace(" ","")
+                price_ = value.replace("€","").replace(" ","")
+                print(price_)
 
-        if name_="Fish Meze for 2 persons - Limassol"
+        if name_ == "Fish Meze for 2 persons - Limassol"
             match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
             if match:
                 value = match.group(1)
-                price_=value.replace("€","").replace(" ","")
+                price_ = value.replace("€","").replace(" ","")
+                print(price_)
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
