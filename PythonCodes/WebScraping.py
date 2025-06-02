@@ -1656,9 +1656,9 @@ def results_meze(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     """
-    file_path = "PDFs/Meze_Taverna_Jan2025.docx"
+    file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
     doc = Document(file_path)
     for para in doc.paragraphs:
         text_ = para.text
