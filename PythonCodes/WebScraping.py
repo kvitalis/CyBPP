@@ -1670,7 +1670,7 @@ def results_meze(u):
                 price_ = value.replace("€","").replace(" ","")
                 print(price_)
 
-        if name_ == "Fish Meze for 2 persons - Limassol"
+        if name_ == "Fish Meze for 2 persons - Limassol":
             match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
             if match:
                 value = match.group(1)
