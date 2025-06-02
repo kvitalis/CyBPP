@@ -1617,7 +1617,7 @@ def results_vasos(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_meze(u):
-'''
+    """
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header},verify=False)
@@ -1661,7 +1661,7 @@ def results_meze(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-'''
+    """
     file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
     doc = Document(file_path)
     for para in doc.paragraphs:
