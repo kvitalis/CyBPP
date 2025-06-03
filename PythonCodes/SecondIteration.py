@@ -3106,37 +3106,6 @@ new_row.append("Epic")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/carnival-mobile-online-offer) 
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited")
-new_row.append(float(14.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited Plus")
-new_row.append(float(17.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited MAX")
-new_row.append(float(22.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 #European University Cyprus (https://euc.ac.cy/en/admissions/tuition-fees/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3232,6 +3201,37 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
+
+#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/giga-unlimited-summer-offer) 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited")
+new_row.append(float(14.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited Plus")
+new_row.append(float(17.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("GIGA Unlimited MAX")
+new_row.append(float(22.99))
+new_row.append("Bundled telecommunication services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
 new_row=[]
