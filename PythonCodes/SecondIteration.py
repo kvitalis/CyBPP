@@ -3202,6 +3202,26 @@ new_row.append("Stock Center")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("KIA PICANTO PETROL MANUAL 1000cc")
+new_row.append(float(10500))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Stock Center") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("KIA RIO 1.2cc MANUAL PETROL 1200cc")
+new_row.append(float(12700))
+new_row.append("Second-hand motor cars")
+new_row.append("TRANSPORT")
+new_row.append("Stock Center") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/giga-unlimited-summer-offer) 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
