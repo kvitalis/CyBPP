@@ -2770,8 +2770,8 @@ for u in range(0, len(urls)):
         results_toyota(u)    
     elif retailer_=="Nissan":
         results_nissan(u)
-    elif retailer_=="Stock Center":
-        results_stock_center(u)    
+    #elif retailer_=="Stock Center":
+      #  results_stock_center(u)    
     elif retailer_=="Alter Vape":
         results_AlterVape(u)    
     elif retailer_=="The CYgar shop":
