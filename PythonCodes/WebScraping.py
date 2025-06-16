@@ -40,7 +40,8 @@ list_ = pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retai
 
 def results_supermarketcy(u):
     
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'} #1st Try
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',} #2nd Try
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
     #bs = BeautifulSoup(url_new, "html.parser") #1st try
     #response = requests.get(bs,{'headers':header}) # 1st try
