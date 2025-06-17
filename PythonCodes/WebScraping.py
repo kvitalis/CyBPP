@@ -2822,8 +2822,8 @@ for u in range(0, len(urls)):
         results_musicavenue(u)    
     elif retailer_=="Rio Cinema":
         results_rio(u)    
-   # elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
-       # results_CyMinistryEducation(u)
+    elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
+        results_CyMinistryEducation(u)
     elif retailer_=="European University Cyprus":
         results_europeanuniversitycyprus(u)    
     elif retailer_=="Cyprus Post":
