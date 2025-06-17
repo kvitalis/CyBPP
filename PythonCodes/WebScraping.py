@@ -826,11 +826,11 @@ def results_CyMinistryEducation(u):
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         response = requests.get(url)
-        with open("PDFs\Pre_primary_education.pdf", "wb") as f:
+        with open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
             f.write(response.content)
         
         # Διάβασε το με pdfplumber
-        with pdfplumber.open("PDFs\Pre_primary_education.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
             page = pdf.pages[3]
             table = page.extract_table()
         
@@ -843,16 +843,16 @@ def results_CyMinistryEducation(u):
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
         response = requests.get(url)
-        with open("PDFs\Primary_education.pdf", "wb") as f:
+        with open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf", "wb") as f:
             f.write(response.content)
             
-        with pdfplumber.open("PDFs\Primary_education.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
             page = pdf.pages[0]  # 4η σελίδα (index ξεκινάει από 0)
             table = page.extract_table()
             price_1=int(table[8][2].replace("€","").replace(".",""))+int(table[8][3].replace("€","").replace(".",""))+int(table[8][4].replace("€","").replace(".",""))+int(table[8][5].replace("€","").replace(".",""))+int(table[8][6].replace("€","").replace(".",""))+int(table[8][7].replace("€","").replace(".",""))
             price_2=price_1/6
         
-            price_3=table[8][8]#.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
+            price_3=table[8][8] #.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
             amount = re.search(r'€\s*(\d+)', price_3)
             if amount:
                 price_3=amount.group(1)
@@ -864,10 +864,10 @@ def results_CyMinistryEducation(u):
     
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         response = requests.get(url)
-        with open("PDFs\Secondary_education.pdf", "wb") as f:
+        with open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf", "wb") as f:
             f.write(response.content)
                 
-        with pdfplumber.open("PDFs\Secondary_education.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[0] 
             table = page.extract_table()
             if subclass_ == "Secondary education":
@@ -879,7 +879,7 @@ def results_CyMinistryEducation(u):
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("PDFs\Secondary_education.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
             if subclass_ == "Secondary education":
@@ -2769,7 +2769,10 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-
+    
+    if retailer_=="Cyprus Ministry of Education, Sport and Youth":
+        results_CyMinistryEducation(u)
+    '''
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
@@ -2874,7 +2877,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)    
-
+   '''
 # Change the type as float
 list_["Price"].astype(float)
 
