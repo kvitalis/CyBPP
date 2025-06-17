@@ -820,26 +820,25 @@ def results_CyMinistryEducation(u):
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
     """
-
-    ###NEW VERSION 17062025
+    ## NEW VERSION 17/06/2025
     url = "https://sch.cy/mc/698/" + Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         response = requests.get(url)
-        with open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
+        with open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
             f.write(response.content)
         
-        # Διάβασε το με pdfplumber
+        # Read it using pdfplumber
         with pdfplumber.open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
             page = pdf.pages[3]
             table = page.extract_table()
         
-        price_1_1=table[2][2].replace("€","").split("\n")[0]
-        price_1_2=table[2][2].replace("€","").split("\n")[1]
-        price_1=int(price_1_2)+int(price_1_1)
-        price_2=table[2][4].split("εγγραφή")[0].replace("€","")
-        price_3=int(price_1)+int(price_2)
-        print(price_3)
+        price_1_1 = table[2][2].replace("€","").split("\n")[0]
+        price_1_2 = table[2][2].replace("€","").split("\n")[1]
+        price_1 = (int(price_1_2) + int(price_1_1))/2
+        price_2 = table[2][4].split("εγγραφή")[0].replace("€","")
+        price_ = int(price_1) + int(price_2)
+        print(price_)
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
         response = requests.get(url)
@@ -847,21 +846,20 @@ def results_CyMinistryEducation(u):
             f.write(response.content)
             
         with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
-            page = pdf.pages[0]  # 4η σελίδα (index ξεκινάει από 0)
+            page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
-            price_1=int(table[8][2].replace("€","").replace(".",""))+int(table[8][3].replace("€","").replace(".",""))+int(table[8][4].replace("€","").replace(".",""))+int(table[8][5].replace("€","").replace(".",""))+int(table[8][6].replace("€","").replace(".",""))+int(table[8][7].replace("€","").replace(".",""))
-            price_2=price_1/6
-        
-            price_3=table[8][8] #.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
+            
+            price_1 = int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".",""))
+            price_2 = price_1/6
+            price_3 = table[8][8] #.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
             amount = re.search(r'€\s*(\d+)', price_3)
             if amount:
-                price_3=amount.group(1)
+                price_3 = amount.group(1)
             else:
-                price_3=0
-        
-            price_4 = int(price_3) + int(price_2)
-            print(price_4)
-    
+                price_3 = 0
+            price_ = int(price_3) + int(price_2)
+            print(price_)
+            
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
         response = requests.get(url)
         with open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf", "wb") as f:
@@ -871,23 +869,28 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[0] 
             table = page.extract_table()
             if subclass_ == "Secondary education":
-                price_1=int(table[4][2].replace("€","").replace(".",""))+int(table[4][3].replace("€","").replace(".",""))+int(table[4][4].replace("€","").replace(".",""))+int(table[4][5].replace("€","").replace(".",""))+int(table[4][6].replace("€","").replace(".",""))+int(table[4][7].replace("€","").replace(".",""))
-                price_=price_1/6
+                price_1 = int(table[4][2].replace("€","").replace(".","")) + int(table[4][3].replace("€","").replace(".","")) + int(table[4][4].replace("€","").replace(".","")) + int(table[4][5].replace("€","").replace(".","")) + int(table[4][6].replace("€","").replace(".","")) + int(table[4][7].replace("€","").replace(".",""))
+                price_ = price_1/6
+                print(price_)
         
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
                 price_ = (float(table[4][8].replace("€",'').replace(".",""))) 
+                print(price_)
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
+            
             if subclass_ == "Secondary education":
-                price_1=int(table[8][2].replace("€","").replace(".",""))+int(table[8][3].replace("€","").replace(".",""))+int(table[8][4].replace("€","").replace(".",""))+int(table[8][5].replace("€","").replace(".",""))+int(table[8][6].replace("€","").replace(".",""))+int(table[8][7].replace("€","").replace(".",""))
-                price_=price_1/6
+                price_1 = int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".",""))
+                price_ = price_1/6
+                print(price_)
         
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                price_ = (float(pdf_[8][8].replace("€",'').replace(".",""))) 
+                price_ = (float(table[8][8].replace("€",'').replace(".","")))
+                print(price_)
 
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
@@ -2770,9 +2773,6 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
-    if retailer_=="Cyprus Ministry of Education, Sport and Youth":
-        results_CyMinistryEducation(u)
-    '''
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
@@ -2877,7 +2877,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)    
-   '''
+   
 # Change the type as float
 list_["Price"].astype(float)
 
