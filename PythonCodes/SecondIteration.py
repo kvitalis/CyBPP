@@ -48,8 +48,8 @@ def results_supermarketcy(u):
     response = requests.get(bs,{'headers':header})
     
     ## 2nd way
-    #url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
-    #response = requests.get(url_new, headers = header) 
+    url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
+    response = requests.get(url_new, headers = header) 
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
