@@ -730,6 +730,7 @@ def results_cablenet(u):
 
 def results_CyMinistryEducation(u):
     """
+    ## PREVIOUS VERSION (2024-25)
     url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
@@ -820,17 +821,30 @@ def results_CyMinistryEducation(u):
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
     """
-    ## NEW VERSION 17/06/2025
-    url = "https://sch.cy/mc/698/" + Item_url_
+    ## 2025-26: NEW VERSION from 17/06/2025
     
+    #url = "https://sch.cy/mc/698/" + Item_url_
+
+    #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        response = requests.get(url)
-        with open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
-            f.write(response.content)
         
-        # Read it using pdfplumber
+        # Read the pdf file using pdfplumber
         with pdfplumber.open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
             page = pdf.pages[3]
+            table = page.extract_table()
+        
+        price_1_1 = table[2][2].replace("€","").split("\n")[0]
+        price_1_2 = table[2][2].replace("€","").split("\n")[1]
+        price_1 = (int(price_1_2) + int(price_1_1)) / 2
+        price_2 = table[2][4].split("εγγραφή")[0].replace("€","")
+        price_ = int(price_1) + int(price_2)
+        print(price_)
+
+    #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
+    if "ΔΗΜΟΤΙΚΩΝ" in name_:        
+            
+        with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
+            page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
         
         price_1_1 = table[2][2].replace("€","").split("\n")[0]
@@ -861,33 +875,35 @@ def results_CyMinistryEducation(u):
             print(price_)
             
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
-        response = requests.get(url)
-        with open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf", "wb") as f:
-            f.write(response.content)
                 
         with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[0] 
             table = page.extract_table()
+            
+            #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
                 price_1 = int(table[4][2].replace("€","").replace(".","")) + int(table[4][3].replace("€","").replace(".","")) + int(table[4][4].replace("€","").replace(".","")) + int(table[4][5].replace("€","").replace(".","")) + int(table[4][6].replace("€","").replace(".","")) + int(table[4][7].replace("€","").replace(".",""))
-                price_ = price_1/6
+                price_ = price_1 / 6
                 print(price_)
-        
+            
+            #THE GRAMMAR SCHOOL (NICOSIA): Ζ' τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
                 price_ = (float(table[4][8].replace("€",'').replace(".",""))) 
                 print(price_)
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
-            
+
+            #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
                 price_1 = int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".",""))
-                price_ = price_1/6
+                price_ = price_1 / 6
                 print(price_)
-        
+            
+            #THE GRAMMAR SCHOOL (LIMASSOL): Z΄ τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
                 price_ = (float(table[8][8].replace("€",'').replace(".","")))
                 print(price_)
