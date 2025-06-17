@@ -825,7 +825,7 @@ def results_CyMinistryEducation(u):
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         response = requests.get(url)
-        with open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
+        with open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf", "wb") as f:
             f.write(response.content)
         
         # Read it using pdfplumber
@@ -879,7 +879,7 @@ def results_CyMinistryEducation(u):
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
             
