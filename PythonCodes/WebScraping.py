@@ -834,7 +834,9 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[3]
             table = page.extract_table()
         
-        price_1=table[2][2].replace("€","").split("\n")[1]
+        price_1_1=table[2][2].replace("€","").split("\n")[0]
+        price_1_2=table[2][2].replace("€","").split("\n")[1]
+        price_1=int(price_1_2)+int(price_1_1)
         price_2=table[2][4].split("εγγραφή")[0].replace("€","")
         price_3=int(price_1)+int(price_2)
         print(price_3)
