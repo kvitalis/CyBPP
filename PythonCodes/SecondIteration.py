@@ -738,7 +738,7 @@ def results_cablenet(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
-    
+    """
     url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
@@ -828,7 +828,74 @@ def results_CyMinistryEducation(u):
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
+    """
+
+    ###NEW VERSION 17062025
+    url = "https://sch.cy/mc/698/" + Item_url_
     
+    if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
+        response = requests.get(url)
+        with open("PDFs\Pre_primary_education.pdf", "wb") as f:
+            f.write(response.content)
+        
+        # Διάβασε το με pdfplumber
+        with pdfplumber.open("PDFs\Pre_primary_education.pdf") as pdf:
+            page = pdf.pages[3]
+            table = page.extract_table()
+        
+        price_1=table[2][2].replace("€","").split("\n")[1]
+        price_2=table[2][4].split("εγγραφή")[0].replace("€","")
+        price_3=int(price_1)+int(price_2)
+        print(price_3)
+    
+    if "ΔΗΜΟΤΙΚΩΝ" in name_:        
+        response = requests.get(url)
+        with open("PDFs\Primary_education.pdf", "wb") as f:
+            f.write(response.content)
+            
+        with pdfplumber.open("PDFs\Primary_education.pdf") as pdf:
+            page = pdf.pages[0]  # 4η σελίδα (index ξεκινάει από 0)
+            table = page.extract_table()
+            price_1=int(table[8][2].replace("€","").replace(".",""))+int(table[8][3].replace("€","").replace(".",""))+int(table[8][4].replace("€","").replace(".",""))+int(table[8][5].replace("€","").replace(".",""))+int(table[8][6].replace("€","").replace(".",""))+int(table[8][7].replace("€","").replace(".",""))
+            price_2=price_1/6
+        
+            price_3=table[8][8]#.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
+            amount = re.search(r'€\s*(\d+)', price_3)
+            if amount:
+                price_3=amount.group(1)
+            else:
+                price_3=0
+        
+            price_4 = int(price_3) + int(price_2)
+            print(price_4)
+    
+    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
+        response = requests.get(url)
+        with open("PDFs\Secondary_education.pdf", "wb") as f:
+            f.write(response.content)
+                
+        with pdfplumber.open("PDFs\Secondary_education.pdf") as pdf:
+            page = pdf.pages[0] 
+            table = page.extract_table()
+            if subclass_ == "Secondary education":
+                price_1=int(table[4][2].replace("€","").replace(".",""))+int(table[4][3].replace("€","").replace(".",""))+int(table[4][4].replace("€","").replace(".",""))+int(table[4][5].replace("€","").replace(".",""))+int(table[4][6].replace("€","").replace(".",""))+int(table[4][7].replace("€","").replace(".",""))
+                price_=price_1/6
+        
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                price_ = (float(table[4][8].replace("€",'').replace(".",""))) 
+    
+    if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
+    
+        with pdfplumber.open("PDFs\Secondary_education.pdf") as pdf:
+            page = pdf.pages[1] 
+            table = page.extract_table()
+            if subclass_ == "Secondary education":
+                price_1=int(table[8][2].replace("€","").replace(".",""))+int(table[8][3].replace("€","").replace(".",""))+int(table[8][4].replace("€","").replace(".",""))+int(table[8][5].replace("€","").replace(".",""))+int(table[8][6].replace("€","").replace(".",""))+int(table[8][7].replace("€","").replace(".",""))
+                price_=price_1/6
+        
+            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+                price_ = (float(pdf_[8][8].replace("€",'').replace(".",""))) 
+
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(float(price_))
