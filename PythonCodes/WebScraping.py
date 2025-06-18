@@ -65,6 +65,7 @@ def results_supermarketcy(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
         value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
@@ -196,11 +197,10 @@ def results_fueldaddy(u):
 
 def results_ikea(u):
     '''
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)  
 
-    if (response.status_code != 200): #or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
+    if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -241,10 +241,15 @@ def results_ikea(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     '''
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers=header)
+    ## 1st way (without header)
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)  
+    
+    ## 2nd (with header) 
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #response = requests.get(Item_url_, headers=header)
 
-    if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
+    if (response.status_code != 200) :
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -255,6 +260,7 @@ def results_ikea(u):
         
     else:
         soup = BeautifulSoup(response.content, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
         element_soup = soup.find_all("span",{"class":"price__sr-text"})
         price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace(",",".")
         print(price_)
@@ -717,7 +723,7 @@ def results_cablenet(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
-    """
+    '''
     ## PREVIOUS VERSION (2024-25)
     url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
@@ -808,7 +814,7 @@ def results_CyMinistryEducation(u):
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
-    """
+    '''
     ## 2025-26: NEW VERSION from 17/06/2025
     
     #url = "https://sch.cy/mc/698/" + Item_url_
@@ -823,9 +829,9 @@ def results_CyMinistryEducation(u):
         
         price_1_1 = float(table[2][2].replace("€","").split("\n")[0])
         price_1_2 = float(table[2][2].replace("€","").split("\n")[1])
-        price_1 = (int(price_1_2) + int(price_1_1)) / 2
+        price_1 = (price_1_1 + price_1_2) / 2
         price_2 = float(table[2][4].split("εγγραφή")[0].replace("€",""))
-        price_ = int(price_1) + int(price_2)
+        price_ = price_1 + price_2
         print(price_)
 
     #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
@@ -837,9 +843,9 @@ def results_CyMinistryEducation(u):
         
         price_1_1 = float(table[2][2].replace("€","").split("\n")[0])
         price_1_2 = float(table[2][2].replace("€","").split("\n")[1])
-        price_1 = (int(price_1_2) + int(price_1_1)) / 2
+        price_1 = (price_1_1 + price_1_2) / 2
         price_2 = float(table[2][4].split("εγγραφή")[0].replace("€",""))
-        price_ = int(price_1) + int(price_2)
+        price_ = price_1 + price_2
         print(price_)
     
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
@@ -851,15 +857,15 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
             
-            price_1 = float(int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".","")))
-            price_2 = price_1/6
+            price_1 = float(table[8][2].replace("€","").replace(".","")) + float(table[8][3].replace("€","").replace(".","")) + float(table[8][4].replace("€","").replace(".","")) + float(table[8][5].replace("€","").replace(".","")) + float(table[8][6].replace("€","").replace(".","")) + float(table[8][7].replace("€","").replace(".",""))
+            price_2 = price_1 / 6
             price_3 = table[8][8] #.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
             amount = re.search(r'€\s*(\d+)', price_3)
             if amount:
                 price_3 = amount.group(1)
             else:
                 price_3 = 0
-            price_ = int(price_3) + int(price_2)
+            price_ = price_2 + float(price_3)
             print(price_)
             
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
@@ -870,30 +876,30 @@ def results_CyMinistryEducation(u):
             
             #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
-                price_1 = float(int(table[4][2].replace("€","").replace(".","")) + int(table[4][3].replace("€","").replace(".","")) + int(table[4][4].replace("€","").replace(".","")) + int(table[4][5].replace("€","").replace(".","")) + int(table[4][6].replace("€","").replace(".","")) + int(table[4][7].replace("€","").replace(".","")))
+                price_1 = float(table[4][2].replace("€","").replace(".","")) + float(table[4][3].replace("€","").replace(".","")) + float(table[4][4].replace("€","").replace(".","")) + float(table[4][5].replace("€","").replace(".","")) + float(table[4][6].replace("€","").replace(".","")) + float(table[4][7].replace("€","").replace(".",""))
                 price_ = price_1 / 6
                 print(price_)
             
             #THE GRAMMAR SCHOOL (NICOSIA): Ζ' τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                price_ = (float(table[4][8].replace("€",'').replace(".",""))) 
+                price_ = float(table[4][8].replace("€",'').replace(".",""))
                 print(price_)
     
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("C:/Users/kvital01/OneDrive - University of Cyprus/Desktop/CyBPP_GitHub/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
 
             #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
-                price_1 = float(int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".","")))
+                price_1 = float(table[8][2].replace("€","").replace(".","")) + float(table[8][3].replace("€","").replace(".","")) + float(table[8][4].replace("€","").replace(".","")) + float(table[8][5].replace("€","").replace(".","")) + float(table[8][6].replace("€","").replace(".","")) + float(table[8][7].replace("€","").replace(".",""))
                 price_ = price_1 / 6
                 print(price_)
             
             #THE GRAMMAR SCHOOL (LIMASSOL): Z΄ τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                price_ = (float(table[8][8].replace("€",'').replace(".","")))
+                price_ = float(table[8][8].replace("€",'').replace(".",""))
                 print(price_)
 
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
