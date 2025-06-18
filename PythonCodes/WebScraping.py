@@ -816,10 +816,10 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[3]
             table = page.extract_table()
         
-        price_1_1 = table[2][2].replace("€","").split("\n")[0]
-        price_1_2 = table[2][2].replace("€","").split("\n")[1]
+        price_1_1 = float(table[2][2].replace("€","").split("\n")[0])
+        price_1_2 = float(table[2][2].replace("€","").split("\n")[1])
         price_1 = (int(price_1_2) + int(price_1_1)) / 2
-        price_2 = table[2][4].split("εγγραφή")[0].replace("€","")
+        price_2 = float(table[2][4].split("εγγραφή")[0].replace("€",""))
         price_ = int(price_1) + int(price_2)
         print(price_)
 
@@ -830,10 +830,10 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
         
-        price_1_1 = table[2][2].replace("€","").split("\n")[0]
-        price_1_2 = table[2][2].replace("€","").split("\n")[1]
-        price_1 = (int(price_1_2) + int(price_1_1))/2
-        price_2 = table[2][4].split("εγγραφή")[0].replace("€","")
+        price_1_1 = float(table[2][2].replace("€","").split("\n")[0])
+        price_1_2 = float(table[2][2].replace("€","").split("\n")[1])
+        price_1 = (int(price_1_2) + int(price_1_1)) / 2
+        price_2 = float(table[2][4].split("εγγραφή")[0].replace("€",""))
         price_ = int(price_1) + int(price_2)
         print(price_)
     
@@ -846,7 +846,7 @@ def results_CyMinistryEducation(u):
             page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
             
-            price_1 = int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".",""))
+            price_1 = float(int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".","")))
             price_2 = price_1/6
             price_3 = table[8][8] #.split("τέλος εγγραφής, τετράδια, εκδρομές,\nασφάλεια παιδιών €280")[1].replace("€","")
             amount = re.search(r'€\s*(\d+)', price_3)
@@ -865,7 +865,7 @@ def results_CyMinistryEducation(u):
             
             #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
-                price_1 = int(table[4][2].replace("€","").replace(".","")) + int(table[4][3].replace("€","").replace(".","")) + int(table[4][4].replace("€","").replace(".","")) + int(table[4][5].replace("€","").replace(".","")) + int(table[4][6].replace("€","").replace(".","")) + int(table[4][7].replace("€","").replace(".",""))
+                price_1 = float(int(table[4][2].replace("€","").replace(".","")) + int(table[4][3].replace("€","").replace(".","")) + int(table[4][4].replace("€","").replace(".","")) + int(table[4][5].replace("€","").replace(".","")) + int(table[4][6].replace("€","").replace(".","")) + int(table[4][7].replace("€","").replace(".","")))
                 price_ = price_1 / 6
                 print(price_)
             
@@ -882,7 +882,7 @@ def results_CyMinistryEducation(u):
 
             #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
-                price_1 = int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".",""))
+                price_1 = float(int(table[8][2].replace("€","").replace(".","")) + int(table[8][3].replace("€","").replace(".","")) + int(table[8][4].replace("€","").replace(".","")) + int(table[8][5].replace("€","").replace(".","")) + int(table[8][6].replace("€","").replace(".","")) + int(table[8][7].replace("€","").replace(".","")))
                 price_ = price_1 / 6
                 print(price_)
             
