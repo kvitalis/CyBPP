@@ -834,24 +834,7 @@ def results_CyMinistryEducation(u):
         price_ = price_1 + price_2
         print(price_)
 
-    #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
-            
-        with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
-            page = pdf.pages[0]  # 4th page (index starts from 0)
-            table = page.extract_table()
-        
-        price_1_1 = float(table[2][2].replace("€","").split("\n")[0])
-        price_1_2 = float(table[2][2].replace("€","").split("\n")[1])
-        price_1 = (price_1_1 + price_1_2) / 2
-        price_2 = float(table[2][4].split("εγγραφή")[0].replace("€",""))
-        price_ = price_1 + price_2
-        print(price_)
-    
-    if "ΔΗΜΟΤΙΚΩΝ" in name_:        
-        response = requests.get(url)
-        with open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf", "wb") as f:
-            f.write(response.content)
             
         with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
             page = pdf.pages[0]  # 4th page (index starts from 0)
@@ -867,37 +850,39 @@ def results_CyMinistryEducation(u):
                 price_3 = 0
             price_ = price_2 + float(price_3)
             print(price_)
-            
+
+    #THE GRAMMAR SCHOOL (NICOSIA)
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
                 
         with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[0] 
             table = page.extract_table()
             
-            #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
+            #Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
                 price_1 = float(table[4][2].replace("€","").replace(".","")) + float(table[4][3].replace("€","").replace(".","")) + float(table[4][4].replace("€","").replace(".","")) + float(table[4][5].replace("€","").replace(".","")) + float(table[4][6].replace("€","").replace(".","")) + float(table[4][7].replace("€","").replace(".",""))
                 price_ = price_1 / 6
                 print(price_)
             
-            #THE GRAMMAR SCHOOL (NICOSIA): Ζ' τάξη
+            #Ζ' τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
                 price_ = float(table[4][8].replace("€",'').replace(".",""))
                 print(price_)
     
+    #THE GRAMMAR SCHOOL (LIMASSOL)
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
         with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
 
-            #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
+            #Α΄ τάξη - ΣΤ΄ τάξη
             if subclass_ == "Secondary education":
                 price_1 = float(table[8][2].replace("€","").replace(".","")) + float(table[8][3].replace("€","").replace(".","")) + float(table[8][4].replace("€","").replace(".","")) + float(table[8][5].replace("€","").replace(".","")) + float(table[8][6].replace("€","").replace(".","")) + float(table[8][7].replace("€","").replace(".",""))
                 price_ = price_1 / 6
                 print(price_)
             
-            #THE GRAMMAR SCHOOL (LIMASSOL): Z΄ τάξη
+            #Z΄ τάξη
             if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
                 price_ = float(table[8][8].replace("€",'').replace(".",""))
                 print(price_)
