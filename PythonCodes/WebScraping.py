@@ -2573,7 +2573,7 @@ def results_max_7_tax(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        table_ = soup.find('table', {"class":'tbl', "style":"width:100%;", "border":"1", "frame":"void", "cellspacing":"1", "cellpadding":"3", "align":"center"})
+        table_ = soup.find('table', {"class" :'tbl',"style":"width: 100%;","border":"1","frame":"void","cellspacing":"1","cellpadding":"3","align":"center"})
         table_ = table_.text
         if "Initial charge" in name_:
             pattern = r'Initial charge\s+([\d,]+)\s+([\d,]+)'
