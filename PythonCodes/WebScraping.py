@@ -55,7 +55,7 @@ def results_supermarketcy(u):
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #response = requests.get(url_new, headers = header) 
 
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
+    if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
