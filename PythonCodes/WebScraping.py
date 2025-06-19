@@ -42,17 +42,22 @@ def results_supermarketcy(u):
     
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
 
-    ## 1st way (*it's NOT working*)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs)
+    ##  without headers 
+    # 1 (*NOT working*)
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs)
+
+    # 2
+    response = requests.get(url_new)
     
-    ## 2nd way (*it's NOT working*)
+    ## with headers 
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    
+    # 1 (*NOT working*)
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
     
-    ## 3rd way (*it's NOT working*)
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    # 2 (*NOT working*)
     #response = requests.get(url_new, headers = header) 
 
     if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
