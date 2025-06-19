@@ -40,7 +40,7 @@ def results_alphamega(u):
 
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(Item_url_, headers=header)
+    response = requests.get(Item_url_, headers = header)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -74,14 +74,16 @@ def results_alphamega(u):
         list_["Name"] = list_["Name"].apply(lambda x:x)  
 '''        
 def results_supermarketcy(u):
+
+    url_new = "https://www.supermarketcy.com.cy/" + Item_url_
     
+    ## with headers
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
     #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs,{'headers':header})
-    
-    url_ = "https://www.supermarketcy.com.cy/" + Item_url_
-    response = requests.get(url_)
+    #response = requests.get(bs, {'headers': header})
+
+    # without headers
+    response = requests.get(url_new)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -92,8 +94,8 @@ def results_supermarketcy(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        #soup = BeautifulSoup(response.content, "html.parser")
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
         value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
@@ -235,14 +237,14 @@ for u in range(0, len(urls)):
   
     if retailer_ == "Alphamega":
         results_alphamega(u)  
-    #elif retailer_ == "METRO":
-        #results_metro(u)    
+    #elif retailer_ == "SupermarketCy":
+        #results_supermarketcy(u)      
     elif retailer_ == "Cheap Basket":
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
-    #elif retailer_ == "SupermarketCy":
-        #results_supermarketcy(u)  
+    elif retailer_ == "METRO":
+        results_metro(u)      
     
 # Change the type as float
 list_["Price"].astype(float)
