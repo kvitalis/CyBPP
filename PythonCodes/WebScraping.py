@@ -47,15 +47,16 @@ def results_supermarketcy(u):
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs)
 
-    # 2
-    response = requests.get(url_new)
+    # 2 (*NOT working*)
+    #response = requests.get(url_new)
     
     ## with headers 
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    
+    header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
+
     # 1 (*NOT working*)
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs, {'headers':header})
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers':header})
     
     # 2 (*NOT working*)
     #response = requests.get(url_new, headers = header) 
