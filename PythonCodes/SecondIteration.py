@@ -2843,6 +2843,38 @@ def results_pagkratios(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
+def results_chrsitos(u):
+    pdf_path = r"PDFs/Christos_JUN2025.pdf"
+
+    with pdfplumber.open(pdf_path) as pdf:
+        if len(pdf.pages) >= 9:
+            page9 = pdf.pages[8]  
+            text = page9.extract_text()
+            match = re.search(r"Seafood Platter MEZE for 2 persons\s+(\d+(?:\.\d+)?)", text)
+            
+            if match:
+                price = match.group(1)
+                price_=float(price)/2
+
+            if price_:
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Piatsa Gourounaki")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(division_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+
+
 # Run the web-scraping code
 for u in range(0, len(urls)):
     print(u)
