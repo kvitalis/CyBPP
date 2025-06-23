@@ -2789,7 +2789,9 @@ def results_piatsa(u):
     prices = []
     for line in results:
         found = re.findall(pattern, line)
-        prices_=float(found[0].replace(",","."))
+    
+    prices_=float(found[0].replace(",","."))
+        
     if prices_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -2937,7 +2939,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-    elif retailer_=="Piatsa Gourounaki":
+    elif retailer_=="Piasta Gourounaki":
         results_piatsa(u)
    
 # Change the type as float
