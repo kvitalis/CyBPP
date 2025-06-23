@@ -2761,6 +2761,59 @@ def results_opacy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_piatsa(u):
+    pdf_path = r"PDFs/Piatsa_JUN2025.pdf"
+    output_path = r"PDFs/output.txt"
+    
+    with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
+        results = []
+        for page_number, page in enumerate(pdf.pages, start=1):
+            text = page.extract_text()
+            if text:
+                lines = text.split('\n')
+                keep_next = False
+                for line in lines:
+                    if keep_next:
+                        outfile.write(line.strip() + '\n')
+                        keep_next = False
+                        results.append(line.strip())
+                        break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
+                    if line.strip().startswith("1122"):
+                        outfile.write(line.strip() + "\n")
+                        results.append(line.strip())
+                        keep_next = True
+    
+    pattern = r'\d+(?:,\d{2})?'
+    prices = []
+    for line in results:
+        found = re.findall(pattern, line)
+    
+    prices_=float(found[0].replace(",","."))
+        
+    if prices_:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Piatsa Gourounaki")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Opa")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+        
+    if os.path.exists(output_path):
+        os.remove(output_path)
+    else:
+        print("File not found.")
+
 # Run the web-scraping code
 for u in range(0, len(urls)):
     print(u)
@@ -2881,6 +2934,8 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)    
+    elif  retailer_=="Piatsa Gourounaki":
+        results_piatsa(u)
 
 #================================================================================
 # Manually added data            
