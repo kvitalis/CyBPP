@@ -2999,6 +2999,8 @@ for u in range(0, len(urls)):
         results_piatsa(u)
     elif retailer_=="Pagkratios":
         results_pagkratios(u)
+    elif retailer_=="Christos":
+        results_chrsitos(u)
 
 #================================================================================
 # Manually added data            
