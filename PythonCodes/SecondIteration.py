@@ -2814,6 +2814,35 @@ def results_piatsa(u):
     else:
         print("File not found.")
 
+def results_pagkratios(u):
+    #url_="https://www.pagkratios.com/menu/"
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs,{'headers':header})
+    
+    if response.status_code == 200:
+        
+        soup = BeautifulSoup(response.content, "html.parser")
+        elemenet_2=soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        price_=elemenet_2[1].text.replace("€","")
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Piatsa Gourounaki")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
 # Run the web-scraping code
 for u in range(0, len(urls)):
     print(u)
@@ -2936,6 +2965,8 @@ for u in range(0, len(urls)):
         results_max_7_tax(u)    
     elif  retailer_=="Piatsa Gourounaki":
         results_piatsa(u)
+    elif retailer_=="Pagkratios":
+        results_pagkratios(u)
 
 #================================================================================
 # Manually added data            
