@@ -2998,7 +2998,7 @@ for u in range(0, len(urls)):
         results_ithaki(u)
     elif retailer_=="Flames":
         results_flames(u)
-    elif retailer_=="Piasta Gourounaki":
+    elif retailer_=="Piatsa Gourounaki":
         results_piatsa_gourounaki(u)
     elif retailer_=="Pagkratios":
         results_pagkratios(u)
