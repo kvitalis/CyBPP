@@ -1,4 +1,4 @@
-# Workflow for the web-scraping process
+9# Workflow for the web-scraping process
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
 name: web-scraping
@@ -9,7 +9,7 @@ run-name: Add today's scraped data into Raw-Data.csv
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "36 08 * * *" #UTC time
+    - cron: "12 09 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
