@@ -1,4 +1,4 @@
-9# Workflow for the web-scraping process
+# Workflow for the web-scraping process
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
 name: web-scraping
