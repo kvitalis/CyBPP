@@ -51,15 +51,16 @@ def results_supermarketcy(u):
     #response = requests.get(url_new)
     
     ## with headers 
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
+    #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
 
     # 1 (*NOT working*)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
     
     # 2 (*NOT working*)
-    #response = requests.get(url_new, headers = header) 
+    response = requests.get(url_new, headers = header) 
 
     if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -2761,10 +2762,12 @@ def results_opacy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_piatsa(u):
-    pdf_path = r"PDFs/Piatsa_JUN2025.pdf"
-    output_path = r"PDFs/output.txt"
+def results_piatsa_gourounaki(u):
     
+    pdf_path = "PDFs/Piatsa_JUN2025.pdf"
+    output_path = "PDFs/output.txt"
+    
+   # with pdfplumber.open(pdf_path) as pdf:
     with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
         results = []
         for page_number, page in enumerate(pdf.pages, start=1):
@@ -2774,23 +2777,24 @@ def results_piatsa(u):
                 keep_next = False
                 for line in lines:
                     if keep_next:
-                        outfile.write(line.strip() + '\n')
+                        #outfile.write(line.strip() + '\n')
                         keep_next = False
                         results.append(line.strip())
                         break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
                     if line.strip().startswith("1122"):
-                        outfile.write(line.strip() + "\n")
+                        #outfile.write(line.strip() + "\n")
                         results.append(line.strip())
                         keep_next = True
     
     pattern = r'\d+(?:,\d{2})?'
-    prices = []
+    #price_ = []
     for line in results:
         found = re.findall(pattern, line)
     
-    prices_=float(found[0].replace(",","."))
+    price_ = float(found[0].replace(",","."))
+    print(price_)
         
-    if prices_:
+    if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2800,37 +2804,38 @@ def results_piatsa(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Opa")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-        
-    if os.path.exists(output_path):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
+    if os.path.exists(output_path):  # os should be defined !!!
         os.remove(output_path)
     else:
         print("File not found.")
-
+    
 def results_pagkratios(u):
-    #url_="https://www.pagkratios.com/menu/"
+
     bs = BeautifulSoup(Item_url_, "html.parser")
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(bs,{'headers':header})
     
     if response.status_code == 200:
         
         soup = BeautifulSoup(response.content, "html.parser")
-        elemenet_2=soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        price_=elemenet_2[1].text.replace("€","")
+        elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        price_ = elemenet_2[1].text.replace("€","")
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Piatsa Gourounaki")
+        new_row.append("Pagkratios")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     
@@ -2843,8 +2848,9 @@ def results_pagkratios(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
-def results_chrsitos(u):
-    pdf_path = r"PDFs/Christos_JUN2025.pdf"
+def results_christos_grill_seafood(u):
+    
+    pdf_path = "PDFs/Christos_JUN2025.pdf"
 
     with pdfplumber.open(pdf_path) as pdf:
         if len(pdf.pages) >= 9:
@@ -2854,7 +2860,8 @@ def results_chrsitos(u):
             
             if match:
                 price = match.group(1)
-                price_=float(price)/2
+                price_ = float(price)/2
+                print(price_)
 
             if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2862,7 +2869,7 @@ def results_chrsitos(u):
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Piatsa Gourounaki")
+                new_row.append("Christos Grill&Seafood")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             
@@ -2874,6 +2881,8 @@ def results_chrsitos(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
 
+#Initialization of the scraping/processing time
+start_time = time.time()
 
 # Run the web-scraping code
 for u in range(0, len(urls)):
@@ -2890,15 +2899,15 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-
+    
     if retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
-        #results_alphamega(u)    
+    #    results_alphamega(u)    
     #elif retailer_=="Cheap Basket":
-        #results_cheapbasket(u)
+    #    results_cheapbasket(u)
     #elif retailer_=="Opa":
-        #results_opacy(u)    
+    #    results_opacy(u)    
     elif retailer_=="Fuel Daddy":
         results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
@@ -2989,19 +2998,19 @@ for u in range(0, len(urls)):
         results_ithaki(u)
     elif retailer_=="Flames":
         results_flames(u)
+    elif retailer_=="Piasta Gourounaki":
+        results_piatsa_gourounaki(u)
+    elif retailer_=="Pagkratios":
+        results_pagkratios(u)
+    elif retailer_=="Christos Grill&Seafood":
+        results_christos_grill_seafood(u)    
     elif retailer_=="Intercity Buses":
         results_intercity(u)  
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
-        results_max_7_tax(u)    
-    elif  retailer_=="Piatsa Gourounaki":
-        results_piatsa(u)
-    elif retailer_=="Pagkratios":
-        results_pagkratios(u)
-    elif retailer_=="Christos":
-        results_chrsitos(u)
-
+        results_max_7_tax(u)
+        
 #================================================================================
 # Manually added data            
 
