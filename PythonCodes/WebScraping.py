@@ -2789,11 +2789,12 @@ def results_piatsa_gourounaki(u):
                         keep_next = True
     
     pattern = r'\d+(?:,\d{2})?'
-    prices = []
+    price = []
     for line in results:
         found = re.findall(pattern, line)
     
-    prices_ = float(found[0].replace(",","."))
+    price_ = float(found[0].replace(",","."))
+    print(price_)
         
     if prices_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2828,6 +2829,7 @@ def results_pagkratios(u):
         soup = BeautifulSoup(response.content, "html.parser")
         elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
         price_ = elemenet_2[1].text.replace("€","")
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -2860,6 +2862,7 @@ def results_chritos_grill_seafood(u):
             if match:
                 price = match.group(1)
                 price_ = float(price)/2
+                print(price_)
 
             if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
