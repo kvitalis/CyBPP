@@ -2779,12 +2779,12 @@ def results_piatsa_gourounaki(u):
                 keep_next = False
                 for line in lines:
                     if keep_next:
-                        outfile.write(line.strip() + '\n')
+                        #outfile.write(line.strip() + '\n')
                         keep_next = False
                         results.append(line.strip())
                         break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
                     if line.strip().startswith("1122"):
-                        outfile.write(line.strip() + "\n")
+                        #outfile.write(line.strip() + "\n")
                         results.append(line.strip())
                         keep_next = True
     
