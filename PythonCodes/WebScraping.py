@@ -2789,14 +2789,14 @@ def results_piatsa_gourounaki(u):
                         keep_next = True
     
     pattern = r'\d+(?:,\d{2})?'
-    price = []
+    #price_ = []
     for line in results:
         found = re.findall(pattern, line)
     
     price_ = float(found[0].replace(",","."))
     print(price_)
         
-    if prices_:
+    if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2813,15 +2813,16 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-      
-    if os.path.exists(output_path):
+    '''  
+    if os.path.exists(output_path):  # DEFINE os !!!
         os.remove(output_path)
     else:
         print("File not found.")
-    
+    '''
 def results_pagkratios(u):
 
     bs = BeautifulSoup(Item_url_, "html.parser")
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(bs,{'headers':header})
     
     if response.status_code == 200:
@@ -2849,7 +2850,7 @@ def results_pagkratios(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
-def results_chritos_grill_seafood(u):
+def results_christos_grill_seafood(u):
     
     pdf_path = "PDFs/Christos_JUN2025.pdf"
 
