@@ -124,10 +124,12 @@ def results_alphamega(u):
 
 def results_fueldaddy(u):
     
+    url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
+    
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
-    url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
     response = requests.get(url_new, headers=header)
+    
     price_list = []
         
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
@@ -2762,12 +2764,13 @@ def results_opacy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-
-def results_piatsa(u):
-    pdf_path = r"PDFs/Piatsa_JUN2025.pdf"
-    output_path = r"PDFs/output.txt"
+def results_piatsa_gourounaki(u):
     
-    with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
+    pdf_path = "PDFs/Piatsa_JUN2025.pdf"
+    #output_path = r"PDFs/output.txt"
+    
+    with pdfplumber.open(pdf_path) as pdf:
+    #with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
         results = []
         for page_number, page in enumerate(pdf.pages, start=1):
             text = page.extract_text()
@@ -2790,7 +2793,7 @@ def results_piatsa(u):
     for line in results:
         found = re.findall(pattern, line)
     
-    prices_=float(found[0].replace(",","."))
+    prices_ = float(found[0].replace(",","."))
         
     if prices_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2809,30 +2812,30 @@ def results_piatsa(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        
+    '''  
     if os.path.exists(output_path):
         os.remove(output_path)
     else:
         print("File not found.")
-
+    '''
 
 def results_pagkratios(u):
-    #url_="https://www.pagkratios.com/menu/"
+
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header})
     
     if response.status_code == 200:
         
         soup = BeautifulSoup(response.content, "html.parser")
-        elemenet_2=soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        price_=elemenet_2[1].text.replace("€","")
+        elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        price_ = elemenet_2[1].text.replace("€","")
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Piatsa Gourounaki")
+        new_row.append("Pagkratios")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     
@@ -2845,8 +2848,9 @@ def results_pagkratios(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
-def results_chrsitos(u):
-    pdf_path = r"PDFs/Christos_JUN2025.pdf"
+def results_chritos_grill_seafood(u):
+    
+    pdf_path = "PDFs/Christos_JUN2025.pdf"
 
     with pdfplumber.open(pdf_path) as pdf:
         if len(pdf.pages) >= 9:
@@ -2856,7 +2860,7 @@ def results_chrsitos(u):
             
             if match:
                 price = match.group(1)
-                price_=float(price)/2
+                price_ = float(price)/2
 
             if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2864,7 +2868,7 @@ def results_chrsitos(u):
                 new_row.append(float(price_))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Piatsa Gourounaki")
+                new_row.append("Christos Grill&Seafood")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
             
@@ -2875,7 +2879,6 @@ def results_chrsitos(u):
                 website_false.append(division_)
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
-
 
 #Initialization of the scraping/processing time
 start_time = time.time()
@@ -3001,11 +3004,11 @@ for u in range(0, len(urls)):
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
     elif retailer_=="Piasta Gourounaki":
-        results_piatsa(u)
+        results_piatsa_gourounaki(u)
     elif retailer_=="Pagkratios":
         results_pagkratios(u)
-    elif retailer_=="Christos":
-        results_chrsitos(u)
+    elif retailer_=="Christos Grill&Seafood":
+        results_christos_grill_seafood(u)
    
 # Change the type as float
 list_["Price"].astype(float)
