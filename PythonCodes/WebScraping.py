@@ -2767,10 +2767,10 @@ def results_opacy(u):
 def results_piatsa_gourounaki(u):
     
     pdf_path = "PDFs/Piatsa_JUN2025.pdf"
-    #output_path = r"PDFs/output.txt"
+    output_path = "PDFs/output.txt"
     
-    with pdfplumber.open(pdf_path) as pdf:
-    #with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
+   # with pdfplumber.open(pdf_path) as pdf:
+    with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
         results = []
         for page_number, page in enumerate(pdf.pages, start=1):
             text = page.extract_text()
@@ -2812,13 +2812,12 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''  
+      
     if os.path.exists(output_path):
         os.remove(output_path)
     else:
         print("File not found.")
-    '''
-
+    
 def results_pagkratios(u):
 
     bs = BeautifulSoup(Item_url_, "html.parser")
