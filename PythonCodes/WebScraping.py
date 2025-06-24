@@ -2813,12 +2813,12 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''  
-    if os.path.exists(output_path):  # DEFINE os !!!
+    
+    if os.path.exists(output_path):  # os should be defined !!!
         os.remove(output_path)
     else:
         print("File not found.")
-    '''
+    
 def results_pagkratios(u):
 
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -3000,18 +3000,18 @@ for u in range(0, len(urls)):
         results_ithaki(u)
     elif retailer_=="Flames":
         results_flames(u)
+    elif retailer_=="Piasta Gourounaki":
+        results_piatsa_gourounaki(u)
+    elif retailer_=="Pagkratios":
+        results_pagkratios(u)
+    elif retailer_=="Christos Grill&Seafood":
+        results_christos_grill_seafood(u)    
     elif retailer_=="Intercity Buses":
         results_intercity(u)  
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-    elif retailer_=="Piasta Gourounaki":
-        results_piatsa_gourounaki(u)
-    elif retailer_=="Pagkratios":
-        results_pagkratios(u)
-    elif retailer_=="Christos Grill&Seafood":
-        results_christos_grill_seafood(u)
    
 # Change the type as float
 list_["Price"].astype(float)
