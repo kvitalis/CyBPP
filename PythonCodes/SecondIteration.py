@@ -40,7 +40,7 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 
 def results_supermarketcy(u):
     
-    url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
+    url_new = "https://www.supermarketcy.com.cy/" + Item_url_
 
     ##  without headers 
     # 1 (*NOT working*)
@@ -71,8 +71,8 @@ def results_supermarketcy(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        #soup = BeautifulSoup(response.content, "html.parser")
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
         value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
