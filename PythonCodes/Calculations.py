@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-
+'''
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-06-11'
 
@@ -280,11 +280,11 @@ else:
     pass
 '''
 ########################################################################################################################################################################################
-# If you want to recalculate everything between two specific dates, then run the following while loop :
+# If you want to re-calculate everything between two specific dates, then run the following while loop :
 ########################################################################################################################################################################################
 
-start_date = datetime.strptime("2024-08-01", "%Y-%m-%d")
-end_date = datetime.strptime("2025-04-09", "%Y-%m-%d")
+start_date = datetime.strptime("2025-06-11", "%Y-%m-%d")
+end_date = datetime.strptime("2025-06-25", "%Y-%m-%d")
 
 today_p = start_date
 
@@ -329,62 +329,62 @@ while today_p <= end_date:
     group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
     
     #Electricity
-    electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
-    ele_price_=electricity["Price"].sum()
-    new_row=[]
+    electricity = row_data_today[row_data_today["Subclass"] == "Electricity"]
+    ele_price_ = electricity["Price"].sum()
+    new_row = []
     new_row.append("Electricity")
     new_row.append(ele_price_)
     group_df.loc[len(group_df)] = new_row
     group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
     
     #Water supply
-    waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
+    waterboard = row_data_today[row_data_today["Subclass"] == "Water supply"]
     
-    larnaca_=0
-    larnaca_count=0
-    nicosia_=0
-    nicosia_count=0
-    limassol_=0
-    limassol_count=0
+    larnaca_ = 0
+    larnaca_count = 0
+    nicosia_ = 0
+    nicosia_count = 0
+    limassol_ = 0
+    limassol_count = 0
     
-    for i in range(0,len(waterboard)):
+    for i in range(0, len(waterboard)):
         if "Larnaca" in waterboard.iloc[i]["Name"]:
-            larnaca_+=waterboard.iloc[i]["Price"]
+            larnaca_ += waterboard.iloc[i]["Price"]
             larnaca_count=1
         if "Nicosia" in waterboard.iloc[i]["Name"]:
-            nicosia_+=waterboard.iloc[i]["Price"]
-            nicosia_count=1
+            nicosia_ += waterboard.iloc[i]["Price"]
+            nicosia_count = 1
         if "Limassol" in waterboard.iloc[i]["Name"]:
-            limassol_+=waterboard.iloc[i]["Price"]
-            limassol_count=1
+            limassol_ += waterboard.iloc[i]["Price"]
+            limassol_count = 1
             
     wat_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
-    new_row=[]
+    new_row = []
     new_row.append("Water supply")
     new_row.append(wat_price_)
     group_df.loc[len(group_df)] = new_row
     group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
     
     #Sewage collection
-    sewagecollection=row_data_today[row_data_today["Subclass"]=="Sewage collection"]
+    sewagecollection = row_data_today[row_data_today["Subclass"] == "Sewage collection"]
     
-    larnaca_=0
-    larnaca_count=0
-    nicosia_=0
-    nicosia_count=0
-    limassol_=0
-    limassol_count=0
+    larnaca_ = 0
+    larnaca_count = 0
+    nicosia_ = 0
+    nicosia_count = 0
+    limassol_ = 0
+    limassol_count = 0
     
-    for i in range(0,len(sewagecollection)):
+    for i in range(0, len(sewagecollection)):
         if "Larnaca" in sewagecollection.iloc[i]["Name"]:
-            larnaca_+=sewagecollection.iloc[i]["Price"]
-            larnaca_count=1
+            larnaca_ += sewagecollection.iloc[i]["Price"]
+            larnaca_count = 1
         if "Nicosia" in sewagecollection.iloc[i]["Name"]:
-            nicosia_+=sewagecollection.iloc[i]["Price"]
-            nicosia_count=1
+            nicosia_ += sewagecollection.iloc[i]["Price"]
+            nicosia_count = 1
         if "Limassol" in sewagecollection.iloc[i]["Name"]:
-            limassol_+=sewagecollection.iloc[i]["Price"]
-            limassol_count=1
+            limassol_ += sewagecollection.iloc[i]["Price"]
+            limassol_count = 1
             
     sew_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
     new_row=[]
@@ -555,5 +555,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-####################################################    End of the while loop    ################################################################################################################    
-'''
+####################################################    End of the while loop    ################################################################################################################
+
