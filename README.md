@@ -4,7 +4,7 @@
 
 The *Billion Prices Project* ([BPP](https://thebillionpricesproject.com/)) is an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
 
-Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2200 goods and services from over 50 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
+Here, the BPP methodology is for the first time in the Cypriot economy applied and involves web-scraping of prices of around 2200 goods and services from over 55 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
 
 ## Python Codes
 
@@ -28,7 +28,7 @@ Finally, the *Visualizations.py* reads the *Daily-CPI-General-Inflation.csv* fil
 
 ## Online Retailers
 
-According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 53 selected online retailers chosen for the development of the Cyprus' CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is infeasible to collect data on their products due to the following main reasons: (i) some retailers do not have websites, and (ii) some online retailers possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
+According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 56 selected online retailers chosen for the development of the Cyprus' CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is infeasible to collect data on their products due to the following main reasons: (i) some retailers do not have websites, and (ii) some online retailers possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
 1. Adventure Without Limits (AWOL) https://www.awol.com.cy/ 
 
@@ -42,99 +42,105 @@ According to the representativeness of each product and its retailer within the 
 
 6. Centroptical https://centroptical-cyprus.com/
 
-7. Costas Theodorou https://costastheodorou.com.cy/
+7. Christos Grill & Seafood https://christosgrillandseafood.com/wp-content/uploads/2025/02/MENU-2025-night.pdf 
 
-8. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/el-gr/katanalotes/details/times-ilektrismou  
+8. Costas Theodorou https://costastheodorou.com.cy/
 
-9. Cyprus Ministry of Education, Sport and Youth https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+9. Cyprus Energy Regulation Authority (CERA) https://www.cera.org.cy/el-gr/katanalotes/details/times-ilektrismou  
 
-10. Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf
+10. Cyprus Ministry of Education, Sport and Youth https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
-11. Cyprus Public Transport https://www.publictransport.com.cy/
+11. Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf
 
-12. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
+12. Cyprus Public Transport https://www.publictransport.com.cy/
 
-13. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EL/regulatedactivities/supply/tariffs/Pages/supply-tariffs.aspx
+13. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
 
-14. Electroline	https://electroline.com.cy/ 
+14. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EL/regulatedactivities/supply/tariffs/Pages/supply-tariffs.aspx
 
-15. Epic https://www.epic.com.cy/en/page/start/home 
+15. Electroline	https://electroline.com.cy/ 
 
-16. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
+16. Epic https://www.epic.com.cy/en/page/start/home 
 
-17. Evdokia Jewellery https://evdokiajewellery.com/
+17. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
 
-18. E-Wholesale https://www.ewsale.com/
+18. Evdokia Jewellery https://evdokiajewellery.com/
 
-19. Famous Sports https://www.famousports.com/en 
+19. E-Wholesale https://www.ewsale.com/
 
-20. Flames Restaurant and Bar https://flamesrestaurantbar.com/
+20. Famous Sports https://www.famousports.com/en 
+
+21. Flames Restaurant and Bar https://flamesrestaurantbar.com/
     
-21. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Jackoson, Petrolina, Shell, Staroil, Total Plus) https://www.fueldaddy.com.cy/en through the Consumer Protection Service https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
+22. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Jackoson, Petrolina, Shell, Staroil, Total Plus) https://www.fueldaddy.com.cy/en through the Consumer Protection Service https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
 
-22. IKEA https://www.ikea.com.cy/
+23. IKEA https://www.ikea.com.cy/
 
-23. Intercity Buses https://intercity-buses.com/en/
+24. Intercity Buses https://intercity-buses.com/en/
 
-24. Ithaki Garden https://www.tripadvisor.com.gr/Restaurant_Review-g190379-d7269566-Reviews-Ithaki_Garden-Larnaca_Larnaka_District.html
+25. Ithaki Garden https://www.tripadvisor.com.gr/Restaurant_Review-g190379-d7269566-Reviews-Ithaki_Garden-Larnaca_Larnaka_District.html
 
-25. Lenses CY https://www.lensescy.com/
+26. Lenses CY https://www.lensescy.com/
 
-26. Leroy Merlin https://www.leroymerlin.com.cy/gr/  
+27. Leroy Merlin https://www.leroymerlin.com.cy/gr/  
 
-27. Marks & Spencer	https://www.marksandspencer.com/cy/
+28. Marks & Spencer	https://www.marksandspencer.com/cy/
 
-28. Max 7 Taxi https://www.max7taxi.com/
+29. Max 7 Taxi https://www.max7taxi.com/
 
-29. MEZE Taverna Restaurant https://www.mezetaverna.com/
+30. MEZE Taverna Restaurant https://www.mezetaverna.com/
     
-30. Moto Race https://www.motorace.com.cy/
+31. Moto Race https://www.motorace.com.cy/
 
-31. Music Avenue https://www.musicavenue.com.cy/  
+32. Music Avenue https://www.musicavenue.com.cy/  
 
-32. Nissan https://www.nissan.com.cy/ 
+33. Nissan https://www.nissan.com.cy/ 
 
-33. Novella Hair Mode https://novella.com.cy/ 
+34. Novella Hair Mode https://novella.com.cy/ 
 
-34. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
+35. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
 
-35. Parga Book Center https://www.parga.com.cy/
+36. Pagkratios Traditional Tavern https://www.pagkratios.com/menu/
 
-36. Premier Laundry Services Ltd https://premierlaundry.com.cy/#/ 
+37. Parga Book Center https://www.parga.com.cy/
 
-37. Primetel https://primetel.com.cy/en
+38. Piatsa Gourounaki https://piatsaexpress.com/menu/ 
 
-38. Pyxida Fish Tavern https://pyxidafishtavern.com/
+39. Premier Laundry Services Ltd https://premierlaundry.com.cy/#/ 
 
-39. Rio Cinemas http://www.riocinemas.com.cy/ 
+40. Primetel https://primetel.com.cy/en
 
-40. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
+41. Pyxida Fish Tavern https://pyxidafishtavern.com/
 
-41. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
+42. Rio Cinemas http://www.riocinemas.com.cy/ 
 
-42. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
+43. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
 
-43. Stephanis https://www.stephanis.com.cy/en
+44. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
 
-44. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/ 
+45. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
 
-45. SupermarketCy https://www.supermarketcy.com.cy/ 
+46. Stephanis https://www.stephanis.com.cy/en
 
-46. The CYgar Shop https://www.thecygarshop.com/ 
+47. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/ 
 
-47. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
+48. SupermarketCy https://www.supermarketcy.com.cy/ 
 
-48. Toyota https://www.toyota.com.cy/
+49. The CYgar Shop https://www.thecygarshop.com/ 
 
-49. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
+50. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
 
-50. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
+51. Toyota https://www.toyota.com.cy/
 
-51. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
+52. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
+
+53. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
+
+54. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
     
-53. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
+55. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
 
-54. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
+56. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
 ## GitHub Actions
 
