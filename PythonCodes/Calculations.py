@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-'''
+
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-06-11'
 
@@ -35,9 +35,9 @@ weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
 index_ = pd.read_csv("Datasets/Reference-Values.csv")
 
 # DIVISION CPI
-row_data_today=raw_data[raw_data["Date"]==today]
-row_data_1=row_data_today[["Subclass","Price"]]
-group=row_data_1.groupby("Subclass").mean()
+row_data_today = raw_data[raw_data["Date"]==today]
+row_data_1 = row_data_today[["Subclass","Price"]]
+group = row_data_1.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
@@ -47,65 +47,65 @@ group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into
 group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
 
 #Electricity
-electricity=row_data_today[row_data_today["Subclass"]=="Electricity"]
-ele_price_=electricity["Price"].sum()
-new_row=[]
+electricity = row_data_today[row_data_today["Subclass"]=="Electricity"]
+ele_price_ = electricity["Price"].sum()
+new_row = []
 new_row.append("Electricity")
 new_row.append(ele_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Water supply
-waterboard=row_data_today[row_data_today["Subclass"]=="Water supply"]
+waterboard = row_data_today[row_data_today["Subclass"]=="Water supply"]
 
-larnaca_=0
-larnaca_count=0
-nicosia_=0
-nicosia_count=0
-limassol_=0
-limassol_count=0
+larnaca_ = 0
+larnaca_count = 0
+nicosia_ = 0
+nicosia_count = 0
+limassol_ = 0
+limassol_count = 0
 
-for i in range(0,len(waterboard)):
+for i in range(0, len(waterboard)):
     if "Larnaca" in waterboard.iloc[i]["Name"]:
-        larnaca_+=waterboard.iloc[i]["Price"]
-        larnaca_count=1
+        larnaca_ += waterboard.iloc[i]["Price"]
+        larnaca_count = 1
     if "Nicosia" in waterboard.iloc[i]["Name"]:
-        nicosia_+=waterboard.iloc[i]["Price"]
-        nicosia_count=1
+        nicosia_ += waterboard.iloc[i]["Price"]
+        nicosia_count = 1
     if "Limassol" in waterboard.iloc[i]["Name"]:
-        limassol_+=waterboard.iloc[i]["Price"]
-        limassol_count=1
+        limassol_ += waterboard.iloc[i]["Price"]
+        limassol_count = 1
         
 wat_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
-new_row=[]
+new_row = []
 new_row.append("Water supply")
 new_row.append(wat_price_)
 group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Sewage collection
-sewagecollection=row_data_today[row_data_today["Subclass"]=="Sewage collection"]
+sewagecollection = row_data_today[row_data_today["Subclass"]=="Sewage collection"]
 
-larnaca_=0
-larnaca_count=0
-nicosia_=0
-nicosia_count=0
-limassol_=0
-limassol_count=0
+larnaca_ = 0
+larnaca_count = 0
+nicosia_ = 0
+nicosia_count = 0
+limassol_ = 0
+limassol_count = 0
 
-for i in range(0,len(sewagecollection)):
+for i in range(0, len(sewagecollection)):
     if "Larnaca" in sewagecollection.iloc[i]["Name"]:
-        larnaca_+=sewagecollection.iloc[i]["Price"]
-        larnaca_count=1
+        larnaca_ += sewagecollection.iloc[i]["Price"]
+        larnaca_count = 1
     if "Nicosia" in sewagecollection.iloc[i]["Name"]:
-        nicosia_+=sewagecollection.iloc[i]["Price"]
-        nicosia_count=1
+        nicosia_ += sewagecollection.iloc[i]["Price"]
+        nicosia_count = 1
     if "Limassol" in sewagecollection.iloc[i]["Name"]:
-        limassol_+=sewagecollection.iloc[i]["Price"]
+        limassol_ += sewagecollection.iloc[i]["Price"]
         limassol_count=1
         
 sew_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
-new_row=[]
+new_row = []
 new_row.append("Sewage collection")
 new_row.append(sew_price_)
 group_df.loc[len(group_df)] = new_row
@@ -231,9 +231,9 @@ current_date_obj = datetime.strptime(today, "%Y-%m-%d")
 current_date_str = current_date_obj.strftime("%Y-%m-%d")
 
 # Read important files
-df_monthly_general=pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-df_monthly_division=pd.read_csv("Results/Monthly-CPI-Division.csv")
-df_daily_general=pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+df_monthly_general = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+df_monthly_division = pd.read_csv("Results/Monthly-CPI-Division.csv")
+df_daily_general = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
 # Function for the calculations to be performed every last Thursday per month
 def is_last_thursday(date):
@@ -256,8 +256,8 @@ if is_last_thursday(current_date_str):
     cols.insert(0, cols.pop(cols.index('Date')))
     df_monthly_division = df_monthly_division[cols]
 
-    prior_df=df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
-    current_df=df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
+    prior_df = df_monthly_division[len(df_monthly_division)-24 : len(df_monthly_division)-12]
+    current_df = df_monthly_division[len(df_monthly_division)-12 : len(df_monthly_division)]
     unique_divisions = df_monthly_division['Division'].unique()
     
     for unique_ in unique_divisions:
@@ -280,7 +280,7 @@ else:
     pass
 '''
 ########################################################################################################################################################################################
-# If you want to re-calculate everything between two specific dates, then run the following while loop :
+# If you want to re-calculate everything between two specific dates, then run the following while-loop :
 ########################################################################################################################################################################################
 
 start_date = datetime.strptime("2025-06-11", "%Y-%m-%d")
@@ -532,8 +532,8 @@ while today_p <= end_date:
         cols.insert(0, cols.pop(cols.index('Date')))
         df_monthly_division = df_monthly_division[cols]
     
-        prior_df = df_monthly_division[len(df_monthly_division)-24:len(df_monthly_division)-12]
-        current_df = df_monthly_division[len(df_monthly_division)-12:len(df_monthly_division)]
+        prior_df = df_monthly_division[len(df_monthly_division)-24 : len(df_monthly_division)-12]
+        current_df = df_monthly_division[len(df_monthly_division)-12 : len(df_monthly_division)]
         unique_divisions = df_monthly_division['Division'].unique()
         
         for unique_ in unique_divisions:
@@ -555,5 +555,5 @@ while today_p <= end_date:
     else:
         pass
     today_p += timedelta(days=1)
-####################################################    End of the while loop    ################################################################################################################
-
+####################################################    End of while-loop    ################################################################################################################
+'''
