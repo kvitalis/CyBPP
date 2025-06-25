@@ -41,7 +41,31 @@ list_ = pd.DataFrame(columns=["Date","Name","Price","Subclass","Division","Retai
 def results_supermarketcy(u):
     
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
-    response = requests.get(url_new) 
+    
+    # way 1 does not work
+    #response = requests.get(url_new) 
+
+    ## way 2 does not work
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs)
+
+    ## way 3 
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    header = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/115.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Referer": "https://www.google.com/",
+    "DNT": "1",  # Do Not Track header
+    "Connection": "keep-alive",
+    }
+    
+    response = requests.get(url_new, headers=header)
     
     if response.status_code == 200 : 
         
@@ -49,12 +73,12 @@ def results_supermarketcy(u):
         #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
-        value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
-        print(value)
+        price_ = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_wrappers)
-        new_row.append(float(value))
+        new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)  
         new_row.append("SupermarketCy")
