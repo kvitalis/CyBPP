@@ -2705,8 +2705,13 @@ def results_stock_center(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_price_ = soup.find_all("div",{"class":"price"})
-        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\n","").replace(".","").replace("€","")
-        print(price_)
+        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\r","").replace("\n","").replace(".","").replace("€","")
+        
+        # Extract only the number
+        match = re.search(r'\d+', price_)
+        if match:
+            price_ = int(match.group())
+            print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
