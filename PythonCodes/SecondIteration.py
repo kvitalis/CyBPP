@@ -41,7 +41,36 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 def results_supermarketcy(u):
     
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
-
+    #response = requests.get(url_new)
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
+    
+    if response.status_code == 200 : 
+        
+        soup = BeautifulSoup(response.content, "html.parser")
+        #soup = BeautifulSoup(response.text, "html.parser")
+        name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
+        price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
+        value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        print(value)
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_wrappers)
+        new_row.append(float(value))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("SupermarketCy")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    '''
     ##  without headers 
     # 1 (*NOT working*)
     #bs = BeautifulSoup(url_new, "html.parser")
@@ -51,16 +80,16 @@ def results_supermarketcy(u):
     #response = requests.get(url_new)
     
     ## with headers 
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
 
     # 1 (*NOT working*)
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs, {'headers':header})
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers':header})
     
     # 2 (*NOT working*)
-    response = requests.get(url_new, headers = header) 
+    #response = requests.get(url_new, headers = header) 
 
     if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -84,6 +113,7 @@ def results_supermarketcy(u):
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)
+        '''
 
 '''
 def results_alphamega(u):
@@ -2675,8 +2705,13 @@ def results_stock_center(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_price_ = soup.find_all("div",{"class":"price"})
-        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\n","").replace(".","").replace("€","")
-        print(price_)
+        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\r","").replace("\n","").replace(".","").replace("€","")
+        
+        # Extract only the number
+        match = re.search(r'\d+', price_)
+        if match:
+            price_ = int(match.group())
+            print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -2767,32 +2802,35 @@ def results_piatsa_gourounaki(u):
     pdf_path = "PDFs/Piatsa_JUN2025.pdf"
     output_path = "PDFs/output.txt"
     
-   # with pdfplumber.open(pdf_path) as pdf:
     with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
+        
         results = []
         for page_number, page in enumerate(pdf.pages, start=1):
             text = page.extract_text()
+            
             if text:
                 lines = text.split('\n')
                 keep_next = False
+                
                 for line in lines:
+                    
                     if keep_next:
                         #outfile.write(line.strip() + '\n')
                         keep_next = False
                         results.append(line.strip())
                         break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
+                    
                     if line.strip().startswith("1122"):
                         #outfile.write(line.strip() + "\n")
                         results.append(line.strip())
                         keep_next = True
     
     pattern = r'\d+(?:,\d{2})?'
-    #price_ = []
+    price_ = []
     for line in results:
         found = re.findall(pattern, line)
-    
-    price_ = float(found[0].replace(",","."))
-    print(price_)
+        price_ = float(found[0].replace(",","."))
+        print(price_)
         
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -2811,11 +2849,12 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
+    '''
     if os.path.exists(output_path):  # os should be defined !!!
         os.remove(output_path)
     else:
         print("File not found.")
+    '''
     
 def results_pagkratios(u):
 
