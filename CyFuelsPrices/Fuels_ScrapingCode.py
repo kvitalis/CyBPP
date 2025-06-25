@@ -40,9 +40,8 @@ def results_FuelDaddy(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
-    url_ = str(Item_url_)
-    response = requests.get(url_, headers=header)
-    price_list = []
+    
+    response = requests.get(Item_url_, headers=header)
         
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
         print("No URL")
@@ -69,6 +68,7 @@ def results_FuelDaddy(u):
         name_word = name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
         
+        price_list = []
         for i in range(len(element_price)):
             name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
             price = element_price[i].find(class_ = "pricetag").get_text(strip = True).replace(" €","")
