@@ -2844,11 +2844,12 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
+    '''
     if os.path.exists(output_path):  # os should be defined !!!
         os.remove(output_path)
     else:
         print("File not found.")
+    '''
     
 def results_pagkratios(u):
 
