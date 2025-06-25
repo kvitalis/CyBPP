@@ -1,7 +1,7 @@
 #Import libraries
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import matplotlib.dates as mdates
 from datetime import datetime
 from datetime import datetime, timedelta 
 
@@ -26,6 +26,7 @@ plt.show()
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
+"""
 for i, txt in enumerate(df_daily['CPI General']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
@@ -33,6 +34,32 @@ plt.xlabel('Date')
 plt.ylabel('CPI General (27/06/2024 = base)')
 plt.title("Daily Evolution of General CPI in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('Results/Daily-CPI-General.png')
+plt.show()
+"""
+
+plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o') # Δημιουργία του γραφήματος (υποθέτω ότι έχεις ήδη κάνει plot τις τιμές)
+
+# Προσθήκη annotations μόνο κάθε 1η του μήνα
+for i, txt in enumerate(df_daily['CPI General']):
+    if df_daily['Date'][i].day == 1:
+        plt.annotate(f'{txt:.2f}',
+                     (df_daily['Date'][i], df_daily['CPI General'][i]),
+                     textcoords="offset points",
+                     xytext=(0,10),
+                     ha='center')
+
+locator = mdates.DayLocator(bymonthday=1)  # Format άξονα x να εμφανίζει μόνο την 1η κάθε μήνα
+formatter = mdates.DateFormatter('%d-%m-%Y')
+plt.gca().xaxis.set_major_locator(locator)
+plt.gca().xaxis.set_major_formatter(formatter)
+
+plt.xlabel('Date')
+plt.ylabel('CPI General (27/06/2024 = base)')
+plt.title("Daily Evolution of General CPI in Cyprus", fontsize=18)
+plt.xticks(rotation=90)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
