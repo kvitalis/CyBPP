@@ -152,13 +152,12 @@ def results_alphamega(u):
 
 def results_fueldaddy(u):
     
-    url_new = "https://www.fueldaddy.com.cy/" + str(Item_url_)
+    url_new = "https://www.fueldaddy.com.cy/" + Item_url_
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'}
-    response = requests.get(url_new, headers=header)
     
-    price_list = []
+    response = requests.get(url_new, headers=header)
         
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("404 Not Found" in response.text):
         print("No URL")
@@ -188,6 +187,7 @@ def results_fueldaddy(u):
         name_word = name[0].text.strip().replace("\n","")
         element_price = soup.find_all("div", {"class":"price-item"})
         
+        price_list = []
         for i in range(len(element_price)):
             name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
             price = element_price[i].find(class_ = "pricetag").get_text(strip = True).replace(" €","")
@@ -2797,32 +2797,35 @@ def results_piatsa_gourounaki(u):
     pdf_path = "PDFs/Piatsa_JUN2025.pdf"
     output_path = "PDFs/output.txt"
     
-   # with pdfplumber.open(pdf_path) as pdf:
     with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
+        
         results = []
         for page_number, page in enumerate(pdf.pages, start=1):
             text = page.extract_text()
+            
             if text:
                 lines = text.split('\n')
                 keep_next = False
+                
                 for line in lines:
+                    
                     if keep_next:
                         #outfile.write(line.strip() + '\n')
                         keep_next = False
                         results.append(line.strip())
                         break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
+                    
                     if line.strip().startswith("1122"):
                         #outfile.write(line.strip() + "\n")
                         results.append(line.strip())
                         keep_next = True
     
     pattern = r'\d+(?:,\d{2})?'
-    #price_ = []
+    price_ = []
     for line in results:
         found = re.findall(pattern, line)
-    
-    price_ = float(found[0].replace(",","."))
-    print(price_)
+        price_ = float(found[0].replace(",","."))
+        print(price_)
         
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
