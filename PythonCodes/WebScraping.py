@@ -2800,7 +2800,7 @@ def results_opacy(u):
 def results_piatsa_gourounaki(u):
     
     pdf_path = "PDFs/Piatsa_JUN2025.pdf"
-    output_path = "PDFs/output.txt"
+    output_path = "PDFs/piatsa_gourounaki_output.txt"
     
     with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
         
