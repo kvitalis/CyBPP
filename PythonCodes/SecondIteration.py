@@ -40,58 +40,29 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 
 def results_supermarketcy(u):
     
-    url_new = "https://www.supermarketcy.com.cy/" + Item_url_
-    #response = requests.get(url_new)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs)
+    url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
     
-    if response.status_code == 200 : 
-        
-        soup = BeautifulSoup(response.content, "html.parser")
-        #soup = BeautifulSoup(response.text, "html.parser")
-        name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
-        price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
-        value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
-        print(value)
-        
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_wrappers)
-        new_row.append(float(value))
-        new_row.append(subclass_)
-        new_row.append(division_)  
-        new_row.append("SupermarketCy")
-        list_.loc[len(list_)] = new_row
-        list_["Name"] = list_["Name"].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''
-    ##  without headers 
-    # 1 (*NOT working*)
+    ###  without headers 
+    ## 1 (*NOT working*)
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs)
 
-    # 2 (*NOT working*)
+    ## 2 (*NOT working*)
     #response = requests.get(url_new)
     
-    ## with headers 
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
-
-    # 1 (*NOT working*)
+    
+    ## 1 (*NOT working*)
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs, {'headers':header})
     
-    # 2 (*NOT working*)
+    ## 2 (*NOT working*)
     #response = requests.get(url_new, headers = header) 
 
-    if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
+    if (response.status_code != 200) : #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -104,16 +75,17 @@ def results_supermarketcy(u):
         #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
-        value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        price_ = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        print(price_)
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_wrappers)
-        new_row.append(float(value))
+        new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)  
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)
-        '''
 
 '''
 def results_alphamega(u):
