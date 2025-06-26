@@ -11,6 +11,7 @@ df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
+#Plot the time evolution of the daily CPI Inflation
 for i, txt in enumerate(df_daily['Inflation (%)']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
@@ -26,7 +27,7 @@ plt.show()
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
-"""
+#Plot the time evolution of the daily General CPI
 for i, txt in enumerate(df_daily['CPI General']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
@@ -38,8 +39,8 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
-"""
 
+'''
 plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o') # Δημιουργία του γραφήματος (υποθέτω ότι έχεις ήδη κάνει plot τις τιμές)
 
 # Προσθήκη annotations μόνο κάθε 1η του μήνα
@@ -64,7 +65,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
-
+'''
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
 #========================================================================================================================
@@ -88,7 +89,8 @@ if is_last_thursday(current_date):
     
     plt.figure(figsize=(10, 6))
     plt.plot(df_monthly['Date'], df_monthly['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
-    
+
+    #Plot the time evolution of the monthly CPI Inflation
     for i, txt in enumerate(df_monthly['Inflation (%)']):
         plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
@@ -103,7 +105,8 @@ if is_last_thursday(current_date):
     
     plt.figure(figsize=(10, 6))
     plt.plot(df_monthly['Date'], df_monthly['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
-    
+
+    #Plot the time evolution of the monthly General CPI 
     for i, txt in enumerate(df_monthly['CPI General']):
         plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
         
