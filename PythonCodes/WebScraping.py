@@ -59,7 +59,7 @@ def results_supermarketcy(u):
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
     
-    ## 2
+    ## 2 (*NOT working*)
     response = requests.get(url_new, headers = header) 
 
     if (response.status_code != 200) : #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
