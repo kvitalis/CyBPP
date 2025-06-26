@@ -1,4 +1,7 @@
 Name,Subclass,Url,Division,Retailer
+GIGA Unlimited,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
+GIGA Unlimited Plus,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
+GIGA Unlimited MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
 ΣίφουναςΟλικήςΨωμίΚομμένο780g,Bread,sifounas-olikis-psomi-kommeno-780g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g,Bread,sifounas-mavro-mikro-psomi-kommeno-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΣίφουναςΚοινόΨωμίΚομμένο560g,Bread,sifounas-koino-psomi-kommeno-560g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -444,3 +447,5 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Ετήσιο Τέλος,Sewage collection,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+Τέλος Χρήσης,Sewage collection,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
