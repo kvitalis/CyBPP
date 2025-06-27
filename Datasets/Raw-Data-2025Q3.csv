@@ -1,1 +1,1773 @@
 Date,Name,Subclass,Price,Division,Retailer
+2025-06-27,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",23.00,RESTAURANTS AND HOTELS,Meze Tavern
+2025-06-27,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and dancing establishments",26.00,RESTAURANTS AND HOTELS,Meze Tavern
+2025-06-27,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",28.0,RESTAURANTS AND HOTELS,Ithaki
+2025-06-27,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and dancing establishments",12.0,RESTAURANTS AND HOTELS,Ithaki
+2025-06-27,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",35.9,RESTAURANTS AND HOTELS,Flames
+2025-06-27,Meat Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",29.5,RESTAURANTS AND HOTELS,Flames
+2025-06-27,Fish Meze for 2 persons - Famagusta,"Restaurants, cafes and dancing establishments",32.5,RESTAURANTS AND HOTELS,Vasos Psarolimano
+2025-06-27,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",27.0,RESTAURANTS AND HOTELS,Pyxida
+2025-06-27,Meat Meze for 2 persons - Nicosia,"Restaurants, cafes and dancing establishments",20.2,RESTAURANTS AND HOTELS,Piatsa Gourounaki
+2025-06-27,Meat Meze for 2 persons - Paphos,"Restaurants, cafes and dancing establishments",25.0,RESTAURANTS AND HOTELS,Pagkratios
+2025-06-27,Fish Meze for 2 persons - Paphos,"Restaurants, cafes and dancing establishments",24.5,RESTAURANTS AND HOTELS,Christos Grill&Seafood
+2025-06-27,"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2025-2026",Tertiary education,11758.461538461539,EDUCATION,European University Cyprus
+2025-06-27,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2025-2026",Pre-primary education (ISCED-97 level 0),6930.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2025-2026",Primary education (ISCED-97 level 1),7290.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2026-2026",Secondary education,8816.666666666666,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),8950.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8125.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education (ISCED 4),9450.0,EDUCATION,"Cyprus Ministry of Education, Sport and Youth"
+2025-06-27,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Letter handling services,0.41,COMMUNICATION,Cyprus Post
+2025-06-27,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Letter handling services,0.64,COMMUNICATION,Cyprus Post
+2025-06-27,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,2.1,COMMUNICATION,Cyprus Post
+2025-06-27,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,4.0,COMMUNICATION,Cyprus Post
+2025-06-27,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,11.9,COMMUNICATION,Cyprus Post
+2025-06-27,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,21.65,COMMUNICATION,Cyprus Post
+2025-06-27,Initial chargeFixed,Passenger transport by taxi and hired car with driver,3.42,TRANSPORT,Max 7 Taxi
+2025-06-27,Initial chargeVariable,Passenger transport by taxi and hired car with driver,4.36,TRANSPORT,Max 7 Taxi
+2025-06-27,Fare per KmFixed,Passenger transport by taxi and hired car with driver,0.73,TRANSPORT,Max 7 Taxi
+2025-06-27,Fare per KmVariable,Passenger transport by taxi and hired car with driver,0.85,TRANSPORT,Max 7 Taxi
+2025-06-27,GeekVape Zeus Sub-Ohm,Other tobacco products,36.9,ALCOHOLIC BEVERAGES AND TOBACCO,Alter Vape
+2025-06-27,Kit Wenax S3 Evo 1100mAh – Geekvape,Other tobacco products,29.9,ALCOHOLIC BEVERAGES AND TOBACCO,Alter Vape
+2025-06-27,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,15.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,ALCOHOLIC BEVERAGES AND TOBACCO,E-wholesale
+2025-06-27,Villa Zamorano INTENSO,Cigars,4.20,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2025-06-27,Rocky Patel Sixty Toro,Cigars,22.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-06-27,Rocky Patel Tubo Sampler 6 Cig.,Cigars,100.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-06-27,Perdomo 10Th Anniversary Maduro Super Toro,Cigars,14.0,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-06-27,Carrillo Interlude Rothchild Jr. Maduro Natural,Cigars,4.5,ALCOHOLIC BEVERAGES AND TOBACCO,The Royal Cigars
+2025-06-27,Marlboro 20 Pack,Cigarettes,5.41,ALCOHOLIC BEVERAGES AND TOBACCO,Numbeo
+2025-06-27,KTM SX-E 1.20 Factory Edition 2023,Motor cycles,3300.0,TRANSPORT,Moto Race
+2025-06-27,KTM 125 Enduro R Orange 2025,Motor cycles,6290.0,TRANSPORT,Moto Race
+2025-06-27,KTM 390 ADVENTURE 2023 - Black,Motor cycles,7990.0,TRANSPORT,Moto Race
+2025-06-27,KTM RC 125 Black 2024,Motor cycles,7500.0,TRANSPORT,Moto Race
+2025-06-27,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72.0,TRANSPORT,Moto Race
+2025-06-27,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136.0,TRANSPORT,Moto Race
+2025-06-27,BRENTA - SEMI METALLIC PAD - 621SM1/FA115,Spare parts for personal transport equipment,5.9,TRANSPORT,Moto Race
+2025-06-27,RK 420MS Non Sealed Chain - Natural Color - 94L,Spare parts for personal transport equipment,12.5,TRANSPORT,Moto Race
+2025-06-27,Black Sport Mirror Set 006-8MM-R/R,Spare parts for personal transport equipment,15.5,TRANSPORT,Moto Race
+2025-06-27,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Spare parts for personal transport equipment,32.0,TRANSPORT,Moto Race
+2025-06-27,Progrip PG2500 Fork Boots-Blue,Spare parts for personal transport equipment,25.0,TRANSPORT,Moto Race
+2025-06-27,ARROW STAINLESS STEEL CLAMP PROTECTION,Spare parts for personal transport equipment,3.0,TRANSPORT,Moto Race
+2025-06-27,Motorex Four Stroke 4T 10W/40 1L,Lubricants,10.9,TRANSPORT,Moto Race
+2025-06-27,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12.0,TRANSPORT,Moto Race
+2025-06-27,Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,14.0,TRANSPORT,Moto Race
+2025-06-27,Thumbs up - Tyre Repair Kit,Maintenance and repair of personal transport equipment,8.14,TRANSPORT,Moto Race
+2025-06-27,Μηχανικό μολύβι 0.5 λιλά χρώμα,Other stationery and drawing materials,0.45,RECREATION AND CULTURE,Parga
+2025-06-27,Μολύβι γραφής 2H,Other stationery and drawing materials,0.5,RECREATION AND CULTURE,Parga
+2025-06-27,Στυλό Διαρκείας Μπλέ Bic Cristal Medium,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-06-27,Μαρκαδόρος ασπροπίνακα με στρογγυλή μύτη - μπλε,Other stationery and drawing materials,0.95,RECREATION AND CULTURE,Parga
+2025-06-27,Σετ highlighter Fluo Peps - 4 χρώματα,Other stationery and drawing materials,3.2,RECREATION AND CULTURE,Parga
+2025-06-27,Σβηστήρι-Γόμα Grip 2001,Other stationery and drawing materials,2.0,RECREATION AND CULTURE,Parga
+2025-06-27,Διορθωτικό Στυλό 8ml,Other stationery and drawing materials,0.85,RECREATION AND CULTURE,Parga
+2025-06-27,Ψαλίδι essentials 13cm,Other stationery and drawing materials,1.2,RECREATION AND CULTURE,Parga
+2025-06-27,Χρωματιστοί συνδετήρες 28mm 50 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-06-27,Χρωματιστές καρφίτσες 32mm 25 τεμάχια,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-06-27,Πιάστρες με διπλό κλιπ 19mm,Other stationery and drawing materials,0.7,RECREATION AND CULTURE,Parga
+2025-06-27,"Λάστιχα 55mm 50γρ, Μεσαίο μέγεθος",Other stationery and drawing materials,1.15,RECREATION AND CULTURE,Parga
+2025-06-27,Χάρτινοι φάκελοι αλληλογραφιάς Α4 - 25 τεμάχια,Other stationery and drawing materials,4.4,RECREATION AND CULTURE,Parga
+2025-06-27,Χαρτάκια κίτρινα σημειώσεων 50mm x 75mm,Other stationery and drawing materials,0.5,RECREATION AND CULTURE,Parga
+2025-06-27,Σύρματα συρραπτικών No 10,Other stationery and drawing materials,0.25,RECREATION AND CULTURE,Parga
+2025-06-27,Μίνι συρραπτικό Νο. 24/6,Other stationery and drawing materials,1.35,RECREATION AND CULTURE,Parga
+2025-06-27,Διατρητικό 10 φύλλων,Other stationery and drawing materials,3.35,RECREATION AND CULTURE,Parga
+2025-06-27,Το προξενιό της Ιουλίας,Fiction books,18.25,RECREATION AND CULTURE,Parga
+2025-06-27,Το ναυάγιο,Fiction books,18.65,RECREATION AND CULTURE,Parga
+2025-06-27,Το μωρό της σοφίτας,Fiction books,19.35,RECREATION AND CULTURE,Parga
+2025-06-27,Από μένα αυτά…,Other non-fiction books,8.75,RECREATION AND CULTURE,Parga
+2025-06-27,"Φιλαράκια, εραστές και το μεγάλο, φριχτό πράγμα",Other non-fiction books,23.2,RECREATION AND CULTURE,Parga
+2025-06-27,Να βρω ξανά του νήματος την άκρη...,Other non-fiction books,9.2,RECREATION AND CULTURE,Parga
+2025-06-27,Η τέχνη του να έχεις πάντα δίκιο,Other non-fiction books,5.75,RECREATION AND CULTURE,Parga
+2025-06-27,Ο πλουσιότερος άνθρωπος της Βαβυλώνας,Other non-fiction books,6.5,RECREATION AND CULTURE,Parga
+2025-06-27,Διαλειμματική νηστεία και αποφυγή νόσων,Other non-fiction books,10.9,RECREATION AND CULTURE,Parga
+2025-06-27,Διδακτική,Educational text books,24.2,RECREATION AND CULTURE,Parga
+2025-06-27,Μαθαίνω να φροντίζω τον εαυτό μου,Educational text books,10.7,RECREATION AND CULTURE,Parga
+2025-06-27,Ροζάννα,Educational text books,13.5,RECREATION AND CULTURE,Parga
+2025-06-27,Η παιδεία παίζει,Educational text books,24.3,RECREATION AND CULTURE,Parga
+2025-06-27,Το δώρο,Educational text books,15.5,RECREATION AND CULTURE,Parga
+2025-06-27,Το μυστικό: Καθημερινά μαθήματα ζωής,Educational text books,14.75,RECREATION AND CULTURE,Parga
+2025-06-27,Το σύγχρονο λεξικό τσέπης για μαθητές δημοτικού,Educational text books,9.9,RECREATION AND CULTURE,Parga
+2025-06-27,Γλωσσικά μυστήρια στη Β΄ δημοτικού,Educational text books,7.75,RECREATION AND CULTURE,Parga
+2025-06-27,Τεστάκια γλώσσας Γ΄δημοτικού,Educational text books,9.8,RECREATION AND CULTURE,Parga
+2025-06-27,Γλώσσα Δ΄ δημοτικού,Educational text books,17.7,RECREATION AND CULTURE,Parga
+2025-06-27,Γίνομαι άριστος στη γλώσσα Ε΄ δημοτικού,Educational text books,12.7,RECREATION AND CULTURE,Parga
+2025-06-27,Τεστάκια μαθηματικών Στ' δημοτικού,Educational text books,8.75,RECREATION AND CULTURE,Parga
+2025-06-27,Το λυσάρι. Α γυμνασίου,Educational text books,25.15,RECREATION AND CULTURE,Parga
+2025-06-27,Kείμενα νεοελληνικής λογοτεχνίας Β΄ γυμνασίου,Educational text books,18.65,RECREATION AND CULTURE,Parga
+2025-06-27,Ευριπίδη Ελένη Γ΄ γυμνασίου,Educational text books,15.35,RECREATION AND CULTURE,Parga
+2025-06-27,Νέα ελληνικά Α΄λυκείου,Educational text books,21.7,RECREATION AND CULTURE,Parga
+2025-06-27,Νεοελληνική γλώσσα & λογοτεχνία Β’ λυκείου,Educational text books,16.9,RECREATION AND CULTURE,Parga
+2025-06-27,Νέα ελληνικά Γ΄ λυκείου,Educational text books,26.7,RECREATION AND CULTURE,Parga
+2025-06-27,GLOSTAD διθέσιος καναπές,Household furniture,139.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,MELLTORP/ADDE τραπέζι και 4 καρέκλες,Household furniture,106.96,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden furniture,15.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"BAGGEBO βιβλιοθήκη, 50x30x80 cm",Other furniture and furnishings,24.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",Other furniture and furnishings,109.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"GURSKEN ντουλάπα, 49x55x186 cm",Other furniture and furnishings,69.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm",Other furniture and furnishings,49.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"KNARREVIK κομοδίνο, 37x28 cm",Other furniture and furnishings,9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,MARIUS Σκαμπό,Other furniture and furnishings,5.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"TIPHEDE χαλί, χαμηλή πλέξη",Carpets and rugs,9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"KLEJS χαλί, χαμηλή πλέξη",Carpets and rugs,1.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"KLAMPENBORG χαλάκι πόρτας/ εσωτερικού χώρου, 35x55 cm",Carpets and rugs,2.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,IVRIG Ποτήρι,"Glassware, crystal-ware, ceramic ware and chinaware",1.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,OFTAST Πιάτο,"Glassware, crystal-ware, ceramic ware and chinaware",0.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,OFTAST Μπολ,"Glassware, crystal-ware, ceramic ware and chinaware",0.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"MOPSIG μαχαιροπίρουνα, σετ 16 τεμ.","Cutlery, flatware and silverware",8.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"ANNONS Σκεύη μαγειρικής, σετ 3 τεμ.","Cutlery, flatware and silverware",14.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"BARLAST επιτραπέζιο φωτιστικό, 31 cm",Lighting equipment,4.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,RESTAD φωτιστικό οροφής,Lighting equipment,12.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,TAGARP φωτιστικό δαπέδου/διαβάσματος,Lighting equipment,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,FORENLIG κασπό εσωτερικού/εξωτερικού χώρου,Garden products,1.49,RECREATION AND CULTURE,IKEA
+2025-06-27,IKEA PS 2002 Ποτιστήρι,Garden products,1.79,RECREATION AND CULTURE,IKEA
+2025-06-27,"STJÄRNANIS ζαρντινιέρα εξωτερικού χώρου, 43x15 cm",Garden products,19.99,RECREATION AND CULTURE,IKEA
+2025-06-27,"PHALAENOPSIS φυτό, Ορχιδέα 2 βλαστοί",Plants and flowers,11.99,RECREATION AND CULTURE,IKEA
+2025-06-27,"FEJKA τεχνητό φυτό σε γλάστρα εσωτερικού/εξωτερικού χώρου, μπαμπού",Plants and flowers,3.49,RECREATION AND CULTURE,IKEA
+2025-06-27,"VINTERFINT τεχνητό λουλούδι/Υάκινθος, 22 cm",Plants and flowers,4.99,RECREATION AND CULTURE,IKEA
+2025-06-27,"UTSADD μπολ για κατοικίδια, 11 cm",Products for pets,3.99,RECREATION AND CULTURE,IKEA
+2025-06-27,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,3.99,RECREATION AND CULTURE,IKEA
+2025-06-27,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,4.99,RECREATION AND CULTURE,IKEA
+2025-06-27,"HÄGRANDE μπρίκι, 700 ml","Cutlery, flatware and silverware",12.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"MIDDAGSMAT κατσαρόλα με καπάκι, 2 l","Cutlery, flatware and silverware",9.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,TÄRNÖ Πτυσσόμενη καρέκλα,Garden furniture,15.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου, 37x45 cm",Garden furniture,19.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,"NEIDEN σκελετός κρεβατιού, 140X200 cm",Household furniture,109.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,SONGESAND συρταριέρα με 3 συρτάρια,Household furniture,139.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+2025-06-27,Refrigerator TESLA RD2400ME white,"Refrigerators, freezers and fridge-freezers",249.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Freezer BOSCH GSV24VWEV white,"Refrigerators, freezers and fridge-freezers",675.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Refrigerator LG GTB574SHHZD white,"Refrigerators, freezers and fridge-freezers",949.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Washing machine TESLA WF101590M white,"Clothes washing machines, clothes drying machines and dish washing machines",575.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Dishwasher TESLA WD431M white,"Clothes washing machines, clothes drying machines and dish washing machines",335.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Tumble dryer MIDEA MD200H90W/T-CY titanium,"Clothes washing machines, clothes drying machines and dish washing machines",575.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Multicooker SENCOR Slow Cooker SPR 5508BK black,Cookers,89.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Φούρνος μικροκυμάτων Turntable SENCOR SMW1918 άσπρο,Cookers,75.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Corded Stick & Handheld Vacuum cleaner DEERMA DX700 white,Cleaning equipment,59.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Kitchen machine BOSCH MCM3100W white,Food processing appliances,84.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Mixer for frappe OSIO OMM-2211 BL black,"Coffee machines, tea makers and similar appliances",11.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Electric pot for Cyprus coffee OSIO OCP-2502BR black/red,"Coffee machines, tea makers and similar appliances",18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Filter coffee machine SENCOR SCE 3700BK black/chrome,"Coffee machines, tea makers and similar appliances",36.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Kettle SENCOR SWK 1748WH white,"Coffee machines, tea makers and similar appliances",22.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Iron BLAUPUNKT HSI201BL white/blue,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Toaster MATESTAR MAT-6002W white,Toasters and grills,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Barbecue Grill LIFE BBQ King 221-0137 black,Toasters and grills,38.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Smartphone XIAOMI Redmi 9A LTE Dual SIM grey,Mobile telephone equipment,114.00,COMMUNICATION,Stephanis
+2025-06-27,Back Cover Case for Samsung Galaxy A13 4G CELLY GELSKIN1022 transparent,Mobile telephone equipment,11.95,COMMUNICATION,Stephanis
+2025-06-27,Cable USB-A male/USB-C male 2.0 1.2m OSIO OTU-5912B black,Mobile telephone equipment,6.50,COMMUNICATION,Stephanis
+2025-06-27,Accessory for action camera JOBY Action Battery Grip JB01386-BWW,"Equipment for the reception, recording and reproduction of sound and vision",38.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Action camera LAMTECH 4K ULTRA HD LAM021165 black,"Equipment for the reception, recording and reproduction of sound and vision",55.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Action camera SENCOR 3CAM 4K04WR black,"Equipment for the reception, recording and reproduction of sound and vision",65.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Portable speaker YENKEE,"Equipment for the reception, recording and reproduction of sound",22.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Earphones with microphone SAMSUNG EO-IA500BBEGWW black,"Equipment for the reception, recording and reproduction of sound",13.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Instant camera FUJIFILM Instax Mini 12 white,Cameras,89.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Laptop BLACKVIEW Acebook 8 grey,Personal computers,329.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Laptop ASUS Vivobook 15 X1504VA-BQ322W 90NB10J1-M00JW0 quiet blue,Personal computers,479.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,Personal computers,549.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Case for laptop 13.3 RIVACASE Anti-Shock 5120 black,Accessories for information processing equipment,23.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Cleaning Kit SENCOR SCL2200 4-in-1,Accessories for information processing equipment,5.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Accessory kit PRO-MOUNTS Bag of Mounts PM2013GP99,Accessories for information processing equipment,18.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Electronic Skipping Rope MULTIFUN MF-SR01,Equipment for sport,12.00,RECREATION AND CULTURE,Stephanis
+2025-06-27,Shaver BEURER Βody Groomer HR 6000 black,Electric appliances for personal care,47.20,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-06-27,Hair clipper REMINGTON HC5150,Electric appliances for personal care,39.95,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-06-27,Hair dryer LIFE Character 221-0238 purple,Electric appliances for personal care,36.00,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-06-27,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Electric appliances for personal care,45.00,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-06-27,Smartwatch Strap για XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR8002GL orange,Clocks and watches,28.95,MISCELLANEOUS GOODS AND SERVICES,Stephanis
+2025-06-27,Board Game 50/50 QUIZ - Animals,Games and hobbies,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Board Game 50/50 QUIZ - Wolrd,Games and hobbies,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Board Game ZITO! Ninja Academy T-ZIT-51609,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Board Game 50/50 Games - Athletics,Games and hobbies,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Board Game ZITO! Rent A Hero T-ZIT-51308,Games and hobbies,10.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Air Conditioner with Inverter TESLA TT34EX21-1232IA,"Heaters, air conditioners",379.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,"Heaters, air conditioners",359.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Air Conditioner with Inverter TESLA TT26EX21-0932IA,"Heaters, air conditioners",339.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,"Heaters, air conditioners",379.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Iron TESLA IR200R red,Irons,23.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Iron SENCOR SSI 2027BL white/blue,Irons,18.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Iron SENCOR SSI 6100GR green/white,Irons,28.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Ink bottle EPSON 103 EcoTank C13T00S14A black,Miscellaneous printed matter,13.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Ink bottle CANON GI-490B 0663C001AA black,Miscellaneous printed matter,13.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Ink bottle EPSON T6641 C13T66414A L365/565 black,Miscellaneous printed matter,13.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Ink bottle EPSON T6642 C13T66424A L365/565 cyan,Miscellaneous printed matter,13.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Paper A4 500 sheets 80 g,Paper products,5.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Paper HP A4 Office Matte CHP110 white 500pcs,Paper products,5.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Photo Paper 2x3 HP Sprocket Premium Zink Sticky-Back HPIZ2X320 20pcs,Paper products,14.95,RECREATION AND CULTURE,Stephanis
+2025-06-27,Card Board Game MATTEL Uno DOS FRM36,Games and hobbies,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Toy LEGO Minifigures: Series 27 (1pc) 71048,Toys and celebration articles,4.25,RECREATION AND CULTURE,Stephanis
+2025-06-27,Toy LEGO Minifigures: Series 26 - Space Minifigure (1pc) 71046,Toys and celebration articles,4.75,RECREATION AND CULTURE,Stephanis
+2025-06-27,Toy PLAYMOBIL Special Plus: Mermaid 9355,Toys and celebration articles,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Toy LEGO Super Mario: Character Packs – Series 6 71413,Toys and celebration articles,6.50,RECREATION AND CULTURE,Stephanis
+2025-06-27,Εκπαιδευτικό παιδικό βιβλίο Μαθαίνω Να Γράφω - Τους Αριθμούς,Educational text books,3.75,RECREATION AND CULTURE,Stephanis
+2025-06-27,Instant camera FUJIFILM Instax Mini 12 purple,Cameras,89.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,74.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,55.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Mattress Mini Vacuum Cleaner CECOTEC Conga Rockstar 3000 05569 black/silver,Cleaning equipment,65.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Kitchen machine BOSCH MCM3200W white,Food processing appliances,109.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Fishing Tool Box Set HI 66278,Equipment for sport,11.35,RECREATION AND CULTURE,Stephanis
+2025-06-27,Outdoor Game Wood Finnish Throwing in Net HI 66144,Equipment for sport,12.30,RECREATION AND CULTURE,Stephanis
+2025-06-27,Kettle SENCOR SWK 1799SS chrome,Other small electric household appliances,33.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,Blender/Chopper SENCOR 6-in-1 SHB 6441WH white,Other small electric household appliances,55.00,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Stephanis
+2025-06-27,BORMANN PRO BBP2400 Πριόνι Κλαδέματος Μπαταρίας Solo 12V,Motorized major tools and equipment,39.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,KAOKEY KAO-K88 Κλαδευτικό Αλυσοπρίονο Μπαταρίας 24V,Motorized major tools and equipment,89.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BORMANN PRO BBP4300 Φυσητήρας Μπαταρίας Solo 20V,Motorized major tools and equipment,44.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,RYOBI RLM13E33S Χλοοκοπτική Ηλεκτρική Μηχανή 1300W,Motorized major tools and equipment,109.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BLACK & DECKER KS501-QS Σέγα Ηλεκτρική 400W,Motorized major tools and equipment,32.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,TACTIX MER-205604 Σετ Kατσαβίδια 12 Tεμάχια,Non-motorized small tools,17.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,ATL TEL34102 Σφυρί 200gr,Non-motorized small tools,4.49,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,KAPRIOL KAP33623 Σετ Γερμανικά Κλειδιά,Non-motorized small tools,9.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,ASSIST ASS003 Μέτρο 3m,Non-motorized small tools,1.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BORMANN PRO BPP2472 Γάντια Εργασίας,Non-motorized small tools,1.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BORMANN BHT5020 Σετ Εργαλεία Χειρός 102 Τεμάχια,Miscellaneous small tool accessories,38.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,Miscellaneous small tool accessories,65.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,TOTAL TOT-THKTAC01120 Σετ Εργαλεία Χειρός 120 Τεμάχια,Miscellaneous small tool accessories,79.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BOSCH WGE03200BY Washing Machine 8kg White,"Clothes washing machines, clothes drying machines and dish washing machines",550.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,"IZZY 222873 Caffeccino Φραπεδιέρα, Mαύρο",Other small electric household appliances,39.9,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,NUTRIBULLET NBP003NBL Φορητό Μπλέντερ Μπλε,Other small electric household appliances,34.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BOSCH WPG23108GB Dryer 8 kg White,"Clothes washing machines, clothes drying machines and dish washing machines",479.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,WILSON WDW1447WH4.UK Free Standing Dishwasher 60 cm White,"Clothes washing machines, clothes drying machines and dish washing machines",319.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Cookers,79.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Cookers,119.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,HAMA 00139905 MIC-P35 Allround Μικρόφωνο για PC και Notebook 3.5 mm Jack Plug,"Equipment for the reception, recording and reproduction of sound",14.99,RECREATION AND CULTURE,Electroline
+2025-06-27,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound",10.0,RECREATION AND CULTURE,Electroline
+2025-06-27,HOPESTAR P35 Μini Βluetooth Ασύρματο Ηχείο Γκρίζο,"Equipment for the reception, recording and reproduction of sound",29.95,RECREATION AND CULTURE,Electroline
+2025-06-27,LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Food processing appliances,79.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,KENWOOD FDP301WH MultiPro Πολυμίξερ,Food processing appliances,69.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,BORMANN ELITE BBQ1050 Ψησταριά Επιτραπέζια Ηλεκτρική 2000W,Toasters and grills,24.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,CLATRONIC TA 3802 Τοστιέρα για 4 Φέτες,Toasters and grills,29.95,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Electroline
+2025-06-27,"Σωλήνας ντουλάπας Μ200xΠ1,5 cm",Repair of household appliances,6.79,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-06-27,Σετ τηλέφωνο ντους με σπιράλ και στήριγμα Roca Stella,Repair of household appliances,29.99,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-06-27,Βούρτσα πιγκάλ SENSEA μαύρο,Repair of household appliances,2.59,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Leroy Merlin
+2025-06-27,FLYING HORSE cabin luggage,Travel goods,45.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-06-27,FANTOM – Spinner 4 wheels – Cabin – Front Loader,Travel goods,95.0,MISCELLANEOUS GOODS AND SERVICES,Costas Theodorou
+2025-06-27,NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc,Second-hand motor cars,13000.0,TRANSPORT,Stock Center
+2025-06-27,KIA RIO 1.2cc MANUAL PETROL 1200cc,Second-hand motor cars,12700.0,TRANSPORT,Stock Center
+2025-06-27,KIA PICANTO PETROL MANUAL 1000cc,Second-hand motor cars,10500.0,TRANSPORT,Stock Center
+2025-06-27,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900.0,TRANSPORT,Nissan
+2025-06-27,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900.0,TRANSPORT,Nissan
+2025-06-27,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900.0,TRANSPORT,Nissan
+2025-06-27,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000.0,TRANSPORT,Nissan
+2025-06-27,Toyota Aygo X,New motor cars,16500.0,TRANSPORT,Toyota
+2025-06-27,The New Toyota Yaris Cross,New motor cars,27900.0,TRANSPORT,Toyota
+2025-06-27,The New Toyota Yaris,New motor cars,24900.0,TRANSPORT,Toyota
+2025-06-27,Κλήσεις προς σταθερό,Wired telephone services,0.032,COMMUNICATION,CYTA
+2025-06-27,Κλήσεις προς κινητό,Wireless telephone services,0.057,COMMUNICATION,CYTA
+2025-06-27,Mobile Internet Home 1,Internet access provision services,35.0,COMMUNICATION,CYTA
+2025-06-27,FREEDOM,Bundled telecommunication services,22.4,COMMUNICATION,CYTA
+2025-06-27,To fixed telephony lines of other providers,Wired telephone services,0.06,COMMUNICATION,Epic
+2025-06-27,To mobile telephony lines of other providers,Wireless telephone services,0.1,COMMUNICATION,Epic
+2025-06-27,5G Unlimited Max Plus,Bundled telecommunication services,24.99,COMMUNICATION,Epic
+2025-06-27,5G Unlimited Max,Bundled telecommunication services,19.99,COMMUNICATION,Epic
+2025-06-27,Broadband Homebox 1,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-06-27,Broadband Homebox 2,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-06-27,Broadband Homebox 3,Internet access provision services,29.99,COMMUNICATION,Epic
+2025-06-27,Fiber Family & 200Mbps,Internet access provision services,37.99,COMMUNICATION,Primetel
+2025-06-27,Fiber Entertainment & 200Mbps,Internet access provision services,21.99,COMMUNICATION,Primetel
+2025-06-27,Calls to other providers landline,Wired telephone services,0.03,COMMUNICATION,Primetel
+2025-06-27,Calls to other providers mobile,Wireless telephone services,0.095,COMMUNICATION,Primetel
+2025-06-27,Cablenet Mobile Service,Wireless telephone services,0.025,COMMUNICATION,Cablenet
+2025-06-27,Cablenet Fixed Service,Wired telephone services,0.025,COMMUNICATION,Cablenet
+2025-06-27,PurpleInternet,Internet access provision services,30.0,COMMUNICATION,Cablenet
+2025-06-27,PurpleMaxMobile,Bundled telecommunication services,17.0,COMMUNICATION,Cablenet
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADELFOI ARTYMATA (PROTARAS) LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PROTARAS) LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PROTARAS) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PROTARAS) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ADELFOI ARTYMATA (PROTARAS) LIMITED - Κηροζίνη,Liquid fuels,1.002,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.485,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,LEUTERIS KAMILARIS (EPICHEIRISEIS) LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,LEUTERIS KAMILARIS (EPICHEIRISEIS) LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,LEUTERIS KAMILARIS (EPICHEIRISEIS) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,ESSO
+2025-06-27,NIKOS & MARKOS PITTAKIS - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ENI
+2025-06-27,NIKOS & MARKOS PITTAKIS - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ENI
+2025-06-27,NIKOS & MARKOS PITTAKIS - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,ENI
+2025-06-27,NIKOS & MARKOS PITTAKIS - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,NIKOS & MARKOS PITTAKIS - Κηροζίνη,Liquid fuels,1.129,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Κηροζίνη,Liquid fuels,1.002,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,CHRYSOULLA STATHI LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,CHRYSOULLA STATHI LIMITED - Αμόλυβδη 98,Petrol,1.448,TRANSPORT,EKO
+2025-06-27,CHRYSOULLA STATHI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,CHRYSOULLA STATHI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CHRYSOULLA STATHI LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LI. MA. KA. & CO LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,LI. MA. KA. & CO LTD - Αμόλυβδη 98,Petrol,1.455,TRANSPORT,ESSO
+2025-06-27,LI. MA. KA. & CO LTD - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,LI. MA. KA. & CO LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,LI. MA. KA. & CO LTD - Κηροζίνη,Liquid fuels,1.015,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.469,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANTONAKIS KOURRIS & YIOS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,ANTONAKIS KOURRIS & YIOS LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,ANTONAKIS KOURRIS & YIOS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,ANTONAKIS KOURRIS & YIOS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANTONAKIS KOURRIS & YIOS LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,STYLLI & IOSIF EPICHEIRISEIS LIMITED - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,ESSO
+2025-06-27,STYLLI & IOSIF EPICHEIRISEIS LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,STYLLI & IOSIF EPICHEIRISEIS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.435,TRANSPORT,ESSO
+2025-06-27,STYLLI & IOSIF EPICHEIRISEIS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,STYLLI & IOSIF EPICHEIRISEIS LIMITED - Κηροζίνη,Liquid fuels,1.199,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,TSOIL ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,TSOIL ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.458,TRANSPORT,ESSO
+2025-06-27,TSOIL ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,TSOIL ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,TSOIL ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,A. TRISOKKAS & YIOS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,A. TRISOKKAS & YIOS LIMITED - Αμόλυβδη 98,Petrol,1.427,TRANSPORT,PETROLINA
+2025-06-27,A. TRISOKKAS & YIOS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,A. TRISOKKAS & YIOS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.996,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,A. TRISOKKAS & YIOS LIMITED - Κηροζίνη,Liquid fuels,1.026,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.416,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.414,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.953,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,MICHALIS KATZIS & KYRIAKOS EGGLEZOS - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KATZIS & KYRIAKOS EGGLEZOS - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KATZIS & KYRIAKOS EGGLEZOS - Πετρέλαιο Κίνησης,Diesel,1.452,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KATZIS & KYRIAKOS EGGLEZOS - Πετρέλαιο Θέρμανσης,Liquid fuels,1.059,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,MICHALIS KATZIS & KYRIAKOS EGGLEZOS - Κηροζίνη,Liquid fuels,1.139,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,NIKOS GERASIMOU LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,NIKOS GERASIMOU LIMITED - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,EKO
+2025-06-27,NIKOS GERASIMOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.452,TRANSPORT,EKO
+2025-06-27,NIKOS GERASIMOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.069,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,NIKOS GERASIMOU LIMITED - Κηροζίνη,Liquid fuels,1.139,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,MARIOS G. PANAGI & SIA LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,ESSO
+2025-06-27,MARIOS G. PANAGI & SIA LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ESSO
+2025-06-27,MARIOS G. PANAGI & SIA LTD - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,ESSO
+2025-06-27,MARIOS G. PANAGI & SIA LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,MARIOS G. PANAGI & SIA LTD - Κηροζίνη,Liquid fuels,1.069,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,VASOS MATOLIS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,VASOS MATOLIS LIMITED - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,EKO
+2025-06-27,VASOS MATOLIS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,VASOS MATOLIS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.971,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,VASOS MATOLIS LIMITED - Κηροζίνη,Liquid fuels,1.069,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K.L.D. PETROLEUM LIMITED - Αμόλυβδη 95,Petrol,1.35,TRANSPORT,EKO
+2025-06-27,K.L.D. PETROLEUM LIMITED - Αμόλυβδη 98,Petrol,1.41,TRANSPORT,EKO
+2025-06-27,K.L.D. PETROLEUM LIMITED - Πετρέλαιο Κίνησης,Diesel,1.409,TRANSPORT,EKO
+2025-06-27,K.L.D. PETROLEUM LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.96,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K.L.D. PETROLEUM LIMITED - Κηροζίνη,Liquid fuels,1.079,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,DIMOS KALLENOS & YIOS LIMITED - Αμόλυβδη 95,Petrol,1.388,TRANSPORT,PETROLINA
+2025-06-27,DIMOS KALLENOS & YIOS LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,DIMOS KALLENOS & YIOS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,PETROLINA
+2025-06-27,DIMOS KALLENOS & YIOS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,DIMOS KALLENOS & YIOS LIMITED - Κηροζίνη,Liquid fuels,1.209,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,SHELL
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 98,Petrol,1.468,TRANSPORT,SHELL
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.422,TRANSPORT,SHELL
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.982,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PKP FUEL CO. LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,PKP FUEL CO. LTD - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,SHELL
+2025-06-27,PKP FUEL CO. LTD - Πετρέλαιο Κίνησης,Diesel,1.432,TRANSPORT,SHELL
+2025-06-27,PKP FUEL CO. LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.992,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PKP FUEL CO. LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,P1 PETROLEUM LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,P1 PETROLEUM LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,P1 PETROLEUM LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,P1 PETROLEUM LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.067,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P1 PETROLEUM LIMITED - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROU ENERGY SOLUTION LIMITED - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,EKO
+2025-06-27,PETROU ENERGY SOLUTION LIMITED - Αμόλυβδη 98,Petrol,1.435,TRANSPORT,EKO
+2025-06-27,PETROU ENERGY SOLUTION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,PETROU ENERGY SOLUTION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROU ENERGY SOLUTION LIMITED - Κηροζίνη,Liquid fuels,1.054,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.358,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.408,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.427,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,M.D.N. ITALOS FUELS LIMITED - Αμόλυβδη 95,Petrol,1.333,TRANSPORT,PETROLINA
+2025-06-27,M.D.N. ITALOS FUELS LIMITED - Αμόλυβδη 98,Petrol,1.413,TRANSPORT,PETROLINA
+2025-06-27,M.D.N. ITALOS FUELS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.395,TRANSPORT,PETROLINA
+2025-06-27,M.D.N. ITALOS FUELS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,M.D.N. ITALOS FUELS LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 95,Petrol,1.333,TRANSPORT,FILL N GO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 98,Petrol,1.413,TRANSPORT,FILL N GO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.395,TRANSPORT,FILL N GO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",FILL N GO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",FILL N GO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.487,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.443,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,P2 PETROLEUM LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,P2 PETROLEUM LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,P2 PETROLEUM LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,P2 PETROLEUM LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P2 PETROLEUM LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,M.A.N.I. PANAGIOTOU LTD - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,ESSO
+2025-06-27,M.A.N.I. PANAGIOTOU LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,M.A.N.I. PANAGIOTOU LTD - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,M.A.N.I. PANAGIOTOU LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,M.A.N.I. PANAGIOTOU LTD - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.355,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,STAUROS KARAGIANNAS LIMITED - Αμόλυβδη 95,Petrol,1.376,TRANSPORT,PETROLINA
+2025-06-27,STAUROS KARAGIANNAS LIMITED - Αμόλυβδη 98,Petrol,1.436,TRANSPORT,PETROLINA
+2025-06-27,STAUROS KARAGIANNAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,STAUROS KARAGIANNAS LIMITED - Κηροζίνη,Liquid fuels,1.057,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,TRIKENO LTD - Αμόλυβδη 95,Petrol,1.369,TRANSPORT,ESSO
+2025-06-27,TRIKENO LTD - Αμόλυβδη 98,Petrol,1.444,TRANSPORT,ESSO
+2025-06-27,TRIKENO LTD - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,ESSO
+2025-06-27,TRIKENO LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.964,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,TRIKENO LTD - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,KOSTAS SOTIRIOU & YIOS (STATHMOS VENZINIS) LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS SOTIRIOU & YIOS (STATHMOS VENZINIS) LIMITED - Αμόλυβδη 98,Petrol,1.498,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS SOTIRIOU & YIOS (STATHMOS VENZINIS) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS SOTIRIOU & YIOS (STATHMOS VENZINIS) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.179,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAS SOTIRIOU & YIOS (STATHMOS VENZINIS) LIMITED - Κηροζίνη,Liquid fuels,1.199,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,GEORGIA NIKOLAOU LTD - Αμόλυβδη 95,Petrol,1.358,TRANSPORT,PETROLINA
+2025-06-27,GEORGIA NIKOLAOU LTD - Αμόλυβδη 98,Petrol,1.408,TRANSPORT,PETROLINA
+2025-06-27,GEORGIA NIKOLAOU LTD - Πετρέλαιο Κίνησης,Diesel,1.416,TRANSPORT,PETROLINA
+2025-06-27,GEORGIA NIKOLAOU LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.973,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,GEORGIA NIKOLAOU LTD - Κηροζίνη,Liquid fuels,1.047,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KALL-ENI CITY GAS STATION LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ENI
+2025-06-27,KALL-ENI CITY GAS STATION LTD - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,ENI
+2025-06-27,KALL-ENI CITY GAS STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,ENI
+2025-06-27,KALL-ENI CITY GAS STATION LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.984,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,KALL-ENI CITY GAS STATION LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.487,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.443,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.448,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.487,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.078,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.417,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.431,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.951,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,THEOPETRO LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,THEOPETRO LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,THEOPETRO LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,THEOPETRO LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.024,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,THEOPETRO LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Αμόλυβδη 98,Petrol,1.479,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.039,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Κηροζίνη,Liquid fuels,1.078,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAS GEORGIOU (VITTIS) - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS GEORGIOU (VITTIS) - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS GEORGIOU (VITTIS) - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,PETROLINA
+2025-06-27,KOSTAS GEORGIOU (VITTIS) - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAS GEORGIOU (VITTIS) - Κηροζίνη,Liquid fuels,1.098,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,EKO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Αμόλυβδη 98,Petrol,1.419,TRANSPORT,EKO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,EKO
+2025-06-27,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.929,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K & A ANDREOU LIMITED - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.404,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,K & A ANDREOU LIMITED - Κηροζίνη,Liquid fuels,1.079,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.329,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ARGYROULLA & VASILIKI MINA PRATIRIO PETRELAIOEIDON LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,SHELL
+2025-06-27,ARGYROULLA & VASILIKI MINA PRATIRIO PETRELAIOEIDON LTD - Αμόλυβδη 98,Petrol,1.599,TRANSPORT,SHELL
+2025-06-27,ARGYROULLA & VASILIKI MINA PRATIRIO PETRELAIOEIDON LTD - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,SHELL
+2025-06-27,ARGYROULLA & VASILIKI MINA PRATIRIO PETRELAIOEIDON LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,LESONI PETROLIUM LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,LESONI PETROLIUM LTD - Αμόλυβδη 98,Petrol,1.41,TRANSPORT,EKO
+2025-06-27,LESONI PETROLIUM LTD - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,LESONI PETROLIUM LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.026,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LESONI PETROLIUM LTD - Κηροζίνη,Liquid fuels,1.059,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.448,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.487,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANDREAS ZACHARIOU & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.078,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.417,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.431,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.951,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Αμόλυβδη 98,Petrol,1.479,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.039,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANTONIS KKOULOS PETROL STATION LIMITED - Κηροζίνη,Liquid fuels,1.078,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANDREAS V. GEORGIOU LTD - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS V. GEORGIOU LTD - Αμόλυβδη 98,Petrol,1.479,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS V. GEORGIOU LTD - Πετρέλαιο Κίνησης,Diesel,1.469,TRANSPORT,PETROLINA
+2025-06-27,ANDREAS V. GEORGIOU LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.07,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ANDREAS V. GEORGIOU LTD - Κηροζίνη,Liquid fuels,1.229,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,V. Theodorou Bro Petrol Station LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,V. Theodorou Bro Petrol Station LTD - Πετρέλαιο Κίνησης,Diesel,1.45,TRANSPORT,PETROLINA
+2025-06-27,V. Theodorou Bro Petrol Station LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.011,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,V. Theodorou Bro Petrol Station LTD - Κηροζίνη,Liquid fuels,1.084,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,Z. ZINONOS & YIOI LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,PETROLINA
+2025-06-27,Z. ZINONOS & YIOI LTD - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,PETROLINA
+2025-06-27,Z. ZINONOS & YIOI LTD - Πετρέλαιο Κίνησης,Diesel,1.448,TRANSPORT,PETROLINA
+2025-06-27,Z. ZINONOS & YIOI LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,Z. ZINONOS & YIOI LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.952,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,MILIA SOZOU LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,MILIA SOZOU LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,MILIA SOZOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,MILIA SOZOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,MILIA SOZOU LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,D S KOMNINAKIS FUELS LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,D S KOMNINAKIS FUELS LTD - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,EKO
+2025-06-27,D S KOMNINAKIS FUELS LTD - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,D S KOMNINAKIS FUELS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,D S KOMNINAKIS FUELS LTD - Κηροζίνη,Liquid fuels,1.058,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.488,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.433,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,KOSTAS S. SAVVA PETRELAIOEIDI LTD - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,ESSO
+2025-06-27,KOSTAS S. SAVVA PETRELAIOEIDI LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ESSO
+2025-06-27,KOSTAS S. SAVVA PETRELAIOEIDI LTD - Πετρέλαιο Κίνησης,Diesel,1.414,TRANSPORT,ESSO
+2025-06-27,KOSTAS S. SAVVA PETRELAIOEIDI LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,KOSTAS S. SAVVA PETRELAIOEIDI LTD - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.329,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K & A ANDREOU LIMITED - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.404,TRANSPORT,ESSO
+2025-06-27,K & A ANDREOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,K & A ANDREOU LIMITED - Κηροζίνη,Liquid fuels,1.079,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,THEODOSIS OLYMBIOS PETROL STATION LTD - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,ESSO
+2025-06-27,THEODOSIS OLYMBIOS PETROL STATION LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ESSO
+2025-06-27,THEODOSIS OLYMBIOS PETROL STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.419,TRANSPORT,ESSO
+2025-06-27,THEODOSIS OLYMBIOS PETROL STATION LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,THEODOSIS OLYMBIOS PETROL STATION LTD - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.445,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,SHELL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Κηροζίνη,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,I. CHASIKOS LIMITED - Αμόλυβδη 95,Petrol,1.299,TRANSPORT,ESSO
+2025-06-27,I. CHASIKOS LIMITED - Αμόλυβδη 98,Petrol,1.399,TRANSPORT,ESSO
+2025-06-27,I. CHASIKOS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.357,TRANSPORT,ESSO
+2025-06-27,I. CHASIKOS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.939,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,I. CHASIKOS LIMITED - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.419,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Κηροζίνη,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,DEANSON LIMITED - Αμόλυβδη 95,Petrol,1.369,TRANSPORT,ESSO
+2025-06-27,DEANSON LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ESSO
+2025-06-27,DEANSON LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,DEANSON LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,DEANSON LIMITED - Κηροζίνη,Liquid fuels,1.006,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,KYRIAKOS P. POIITIS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,KYRIAKOS P. POIITIS LIMITED - Αμόλυβδη 98,Petrol,1.408,TRANSPORT,EKO
+2025-06-27,KYRIAKOS P. POIITIS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.45,TRANSPORT,EKO
+2025-06-27,KYRIAKOS P. POIITIS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.965,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,KYRIAKOS P. POIITIS LIMITED - Κηροζίνη,Liquid fuels,1.068,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.445,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,SHELL
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,VASOU EXPRESS LYBE CENTER LIMITED - Κηροζίνη,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Αμόλυβδη 95,Petrol,1.335,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,FOIVOS PAPALEONTIOU & SIA LIMITED - Κηροζίνη,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.285,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.353,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,M.G. PETROL SERVICES LTD - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,FILL N GO
+2025-06-27,M.G. PETROL SERVICES LTD - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,FILL N GO
+2025-06-27,M.G. PETROL SERVICES LTD - Πετρέλαιο Κίνησης,Diesel,1.379,TRANSPORT,FILL N GO
+2025-06-27,M.G. PETROL SERVICES LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",FILL N GO
+2025-06-27,M.G. PETROL SERVICES LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",FILL N GO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.285,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.353,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.417,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,C.A.R.S PETROL STATION C.P. LTD - Αμόλυβδη 95,Petrol,1.318,TRANSPORT,PETROLINA
+2025-06-27,C.A.R.S PETROL STATION C.P. LTD - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,C.A.R.S PETROL STATION C.P. LTD - Πετρέλαιο Κίνησης,Diesel,1.387,TRANSPORT,PETROLINA
+2025-06-27,C.A.R.S PETROL STATION C.P. LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.919,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,C.A.R.S PETROL STATION C.P. LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.358,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.427,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,BLUEKEY TRADING LIMITED - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,ESSO
+2025-06-27,BLUEKEY TRADING LIMITED - Αμόλυβδη 98,Petrol,1.479,TRANSPORT,ESSO
+2025-06-27,BLUEKEY TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.469,TRANSPORT,ESSO
+2025-06-27,BLUEKEY TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,BLUEKEY TRADING LIMITED - Κηροζίνη,Liquid fuels,1.059,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,LODELIA LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LODELIA LIMITED - Κηροζίνη,Liquid fuels,1.07,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,G. & D. CHRISTODOULOU LIMITED - Αμόλυβδη 95,Petrol,1.388,TRANSPORT,PETROLINA
+2025-06-27,G. & D. CHRISTODOULOU LIMITED - Αμόλυβδη 98,Petrol,1.429,TRANSPORT,PETROLINA
+2025-06-27,G. & D. CHRISTODOULOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.457,TRANSPORT,PETROLINA
+2025-06-27,G. & D. CHRISTODOULOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,G. & D. CHRISTODOULOU LIMITED - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,A. N. & S. EUTHYMIOU LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,ENI
+2025-06-27,A. N. & S. EUTHYMIOU LIMITED - Αμόλυβδη 98,Petrol,1.469,TRANSPORT,ENI
+2025-06-27,A. N. & S. EUTHYMIOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,ENI
+2025-06-27,A. N. & S. EUTHYMIOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,A. N. & S. EUTHYMIOU LIMITED - Κηροζίνη,Liquid fuels,1.069,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,POWERPULLS LIMITED - Αμόλυβδη 95,Petrol,1.329,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.067,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,POWERPULLS LIMITED - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,P. & F. ZANTI LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,A. PSARAS LTD - Αμόλυβδη 95,Petrol,1.337,TRANSPORT,SHELL
+2025-06-27,A. PSARAS LTD - Αμόλυβδη 98,Petrol,1.447,TRANSPORT,SHELL
+2025-06-27,A. PSARAS LTD - Πετρέλαιο Κίνησης,Diesel,1.405,TRANSPORT,SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,SIMOS KADI LIMITED - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SIMOS KADI LIMITED - Κηροζίνη,Liquid fuels,1.055,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,Y2 FUEL SERVICES (CY) LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,Y2 FUEL SERVICES (CY) LTD - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.919,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,D. KTORIDIS & YIOS LTD - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CRS DIAKOU LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,EKO
+2025-06-27,CRS DIAKOU LTD - Αμόλυβδη 98,Petrol,1.468,TRANSPORT,EKO
+2025-06-27,CRS DIAKOU LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,CRS DIAKOU LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.969,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CRS DIAKOU LTD - Κηροζίνη,Liquid fuels,1.068,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,I.G. MAKRIS ENTERPRISES LTD - Αμόλυβδη 95,Petrol,1.329,TRANSPORT,ESSO
+2025-06-27,I.G. MAKRIS ENTERPRISES LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,I.G. MAKRIS ENTERPRISES LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,ESSO
+2025-06-27,I.G. MAKRIS ENTERPRISES LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,I.G. MAKRIS ENTERPRISES LTD - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,D. KTORIDIS & YIOS LTD - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,D. KTORIDIS & YIOS LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.919,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,COSTAS SAVVIDES (PETROL STATION) LIMITED - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,SIMOS KADI LIMITED - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,SIMOS KADI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SIMOS KADI LIMITED - Κηροζίνη,Liquid fuels,1.055,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,POWERPULLS LIMITED - Αμόλυβδη 95,Petrol,1.329,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,POWERPULLS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.067,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,POWERPULLS LIMITED - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,P. & F. ZANTI LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P. & F. ZANTI LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,A. PSARAS LTD - Αμόλυβδη 95,Petrol,1.337,TRANSPORT,SHELL
+2025-06-27,A. PSARAS LTD - Αμόλυβδη 98,Petrol,1.447,TRANSPORT,SHELL
+2025-06-27,A. PSARAS LTD - Πετρέλαιο Κίνησης,Diesel,1.405,TRANSPORT,SHELL
+2025-06-27,ANGIO TRADING LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANGIO TRADING LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.455,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.96,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.02,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.414,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Αμόλυβδη 98,Petrol,1.445,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,TROPALI PETROLEUM TWO LTD - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Αμόλυβδη 98,Petrol,1.429,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Πετρέλαιο Κίνησης,Diesel,1.404,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Κηροζίνη,Liquid fuels,1.049,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 95,Petrol,1.279,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.353,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Κηροζίνη,Liquid fuels,1.037,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.319,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.369,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.954,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.919,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.498,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.435,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,K. KOFTEROS & G. GEROU LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,K. KOFTEROS & G. GEROU LIMITED - Αμόλυβδη 98,Petrol,1.498,TRANSPORT,SHELL
+2025-06-27,K. KOFTEROS & G. GEROU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.435,TRANSPORT,SHELL
+2025-06-27,K. KOFTEROS & G. GEROU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.997,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,A G A PETROL STATION LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,A G A PETROL STATION LIMITED - Αμόλυβδη 98,Petrol,1.429,TRANSPORT,EKO
+2025-06-27,A G A PETROL STATION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,A G A PETROL STATION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,A G A PETROL STATION LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,A.C.C. AVRAAM ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.374,TRANSPORT,PETROLINA
+2025-06-27,A.C.C. AVRAAM ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,A.C.C. AVRAAM ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,A.C.C. AVRAAM ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,A.C.C. AVRAAM ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.374,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,NAVATA PETROL LTD - Αμόλυβδη 95,Petrol,1.374,TRANSPORT,PETROLINA
+2025-06-27,NAVATA PETROL LTD - Αμόλυβδη 98,Petrol,1.424,TRANSPORT,PETROLINA
+2025-06-27,NAVATA PETROL LTD - Πετρέλαιο Κίνησης,Diesel,1.448,TRANSPORT,PETROLINA
+2025-06-27,NAVATA PETROL LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,NAVATA PETROL LTD - Κηροζίνη,Liquid fuels,1.05,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.372,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.482,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,J & S PETROL STATION LIMITED - Αμόλυβδη 95,Petrol,1.374,TRANSPORT,PETROLINA
+2025-06-27,J & S PETROL STATION LIMITED - Αμόλυβδη 98,Petrol,1.424,TRANSPORT,PETROLINA
+2025-06-27,J & S PETROL STATION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,J & S PETROL STATION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,J & S PETROL STATION LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.372,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.482,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,G.K.S SAMATAS LIMITED - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,ESSO
+2025-06-27,G.K.S SAMATAS LIMITED - Αμόλυβδη 98,Petrol,1.499,TRANSPORT,ESSO
+2025-06-27,G.K.S SAMATAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.479,TRANSPORT,ESSO
+2025-06-27,G.K.S SAMATAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,G.K.S SAMATAS LIMITED - Κηροζίνη,Liquid fuels,1.099,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.498,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.435,TRANSPORT,SHELL
+2025-06-27,ANDREAS DOROTHEOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,TROPALI PETROLEUM TWO LTD - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Αμόλυβδη 98,Petrol,1.429,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Πετρέλαιο Κίνησης,Diesel,1.404,TRANSPORT,ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,TROPALI PETROLEUM TWO LTD - Κηροζίνη,Liquid fuels,1.049,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Αμόλυβδη 95,Petrol,1.339,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Αμόλυβδη 98,Petrol,1.445,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,KOSTAKIS D. KONSTANTINOU - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.414,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.455,TRANSPORT,EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.96,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PRATIRIO VENZINIS ADAMOS CHRISTODOULOU & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.02,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANGIO TRADING LIMITED - Αμόλυβδη 95,Petrol,1.348,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,ANGIO TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANGIO TRADING LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 95,Petrol,1.279,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.353,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Κηροζίνη,Liquid fuels,1.037,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 95,Petrol,1.279,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Αμόλυβδη 98,Petrol,1.369,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.353,TRANSPORT,PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.949,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADELFOI P & P CHRISTODOULOU LIMITED - Κηροζίνη,Liquid fuels,1.037,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.919,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LOUKAS TH. LOUKA & YIOI (PETRELAIOEIDI) LTD - Κηροζίνη,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LODELIA LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,LODELIA LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LODELIA LIMITED - Κηροζίνη,Liquid fuels,1.07,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANDREAS & KOSTAS IOANNOU LIMITED - Αμόλυβδη 95,Petrol,1.308,TRANSPORT,ESSO
+2025-06-27,ANDREAS & KOSTAS IOANNOU LIMITED - Αμόλυβδη 98,Petrol,1.406,TRANSPORT,ESSO
+2025-06-27,ANDREAS & KOSTAS IOANNOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.368,TRANSPORT,ESSO
+2025-06-27,ANDREAS & KOSTAS IOANNOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.96,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANDREAS & KOSTAS IOANNOU LIMITED - Κηροζίνη,Liquid fuels,0.99,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P. LOIZOU & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.308,TRANSPORT,PETROLINA
+2025-06-27,P. LOIZOU & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.406,TRANSPORT,PETROLINA
+2025-06-27,P. LOIZOU & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.368,TRANSPORT,PETROLINA
+2025-06-27,P. LOIZOU & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,P. LOIZOU & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,DOUBLE N. GAS STATION LIMITED - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,ESSO
+2025-06-27,DOUBLE N. GAS STATION LIMITED - Αμόλυβδη 98,Petrol,1.469,TRANSPORT,ESSO
+2025-06-27,DOUBLE N. GAS STATION LIMITED - Πετρέλαιο Κίνησης,Diesel,1.444,TRANSPORT,ESSO
+2025-06-27,DOUBLE N. GAS STATION LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.004,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,DOUBLE N. GAS STATION LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,"SOFT ""N"" FOAMY CAR WASH LIMITED - Αμόλυβδη 95",Petrol,1.399,TRANSPORT,ESSO
+2025-06-27,"SOFT ""N"" FOAMY CAR WASH LIMITED - Αμόλυβδη 98",Petrol,1.499,TRANSPORT,ESSO
+2025-06-27,"SOFT ""N"" FOAMY CAR WASH LIMITED - Πετρέλαιο Κίνησης",Diesel,1.479,TRANSPORT,ESSO
+2025-06-27,"SOFT ""N"" FOAMY CAR WASH LIMITED - Πετρέλαιο Θέρμανσης",Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,"SOFT ""N"" FOAMY CAR WASH LIMITED - Κηροζίνη",Liquid fuels,1.119,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.419,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.442,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.419,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.442,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,MICHALIS KNEKNAS TRADING LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KNEKNAS TRADING LTD - Αμόλυβδη 98,Petrol,1.419,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KNEKNAS TRADING LTD - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,PETROLINA
+2025-06-27,MICHALIS KNEKNAS TRADING LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,MICHALIS KNEKNAS TRADING LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,E. & M. EVAGOROU BROS LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,E. & M. EVAGOROU BROS LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,E. & M. EVAGOROU BROS LTD - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,E. & M. EVAGOROU BROS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,E. & M. EVAGOROU BROS LTD - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,ESSO
+2025-06-27,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Αμόλυβδη 95,Petrol,1.356,TRANSPORT,SHELL
+2025-06-27,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Αμόλυβδη 98,Petrol,1.467,TRANSPORT,SHELL
+2025-06-27,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,SHELL
+2025-06-27,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.978,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Κηροζίνη,Liquid fuels,1.047,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.365,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.475,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,Marios Miltiadous Petrol Station Ltd - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,EKO
+2025-06-27,Marios Miltiadous Petrol Station Ltd - Αμόλυβδη 98,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,Marios Miltiadous Petrol Station Ltd - Πετρέλαιο Κίνησης,Diesel,1.431,TRANSPORT,EKO
+2025-06-27,Marios Miltiadous Petrol Station Ltd - Πετρέλαιο Θέρμανσης,Liquid fuels,0.954,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,Marios Miltiadous Petrol Station Ltd - Κηροζίνη,Liquid fuels,1.04,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.389,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.431,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.954,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,1.04,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.045,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.369,TRANSPORT,JACKOSON
+2025-06-27,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,JACKOSON
+2025-06-27,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,JACKOSON
+2025-06-27,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.984,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
+2025-06-27,JACKOSON ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.435,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.033,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.489,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,A. K. Konnaris Service Station Ltd - Κηροζίνη,Liquid fuels,1.12,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Κηροζίνη,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.995,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,OLSERVE LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,OLSERVE LIMITED - Αμόλυβδη 98,Petrol,1.488,TRANSPORT,SHELL
+2025-06-27,OLSERVE LIMITED - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,SHELL
+2025-06-27,OLSERVE LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,GREENOIL LIMITED - Αμόλυβδη 95,Petrol,1.376,TRANSPORT,EKO
+2025-06-27,GREENOIL LIMITED - Αμόλυβδη 98,Petrol,1.436,TRANSPORT,EKO
+2025-06-27,GREENOIL LIMITED - Πετρέλαιο Κίνησης,Diesel,1.438,TRANSPORT,EKO
+2025-06-27,GREENOIL LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.953,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,GREENOIL LIMITED - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,SHELL
+2025-06-27,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,SHELL
+2025-06-27,SOFOCLIS PETROL STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.358,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.422,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,INDEXICO LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Αμόλυβδη 98,Petrol,1.509,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Πετρέλαιο Κίνησης,Diesel,1.452,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,INDEXICO LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,INDEXICO LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Αμόλυβδη 98,Petrol,1.509,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Πετρέλαιο Κίνησης,Diesel,1.452,TRANSPORT,SHELL
+2025-06-27,INDEXICO LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,INDEXICO LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.485,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.358,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.422,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LEFKIOS NICOLAOU ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,LEFKIOS NICOLAOU ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.429,TRANSPORT,EKO
+2025-06-27,LEFKIOS NICOLAOU ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.466,TRANSPORT,EKO
+2025-06-27,LEFKIOS NICOLAOU ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.028,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,LEFKIOS NICOLAOU ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,1.149,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,SHELL
+2025-06-27,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,SHELL
+2025-06-27,SOFOCLIS PETROL STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,SHELL
+2025-06-27,ROUGENOIR LTD - Αμόλυβδη 95,Petrol,1.387,TRANSPORT,ENI
+2025-06-27,ROUGENOIR LTD - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,ENI
+2025-06-27,ROUGENOIR LTD - Πετρέλαιο Κίνησης,Diesel,1.468,TRANSPORT,ENI
+2025-06-27,ROUGENOIR LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.025,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,ROUGENOIR LTD - Κηροζίνη,Liquid fuels,1.049,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.368,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,SHELL
+2025-06-27,ARISTOS TH. ARISTEIDOU LIMITED - Αμόλυβδη 95,Petrol,1.349,TRANSPORT,ESSO
+2025-06-27,ARISTOS TH. ARISTEIDOU LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,ARISTOS TH. ARISTEIDOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,ARISTOS TH. ARISTEIDOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ARISTOS TH. ARISTEIDOU LIMITED - Κηροζίνη,Liquid fuels,1.049,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.995,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,SHELL
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.424,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,A & K PAVLOU TRADING LIMITED - Αμόλυβδη 95,Petrol,1.359,TRANSPORT,ESSO
+2025-06-27,A & K PAVLOU TRADING LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,A & K PAVLOU TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.434,TRANSPORT,ESSO
+2025-06-27,A & K PAVLOU TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,A & K PAVLOU TRADING LIMITED - Κηροζίνη,Liquid fuels,1.129,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.441,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.026,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,S & K TIGGER TRADING LIMITED - Αμόλυβδη 95,Petrol,1.386,TRANSPORT,ESSO
+2025-06-27,S & K TIGGER TRADING LIMITED - Αμόλυβδη 98,Petrol,1.466,TRANSPORT,ESSO
+2025-06-27,S & K TIGGER TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.441,TRANSPORT,ESSO
+2025-06-27,S & K TIGGER TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,S & K TIGGER TRADING LIMITED - Κηροζίνη,Liquid fuels,1.026,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,N.P.M. GABRIEL LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,SHELL
+2025-06-27,N.P.M. GABRIEL LIMITED - Αμόλυβδη 98,Petrol,1.488,TRANSPORT,SHELL
+2025-06-27,N.P.M. GABRIEL LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,SHELL
+2025-06-27,N.P.M. GABRIEL LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,N.P.M. GABRIEL LIMITED - Κηροζίνη,Liquid fuels,1.055,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,NTINOS APOSTOLOU LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,NTINOS APOSTOLOU LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,EKO
+2025-06-27,NTINOS APOSTOLOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,NTINOS APOSTOLOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,NTINOS APOSTOLOU LIMITED - Κηροζίνη,Liquid fuels,1.087,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.375,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.445,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,SAVVAS LILI & YIOI LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,SAVVAS LILI & YIOI LIMITED - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,SAVVAS LILI & YIOI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,SAVVAS LILI & YIOI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SAVVAS LILI & YIOI LIMITED - Κηροζίνη,Liquid fuels,1.02,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,MICHALAKIS IAKOVOU LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,MICHALAKIS IAKOVOU LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,MICHALAKIS IAKOVOU LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,MICHALAKIS IAKOVOU LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,A. K. Konnaris Service Station Ltd - Κηροζίνη,Liquid fuels,1.12,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,DI FORCES TRADING LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,DI FORCES TRADING LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,DI FORCES TRADING LTD - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 98,Petrol,1.457,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Κίνησης,Diesel,1.438,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.489,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,A. K. Konnaris Service Station Ltd - Κηροζίνη,Liquid fuels,1.12,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 98,Petrol,1.467,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.985,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Κηροζίνη,Liquid fuels,1.025,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ONELZIG LTD - Αμόλυβδη 95,Petrol,1.419,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Αμόλυβδη 98,Petrol,1.559,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Πετρέλαιο Κίνησης,Diesel,1.489,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,ONELZIG LTD - Κηροζίνη,Liquid fuels,1.199,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,P. KOKKINOS PETRELAIOEIDI LTD - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,ESSO
+2025-06-27,P. KOKKINOS PETRELAIOEIDI LTD - Αμόλυβδη 98,Petrol,1.489,TRANSPORT,ESSO
+2025-06-27,P. KOKKINOS PETRELAIOEIDI LTD - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,ESSO
+2025-06-27,P. KOKKINOS PETRELAIOEIDI LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.046,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,P. KOKKINOS PETRELAIOEIDI LTD - Κηροζίνη,Liquid fuels,1.149,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,S. KALLIKAS LIMITED - Κηροζίνη,Liquid fuels,1.01,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CIRCLEOFFICES LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,TOTAL PLUS
+2025-06-27,CIRCLEOFFICES LTD - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,TOTAL PLUS
+2025-06-27,CIRCLEOFFICES LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.994,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",TOTAL PLUS
+2025-06-27,CIRCLEOFFICES LTD - Κηροζίνη,Liquid fuels,1.04,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",TOTAL PLUS
+2025-06-27,SPECTO LTD - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,EKO
+2025-06-27,SPECTO LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,EKO
+2025-06-27,SPECTO LTD - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,SPECTO LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,SPECTO LTD - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.376,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.421,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.432,TRANSPORT,STAROIL
+2025-06-27,P. DIOGENOUS PETROL STATION LTD - Αμόλυβδη 95,Petrol,1.388,TRANSPORT,ENI
+2025-06-27,P. DIOGENOUS PETROL STATION LTD - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,ENI
+2025-06-27,P. DIOGENOUS PETROL STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,ENI
+2025-06-27,P. DIOGENOUS PETROL STATION LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,P. DIOGENOUS PETROL STATION LTD - Κηροζίνη,Liquid fuels,1.05,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,D.A. PAPASAVVAS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,ESSO
+2025-06-27,D.A. PAPASAVVAS LIMITED - Αμόλυβδη 98,Petrol,1.489,TRANSPORT,ESSO
+2025-06-27,D.A. PAPASAVVAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,ESSO
+2025-06-27,D.A. PAPASAVVAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.019,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,D.A. PAPASAVVAS LIMITED - Κηροζίνη,Liquid fuels,1.119,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,M.T. EFTHIMIOU ENTERPRISES LTD - Αμόλυβδη 95,Petrol,1.399,TRANSPORT,EKO
+2025-06-27,M.T. EFTHIMIOU ENTERPRISES LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,EKO
+2025-06-27,M.T. EFTHIMIOU ENTERPRISES LTD - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,M.T. EFTHIMIOU ENTERPRISES LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.989,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,M.T. EFTHIMIOU ENTERPRISES LTD - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,K. MARMARAS PETRELAIOEIDI LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ENI
+2025-06-27,K. MARMARAS PETRELAIOEIDI LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,ENI
+2025-06-27,K. MARMARAS PETRELAIOEIDI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,ENI
+2025-06-27,K. MARMARAS PETRELAIOEIDI LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.067,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,K. MARMARAS PETRELAIOEIDI LIMITED - Κηροζίνη,Liquid fuels,1.147,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,CHARILAOS DANIIL LIMITED - Αμόλυβδη 95,Petrol,1.398,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Πετρέλαιο Κίνησης,Diesel,1.455,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.013,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Κηροζίνη,Liquid fuels,1.038,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.385,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.495,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,CHARILAOS DANIIL LIMITED - Αμόλυβδη 95,Petrol,1.398,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Αμόλυβδη 98,Petrol,1.478,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Πετρέλαιο Κίνησης,Diesel,1.455,TRANSPORT,ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.013,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,CHARILAOS DANIIL LIMITED - Κηροζίνη,Liquid fuels,1.038,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,ANDREAS M. KOMMATOS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,ANDREAS M. KOMMATOS LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,ANDREAS M. KOMMATOS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,ANDREAS M. KOMMATOS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ANDREAS M. KOMMATOS LIMITED - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,J.K PETROL STATION AND CARWASH LTD - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,J.K PETROL STATION AND CARWASH LTD - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,J.K PETROL STATION AND CARWASH LTD - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,J.K PETROL STATION AND CARWASH LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.969,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,J.K PETROL STATION AND CARWASH LTD - Κηροζίνη,Liquid fuels,1.029,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,SPLS TRADING CO LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,ESSO
+2025-06-27,SPLS TRADING CO LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,ESSO
+2025-06-27,SPLS TRADING CO LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,ESSO
+2025-06-27,SPLS TRADING CO LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SPLS TRADING CO LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,N & C FAKONDIS BROS PETROLEUM LTD - Αμόλυβδη 95,Petrol,1.387,TRANSPORT,EKO
+2025-06-27,N & C FAKONDIS BROS PETROLEUM LTD - Αμόλυβδη 98,Petrol,1.438,TRANSPORT,EKO
+2025-06-27,N & C FAKONDIS BROS PETROLEUM LTD - Πετρέλαιο Κίνησης,Diesel,1.457,TRANSPORT,EKO
+2025-06-27,N & C FAKONDIS BROS PETROLEUM LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.978,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,N & C FAKONDIS BROS PETROLEUM LTD - Κηροζίνη,Liquid fuels,1.04,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,ONELZIG LTD - Αμόλυβδη 95,Petrol,1.419,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Αμόλυβδη 98,Petrol,1.559,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Πετρέλαιο Κίνησης,Diesel,1.489,TRANSPORT,SHELL
+2025-06-27,ONELZIG LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,ONELZIG LTD - Κηροζίνη,Liquid fuels,1.199,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 98,Petrol,1.467,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Κίνησης,Diesel,1.429,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.985,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Κηροζίνη,Liquid fuels,1.025,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.979,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,S. KALLIKAS LIMITED - Κηροζίνη,Liquid fuels,1.01,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,EKO
+2025-06-27,S. KALLIKAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.984,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,S. KALLIKAS LIMITED - Κηροζίνη,Liquid fuels,1.065,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,TOTAL PLUS LIMITED - Αμόλυβδη 95,Petrol,1.362,TRANSPORT,TOTAL PLUS
+2025-06-27,TOTAL PLUS LIMITED - Αμόλυβδη 98,Petrol,1.423,TRANSPORT,TOTAL PLUS
+2025-06-27,TOTAL PLUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.416,TRANSPORT,TOTAL PLUS
+2025-06-27,TOTAL PLUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.976,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",TOTAL PLUS
+2025-06-27,TOTAL PLUS LIMITED - Κηροζίνη,Liquid fuels,1.064,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",TOTAL PLUS
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.385,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.495,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,SHELL
+2025-06-27,G & K KOUPPAS LTD - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,G & K KOUPPAS LTD - Αμόλυβδη 98,Petrol,1.457,TRANSPORT,EKO
+2025-06-27,G & K KOUPPAS LTD - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,G & K KOUPPAS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,G & K KOUPPAS LTD - Κηροζίνη,Liquid fuels,1.107,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.385,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.495,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.458,TRANSPORT,SHELL
+2025-06-27,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.959,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2025-06-27,IOSIF. P. IOSIF TRADING LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,IOSIF. P. IOSIF TRADING LIMITED - Αμόλυβδη 98,Petrol,1.495,TRANSPORT,PETROLINA
+2025-06-27,IOSIF. P. IOSIF TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.466,TRANSPORT,PETROLINA
+2025-06-27,IOSIF. P. IOSIF TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,IOSIF. P. IOSIF TRADING LIMITED - Κηροζίνη,Liquid fuels,1.147,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 95,Petrol,1.369,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Αμόλυβδη 98,Petrol,1.449,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Κίνησης,Diesel,1.419,TRANSPORT,ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.985,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,SONSIRE HOLDINGS LTD - Κηροζίνη,Liquid fuels,1.025,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,G.M. (LEONTIOS) LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,EKO
+2025-06-27,G.M. (LEONTIOS) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,EKO
+2025-06-27,G.M. (LEONTIOS) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.378,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.447,TRANSPORT,ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2025-06-27,DI FORCES TRADING LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,DI FORCES TRADING LTD - Αμόλυβδη 98,Petrol,1.459,TRANSPORT,ESSO
+2025-06-27,DI FORCES TRADING LTD - Πετρέλαιο Κίνησης,Diesel,1.439,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 98,Petrol,1.457,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Κίνησης,Diesel,1.438,TRANSPORT,ESSO
+2025-06-27,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.998,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.377,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.437,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.974,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.328,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.378,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.397,TRANSPORT,STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,0.945,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,0.995,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.379,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.439,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.449,TRANSPORT,EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.955,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,0.999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.389,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.428,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.459,TRANSPORT,PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,0.975,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.048,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2025-06-27,ADIDAS M FAVS Q2 SHO,Garments for men,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS SHORTS,Garments for men,17.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,NIKE NSW TECH PACK DRI FIT SS TOP,Garments for men,80.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,PUMA CA PRO CLASSIC SHOES,Footwear for men,70.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,NIKE COURT VISION LO SHOES,Footwear for men,80.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS M20 SHORT,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS OPT ST,Garments for women,28.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS W WINRS,Garments for women,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,PUMA DARE TO FEELIN XTRA WOMENS OVERSIZED TEE,Garments for women,28.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,PUMA ESS+ LOVE IS LOVE RELAXED TEE,Garments for women,20.25,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,NIKE WMNS FS LITE RUN 3,Footwear for women,42.45,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,NIKE JORDAN LITTLE KIDSAIR GRAPHIC CREW SET,Garments for infants (0 to 2 years) and children (3 to 13 years),59.9,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,NIKE LITTLE GIRLS BOXY TEE & BIKE SHORT SET,Garments for infants (0 to 2 years) and children (3 to 13 years),32.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS RUNFALCON 3.0 K,Footwear for infants and children,31.5,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,SKECHERS TWISTY BRIGHTS 2.0 GIRLS SHOES,Footwear for infants and children,69.95,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,HERSCHEL LITTLE AMERICA BACKPACK,Clothing accessories,91.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ADIDAS BASEB CLASS TRE,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2025-06-27,ORBEA - ONNA 29 40,Bicycles,699.0,TRANSPORT,AWOL
+2025-06-27,ORBEA - ONNA 29 50,Bicycles,599.0,TRANSPORT,AWOL
+2025-06-27,CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,18.2,TRANSPORT,AWOL
+2025-06-27,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26.0,TRANSPORT,AWOL
+2025-06-27,SPECIALIZED - FAST TRAK SPORT,Tyres,18.2,TRANSPORT,AWOL
+2025-06-27,SPECIALIZED - S-Works Turbo T2/T5,Tyres,48.3,TRANSPORT,AWOL
+2025-06-27,Pulifren - Disc Brake Cleaner,Lubricants,9.0,TRANSPORT,AWOL
+2025-06-27,Barbieri - Repair Kit For Tubeless,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-06-27,Barbieri - No Stop Antipuncture Sealant,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2025-06-27,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8.0,TRANSPORT,AWOL
+2025-06-27,Physiomer Throat Spray 20 ml,Pharmaceutical products,11.99,HEALTH,Bwell Pharmacy
+2025-06-27,Strepsils Lemon Sugar Free Lozenges 24,Pharmaceutical products,6.5,HEALTH,Bwell Pharmacy
+2025-06-27,Tilman Thymo Throat Spray 24ml,Pharmaceutical products,7.85,HEALTH,Bwell Pharmacy
+2025-06-27,Prospan Syrup,Pharmaceutical products,6.96,HEALTH,Bwell Pharmacy
+2025-06-27,Octiset Antiseptic Cutaneous Solution Spray 50ml,Pharmaceutical products,8.99,HEALTH,Bwell Pharmacy
+2025-06-27,Bepanthol (Bepanthene) Hydrogel Burn Care 50gr,Pharmaceutical products,11.97,HEALTH,Bwell Pharmacy
+2025-06-27,Pharmasept Flogo Barrier Protect Cream 50ml,Pharmaceutical products,8.0,HEALTH,Bwell Pharmacy
+2025-06-27,Perskindol Cool Gel 250 ml,Pharmaceutical products,10.9,HEALTH,Bwell Pharmacy
+2025-06-27,Arthrostop Cream 100ml,Pharmaceutical products,13.8,HEALTH,Bwell Pharmacy
+2025-06-27,Vitabiotics Pregnacare Liquid 200ml,Pregnancy tests and mechanical contraceptive devices,19.15,HEALTH,Bwell Pharmacy
+2025-06-27,Biocare Methyl Pregnancy Multinutrient 60 Caps,Pregnancy tests and mechanical contraceptive devices,34.76,HEALTH,Bwell Pharmacy
+2025-06-27,Vitabiotics Pregnacare Plus 56 tabs,Pregnancy tests and mechanical contraceptive devices,28.39,HEALTH,Bwell Pharmacy
+2025-06-27,Orthomol Natal Pre 30 capsules,Pregnancy tests and mechanical contraceptive devices,23.95,HEALTH,Bwell Pharmacy
+2025-06-27,Geratherm Rapid Digital Thermometer,Other medical products n.e.c.,14.61,HEALTH,Bwell Pharmacy
+2025-06-27,Braun Thermoscan 3 Digital Ear Thermometer,Other medical products n.e.c.,46.41,HEALTH,Bwell Pharmacy
+2025-06-27,Oxywatch Finger Pulse Oximeter,Other medical products n.e.c.,44.0,HEALTH,Bwell Pharmacy
+2025-06-27,Nissei Comfort Blood Pressure Monitor,Other medical products n.e.c.,89.0,HEALTH,Bwell Pharmacy
+2025-06-27,On Call Plus II Blood Glucose Meter + 50 test strips,Other medical products n.e.c.,29.9,HEALTH,Bwell Pharmacy
+2025-06-27,Flaem RespirAir nebulizer,Other therapeutic appliances and equipment,114.12,HEALTH,Bwell Pharmacy
+2025-06-27,Gamma Nemo nebulizer,Other therapeutic appliances and equipment,97.82,HEALTH,Bwell Pharmacy
+2025-06-27,dr Frei Turbo Car Nebulizer System,Other therapeutic appliances and equipment,122.27,HEALTH,Bwell Pharmacy
+2025-06-27,Bdtk Men T-Shirt Ss (1241-951928),Garments for men,13.1,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas men's tiro t-shirt,Garments for men,17.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Reebok Men Running 2-1 Short,Garments for men,22.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Champion Men Shorts,Garments for men,21.21,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas kids breaknet 2.0 (IG0504),Footwear for men,40.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Bdtk Women Snaps Crop Tshirt (1231-903620),Garments for women,14.9,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas women adidas sportswear future icons winners 3.0 t-sh,Garments for women,17.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Bdtk Women Shorts (1231-902105),Garments for women,22.45,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Reebok Women Workout Supremium T-Shirt (HA1031),Garments for women,12.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas women's duramo sl shoes,Footwear for women,52.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Reebok Women Flexagon Force 4 Training Shoes (HP9220),Footwear for women,30.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Reebok Women Flexagon Energy Tr 4 (IE4495),Footwear for women,38.5,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Quiksilver Boy T-Shirts Radical Flag Ss Youth EQBZT04616-WB,Garments for infants (0 to 2 years) and children (3 to 13 years),12.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Quiksilver Keller - Zip-Up Polar Fleece Hoodie for Boys 8-16,Garments for infants (0 to 2 years) and children (3 to 13 years),28.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,New Balance Kids Unisex 480 - Classics Gradeschool (GSB4803W),Footwear for infants and children,64.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,New Balance Infant 373 - Classics Infant (IZ373VC2),Footwear for infants and children,32.48,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas unisex performance cushioned low socks 3 pairs (IC951),Clothing accessories,13.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Asics Unisex Lite-Show Run Crew Sock,Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,adidas unisex aeroready training running baseball cap (HT203),Clothing accessories,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2025-06-27,Pure Cotton Crew Neck T-Shirt,Garments for men,12.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Regular Fit Trouser with Active Waist,Garments for men,26.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,3pk Cotton Rich Assorted Pattern Trunks,Garments for men,29.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Suede Slip-On Loafers,Footwear for men,79.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Suede Moccasin Slippers,Footwear for men,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women,25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Straight Leg Trousers with Stretch,Garments for women,27.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,3pk Wired Full Cup T-Shirt Bras A-E,Garments for women,39.5,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Leather Trim Flatform Square Toe Loafers,Footwear for women,55.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),23.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,30.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,5pk Pure Cotton Sleepsuits (5 lbs - 3 Yrs),Garments for infants (0 to 2 years) and children (3 to 13 years),19.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,4pk Pure Cotton Booties (0-1 Yrs),Footwear for infants and children,13.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2025-06-27,Brushed Pencil Pleat Blackout Temperature Smart Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Velvet Ribbed Eyelet Blackout Curtains,Furnishing fabrics and curtains,69.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Pure Cotton Tufted Floral Bedding Set,Bed linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Supremely Washable 18 Tog All Seasons Duvet,Bed linen,99.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Sierra Pure Cotton Embroidered Bedding Set,Bed linen,129.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen,53.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Super Plush Pure Cotton Towel,Table linen and bathroom linen,75.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Pure Cotton Tablecloth,Table linen and bathroom linen,22.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Pure Cotton Embroidered Bee Table Runner,Table linen and bathroom linen,19.5,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,Pure Cotton Geometric Towel,Table linen and bathroom linen,15.0,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Marks & Spencer
+2025-06-27,"Women's Services, HAIRCUT Stylist",Hairdressing for women,30.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-06-27,"Women's Services, HAIRCUT Stylist",Hairdressing for women,25.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-06-27,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,26.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-06-27,"Men's Services, HAIRCUT Stylist",Hairdressing for men and children,23.0,MISCELLANEOUS GOODS AND SERVICES,Novella
+2025-06-27,Adults,"Cinemas, theatres, concerts",9.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Adults 3D,"Cinemas, theatres, concerts",10.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Children,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Children 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Senior 64,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Senior 64 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Students,"Cinemas, theatres, concerts",7.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Students 3D,"Cinemas, theatres, concerts",8.0,RECREATION AND CULTURE,Rio Cinema
+2025-06-27,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1035,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-06-27,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0305,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-06-27,Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα,Electricity,0.006500000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-06-27,Κόστος Προμήθειας,Electricity,6.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2025-06-27,Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,0.119031,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
+2025-06-27,Πάγιο ανά μήνα - Larnaca,Water supply,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Κυβικά ανά μήνα - Larnaca,Water supply,1.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Κυβικά ανά μήνα - Nicosia,Water supply,1.00,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Πάγιο ανά μήνα - Limassol,Water supply,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,Κυβικά ανά μήνα - Limassol,Water supply,0.90,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board
+2025-06-27,KFC Original Duo with 2 Reg Drinks,Fast food and take away food services,16.5,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,KFC Snack Box,Fast food and take away food services,7.0,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Ocean Basket Platter For 2,Fast food and take away food services,35.5,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,McDonald's Sharebox,Fast food and take away food services,19.6,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,McDonald's Big Mac,Fast food and take away food services,7.8,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,McDonald's McChicken,Fast food and take away food services,7.8,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Pizza Hut Special,Fast food and take away food services,9.65,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Pizza Hut Classic,Fast food and take away food services,7.95,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Pizza Hut Margarita,Fast food and take away food services,6.8,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Costa Coffee Freddo Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Costa Coffee Freddo Espresso Primo,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Costa Coffee Espresso Single,"Restaurants, cafes and dancing establishments",2.65,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Costa Coffee Cappuccino Primo,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Starbucks Cappuccino,"Restaurants, cafes and dancing establishments",4.3,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Starbucks Freddo Cappuccino,"Restaurants, cafes and dancing establishments",4.25,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Starbucks Freddo Espresso,"Restaurants, cafes and dancing establishments",3.95,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Nero Cappuccino,"Restaurants, cafes and dancing establishments",3.8,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Nero Freddo Espresso,"Restaurants, cafes and dancing establishments",3.7,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Nero Freddo Cappuccino,"Restaurants, cafes and dancing establishments",3.8,RESTAURANTS AND HOTELS,Wolt
+2025-06-27,Ετήσιο Τέλος Nicosia,Sewage collection,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+2025-06-27,Τέλος Χρήσης Nicosia,Sewage collection,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+2025-06-27,Ετήσιο Τέλος Limassol,Sewage collection,0.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+2025-06-27,Τέλος Χρήσης Limassol,Sewage collection,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+2025-06-27,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2025-06-27,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2025-06-27,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
+2025-06-27,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
+2025-06-27,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
+2025-06-27,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2025-06-27,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2025-06-27,Elisa – Ασημένιο Μενταγιόν Σταυρός (925),Jewellery,22.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Stainless Steel Σταυρός,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Ανδρικό Βραχιόλι,Jewellery,35.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Σκουλαρίκια Κορώνα από Ασήμι 925,Jewellery,15.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,"Ασημένιο 925 κολιέ ροζάριο, επιχρυσωμένο με μαύρους κρυστάλλους",Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Δαχτυλίδι από Ασήμι 925,Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Andy – Βραχιόλι με αλυσίδα από ασήμι 925,Jewellery,45.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,Leyla – Κολιέ ( 925 – Επίχρυσο 14Κ ),Jewellery,30.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,PETITE SHEFFIELD,Clocks and watches,149.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,OOZOO Vintage,Clocks and watches,99.0,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
+2025-06-27,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Corrective eye-glasses and contact lenses,149.0,HEALTH,Centroptical
+2025-06-27,Lacoste – L2205 424 54-17 150,Corrective eye-glasses and contact lenses,198.0,HEALTH,Centroptical
+2025-06-27,Persol – 3128- V 95 4622 145,Corrective eye-glasses and contact lenses,229.0,HEALTH,Centroptical
+2025-06-27,BURBERRY – B 2267 3316 55-18 145,Corrective eye-glasses and contact lenses,298.0,HEALTH,Centroptical
+2025-06-27,Dry and Fold Only (up to 5kg),Cleaning of clothing,7.5,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-06-27,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,28.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2025-06-27,Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,2.4,TRANSPORT,Cyprus Public Transport
+2025-06-27,Plastic ANONYMOUS Card / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
+2025-06-27,Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
+2025-06-27,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89.0,RECREATION AND CULTURE,Musicavenue
+2025-06-27,YAMAHA P125B STAGE PIANO,Musical instruments,690.0,RECREATION AND CULTURE,Musicavenue
+2025-06-27,YAMAHA KEYBOARD PSRF52,Musical instruments,135.0,RECREATION AND CULTURE,Musicavenue
+2025-06-27,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325.0,RECREATION AND CULTURE,Musicavenue
+2025-06-27,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339.0,RECREATION AND CULTURE,Musicavenue
+2025-06-27,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485.0,RECREATION AND CULTURE,Musicavenue
