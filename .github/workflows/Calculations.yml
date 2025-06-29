@@ -9,7 +9,7 @@ run-name: Perform calculations and store results
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "40 11 * * *" #UTC time
+    - cron: "40 12 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
