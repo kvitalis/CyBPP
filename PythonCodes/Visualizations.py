@@ -27,6 +27,7 @@ plt.show()
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 
+'''
 #Plot the time evolution of the daily General CPI
 for i, txt in enumerate(df_daily['CPI General']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
@@ -41,8 +42,8 @@ plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 
 '''
-df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 
+df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 plt.figure(figsize=(12,6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o')
 
@@ -62,7 +63,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
-'''
+
 
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
