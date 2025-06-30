@@ -41,22 +41,19 @@ plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 
 '''
-plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o') # Δημιουργία του γραφήματος (υποθέτω ότι έχεις ήδη κάνει plot τις τιμές)
+df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 
-# Προσθήκη annotations μόνο κάθε 1η του μήνα
-for i, txt in enumerate(df_daily['CPI General']):
-    if df_daily['Date'][i].day == 1:
-        plt.annotate(f'{txt:.2f}',
-                     (df_daily['Date'][i], df_daily['CPI General'][i]),
-                     textcoords="offset points",
-                     xytext=(0,10),
-                     ha='center')
+plt.figure(figsize=(12,6))
+plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o')
 
-locator = mdates.DayLocator(bymonthday=1)  # Format άξονα x να εμφανίζει μόνο την 1η κάθε μήνα
+for date, cpi in zip(df_daily['Date'], df_daily['CPI General']):
+    if date.day == 1:
+        plt.annotate(f'{cpi:.2f}', (date, cpi), textcoords="offset points", xytext=(0,10), ha='center')
+
+locator = mdates.DayLocator(bymonthday=1)
 formatter = mdates.DateFormatter('%d-%m-%Y')
 plt.gca().xaxis.set_major_locator(locator)
 plt.gca().xaxis.set_major_formatter(formatter)
-
 plt.xlabel('Date')
 plt.ylabel('CPI General (27/06/2024 = base)')
 plt.title("Daily Evolution of General CPI in Cyprus", fontsize=18)
@@ -66,6 +63,7 @@ plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
 '''
+
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
 #========================================================================================================================
