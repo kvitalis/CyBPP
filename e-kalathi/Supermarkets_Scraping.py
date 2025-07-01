@@ -167,8 +167,14 @@ def results_opacy(u):
         soup = BeautifulSoup(response.text, 'html.parser')
         element_ = soup.find_all("span",{"class":"product-span price"})
         price_ = element_[0].text.replace("Price: €","")
-        print(price_)
+
+        # Extract only the number
+        match = re.search(r'\d+', price_)
+        if match:
+            price_ = int(match.group())
         
+        print(price_)
+            
         if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
