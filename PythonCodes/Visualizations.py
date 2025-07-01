@@ -13,22 +13,7 @@ plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o',
 
 ## Plot the time evolution of the daily CPI Inflation
 
-'''
-for i, txt in enumerate(df_daily['Inflation (%)']):
-    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
-
-plt.xlabel('Date')
-plt.ylabel('Inflation (%)')
-plt.title("Daily Evolution of CPI Inflation in Cyprus", fontsize=18)
-plt.xticks(rotation=90) 
-plt.grid(True)
-plt.tight_layout()
-plt.savefig('Results/Daily-Inflation.png')
-plt.show()
-plt.figure(figsize=(10,6))
-plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
-'''
-
+# Show on the horizontal x-axis only the date of the first day per month 
 df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 plt.figure(figsize=(12,6))
 plt.plot(df_daily['Date'], df_daily['Inflation (%)'], marker='o')
@@ -50,24 +35,26 @@ plt.tight_layout()
 plt.savefig('Results/Daily-Inflation.png')
 plt.show()
 
-## Plot the time evolution of the daily General CPI
-
 '''
-for i, txt in enumerate(df_daily['CPI General']):
-    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+# Show on the horizontal x-axis all the dates
+for i, txt in enumerate(df_daily['Inflation (%)']):
+    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
-plt.ylabel('CPI General (27/06/2024 = base)')
-plt.title("Daily Evolution of General CPI in Cyprus", fontsize=18)
+plt.ylabel('Inflation (%)')
+plt.title("Daily Evolution of CPI Inflation in Cyprus", fontsize=18)
 plt.xticks(rotation=90) 
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('Results/Daily-CPI-General.png')
+plt.savefig('Results/Daily-Inflation.png')
 plt.show()
 plt.figure(figsize=(10,6))
-plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
 
+## Plot the time evolution of the daily General CPI
+
+# Show on the horizontal x-axis only the date of the first day per month
 df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 plt.figure(figsize=(12,6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], marker='o')
@@ -88,6 +75,23 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
+
+'''
+# Show on the horizontal x-axis all the dates
+for i, txt in enumerate(df_daily['CPI General']):
+    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+
+plt.xlabel('Date')
+plt.ylabel('CPI General (27/06/2024 = base)')
+plt.title("Daily Evolution of General CPI in Cyprus", fontsize=18)
+plt.xticks(rotation=90) 
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('Results/Daily-CPI-General.png')
+plt.show()
+plt.figure(figsize=(10,6))
+plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+'''
 
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
