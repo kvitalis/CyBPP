@@ -51,9 +51,31 @@ def results_supermarketcy(u):
     #response = requests.get(url_new)
     
     ### with headers 
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    ##header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
+
+    headers = {
+        "authority": "www.supermarketcy.com.cy",
+        "method": "GET",
+        "path": "/sifounas-olikis-psomi-kommeno-780g",
+        "scheme": "https",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+        "cache-control": "max-age=0",
+        "cookie": "_ga=GA1.1.281549953.1750067102; _gcl_au=1.1.1682745339.1750067102; cp_total_cart_items=0; cp_total_cart_value=0; cpab=3b260882-8582-487a-bfbd-dba2324e4489; _fbp=fb.2.1750067102781.253208881548223402; CookieConsent={stamp:'eexCFNMWujSOe4q3kf3iW8satLGH048/2ptDwTtCR134Gsh95l5YHQ==',necessary:true,preferences:true,statistics:true,marketing:true,method:'explicit',ver:1,utc:1750067102028,region:'cy'}; _nicid=a03c1e42-e50a-46ff-bec2-386f0732526d; _ga_KHCDSL47Y2=GS2.1.s1751360534$o5$g1$t1751360534$j60$l0$h0; cp_sessionTime=1751360533438; XSRF-TOKEN=eyJpdiI6IkhLTENwSTBxSm11ZVlRQnh2bnQ5S3c9PSIsInZhbHVlIjoiTUoxcitJS3o4dGlHdkV5SStPLzRmdG9sa3pZWUc3MC9QVE55TjYrdTlaeFhoZzZ6RE9LcTNiSS8zRWs5V3MyYi9ZeGJMc2JPOTk3TG5aK3M2eXhWNzRVdWdhVDF2MHZCcVRaRHFpOElUUWVGVmlGeFl4ak5PZ2RyOGxGc3RlWHAiLCJtYWMiOiIwZGE5NDZhMGZmOGQwNWRmNGQzZWQzNDA2MDI4ZjgxMGVjZTBkMmQwZDQ0MDdkODg2MjNiNDM1ZjQyMDI0N2IyIiwidGFnIjoiIn0=; supermarketcy_session=eyJpdiI6IlF0RWVLT3FnMmxGazFmQkJKM2Z4eEE9PSIsInZhbHVlIjoiMXk3ZnFlYWE1MFJvQ2xOUXNIUjE1OERUTnRrVWpMQ2hLK2g4UXEvcnp6K0cxVnROLzd0UHlnVUZGZ0owbTJORlRxWlRZZlIzUnpHTVZOSUdrM0dkTnZSejFIR0NHcGFjQVhXUVZwN3Z0cDc3dGhhUWpJalZOb0xWUWdLYXRtcFMiLCJtYWMiOiJlNDE5YjkxNzFhNGE3N2IzMjFlZmIxNTk5YzljMjQ2NGE5ZDA0Y2U3NzE3YWMyODc0MGZlMmRhNWQ4MzYwODkwIiwidGFnIjoiIn0=; recently_viewed=eyJpdiI6IncyaUEzeWVzN3pVUUlWeDh6SmtRWVE9PSIsInZhbHVlIjoiVjdXd3pSbzFMOXFrc0hFWDdCaHVvc3U3QmRVem9SbEVRNWdkYmxXOGQ1OUZFVVA0YmV1Nzd5cnUrOGxwZG1RWCIsIm1hYyI6ImUxOTc1NjBjNmY1MjJlZTYyMzNhNDNkMjk4YmRkNzU4NWIwZDc3OTVjZDQ0OTlkYWY3MGVkNDViY2UzMTQ1MDkiLCJ0YWciOiIifQ==",
+        "priority": "u=0, i",
+        "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    }
     
     ## 1 (*NOT working*)
     #bs = BeautifulSoup(url_new, "html.parser")
