@@ -11,7 +11,9 @@ df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
 
-#Plot the time evolution of the daily CPI Inflation
+## Plot the time evolution of the daily CPI Inflation
+
+'''
 for i, txt in enumerate(df_daily['Inflation (%)']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
@@ -23,12 +25,34 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-Inflation.png')
 plt.show()
+plt.figure(figsize=(10,6))
+plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
+'''
 
-plt.figure(figsize=(10, 6))
-plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+df_daily['Date'] = pd.to_datetime(df_daily['Date'])
+plt.figure(figsize=(12,6))
+plt.plot(df_daily['Date'], df_daily['Inflation (%)'], marker='o')
+
+for date, cpi in zip(df_daily['Date'], df_daily['Inflation (%)']):
+    if date.day == 1:
+        plt.annotate(f'{cpi:.2f}', (date, cpi), textcoords="offset points", xytext=(0,10), ha='center')
+
+locator = mdates.DayLocator(bymonthday=1)
+formatter = mdates.DateFormatter('%d-%m-%Y')
+plt.gca().xaxis.set_major_locator(locator)
+plt.gca().xaxis.set_major_formatter(formatter)
+plt.xlabel('Date')
+plt.ylabel('Inflation (%)')
+plt.title("Daily Evolution of CPI Inflation in Cyprus", fontsize=18)
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('Results/Daily-Inflation.png')
+plt.show()
+
+## Plot the time evolution of the daily General CPI
 
 '''
-#Plot the time evolution of the daily General CPI
 for i, txt in enumerate(df_daily['CPI General']):
     plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
@@ -40,7 +64,8 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
-
+plt.figure(figsize=(10,6))
+plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
 
 df_daily['Date'] = pd.to_datetime(df_daily['Date'])
@@ -63,7 +88,6 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig('Results/Daily-CPI-General.png')
 plt.show()
-
 
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
