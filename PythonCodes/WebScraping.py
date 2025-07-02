@@ -43,6 +43,7 @@ def results_supermarketcy(u):
     url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
     
     ###  without headers 
+    
     ## 1 (*NOT working*)
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs)
@@ -51,10 +52,10 @@ def results_supermarketcy(u):
     #response = requests.get(url_new)
     
     ### with headers 
-    ##header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
-
     header = {
         "authority": "www.supermarketcy.com.cy",
         "method": "GET",
@@ -95,8 +96,14 @@ def results_supermarketcy(u):
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
-        price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
-        price_ = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        
+        if (name_wrappers=='Τσιπούρα Φρέσκια Καθαρισμένη 1.5kg') |  (name_wrappers=='Χταπόδι Φρέσκο 1.5kg') :
+            price_wrappers = soup.find('div', {'class':"text-small text-grey-light-darker"}).text
+            price_ = price_wrappers.split('\xa0')[0].replace(',', '.').replace('1kg: ', '')
+        else:
+            price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
+            price_ = price_wrappers.split('\xa0')[0].replace(',', '.')
+        
         print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
