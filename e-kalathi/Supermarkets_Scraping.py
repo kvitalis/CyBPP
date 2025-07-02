@@ -196,8 +196,9 @@ def results_opacy(u):
 
 def results_metro(u):
     
-    url = "https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" + Item_url_
-    response = requests.get(url)
+    #"https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" 
+    
+    response = requests.get(Item_url_)
     
     if (response.status_code != 200):
         website_false.append(name_)
