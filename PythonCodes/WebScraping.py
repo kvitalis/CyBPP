@@ -83,6 +83,7 @@ def results_supermarketcy(u):
     
     ## 2 (*NOT working*)
     response = requests.get(url_new, headers = header) 
+    print(response) #gia na do ti paei X
 
     if (response.status_code != 200) : #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
