@@ -83,7 +83,7 @@ def results_supermarketcy(u):
     #response = requests.get(bs, {'headers':header})
     
     ## 2 (*NOT working*)
-    response = requests.get(url_new, headers = header) 
+    #response = requests.get(url_new, headers = header) 
 
     ## 3 
     with httpx.Client(headers = header) as client:
