@@ -13,6 +13,7 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 import pdfplumber
+import httpx
 
 from ast import Try
 from lxml import html, etree
@@ -40,7 +41,7 @@ list_ = pd.DataFrame(columns = ["Date","Name","Price","Subclass","Division","Ret
 
 def results_supermarketcy(u):
     
-    url_new = "https://www.supermarketcy.com.cy/" + str(Item_url_)
+    url_new = "https://www.supermarketcy.com.cy/" + Item_url_
     
     ###  without headers 
     
@@ -55,14 +56,19 @@ def results_supermarketcy(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #header = {'User-Agent': 'Mozilla/5.0 Chrome/114.0.0.0'}
     
     ## 1 (*NOT working*)
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
     
     ## 2 (*NOT working*)
     #response = requests.get(url_new, headers = header) 
+
+    ## 3 
+    with httpx.Client(headers = header) as client:
+    response = client.get(url)
+
+    print(response)
 
     if (response.status_code != 200) : #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
