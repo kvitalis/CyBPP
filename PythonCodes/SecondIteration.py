@@ -66,7 +66,7 @@ def results_supermarketcy(u):
 
     ## 3 
     with httpx.Client(headers = header) as client:
-        response = client.get(url)
+        response = client.get(url_new)
 
     print(response)
 
