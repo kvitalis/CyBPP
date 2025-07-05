@@ -28,7 +28,7 @@ Finally, the *Visualizations.py* reads the *Daily-CPI-General-Inflation.csv* fil
 
 ## Online Retailers
 
-According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 56 selected online retailers chosen for the development of the Cyprus' CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is infeasible to collect data on their products due to the following main reasons: (i) some retailers do not have websites, and (ii) some online retailers possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
+According to the representativeness of each product and its retailer within the Cypriot market, presented below are the 56 selected online retailers chosen for the development of the Cyprus's CPI basket. It is important to mention that there are retailers which are representative within the Cypriot market, but it is infeasible to collect data on their products due to the following main reasons: (i) some retailers do not have websites, and (ii) some online retailers possess robust IT knowledge and employ measures to block any attempt to scrape data from their websites.
 
 1. Adventure Without Limits (AWOL) https://www.awol.com.cy/ 
 
