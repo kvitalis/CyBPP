@@ -1,4 +1,4 @@
-# The Cyprus' Billion Prices Project (CyBPP)
+# The Cyprus Billion Prices Project (CyBPP)
 
 ## Overview
 
