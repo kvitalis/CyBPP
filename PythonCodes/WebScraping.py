@@ -1054,7 +1054,7 @@ def results_europeanuniversitycyprus(u):
     
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
     """
-    pdf_path = r"C:\Users\user\Desktop\euc-tuition-fees-c.pdf"
+    pdf_path = r"PDFs/didaktra_european.pdf"
     amounts = []
     price_1=0
     count_=0
