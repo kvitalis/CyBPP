@@ -1015,8 +1015,8 @@ def results_electroline(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_europeanuniversitycyprus(u):
-    
+def results_EUC(u):
+    """
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     
     list_euc = []
@@ -1030,6 +1030,25 @@ def results_europeanuniversitycyprus(u):
             list_euc.append(word)
     
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
+    """
+    pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
+    amounts = []
+    price_1 = 0
+    count_ = 0
+    with pdfplumber.open(pdf_path) as pdf:
+        page = pdf.pages[1]
+        tables = page.extract_tables()
+        for table in tables:
+            for row in table:
+                if len(row) > 1 and row[1]:
+                    cell = row[1]
+                    if re.fullmatch(r"\d{1,3}(?:,\d{3})*", cell):
+                        amount_ = cell.replace(",","")
+                        amount_ = float(amount_)
+                        price_1 += amount_
+                        count_ += 1
+    price_ = price_1/count_
+    print(price_)
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
@@ -2980,7 +2999,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
         results_CyMinistryEducation(u)
     elif retailer_=="European University Cyprus":
-        results_europeanuniversitycyprus(u)    
+        results_EUC(u)    
     elif retailer_=="Cyprus Post":
         results_CyPost(u)
     elif retailer_=="AHK":
