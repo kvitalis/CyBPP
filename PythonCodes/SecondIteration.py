@@ -300,8 +300,7 @@ def results_ikea(u):
 def results_stephanis(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    url_new = "https://www.stephanis.com.cy/en" + str(Item_url_)
-    response = requests.get(url_new, headers=header)
+    response = requests.get(Item_url_, headers=header)
 
     if (response.status_code != 200) or ("This product is no longer available" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
