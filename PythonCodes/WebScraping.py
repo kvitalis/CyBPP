@@ -328,7 +328,9 @@ def results_stephanis(u):
 
     ## without headers
     bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
+    response = requests.get(bs) 
+
+    print(response)
     
     if (response.status_code != 200) or ("This product is no longer available" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
@@ -2990,8 +2992,8 @@ for u in range(0, len(urls)):
         results_leroymerlin(u)   
     elif retailer_=="IKEA":
         results_ikea(u)
-    elif retailer_=="Stephanis":
-        results_stephanis(u)
+    #elif retailer_=="Stephanis":
+    #    results_stephanis(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
