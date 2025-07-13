@@ -321,10 +321,15 @@ def results_ikea(u):
         list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 def results_stephanis(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers=header)
 
+    ## with headers
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #response = requests.get(Item_url_, headers=header)
+
+    ## without headers
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)  
+    
     if (response.status_code != 200) or ("This product is no longer available" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -663,10 +668,8 @@ def results_awol(u):
 
 def results_AlterVape(u):
     
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
 
     if ("Page not found" in response.text) or (response.status_code != 200):
         website_false.append(name_)
@@ -677,8 +680,11 @@ def results_AlterVape(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        price_ = element_soup[0].text.replace("\n","").replace("\xa0€","").replace(",",'.')
+        price_ = element_soup[2].text.replace("\n","").replace("\xa0€","").replace(",",'.')
+        print(price_)
+
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
