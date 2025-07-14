@@ -2533,8 +2533,7 @@ def results_premier(u):
 def results_cyprus_transport(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    url = 'https://www.publictransport.com.cy/cms/page/cash-tickets'
-    response = requests.get(url, headers=header)
+    response = requests.get(Item_url_, headers = header)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -2554,7 +2553,7 @@ def results_cyprus_transport(u):
                 row_data.append(cell.get_text().strip())
             data.append(row_data)
         df1 = pd.DataFrame(data)
-        df1.columns = ['Ticket type', 'Paper Ticket (CASH)','Plastic ANONYMOUS Card', 'Plastic PERSONALISED Motion Bus Card - Normal Charge', 'Plastic PERSONALISED Motion Bus Card - Beneficiaries of 50%' ]
+        df1.columns = ['Ticket type', 'Paper Ticket (CASH)', 'Plastic ANONYMOUS Card', 'Plastic PERSONALISED Motion Bus Card - Normal Charge', 'Plastic PERSONALISED Motion Bus Card - Beneficiaries of 50%' ]
         df1 = df1.drop(0)
         df1 = df1.drop(1)
         df1 = df1.drop(6)
@@ -2565,20 +2564,20 @@ def results_cyprus_transport(u):
             
             for index in df1.index:
                 value = df1.loc[index, column]
-                new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass' : 'Passenger transport by bus and coach', "Division" : 'TRANSPORT', "Retailer": 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
+                new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass': 'Passenger transport by bus and coach', 'Division': 'TRANSPORT', 'Retailer': 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
                 new_list.append(new_row)
         
         df2 = pd.DataFrame.from_records(new_list)
-        df_cy_transport = df2[df2["Price"] != "-"]
-        df_cy_transport["Price"] = df_cy_transport["Price"].str.replace('€', '')
+        df_cy_transport = df2[df2["Price"] != '-']
+        df_cy_transport['Price'] = df_cy_transport['Price'].str.replace('€', '').replace('Αρχική τιμή ', '')
         df_cy_transport['Price'] = df_cy_transport['Price'].astype(float)
         df_cy_transport.reset_index(drop = True, inplace = True)
 
         for index, row in df_cy_transport.iterrows():
-            if row['Name']==name_:
+            if row['Name'] == name_:
                 list_.loc[len(list_)] = row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-
+                
 def results_musicavenue(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
