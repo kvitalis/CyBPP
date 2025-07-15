@@ -299,13 +299,25 @@ def results_ikea(u):
 
 def results_stephanis(u):
     
-    ## with headers
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #response = requests.get(Item_url_, headers=header)
-
+    ## with headers 
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    # 1 (*NOT working*)
+    #response = requests.get(Item_url_, headers = header)
+    # 2 (*NOT working*)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers': header})
+    # 3
+    with httpx.Client(headers = header) as client:
+        response = client.get(Item_url_)
+    
     ## without headers
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
+    # 1 (*NOT working*)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs) 
+    # 2 (*NOT working*)
+    #response = requests.get(Item_url_)
+
+    print(response)
 
     if (response.status_code != 200) or ("This product is no longer available" in response.text) or ("404 Not Found" in response.text):
         website_false.append(name_)
