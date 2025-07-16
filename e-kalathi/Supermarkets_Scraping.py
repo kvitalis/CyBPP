@@ -211,7 +211,7 @@ def results_metro(u):
     else:
         soup = BeautifulSoup(response.text, 'html.parser')
         element_ = soup.find_all("span", {"data-test-id":"product-modal.price"})
-        price_ = element_[0].text.replace('€','')
+        price_ = element_[0].text.replace('€','').replace(',','.')
         print(price_)
             
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
