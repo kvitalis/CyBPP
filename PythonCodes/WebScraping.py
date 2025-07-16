@@ -329,16 +329,16 @@ def results_stephanis(u):
     # 2 (*NOT working*)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers': header})
-    # 3
-    with httpx.Client(headers = header) as client:
-        response = client.get(Item_url_)
+    # 3 (*NOT working*)
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(Item_url_)
     
     ## without headers
     # 1 (*NOT working*)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
     # 2 (*NOT working*)
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
 
     print(response)
     
@@ -3001,8 +3001,8 @@ for u in range(0, len(urls)):
         results_leroymerlin(u)   
     elif retailer_=="IKEA":
         results_ikea(u)
-    elif retailer_=="Stephanis":
-        results_stephanis(u)
+    #elif retailer_=="Stephanis":
+    #    results_stephanis(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
