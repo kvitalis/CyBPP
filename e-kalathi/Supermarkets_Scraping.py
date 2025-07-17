@@ -195,10 +195,15 @@ def results_opacy(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_metro(u):
+    #"https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" # website
+
+    ## with headers
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs, {'headers':header})
     
-    #"https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" 
-    
-    response = requests.get(Item_url_)
+    ## without headers
+    #response = requests.get(Item_url_)
     
     if (response.status_code != 200):
         website_false.append(name_)
