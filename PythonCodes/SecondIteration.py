@@ -2991,7 +2991,9 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
-    if retailer_=="SupermarketCy":
+    if retailer_=="METRO":
+        results_metro(u)
+    elif retailer_=="SupermarketCy":
         results_supermarketcy(u)
     #elif retailer_=="Alphamega":
     #    results_alphamega(u)    
