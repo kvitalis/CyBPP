@@ -1013,6 +1013,8 @@ def results_ewholesale(u):
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"hM4gpp"}) 
         price_= element_soup[0].text.replace("€Τιμή","").replace(" ","").replace(",",".").replace("€","")
+        print(price_)
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
