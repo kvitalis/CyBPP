@@ -3013,8 +3013,8 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
-    if retailer_=="METRO":
-        results_metro(u)
+    #if retailer_=="METRO":
+    #    results_metro(u)
     #elif retailer_=="SupermarketCy":
     #    results_supermarketcy(u)    
     #elif retailer_=="Alphamega":
@@ -3023,7 +3023,7 @@ for u in range(0, len(urls)):
     #    results_cheapbasket(u)
     #elif retailer_=="Opa":
     #    results_opacy(u)    
-    elif retailer_=="Fuel Daddy":
+    if retailer_=="Fuel Daddy":
         results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
