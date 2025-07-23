@@ -765,9 +765,7 @@ def results_bwell_pharmacy(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_cablenet(u):
-    
-    name_ = urls["Name"].iloc[u]
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -783,16 +781,16 @@ def results_cablenet(u):
     
     else:
         # Internet access provision services	
-        if name_ == "PurpleInternet": 
-            element_soup = soup.find_all("div",{"class":"plan-price"}) 
+        if name_ == "Purple Internet HBO Max Edition": 
+            element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"}) 
             euro_ = element_soup[1].text.count("€")
             price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
-        
+            print(price_)
         # Bundled telecommunication services
-        if name_ == "PurpleMaxMobile":
+        if name_ == "Purple Max Mobile":
             element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[1].text.replace("μετά €","").replace("/μήνα ",""))
-        
+            print(price_)
         else: 
         # Wired and Wireless telephone services	
             element_name = soup.find_all("td")
@@ -800,10 +798,12 @@ def results_cablenet(u):
                 if i.text == name_:
                     value_ = element_name[28].text
                     price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                    print(price_)
                 if i.text == name_:
                     value_ = element_name[33].text
                     price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-
+                    print(price_)
+        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
