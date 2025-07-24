@@ -51,8 +51,7 @@ def results_alphamega(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        #soup = BeautifulSoup(response.text, "html.parser")
-        soup = BeautifulSoup(response.content, "html.parser")
+        '''
         element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
         # Extract the script tag content
         script_tag = element_soup[0].find('script')
@@ -61,12 +60,16 @@ def results_alphamega(u):
             # Use regex to extract 'ecomm_totalvalue'
             match = re.search(r"'ecomm_totalvalue':\s*([\d.]+)", script_content)
             if match:
-                total_value = float(match.group(1))
-                print(total_value)
+                price_= float(match.group(1))
+                print(price_)
+        '''
+        element_soup = soup.find("span",{"class":"text-price fs-5"}).text.strip()
+        price_ = element_soup.replace('€', '').replace(',', '.').strip()
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(total_value)
+        new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)  
         new_row.append("Alphamega")
