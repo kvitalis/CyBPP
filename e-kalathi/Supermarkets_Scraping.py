@@ -51,6 +51,7 @@ def results_alphamega(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         '''
         element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
         # Extract the script tag content
