@@ -2976,6 +2976,35 @@ def results_christos_grill_seafood(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
 
+def results_public(u):
+    
+    url_new = 'https://www.public.cy/public/v1/mm/productPage?sku=' + str(Item_url_) + '&locale=el'
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    response = requests.get(url_new, headers = header)
+    
+    if (response.status_code != 200) : 
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(url_new)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        data = response.json()
+        price_ = data["prices"][0]["salePrice"] #OR "listPrice"
+        print(price_)
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Public")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
 #Initialization of the scraping/processing time
 start_time = time.time()
 
@@ -3017,6 +3046,8 @@ for u in range(0, len(urls)):
         results_ikea(u)
     elif retailer_=="Stephanis":
         results_stephanis(u)
+    elif retailer_=="Public":
+        results_public(u)    
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
