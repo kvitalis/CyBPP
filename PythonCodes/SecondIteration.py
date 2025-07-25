@@ -131,9 +131,10 @@ def results_metro(u):
         
 '''
 def results_alphamega(u):
-    
+
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers=header)
+    #header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
            
     if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
@@ -145,25 +146,30 @@ def results_alphamega(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
-        # Extract the script tag content
-        script_tag = element_soup[0].find('script')
-        if script_tag:
-            script_content = script_tag.string or script_tag.get_text()
-            # Use regex to extract 'ecomm_totalvalue'
-            match = re.search(r"'ecomm_totalvalue':\s*([\d.]+)", script_content)
-            if match:
-                total_value = float(match.group(1))
-                print(total_value)
+        
+        #element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
+        ## Extract the script tag content
+        #script_tag = element_soup[0].find('script')
+        #if script_tag:
+        #    script_content = script_tag.string or script_tag.get_text()
+        #    # Use regex to extract 'ecomm_totalvalue'
+        #    match = re.search(r"'ecomm_totalvalue':\s*([\d.]+)", script_content)
+        #    if match:
+        #        price_= float(match.group(1))
+        #        print(price_)
+        
+        element_soup = soup.find("span",{"class":"text-price fs-5"}).text.strip()
+        price_ = element_soup.replace('€', '').replace(',', '.').strip()
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
-        new_row.append(total_value)
+        new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)  
         new_row.append("Alphamega")
         list_.loc[len(list_)] = new_row
-        list_["Name"] = list_["Name"].apply(lambda x:x)   
+        list_["Name"] = list_["Name"].apply(lambda x:x)  
 '''
 
 def results_fueldaddy(u):
