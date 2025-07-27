@@ -2418,7 +2418,7 @@ def results_intercity_buses(u):
     if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
-        website_false.append(url_new)
+        website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
