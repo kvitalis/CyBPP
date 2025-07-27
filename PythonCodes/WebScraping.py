@@ -2409,25 +2409,25 @@ def results_lensescy(u):
         new_row.append("LensesCY")
         list_.loc[len(list_)] = new_row
 
-def results_intercity(u):
+def results_intercity_buses(u):
     
-    url = "https://intercity-buses.com/en/routes/" + str(Item_url_)
+    url_new = "https://intercity-buses.com/en/routes/" + str(Item_url_)
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(url,{'headers':header})
+    response = requests.get(url_new, {'headers':header})
     
     if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
-        website_false.append(Item_url_)
+        website_false.append(url_new)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        table_ = soup.find_all("table",{"class":"tablesorter eael-data-table center"})[0]
+        table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
         if table_:
-            element_ = table_.find_all("div",{"class":"td-content-wrapper"}) 
+            element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
             for ii in range(0,2):
                 new_row = []
                 if ii%2 == 0:
@@ -2436,6 +2436,7 @@ def results_intercity(u):
                     if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
                         pass
                     else:
+                        print(price_)
                         new_row.append(datetime.now().strftime('%Y-%m-%d'))
                         new_row.append(name_ + Item_url_)
                         new_row.append(float(price_))
@@ -2443,14 +2444,6 @@ def results_intercity(u):
                         new_row.append(division_)
                         new_row.append("Intercity Buses")
                         list_.loc[len(list_)] = new_row
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
             
 def results_parga(u):
     
@@ -3155,7 +3148,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
     elif retailer_=="Intercity Buses":
-        results_intercity(u)  
+        results_intercity_buses(u)  
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
