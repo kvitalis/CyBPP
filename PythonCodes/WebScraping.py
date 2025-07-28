@@ -30,6 +30,9 @@ warnings.simplefilter("ignore")
 
 # Read necessary data
 df = pd.read_csv("Datasets/Raw-Data-2025Q3.csv")
+df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
+df = df.sort_values("Date")
+
 #df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Products-Urls.csv")
 
