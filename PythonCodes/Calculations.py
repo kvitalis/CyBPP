@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 warnings.simplefilter("ignore")
 
 #today = datetime.today().strftime("%Y-%m-%d")
-today = '2025-07-30'
+today = '2025-07-31'
 
 # Read necessary data 
 raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
