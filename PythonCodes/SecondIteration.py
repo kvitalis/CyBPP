@@ -1712,7 +1712,7 @@ def results_wolt(u):
         element_name = soup.find_all('span',{"data-test-id":"product-modal.price"})
         
         if element_name:
-            price_ = element_name[0].text.replace("€","")
+            price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
