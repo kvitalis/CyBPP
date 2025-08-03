@@ -9,7 +9,7 @@ run-name: Construct the plots of Inflation and General CPI
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "31 17 * * *" #UTC time
+    - cron: "01 14 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
