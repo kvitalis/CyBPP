@@ -1363,16 +1363,16 @@ def results_primetel(u):
     
     else:
         # Bundled telecommunication services	
-        if (name_=="GIGA Unlimited")|(name_=="GIGA Unlimited Plus")|(name_=="GIGA Unlimited MAX"):
+        if (name_=="GIGA Unlimited") | (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
             
-            element_ = soup.find_all('div',{"class":"price_plan_box"})
+            element_ = soup.find_all('p', {"class":"price"})
             
             if name_ == "GIGA Unlimited" :
                 text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
                 pattern = r"(\d+\.\d+)"
                 match = re.search(pattern, text)
                 price_ = match.group(1) 
-                
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1382,12 +1382,12 @@ def results_primetel(u):
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x) 
              
-            if name_ == "GIGA Unlimited Plus" :
+            if name_ == "GIGA Unlimited 5G" :
                 text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
                 pattern = r"(\d+\.\d+)"
                 match = re.search(pattern, text)
                 price_ = match.group(1) 
-                
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1397,12 +1397,12 @@ def results_primetel(u):
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)    
              
-            if name_ == "GIGA Unlimited MAX" :
+            if name_ == "GIGA Unlimited 5G MAX" :
                 text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
                 pattern = r"(\d+\.\d+)"
                 match = re.search(pattern, text)
                 price_ = match.group(1) 
-                
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1410,12 +1410,12 @@ def results_primetel(u):
                 new_row.append(division_)
                 new_row.append("Primetel")
                 list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x) 
+                list_['Name'] = list_['Name'].apply(lambda x:x)
 
         # Wired & Wireless telephone services           
-        elif (name_=="Calls to other providers landline")|(name_=="Calls to other providers mobile"):
+        elif (name_=="Calls to other providers landline") | (name_=="Calls to other providers mobile") :
             
-            element_ = soup.find_all("table",{"id":"call_rates"},{"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
+            element_ = soup.find_all("table", {"id":"call_rates"}, {"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
             element_td = element_[0].find_all("td")
                 
             if name_ == "Calls to other providers landline" :
@@ -1443,7 +1443,7 @@ def results_primetel(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
         
         # Internet access provision services 
-        elif (name_=="Fiber Family & 200Mbps")|(name_=="Fiber Entertainment & 200Mbps"):
+        elif (name_=="Fiber Family & 200Mbps") | (name_=="Fiber Entertainment & 200Mbps") :
 
             element_ = soup.find_all("div",{"class":"price_tv_pack"})
                 
