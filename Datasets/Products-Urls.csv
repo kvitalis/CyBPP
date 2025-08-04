@@ -12,6 +12,10 @@ Name,Subclass,Url,Division,Retailer
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+"Wash, Dry and Fold - up to 5kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
+"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
+Dry and Fold Only (up to 5kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
+Dry and Fold Only (up to 10kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 nicosia-limassol-limassol-nicosia,Passenger transport by bus and coach,nicosia-limassol-limassol-nicosia/,TRANSPORT,Intercity Buses
 larnaca-nicosia-nicosia-larnaca,Passenger transport by bus and coach,larnaca-nicosia-nicosia-larnaca/,TRANSPORT,Intercity Buses
 nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia,Passenger transport by bus and coach,nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,TRANSPORT,Intercity Buses
@@ -21,10 +25,6 @@ larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca,Passenger transport by b
 limassol-paphos-paphos-limassol,Passenger transport by bus and coach,limassol-paphos-paphos-limassol/,TRANSPORT,Intercity Buses
 paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni,Passenger transport by bus and coach,paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,TRANSPORT,Intercity Buses
 larnaca-limassol-paphos-paphos-limassol-larnaca,Passenger transport by bus and coach,larnaca-limassol-paphos-paphos-limassol-larnaca/,TRANSPORT,Intercity Buses
-"Wash, Dry and Fold - up to 5kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
-"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
-Dry and Fold Only (up to 5kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
-Dry and Fold Only (up to 10kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 Initial charge,Passenger transport by taxi and hired car with driver,https://www.max7taxi.com/?mod=info&show=excursions,TRANSPORT,Max 7 Taxi
 Fare per Km,Passenger transport by taxi and hired car with driver,https://www.max7taxi.com/?mod=info&show=excursions,TRANSPORT,Max 7 Taxi
 Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,https://www.publictransport.com.cy/cms/page/cash-tickets,TRANSPORT,Cyprus Transport
