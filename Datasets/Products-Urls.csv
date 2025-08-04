@@ -12,6 +12,15 @@ Name,Subclass,Url,Division,Retailer
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+nicosia-limassol-limassol-nicosia,Passenger transport by bus and coach,nicosia-limassol-limassol-nicosia/,TRANSPORT,Intercity Buses
+larnaca-nicosia-nicosia-larnaca,Passenger transport by bus and coach,larnaca-nicosia-nicosia-larnaca/,TRANSPORT,Intercity Buses
+nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia,Passenger transport by bus and coach,nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,TRANSPORT,Intercity Buses
+nicosia-paphos-paphos-nicosia,Passenger transport by bus and coach,nicosia-paphos-paphos-nicosia/,TRANSPORT,Intercity Buses
+larnaca-limassol-limassol-larnaca,Passenger transport by bus and coach,larnaca-limassol-limassol-larnaca/,TRANSPORT,Intercity Buses
+larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca,Passenger transport by bus and coach,larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,TRANSPORT,Intercity Buses
+limassol-paphos-paphos-limassol,Passenger transport by bus and coach,limassol-paphos-paphos-limassol/,TRANSPORT,Intercity Buses
+paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni,Passenger transport by bus and coach,paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,TRANSPORT,Intercity Buses
+larnaca-limassol-paphos-paphos-limassol-larnaca,Passenger transport by bus and coach,larnaca-limassol-paphos-paphos-limassol-larnaca/,TRANSPORT,Intercity Buses
 "Wash, Dry and Fold - up to 5kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 "Wash, Dry and Fold - up to 10kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 Dry and Fold Only (up to 5kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
@@ -1604,15 +1613,6 @@ Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τ�
 Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,https://www.akentia.com/yal-fresh-yaluronico-ygro-fakon-epafis-380ml,HEALTH,LensesCY
 YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,https://www.akentia.com/alcon-dailies-total-1-multifocal-imerisioi-30tmx-2,HEALTH,LensesCY
 Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,https://www.akentia.com/biotrue-one-day-30-fakoi,HEALTH,LensesCY
-nicosia-limassol-limassol-nicosia,Passenger transport by bus and coach,nicosia-limassol-limassol-nicosia/,TRANSPORT,Intercity Buses
-larnaca-nicosia-nicosia-larnaca,Passenger transport by bus and coach,larnaca-nicosia-nicosia-larnaca/,TRANSPORT,Intercity Buses
-nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia,Passenger transport by bus and coach,nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,TRANSPORT,Intercity Buses
-nicosia-paphos-paphos-nicosia,Passenger transport by bus and coach,nicosia-paphos-paphos-nicosia/,TRANSPORT,Intercity Buses
-larnaca-limassol-limassol-larnaca,Passenger transport by bus and coach,larnaca-limassol-limassol-larnaca/,TRANSPORT,Intercity Buses
-larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca,Passenger transport by bus and coach,larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,TRANSPORT,Intercity Buses
-limassol-paphos-paphos-limassol,Passenger transport by bus and coach,limassol-paphos-paphos-limassol/,TRANSPORT,Intercity Buses
-paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni,Passenger transport by bus and coach,paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,TRANSPORT,Intercity Buses
-larnaca-limassol-paphos-paphos-limassol-larnaca,Passenger transport by bus and coach,larnaca-limassol-paphos-paphos-limassol-larnaca/,TRANSPORT,Intercity Buses
 Elisa – Ασημένιο Μενταγιόν Σταυρός (925),Jewellery,https://evdokiajewellery.com/product/elisa-%ce%b1%cf%83%ce%b7%ce%bc%ce%ad%ce%bd%ce%b9%ce%bf-%ce%bc%ce%b5%ce%bd%cf%84%ce%b1%ce%b3%ce%b9%cf%8c%ce%bd-%cf%83%cf%84%ce%b1%cf%85%cf%81%cf%8c%cf%82-925,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
 Stainless Steel Σταυρός,Jewellery,https://evdokiajewellery.com/product/stainless-steel-%cf%83%cf%84%ce%b1%cf%85%cf%81%cf%8c%cf%82-2,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
 Ανδρικό Βραχιόλι,Jewellery,https://evdokiajewellery.com/product/%ce%b1%ce%bd%ce%b4%cf%81%ce%b9%ce%ba%cf%8c-%ce%b2%cf%81%ce%b1%cf%87%ce%b9%cf%8c%ce%bb%ce%b9-4,MISCELLANEOUS GOODS AND SERVICES,Evdokia Jewellery
