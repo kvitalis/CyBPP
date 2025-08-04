@@ -1338,15 +1338,16 @@ def results_primetel(u):
     
     else:
         # Bundled telecommunication services	
-        if (name_=="GIGA Unlimited")|(name_=="GIGA Unlimited Plus")|(name_=="GIGA Unlimited MAX"):
+        if (name_=="GIGA Unlimited")|(name_=="GIGA Unlimited 5G")|(name_=="GIGA Unlimited 5G MAX"):
             
-            element_ = soup.find_all('div',{"class":"price_plan_box"})
+            element_ = soup.find_all('p',{"class":"price"})
             
             if name_ == "GIGA Unlimited" :
                 text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
                 pattern = r"(\d+\.\d+)"
                 match = re.search(pattern, text)
-                price_ = match.group(1) 
+                price_ = match.group(1)
+                print(price_)
                 
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
