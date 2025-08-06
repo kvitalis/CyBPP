@@ -2386,9 +2386,12 @@ def results_lensescy(u):
 
 def results_intercity_buses(u):
     
-    url_new = "https://intercity-buses.com/en/routes/" + str(Item_url_)
+    url_new = "https://intercity-buses.com/en/routes/" + Item_url_
+    
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(url_new, {'headers':header})
+    #response = requests.get(url_new, {'headers':header})
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers':header})
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -2403,11 +2406,11 @@ def results_intercity_buses(u):
         table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
         if table_:
             element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
-            for ii in range(0,2):
+            for i in range(0,2):
                 new_row = []
-                if ii%2 == 0:
-                    ticket_name_ = element_[ii].text.replace(" ","").replace("\n","").replace("\t","")
-                    price_ = element_[ii+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
+                if i%2 == 0:
+                    ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
+                    price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
                     if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
                         pass
                     else:
