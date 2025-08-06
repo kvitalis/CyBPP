@@ -2411,11 +2411,19 @@ def results_lensescy(u):
 def results_intercity_buses(u):
     
     url_new = "https://intercity-buses.com/en/routes/" + Item_url_
-    response = requests.get(url_new)
+
+    ## without headers
+    #response = requests.get(url_new)
     
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## with headers
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    
+    # way 1
     #response = requests.get(url_new, {'headers':header})
-    
+    # way 2
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers':header})
+        
     if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
