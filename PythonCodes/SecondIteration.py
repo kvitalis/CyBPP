@@ -1322,7 +1322,6 @@ def results_numbeo(u):
 
 def results_primetel(u):
     
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -1335,7 +1334,6 @@ def results_primetel(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
     else:
         # Bundled telecommunication services	
         if (name_=="GIGA Unlimited") | (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
@@ -1395,7 +1393,7 @@ def results_primetel(u):
                 
             if name_ == "Calls to other providers landline" :
                     price_ = element_td[9].text.replace("\n","").replace(" ","").replace("€","").replace("/minute","")
-                    
+                    print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1407,7 +1405,7 @@ def results_primetel(u):
                     
             if name_ == "Calls to other providers mobile" :
                     price_ = element_td[11].text.replace("\n","").replace(" ","").replace("€","").replace("/minute.Minimumcharge1minute","")        
-                    
+                    print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1423,11 +1421,11 @@ def results_primetel(u):
             element_ = soup.find_all("div",{"class":"price_tv_pack"})
                 
             if name_ == "Fiber Family & 200Mbps" :
-                    text_4 = element_[4].text
-                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_4)
+                    text_3 = element_[3].text
+                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_3)
                     if match:
                         price_ = match.group(1)   
-                    
+                    print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1438,11 +1436,11 @@ def results_primetel(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
             
             if name_ == "Fiber Entertainment & 200Mbps" :
-                    text_5 = element_[5].text
-                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_5)
+                    text_4 = element_[4].text
+                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_4)
                     if match:
                         price_ = match.group(1)
-                    
+                    print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1454,7 +1452,6 @@ def results_primetel(u):
                 
 def results_rio(u):
     
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -1735,7 +1732,6 @@ def results_vasos(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, {'headers':header}, verify=False)
-    soup = BeautifulSoup(response.content, "html.parser")
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1746,8 +1742,9 @@ def results_vasos(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_name = soup.find_all('p',{"class":"slider-text3"})
-        price_=element_name[0].text.replace("\n","").replace(" ","")
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('p', {"class":"slider-text3"})
+        price_ = element_name[0].text.replace("\n","").replace(" ","")
         price_ = ''.join(filter(str.isdigit, price_))
         price_ = float(price_) / 100
         
