@@ -1316,12 +1316,11 @@ def results_novella(u):
 
 def results_numbeo(u):
     
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
 
-    if ("Status code: 404" in soup.text)or(response.status_code !=200):
+    if ("Status code: 404" in soup.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -1330,12 +1329,12 @@ def results_numbeo(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all('tr',{"class":"tr_standard"})
-        for o in range(0,len(element_soup)):
-            ken=element_soup[o].text.replace("\n","").replace(" ","")
+        element_soup = soup.find_all('tr', {"class":"tr_standard"})
+        for o in range(0, len(element_soup)):
+            ken = element_soup[o].text.replace("\n","").replace(" ","")
             if "Cyprus" in ken:
                 result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
-                price_=round((float(result)/1.08),2)
+                price_ = round((float(result)/1.08),2)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1735,7 +1734,7 @@ def results_wolt(u):
         
         if element_name:
             price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
-            
+            print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_))
@@ -1768,8 +1767,8 @@ def results_vasos(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_name = soup.find_all('p',{"class":"slider-text3"})
-        price_=element_name[0].text.replace("\n","").replace(" ","")
+        element_name = soup.find_all('p', {"class":"slider-text3"})
+        price_ = element_name[0].text.replace("\n","").replace(" ","")
         price_ = ''.join(filter(str.isdigit, price_))
         price_ = float(price_) / 100
         
