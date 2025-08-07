@@ -3158,8 +3158,8 @@ for u in range(0, len(urls)):
         results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
-    elif retailer_=="Intercity Buses":
-        results_intercity_buses(u)  
+    #elif retailer_=="Intercity Buses":
+    #    results_intercity_buses(u)  
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
