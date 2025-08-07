@@ -3071,7 +3071,7 @@ for u in range(0, len(urls)):
     #elif retailer_=="Stephanis":
         results_stephanis(u)
     elif retailer_=="Public":
-    #    results_public(u)
+        results_public(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
