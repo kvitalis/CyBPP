@@ -110,37 +110,39 @@ According to the representativeness of each product and its retailer within the 
 
 40. Primetel https://primetel.com.cy/en
 
-41. Pyxida Fish Tavern https://pyxidafishtavern.com/
+41. Public https://www.public.cy/ 
 
-42. Rio Cinemas http://www.riocinemas.com.cy/ 
+42. Pyxida Fish Tavern https://pyxidafishtavern.com/
 
-43. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
+43. Rio Cinemas http://www.riocinemas.com.cy/ 
 
-44. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
+44. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
 
-45. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
+45. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
 
-46. Stephanis https://www.stephanis.com.cy/en
+46. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
 
-47. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/ 
+47. Stephanis https://www.stephanis.com.cy/en
 
-48. SupermarketCy https://www.supermarketcy.com.cy/ 
+48. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/ 
 
-49. The CYgar Shop https://www.thecygarshop.com/ 
+49. SupermarketCy https://www.supermarketcy.com.cy/ 
 
-50. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
+50. The CYgar Shop https://www.thecygarshop.com/ 
 
-51. Toyota https://www.toyota.com.cy/
+51. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
 
-52. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
+52. Toyota https://www.toyota.com.cy/
 
-53. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
+53. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
 
-54. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
+54. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
+
+55. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
     
-55. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
+56. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
 
-56. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
+57. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
 ## GitHub Actions
 
