@@ -1558,7 +1558,7 @@ def results_AHK(u):
             page = pdf_reader.pages[2]
             text = page.extract_text()
     '''
-    pdf_AHK = "PDFs/AHK_Nov2024.pdf"
+    pdf_AHK = "PDFs/AHK_Jul2025.pdf"
     
     with open(pdf_AHK, "rb") as f:
         pdf_reader = pypdf.PdfReader(f)
