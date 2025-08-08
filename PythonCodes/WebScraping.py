@@ -2035,49 +2035,88 @@ def results_sewerage(u):
             for lines in desired_lines:
                 values = float(lines.replace(",","."))
     
-    if "Larnaca" in retailer_:
-        city_ = "Larnaca"
-        new_row = []
-        """
+     if "Larnaca" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('table',{"width":"649"})
-        element_name_2 = element_name[0].find_all('tr')
-        element_name_2=element_name_2[len(element_name_2)-2]
-
-        if "Ετήσιο Τέλος" in name_:
-            desired_lines = [element_name_2.find_all('td')[2].get_text(),element_name_2.find_all('td')[4].get_text(),element_name_2.find_all('td')[6].get_text()]
-
-            for lines in desired_lines:
-                value=float(lines.replace(",","."))
-                values=value+values
-
-            values=values/3
-
-        elif "Τέλος Χρήσης" in name_:
-            desired_lines = [element_name_2.find_all('td')[8].get_text()]
-            for lines in desired_lines:
-                values=float(lines.replace(",","."))
-        """
-    if values != 0:
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_ + " " + city_)
-        new_row.append(values)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Sewerage Board of "+ city_)
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
+        new_row = []
+        city_ = "Larnaca"
+        
+        if "Ετήσιο Τέλος" in name_:  
+            number_2=[]
+            sum_=0
+            count_12=0
+            list_target_place=["ΛΑΡΝΑΚΑ","ΛΕΙΒΑΔΙΑ","ΟΡΟΚΛΙΝΗ","ΠΥΛΑ","ΑΡΑΔΙΠΠΟΥ","ΚΙΤΙ","ΔΡΟΜΟΛΑΓΙΑ","ΜΕΝΕΟΥ","ΠΕΡΒΟΛΙΑ","ΤΕΡΣΕΦΑΝΟΥ","ΑΓΙΟΙ ΒΑΒΑΤΣΙΝΙΑΣ","ΑΘΗΕΝΟΥ""ΑΓΓΛΙΣΙΔΕΣ","ΞΥΛΟΦΑΓΟΥ","ΞΥΛΟΤΥΜΠΟΥ","ΟΡΜΗΔΕΙΑ"]
+            for kk in range(0,len(list_target_place)):
+                target_cell = soup.find(string=str(list_target_place[kk]))
+                if target_cell:
+                    tr = target_cell.find_parent("tr")
+                    numbers = []
+                    current_tr = tr
+                    while len(numbers) < 4: ###to lenght na einai megalitero apo oles tis times tou pinaka, grammes==16 kai stiles==4
+                        tds = current_tr.find_all("td")
+                        for td in tds:  #Grafoume oles tis times tis grammis
+                            text = td.get_text(strip=True).replace(',', '.')
+                            if re.match(r'^\d+(\.\d+)?$', text):
+                                numbers.append(float(text))     
+                    number_2.append(numbers[2])
+            
+            number_2 = list(set(number_2))
+            for o in number_2:
+                print(o)
+                sum_+=o
+                count_12+=1
+            
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(ticket_name_ + Item_url_)
+            new_row.append(float(sum_/count_12))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("")
+            list_.loc[len(list_)] = new_row
+ 
+        if "Τέλος Χρήσης" in name_:
+            new_row = []
+            target_cell = soup.find(string="ΛΑΡΝΑΚΑ")
+            if target_cell:
+                tr = target_cell.find_parent("tr")
+                numbers = []
+                current_tr = tr
+                while len(numbers) < (4*16) + 1: ###to lenght na einai megalitero apo oles tis times tou pinaka, grammes==16 kai stiles==4
+                    tds = current_tr.find_all("td")
+                    if tds and tds[0].get_text(strip=True) == "ΛΑΡΝΑΚΑ": #testaroume an einai i proti grammi tis larnakas
+                        tds = tds[1:]
+                
+                    for td in tds:  #Grafoume oles tis times tis grammis
+                        text = td.get_text(strip=True).replace(',', '.')
+                        if re.match(r'^\d+(\.\d+)?$', text):
+                            numbers.append(float(text))
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(division_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+            
+            if numbers[3]:
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(ticket_name_ + Item_url_)
+                new_row.append(float(numbers[3]))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("")
+                list_.loc[len(list_)] = new_row
+                
+            else:
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(division_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 '''
 def results_toyota(u):
     
