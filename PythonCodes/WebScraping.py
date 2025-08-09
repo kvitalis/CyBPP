@@ -2066,7 +2066,7 @@ def results_sewerage(u):
                 count_12+=1
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(ticket_name_ + Item_url_)
+            new_row.append(Item_url_)
             new_row.append(float(sum_/count_12))
             new_row.append(subclass_)
             new_row.append(division_)
