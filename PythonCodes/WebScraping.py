@@ -2040,7 +2040,7 @@ def results_sewerage(u):
         new_row = []
         city_ = "Larnaca"
         
-        if "Ετήσιο Τέλος" in name_:  
+        if "Ετήσιο Τέλος" in name_: 
             number_2=[]
             sum_=0
             count_12=0
