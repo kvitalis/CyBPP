@@ -1644,11 +1644,12 @@ def results_water(u):
             match = re.search(pattern, text)
             if match:
                 price_ = match.group(1)
-                price_ = float((price_).replace(",","."))/2
+                price_ = float((price_).replace(",","."))/2 #per month
         
         if name_ == "Κυβικά ανά μήνα":
             element = soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
             price_ = element[0].text.replace(",",".")
+            price_ = price_/2 #per month
             
     if "Larnaca" in retailer_:
         city_ = "Larnaca"
@@ -1665,17 +1666,18 @@ def results_water(u):
         if name_ == "Πάγιο ανά μήνα":
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
-                price_ = float(price_1)/3
+                price_ = float(price_1)/3 #per month
         
         if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_2 = element_2.group(1).replace(",",".")
-                price_ = float(price_2)/3
+                price_ = float(price_2)/3 #per month
         
         if name_ == "Κυβικά ανά μήνα":
             if element_3:
                 price_3 = element_3.group(1).replace(",",".")
                 price_ = round(float(price_3),2)
+                price_ = price_/3 #per month
     
     if "Limassol" in retailer_:
         city_ = "Limassol"
@@ -1687,18 +1689,19 @@ def results_water(u):
             element = soup.find_all("div",{"class":"acd-des"})
             element_1 = element[2].find_all("td")
             price_1 = element_1[3].text.replace("\n","").replace(",",".")
-            price_ = float(price_1)/4
+            price_ = float(price_1)/4 #per month
         
         if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
             element = soup.find_all("div",{"class":"acd-des"})
             element_1 = element[2].find_all("td")
             price_1 = element_1[5].text.replace("\n","").replace(",",".")
-            price_ = float(price_1)/4
+            price_ = float(price_1)/4 #per month
         
         if name_ == "Κυβικά ανά μήνα":
             element = soup.find_all("div",{"class":"acd-des"})
             element_1 = element[2].find_all("td")
             price_ = element_1[11].text.replace("\n","").replace(",",".")
+            price_ = price_/4 #per month
     
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
