@@ -323,12 +323,16 @@ def results_ikea(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     '''
     ## 1st way (without header)
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs)  
     
     ## 2nd (with header) 
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #response = requests.get(Item_url_, headers=header)
+    # 1
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers=header)
+    # 2
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
 
     if (response.status_code != 200) :
         website_false.append(name_)
