@@ -3056,7 +3056,7 @@ def results_public(u):
     #response = requests.get(bs)
 
     ## 2 
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
     
     ### with headers 
     
@@ -3065,8 +3065,8 @@ def results_public(u):
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
     ## 1 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
 
     ## 2 
     #response = requests.get(Item_url_, headers = header) 
