@@ -1985,7 +1985,16 @@ def results_sewerage(u):
                 if match:
                     value = float(match.group(1).replace(",","."))
                     values = value + values
+            
             values = values / 3
+            
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(Item_url_)
+            new_row.append(float(values))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Sewerage Board of Nicosia")
+            list_.loc[len(list_)] = new_row
         
         if "Τέλος Χρήσης" in name_:
             element_ = soup.find_all("div",{"class":"elementor-element elementor-element-dbb217e elementor-widget elementor-widget-text-editor"})
@@ -1995,6 +2004,14 @@ def results_sewerage(u):
                 match = re.search(r'(\d+)', price_amount)
                 if match:
                     values = float(match.group(1)) / 100
+                
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(Item_url_)
+                new_row.append(float(values))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Sewerage Board of Nicosia")
+                list_.loc[len(list_)] = new_row
                       
     if "Limassol" in retailer_:
         city_ = "Limassol"
@@ -2023,6 +2040,14 @@ def results_sewerage(u):
                     values = value + values
                 
                 values = values / 2
+                
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(Item_url_)
+                new_row.append(float(values))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Sewerage Board of Limassol")
+                list_.loc[len(list_)] = new_row
             
         if "Τέλος Χρήσης" in name_:
             element_name = soup.find_all('table',{"class":"table table-striped"})
@@ -2032,6 +2057,14 @@ def results_sewerage(u):
                 
             for lines in desired_lines:
                 values = float(lines.replace(",","."))
+            
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(Item_url_)
+            new_row.append(float(values))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Sewerage Board of Limassol")
+            list_.loc[len(list_)] = new_row
                 
     if "Larnaca" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2070,7 +2103,7 @@ def results_sewerage(u):
             new_row.append(float(sum_/count_12))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("")
+            new_row.append("Sewerage Board of Larnaca")
             list_.loc[len(list_)] = new_row
  
         if "Τέλος Χρήσης" in name_:
@@ -2104,7 +2137,7 @@ def results_sewerage(u):
                 new_row.append(float(numbers[3]))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("")
+                new_row.append("Sewerage Board of Larnaca")
                 list_.loc[len(list_)] = new_row
                 
             else:
