@@ -2100,7 +2100,7 @@ def results_sewerage(u):
             
             if numbers[3]:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(ticket_name_ + Item_url_)
+                new_row.append( Item_url_)
                 new_row.append(float(numbers[3]))
                 new_row.append(subclass_)
                 new_row.append(division_)
