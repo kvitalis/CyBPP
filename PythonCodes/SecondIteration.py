@@ -2992,7 +2992,7 @@ def results_pagkratios(u):
     if response.status_code == 200:
         
         soup = BeautifulSoup(response.content, "html.parser")
-        elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        elemenet_2 = soup.find_all("span", {"class":"woocommerce-Price-amount amount"})
         price_ = elemenet_2[1].text.replace("€","")
         print(price_)
         
@@ -3049,8 +3049,12 @@ def results_christos_grill_seafood(u):
 
 def results_public(u):
         
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    response = requests.get(Item_url_, headers = header)
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    #header2 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #response = requests.get(Item_url_, headers = header)
     
     if (response.status_code != 200) : 
         website_false.append(name_)
