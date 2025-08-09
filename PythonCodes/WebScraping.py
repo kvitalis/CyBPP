@@ -1645,7 +1645,7 @@ def results_water(u):
         if name_ == "Κυβικά ανά μήνα":
             element = soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
             price_ = element[0].text.replace(",",".")
-    
+            
     if "Larnaca" in retailer_:
         city_ = "Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1968,9 +1968,7 @@ def results_pydixa(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
-    
     values=0
-    
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -2034,8 +2032,8 @@ def results_sewerage(u):
                 
             for lines in desired_lines:
                 values = float(lines.replace(",","."))
-    
-     if "Larnaca" in retailer_:
+                
+    if "Larnaca" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
