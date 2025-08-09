@@ -3074,8 +3074,27 @@ def results_christos_grill_seafood(u):
 
 def results_public(u):
         
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    response = requests.get(Item_url_, headers = header)
+    ###  without headers 
+    
+    ## 1 
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+
+    ## 2 
+    #response = requests.get(Item_url_)
+    
+    ### with headers 
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+
+    ## 2 
+    #response = requests.get(Item_url_, headers = header) 
     
     if (response.status_code != 200) : 
         website_false.append(name_)
@@ -3140,8 +3159,8 @@ for u in range(0, len(urls)):
         results_ikea(u)
     #elif retailer_=="Stephanis":
         results_stephanis(u)
-    elif retailer_=="Public":
-        results_public(u)
+    #elif retailer_=="Public":
+    #    results_public(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
