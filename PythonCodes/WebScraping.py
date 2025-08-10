@@ -1712,7 +1712,7 @@ def results_water(u):
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Water Board")
+        new_row.append("Water Board of " + city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
@@ -1978,7 +1978,9 @@ def results_pydixa(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_sewerage(u):
-    values=0
+    
+    values = 0
+    
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -1995,15 +1997,15 @@ def results_sewerage(u):
                 if match:
                     value = float(match.group(1).replace(",","."))
                     values = value + values
-            
             values = values / 3
+            print(values)
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(Item_url_)
+            new_row.append(name_ + " - " + city_)
             new_row.append(float(values))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of Nicosia")
+            new_row.append("Sewerage Board of " + city_)
             list_.loc[len(list_)] = new_row
         
         if "Τέλος Χρήσης" in name_:
@@ -2014,13 +2016,14 @@ def results_sewerage(u):
                 match = re.search(r'(\d+)', price_amount)
                 if match:
                     values = float(match.group(1)) / 100
+                print(values)
                 
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(Item_url_)
+                new_row.append(name_ + " - " + city_)
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of Nicosia")
+                new_row.append("Sewerage Board of " + city_)
                 list_.loc[len(list_)] = new_row
                       
     if "Limassol" in retailer_:
@@ -2042,38 +2045,39 @@ def results_sewerage(u):
             else:
                 element_name = soup.find_all('table',{"class":"table table-striped"})
                 element_name_2 = element_name[0].find_all('tr')
-                element_name_2 = element_name_2[len(element_name_2)-1]
+                element_name_2 = element_name_2[len(element_name_2) - 1]
                 desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
 
                 for lines in desired_lines:
                     value = float(lines.replace(",","."))
                     values = value + values
-                
                 values = values / 2
+                print(values)
                 
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(Item_url_)
+                new_row.append(name_ + " - " + city_)
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of Limassol")
+                new_row.append("Sewerage Board of " + city_)
                 list_.loc[len(list_)] = new_row
             
         if "Τέλος Χρήσης" in name_:
             element_name = soup.find_all('table',{"class":"table table-striped"})
             element_name_2 = element_name[1].find_all('tr')
-            element_name_2 = element_name_2[len(element_name_2)-1]
+            element_name_2 = element_name_2[len(element_name_2) - 1]
             desired_lines = [element_name_2.find_all('td')[1].get_text()]
                 
             for lines in desired_lines:
                 values = float(lines.replace(",","."))
+            print(values)
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(Item_url_)
+            new_row.append(name_ + " - " + city_)
             new_row.append(float(values))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of Limassol")
+            new_row.append("Sewerage Board of " + city_)
             list_.loc[len(list_)] = new_row
                 
     if "Larnaca" in retailer_:
@@ -2084,12 +2088,12 @@ def results_sewerage(u):
         city_ = "Larnaca"
         
         if "Ετήσιο Τέλος" in name_: 
-            number_2=[]
-            sum_=0
-            count_12=0
-            list_target_place=["ΛΑΡΝΑΚΑ","ΛΕΙΒΑΔΙΑ","ΟΡΟΚΛΙΝΗ","ΠΥΛΑ","ΑΡΑΔΙΠΠΟΥ","ΚΙΤΙ","ΔΡΟΜΟΛΑΓΙΑ","ΜΕΝΕΟΥ","ΠΕΡΒΟΛΙΑ","ΤΕΡΣΕΦΑΝΟΥ","ΑΓΙΟΙ ΒΑΒΑΤΣΙΝΙΑΣ","ΑΘΗΕΝΟΥ""ΑΓΓΛΙΣΙΔΕΣ","ΞΥΛΟΦΑΓΟΥ","ΞΥΛΟΤΥΜΠΟΥ","ΟΡΜΗΔΕΙΑ"]
-            for kk in range(0,len(list_target_place)):
-                target_cell = soup.find(string=str(list_target_place[kk]))
+            number_2 = []
+            sum_ = 0
+            count_12 = 0
+            list_target_place = ["ΛΑΡΝΑΚΑ","ΛΕΙΒΑΔΙΑ","ΟΡΟΚΛΙΝΗ","ΠΥΛΑ","ΑΡΑΔΙΠΠΟΥ","ΚΙΤΙ","ΔΡΟΜΟΛΑΓΙΑ","ΜΕΝΕΟΥ","ΠΕΡΒΟΛΙΑ","ΤΕΡΣΕΦΑΝΟΥ","ΑΓΙΟΙ ΒΑΒΑΤΣΙΝΙΑΣ","ΑΘΗΕΝΟΥ""ΑΓΓΛΙΣΙΔΕΣ","ΞΥΛΟΦΑΓΟΥ","ΞΥΛΟΤΥΜΠΟΥ","ΟΡΜΗΔΕΙΑ"]
+            for kk in range(0, len(list_target_place)):
+                target_cell = soup.find(string = str(list_target_place[kk]))
                 if target_cell:
                     tr = target_cell.find_parent("tr")
                     numbers = []
@@ -2101,19 +2105,19 @@ def results_sewerage(u):
                             if re.match(r'^\d+(\.\d+)?$', text):
                                 numbers.append(float(text))     
                     number_2.append(numbers[2])
-            
             number_2 = list(set(number_2))
             for o in number_2:
                 print(o)
-                sum_+=o
-                count_12+=1
+                sum_ += o
+                count_12 += 1
+            print(float(sum_/count_12))
             
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(Item_url_)
+            new_row.append(name_ + " - " + city_)
             new_row.append(float(sum_/count_12))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of Larnaca")
+            new_row.append("Sewerage Board of " + city_)
             list_.loc[len(list_)] = new_row
  
         if "Τέλος Χρήσης" in name_:
@@ -2127,7 +2131,6 @@ def results_sewerage(u):
                     tds = current_tr.find_all("td")
                     if tds and tds[0].get_text(strip=True) == "ΛΑΡΝΑΚΑ": #testaroume an einai i proti grammi tis larnakas
                         tds = tds[1:]
-                
                     for td in tds:  #Grafoume oles tis times tis grammis
                         text = td.get_text(strip=True).replace(',', '.')
                         if re.match(r'^\d+(\.\d+)?$', text):
@@ -2142,12 +2145,13 @@ def results_sewerage(u):
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
             
             if numbers[3]:
+                print(float(numbers[3]))
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append( Item_url_)
+                new_row.append(name_ + " - " + city_)
                 new_row.append(float(numbers[3]))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of Larnaca")
+                new_row.append("Sewerage Board of " + city_)
                 list_.loc[len(list_)] = new_row
                 
             else:
