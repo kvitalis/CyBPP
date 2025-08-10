@@ -36,9 +36,9 @@ weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
 index_ = pd.read_csv("Datasets/Reference-Values.csv")
 
 # DIVISION CPI
-row_data_today = raw_data[raw_data["Date"]==today]
-row_data_1 = row_data_today[["Subclass","Price"]]
-group = row_data_1.groupby("Subclass").mean()
+raw_data_today = raw_data[raw_data["Date"]==today]
+raw_data_1 = raw_data_today[["Subclass","Price"]]
+group = raw_data_1.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
@@ -48,7 +48,7 @@ group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into
 group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
 
 #Electricity
-electricity = row_data_today[row_data_today["Subclass"]=="Electricity"]
+electricity = raw_data_today[raw_data_today["Subclass"]=="Electricity"]
 ele_price_ = electricity["Price"].sum()
 new_row = []
 new_row.append("Electricity")
@@ -57,7 +57,7 @@ group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Water supply
-waterboard = row_data_today[row_data_today["Subclass"]=="Water supply"]
+waterboard = raw_data_today[raw_data_today["Subclass"]=="Water supply"]
 
 larnaca_ = 0
 larnaca_count = 0
@@ -85,7 +85,7 @@ group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Sewage collection
-sewagecollection = row_data_today[row_data_today["Subclass"]=="Sewage collection"]
+sewagecollection = raw_data_today[raw_data_today["Subclass"]=="Sewage collection"]
 
 larnaca_ = 0
 larnaca_count = 0
@@ -319,9 +319,9 @@ while today_p <= end_date:
     index_ = pd.read_csv("Datasets/Reference-Values.csv")
     
     # DIVISION CPI:
-    row_data_today = raw_data[raw_data["Date"]==today_p]
-    row_data_1 = row_data_today[["Subclass","Price"]]
-    group = row_data_1.groupby("Subclass").mean()
+    raw_data_today = raw_data[raw_data["Date"]==today_p]
+    raw_data_1 = raw_data_today[["Subclass","Price"]]
+    group = raw_data_1.groupby("Subclass").mean()
     group.reset_index(inplace=True)
     group_df = pd.DataFrame(group)
     
@@ -331,7 +331,7 @@ while today_p <= end_date:
     group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
     
     #Electricity
-    electricity = row_data_today[row_data_today["Subclass"] == "Electricity"]
+    electricity = raw_data_today[raw_data_today["Subclass"] == "Electricity"]
     ele_price_ = electricity["Price"].sum()
     new_row = []
     new_row.append("Electricity")
@@ -340,7 +340,7 @@ while today_p <= end_date:
     group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
     
     #Water supply
-    waterboard = row_data_today[row_data_today["Subclass"] == "Water supply"]
+    waterboard = raw_data_today[raw_data_today["Subclass"] == "Water supply"]
     
     larnaca_ = 0
     larnaca_count = 0
@@ -368,7 +368,7 @@ while today_p <= end_date:
     group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
     
     #Sewage collection
-    sewagecollection = row_data_today[row_data_today["Subclass"] == "Sewage collection"]
+    sewagecollection = raw_data_today[raw_data_today["Subclass"] == "Sewage collection"]
     
     larnaca_ = 0
     larnaca_count = 0
