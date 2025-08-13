@@ -324,13 +324,13 @@ def results_ikea(u):
     '''
     ## without header
     # 1
-    response = requests.get(Item_url_)
+    #response = requests.get(Item_url_)
     # 2
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs)  
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)  
     
     ## with header
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     # 1
     #response = requests.get(Item_url_, headers=header)
     # 2
@@ -347,6 +347,30 @@ def results_ikea(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
         
     else:
+        if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
+            soup = BeautifulSoup(response.content, "html.parser")
+            #soup = BeautifulSoup(response.text, "html.parser")
+            element_soup = soup.find_all("span",{"class":"price__sr-text"})
+            price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace("Αρχική τιμή € ","").replace(",",".")
+            print(price_)
+                
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("IKEA")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x) 
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
+        '''
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
         element_soup = soup.find_all("span",{"class":"price__sr-text"})
@@ -361,7 +385,8 @@ def results_ikea(u):
         new_row.append("IKEA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x) 
-
+        '''
+        
 def results_stephanis(u):
 
     ## with headers 
