@@ -7,7 +7,7 @@ openpyxl==3.1.2
 xlsxWriter==3.2.0
 ##############
 #PyPDF2==3.0.1
-pypdf==3.9.0
+pypdf==6.0.0
 ##############
 tabula-py==2.9.0
 matplotlib==3.8.3
