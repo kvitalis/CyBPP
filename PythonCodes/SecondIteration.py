@@ -1010,7 +1010,7 @@ def results_ewholesale(u):
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     
-    if response.status_code !=200:
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -1018,11 +1018,10 @@ def results_ewholesale(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
-    
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div",{"class":"hM4gpp"}) 
-        price_= element_soup[0].text.replace("€Τιμή","").replace(" ","").replace(",",".").replace("€","")
+        price_= element_soup[0].text.replace(",",".").replace(" ","").replace("€","").replace("Τιμή","")
         print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
