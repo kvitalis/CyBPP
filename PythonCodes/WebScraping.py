@@ -337,18 +337,10 @@ def results_ikea(u):
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
 
-    if (response.status_code != 200) :
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
+    if response.status_code == 200 :
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find_all("span",{"class":"price__sr-text"})
+        element_soup = soup.find_all("span", {"class":"price__sr-text"})
         price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace(",",".")
         print(price_)  
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -359,7 +351,15 @@ def results_ikea(u):
         new_row.append("IKEA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x) 
-        
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+             
 def results_stephanis(u):
 
     ## with headers 
@@ -392,7 +392,7 @@ def results_stephanis(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")    
-        element_soup = soup.find_all("div",{"class":"listing-details-heading"})
+        element_soup = soup.find_all("div", {"class":"listing-details-heading"})
         if (len(element_soup) < 2):
             element_soup = element_soup[0]
         else:
