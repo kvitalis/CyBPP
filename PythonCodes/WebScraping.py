@@ -342,7 +342,7 @@ def results_ikea(u):
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
         element_soup = soup.find_all("span", {"class":"price__sr-text"})
-        price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace(",",".")
+        price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace(",",".").replace("Αρχική τιμή € ","")
         print(price_)
                 
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
