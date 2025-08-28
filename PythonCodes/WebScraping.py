@@ -1637,49 +1637,42 @@ def results_water(u):
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        
+        element = soup.find_all("table", {"width":"992"})
+        text = element[0].get_text()
+        prices = re.findall(r'€\s*(\d+,\d{2})', text)
+
         if name_ == "Πάγιο ανά μήνα":
-            element = soup.find_all("div",{"id":"ekit-table-container-9f0855a_wrapper"})
-            pattern = r"Πάγιο(\d{2},\d{2})"
-            text = element[0].get_text()
-            match = re.search(pattern, text)
-            if match:
-                price_1 = match.group(1)
-                price_1 = price_1.replace(",",".")
-                price_ = float(price_1)/2 #per month
-        
+            price_1 = prices[0].replace(",",".")
+            price_ = float(price_1) / 2 #per month
         if name_ == "Κυβικά ανά μήνα":
-            element = soup.find_all("td",{"class":"elementor-repeater-item-93fd68b ekit_table_data_"})
-            price_2 = element[0].text.replace(",",".")
-            price_ = float(price_2)/2 #per month
-            
+            price_2 = prices[4].replace(",",".")
+            price_ = float(price_2) / 2 #per month
+
     if "Larnaca" in retailer_:
         city_ = "Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
         
-        element = soup.find_all("table",{"class":"table-format-left"})
+        element = soup.find_all("table", {"class":"table-format-left"})
         text_ = element[0].text
-        element_1 = re.search(r'Πάγιο(\d+,\d+)',text_)
-        element_2 = re.search(r'Δικαίωμα Συντήρησης(\d+,\d+)',text_)
-        element_3 = re.search(r'1Μέχρι15(\d+,\d+)',text_)
+        element_1 = re.search(r'Πάγιο(\d+,\d+)', text_)
+        element_2 = re.search(r'Δικαίωμα Συντήρησης(\d+,\d+)', text_)
+        element_3 = re.search(r'1Μέχρι15(\d+,\d+)', text_)
         
         if name_ == "Πάγιο ανά μήνα":
             if element_1:
                 price_1 = element_1.group(1).replace(",",".")
-                price_ = float(price_1)/3 #per month
-        
+                price_ = float(price_1) / 3 #per month
         if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
             if element_2:
                 price_2 = element_2.group(1).replace(",",".")
-                price_ = float(price_2)/3 #per month
-        
+                price_ = float(price_2) / 3 #per month
         if name_ == "Κυβικά ανά μήνα":
             if element_3:
                 price_3 = element_3.group(1).replace(",",".")
-                price_ = float(price_3)/3 #per month
-    
+                price_ = float(price_3) / 3 #per month
+
     if "Limassol" in retailer_:
         city_ = "Limassol"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1687,23 +1680,21 @@ def results_water(u):
         soup = BeautifulSoup(response.content, "html.parser")
         
         if name_ == "Πάγιο ανά μήνα":
-            element = soup.find_all("div",{"class":"acd-des"})
+            element = soup.find_all("div", {"class":"acd-des"})
             element_1 = element[2].find_all("td")
             price_1 = element_1[3].text.replace("\n","").replace(",",".")
-            price_ = float(price_1)/4 #per month
-        
+            price_ = float(price_1) / 4 #per month
         if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
-            element = soup.find_all("div",{"class":"acd-des"})
+            element = soup.find_all("div", {"class":"acd-des"})
             element_2 = element[2].find_all("td")
             price_2 = element_2[5].text.replace("\n","").replace(",",".")
-            price_ = float(price_2)/4 #per month
-        
+            price_ = float(price_2) / 4 #per month
         if name_ == "Κυβικά ανά μήνα":
-            element = soup.find_all("div",{"class":"acd-des"})
+            element = soup.find_all("div", {"class":"acd-des"})
             element_3 = element[2].find_all("td")
             price_3 = element_3[11].text.replace("\n","").replace(",",".")
-            price_ = float(price_3)/4 #per month
-    
+            price_ = float(price_3) / 4 #per month
+
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_ + " - " + city_)
