@@ -339,20 +339,28 @@ def results_ikea(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        #soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find_all("span", {"class":"price__sr-text"})
-        price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace(",",".").replace("Αρχική τιμή € ","")
-        print(price_)
-                
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("IKEA")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x) 
+        if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
+            soup = BeautifulSoup(response.content, "html.parser")
+            #soup = BeautifulSoup(response.text, "html.parser")
+            element_soup = soup.find_all("span", {"class":"price__sr-text"})
+            price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace("Αρχική τιμή € ","").replace(",",".")
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("IKEA")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x) 
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
              
 def results_stephanis(u):
 
@@ -1647,7 +1655,6 @@ def results_water(u):
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        
         element = soup.find_all("table", {"class":"table-format-left"})
         text_ = element[0].text
         element_1 = re.search(r'Πάγιο(\d+,\d+)', text_)
@@ -1672,19 +1679,17 @@ def results_water(u):
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
-        
+        element = soup.find_all("div", {"class":"acd-des"})
+
         if name_ == "Πάγιο ανά μήνα":
-            element = soup.find_all("div", {"class":"acd-des"})
             element_1 = element[2].find_all("td")
             price_1 = element_1[3].text.replace("\n","").replace(",",".")
             price_ = float(price_1) / 4 #per month
         if name_ == "Δικαίωμα Συντήρησης ανά μήνα":
-            element = soup.find_all("div", {"class":"acd-des"})
             element_2 = element[2].find_all("td")
             price_2 = element_2[5].text.replace("\n","").replace(",",".")
             price_ = float(price_2) / 4 #per month
         if name_ == "Κυβικά ανά μήνα":
-            element = soup.find_all("div", {"class":"acd-des"})
             element_3 = element[2].find_all("td")
             price_3 = element_3[11].text.replace("\n","").replace(",",".")
             price_ = float(price_3) / 4 #per month
