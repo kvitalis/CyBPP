@@ -136,7 +136,7 @@ According to the representativeness of each product and its retailer within the 
 
 53. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
 
-54. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/pricing/ 
+54. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/ 
 
 55. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
     
