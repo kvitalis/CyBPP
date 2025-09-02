@@ -3146,12 +3146,12 @@ for u in range(0, len(urls)):
         results_costastheodorou(u)
     elif retailer_=="Parga":
         results_parga(u)    
-    ### 02-09-2025 elif retailer_=="Leroy Merlin":
-    ###   results_leroymerlin(u)   
+    elif retailer_=="Leroy Merlin":
+        results_leroymerlin(u)   
     #elif retailer_=="IKEA":
     #    results_ikea(u)
     #elif retailer_=="Stephanis":
-        results_stephanis(u)
+    #    results_stephanis(u)
     #elif retailer_=="Public":
     #    results_public(u)
     elif retailer_=="Electroline":
