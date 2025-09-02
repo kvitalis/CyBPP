@@ -7,9 +7,16 @@ name: visualizations
 run-name: Construct the plots of Inflation and General CPI 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
+#on:
+#  schedule:
+#    - cron: "13 13 * * *" #UTC time
+
 on:
-  schedule:
-    - cron: "13 13 * * *" #UTC time
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - visualizations
+      - visualizations
 
 jobs:
   getdataandrefreshmap:
