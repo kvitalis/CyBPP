@@ -2519,11 +2519,10 @@ def results_parga(u):
         new_row.append("Parga")
         list_.loc[len(list_)] = new_row
 
-def results_evdokia(u):
+def results_evdokia_jewellery(u):
     
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, {'headers':header})
-    soup = BeautifulSoup(response.content, "html.parser")
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers = header)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -2534,10 +2533,11 @@ def results_evdokia(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        price_element = soup.find('p', class_='price')
-        bdi_element = price_element.find('bdi')
-        price_ = bdi_element.text.replace("€","")
-        
+        soup = BeautifulSoup(response.content, "html.parser")
+        price_soup = soup.find('p', class_='price')
+        price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = price_element.text.replace("€","")
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -3149,7 +3149,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Novella":
         results_novella(u) 
     elif retailer_=="Evdokia Jewellery":
-        results_evdokia(u)
+        results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
