@@ -174,7 +174,7 @@ for jj in division_name_:
     plt.xticks(ken_division_["Date"], ken_division_["Date"].dt.strftime("%Y-%m"), rotation=90)
         
     filename = division_name.replace(" ", "_") + "plot_.png"
-    full_path = f"{"CyStat/Offline_Vs_Online"}/{jj}/"
+    full_path = f"CyStat/Offline_Vs_Online/{jj}/"
     path_ = full_path + filename
     plt.savefig(path_, dpi=300)
     plt.show()
