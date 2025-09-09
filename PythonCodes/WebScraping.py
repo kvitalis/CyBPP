@@ -3130,10 +3130,10 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
-    #if retailer_=="METRO":
+    #if retailer_=="SupermarketCy":
+    #    results_supermarketcy(u) 
+    #elif retailer_=="METRO":
     #    results_metro(u)
-    #elif retailer_=="SupermarketCy":
-    #    results_supermarketcy(u)    
     #elif retailer_=="Alphamega":
     #    results_alphamega(u)    
     #elif retailer_=="Cheap Basket":
@@ -3162,8 +3162,8 @@ for u in range(0, len(urls)):
         results_cablenet(u)  
     elif retailer_=="Primetel":
         results_primetel(u)    
-    #elif retailer_=="Epic":
-    #    results_epic(u)
+    elif retailer_=="Epic":
+        results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="Famous Sports":
@@ -3175,7 +3175,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Novella":
         results_novella(u) 
     elif retailer_=="Evdokia Jewellery":
-        results_evdokia(u)
+        results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
