@@ -5,7 +5,7 @@ import matplotlib.dates as mdates
 from datetime import datetime
 from datetime import datetime, timedelta 
 
-'''
+"""
 #Import data
 df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
@@ -148,7 +148,8 @@ if is_last_thursday(current_date):
     plt.show()
 else:
     pass
-'''
+
+"""
 division_=pd.read_csv(r"/Cystat/Division-CPI-Offline-VS-Online.csv")
 division_name_ = division_["Division"].unique()
 print('1')
