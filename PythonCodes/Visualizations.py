@@ -150,7 +150,7 @@ else:
     pass
 
 """
-division_=pd.read_csv(r"/Cystat/Division-CPI-Offline-VS-Online.csv")
+division_=pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
 division_name_ = division_["Division"].unique()
 print('1')
 
