@@ -5,6 +5,7 @@ import matplotlib.dates as mdates
 from datetime import datetime
 from datetime import datetime, timedelta 
 
+'''
 #Import data
 df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
@@ -147,3 +148,33 @@ if is_last_thursday(current_date):
     plt.show()
 else:
     pass
+'''
+division_=pd.read_csv(r"/Cystat/Division-CPI-Offline-VS-Online.csv")
+division_name_ = division_["Division"].unique()
+print('1')
+
+for jj in division_name_:
+    division_1 = division_[division_["Division"] == jj]
+    division_name = division_1["Division"].iloc[0]
+    division_1["Date"] = pd.to_datetime(division_1["Period"], format="%Y-%m")
+    print('2')
+    
+    plt.figure(figsize=(10, 6))
+    plt.plot(division_1 ["Date"] , division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official Monthly Change (%)")
+    plt.plot(division_1 ["Date"] , division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online Monthly Change (%)")
+    
+    # Τίτλος και labels
+    plt.title(jj)
+    plt.xlabel("Month")
+    plt.ylabel("Monthly Change (%)")
+    plt.legend()
+    plt.grid(True)
+    
+    # Ετικέτες άξονα Χ μόνο με μήνα-έτος
+    plt.xticks(ken_division_["Date"], ken_division_["Date"].dt.strftime("%Y-%m"), rotation=90)
+        
+    filename = division_name.replace(" ", "_") + "plot_.png"
+    full_path = f"{"CyStat/Offline_Vs_Online"}/{jj}/"
+    path_ = full_path + filename
+    plt.savefig(path_, dpi=300)
+    plt.show()
