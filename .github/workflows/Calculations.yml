@@ -7,16 +7,16 @@ name: calculations
 run-name: Perform calculations and store results 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-#on:
-#  schedule:
-#    - cron: "33 14 * * *" #UTC time
-
 on:
-  pull_request:
-    # Sequence of patterns matched against refs/heads
-    branches:
-      - calculations
-      - calculations
+  schedule:
+    - cron: "58 14 * * *" #UTC time
+
+#on:
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - calculations
+#      - calculations
       
 jobs:
   getdataandrefreshmap:
