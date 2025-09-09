@@ -11,6 +11,13 @@ on:
   schedule:
     - cron: "11 11 * * *" #UTC time
 
+#on:
+  #pull_request:
+  #  # Sequence of patterns matched against refs/heads
+  #  branches:
+  #    - second-iteration
+  #    - second-iteration   
+
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
