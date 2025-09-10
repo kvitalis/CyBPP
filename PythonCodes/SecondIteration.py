@@ -476,8 +476,7 @@ def results_cyta(u):
 def results_epic(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content,"html.parser")
+    response = requests.get(bs, verify=FALSE) # bypasses SSL verification
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -488,9 +487,10 @@ def results_epic(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         #Bundled telecommunication services
         if name_ == "5G Unlimited Max Plus":
-            element_ = soup.find_all("div",{"class":"price"})
+            element_ = soup.find_all("div", {"class":"price"})
             price_ = element_[0].text.replace("€","")
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -503,7 +503,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
         
         if name_ == "5G Unlimited Max":
-            element_ = soup.find_all("div",{"class":"price"})
+            element_ = soup.find_all("div", {"class":"price"})
             price_ = element_[1].text.replace("€","")
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -517,7 +517,7 @@ def results_epic(u):
         
         #Wireless and Wired telephone services
         if name_ == "To fixed telephony lines of other providers":
-            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
             pattern = r"To fixed telephony lines of other providers.*?\n(\d+\.\d+)$" 
             match = re.search(pattern, data, re.MULTILINE)
@@ -535,7 +535,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)      
         
         if name_ == "To mobile telephony lines of other providers":
-            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
             pattern = r"To mobile telephony lines of other providers.*?\n(\d+\.\d+)$" 
             match = re.search(pattern, data, re.MULTILINE)
@@ -554,7 +554,7 @@ def results_epic(u):
         
         #Internet access provision services    
         if name_ == "Broadband Homebox 1":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
+            element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
             pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
             match = re.search(pattern, data, re.MULTILINE)
@@ -572,7 +572,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
         
         if name_ == "Broadband Homebox 2":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
+            element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
             pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
             match = re.search(pattern, data, re.MULTILINE)
@@ -590,7 +590,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)    
         
         if name_ == "Broadband Homebox 3":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
+            element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
             pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
             match = re.search(pattern, data, re.MULTILINE)
