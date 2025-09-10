@@ -501,8 +501,7 @@ def results_cyta(u):
 def results_epic(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content,"html.parser")
+    response = requests.get(bs, verify=False)  # bypasses SSL verification
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -513,6 +512,7 @@ def results_epic(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         #Bundled telecommunication services
         if name_ == "5G Unlimited Max Plus":
             element_ = soup.find_all("div",{"class":"price"})
@@ -3162,8 +3162,8 @@ for u in range(0, len(urls)):
         results_cablenet(u)  
     elif retailer_=="Primetel":
         results_primetel(u)    
-  #  elif retailer_=="Epic":
-  #      results_epic(u)
+    elif retailer_=="Epic":
+        results_epic(u)
     elif retailer_=="Athlokinisi":
         results_Athlokinisi(u)
     elif retailer_=="Famous Sports":
