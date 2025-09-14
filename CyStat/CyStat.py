@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
-
+"""
 #Important function
 def cystat(last_results):
        
@@ -273,7 +273,8 @@ def cystat(last_results):
        
     division_=pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     division_name_ = division_["Division"].unique()
-       
+
+"""
     for jj in division_name_ :
        division_1 = division_[division_["Division"] == jj]       
        division_name = division_1["Division"].iloc[0]
