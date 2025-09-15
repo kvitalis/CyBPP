@@ -288,7 +288,7 @@ def cystat(last_results):
            for ii in range(0, len(df_1)-1) :
                   new_row_= []
                   values_0 = df_.loc[ ((ii*12) + ii) , "Period"]
-                  values_1 = (df_1.loc[ii , 'Official CPI'] / df_1_first_vales_) * 100
+                  values_1 = (df_1.loc[ii , 'Official CPI'] / df_1_first_vales_) * 100 #here we rebase the CPIs to start from 100
                   values_2 = (df_1.loc[ii , 'Online CPI'])
                   new_row_.append(values_0)
                   new_row_.append(float(values_1))
