@@ -115,7 +115,7 @@ for jj in division_name_ :
     # Ετικέτες άξονα Χ μόνο με μήνα-έτος
     plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
                       
-    filename = division_name.replace(" ", "") + ".png"
+    filename = division_name.replace(" ", "_") + "plot.png"
     full_path = f"CyStat/Division_Offline_Vs_Online/"
     path_ = full_path + filename
     plt.savefig(path_, dpi=300)
