@@ -92,34 +92,7 @@ plt.show()
 plt.figure(figsize=(10,6))
 plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
-#Plots: Official vs Online Inflation per Division
-division_ = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
-division_name_ = division_["Division"].unique()
 
-for jj in division_name_ :
-    division_1 = division_[division_["Division"] == jj]       
-    division_name = division_1["Division"].iloc[0]
-    division_1["Date"] = pd.to_datetime(division_1["Period"], format="%Y-%m")
-              
-    plt.figure(figsize=(10, 6))
-    plt.plot(division_1 ["Date"] , division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official")
-    plt.plot(division_1 ["Date"] , division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online")
-                  
-    # Τίτλος και labels
-    plt.title(jj)
-    plt.xlabel("Date")
-    plt.ylabel("Monthly Inflation (%)")
-    plt.legend()
-    plt.grid(True)
-                  
-    # Ετικέτες άξονα Χ μόνο με μήνα-έτος
-    plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
-                      
-    filename = division_name.replace(" ", "_").replace(",", "") + "_Inflation.png"
-    full_path = f"CyStat/Division_Offline_Vs_Online/"
-    path_ = full_path + filename
-    plt.savefig(path_, dpi=300)
-    plt.show()
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
 #========================================================================================================================
