@@ -150,9 +150,9 @@ else:
     pass
 """
 
+#Plots: Official vs Online *rebased* CPI per Division
 df_ = pd.read_csv(r"CyStat/Division-CPI-Offline-VS-Online.csv")
 df_["Period"] = pd.to_datetime(df_["Period"], format="%Y-%m", errors="coerce")
-df_.to_csv(r"C:\Users\user\Desktop\test_1.csv")
 division_ = df_['Division'].unique()
 
 for div_ in division_:
@@ -178,18 +178,47 @@ for div_ in division_:
         df_new["Date"] = pd.to_datetime(df_new["Date"], format="%Y-%m", errors="coerce")
 
     plt.figure(figsize=(10, 6))
-    plt.plot(df_new["Date"], df_new["Offline CPI"], marker="o", color="blue", label="Offline CPI")
-    plt.plot(df_new["Date"], df_new["Online CPI"], marker="o", color="red", label="Online CPI")
+    plt.plot(df_new["Date"], df_new["Offline CPI"], marker="o", color="blue", label="Offline")
+    plt.plot(df_new["Date"], df_new["Online CPI"], marker="o", color="red", label="Online")
         
-    plt.title(f"{div_} - Offline Vs Online CPI - Rebased")
-    plt.xlabel("Month")
-    plt.ylabel("Offline Vs Online CPI")
+    plt.title(f"{div_}")
+    plt.xlabel("Date")
+    plt.ylabel("CPI (rebased)")
     plt.legend()
     plt.grid(True)
     plt.xticks(df_new["Date"], df_new["Date"].dt.strftime("%Y-%m"), rotation=90)
     plt.show()
                       
-    filename = div_.replace(" ", "_").replace(",", "") + "_rebased.png"
+    filename = div_.replace(" ", "_").replace(",", "") + "_CPI_rebased.png"
+    full_path = f"CyStat/Division_Offline_Vs_Online/"
+    path_ = full_path + filename
+    plt.savefig(path_, dpi=300)
+    plt.show()
+
+#Plots: Official vs Online Inflation per Division    
+division_ = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
+division_name_ = division_["Division"].unique()
+
+for jj in division_name_ :
+    division_1 = division_[division_["Division"] == jj]       
+    division_name = division_1["Division"].iloc[0]
+    division_1["Date"] = pd.to_datetime(division_1["Period"], format="%Y-%m")
+           
+    plt.figure(figsize=(10, 6))
+    plt.plot(division_1 ["Date"], division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official")
+    plt.plot(division_1 ["Date"], division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online")
+                  
+    # Τίτλος και labels
+    plt.title(jj)
+    plt.xlabel("Date")
+    plt.ylabel("Monthly Inflation (%)")
+    plt.legend()
+    plt.grid(True)
+    
+    # Ετικέτες άξονα Χ μόνο με μήνα-έτος
+    plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
+                      
+    filename = division_name.replace(" ", "_").replace(",", "") + "_Inflation.png"
     full_path = f"CyStat/Division_Offline_Vs_Online/"
     path_ = full_path + filename
     plt.savefig(path_, dpi=300)
