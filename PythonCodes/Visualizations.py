@@ -148,7 +148,7 @@ if is_last_thursday(current_date):
 else:
     pass
 
-
+"""
 #Plots: Official vs Online Inflation per Division
 division_ = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
 division_name_ = division_["Division"].unique()
@@ -177,4 +177,4 @@ for jj in division_name_ :
     path_ = full_path + filename
     plt.savefig(path_, dpi=300)
     plt.show()
-
+"""
