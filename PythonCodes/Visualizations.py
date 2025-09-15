@@ -5,7 +5,6 @@ import matplotlib.dates as mdates
 from datetime import datetime
 from datetime import datetime, timedelta 
 
-"""
 #Import data
 df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
 
@@ -148,78 +147,3 @@ if is_last_thursday(current_date):
     plt.show()
 else:
     pass
-"""
-
-#Plots: Official vs Online *rebased* CPI per Division
-df_ = pd.read_csv(r"CyStat/Division-CPI-Offline-VS-Online.csv")
-df_["Period"] = pd.to_datetime(df_["Period"], format="%Y-%m", errors="coerce")
-division_ = df_['Division'].unique()
-
-for div_ in division_:
-    df_new = pd.DataFrame(columns=["Date", "Offline CPI", "Online CPI"])
-    df_1 = df_[df_["Division"] == div_]
-    df_1 = df_1[["Period" , "Official CPI" , "Online CPI"]]
-    df_1 = df_1.reset_index(drop=True)
-    df_1["Period"] = pd.to_datetime(df_1["Period"], format="%Y-%m")
-
-    df_1_first_vales_ = df_1.loc[ 0 , 'Official CPI']
-
-    for jj in range(0,len(df_1)-1):
-        new_row_= []
-        values_0 = df_.loc[ ((jj*12)+jj) , "Period"]
-        values_1 = (df_1.loc[jj , 'Official CPI'] / df_1_first_vales_)*100
-        values_2 = (df_1.loc[jj , 'Online CPI'])
-        new_row_.append(values_0)
-        new_row_.append(float(values_1))
-        new_row_.append(float(values_2))
-        print(new_row_)
-        df_new.loc[len(df_new)] = new_row_
-        df_new["Date"] = df_new["Date"].apply(lambda x:x)
-        df_new["Date"] = pd.to_datetime(df_new["Date"], format="%Y-%m", errors="coerce")
-
-    plt.figure(figsize=(10, 6))
-    plt.plot(df_new["Date"], df_new["Offline CPI"], marker="o", color="blue", label="Offline")
-    plt.plot(df_new["Date"], df_new["Online CPI"], marker="o", color="red", label="Online")
-        
-    plt.title(f"{div_}")
-    plt.xlabel("Date")
-    plt.ylabel("CPI (rebased)")
-    plt.legend()
-    plt.grid(True)
-    plt.xticks(df_new["Date"], df_new["Date"].dt.strftime("%Y-%m"), rotation=90)
-    plt.show()
-                      
-    filename = div_.replace(" ", "_").replace(",", "") + "_CPI_rebased.png"
-    full_path = f"CyStat/Division_Offline_Vs_Online/"
-    path_ = full_path + filename
-    plt.savefig(path_, dpi=300)
-    plt.show()
-
-#Plots: Official vs Online Inflation per Division    
-division_ = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
-division_name_ = division_["Division"].unique()
-
-for jj in division_name_ :
-    division_1 = division_[division_["Division"] == jj]       
-    division_name = division_1["Division"].iloc[0]
-    division_1["Date"] = pd.to_datetime(division_1["Period"], format="%Y-%m")
-           
-    plt.figure(figsize=(10, 6))
-    plt.plot(division_1 ["Date"], division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official")
-    plt.plot(division_1 ["Date"], division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online")
-                  
-    # Τίτλος και labels
-    plt.title(jj)
-    plt.xlabel("Date")
-    plt.ylabel("Monthly Inflation (%)")
-    plt.legend()
-    plt.grid(True)
-    
-    # Ετικέτες άξονα Χ μόνο με μήνα-έτος
-    plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
-                      
-    filename = division_name.replace(" ", "_").replace(",", "") + "_Inflation.png"
-    full_path = f"CyStat/Division_Offline_Vs_Online/"
-    path_ = full_path + filename
-    plt.savefig(path_, dpi=300)
-    plt.show()
