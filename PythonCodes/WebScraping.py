@@ -635,9 +635,9 @@ def results_epic(u):
 def results_Athlokinisi(u):
     
     url = "https://athlokinisi.com.cy" + Item_url_
+    
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -660,7 +660,8 @@ def results_Athlokinisi(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
         else:
-            price_=float(element_soup[0].text.strip().replace("€",""))
+            price_ = float(element_soup[0].text.strip().replace("€",""))
+            print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_)
@@ -674,8 +675,9 @@ def results_awol(u):
     
     p=0
     price_="0"
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-    url="https://www.awol.com.cy/"+Item_url_
+    
+    url = "https://www.awol.com.cy/" + Item_url_
+    
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -729,7 +731,6 @@ def results_AlterVape(u):
         element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
         price_ = element_soup[2].text.replace("\n","").replace("\xa0€","").replace(",",'.')
         print(price_)
-
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -742,11 +743,10 @@ def results_AlterVape(u):
 def results_bwell_pharmacy(u):
     
     url = "https://bwell.com.cy/shop/" + Item_url_
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
+        
     if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -756,10 +756,11 @@ def results_bwell_pharmacy(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
         element_soup_1 = element_soup[1].text
         price_ = element_soup_1.replace("€","")
-        
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -773,7 +774,6 @@ def results_cablenet(u):
 
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -783,8 +783,8 @@ def results_cablenet(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         # Internet access provision services	
         if name_ == "Purple Internet HBO Max Edition": 
             element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"}) 
