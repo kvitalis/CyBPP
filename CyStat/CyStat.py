@@ -299,7 +299,7 @@ def cystat(last_results):
                   df_new["Date"] = pd.to_datetime(df_new["Date"], format="%Y-%m", errors="coerce")
 
                   plt.figure(figsize=(10, 6))
-                  plt.plot(df_new["Date"], df_new["Offline CPI"], marker="o", color="blue", label="Offline")
+                  plt.plot(df_new["Date"], df_new["Offline CPI"], marker="o", color="blue", label="Official")
                   plt.plot(df_new["Date"], df_new["Online CPI"], marker="o", color="red", label="Online")
         
                   plt.title(f"{div_}")
