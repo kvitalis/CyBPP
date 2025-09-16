@@ -242,7 +242,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
-    plt.savefig('CyStat/Official-vs-Online-General-CPI.png')
+    plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI.png')
     plt.show()
     
     #Plot: Official vs Online General CPI (*rebased*)
@@ -255,7 +255,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
-    plt.savefig('CyStat/Official-vs-Online-General-CPI-rebased.png')
+    plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI-rebased.png')
     plt.show()
     
     #Plot: Official vs Online Inflation
@@ -268,7 +268,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
-    plt.savefig('CyStat/Official-vs-Online-Inflation.png')
+    plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-Inflation.png')
     plt.show()
 
     #Plots: Official vs Online *rebased* CPI per Division
