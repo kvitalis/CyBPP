@@ -756,13 +756,13 @@ def results_cablenet(u):
     ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     ## 1 
-    response = requests.get(Item_url_, headers = header)
+    #response = requests.get(Item_url_, headers = header)
     ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers': header})
     ## 3
-    #with httpx.Client(headers = header) as client:
-    #    response = client.get(Item_url_)
+    with httpx.Client(headers = header) as client:
+        response = client.get(Item_url_)
 
     print(response)
     
