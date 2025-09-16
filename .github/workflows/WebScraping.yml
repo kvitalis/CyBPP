@@ -4,7 +4,7 @@
 name: web-scraping
 
 # Workflow's description
-run-name: Add today's scraped data into Raw-Data.csv
+run-name: Scrape the websites of online retailers and store the raw data
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
