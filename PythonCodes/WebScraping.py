@@ -47,16 +47,13 @@ def results_supermarketcy(u):
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
     
     ###  without headers 
-    
-    ## 1 (*NOT working*)
+    ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs)
-
-    ## 2 (*NOT working*)
+    ## 2
     #response = requests.get(url_new)
     
     ### with headers 
-    
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     '''
@@ -81,13 +78,11 @@ def results_supermarketcy(u):
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
     }
     '''
-    ## 1 (*NOT working*)
+    ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    
-    ## 2 (*NOT working*)
+    ## 2
     #response = requests.get(url_new, headers = header) 
-
     ## 3 
     with httpx.Client(headers = header) as client:
         response = client.get(url_new)
@@ -143,7 +138,6 @@ def results_metro(u):
     else:
         price_ = element_[0].text.replace('€','').replace(',','.').replace('/kg','')
         print(price_)
-            
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -184,7 +178,6 @@ def results_alphamega(u):
         element_soup = soup.find("span",{"class":"text-price fs-5"}).text.strip()
         price_ = element_soup.replace('€', '').replace(',', '.').strip()
         print(price_)
-        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(price_)
@@ -211,13 +204,14 @@ def results_fueldaddy(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("div", {"class":"col-md-7 pump-info-right"})
+        
         for brand_name in element_soup:
             brand = brand_name.find_all(class_ = "col-sm-9")[1]
+            
             for brand_name in brand:
                 brand_word = brand_name.get_text(strip = True).upper()
             
@@ -299,6 +293,7 @@ def results_ikea(u):
                 element_soup_1=element_soup[0]
                 element_soup_2=element_soup_1.text
                 element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
+                
                 if "Τρέχουσα τιμή" in element_soup_3:
                     element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
             
@@ -323,8 +318,9 @@ def results_ikea(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     '''
     ## 1st way (without header)
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
+    response = requests.get(Item_url_)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs)  
     
     ## 2nd (with header) 
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -355,22 +351,22 @@ def results_ikea(u):
                      
 def results_stephanis(u):
 
-    ## with headers 
+    ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    # 1 (*NOT working*)
+    ## 1 
     response = requests.get(Item_url_, headers = header)
-    # 2 (*NOT working*)
+    ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    # 3 (*NOT working*)
+    ## 3 
     #with httpx.Client(headers = header) as client:
     #    response = client.get(Item_url_)
     
-    ## without headers
-    # 1 (*NOT working*)
+    ### without headers
+    ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
-    # 2 (*NOT working*)
+    ## 2 
     #response = requests.get(Item_url_)
 
     print(response)
@@ -673,20 +669,20 @@ def results_Athlokinisi(u):
 
 def results_awol(u):
     
-    p=0
-    price_="0"
+    p = 0
+    price_ = "0"
     
     url = "https://www.awol.com.cy/" + Item_url_
     
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    element_soup = soup.find_all("span",{"class":"price price--sale"})
+    element_soup = soup.find_all("span", {"class":"price price--sale"})
     
     if element_soup:
-        p=0
+        p = 0
     else:
-        element_soup = soup.find_all("span",{"class":"price"})   
+        element_soup = soup.find_all("span", {"class":"price"})   
         
     if ((response.status_code !=200) or ("Page Not Found" in response.text)):
         website_false.append(name_)
@@ -695,7 +691,7 @@ def results_awol(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
     else:
         if element_soup[0] is not None:
             amounts_list = element_soup[0].text.split('€')
