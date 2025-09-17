@@ -758,11 +758,11 @@ def results_cablenet(u):
     ## 1 
     #response = requests.get(Item_url_, headers = header)
     ## 2 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers': header})
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers': header})
     ## 3
-    #with httpx.Client(headers = header) as client:
-    #    response = client.get(Item_url_)
+    with httpx.Client(headers = header) as client:
+        response = client.get(Item_url_)
 
     print(response)
     
