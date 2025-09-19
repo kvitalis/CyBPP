@@ -12,6 +12,28 @@ Name,Subclass,Url,Division,Retailer
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Other postal services,https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf,COMMUNICATION,Cyprus Post
+Κλήσεις προς σταθερό,Wired telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
+Κλήσεις προς κινητό,Wireless telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
+Mobile Internet Home 1,Internet access provision services,https://www.cyta.com.cy/mobile-internet,COMMUNICATION,CYTA
+FREEDOM,Bundled telecommunication services,https://www.cyta.com.cy/az/freedom-plans,COMMUNICATION,CYTA
+To fixed telephony lines of other providers,Wired telephone services,https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber,COMMUNICATION,Epic
+To mobile telephony lines of other providers,Wireless telephone services,https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber,COMMUNICATION,Epic
+5G Unlimited Max Plus,Bundled telecommunication services,https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans,COMMUNICATION,Epic
+5G Unlimited Max,Bundled telecommunication services,https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans,COMMUNICATION,Epic
+Broadband Homebox 1,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
+Broadband Homebox 2,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
+Broadband Homebox 3,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
+Fiber Family & 200Mbps,Internet access provision services,https://primetel.com.cy/home-fiber-tv-bundle,COMMUNICATION,Primetel
+Fiber Entertainment & 200Mbps,Internet access provision services,https://primetel.com.cy/home-fiber-tv-bundle,COMMUNICATION,Primetel
+GIGA Unlimited,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
+GIGA Unlimited 5G,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
+GIGA Unlimited 5G MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
+Calls to other providers landline,Wired telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
+Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
+Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
+Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
+Purple Internet HBO Max Edition,Internet access provision services,https://cablenet.com.cy/internet/purple-internet/,COMMUNICATION,Cablenet
+Purple Max Mobile,Bundled telecommunication services,https://cablenet.com.cy/mobile/purple-max-mobile/,COMMUNICATION,Cablenet
 "Wash, Dry and Fold - up to 5kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 "Wash, Dry and Fold - up to 10kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
 Dry and Fold Only (up to 5kg),Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
@@ -266,28 +288,6 @@ Toyota Aygo - Aygo 1.0 x-wave x-shift,Second-hand motor cars,https://www.toyota.
 Toyota Yaris - Yaris 1.5 HSD Style+,Second-hand motor cars,https://www.toyota.com.cy/used-cars/pdp.toyota-yaris-2015-hatchback-automatic-hybrid-7cad3475-1fb7-4c19-9a34-c295bf006995,TRANSPORT,Toyota
 Toyota Yaris - Yaris 1.5 Active CVT,Second-hand motor cars,https://www.toyota.com.cy/used-cars/pdp.toyota-yaris-2023-hatchback-automatic-petrol-b2bcb00d-d687-480c-ba79-fb81e7676981,TRANSPORT,Toyota
 Toyota Aygo X - Aygo X play Canvas CVT (fleet),Second-hand motor cars,https://www.toyota.com.cy/used-cars/pdp.toyota-aygo-x-2023-5-door-hatchback-automatic-petrol-41b93baf-544e-4bfd-bee4-dc7c78e4330d,TRANSPORT,Toyota
-Κλήσεις προς σταθερό,Wired telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
-Κλήσεις προς κινητό,Wireless telephone services,https://www.cyta.com.cy/upgraded-telephony/el,COMMUNICATION,CYTA
-Mobile Internet Home 1,Internet access provision services,https://www.cyta.com.cy/mobile-internet,COMMUNICATION,CYTA
-FREEDOM,Bundled telecommunication services,https://www.cyta.com.cy/az/freedom-plans,COMMUNICATION,CYTA
-To fixed telephony lines of other providers,Wired telephone services,https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber,COMMUNICATION,Epic
-To mobile telephony lines of other providers,Wireless telephone services,https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber,COMMUNICATION,Epic
-5G Unlimited Max Plus,Bundled telecommunication services,https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans,COMMUNICATION,Epic
-5G Unlimited Max,Bundled telecommunication services,https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans,COMMUNICATION,Epic
-Broadband Homebox 1,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
-Broadband Homebox 2,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
-Broadband Homebox 3,Internet access provision services,https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox,COMMUNICATION,Epic
-Fiber Family & 200Mbps,Internet access provision services,https://primetel.com.cy/home-fiber-tv-bundle,COMMUNICATION,Primetel
-Fiber Entertainment & 200Mbps,Internet access provision services,https://primetel.com.cy/home-fiber-tv-bundle,COMMUNICATION,Primetel
-GIGA Unlimited,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
-GIGA Unlimited 5G,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
-GIGA Unlimited 5G MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited-summer-offer,COMMUNICATION,Primetel
-Calls to other providers landline,Wired telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
-Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
-Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
-Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
-Purple Internet HBO Max Edition,Internet access provision services,https://cablenet.com.cy/internet/purple-internet/,COMMUNICATION,Cablenet
-Purple Max Mobile,Bundled telecommunication services,https://cablenet.com.cy/mobile/purple-max-mobile/,COMMUNICATION,Cablenet
 ORBEA - ONNA 29 40,Bicycles,/collections/mountain-bikes/products/orbea-onna-29-40,TRANSPORT,AWOL
 ORBEA - ONNA 29 50,Bicycles,/collections/mountain-bikes/products/orbea-onna-29-50,TRANSPORT,AWOL
 CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,/collections/mtb-tyres/products/continental-race-king,TRANSPORT,AWOL
@@ -1257,6 +1257,7 @@ Wooden Racket Energy - Green,Equipment for sport,https://www.public.cy/public/v1
 Νεροπίστολο Hasbro Nerf Super Soaker Rainstorn (F3891) - Πολύχρωμο,Equipment for sport,https://www.public.cy/public/v1/mm/productPage?sku=1692334&locale=el,RECREATION AND CULTURE,Public
 XIAOMI BHR5927EU 1800 W 1.7 L Λευκό Βραστήρας,Other small electric household appliances,https://www.public.cy/public/v1/mm/productPage?sku=1770787&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
 ROHNSON R-5335 Titanium Pro 1.5L 1300W Μπλέντερ,Other small electric household appliances,https://www.public.cy/public/v1/mm/productPage?sku=1574618&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
+
 
 
 
