@@ -3150,8 +3150,8 @@ for u in range(0, len(urls)):
         results_electroline(u)
     elif retailer_=="CYTA":
         results_cyta(u)
-    #elif retailer_=="Cablenet":
-    #    results_cablenet(u)  
+    elif retailer_=="Cablenet":
+        results_cablenet(u)  
     elif retailer_=="Primetel":
         results_primetel(u)    
     elif retailer_=="Epic":
