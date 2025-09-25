@@ -13,17 +13,17 @@ today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-07-31'
 
 # Read necessary data 
-raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data_25q2 = pd.read_csv("Datasets/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-raw_data_25q3 = pd.read_csv("Datasets/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#raw_data_25q4 = pd.read_csv("Datasets/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_24q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_24q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_25q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+#raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Concatenate/combine by rows the quarterly subsets into a full raw data set
 raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 #, raw_data_25q4
                      ], axis=0) 
-#raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+#raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Exclude the data of the following retailers
 #raw_data = raw_data[~ ( (raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket") )]  
@@ -42,13 +42,13 @@ group = raw_data_1.groupby("Subclass").mean()
 group.reset_index(inplace=True)
 group_df = pd.DataFrame(group)
 
-group_df = group_df[group_df["Subclass"] != "Electricity"] #dont take into account the electricity subclass
-group_df = group_df[group_df["Subclass"] != "Water supply"] #dont take into account the Water supply subclass
-group_df = group_df[group_df["Subclass"] != "Sewage collection"] #dont take into account the Sewage Collection subclass
+group_df = group_df[group_df["Subclass"] != "Electricity"] #don't take into account the 'Electricity' subclass
+group_df = group_df[group_df["Subclass"] != "Water supply"] #don't take into account the 'Water supply' subclass
+group_df = group_df[group_df["Subclass"] != "Sewage collection"] #don't take into account the 'Sewage collection' subclass
 group_df = group_df.reset_index(drop=True) #Reset index of the above three subclasses
 
 #Electricity
-electricity = raw_data_today[raw_data_today["Subclass"]=="Electricity"]
+electricity = raw_data_today[raw_data_today["Subclass"] == "Electricity"]
 ele_price_ = electricity["Price"].sum()
 new_row = []
 new_row.append("Electricity")
@@ -57,7 +57,7 @@ group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Water supply
-waterboard = raw_data_today[raw_data_today["Subclass"]=="Water supply"]
+waterboard = raw_data_today[raw_data_today["Subclass"] == "Water supply"]
 
 larnaca_ = 0
 larnaca_count = 0
@@ -85,7 +85,7 @@ group_df.loc[len(group_df)] = new_row
 group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
 
 #Sewage collection
-sewagecollection = raw_data_today[raw_data_today["Subclass"]=="Sewage collection"]
+sewagecollection = raw_data_today[raw_data_today["Subclass"] == "Sewage collection"]
 
 larnaca_ = 0
 larnaca_count = 0
@@ -296,17 +296,17 @@ while today_p <= end_date:
     print(today_f)
     
     # Read necessary data: 
-    raw_data_24q3 = pd.read_csv("Datasets/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data_24q4 = pd.read_csv("Datasets/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data_25q1 = pd.read_csv("Datasets/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data_25q2 = pd.read_csv("Datasets/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    raw_data_25q3 = pd.read_csv("Datasets/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    #raw_data_25q4 = pd.read_csv("Datasets/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_24q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_24q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_25q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    #raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Concatenate/combine by rows the quarterly subsets into a full raw data set:
     raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 #, raw_data_25q4
                          ], axis=0) 
-    #raw_data = pd.read_csv("Datasets/Raw-Data.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    #raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Exclude the data of the following retailers: 
     #raw_data = raw_data[~ ( (raw_data["Retailer"]=="Opa") | (raw_data["Retailer"]=="Cheap Basket") )] 
@@ -319,10 +319,10 @@ while today_p <= end_date:
     index_ = pd.read_csv("Datasets/Reference-Values.csv")
     
     # DIVISION CPI:
-    raw_data_today = raw_data[raw_data["Date"]==today_p]
-    raw_data_1 = raw_data_today[["Subclass","Price"]]
+    raw_data_today = raw_data[raw_data["Date"] == today_p]
+    raw_data_1 = raw_data_today[["Subclass", "Price"]]
     group = raw_data_1.groupby("Subclass").mean()
-    group.reset_index(inplace=True)
+    group.reset_index(inplace = True)
     group_df = pd.DataFrame(group)
     
     group_df = group_df[group_df["Subclass"] != "Electricity"] #don't take into account the Electricity subclass
