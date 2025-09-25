@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-'''
+
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-07-31'
 
@@ -18,10 +18,11 @@ raw_data_24q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q4.csv", parse_dates
 raw_data_25q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+#raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Concatenate/combine by rows the quarterly subsets into a full raw data set
-raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 #, raw_data_25q4
+raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 , raw_data_25q4 #,raw_data_26q1 (26/01/2026)
                      ], axis=0) 
 #raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
@@ -36,7 +37,7 @@ weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
 index_ = pd.read_csv("Datasets/Reference-Values.csv")
 
 # DIVISION CPI
-raw_data_today = raw_data[raw_data["Date"]==today]
+raw_data_today = raw_data[raw_data["Date"] == today]
 raw_data_1 = raw_data_today[["Subclass","Price"]]
 group = raw_data_1.groupby("Subclass").mean()
 group.reset_index(inplace=True)
@@ -202,7 +203,7 @@ for unique_ in unique_divisions:
     float_index_list = [int(i) for i in index_list]
     df_daily_cpi_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-df_daily_cpi_division.to_csv("Results/Daily/Daily-CPI-Division.csv",index=False)
+df_daily_cpi_division.to_csv("Results/Daily/Daily-CPI-Division.csv", index=False)
 
 # Daily-CPI-Subclass-Division.csv file
 df_daily_cpi_subclass_division = pd.read_csv("Results/Daily/Daily-CPI-Subclass-Division.csv")
@@ -301,10 +302,11 @@ while today_p <= end_date:
     raw_data_25q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    #raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    #raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Concatenate/combine by rows the quarterly subsets into a full raw data set:
-    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 #, raw_data_25q4
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3, raw_data_25q4 #,raw_data_26q1
                          ], axis=0) 
     #raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
@@ -474,9 +476,9 @@ while today_p <= end_date:
     
     for unique_ in unique_divisions:
         df_13 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
-        #df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
         #df_13 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
-        df_14 = current_df[current_df["Division"] == unique_]["CPI Division"]
+        #df_14 = current_df[current_df["Division"] == unique_]["CPI Division"]
         percentage_change = 100 * (df_14 - df_13) / df_13
         
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
@@ -560,3 +562,4 @@ while today_p <= end_date:
         pass
     today_p += timedelta(days=1)
 ####################################################    End of while-loop    ################################################################################################################
+'''
