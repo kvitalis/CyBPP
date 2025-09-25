@@ -232,8 +232,8 @@ current_date_obj = datetime.strptime(today, "%Y-%m-%d")
 current_date_str = current_date_obj.strftime("%Y-%m-%d")
 
 # Read important files
-df_monthly_general = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-df_monthly_division = pd.read_csv("Results/Monthly-CPI-Division.csv")
+df_monthly_general = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
+df_monthly_division = pd.read_csv("Results/Monthly/Monthly-CPI-Division.csv")
 df_daily_general = pd.read_csv("Results/Daily/Daily-CPI-General-Inflation.csv")
 
 # Function for the calculations to be performed every last Thursday per month
@@ -262,21 +262,21 @@ if is_last_thursday(current_date_str):
     unique_divisions = df_monthly_division['Division'].unique()
     
     for unique_ in unique_divisions:
-        df_17 = float(prior_df[prior_df["Division"]==unique_]["CPI Division"])
-        df_18 = float(current_df[current_df["Division"]==unique_]["CPI Division"])
+        df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
+        df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
         percentage_change = 100 * (df_18 - df_17) / df_17
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
 
-    df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv",index=False)
+    df_monthly_division.to_csv("Results/Monthly/Monthly-CPI-Division.csv", index=False)
 
     # Monthly CPI General Inflation
     df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
     df_monthly_general = df_monthly_general.sort_values(by ='Date')
     df_monthly_general["Inflation (%)"] = round(100 * (df_monthly_general['CPI General'] - df_monthly_general['CPI General'].shift(1)) / df_monthly_general['CPI General'].shift(1), 4)   
-    df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
+    df_monthly_general.to_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv", index=False)
 else:
     pass
 '''
@@ -509,8 +509,8 @@ while today_p <= end_date:
     current_date = today_date.strftime("%Y-%m-%d")
     
     # Read important files
-    df_monthly_general = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
-    df_monthly_division = pd.read_csv("Results/Monthly-CPI-Division.csv")
+    df_monthly_general = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
+    df_monthly_division = pd.read_csv("Results/Monthly/Monthly-CPI-Division.csv")
     df_daily_general = pd.read_csv("Results/Daily/Daily-CPI-General-Inflation.csv")
     
     # Function for the calculations to be performed every last Thursday per month
@@ -547,13 +547,13 @@ while today_p <= end_date:
             float_index_list = [int(i) for i in index_list]
             df_monthly_division.loc[float_index_list, "Monthly Change (%)"] = round(percentage_change, 4)
     
-        df_monthly_division.to_csv("Results/Monthly-CPI-Division.csv", index=False)
+        df_monthly_division.to_csv("Results/Monthly/Monthly-CPI-Division.csv", index=False)
     
         # Monthly CPI General Inflation
         df_monthly_general = pd.concat([df_current_date, df_monthly_general], ignore_index=True)
         df_monthly_general = df_monthly_general.sort_values(by ='Date')
         df_monthly_general["Inflation (%)"] = round(100 * (df_monthly_general['CPI General'] - df_monthly_general['CPI General'].shift(1)) / df_monthly_general['CPI General'].shift(1), 4)   
-        df_monthly_general.to_csv("Results/Monthly-CPI-General-Inflation.csv", index=False)
+        df_monthly_general.to_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv", index=False)
     else:
         pass
     today_p += timedelta(days=1)
