@@ -474,7 +474,9 @@ while today_p <= end_date:
     
     for unique_ in unique_divisions:
         df_13 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
-        df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        #df_14 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        #df_13 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
+        df_14 = current_df[current_df["Division"] == unique_]["CPI Division"]
         percentage_change = 100 * (df_14 - df_13) / df_13
         
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
