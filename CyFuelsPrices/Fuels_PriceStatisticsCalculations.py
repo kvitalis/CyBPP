@@ -135,7 +135,7 @@ plt.title('Evolution of the daily average fuels prices in Cyprus')
 plt.legend()
 plt.xticks(rotation=90)
 plt.grid(True)
-plt.savefig('CyFuelsPrices/Fuels_Prices_Average_Evolution.png')
+plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Average_Evolution.png')
 plt.show()
 
 #Evolution of the daily MINIMUM fuels prices
@@ -151,7 +151,7 @@ plt.title('Evolution of the daily minimum fuels prices in Cyprus')
 plt.legend()
 plt.xticks(rotation=90)
 plt.grid(True)
-plt.savefig('CyFuelsPrices/Fuels_Prices_Minimum_Evolution.png')
+plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Minimum_Evolution.png')
 plt.show()
 
 #Evolution of the daily MAXIMUM fuels prices
@@ -167,7 +167,7 @@ plt.title('Evolution of the daily maximum fuels prices in Cyprus')
 plt.legend()
 plt.xticks(rotation=90)
 plt.grid(True)
-plt.savefig('CyFuelsPrices/Fuels_Prices_Maximum_Evolution.png')
+plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Maximum_Evolution.png')
 plt.show()
 
 #Evolution of the daily MEDIAN fuels prices
@@ -183,5 +183,5 @@ plt.title('Evolution of the daily median fuels prices in Cyprus')
 plt.legend()
 plt.xticks(rotation=90)
 plt.grid(True)
-plt.savefig('CyFuelsPrices/Fuels_Prices_Median_Evolution.png')
+plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Median_Evolution.png')
 plt.show()
