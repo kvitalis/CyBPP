@@ -103,7 +103,7 @@ def cystat(last_results):
         cpi_month = round(cpi_month, 2)
         
         #identify the monthly General CPI
-        monthly_gen_cpi = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+        monthly_gen_cpi = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
         #date_to_find = "2025-04-24" # na mpei manual i teleutai pempti tou mina 
@@ -203,7 +203,7 @@ def cystat(last_results):
         division_cpi.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
     
     #Online CPI per Division
-    daily_cpi_online = pd.read_csv("Results/Daily-CPI-Division.csv")
+    daily_cpi_online = pd.read_csv("Results/Daily/Daily-CPI-Division.csv")
     daily_cpi_online = daily_cpi_online[daily_cpi_online["Date"] == correction_day.strftime("%Y-%m-%d")]
 
     unique_values = daily_cpi_online["Division"].unique()
