@@ -6,7 +6,7 @@ from datetime import datetime
 from datetime import datetime, timedelta 
 
 #Import data
-df_daily = pd.read_csv("Results/Daily-CPI-General-Inflation.csv")
+df_daily = pd.read_csv("Results/Daily/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize=(10, 6))
 plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='Inflation')
@@ -102,7 +102,7 @@ plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', c
 current_date = datetime.today().strftime("%Y-%m-%d")
 
 #Read data
-df_monthly = pd.read_csv("Results/Monthly-CPI-General-Inflation.csv")
+df_monthly = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
 
 #Function to run every last Thursday per month
 def is_last_thursday(date):
