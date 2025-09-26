@@ -1699,10 +1699,27 @@ def results_water(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_wolt(u):
+
+    ###  without headers 
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs)
+    ## 2
+    #response = requests.get(tem_url_)
     
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
+    ### with headers 
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## 1 
+    bs = BeautifulSoup(tem_url_, "html.parser")
     response = requests.get(bs, {'headers':header})
+    ## 2
+    #response = requests.get(tem_url_, headers = header) 
+    ## 3 
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(utem_url_)
+    
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1714,7 +1731,7 @@ def results_wolt(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('span',{"data-test-id":"product-modal.price"})
+        element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
         
         if element_name:
             price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
