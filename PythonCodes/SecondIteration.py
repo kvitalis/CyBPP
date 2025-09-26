@@ -1731,7 +1731,7 @@ def results_wolt(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
+        element_name = soup.find_all("span", {"data-test-id":"product-modal.price"})
         
         if element_name:
             price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
