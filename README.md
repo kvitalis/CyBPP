@@ -4,7 +4,7 @@
 
 The Cyprus Billion Prices Project (CyBPP) is inspired by the *[Billion Prices Project (BPP)](https://thebillionpricesproject.com/)*, an academic initiative at MIT and Harvard that uses prices collected from hundreds of online large retailers around the world on a daily basis to conduct research in macro and international economics. 
 
-Here, the BPP methodology is for the first time in the Cypriot economy applied by the [Economics Reasearch Center at the University of Cyprus](https://www.ucy.ac.cy/erc/?lang=en) and involves web-scraping of prices of around 2300 goods and services from over 55 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
+Here, the BPP methodology is for the first time in the Cypriot economy applied by the [Economics Reasearch Center at the University of Cyprus](https://www.ucy.ac.cy/erc/?lang=en) and involves web-scraping of prices of around 2200 goods and services from over 55 retailers in Cyprus on a daily basis. The scraped data is then used to calculate the *Consumer Price Index (CPI)* Inflation by using standard methods. 
 
 ## Python Codes
 
