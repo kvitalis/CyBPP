@@ -3182,8 +3182,8 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
-    elif retailer_=="Evdokia Jewellery":
-        results_evdokia_jewellery(u)
+    #elif retailer_=="Evdokia Jewellery":
+    #    results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
