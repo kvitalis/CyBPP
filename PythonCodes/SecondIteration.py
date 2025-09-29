@@ -1699,7 +1699,31 @@ def results_water(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_wolt(u):
-
+    
+    # Custom headers to mimic a real browser
+    header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",}
+    
+    def fetch_url(Item_url_, headers, retries=5, delay=5):
+        #Tries to fetch a URL with retries in case of 429 Too Many Requests.
+        for attempt in range(1, retries + 1):
+            response = requests.get(Item_url_, headers=header)
+            
+            if response.status_code == 200:
+                print("✅ Success on attempt", attempt)
+                return response.text
+            
+            elif response.status_code == 429:
+                print(f"⚠️ 429 Too Many Requests. Waiting {delay} seconds before retry {attempt}/{retries}...")
+                time.sleep(delay)
+            
+            else:
+                print(f"❌ Failed with status {response.status_code}")
+                return None
+            
+            print("❌ Max retries reached. Could not fetch the page.")
+            return None
+    '''
     ###  without headers 
     ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1751,7 +1775,8 @@ def results_wolt(u):
             website_false.append(division_)
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
-
+        '''
+    
 def results_vasos(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
