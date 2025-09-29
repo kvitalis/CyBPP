@@ -261,8 +261,8 @@ for u in range(0, len(urls)):
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
-    elif retailer_ == "METRO":
-        results_metro(u)      
+    #elif retailer_ == "METRO":
+    #    results_metro(u)      
     
 # Change the type as float
 list_["Price"].astype(float)
