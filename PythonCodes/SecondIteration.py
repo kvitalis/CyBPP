@@ -1700,8 +1700,6 @@ def results_water(u):
 
 def results_wolt(u):
     
-    time.sleep(5)
-    
     ###  without headers 
     ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
