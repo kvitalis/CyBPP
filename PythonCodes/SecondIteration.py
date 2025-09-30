@@ -120,6 +120,7 @@ def results_metro(u):
     
     #website: "https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" 
     response = requests.get(Item_url_)
+    print(response)
     soup = BeautifulSoup(response.text, 'html.parser')
     element_ = soup.find_all("span", {"data-test-id":"product-modal.price"})
     
@@ -781,6 +782,8 @@ def results_cablenet(u):
     ## 3 
     #with httpx.Client(headers = header) as client:
     #    response = client.get(Item_url_)
+
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1707,7 +1710,7 @@ def results_wolt(u):
     ## 2
     #response = requests.get(Item_url_)
     
-    ### with headers (*NOT WORKING*)
+    ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     ## 1 
@@ -2502,6 +2505,8 @@ def results_intercity_buses(u):
     ## 2
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
+
+    print(response)
         
     if response.status_code != 200:
         website_false.append(name_)
@@ -3094,6 +3099,8 @@ def results_public(u):
     #response = requests.get(bs, {'headers':header})
     ## 2 
     #response = requests.get(Item_url_, headers = header) 
+
+    print(response)
     
     if (response.status_code != 200) : 
         website_false.append(name_)
