@@ -3155,9 +3155,9 @@ for u in range(0, len(urls)):
     #    results_cheapbasket(u)
     #elif retailer_=="Opa":
     #    results_opacy(u)    
-    #if retailer_=="Fuel Daddy":
-    #    results_fueldaddy(u)
-    if retailer_=="Costas Theodorou":
+    if retailer_=="Fuel Daddy":
+        results_fueldaddy(u)
+    elif retailer_=="Costas Theodorou":
         results_costastheodorou(u)
     elif retailer_=="Parga":
         results_parga(u)    
