@@ -347,7 +347,7 @@ def cystat(last_results):
 
 def is_first_thursday(date):
     date = '2025-10-02'
-    #date = datetime.strptime(date, "%Y-%m-%d")
+    date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
         first_thursday = date - timedelta(days=7)
