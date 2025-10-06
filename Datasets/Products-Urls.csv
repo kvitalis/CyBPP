@@ -842,7 +842,7 @@ AmbrosiaΚαλαμποκέλαιο3L,Other edible oils,ambrosia-kalampokelaio-3l
 HuilorΚραμβέλαιο3L,Other edible oils,huilor-kramvelaio-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜεσόγειοςΡεβύθια400g,"Dried vegetables, other preserved or processed vegetables",mesogeios-revythia-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜεσόγειοςΦασόλιαΚόκκινα400g,"Dried vegetables, other preserved or processed vegetables",mesogeios-fasolia-kokkina-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-CirioΦασόλιαΆσπρα400g-20%,"Dried vegetables, other preserved or processed vegetables",cirio-fasolia-aspra-400g-20,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+MesogeiosWhiteBeans400g,"Dried vegetables, other preserved or processed vegetables",mesogeios-fasolia-aspra-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜεσόγειοςΣιταροπούλα340g,"Dried vegetables, other preserved or processed vegetables",mesogeios-sitaropoula-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜεσόγειοςΜανιτάριαΟλόκληρα400g,"Dried vegetables, other preserved or processed vegetables",mesogeios-manitaria-oloklira-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g,"Dried vegetables, other preserved or processed vegetables",mesogeios-fasolia-se-saltsa-ntomatas-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -896,7 +896,7 @@ SpryΦυτικόΜαγειρικόΠροιόν350g,Confectionery products,spry-f
 Κολοκάσι1kg,Fresh or chilled vegetables other than potatoes and other tubers,kolokasi-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Μπρόκολο1kg,Fresh or chilled vegetables other than potatoes and other tubers,mprokolo-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Κουνουπίδι1kg,Fresh or chilled vegetables other than potatoes and other tubers,kounoupidi-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΠατάτεςΚυπριακέςΝέαςΣoδειάς1kg,Potatoes,patates-kypriakes-neas-sodeias-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Potatoes1kg,Potatoes,patates-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FreezelandΠατάτες1kg,Potatoes,freezeland-patates-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 MccainTraditionΠατάτες1kg,Potatoes,mccain-tradition-patates-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜπανάνεςΕισαγωγής1kg,Fresh or chilled fruit,mpananes-eisagogis-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1096,7 +1096,7 @@ LanitisOrangeApricotAppleFruitDrink1L,Fruit and vegetable juices,lanitis-froutop
 LanitisOrangeJuiceWithoutBits1L,Fruit and vegetable juices,lanitis-chymos-portokali-choris-kommatakia-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 LoelFruitManiaJuice1L,Fruit and vegetable juices,loel-chymos-fruit-mania-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 KeanΚράνμπεριΦρουτοποτό1L,Fruit and vegetable juices,kean-kranmperi-froutopoto-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-CanderelSweetenerGranular90g,Artificial sugar substitutes,canderel-glykantiko-se-skoni-90g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CanderelSteviaSweetenerGranular75g,Artificial sugar substitutes,canderel-stevia-glykantiko-se-skoni-75g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SweetNLowSugarSubstituteGranular80g,Artificial sugar substitutes,sweet-n-low-ypokatastato-zacharis-skoni-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 JotisSweet&BalanceSweetenerWithStevia80g,Artificial sugar substitutes,giotis-sweet-balance-glykantiko-me-stevia-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜπάρμπαΣτάθηςΑνάμικτηΣαλάταΛαχανικών450g,Frozen vegetables other than potatoes and other tubers,mparmpa-stathis-anamikti-salata-lachanikon-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1143,7 +1143,7 @@ AjaxMultiCleaningSpray4In1500ml,Cleaning and maintenance products,ajax-sprei-pol
 FairyUltraLemonDishLiquid900ml,Cleaning and maintenance products,fairy-ultra-lemon-ygro-piaton-900ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 EurekaDishLiquidLemon750ml,Cleaning and maintenance products,evrika-ygro-piaton-lemoni-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 EurekaDishLiquidWithVinegar750ml,Cleaning and maintenance products,evrika-ygro-piaton-me-xydi-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
-PalmoliveUltraFreshLemonDishLiquid500ml,Cleaning and maintenance products,palmolive-ultra-fresh-lemon-ygro-piaton-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+PalmoliveUltraFreshLemonDishLiquid500ml,Cleaning and maintenance products,palmolive-ultra-fresh-lemon-ygro-piaton-500ml-1,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 Keo8X330ml,Lager beer,keo-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 HeinekenCans6X330ml,Lager beer,heineken-cans-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 AlambraHGiagiaTraditionalGoatHalloumiP.d.o.600g,Cheese and curd,alampra-i-giagia-aigino-challoumi-pop-600g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1174,7 +1174,6 @@ AgiosNikolaos12X500ml,Mineral or spring waters,agios-nikolaos-12x500ml,FOOD AND 
 Agros12X500ml,Mineral or spring waters,agros-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FarmakasWater12x500ml,Mineral or spring waters,farmakas-nero-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 "FarmakasWater6x1,5L",Mineral or spring waters,farmakas-nero-6x15L,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-"Kykkos6X1,5L",Mineral or spring waters,kykkos-6ch15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 PedigreeDentastixMedium3Pcs,Products for pets,pedigree-dentastix-medium-3tem,RECREATION AND CULTURE,SupermarketCy
 CesarClasicosChickenLoaf150g,Products for pets,cesar-clasicos-me-tryfero-kotopoulo-150g,RECREATION AND CULTURE,SupermarketCy
 WhiskasFishFavouritesSalmonTunaInJelly4x85g,Products for pets,whiskas-fish-favourites-solomo-tono-se-zele-4x85g,RECREATION AND CULTURE,SupermarketCy
@@ -1257,6 +1256,7 @@ Wooden Racket Energy - Green,Equipment for sport,https://www.public.cy/public/v1
 Νεροπίστολο Hasbro Nerf Super Soaker Rainstorn (F3891) - Πολύχρωμο,Equipment for sport,https://www.public.cy/public/v1/mm/productPage?sku=1692334&locale=el,RECREATION AND CULTURE,Public
 XIAOMI BHR5927EU 1800 W 1.7 L Λευκό Βραστήρας,Other small electric household appliances,https://www.public.cy/public/v1/mm/productPage?sku=1770787&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
 ROHNSON R-5335 Titanium Pro 1.5L 1300W Μπλέντερ,Other small electric household appliances,https://www.public.cy/public/v1/mm/productPage?sku=1574618&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
+
 
 
 
