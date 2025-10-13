@@ -3235,8 +3235,8 @@ for u in range(0, len(urls)):
         results_ewholesale(u)    
     elif retailer_=="NUMBEO":
         results_numbeo(u)
-    #elif retailer_=="Wolt":
-    #    results_wolt(u)
+    elif retailer_=="Wolt":
+        results_wolt(u)
     elif retailer_=="Vasos Psarolimano":
         results_vasos(u)
     elif retailer_=="Meze Tavern":
