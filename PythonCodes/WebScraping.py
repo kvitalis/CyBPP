@@ -1625,8 +1625,8 @@ def results_CERA(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_water(u):
-    '''
-    ### *Note*: Ban access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    
+    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
     if "Nicosia" in retailer_:
         city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1642,7 +1642,7 @@ def results_water(u):
         if name_ == "Κυβικά ανά μήνα":
             price_2 = prices[4].replace(",",".")
             price_ = float(price_2) / 2 #per month
-    '''
+    
     if "Larnaca" in retailer_:
         city_ = "Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1688,6 +1688,7 @@ def results_water(u):
             price_ = float(price_3) / 4 #per month
 
     if price_:
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_ + " - " + city_)
         new_row.append(price_)
@@ -3212,7 +3213,7 @@ for u in range(0, len(urls)):
         results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
-    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
+    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
         results_water(u)
     elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
         results_sewerage(u)    
