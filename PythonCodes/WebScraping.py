@@ -1979,7 +1979,8 @@ def results_pydixa(u):
 def results_sewerage(u):
     
     values = 0
-    
+
+    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/)
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -3215,7 +3216,7 @@ for u in range(0, len(urls)):
         results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
         results_water(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
+    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/) 
         results_sewerage(u)    
     elif retailer_=="MotoRace":
         results_moto_race(u)
