@@ -1688,9 +1688,9 @@ def results_water(u):
             price_ = float(price_3) / 4 #per month
 
     if price_:
-        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_ + " - " + city_)
+        print(price_)
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
