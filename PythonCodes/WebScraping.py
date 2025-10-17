@@ -1690,7 +1690,6 @@ def results_water(u):
     if price_:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_ + " - " + city_)
-        print(price_)
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
