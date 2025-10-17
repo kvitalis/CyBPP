@@ -3549,27 +3549,6 @@ new_row.append("European University Cyprus")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/consumer/pricing/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Πάγιο ανά μήνα - Nicosia")
-new_row.append(float(5.5))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κυβικά ανά μήνα - Nicosia")
-new_row.append(float(1.0))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
 #Water Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/)
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3727,6 +3706,48 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
+
+#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/) --> Ban access in 17-10-2025 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Πάγιο ανά μήνα - Nicosia")
+new_row.append(float(5.5))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board of Nicosia") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Κυβικά ανά μήνα - Nicosia")
+new_row.append(float(0.5))
+new_row.append("Water supply")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Water Board of Nicosia") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Sewerage Board of Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Ban access in 17-10-2025
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Ετήσιο Τέλος - Nicosia")
+new_row.append(float(0.31))
+new_row.append("Sewage collection")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Sewerage Board of Nicosia") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Τέλος Χρήσης - Nicosia")
+new_row.append(float(0.55))
+new_row.append("Sewage collection")
+new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+new_row.append("Sewerage Board of Nicosia") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #===============================================================================
 
