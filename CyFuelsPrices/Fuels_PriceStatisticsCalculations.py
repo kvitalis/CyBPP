@@ -26,7 +26,6 @@ from tabula import read_pdf
 ## Ignore specific warning
 warnings.simplefilter("ignore")
 
-'''
 ## Read necessary data
 df_data = pd.read_csv("CyFuelsPrices/Fuels_ScrapedData.csv")
 df_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
@@ -119,7 +118,6 @@ print(kerosene_q2)
 ## Save and export the fuels prices statistics calculations
 df_stats.loc[len(df_stats)] = [today, unleaded95_avg, unleaded98_avg, diesel_avg, heatingdiesel_avg, kerosene_avg, unleaded95_min, unleaded98_min, diesel_min, heatingdiesel_min, kerosene_min, unleaded95_max, unleaded98_max, diesel_max, heatingdiesel_max, kerosene_max, unleaded95_q2, unleaded98_q2, diesel_q2, heatingdiesel_q2, kerosene_q2]
 df_stats.to_csv("CyFuelsPrices/Fuels_PriceStatistics.csv", index = False)
-'''
 
 ## Visualizations/Plots
 fuels_prices_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
