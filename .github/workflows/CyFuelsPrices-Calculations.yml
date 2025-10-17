@@ -9,7 +9,7 @@ run-name: CyFuelsPrices statistics calculations
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "21 18 * * *" #UTC time
+    - cron: "20 19 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
