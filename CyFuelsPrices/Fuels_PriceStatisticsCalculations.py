@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
+import matplotlib.dates as mdates
 
 ## Ignore specific warning
 warnings.simplefilter("ignore")
