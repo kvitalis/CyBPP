@@ -25,7 +25,7 @@ from tabula import read_pdf
 
 ## Ignore specific warning
 warnings.simplefilter("ignore")
-
+'''
 ## Read necessary data
 df_data = pd.read_csv("CyFuelsPrices/Fuels_ScrapedData.csv")
 df_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
@@ -118,18 +118,18 @@ print(kerosene_q2)
 ## Save and export the fuels prices statistics calculations
 df_stats.loc[len(df_stats)] = [today, unleaded95_avg, unleaded98_avg, diesel_avg, heatingdiesel_avg, kerosene_avg, unleaded95_min, unleaded98_min, diesel_min, heatingdiesel_min, kerosene_min, unleaded95_max, unleaded98_max, diesel_max, heatingdiesel_max, kerosene_max, unleaded95_q2, unleaded98_q2, diesel_q2, heatingdiesel_q2, kerosene_q2]
 df_stats.to_csv("CyFuelsPrices/Fuels_PriceStatistics.csv", index = False)
-
+'''
 ## Visualizations/Plots
 fuels_prices_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
 fuels_prices_stats['Date'] = pd.to_datetime(fuels_prices_stats['Date'], format='%Y-%m-%d')
 
 #Evolution of the daily AVERAGE fuels prices
 plt.figure(figsize=(12, 6))
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusAverage'], label='Unleaded 95 - Cyprus Average', marker='-', color='red')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusAverage'], label='Unleaded 98 - Cyprus Average', marker='-', color='blue')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusAverage'], label='Diesel - Cyprus Average', marker='-', color='black')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusAverage'], label='Heating Diesel - Cyprus Average', marker='-', color='brown')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusAverage'], label='Kerosene - Cyprus Average', marker='-', color='green')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusAverage'], label='Unleaded 95 - Cyprus Average', linestyle='-', color='red')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusAverage'], label='Unleaded 98 - Cyprus Average',  linestyle='-', color='blue')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusAverage'], label='Diesel - Cyprus Average',  linestyle='-',color='black')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusAverage'], label='Heating Diesel - Cyprus Average',  linestyle='-', color='brown')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusAverage'], label='Kerosene - Cyprus Average',  linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily average fuels prices in Cyprus')
@@ -146,11 +146,11 @@ plt.show()
 
 #Evolution of the daily MINIMUM fuels prices
 plt.figure(figsize=(12, 6))
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMin'], label='Unleaded 95 - Cyprus Minimum', marker='-', color='red')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMin'], label='Unleaded 98 - Cyprus Minimum', marker='-', color='blue')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMin'], label='Diesel - Cyprus Minimum', marker='-', color='black')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMin'], label='Heating Diesel - Cyprus Minimum', marker='-', color='brown')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMin'], label='Kerosene - Cyprus Minimum', marker='-', color='green')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMin'], label='Unleaded 95 - Cyprus Minimum',  linestyle='-', color='red')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMin'], label='Unleaded 98 - Cyprus Minimum', linestyle='-', color='blue')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMin'], label='Diesel - Cyprus Minimum', marker='-', linestyle='black')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMin'], label='Heating Diesel - Cyprus Minimum', linestyle='-', color='brown')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMin'], label='Kerosene - Cyprus Minimum', linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily minimum fuels prices in Cyprus')
@@ -167,11 +167,11 @@ plt.show()
 
 #Evolution of the daily MAXIMUM fuels prices
 plt.figure(figsize=(12, 6))
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMax'], label='Unleaded 95 - Cyprus Maximum', marker='-', color='red')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMax'], label='Unleaded 98 - Cyprus Maximum', marker='-', color='blue')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMax'], label='Diesel - Cyprus Maximum', marker='-', color='black')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMax'], label='Heating Diesel - Cyprus Maximum', marker='-', color='brown')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMax'], label='Kerosene - Cyprus Maximum', marker='-', color='green')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMax'], label='Unleaded 95 - Cyprus Maximum', linestyle='-', color='red')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMax'], label='Unleaded 98 - Cyprus Maximum', linestyle='-', color='blue')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMax'], label='Diesel - Cyprus Maximum', linestyle='-', color='black')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMax'], label='Heating Diesel - Cyprus Maximum', linestyle='-', color='brown')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMax'], label='Kerosene - Cyprus Maximum', linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily maximum fuels prices in Cyprus')
@@ -188,11 +188,11 @@ plt.show()
 
 #Evolution of the daily MEDIAN fuels prices
 plt.figure(figsize=(12, 6))
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMedian'], label='Unleaded 95 - Cyprus Median', marker='-', color='red')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMedian'], label='Unleaded 98 - Cyprus Median', marker='-', color='blue')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMedian'], label='Diesel - Cyprus Median', marker='-', color='black')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMedian'], label='Heating Diesel - Cyprus Median', marker='-', color='brown')
-plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMedian'], label='Kerosene - Cyprus Median', marker='-', color='green')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded95.CyprusMedian'], label='Unleaded 95 - Cyprus Median', linestyle='-', color='red')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Unleaded98.CyprusMedian'], label='Unleaded 98 - Cyprus Median', linestyle='-', color='blue')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Diesel.CyprusMedian'], label='Diesel - Cyprus Median', linestyle='-', color='black')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMedian'], label='Heating Diesel - Cyprus Median', linestyle='-', color='brown')
+plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMedian'], label='Kerosene - Cyprus Median', linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily median fuels prices in Cyprus')
