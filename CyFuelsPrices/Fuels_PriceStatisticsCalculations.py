@@ -33,7 +33,7 @@ df_stats = pd.read_csv("CyFuelsPrices/Fuels_PriceStatistics.csv")
 
 ## Date setup
 today = datetime.today().strftime("%Y-%m-%d")
-today = '2025-10-17'
+#today = '2025-10-17'
 print(today)
 
 df_date = df_data[df_data["Date"] == today]
