@@ -136,10 +136,11 @@ plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily average fuels prices in Cyprus')
 plt.legend()
 
+# Show on the horizontal x-axis only the date of the first day per month 
 ax = plt.gca()
 ax.xaxis.set_major_locator(mdates.MonthLocator(bymonthday=1))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y'))
+plt.xlabel('Date')
 plt.xticks(rotation=90)
 plt.grid(True)
 plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Average_Evolution.png')
@@ -157,10 +158,11 @@ plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily minimum fuels prices in Cyprus')
 plt.legend()
 
+# Show on the horizontal x-axis only the date of the first day per month 
 ax = plt.gca()
 ax.xaxis.set_major_locator(mdates.MonthLocator(bymonthday=1))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y'))
+plt.xlabel('Date')
 plt.xticks(rotation=90)
 plt.grid(True)
 plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Minimum_Evolution.png')
@@ -178,10 +180,11 @@ plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily maximum fuels prices in Cyprus')
 plt.legend()
 
+# Show on the horizontal x-axis only the date of the first day per month 
 ax = plt.gca()
 ax.xaxis.set_major_locator(mdates.MonthLocator(bymonthday=1))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y'))
+plt.xlabel('Date')
 plt.xticks(rotation=90)
 plt.grid(True)
 plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Maximum_Evolution.png')
@@ -199,10 +202,11 @@ plt.ylabel('Price (€/L)')
 plt.title('Evolution of the daily median fuels prices in Cyprus')
 plt.legend()
 
+# Show on the horizontal x-axis only the date of the first day per month 
 ax = plt.gca()
 ax.xaxis.set_major_locator(mdates.MonthLocator(bymonthday=1))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y'))
+plt.xlabel('Date')
 plt.xticks(rotation=90)
 plt.grid(True)
 plt.savefig('CyFuelsPrices/Fuels-Price-Statistics-Plots/Fuels_Prices_Median_Evolution.png')
