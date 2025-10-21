@@ -1202,8 +1202,7 @@ def results_Marks_Spencer(u):
 
 def results_moto_race(u):
     
-    url = "https://www.motorace.com.cy/" + Item_url_
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
@@ -1217,7 +1216,7 @@ def results_moto_race(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
         element_soup = soup.find_all("span",{"class":"price"})
-        price_=element_soup[0].text.replace(",","").replace("€","")
+        price_ = element_soup[0].text.replace(",","").replace("€","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
