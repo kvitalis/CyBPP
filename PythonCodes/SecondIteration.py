@@ -1200,8 +1200,8 @@ def results_Marks_Spencer(u):
 def results_moto_race(u):
 
     ### without headers
-    ## 1 
-    response = requests.get(Item_url_)
+    ## 1 (not working)
+    #response = requests.get(Item_url_)
     ## 2 (not working)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
@@ -1212,8 +1212,8 @@ def results_moto_race(u):
     ## 1 (not working)
     #response = requests.get(Item_url_, headers = header)
     ## 2 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs, {'headers':header})
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs, {'headers':header})
     ## 3 
     #with httpx.Client(headers = header) as client:
     #    response = client.get(Item_url_)
