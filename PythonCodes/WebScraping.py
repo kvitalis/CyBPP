@@ -805,9 +805,13 @@ def results_cablenet(u):
             price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
             print(price_)
         # Bundled telecommunication services
-        if name_ == "Purple Max Mobile":
-            element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"})
-            price_ = float(element_soup[1].text.replace("μετά €","").replace("/μήνα ",""))
+        if name_ == "5G Unlimited":
+            element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
+            price_ = float(element_soup[0].text.replace("€","").replace("/μήνα",""))
+            print(price_)
+        if name_ == "Purple Max Mobile HBO Max Edition":
+            element_soup = soup.find_all("span", {"style":"font-size: 50px"})
+            price_ = float(element_soup[0].text)
             print(price_)
         else: 
         # Wired and Wireless telephone services	
