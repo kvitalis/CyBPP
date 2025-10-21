@@ -629,10 +629,8 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 def results_Athlokinisi(u):
-    
-    url = "https://athlokinisi.com.cy" + Item_url_
-    
-    bs = BeautifulSoup(url, "html.parser")
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     
     if (response.status_code != 200):
@@ -671,10 +669,8 @@ def results_awol(u):
     
     p = 0
     price_ = "0"
-    
-    url = "https://www.awol.com.cy/" + Item_url_
-    
-    bs = BeautifulSoup(url, "html.parser")
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     element_soup = soup.find_all("span", {"class":"price price--sale"})
@@ -700,6 +696,7 @@ def results_awol(u):
             if len(amounts_list) <= 2:
                 price_ = amounts_list[1] 
         price_= price_.replace(",",".")
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -738,8 +735,7 @@ def results_AlterVape(u):
 
 def results_bwell_pharmacy(u):
     
-    url = "https://bwell.com.cy/shop/" + Item_url_
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
         
     if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
@@ -1145,12 +1141,11 @@ def results_EUC(u):
 
 def results_famousports(u):
     
-    url = "https://www.famousports.com/en" + Item_url_
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    if (response.status_code !=200) or ("Oops! Page Not Found!" in soup.text):
+    if (response.status_code != 200) or ("Oops! Page Not Found!" in soup.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -1159,8 +1154,8 @@ def results_famousports(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
-        element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
+        element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
+        element_soup = soup.find_all("strong", {"class":"text-xl lg:text-2xl font-bold tracking-tight"})
         price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1174,8 +1169,7 @@ def results_famousports(u):
 
 def results_Marks_Spencer(u):
     
-    url = "https://www.marksandspencer.com/cy" + Item_url_
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     
