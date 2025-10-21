@@ -1196,8 +1196,26 @@ def results_Marks_Spencer(u):
 
 def results_moto_race(u):
     
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
+    ### without headers
+    ## 1 (not working)
+    response = requests.get(Item_url_)
+    ## 2 (not working)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs) 
+
+    ### with headers 
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## 1 (not working)
+    #response = requests.get(Item_url_, headers = header)
+    ## 2 (not working)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+    ## 3 (not working)
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(Item_url_)
+    
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if ("404 Not Found" in soup.text) or (response.status_code != 200):
@@ -1209,7 +1227,7 @@ def results_moto_race(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
-        element_soup = soup.find_all("span",{"class":"price"})
+        element_soup = soup.find_all("span", {"class":"price"})
         price_ = element_soup[0].text.replace(",","").replace("€","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1220,7 +1238,7 @@ def results_moto_race(u):
         new_row.append("Moto Race")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+    
 def results_nissan(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
