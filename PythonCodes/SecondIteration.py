@@ -626,10 +626,8 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 def results_Athlokinisi(u):
-    
-    url = "https://athlokinisi.com.cy" + Item_url_
-    
-    bs = BeautifulSoup(url, "html.parser")
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     
     if (response.status_code != 200):
@@ -668,10 +666,8 @@ def results_awol(u):
     
     p = 0
     price_ = "0"
-    
-    url = "https://www.awol.com.cy/" + Item_url_
-    
-    bs = BeautifulSoup(url, "html.parser")
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     element_soup = soup.find_all("span", {"class":"price price--sale"})
@@ -697,6 +693,7 @@ def results_awol(u):
             if len(amounts_list) <= 2:
                 price_ = amounts_list[1] 
         price_= price_.replace(",",".")
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -735,8 +732,7 @@ def results_AlterVape(u):
 
 def results_bwell_pharmacy(u):
     
-    url = "https://bwell.com.cy/shop/" + Item_url_
-    bs = BeautifulSoup(url, "html.parser")
+    bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
         
     if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
@@ -1211,12 +1207,12 @@ def results_moto_race(u):
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     ## 1 (not working)
     #response = requests.get(Item_url_, headers = header)
-    ## 2 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    ## 2 (not working)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
     ## 3 
-    #with httpx.Client(headers = header) as client:
-    #    response = client.get(Item_url_)
+    with httpx.Client(headers = header) as client:
+        response = client.get(Item_url_)
     
     print(response)
     soup = BeautifulSoup(response.content, "html.parser")
