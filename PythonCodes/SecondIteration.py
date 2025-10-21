@@ -1197,7 +1197,7 @@ def results_moto_race(u):
 
     ### without headers
     ## 1 (not working)
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
     ## 2 (not working)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
@@ -1210,9 +1210,9 @@ def results_moto_race(u):
     ## 2 (not working)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    ## 3 
-    with httpx.Client(headers = header) as client:
-        response = client.get(Item_url_)
+    ## 3 (not working)
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(Item_url_)
     
     print(response)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -3723,7 +3723,7 @@ new_row.append("Sewerage Board of Larnaca")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
-'''
+
 #Water Board of Nicosia (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/) --> Ban access in 17-10-2025 
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3765,7 +3765,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
+
 #===============================================================================
 
 # Change the type as float
