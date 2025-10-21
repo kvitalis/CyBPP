@@ -1201,7 +1201,7 @@ def results_moto_race(u):
 
     ### without headers
     ## 1 
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
     ## 2 (not working)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
@@ -1209,8 +1209,8 @@ def results_moto_race(u):
     ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    ## 1 
-    response = requests.get(Item_url_, headers = header)
+    ## 1 (not working)
+    #response = requests.get(Item_url_, headers = header)
     ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
