@@ -796,9 +796,10 @@ def results_cablenet(u):
         soup = BeautifulSoup(response.content, "html.parser")
         # Internet access provision services	
         if name_ == "Purple Internet HBO Max Edition": 
-            element_soup = soup.find_all("div",{"class":"elementor-heading-title elementor-size-default"}) 
-            euro_ = element_soup[1].text.count("€")
-            price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
+            element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"}) 
+            #euro_ = element_soup[1].text.count("€")
+            #price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
+            price_ = element_soup[4].text.replace('€','').replace('/μήνα','')
             print(price_)
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
@@ -814,12 +815,10 @@ def results_cablenet(u):
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text == name_:
-                    value_ = element_name[28].text
-                    price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                    price_ = element_name[28].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
                     print(price_)
                 if i.text == name_:
-                    value_ = element_name[33].text
-                    price_ = value_.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
+                    price_ = element_name[33].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
                     print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
