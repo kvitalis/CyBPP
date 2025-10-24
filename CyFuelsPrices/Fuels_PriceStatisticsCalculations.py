@@ -133,7 +133,7 @@ plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusAve
 plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusAverage'], label='Kerosene - Cyprus Average', linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
-plt.title('Evolution of the daily average fuels prices in Cyprus')
+plt.title('Daily evolution of the average fuels prices in Cyprus')
 plt.legend()
 
 # Show on the horizontal x-axis only the date of the first day per month 
@@ -156,7 +156,7 @@ plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMin
 plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMin'], label='Kerosene - Cyprus Minimum',  linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
-plt.title('Evolution of the daily minimum fuels prices in Cyprus')
+plt.title('Daily evolution of the minimum fuels prices in Cyprus')
 plt.legend()
 
 # Show on the horizontal x-axis only the date of the first day per month 
@@ -179,7 +179,7 @@ plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMax
 plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMax'], label='Kerosene - Cyprus Maximum', linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
-plt.title('Evolution of the daily maximum fuels prices in Cyprus')
+plt.title('Daily evolution of the maximum fuels prices in Cyprus')
 plt.legend()
 
 # Show on the horizontal x-axis only the date of the first day per month 
@@ -202,7 +202,7 @@ plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['HeatingDiesel.CyprusMed
 plt.plot(fuels_prices_stats['Date'], fuels_prices_stats['Kerosene.CyprusMedian'], label='Kerosene - Cyprus Median',  linestyle='-', color='green')
 plt.xlabel('Date')
 plt.ylabel('Price (€/L)')
-plt.title('Evolution of the daily median fuels prices in Cyprus')
+plt.title('Daily evolution of the median fuels prices in Cyprus')
 plt.legend()
 
 # Show on the horizontal x-axis only the date of the first day per month 
