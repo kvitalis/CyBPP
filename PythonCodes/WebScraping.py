@@ -450,7 +450,7 @@ def results_cyta(u):
         
         # Wired/Wireless telephone services	
         if (name_=="Κλήσεις προς σταθερό") | (name_=="Κλήσεις προς κινητό") :
-            element_soup = soup.find_all("div",{"class":"table-responsive"})
+            element_soup = soup.find_all("div", {"class":"table-responsive"})
             element_ = element_soup[1].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             if name_=="Κλήσεις προς σταθερό":
@@ -461,8 +461,8 @@ def results_cyta(u):
                 print(price_)
                 
         # Internet access provision services	
-        elif name_=="Mobile Internet Home 1" :
-            element_soup = soup.find_all("div",{"class":"card-body px-1"})
+        elif name_=="Internet Home 200Mbps" :
+            element_soup = soup.find_all("div", {"class":"card-body px-1"})
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
@@ -470,7 +470,7 @@ def results_cyta(u):
             
         # Bundled telecommunication services
         elif name_=="FREEDOM" :
-            element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
+            element_soup = soup.find_all("h4", {"class":"text-24 text-center mb-0 pb-0"})
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
