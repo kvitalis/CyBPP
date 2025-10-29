@@ -462,7 +462,6 @@ def results_cyta(u):
                 
         # Internet access provision services	
         elif name_=="Internet Home 200Mbps" :
-            #element_soup = soup.find_all("div", {"class":"card-body px-1"})
             element_soup = soup.find_all("div", {"class":"price-block py-2 text-center"})
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
