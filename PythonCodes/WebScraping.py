@@ -2816,7 +2816,7 @@ def results_musicavenue(u):
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_max_7_tax(u):
+def results_max_7_taxi(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, {'headers':header})
@@ -3312,7 +3312,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
-        results_max_7_tax(u)
+        results_max_7_taxi(u)
    
 # Change the type as float
 list_["Price"].astype(float)
