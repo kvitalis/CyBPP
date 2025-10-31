@@ -1,16 +1,16 @@
 # Important libraries 
 import pandas as pd 
 import tabula as tb
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
 import re
 import requests
 import time
-import xlsxwriter
 import urllib.request
 import json
 import warnings
+import xlsxwriter
 #import PyPDF2
 import pypdf
 import pdfplumber
@@ -24,6 +24,7 @@ from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
+from pypdf import PdfReader
 from docx import Document
 
 # Ignore specific warning
@@ -283,8 +284,7 @@ def results_ikea(u):
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-        
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
     else:
         if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
             soup = BeautifulSoup(response.content, "html.parser")
@@ -388,7 +388,7 @@ def results_stephanis(u):
         else:
             element_soup = element_soup[1]
         price_ = element_soup.text.replace("€","").replace("\n","")
-        
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(price_)
@@ -445,9 +445,9 @@ def results_cyta(u):
     '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
-    
+    soup = BeautifulSoup(response.content, "html.parser")
+
     if (response.status_code == 200):
-        soup = BeautifulSoup(response.content, "html.parser")
         
         # Wired/Wireless telephone services	
         if (name_=="Κλήσεις προς σταθερό") | (name_=="Κλήσεις προς κινητό") :
@@ -459,7 +459,6 @@ def results_cyta(u):
                 print(price_)
             if name_=="Κλήσεις προς κινητό":
                 price_ = prices_[3].replace(",",".")
-                print(price_)
                 
         # Internet access provision services	
         elif name_=="Internet Home 200Mbps" :
@@ -467,7 +466,6 @@ def results_cyta(u):
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
-            print(price_)
             
         # Bundled telecommunication services
         elif name_=="FREEDOM" :
@@ -475,8 +473,8 @@ def results_cyta(u):
             element_ = element_soup[0].text
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
-            print(price_)
             
+        print(price_)   
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -485,7 +483,6 @@ def results_cyta(u):
         new_row.append("CYTA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-        
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -499,7 +496,8 @@ def results_epic(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, verify=False)  # bypasses SSL verification
-    
+    soup = BeautifulSoup(response.content, "html.parser")
+
     if (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -509,7 +507,6 @@ def results_epic(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        soup = BeautifulSoup(response.content, "html.parser")
         #Bundled telecommunication services
         if name_ == "5G Unlimited Max Plus":
             element_ = soup.find_all("div",{"class":"price"})
@@ -795,6 +792,7 @@ def results_cablenet(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
+        
         # Internet access provision services	
         if name_ == "Purple Internet HBO Max Edition": 
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"}) 
@@ -802,15 +800,18 @@ def results_cablenet(u):
             #price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
             price_ = element_soup[4].text.replace('€','').replace('/μήνα','')
             print(price_)
+        
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[0].text.replace("€","").replace("/μήνα",""))
             print(price_)
+        
         if name_ == "Purple Max Mobile HBO Max Edition":
             element_soup = soup.find_all("span", {"style":"font-size: 50px"})
             price_ = float(element_soup[0].text)
             print(price_)
+        
         else: 
         # Wired and Wireless telephone services	
             element_name = soup.find_all("td")
@@ -1027,9 +1028,9 @@ def results_CyPost(u):
         elif ("30 κιλά" in name_):
             qp=32
           
-    pdf_ = tb.read_pdf(Item_url_, pages = p,pandas_options={'header': None}, stream=True)[0]
-    pdf_[d]=pdf_[d].astype('string')
-    price_=pdf_[d][qp].split(' ')[0].replace(',','.')
+    pdf_ = tb.read_pdf(Item_url_, pages = p, pandas_options = {'header': None}, stream = True)[0]
+    pdf_[d] = pdf_[d].astype('string')
+    price_ = pdf_[d][qp].split(' ')[0].replace(',','.')
     
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
@@ -1282,8 +1283,8 @@ def results_nissan(u):
 
 def results_novella(u):
     
-    new_row=[]
-    website_false=[]
+    new_row = []
+    website_false = []
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -1305,8 +1306,8 @@ def results_novella(u):
             website_false=[]
             
             if (scripts_1[i].text=="LADIES CUT") and (name_=="Women's Services, HAIRCUT Stylist"):
-                price_=scripts_2[i].text.replace('€',"").replace(',','.')
-                
+                price_ = scripts_2[i].text.replace('€',"").replace(',','.')
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1315,10 +1316,9 @@ def results_novella(u):
                 new_row.append("Novella")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
- 
             elif (name_ == "Men's Services, HAIRCUT Stylist") and (scripts_1[i].text == "MEN'S CUT"):
                 price_ = scripts_2[i].text.replace('€',"").replace(',','.')
-                
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1348,7 +1348,8 @@ def results_numbeo(u):
             ken = element_soup[o].text.replace("\n","").replace(" ","")
             if "Cyprus" in ken:
                 result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
-                price_ = round((float(result)/1.08),2)
+                price_ = round((float(result) / 1.08), 2)
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
@@ -1375,7 +1376,6 @@ def results_primetel(u):
     else:
         # Bundled telecommunication services	
         if (name_=="GIGA Unlimited") | (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
-            
             element_ = soup.find_all('p', {"class":"price"})
             
             if name_ == "GIGA Unlimited" :
@@ -1526,12 +1526,12 @@ def results_rio(u):
                         website_false.append(division_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
-                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)     
+                        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)     
                 else:
                     amount_match = re.search(r'€(\d+)', element_name[i].text)
-
                     if amount_match:
                         price_ = amount_match.group(1)
+                        print(price_)
                         new_row=[]
                         new_row.append(datetime.now().strftime('%Y-%m-%d'))
                         new_row.append(name_)
@@ -1591,7 +1591,7 @@ def results_AHK(u):
                     price_ = float(match.group(0).replace(",","."))/100
                 else:
                     price_ = float(match.group(0).replace(",","."))   
-                
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(price_)
@@ -1755,7 +1755,6 @@ def results_wolt(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
-        
         if element_name:
             price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
             print(price_)
@@ -1933,7 +1932,7 @@ def results_royal_cigars(u):
         element_name = soup.find_all('div', {"class":"itemDetailsPrice"})
         if element_name:
             price_amount = element_name[0].text.replace("€","")
-            
+            print(price_amount)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(float(price_amount))
@@ -1973,6 +1972,7 @@ def results_pydixa(u):
         text = page.extract_text()
 
     matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+    
     if matches:
         new_row.append(datetime.now().strftime('%Y-%m-%d'))        
         new_row.append(name_)
@@ -2014,7 +2014,6 @@ def results_sewerage(u):
                     values = value + values
             values = values / 3
             print(values)
-            
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_ + " - " + city_)
             new_row.append(float(values))
@@ -2032,7 +2031,6 @@ def results_sewerage(u):
                 if match:
                     values = float(match.group(1)) / 100
                 print(values)
-                
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_ + " - " + city_)
                 new_row.append(float(values))
@@ -2062,13 +2060,11 @@ def results_sewerage(u):
                 element_name_2 = element_name[0].find_all('tr')
                 element_name_2 = element_name_2[len(element_name_2) - 1]
                 desired_lines = [element_name_2.find_all('td')[4].get_text(), element_name_2.find_all('td')[6].get_text()]
-
                 for lines in desired_lines:
                     value = float(lines.replace(",","."))
                     values = value + values
                 values = values / 2
                 print(values)
-                
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_ + " - " + city_)
                 new_row.append(float(values))
@@ -2082,11 +2078,9 @@ def results_sewerage(u):
             element_name_2 = element_name[1].find_all('tr')
             element_name_2 = element_name_2[len(element_name_2) - 1]
             desired_lines = [element_name_2.find_all('td')[1].get_text()]
-                
             for lines in desired_lines:
                 values = float(lines.replace(",","."))
             print(values)
-            
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_ + " - " + city_)
             new_row.append(float(values))
@@ -2126,7 +2120,6 @@ def results_sewerage(u):
                 sum_ += o
                 count_12 += 1
             print(float(sum_/count_12))
-            
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_ + " - " + city_)
             new_row.append(float(sum_/count_12))
@@ -2349,7 +2342,6 @@ def results_toyota(u):
             finance_config = json.loads(finance_config_str)
             price_ = finance_config.get('TotalPrice')
             print(price_)
-            
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
             new_row.append(price_) 
@@ -2377,7 +2369,6 @@ def results_ithaki(u):
         if ("Ποικιλία Κρεατικών" in match) and ("Ποικιλία Κρεατικών για 2 άτομα - Larnaca"== name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
-
             if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
@@ -2399,7 +2390,6 @@ def results_ithaki(u):
         elif ("Ποικιλία Θαλασσινών" in match) and ("Ποικιλία Θαλασσινών για 2 άτομα - Larnaca"==name_):
             pattern = r'€(\d+\.\d{2})'
             price_ = re.findall(pattern, match)
-
             if price_:
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
@@ -2463,6 +2453,7 @@ def results_flames(u):
             price_ = re.findall(pattern, desired_line)
 
     if price_:
+        print(float(price_[-1]))
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_[-1]))
@@ -2496,9 +2487,9 @@ def results_lensescy(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('div',{"class":"product-price"})
+        element_name = soup.find_all('div', {"class":"product-price"})
         price_ = element_name[0].text.replace("€","").replace(" ","").replace(",",".")
-        
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -2551,7 +2542,6 @@ def results_intercity_buses(u):
                         pass
                     else:
                         print(price_)
-                        
                         new_row.append(datetime.now().strftime('%Y-%m-%d'))
                         new_row.append(ticket_name_ + Item_url_)
                         new_row.append(float(price_))
@@ -2690,13 +2680,12 @@ def results_premier(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
     else:
         products = all_data_products['Products']
         names = [item['name'] for item in products]
         price = [item["price"] for item in products]
-    
         for i in range(len(names)):
-            
             if name_ == names[i]:
                 new_row.append(datetime.today().strftime("%Y-%m-%d"))
                 new_row.append(names[i])
@@ -2738,12 +2727,11 @@ def results_cyprus_transport(u):
         new_list = []
         
         for column in df1.columns:  
-            
             for index in df1.index:
                 value = df1.loc[index, column]
                 new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass': 'Passenger transport by bus and coach', 'Division': 'TRANSPORT', 'Retailer': 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
                 new_list.append(new_row)
-        
+                
         df2 = pd.DataFrame.from_records(new_list)
         df_cy_transport = df2[df2["Price"] != '-']
         df_cy_transport['Price'] = df_cy_transport['Price'].str.replace('€', '').replace('Αρχική τιμή ', '')
@@ -2811,10 +2799,10 @@ def results_max_7_tax(u):
                 add_ = "Fixed"
             if i == 1:
                 add_ = "Variable"
-            
             new_row = []
             new_row.append(datetime.today().strftime("%Y-%m-%d"))
             new_row.append(name_ + add_)
+            print(float(charges_[i]))
             new_row.append(float(charges_[i]))
             new_row.append(subclass_)
             new_row.append(division_)
@@ -3012,12 +3000,13 @@ def results_piatsa_gourounaki(u):
     
     pattern = r'\d+(?:,\d{2})?'
     price_ = []
+    
     for line in results:
         found = re.findall(pattern, line)
         price_ = float(found[0].replace(",","."))
-        print(price_)
         
     if price_:
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
