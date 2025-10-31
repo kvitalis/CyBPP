@@ -1,17 +1,18 @@
 # Important libraries
 import pandas as pd 
+import tabula as tb
+import numpy as np
+import matplotlib.pyplot as plt
+
 import re
 import requests
 import time
-import xlsxwriter
 import urllib.request
 import json
-import tabula as tb
+import warnings
+import xlsxwriter
 #import PyPDF2
 import pypdf
-import warnings
-import matplotlib.pyplot as plt
-import numpy as np
 import pdfplumber
 import httpx
 
@@ -23,6 +24,7 @@ from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
 from tabula import read_pdf
+from pypdf import PdfReader
 from docx import Document
 
 # Ignore specific warning
