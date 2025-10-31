@@ -2585,6 +2585,7 @@ def results_evdokia_jewellery(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers = header)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
