@@ -1,17 +1,18 @@
 # Important libraries 
 import pandas as pd 
+import tabula as tb
+import matplotlib.pyplot as plt
+import numpy as np
+
 import re
 import requests
 import time
 import xlsxwriter
 import urllib.request
 import json
-import tabula as tb
+import warnings
 #import PyPDF2
 import pypdf
-import warnings
-import matplotlib.pyplot as plt
-import numpy as np
 import pdfplumber
 import httpx
 
@@ -2589,6 +2590,7 @@ def results_evdokia_jewellery(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers = header)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
