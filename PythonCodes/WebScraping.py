@@ -1902,7 +1902,9 @@ def results_meze(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     """
     file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
+    
     doc = Document(file_path)
+    
     for para in doc.paragraphs:
         text_ = para.text
 
@@ -1995,8 +1997,9 @@ def results_royal_cigars(u):
 def results_pydixa(u):
     
     pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
-    '''
     response = requests.get(Item_url_)
+    print(response)
+    '''
     if response.status_code!=200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -2014,11 +2017,13 @@ def results_pydixa(u):
         text = page.extract_text()
 
     matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+    price_ = float(matches[0])
     
     if matches:
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))        
         new_row.append(name_)
-        new_row.append(float(matches[0]))
+        new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
         new_row.append("Pyxida")
@@ -2722,7 +2727,6 @@ def results_premier(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
     else:
         products = all_data_products['Products']
         names = [item['name'] for item in products]
@@ -3114,9 +3118,9 @@ def results_christos_grill_seafood(u):
             if match:
                 price = match.group(1)
                 price_ = float(price)/2
-                print(price_)
 
             if price_:
+                print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
                 new_row.append(float(price_))
