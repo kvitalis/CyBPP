@@ -1007,7 +1007,7 @@ def results_CyMinistryEducation(u):
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyPost(u):
-    
+
     if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
         p=6
         d=2
@@ -1027,11 +1027,14 @@ def results_CyPost(u):
             qp=17
         elif ("30 κιλά" in name_):
             qp=32
-          
+
+    response = requests.get(Item_url_)
+    print(response)
+    
     pdf_ = tb.read_pdf(Item_url_, pages = p, pandas_options = {'header': None}, stream = True)[0]
     pdf_[d] = pdf_[d].astype('string')
     price_ = pdf_[d][qp].split(' ')[0].replace(',','.')
-    
+    print(price_)
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(float(price_))
@@ -1056,7 +1059,7 @@ def results_ewholesale(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("div",{"class":"hM4gpp"}) 
+        element_soup = soup.find_all("div", {"class":"hM4gpp"}) 
         price_= element_soup[0].text.replace(",",".").replace(" ","").replace("€","").replace("Τιμή","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1083,11 +1086,11 @@ def results_electroline(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("ins",{"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
+        element_soup = soup.find_all("ins", {"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
         if element_soup:
             price_ = element_soup[0].text.replace("\n",'').replace("€","")
         else:
-            element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
+            element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
             price_ = element_soup[0].text.replace("\n","").replace("€","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1100,7 +1103,7 @@ def results_electroline(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_EUC(u):
-    """
+    '''
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     list_euc = []
     imax = 4 # *be careful to set this value correctly when each new year's tuition fees are published* 
@@ -1112,7 +1115,10 @@ def results_EUC(u):
             word = int(word)
             list_euc.append(word)
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
-    """
+    '''
+    response = requests.get(Item_url_)
+    print(response)
+    
     pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
     amounts = []
     price_1 = 0
@@ -1548,7 +1554,7 @@ def results_rio(u):
                         website_false.append(division_)
                         website_false.append(retailer_)
                         daily_errors.loc[len(daily_errors)] = website_false
-                        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+                        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
                         
 def results_AHK(u):
     '''
@@ -1572,6 +1578,9 @@ def results_AHK(u):
             page = pdf_reader.pages[2]
             text = page.extract_text()
     '''
+    response = requests.get(Item_url_)
+    print(response)
+    
     pdf_AHK = "PDFs/AHK_Jul2025.pdf"
     
     with open(pdf_AHK, "rb") as f:
@@ -1610,8 +1619,9 @@ def results_AHK(u):
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_CERA(u):
-    
+    '''
     response = requests.get(Item_url_)
+    print(response)
     CERA = tb.read_pdf(Item_url_, pages='8', pandas_options={'header': None}, stream=True)
     amount_ = CERA[0][1].to_list()
     names_ = CERA[0][0].to_list()
@@ -1638,6 +1648,38 @@ def results_CERA(u):
                 new_row.append("Cyprus Energy Regulatory Authority")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
+    '''
+    response = requests.get(Item_url_)
+    print(response)
+    
+    ## Use other functions to read a pdf file instead of tabular.read_pdf()
+    CERA_pdf_path = "PDFs/CERA_Aug2024.pdf"
+    
+    with pdfplumber.open(CERA_pdf_path) as pdf:
+        page = pdf.pages[7]
+        text = page.extract_text()
+        
+    match_ = re.findall(r'(\d+\.\d+)\nΣυμβατική Παραγωγή - Χ.Τ.', text)
+    price_ = float(match_[0])/100
+    
+    if match_:
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Cyprus Energy Regulatory Authority")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_water(u):
     
