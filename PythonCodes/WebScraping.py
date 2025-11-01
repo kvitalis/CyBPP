@@ -1578,9 +1578,6 @@ def results_AHK(u):
             page = pdf_reader.pages[2]
             text = page.extract_text()
     '''
-    response = requests.get(Item_url_)
-    print(response)
-    
     pdf_AHK = "PDFs/AHK_Jul2025.pdf"
     
     with open(pdf_AHK, "rb") as f:
