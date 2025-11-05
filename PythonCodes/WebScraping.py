@@ -3272,8 +3272,8 @@ for u in range(0, len(urls)):
         results_nissan(u)
     elif retailer_=="Stock Center":
         results_stock_center(u)    
-    #elif retailer_=="Alter Vape":
-    #    results_AlterVape(u)    
+    elif retailer_=="Alter Vape":
+        results_AlterVape(u)    
     elif retailer_=="The CYgar shop":
         results_CYgar_shop(u)
     elif retailer_=="The Royal Cigars":
