@@ -799,18 +799,15 @@ def results_cablenet(u):
             #euro_ = element_soup[1].text.count("€")
             #price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
             price_ = element_soup[4].text.replace('€','').replace('/μήνα','')
-            print(price_)
-        
+            
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[0].text.replace("€","").replace("/μήνα",""))
-            print(price_)
         
         if name_ == "Purple Max Mobile HBO Max Edition":
             element_soup = soup.find_all("span", {"style":"font-size: 50px"})
             price_ = float(element_soup[0].text)
-            print(price_)
         
         else: 
         # Wired and Wireless telephone services	
@@ -818,11 +815,10 @@ def results_cablenet(u):
             for i in element_name:
                 if i.text == name_:
                     price_ = element_name[28].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-                    print(price_)
                 if i.text == name_:
                     price_ = element_name[33].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-                    print(price_)
-        
+                    
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
