@@ -453,7 +453,6 @@ def results_cyta(u):
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             if name_=="Κλήσεις προς σταθερό":
                 price_ = prices_[0].replace(",",".")
-                print(price_)
             if name_=="Κλήσεις προς κινητό":
                 price_ = prices_[3].replace(",",".")
                 
@@ -480,6 +479,7 @@ def results_cyta(u):
         new_row.append("CYTA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+    
     else:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -787,6 +787,7 @@ def results_cablenet(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         
@@ -796,18 +797,14 @@ def results_cablenet(u):
             #euro_ = element_soup[1].text.count("€")
             #price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
             price_ = element_soup[4].text.replace('€','').replace('/μήνα','')
-            print(price_)
         
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[0].text.replace("€","").replace("/μήνα",""))
-            print(price_)
-        
         if name_ == "Purple Max Mobile HBO Max Edition":
             element_soup = soup.find_all("span", {"style":"font-size: 50px"})
             price_ = float(element_soup[0].text)
-            print(price_)
         
         else: 
         # Wired and Wireless telephone services	
@@ -815,11 +812,10 @@ def results_cablenet(u):
             for i in element_name:
                 if i.text == name_:
                     price_ = element_name[28].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-                    print(price_)
                 if i.text == name_:
                     price_ = element_name[33].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-                    print(price_)
         
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -1376,6 +1372,7 @@ def results_primetel(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+   
     else:
         # Bundled telecommunication services	
         if (name_=="GIGA Unlimited") | (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
