@@ -456,7 +456,6 @@ def results_cyta(u):
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             if name_=="Κλήσεις προς σταθερό":
                 price_ = prices_[0].replace(",",".")
-                print(price_)
             if name_=="Κλήσεις προς κινητό":
                 price_ = prices_[3].replace(",",".")
                 
@@ -790,6 +789,7 @@ def results_cablenet(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         
