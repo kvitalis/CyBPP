@@ -242,6 +242,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
+    plt.tight_layout()   
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI.png')
     plt.show()
     
@@ -255,6 +256,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
+    plt.tight_layout()   
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI-rebased.png')
     plt.show()
     
@@ -268,6 +270,7 @@ def cystat(last_results):
     plt.legend()
     plt.xticks(rotation=90)
     plt.grid(True)
+    plt.tight_layout()   
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-Inflation.png')
     plt.show()
 
@@ -307,6 +310,7 @@ def cystat(last_results):
                   plt.ylabel("CPI (rebased)")
                   plt.legend()
                   plt.grid(True)
+                  plt.tight_layout()
                   plt.xticks(df_new["Date"], df_new["Date"].dt.strftime("%Y-%m"), rotation=90)
                   plt.show()
                   
@@ -335,6 +339,7 @@ def cystat(last_results):
            plt.ylabel("Monthly Inflation (%)")
            plt.legend()
            plt.grid(True)
+           plt.tight_layout()
     
            # Ετικέτες άξονα Χ μόνο με μήνα-έτος
            plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
