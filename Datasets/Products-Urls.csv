@@ -955,8 +955,8 @@ SpryΦυτικόΜαγειρικόΠροιόν350g,Confectionery products,spry-f
 ΑγρούΡοδόσταγμα500ml,Confectionery products,agrou-rodostagma-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Ντομάτες1kg,Fresh or chilled vegetables other than potatoes and other tubers,ntomates-1kg-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΑγγουράκιαΧωραφιού1kg,Fresh or chilled vegetables other than potatoes and other tubers,aggourakia-chorafiou-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΛεμόνιαΚίτρινα1kg,Fresh or chilled vegetables other than potatoes and other tubers,lemonia-kitrina-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-Λεμόνια1kg,Fresh or chilled vegetables other than potatoes and other tubers,lemonia-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+LemonsGreen1kg,Fresh or chilled vegetables other than potatoes and other tubers,lemonia-prasina-1kg-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lemons1kg,Fresh or chilled vegetables other than potatoes and other tubers,lemonia-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΚρεμμύδιαΚόκκιναΑκαθάριστα1kg,Fresh or chilled vegetables other than potatoes and other tubers,kremmydia-kokkina-akatharista-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΑγγουράκιαΘερμοκηπίου1kg,Fresh or chilled vegetables other than potatoes and other tubers,aggourakia-thermokipiou-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Αβοκάντο1kg,Fresh or chilled vegetables other than potatoes and other tubers,avokanto-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1106,7 +1106,7 @@ GarnierSkinActiveMoistureBombTissueMask1Τεμ28g,"Articles for personal hygiene
 GarnierSkinActiveAloeRefreshingGelWashForNormal/CombinationSkin150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",garnier-skin-active-aloe-refreshing-gel-wash-gia-kanonikesmiktes-epidermides-150ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 DermomedFreschezzaWhiteMuskShowerGel650ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dermomed-freschezza-white-musk-afroloutro-650ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 AquafreshFresh&Minty2x75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",aquafresh-fresh-minty-2x75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-SensodyneCompleteProtectionCoolMint75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",sensodyne-complete-protection-cool-mint-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+SensodyneRepair&ProtectCoolMint75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",sensodyne-repair-protect-cool-mint-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 DettolSoftOnSkinSootheLavender&VioletBlossomHandWash250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dettol-soft-on-skin-soothe-lavender-violet-blossom-kremosapouno-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 EveryDayHyperdrySuperUltraPlus18Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",every-day-hyperdry-super-ultra-plus-18tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 AlwaysDailiesFresh&ProtectNormalFreshScent30Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",always-dailies-fresh-protect-normal-fresh-scent-30tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
@@ -1183,7 +1183,7 @@ ReginaSpecialPizza1Pc330g,Pizza and quiche,regina-pitsa-spesial-1tem-330g,FOOD A
 ReginaMargheritaPizza1Pc300g,Pizza and quiche,regina-pitsa-tyri-ntomata-1tem-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ReginaΠίτσαΠεπερόνι1Τεμ300g,Pizza and quiche,regina-pitsa-peperoni-1tem-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ReginaΠίτσαΧορτοφαγική1Τεμ350g,Pizza and quiche,regina-pitsa-chortofagiki-1tem-350g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-CadburyDrinkingChocolate250g,Cocoa and powdered chocolate,cadbury-rofima-sokolatas-250g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+CadburyDrinkingChocolate500g,Cocoa and powdered chocolate,cadbury-rofima-sokolatas-500g-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 CadburyCocoa125g,Cocoa and powdered chocolate,cadbury-kakao-125g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 BlossomCocoa100g,Cocoa and powdered chocolate,blossom-kakao-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 LaikouJollyCocoa100g,Cocoa and powdered chocolate,laikou-jolly-kakao-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1208,7 +1208,7 @@ ArielColorTouchOfLenorFreshnessLiquid70Washes3.850L,Cleaning and maintenance pro
 DixanΦρεσκάδαΩκεανούΣκόνη44Πλύσεις2.2kg,Cleaning and maintenance products,dixan-freskada-okeanou-skoni-44-plyseis-22kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 EurekaActiveCareOceanFreshnessPowder50Washes2.750kg,Cleaning and maintenance products,evrika-active-care-ocean-freshness-skoni-50-plyseis-2750kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 DixanPowerCapsColor40Pcs,Cleaning and maintenance products,dixan-power-caps-color-40tem,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
-ArielAquaPoudreTouchOfLenorFreshPowder50Washes3.250kg,Cleaning and maintenance products,ariel-aqua-poudre-touch-of-lenor-fresh-skoni-50-plyseis-3250kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ProdermLiquid40Washes2.8L,Cleaning and maintenance products,proderm-ygro-40-plyseis-28l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 DettolPower&FreshSprayCitrus500ml,Cleaning and maintenance products,dettol-power-fresh-spray-citrus-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 CifClassicΚρέμαΓενικούΚαθαρισμού500ml,Cleaning and maintenance products,cif-classic-krema-genikou-katharismou-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 RoklinAntibacterialSprayΓιαΤοΜπάνιο750ml,Cleaning and maintenance products,roklin-antibacterial-spray-gia-to-mpanio-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
@@ -1257,4 +1257,5 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
