@@ -3262,7 +3262,7 @@ for u in range(0, len(urls)):
         results_water(u)
     elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/) 
         results_sewerage(u)    
-    #elif retailer_=="MotoRace": #deactivated in 21/10/2025 (run only locally) and banned access in 07/11/2025 (don't run neither locally) through a 'verify your a human' task
+    #elif retailer_=="MotoRace": #deactivated in 21/10/2025 (run only locally) and banned access in 07/11/2025 (don't run neither locally) through a 'verifying you are human' check
     #    results_moto_race(u)
     elif retailer_=="AWOL":
         results_awol(u)    
