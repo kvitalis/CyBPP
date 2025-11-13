@@ -1381,9 +1381,9 @@ def results_primetel(u):
             element_ = soup.find_all('p', {"class":"price"})
              
             if name_ == "GIGA Unlimited 5G" :
-                text_ = element_[1].text
-                pattern_ = r"(\d+\.\d+)"
-                match = re.search(pattern_, text_)
+                text_ = element_[0].text
+                pattern = r"(\d+\.\d+)"
+                match = re.search(pattern, text_)
                 price_ = match.group(1) 
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1396,8 +1396,8 @@ def results_primetel(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)    
              
             if name_ == "GIGA Unlimited 5G MAX" :
-                text_ = element_[2].text
-                pattern_ = r"(\d+\.\d+)"
+                text_ = element_[1].text
+                pattern = r"(\d+\.\d+)"
                 match = re.search(pattern, text_)
                 price_ = match.group(1) 
                 print(price_)
