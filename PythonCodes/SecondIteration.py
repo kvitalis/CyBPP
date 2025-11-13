@@ -3797,6 +3797,30 @@ new_row.append("Sewerage Board of Nicosia")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
+## BLACK FRIDAY OFFERS (11/2025)
+
+#Primetel (https://primetel.com.cy/home-fiber-tv-bundle)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fiber Family & 200Mbps")
+new_row.append(float(34.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Primetel (https://primetel.com.cy/home-fiber-tv-bundle) 
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Fiber Entertainment & 200Mbps")
+new_row.append(float(24.99))
+new_row.append("Internet access provision services")
+new_row.append("COMMUNICATION")
+new_row.append("Primetel") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
 #===============================================================================
 
 # Change the type as float
