@@ -1377,28 +1377,13 @@ def results_primetel(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         # Bundled telecommunication services	
-        if (name_=="GIGA Unlimited") | (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
+        if (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
             element_ = soup.find_all('p', {"class":"price"})
-            
-            if name_ == "GIGA Unlimited" :
-                text = element_[0].text.replace("\n","").replace(" ","").replace("from€","")
-                pattern = r"(\d+\.\d+)"
-                match = re.search(pattern, text)
-                price_ = match.group(1) 
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Primetel")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x) 
              
             if name_ == "GIGA Unlimited 5G" :
-                text = element_[1].text.replace("\n","").replace(" ","").replace("from€","")
-                pattern = r"(\d+\.\d+)"
-                match = re.search(pattern, text)
+                text_ = element_[1].text
+                pattern_ = r"(\d+\.\d+)"
+                match = re.search(pattern_, text_)
                 price_ = match.group(1) 
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1411,9 +1396,9 @@ def results_primetel(u):
                 list_['Name'] = list_['Name'].apply(lambda x:x)    
              
             if name_ == "GIGA Unlimited 5G MAX" :
-                text = element_[2].text.replace("\n","").replace(" ","").replace("from€","")
-                pattern = r"(\d+\.\d+)"
-                match = re.search(pattern, text)
+                text_ = element_[2].text
+                pattern_ = r"(\d+\.\d+)"
+                match = re.search(pattern, text_)
                 price_ = match.group(1) 
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -1454,7 +1439,9 @@ def results_primetel(u):
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-        
+
+        '''
+        *BLACK FRIDAY OFFERS 13/11/2025*
         # Internet access provision services 
         elif (name_=="Fiber Family & 200Mbps") | (name_=="Fiber Entertainment & 200Mbps") :
 
@@ -1462,9 +1449,9 @@ def results_primetel(u):
                 
             if name_ == "Fiber Family & 200Mbps" :
                     text_3 = element_[3].text
-                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_3)
+                    match = re.search(r'€\d+\ / month', text_3)
                     if match:
-                        price_ = match.group(1)   
+                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')   
                     print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
@@ -1477,9 +1464,9 @@ def results_primetel(u):
             
             if name_ == "Fiber Entertainment & 200Mbps" :
                     text_4 = element_[4].text
-                    match = re.search(r'€(\d+\.\d+) / month\n€(\d+\.\d+)/month after 12 months', text_4)
+                    match = re.search(r'€\d+\ / month', text_4)
                     if match:
-                        price_ = match.group(1)
+                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
                     print(price_)
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
@@ -1489,7 +1476,8 @@ def results_primetel(u):
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)        
-                
+        '''   
+        
 def results_rio(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -3222,7 +3210,7 @@ for u in range(0, len(urls)):
         results_cyta(u)
     #elif retailer_=="Cablenet":
     #    results_cablenet(u)  
-    elif retailer_=="Primetel":
+    elif retailer_=="Primetel": 
         results_primetel(u)    
     elif retailer_=="Epic":
         results_epic(u)
