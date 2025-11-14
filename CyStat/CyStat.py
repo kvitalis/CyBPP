@@ -9,17 +9,17 @@ from docx import Document
 from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
-#Important function
+# Important function
 def cystat(last_results):
        
-    #Main part of the web scraping 
+    # Main part of the web scraping 
     url_new = "https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
     element_1 = soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
     
-    #Calculation of the month
+    # Calculation of the month
     current_date = datetime.now()
     current_date = current_date.strftime("%Y-%m-%d")
     if isinstance(current_date, str):
@@ -33,7 +33,7 @@ def cystat(last_results):
     date = datetime(current_year, current_month, current_day)
     date_ = format_date(date, 'MMMM', locale='el')
 
-    #Fix the month
+    # Fix the month
     if (current_month==6) or (current_month==7):
         _date_=date_[:4]
     elif (current_month==5):
@@ -54,13 +54,13 @@ def cystat(last_results):
                     if percentage_value==_date_:
                         corrent_jj=jj
 
-    #Identify the correct document for the current month
+    # Identify the correct document for the current month
     anchors = element_1[int(corrent_jj)].find_all('a')
     hrefs = [a.get('href') for a in anchors]
     for href in hrefs:
         url_href = href
 
-    #Main part of the documents
+    # Main part of the documents
     url_months = "https://www.cystat.gov.cy/el"+url_href
     bs = BeautifulSoup(url_months, "html.parser")
     response = requests.get(bs)
@@ -102,16 +102,16 @@ def cystat(last_results):
         cpi_month = float(cpi_month[1].replace(",","."))
         cpi_month = round(cpi_month, 2)
         
-        #identify the monthly General CPI
+        # Identify the monthly General CPI
         monthly_gen_cpi = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
-        #date_to_find = "2025-04-24" # na mpei manual i teleutai pempti tou mina 
+        #date_to_find = "2025-04-24" #manually add the date of the last Thursday of the month 
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
         values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
         values_12 = round(values_12, 2)
         
-        #rebase the General CPI
+        # Rebase the General CPI
         rebase_offline = (cpi_month*100) / float(117.72)
         rebase_online = (values_12*100) / float(77.89)
 
@@ -134,7 +134,7 @@ def cystat(last_results):
         df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
         df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
 
-    #Offline/Official CPI per Division
+    # Offline/Official CPI per Division
     division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
 
     # *IMPORTANT NOTE*: Check the pattern_list when the CYSTAT official report docx has changes w.r.t the previous release !!! 
@@ -150,7 +150,7 @@ def cystat(last_results):
                   r"Εκπαίδευση\s+(\d+,\d+)\s+(\d+,\d+)", #9
                   r"Εστιατόρια και Ξενοδοχεία\s+(\d+,\d+)\s+(\d+,\d+)", #10
                   r"Άλλα Αγαθά και Υπηρεσίες\s+(\d+,\d+)\s+(\d+,\d+)" #11
-    ]
+                 ]
     
     division_name=["FOOD AND NON-ALCOHOLIC BEVERAGES",
                    "ALCOHOLIC BEVERAGES AND TOBACCO",
@@ -164,7 +164,7 @@ def cystat(last_results):
                    "EDUCATION",
                    "RESTAURANTS AND HOTELS",
                    "MISCELLANEOUS GOODS AND SERVICES"   
-    ]
+                  ]
     
     for i in range(0,len(pattern_list)):
         match_ = re.search(pattern_list[i], doc_text)
@@ -202,7 +202,7 @@ def cystat(last_results):
         float_index_list = [int(i) for i in index_list]
         division_cpi.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
     
-    #Online CPI per Division
+    # Online CPI per Division
     daily_cpi_online = pd.read_csv("Results/Daily/Daily-CPI-Division.csv")
     daily_cpi_online = daily_cpi_online[daily_cpi_online["Date"] == correction_day.strftime("%Y-%m-%d")]
 
@@ -229,10 +229,10 @@ def cystat(last_results):
 
     division_cpi.to_csv("CyStat/Division-CPI-Offline-VS-Online.csv", index=False)
 
-    #Construct the plots/visualizations
+    # Construct the plots/visualizations
     cystat_gen_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
 
-    #Plot: Official vs Online General CPI
+    # Plot: Official vs Online General CPI
     plt.figure(figsize=(12, 6))
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (2015=100)'], label='Official (2015=100)', marker='o', color='red')
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=77.89)'], label='Online (27/06/2024=77.89)', marker='o', color='blue')
@@ -246,7 +246,7 @@ def cystat(last_results):
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI.png')
     plt.show()
     
-    #Plot: Official vs Online General CPI (*rebased*)
+    # Plot: Official vs Online General CPI (*rebased*)
     plt.figure(figsize=(12, 6))
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official (27/06/2024=100)'], label='Official', marker='o', color='red')
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online (27/06/2024=100)'], label='Online', marker='o', color='blue')
@@ -260,7 +260,7 @@ def cystat(last_results):
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-General-CPI-rebased.png')
     plt.show()
     
-    #Plot: Official vs Online Inflation
+    # Plot: Official vs Online Inflation
     plt.figure(figsize=(12, 6))
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Official Inflation (%)'], label='Official/Offline', marker='o', color='red')
     plt.plot(cystat_gen_cpi['Period'], cystat_gen_cpi['Online Inflation (%)'], label='Online', marker='o', color='blue')
@@ -274,7 +274,7 @@ def cystat(last_results):
     plt.savefig('CyStat/General_Offline_Vs_Online/Official-vs-Online-Inflation.png')
     plt.show()
 
-    #Plots: Official vs Online *rebased* CPI per Division
+    # Plots: Official vs Online *rebased* CPI per Division
     df_ = pd.read_csv(r"CyStat/Division-CPI-Offline-VS-Online.csv")
     df_["Period"] = pd.to_datetime(df_["Period"], format="%Y-%m", errors="coerce")
     division_ = df_['Division'].unique()
@@ -320,7 +320,7 @@ def cystat(last_results):
                   plt.savefig(path_, dpi=300)
                   plt.show()
 
-    #Plots: Official vs Online Inflation per Division
+    # Plots: Official vs Online Inflation per Division
     division_ = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
     division_name_ = division_["Division"].unique()
 
@@ -333,7 +333,7 @@ def cystat(last_results):
            plt.plot(division_1 ["Date"], division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official")
            plt.plot(division_1 ["Date"], division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online")
                   
-           # Τίτλος και labels
+           # Title και labels
            plt.title(jj)
            plt.xlabel("Date")
            plt.ylabel("Monthly Inflation (%)")
@@ -341,7 +341,7 @@ def cystat(last_results):
            plt.grid(True)
            plt.tight_layout()
     
-           # Ετικέτες άξονα Χ μόνο με μήνα-έτος
+           # Labels of x-axis display only month-year
            plt.xticks(division_1["Date"], division_1["Date"].dt.strftime("%Y-%m"), rotation=90)
                       
            filename = division_name.replace(" ", "_").replace(",", "") + "_Inflation.png"
@@ -351,7 +351,7 @@ def cystat(last_results):
            plt.show()
 
 def is_first_thursday(date):
-    #date = '2025-10-02'
+    #date = '2025-10-02' #manually add the date 
     date = datetime.strptime(date, "%Y-%m-%d")
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
@@ -371,12 +371,15 @@ def is_second_thursday(date):
     last_results = second_thursday.strftime("%Y-%m-%d")
     cystat(last_results)
 
-holiday_list_= ['2026-01-01','2026-10-01' ,'2027-04-01','2031-05-01' , '2032-01-01' , '2032-04-01' ] # days that are holiday leave
-holiday_list_2= ['2026-01-08','2026-10-08' ,'2027-04-08','2031-05-08' , '2032-01-08' , '2032-04-08' ] # Correct day to run the code
+# dates of first Thursdays per month which correspond to public holidays
+holiday_list_= ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01-01', '2032-04-01']
+
+# if the first Thursday of the month is a public holiday, the code runs on the next (i.e. second) Thursday 
+holiday_list_2 = ['2026-01-08', '2026-10-08', '2027-04-08', '2031-05-08', '2032-01-08', '2032-04-08'] 
 
 current_date = datetime.now().strftime("%Y-%m-%d")
 
-## This is comments because of the Kendea's Changed for holidays leave
+## Note: Kendeas deactivated the following two code lines because of his above changes regarding public holidays
 #is_first_thursday(current_date)  #activate if the first Thursday of the month is NOT a public holiday 
 #is_second_thursday(current_date) #activate if the first Thursday of the month is a public holiday 
 
