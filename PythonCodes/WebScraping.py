@@ -1069,7 +1069,7 @@ def results_CyPost(u):
         table = tables[0]  
         df = pd.DataFrame(table[1:], columns=table[0])
         df = df.applymap(lambda x: str(x).strip() if x is not None else x)
-        row = df[df[df.columns[0]] == target_weight]
+        row = df[df[df.columns[1]] == target_weight]
         price_ = row.iloc[0, 1]
         price_ = price_.replace(',','.')
     
