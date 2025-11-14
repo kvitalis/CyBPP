@@ -140,8 +140,8 @@ def results_cheapbasket(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
         else:
-            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
-            element_price = element_[0].find_all("span",{"class":"woocommerce-Price-amount amount"})
+            element_ = soup.find_all("div", {"class":"shop-detail-right klb-product-right"})
+            element_price = element_[0].find_all("span", {"class":"woocommerce-Price-amount amount"})
             price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
             print(price_)
             
@@ -257,8 +257,8 @@ for u in range(0, len(urls)):
         results_alphamega(u)  
     #elif retailer_ == "SupermarketCy":
         #results_supermarketcy(u)      
-    elif retailer_ == "Cheap Basket":
-        results_cheapbasket(u)  
+    #elif retailer_ == "Cheap Basket": *deactivated in 14/11/2025 since it changed the structure of its products URLs*
+    #    results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
     #elif retailer_ == "METRO":
