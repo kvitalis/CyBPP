@@ -1031,12 +1031,12 @@ def results_CyPost(u):
     #price_ = pdf_[d][qp].split(' ')[0].replace(',','.')
     #print(price_)
 
-    pdf_path = r"C:\Users\user\Desktop\CyPost_Nov25.pdf"
+    pdf_path = r"PDFs/CyPost_Nov25.pdf"
 
     if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
-        page = pdf.pages[6]
-        tables = page.extract_tables()
+            page = pdf.pages[6]
+            tables = page.extract_tables()
         
         if ("50 γρ." in name_):
             target_weight="50"
@@ -1055,8 +1055,8 @@ def results_CyPost(u):
         
     if ("ΔΕΜΑΤΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
-        page = pdf.pages[10]
-        tables = page.extract_tables()
+            page = pdf.pages[10]
+            tables = page.extract_tables()
 
         if ("0.5 κιλό" in name_):
             target_weight="0,5"
@@ -1069,7 +1069,7 @@ def results_CyPost(u):
         table = tables[0]  
         df = pd.DataFrame(table[1:], columns=table[0])
         df = df.applymap(lambda x: str(x).strip() if x is not None else x)
-        row = df[df[df.columns[1]] == target_weight]
+        row = df[df[df.columns[0]] == target_weight]
         price_ = row.iloc[0, 1]
         price_ = price_.replace(',','.')
     
