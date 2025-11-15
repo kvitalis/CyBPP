@@ -23,7 +23,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from urllib.error import URLError
-from tabula import read_pdf
+#from tabula import read_pdf
 from pypdf import PdfReader
 from docx import Document
 
@@ -1003,35 +1003,38 @@ def results_CyMinistryEducation(u):
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyPost(u):
-
-    #if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
-    #    p=6
-    #    d=2
-    #    if ("50 γρ." in name_):
-    #        qp=14
-    #    elif ("500 γρ." in name_):
-    #        qp=21
-    #    elif ("2000 γρ." in name_):
-    #        qp=44
+    '''
+    #code using the products URLs and the read_pdf function to read the URL-PDF file: 
+    if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
+        p=6
+        d=2
+        if ("50 γρ." in name_):
+            qp=14
+        elif ("500 γρ." in name_):
+            qp=21
+        elif ("2000 γρ." in name_):
+            qp=44
         
-    #if ("ΔΕΜΑΤΩΝ" in name_):
-    #    p=11
-    #    d=1
-    #    if ("0.5 κιλό" in name_):
-    #        qp=2
-    #    elif("15 κιλά" in name_):
-    #        qp=17
-    #    elif ("30 κιλά" in name_):
-    #        qp=32
+    if ("ΔΕΜΑΤΩΝ" in name_):
+        p=11
+        d=1
+        if ("0.5 κιλό" in name_):
+            qp=2
+        elif("15 κιλά" in name_):
+            qp=17
+        elif ("30 κιλά" in name_):
+            qp=32
 
-    #response = requests.get(Item_url_)
-    #print(response)
-    #pdf_ = tb.read_pdf(Item_url_, pages = p, pandas_options = {'header': None}, stream = True)[0]
-    #pdf_[d] = pdf_[d].astype('string')
-    #price_ = pdf_[d][qp].split(' ')[0].replace(',','.')
-    #print(price_)
-
-    pdf_path = r"PDFs/CyPost_Nov25.pdf"
+    response = requests.get(Item_url_)
+    print(response)
+    pdf_ = tb.read_pdf(Item_url_, pages = p, pandas_options = {'header': None}, stream = True)[0]
+    pdf_[d] = pdf_[d].astype('string')
+    price_ = pdf_[d][qp].split(' ')[0].replace(',','.')
+    print(price_)
+    '''
+    
+    #code using the PDF file and the pdfplumber function to read the PDF file: 
+    pdf_path = r"PDFs/CyprusPost_Jun2018.pdf"
 
     if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
@@ -1039,15 +1042,15 @@ def results_CyPost(u):
             tables = page.extract_tables()
         
         if ("50 γρ." in name_):
-            target_weight="50"
+            target_weight = "50"
         elif ("500 γρ." in name_):
-            target_weight="500"
+            target_weight = "500"
         elif ("2000 γρ." in name_):
-            target_weight="2000"
+            target_weight = "2000"
 
         #main part
         table = tables[0]  
-        df = pd.DataFrame(table[1:], columns=table[0])
+        df = pd.DataFrame(table[1:], columns = table[0])
         df = df.applymap(lambda x: str(x).strip() if x is not None else x)
         filtered = df[df.iloc[:, 1] == target_weight]
         price_ = filtered.iloc[:, 2] .values[0]
@@ -1059,20 +1062,21 @@ def results_CyPost(u):
             tables = page.extract_tables()
 
         if ("0.5 κιλό" in name_):
-            target_weight="0,5"
+            target_weight = "0,5"
         elif("15 κιλά" in name_):
-            target_weight="15"
+            target_weight = "15"
         elif ("30 κιλά" in name_):
-            target_weight="30"    
+            target_weight = "30"    
         
         #main part
         table = tables[0]  
-        df = pd.DataFrame(table[1:], columns=table[0])
+        df = pd.DataFrame(table[1:], columns = table[0])
         df = df.applymap(lambda x: str(x).strip() if x is not None else x)
         row = df[df[df.columns[0]] == target_weight]
         price_ = row.iloc[0, 1]
         price_ = price_.replace(',','.')
-    
+
+    print(price_)
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(float(price_))
