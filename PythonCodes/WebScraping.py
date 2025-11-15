@@ -1050,8 +1050,8 @@ def results_CyPost(u):
         df = pd.DataFrame(table[1:], columns=table[0])
         df = df.applymap(lambda x: str(x).strip() if x is not None else x)
         filtered = df[df.iloc[:, 1] == target_weight]
-        result = filtered.iloc[:, 2] .values[0]
-        print(result.replace(',','.'))
+        price_ = filtered.iloc[:, 2] .values[0]
+        price_ = price_.replace(',','.')
         
     if ("ΔΕΜΑΤΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
