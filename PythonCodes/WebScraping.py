@@ -1035,7 +1035,7 @@ def results_CyPost(u):
 
     if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
-            page = pdf.pages[6]
+            page = pdf.pages[5]
             tables = page.extract_tables()
         
         if ("50 γρ." in name_):
