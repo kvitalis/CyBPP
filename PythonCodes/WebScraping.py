@@ -3270,8 +3270,8 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
-    #elif retailer_=="Evdokia Jewellery": *deactivated in 14/11/25 because its webpage wasn't working (response=500)*
-    #    results_evdokia_jewellery(u)
+    elif retailer_=="Evdokia Jewellery": #*deactivated in 14/11/25 because its webpage wasn't working (response=500)*
+        results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
@@ -3330,8 +3330,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="Piatsa Gourounaki":
         results_piatsa_gourounaki(u)
-    #elif retailer_=="Pagkratios":
-    #    results_pagkratios(u)
+    elif retailer_=="Pagkratios":
+        results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
     #elif retailer_=="Intercity Buses":
