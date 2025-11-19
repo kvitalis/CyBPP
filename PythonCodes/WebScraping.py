@@ -3270,7 +3270,7 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
-    #elif retailer_=="Evdokia Jewellery": #*deactivated in 14/11/25 because its webpage isn't working (response=500)*
+    #elif retailer_=="Evdokia Jewellery": #*deactivated in 14/11/25 due to maintenance reasons*
     #    results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
