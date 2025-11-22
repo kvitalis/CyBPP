@@ -1825,7 +1825,7 @@ def results_wolt(u):
         soup = BeautifulSoup(response.content, "html.parser")
         element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
         if element_name:
-            price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","")
+            price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","").replace(" ","")
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
             new_row.append(name_)
