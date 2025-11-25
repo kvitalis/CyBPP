@@ -810,12 +810,12 @@ def results_cablenet(u):
                 price_ = element_soup[5].text.replace('€','').replace('/μήνα','')    
         
         # Bundled telecommunication services
-        if name_ == "5G Unlimited":
+        elif (name_=="5G Unlimited") | (name_=="5G Unlimited Max"):
             element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
-            price_ = float(element_soup[2].text.replace("€","").replace("/μήνα",""))
-        if name_ == "5G Unlimited Max":
-            element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
-            price_ = float(element_soup[8].text.replace("€","").replace("/μήνα",""))
+            if name_ == "5G Unlimited":
+                price_ = float(element_soup[2].text.replace("€","").replace("/μήνα",""))
+            if name_ == "5G Unlimited Max":
+                price_ = float(element_soup[8].text.replace("€","").replace("/μήνα",""))
         
         else: 
             
