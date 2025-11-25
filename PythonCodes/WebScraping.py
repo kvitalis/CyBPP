@@ -515,7 +515,7 @@ def results_epic(u):
     else:
         #Bundled telecommunication services
         if name_ == "5G Unlimited Max Plus":
-            element_ = soup.find_all("div",{"class":"price"})
+            element_ = soup.find_all("div", {"class":"price"})
             price_ = element_[0].text.replace("€","")
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -528,7 +528,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
         
         if name_ == "5G Unlimited Max":
-            element_ = soup.find_all("div",{"class":"price"})
+            element_ = soup.find_all("div", {"class":"price"})
             price_ = element_[1].text.replace("€","")
             print(price_)
             new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -540,9 +540,9 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
         
-        #Wireless and Wired telephone services
+        #Wireless/Wired telephone services
         if name_ == "To fixed telephony lines of other providers":
-            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
             pattern = r"To fixed telephony lines of other providers.*?\n(\d+\.\d+)$" 
             match = re.search(pattern, data, re.MULTILINE)
@@ -560,7 +560,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)      
         
         if name_ == "To mobile telephony lines of other providers":
-            element_ = soup.find_all("table",{"class":"yellow-top-zebra"})
+            element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
             pattern = r"To mobile telephony lines of other providers.*?\n(\d+\.\d+)$" 
             match = re.search(pattern, data, re.MULTILINE)
@@ -579,7 +579,7 @@ def results_epic(u):
         
         #Internet access provision services    
         if name_ == "Broadband Homebox 1":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
+            element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
             pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
             match = re.search(pattern, data, re.MULTILINE)
@@ -597,7 +597,7 @@ def results_epic(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
         
         if name_ == "Broadband Homebox 2":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
+            element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
             pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
             match = re.search(pattern, data, re.MULTILINE)
@@ -613,24 +613,6 @@ def results_epic(u):
             new_row.append("Epic")
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)    
-        
-        if name_ == "Broadband Homebox 3":
-            element_ = soup.find_all("table",{"class":"yellow-top"})
-            data = element_[0].text.replace("€","")
-            pattern = r"Monthly Fee.*?\n(\d+\.\d+)\n(\d+\.\d+)\n(\d+\.\d+)$" #1st, 2nd, and 3rd values
-            match = re.search(pattern, data, re.MULTILINE)
-            if match:
-                value = match.group(3) # Extract the captured group (3rd value)
-            price_ = float(value)
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Epic")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x) 
 
 def results_Athlokinisi(u):
         
@@ -802,14 +784,12 @@ def results_cablenet(u):
         soup = BeautifulSoup(response.content, "html.parser")
         
         # Internet access provision services
-        if (name_=="Purple Internet 200Mbps") | (name_=="Purple Internet 300Mbps") | (name_=="Purple Internet 300Mbps HBO Max Edition"): 
+        if (name_=="Purple Internet 200Mbps") | (name_=="Purple Internet 300Mbps") : 
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"}) 
             if name_=="Purple Internet 200Mbps":
                 price_ = element_soup[2].text.replace('€','').replace('/μήνα','')
             if name_=="Purple Internet 300Mbps":
                 price_ = element_soup[4].text.replace('€','').replace('/μήνα','') 
-            if name_=="Purple Internet 300Mbps HBO Max Edition":
-                price_ = element_soup[5].text.replace('€','').replace('/μήνα','')    
             
         # Bundled telecommunication services
         elif (name_=="5G Unlimited") | (name_=="5G Unlimited Max"):
@@ -1435,6 +1415,7 @@ def results_primetel(u):
     else:
         # Bundled telecommunication services	
         if (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
+            
             element_ = soup.find_all('p', {"class":"price"})
              
             if name_ == "GIGA Unlimited 5G" :
@@ -1467,7 +1448,7 @@ def results_primetel(u):
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-        # Wired & Wireless telephone services           
+        # Wired/Wireless telephone services           
         elif (name_=="Calls to other providers landline") | (name_=="Calls to other providers mobile") :
             
             element_ = soup.find_all("table", {"id":"call_rates"}, {"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
@@ -1496,20 +1477,18 @@ def results_primetel(u):
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
-
-        '''
-        *BLACK FRIDAY OFFERS 13/11/2025*
+                
         # Internet access provision services 
-        elif (name_=="Fiber Family & 200Mbps") | (name_=="Fiber Entertainment & 200Mbps") :
+        elif  (name_=="Fiber Premium Extra & 200Mbps") | (name_=="Fiber Premium & 200Mbps") :
 
             element_ = soup.find_all("div", {"class":"price_tv_pack"})
-                
-            if name_ == "Fiber Family & 200Mbps" :
-                    text_3 = element_[3].text
-                    match = re.search(r'€\d+\ / month', text_3)
+            
+            if name_ == "Fiber Premium Extra & 200Mbps" :
+                    text_1 = element_[1].text
+                    match = re.search(r'€\d+\ / month', text_1)
                     if match:
-                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')   
-                    print(price_)
+                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
+                    print(price_)    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1519,12 +1498,12 @@ def results_primetel(u):
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
             
-            if name_ == "Fiber Entertainment & 200Mbps" :
-                    text_4 = element_[4].text
-                    match = re.search(r'€\d+\ / month', text_4)
+            if name_ == "Fiber Premium & 200Mbps" :
+                    text_2 = element_[2].text
+                    match = re.search(r'€\d+\ / month', text_2)
                     if match:
                         price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
-                    print(price_)
+                    print(price_)    
                     new_row.append(datetime.now().strftime('%Y-%m-%d'))
                     new_row.append(name_)
                     new_row.append(float(price_))
@@ -1532,8 +1511,7 @@ def results_primetel(u):
                     new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)        
-        '''   
+                    list_['Name'] = list_['Name'].apply(lambda x:x)          
         
 def results_rio(u):
     
