@@ -457,10 +457,13 @@ def results_cyta(u):
             if name_=="Κλήσεις προς κινητό":
                 price_ = prices_[3].replace(",",".")
                 
-        # Internet access provision services	
-        elif name_=="Internet Home 200Mbps" :
+        # Internet access provision services
+        elif (name_=="Internet Home 200Mbps") | (name_=="Internet Home 500Mbps"):
             element_soup = soup.find_all("div", {"class":"price-block py-2 text-center"})
-            element_ = element_soup[0].text
+            if name_=="Internet Home 200Mbps":
+                element_ = element_soup[0].text
+            if name_=="Internet Home 500Mbps":
+                element_ = element_soup[1].text    
             prices_ = re.findall(r'€(\d+,\d+)', element_)
             price_ = prices_[0].replace(",",".")
             
