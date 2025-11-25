@@ -801,11 +801,12 @@ def results_cablenet(u):
         
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
-            element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
-            price_ = float(element_soup[0].text.replace("€","").replace("/μήνα",""))
-        if name_ == "Purple Max Mobile HBO Max Edition":
-            element_soup = soup.find_all("span", {"style":"font-size: 50px"})
-            price_ = float(element_soup[0].text)
+            element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
+            price_ = float(element_soup[2].text.replace("€","").replace("/μήνα",""))
+        
+        if name_ == "5G Unlimited Max":
+            element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
+            price_ = float(element_soup[8].text.replace("€","").replace("/μήνα",""))
         
         else: 
         # Wired and Wireless telephone services	
