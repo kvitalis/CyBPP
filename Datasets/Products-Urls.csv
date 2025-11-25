@@ -68,8 +68,8 @@ GIGA Unlimited 5G,Bundled telecommunication services,https://primetel.com.cy/gig
 GIGA Unlimited 5G MAX,Bundled telecommunication services,https://primetel.com.cy/giga-unlimited,COMMUNICATION,Primetel
 Calls to other providers landline,Wired telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
 Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
-Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
-Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/mobile/postpaid-charge-rates/,COMMUNICATION,Cablenet
+Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/postpaid-charge-rates/,COMMUNICATION,Cablenet
+Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/postpaid-charge-rates/,COMMUNICATION,Cablenet
 Purple Internet HBO Max Edition,Internet access provision services,https://cablenet.com.cy/internet/purple-internet/,COMMUNICATION,Cablenet
 Purple Max Mobile HBO Max Edition,Bundled telecommunication services,https://cablenet.com.cy/hbo-max/,COMMUNICATION,Cablenet
 5G Unlimited,Bundled telecommunication services,https://cablenet.com.cy/mobile/5g-unlimited/,COMMUNICATION,Cablenet
@@ -1253,6 +1253,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
