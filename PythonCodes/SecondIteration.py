@@ -796,26 +796,30 @@ def results_cablenet(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     
     else:
+        
         soup = BeautifulSoup(response.content, "html.parser")
         
-        # Internet access provision services	
-        if name_ == "Purple Internet HBO Max Edition": 
+        # Internet access provision services
+        if (name_=="Purple Internet 200Mbps") | (name_=="Purple Internet 300Mbps") | (name_=="Purple Internet 300Mbps HBO Max Edition"): 
             element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"}) 
-            #euro_ = element_soup[1].text.count("€")
-            #price_ = float(element_soup[1].text.replace(" ",'').split("€")[euro_].split("/")[0])
-            price_ = element_soup[4].text.replace('€','').replace('/μήνα','')
+            if name_=="Purple Internet 200Mbps":
+                price_ = element_soup[2].text.replace('€','').replace('/μήνα','')
+            if name_=="Purple Internet 300Mbps":
+                price_ = element_soup[4].text.replace('€','').replace('/μήνα','') 
+            if name_=="Purple Internet 300Mbps HBO Max Edition":
+                price_ = element_soup[5].text.replace('€','').replace('/μήνα','')    
         
         # Bundled telecommunication services
         if name_ == "5G Unlimited":
             element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[2].text.replace("€","").replace("/μήνα",""))
-        
         if name_ == "5G Unlimited Max":
             element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
             price_ = float(element_soup[8].text.replace("€","").replace("/μήνα",""))
         
         else: 
-        # Wired and Wireless telephone services	
+            
+        # Wired/Wireless telephone services	
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text == name_:
