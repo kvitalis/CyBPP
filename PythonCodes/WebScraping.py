@@ -472,12 +472,10 @@ def results_cyta(u):
             element_soup = soup.find_all("h4", {"class":"text-24 text-center mb-0 pb-0"})
             if name_=="FREEDOM":
                 element_ = element_soup[0].text
-                prices_ = re.findall(r'€(\d+,\d+)', element_)
-                price_ = prices_[0].replace(",",".")
             if name_=="FREEDOM Plus":
                 element_ = element_soup[1].text
-                prices_ = re.findall(r'€(\d+,\d+)', element_)
-                price_ = prices_[0].replace(",",".")    
+            prices_ = re.findall(r'€(\d+,\d+)', element_)
+            price_ = prices_[0].replace(",",".")    
             
         print(price_)   
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
