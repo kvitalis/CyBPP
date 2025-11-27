@@ -2656,7 +2656,7 @@ def results_evdokia_jewellery(u):
         soup = BeautifulSoup(response.content, "html.parser")
         price_soup = soup.find('p', class_='price')
         price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
-        price_ = price_element.text.replace("€","")
+        price_ = price_element.text.replace("€","").replace(",",".")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
