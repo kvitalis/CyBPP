@@ -2657,7 +2657,7 @@ def results_evdokia_jewellery(u):
         soup = BeautifulSoup(response.content, "html.parser")
         price_soup = soup.find('p', class_='price')
         price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
-        price_ = price_element.text.replace("€","")
+        price_ = price_element.text.replace("€","").replace(",",".")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -3259,8 +3259,8 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
-    #elif retailer_=="Evdokia Jewellery": #*deactivated in 14/11/25 due to maintenance reasons*
-    #    results_evdokia_jewellery(u)
+    elif retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons*
+        results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
     elif retailer_=="Centroptical":
