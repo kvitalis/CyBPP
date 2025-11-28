@@ -2228,7 +2228,7 @@ def results_CERA(u):
 
 def results_water(u):
     
-    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/water-supply/water-fees-wbn/)
     if "Nicosia" in retailer_:
         city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
