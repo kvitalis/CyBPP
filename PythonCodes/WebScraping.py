@@ -2228,7 +2228,7 @@ def results_CERA(u):
 
 def results_water(u):
     
-    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/water-supply/water-fees-wbn/)
+    ### *Note*: EOA Nicosia banned access in 17/10/2025 (https://ndlgo.org.cy/water-supply/water-fees-wbn/)
     if "Nicosia" in retailer_:
         city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2312,7 +2312,7 @@ def results_sewerage(u):
     
     values = 0
 
-    ### *Note*: Nicosia ban access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/)
+    ### *Note*: EOA Nicosia banned access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/)
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
