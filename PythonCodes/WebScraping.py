@@ -189,6 +189,80 @@ def results_alphamega(u):
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)  
 
+def results_cheapbasket(u):
+    
+    url = "https://cheapbasket.com.cy/product/" + Item_url_
+    response = requests.get(url)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        if ("New Products" in soup.get_text()):
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        else:
+            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
+            element_price = element_[0].find_all("span", {"class":"woocommerce-Price-amount amount"})
+            price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Cheap Basket")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_opacy(u):
+    
+    url_ = "https://opa.cy/product/" + Item_url_
+    response = requests.get(url_)
+    
+    if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        element_ = soup.find_all("span",{"class":"product-span price"})
+        price_ = element_[0].text.replace("Price: €","")
+        print(price_)
+        if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Opa")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        else:
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Opa")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_fueldaddy(u):
     
     url_new = "https://www.fueldaddy.com.cy/" + Item_url_
@@ -273,6 +347,279 @@ def results_fueldaddy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_evdokia_jewellery(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        price_soup = soup.find('p', class_='price')
+        price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = price_element.text.replace("€","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Evdokia Jewellery")
+        list_.loc[len(list_)] = new_row
+
+def results_centroptical(u):
+    
+    response = requests.get(Item_url_, headers = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0"})
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        price_element = soup.find('p', class_ = 'price')
+        bdi_element = price_element.find('bdi')
+        price_ = bdi_element.text.replace("€","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Centroptical")
+        list_.loc[len(list_)] = new_row
+
+def results_lensescy(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs, {'headers':header})
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('div', {"class":"product-price"})
+        price_ = element_name[0].text.replace("€","").replace(" ","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append("Corrective eye-glasses and contact lenses")
+        new_row.append("HEALTH")
+        new_row.append("LensesCY")
+        list_.loc[len(list_)] = new_row
+
+def results_intercity_buses(u):
+    
+    url_new = "https://intercity-buses.com/en/routes/" + Item_url_
+
+    ### without headers
+    ## 1
+    #response = requests.get(url_new)
+    ## 2
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+    
+    ### with headers
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## 1
+    response = requests.get(url_new, {'headers':header})
+    ## 2
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+
+    print(response)
+        
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
+        if table_:
+            element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
+            for i in range(0,2):
+                new_row = []
+                if i%2 == 0:
+                    ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
+                    price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
+                    if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
+                        pass
+                    else:
+                        print(price_)
+                        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                        new_row.append(ticket_name_ + Item_url_)
+                        new_row.append(float(price_))
+                        new_row.append(subclass_)
+                        new_row.append(division_)
+                        new_row.append("Intercity Buses")
+                        list_.loc[len(list_)] = new_row
+                        
+def results_cyprus_transport(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers = header)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        wrapper = soup.find_all('tbody')[0]
+        data = []
+        for row in wrapper.find_all('tr'):
+            row_data = []
+            for cell in row.find_all(['td', 'th']):
+                row_data.append(cell.get_text().strip())
+            data.append(row_data)
+        df1 = pd.DataFrame(data)
+        df1.columns = ['Ticket type', 'Paper Ticket (CASH)', 'Plastic ANONYMOUS Card', 'Plastic PERSONALISED Motion Bus Card - Normal Charge', 'Plastic PERSONALISED Motion Bus Card - Beneficiaries of 50%' ]
+        df1 = df1.drop(0)
+        df1 = df1.drop(1)
+        df1 = df1.drop(6)
+        df1 = df1.set_index('Ticket type')
+        new_list = []
+        
+        for column in df1.columns:  
+            for index in df1.index:
+                value = df1.loc[index, column]
+                new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass': 'Passenger transport by bus and coach', 'Division': 'TRANSPORT', 'Retailer': 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
+                new_list.append(new_row)
+                
+        df2 = pd.DataFrame.from_records(new_list)
+        df_cy_transport = df2[df2["Price"] != '-']
+        df_cy_transport['Price'] = df_cy_transport['Price'].str.replace('€', '').replace('Αρχική τιμή ', '')
+        df_cy_transport['Price'] = df_cy_transport['Price'].astype(float)
+        df_cy_transport.reset_index(drop = True, inplace = True)
+
+        for index, row in df_cy_transport.iterrows():
+            if row['Name'] == name_:
+                list_.loc[len(list_)] = row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+                
+def results_max_7_taxi(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, {'headers':header})
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        table_ = soup.find('table', {"class" :'tbl',"style":"width: 100%;","border":"1","frame":"void","cellspacing":"1","cellpadding":"3","align":"center"})
+        table_ = table_.text
+        if "Initial charge" in name_:
+            pattern = r'Initial charge\s+([\d,]+)\s+([\d,]+)'
+        if "Fare per Km" in name_:
+            pattern = r'Fare per Km\s+([\d,]+)\s+([\d,]+)'  
+        matches = re.findall(pattern, table_)
+        charges_ = [float(charge.replace(',', '.')) for charge in matches[0]]
+        
+        for i in range(0,2):
+            if i == 0:
+                add_ = "Fixed"
+            if i == 1:
+                add_ = "Variable"
+            new_row = []
+            new_row.append(datetime.today().strftime("%Y-%m-%d"))
+            new_row.append(name_ + add_)
+            print(float(charges_[i]))
+            new_row.append(float(charges_[i]))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Max 7 Taxi") 
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_costastheodorou(u):
+    
+    response = requests.get(Item_url_)
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all("p", {"class":"price"})
+        price_ = element_name[0].text.replace("€","").split('\xa0')[0]
+        print(price_)
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Costas Theodorou")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_leroymerlin(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, {'headers':header})
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if response.status_code != 200 or ("Η σελίδα που αναζητάτε δεν βρέθηκε." in soup.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_ = soup.find_all("span",{"class":"priceBigMain"})
+        price_ = element_[0].text.replace("€","").replace(" ","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Leroy Merlin") 
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_ikea(u):
     '''
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -350,7 +697,130 @@ def results_ikea(u):
         new_row.append("IKEA")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x) 
-                     
+
+def results_premier(u):
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+        'Origin': 'https://premierlaundry.com.cy',
+        'Connection': 'keep-alive',
+        'Referer': 'https://premierlaundry.com.cy/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'cross-site',}
+
+    params = { }
+    json_data = {'email': 'kendeas123@gmail.com', 'password': 'Kendeas',}
+    response = requests.post('https://cleancloudapp.com/webapp/public/api/auth/login/16130', params=params, headers=headers, json=json_data,)
+    data = response.json()
+    user_id = data['id']
+    token = data['token']
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+        'X-CC-User': str(user_id), 
+        'X-CC-Token': token, 
+        'Origin': 'https://premierlaundry.com.cy',
+        'Connection': 'keep-alive',
+        'Referer': 'https://premierlaundry.com.cy/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'cross-site',}
+
+    params = {'ccascv': '0.20327901592645015',}
+    json_data = {'priceListId': 0,}
+    response = requests.post('https://cleancloudapp.com/webapp/public/api/store/products', params=params, headers=headers, json=json_data,)
+    all_data_products = response.json()
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        products = all_data_products['Products']
+        names = [item['name'] for item in products]
+        price = [item["price"] for item in products]
+        for i in range(len(names)):
+            if name_ == names[i]:
+                new_row.append(datetime.today().strftime("%Y-%m-%d"))
+                new_row.append(names[i])
+                new_row.append(float(price[i]))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Premier Laundry")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_musicavenue(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, {'headers':header})
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        name = soup.find('h1', class_ = 'product-title')
+        new_row.append(name_)
+        price_ = soup.find_all("bdi")[1].text.replace("€", "").replace(",", "")
+        print(price_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Musicavenue")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_electroline(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_soup = soup.find_all("ins", {"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
+        if element_soup:
+            price_ = element_soup[0].text.replace("\n",'').replace("€","")
+        else:
+            element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
+            price_ = element_soup[0].text.replace("\n","").replace("€","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Electroline")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_stephanis(u):
 
     ### with headers 
@@ -398,6 +868,74 @@ def results_stephanis(u):
         new_row.append("Stephanis")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_public(u):
+        
+    ###  without headers 
+    ## 1 
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    ## 2 
+    #response = requests.get(Item_url_)
+
+    ### with headers 
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+    ## 2 
+    #response = requests.get(Item_url_, headers = header) 
+
+    print(response)
+    
+    if (response.status_code != 200) : 
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        data = response.json()
+        price_ = data["prices"][0]["salePrice"] #OR "listPrice"
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Public")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_parga(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, {'headers':header})
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'productPriceStore'})
+        price_ = element_[1].text.replace("€","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Parga")
+        list_.loc[len(list_)] = new_row
 
 def results_cyta(u):
     '''
@@ -614,90 +1152,13 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)    
 
-def results_Athlokinisi(u):
-        
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
+def results_primetel(u):
     
-    if (response.status_code != 200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("span",{"class":"ammount"})
-        
-        if not element_soup:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
-        else:
-            price_ = float(element_soup[0].text.strip().replace("€",""))
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Athlokinisi")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_awol(u):
-    
-    p = 0
-    price_ = "0"
-        
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    element_soup = soup.find_all("span", {"class":"price price--sale"})
-    
-    if element_soup:
-        p = 0
-    else:
-        element_soup = soup.find_all("span", {"class":"price"})   
-        
-    if ((response.status_code !=200) or ("Page Not Found" in response.text)):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
-    else:
-        if element_soup[0] is not None:
-            amounts_list = element_soup[0].text.split('€')
-            if len(amounts_list) > 2:
-                price_ = amounts_list[2]
-            if len(amounts_list) <= 2:
-                price_ = amounts_list[1] 
-        price_= price_.replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("AWOL")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_AlterVape(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-
-    if ("Page not found" in response.text) or (response.status_code != 200):
+    if ("Pay my bill" in soup.text) or (response.status_code != 200):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -706,46 +1167,105 @@ def results_AlterVape(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        price_ = element_soup[2].text.replace("\n","").replace("\xa0€","").replace(",",'.')
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Alter Vape")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
+        # Bundled telecommunication services	
+        if (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
+            
+            element_ = soup.find_all('p', {"class":"price"})
+             
+            if name_ == "GIGA Unlimited 5G" :
+                text_ = element_[0].text
+                pattern = r"(\d+\.\d+)"
+                match = re.search(pattern, text_)
+                price_ = match.group(1) 
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Primetel")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)    
+             
+            if name_ == "GIGA Unlimited 5G MAX" :
+                text_ = element_[1].text
+                pattern = r"(\d+\.\d+)"
+                match = re.search(pattern, text_)
+                price_ = match.group(1) 
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Primetel")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_bwell_pharmacy(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-        
-    if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        element_soup_1 = element_soup[1].text
-        price_ = element_soup_1.replace("€","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Bwell Pharmacy")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
+        # Wired/Wireless telephone services           
+        elif (name_=="Calls to other providers landline") | (name_=="Calls to other providers mobile") :
+            
+            element_ = soup.find_all("table", {"id":"call_rates"}, {"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
+            element_td = element_[0].find_all("td")
+                
+            if name_ == "Calls to other providers landline" :
+                    price_ = element_td[9].text.replace("\n","").replace(" ","").replace("€","").replace("/minute","")
+                    print(price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                    
+            if name_ == "Calls to other providers mobile" :
+                    price_ = element_td[11].text.replace("\n","").replace(" ","").replace("€","").replace("/minute.Minimumcharge1minute","")        
+                    print(price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+                
+        # Internet access provision services 
+        elif  (name_=="Fiber Premium Extra & 200Mbps") | (name_=="Fiber Premium & 200Mbps") :
+
+            element_ = soup.find_all("div", {"class":"price_tv_pack"})
+            
+            if name_ == "Fiber Premium Extra & 200Mbps" :
+                    text_1 = element_[1].text
+                    match = re.search(r'€\d+\ / month', text_1)
+                    if match:
+                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
+                    print(price_)    
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+            if name_ == "Fiber Premium & 200Mbps" :
+                    text_2 = element_[2].text
+                    match = re.search(r'€\d+\ / month', text_2)
+                    if match:
+                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
+                    print(price_)    
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)
+                    new_row.append("Primetel")
+                    list_.loc[len(list_)] = new_row
+                    list_['Name'] = list_['Name'].apply(lambda x:x)   
 
 def results_cablenet(u):
 
@@ -818,6 +1338,318 @@ def results_cablenet(u):
         new_row.append("Cablenet")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_famousports(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if (response.status_code != 200) or ("Oops! Page Not Found!" in soup.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
+        element_soup = soup.find_all("strong", {"class":"text-xl lg:text-2xl font-bold tracking-tight"})
+        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Famous Sports")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_Marks_Spencer(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if ("Sorry, we can't" in soup.text) or (response.status_code !=200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)   
+    else:
+        element_soup = soup.find_all("span",{"class":"list-pricecolour"})
+        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Marks & Spencer")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_Athlokinisi(u):
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_soup = soup.find_all("span",{"class":"ammount"})
+        
+        if not element_soup:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
+        else:
+            price_ = float(element_soup[0].text.strip().replace("€",""))
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Athlokinisi")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_AlterVape(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+
+    if ("Page not found" in response.text) or (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        price_ = element_soup[2].text.replace("\n","").replace("\xa0€","").replace(",",'.')
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Alter Vape")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_ewholesale(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_soup = soup.find_all("div", {"class":"hM4gpp"}) 
+        price_= element_soup[0].text.replace(",",".").replace(" ","").replace("€","").replace("Τιμή","").replace("Price","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("E-wholesale")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_CYgar_shop(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('div', {"class":"hM4gpp"})
+        price_ = element_name[0].text.replace('€','').replace('Price','')
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("The CYgar shop")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+            
+def results_royal_cigars(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('div', {"class":"itemDetailsPrice"})
+        if element_name:
+            price_amount = element_name[0].text.replace("€","")
+            print(price_amount)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_amount))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("The Royal Cigars")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+def results_numbeo(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    if ("Status code: 404" in soup.text) or (response.status_code !=200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        element_soup = soup.find_all('tr', {"class":"tr_standard"})
+        for o in range(0, len(element_soup)):
+            ken = element_soup[o].text.replace("\n","").replace(" ","")
+            if "Cyprus" in ken:
+                result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
+                price_ = round((float(result) / 1.08), 2)
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)
+                new_row.append("Numbeo")
+                list_.loc[len(list_)] = new_row
+                list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_bwell_pharmacy(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+        
+    if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        element_soup_1 = element_soup[1].text
+        price_ = element_soup_1.replace("€","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Bwell Pharmacy")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_EUC(u):
+    '''
+    euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
+    list_euc = []
+    imax = 4 # *be careful to set this value correctly when each new year's tuition fees are published* 
+    for i in range(0, imax): 
+        new_row = []
+        euc[i][1] = euc[i][1].astype('string')
+        for word in euc[i][1].to_list():
+            word = word.replace(',','')
+            word = int(word)
+            list_euc.append(word)
+    price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
+    '''
+    response = requests.get(Item_url_)
+    print(response)
+    
+    pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
+    amounts = []
+    price_1 = 0
+    count_ = 0
+    with pdfplumber.open(pdf_path) as pdf:
+        page = pdf.pages[1]
+        tables = page.extract_tables()
+        for table in tables:
+            for row in table:
+                if len(row) > 1 and row[1]:
+                    cell = row[1]
+                    if re.fullmatch(r"\d{1,3}(?:,\d{3})*", cell):
+                        amount_ = cell.replace(",","")
+                        amount_ = float(amount_)
+                        price_1 += amount_
+                        count_ += 1
+    price_ = price_1 / count_
+    print(price_)
+    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+    new_row.append(name_)
+    new_row.append(float(price_))
+    new_row.append(subclass_)
+    new_row.append(division_)
+    new_row.append("European University Cyprus")
+    list_.loc[len(list_)] = new_row
+    list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
     '''
@@ -1077,163 +1909,6 @@ def results_CyPost(u):
     list_.loc[len(list_)] = new_row
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_ewholesale(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("div", {"class":"hM4gpp"}) 
-        price_= element_soup[0].text.replace(",",".").replace(" ","").replace("€","").replace("Τιμή","").replace("Price","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("E-wholesale")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_electroline(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("ins", {"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
-        if element_soup:
-            price_ = element_soup[0].text.replace("\n",'').replace("€","")
-        else:
-            element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
-            price_ = element_soup[0].text.replace("\n","").replace("€","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Electroline")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_EUC(u):
-    '''
-    euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
-    list_euc = []
-    imax = 4 # *be careful to set this value correctly when each new year's tuition fees are published* 
-    for i in range(0, imax): 
-        new_row = []
-        euc[i][1] = euc[i][1].astype('string')
-        for word in euc[i][1].to_list():
-            word = word.replace(',','')
-            word = int(word)
-            list_euc.append(word)
-    price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
-    '''
-    response = requests.get(Item_url_)
-    print(response)
-    
-    pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
-    amounts = []
-    price_1 = 0
-    count_ = 0
-    with pdfplumber.open(pdf_path) as pdf:
-        page = pdf.pages[1]
-        tables = page.extract_tables()
-        for table in tables:
-            for row in table:
-                if len(row) > 1 and row[1]:
-                    cell = row[1]
-                    if re.fullmatch(r"\d{1,3}(?:,\d{3})*", cell):
-                        amount_ = cell.replace(",","")
-                        amount_ = float(amount_)
-                        price_1 += amount_
-                        count_ += 1
-    price_ = price_1 / count_
-    print(price_)
-    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-    new_row.append(name_)
-    new_row.append(float(price_))
-    new_row.append(subclass_)
-    new_row.append(division_)
-    new_row.append("European University Cyprus")
-    list_.loc[len(list_)] = new_row
-    list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_famousports(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if (response.status_code != 200) or ("Oops! Page Not Found!" in soup.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
-        element_soup = soup.find_all("strong", {"class":"text-xl lg:text-2xl font-bold tracking-tight"})
-        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Famous Sports")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_Marks_Spencer(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if ("Sorry, we can't" in soup.text) or (response.status_code !=200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)   
-    else:
-        element_soup = soup.find_all("span",{"class":"list-pricecolour"})
-        price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Marks & Spencer")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
 def results_moto_race(u):
     
     ### without headers
@@ -1278,45 +1953,45 @@ def results_moto_race(u):
         new_row.append("Moto Race")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_awol(u):
     
-def results_nissan(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-    response = requests.get(Item_url_, headers=header)
+    p = 0
+    price_ = "0"
+        
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
+    element_soup = soup.find_all("span", {"class":"price price--sale"})
     
-    if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
+    if element_soup:
+        p = 0
+    else:
+        element_soup = soup.find_all("span", {"class":"price"})   
+        
+    if ((response.status_code !=200) or ("Page Not Found" in response.text)):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
         website_false.append(division_)
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
     else:
-        tree = html.fromstring(response.content)
-        price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
-        
-        if price_tree:
-            price_json = price_tree[0]
-            price_data = json.loads(price_json)
-            if "LVL001" in name_:
-                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL001']['gradePrice']
-            if "LVL004" in name_:
-                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL004']['gradePrice']
-            if "LVL005" in name_:
-                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL005']['gradePrice']
-            if name_ == "NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE":
-                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
-        
+        if element_soup[0] is not None:
+            amounts_list = element_soup[0].text.split('€')
+            if len(amounts_list) > 2:
+                price_ = amounts_list[2]
+            if len(amounts_list) <= 2:
+                price_ = amounts_list[1] 
+        price_= price_.replace(",",".")
         print(price_)
-        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Nissan")
+        new_row.append("AWOL")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -1367,152 +2042,6 @@ def results_novella(u):
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_numbeo(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-    if ("Status code: 404" in soup.text) or (response.status_code !=200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        element_soup = soup.find_all('tr', {"class":"tr_standard"})
-        for o in range(0, len(element_soup)):
-            ken = element_soup[o].text.replace("\n","").replace(" ","")
-            if "Cyprus" in ken:
-                result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
-                price_ = round((float(result) / 1.08), 2)
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Numbeo")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_primetel(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-    if ("Pay my bill" in soup.text) or (response.status_code != 200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        # Bundled telecommunication services	
-        if (name_=="GIGA Unlimited 5G") | (name_=="GIGA Unlimited 5G MAX") :
-            
-            element_ = soup.find_all('p', {"class":"price"})
-             
-            if name_ == "GIGA Unlimited 5G" :
-                text_ = element_[0].text
-                pattern = r"(\d+\.\d+)"
-                match = re.search(pattern, text_)
-                price_ = match.group(1) 
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Primetel")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)    
-             
-            if name_ == "GIGA Unlimited 5G MAX" :
-                text_ = element_[1].text
-                pattern = r"(\d+\.\d+)"
-                match = re.search(pattern, text_)
-                price_ = match.group(1) 
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Primetel")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-
-        # Wired/Wireless telephone services           
-        elif (name_=="Calls to other providers landline") | (name_=="Calls to other providers mobile") :
-            
-            element_ = soup.find_all("table", {"id":"call_rates"}, {"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
-            element_td = element_[0].find_all("td")
-                
-            if name_ == "Calls to other providers landline" :
-                    price_ = element_td[9].text.replace("\n","").replace(" ","").replace("€","").replace("/minute","")
-                    print(price_)
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-                    
-            if name_ == "Calls to other providers mobile" :
-                    price_ = element_td[11].text.replace("\n","").replace(" ","").replace("€","").replace("/minute.Minimumcharge1minute","")        
-                    print(price_)
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-                
-        # Internet access provision services 
-        elif  (name_=="Fiber Premium Extra & 200Mbps") | (name_=="Fiber Premium & 200Mbps") :
-
-            element_ = soup.find_all("div", {"class":"price_tv_pack"})
-            
-            if name_ == "Fiber Premium Extra & 200Mbps" :
-                    text_1 = element_[1].text
-                    match = re.search(r'€\d+\ / month', text_1)
-                    if match:
-                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
-                    print(price_)    
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-            if name_ == "Fiber Premium & 200Mbps" :
-                    text_2 = element_[2].text
-                    match = re.search(r'€\d+\ / month', text_2)
-                    if match:
-                        price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
-                    print(price_)    
-                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                    new_row.append(name_)
-                    new_row.append(float(price_))
-                    new_row.append(subclass_)
-                    new_row.append(division_)
-                    new_row.append("Primetel")
-                    list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)          
-        
 def results_rio(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -1779,281 +2308,6 @@ def results_water(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
-def results_wolt(u):
-    
-    ###  without headers 
-    ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs)
-    ## 2
-    #response = requests.get(Item_url_)
-    
-    ### with headers (*NOT WORKING*)
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs, {'headers':header})
-    ## 2
-    response = requests.get(Item_url_, headers = header) 
-    ## 3 
-    #with httpx.Client(headers = header) as client:
-    #    response = client.get(Item_url_)
-    
-    print(response)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
-        if element_name:
-            price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","").replace(" ","")
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Wolt")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-
-def results_vasos(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers':header}, verify=False)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('p', {"class":"slider-text3"})
-        price_ = element_name[0].text.replace("\n","").replace(" ","")
-        price_ = ''.join(filter(str.isdigit, price_))
-        price_ = float(price_) / 100
-        
-    if price_:
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Vasos Psarolimano")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(comidity_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
-
-def results_meze(u):
-    """
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs,{'headers':header},verify=False)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if response.status_code !=200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)    
-    else:
-        element_name = soup.find_all('div',{"class":"mprm-simple-view-column mprm-first"})
-        for i in range(0,len(element_name)):
-            if ("Meat Meze" in element_name[i].text) and ("Meat Meze" in name_):
-                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
-                price_=element_name_2[0].text.replace("€","")
-
-        for i in range(0,len(element_name)):
-            
-            if "Fish Meze" in element_name[i].text and ("Fish Meze" in name_):
-                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
-                price_=element_name_2[0].text.replace("€","")
-
-        if price_:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Meze Tavern")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    """
-    file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
-    
-    doc = Document(file_path)
-    
-    for para in doc.paragraphs:
-        text_ = para.text
-
-        if name_ == "Meat Meze for 2 persons - Limassol":
-            match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-            if match:
-                value = match.group(1)
-                price_ = value.replace("€","").replace(" ","")
-                print(price_)
-
-        if name_ == "Fish Meze for 2 persons - Limassol":
-            match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-            if match:
-                value = match.group(1)
-                price_ = value.replace("€","").replace(" ","")
-                print(price_)
-    
-    new_row.append(datetime.now().strftime('%Y-%m-%d'))
-    new_row.append(name_)
-    new_row.append(price_)
-    new_row.append(subclass_)
-    new_row.append(division_)
-    new_row.append("Meze Tavern")
-    list_.loc[len(list_)] = new_row
-    list_['Name'] = list_['Name'].apply(lambda x:x)
-    
-def results_CYgar_shop(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('div', {"class":"hM4gpp"})
-        price_ = element_name[0].text.replace('€','').replace('Price','')
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("The CYgar shop")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-def results_royal_cigars(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('div', {"class":"itemDetailsPrice"})
-        if element_name:
-            price_amount = element_name[0].text.replace("€","")
-            print(price_amount)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_amount))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("The Royal Cigars")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
-def results_pydixa(u):
-    
-    pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
-    response = requests.get(Item_url_)
-    print(response)
-    '''
-    if response.status_code!=200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-    with open(pdf_pixida, "wb") as f:
-        f.write(response.content)
-    '''
-    with pdfplumber.open(pdf_pixida) as pdf:
-        page = pdf.pages[4]  
-        text = page.extract_text()
-
-    matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
-    price_ = float(matches[0])
-    
-    if matches:
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Pyxida")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
 def results_sewerage(u):
     
     values = 0
@@ -2233,6 +2487,219 @@ def results_sewerage(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+def results_wolt(u):
+    
+    ###  without headers 
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs)
+    ## 2
+    #response = requests.get(Item_url_)
+    
+    ### with headers (*NOT WORKING*)
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
+    ## 2
+    response = requests.get(Item_url_, headers = header) 
+    ## 3 
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(Item_url_)
+    
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('span', {"data-test-id":"product-modal.price"})
+        if element_name:
+            price_ = element_name[0].text.replace("€","").replace(",",".").replace("/xa0","").replace(" ","")
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(float(price_))
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Wolt")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+
+def results_vasos(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs, {'headers':header}, verify=False)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_name = soup.find_all('p', {"class":"slider-text3"})
+        price_ = element_name[0].text.replace("\n","").replace(" ","")
+        price_ = ''.join(filter(str.isdigit, price_))
+        price_ = float(price_) / 100
+        
+    if price_:
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Vasos Psarolimano")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(comidity_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
+
+def results_meze(u):
+    """
+    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs,{'headers':header},verify=False)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if response.status_code !=200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)    
+    else:
+        element_name = soup.find_all('div',{"class":"mprm-simple-view-column mprm-first"})
+        for i in range(0,len(element_name)):
+            if ("Meat Meze" in element_name[i].text) and ("Meat Meze" in name_):
+                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
+                price_=element_name_2[0].text.replace("€","")
+
+        for i in range(0,len(element_name)):
+            
+            if "Fish Meze" in element_name[i].text and ("Fish Meze" in name_):
+                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
+                price_=element_name_2[0].text.replace("€","")
+
+        if price_:
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("Meze Tavern")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    """
+    file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
+    
+    doc = Document(file_path)
+    
+    for para in doc.paragraphs:
+        text_ = para.text
+
+        if name_ == "Meat Meze for 2 persons - Limassol":
+            match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+            if match:
+                value = match.group(1)
+                price_ = value.replace("€","").replace(" ","")
+                print(price_)
+
+        if name_ == "Fish Meze for 2 persons - Limassol":
+            match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
+            if match:
+                value = match.group(1)
+                price_ = value.replace("€","").replace(" ","")
+                print(price_)
+    
+    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+    new_row.append(name_)
+    new_row.append(price_)
+    new_row.append(subclass_)
+    new_row.append(division_)
+    new_row.append("Meze Tavern")
+    list_.loc[len(list_)] = new_row
+    list_['Name'] = list_['Name'].apply(lambda x:x)
+    
+def results_pydixa(u):
+    
+    pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
+    response = requests.get(Item_url_)
+    print(response)
+    '''
+    if response.status_code!=200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+    with open(pdf_pixida, "wb") as f:
+        f.write(response.content)
+    '''
+    with pdfplumber.open(pdf_pixida) as pdf:
+        page = pdf.pages[4]  
+        text = page.extract_text()
+
+    matches = re.findall(r'Ψαρομεζές .*?(\d+\.\d+)', text)
+    price_ = float(matches[0])
+    
+    if matches:
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
+        new_row.append(name_)
+        new_row.append(price_)
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Pyxida")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
 '''
 def results_toyota(u):
     
@@ -2414,6 +2881,80 @@ def results_toyota(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
+def results_nissan(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    response = requests.get(Item_url_, headers=header)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
+    else:
+        tree = html.fromstring(response.content)
+        price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
+        
+        if price_tree:
+            price_json = price_tree[0]
+            price_data = json.loads(price_json)
+            if "LVL001" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL001']['gradePrice']
+            if "LVL004" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL004']['gradePrice']
+            if "LVL005" in name_:
+                price_ = price_data["qashqai-e-power"]['default']['grades']['LVL005']['gradePrice']
+            if name_ == "NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE":
+                price_ = price_data["juke_2019"]['default']['grades']['LVL001']['gradePrice']
+        
+        print(price_)
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Nissan")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
+def results_stock_center(u):
+    
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
+
+    if (response.status_code != 200) or ("Το όχημα αυτό δεν είναι πλέον διαθέσιμο" in response.text):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_price_ = soup.find_all("div",{"class":"price"})
+        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\r","").replace("\n","").replace(".","").replace("€","")
+        
+        # Extract only the number
+        match = re.search(r'\d+', price_)
+        if match:
+            price_ = int(match.group())
+            print(price_)
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Stock Center")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+
 def results_ithaki(u):
     
     pdf_ithaki = "PDFs/ithaki-2024.pdf"
@@ -2533,504 +3074,6 @@ def results_flames(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
-def results_lensescy(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers':header})
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all('div', {"class":"product-price"})
-        price_ = element_name[0].text.replace("€","").replace(" ","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append("Corrective eye-glasses and contact lenses")
-        new_row.append("HEALTH")
-        new_row.append("LensesCY")
-        list_.loc[len(list_)] = new_row
-
-def results_intercity_buses(u):
-    
-    url_new = "https://intercity-buses.com/en/routes/" + Item_url_
-
-    ### without headers
-    ## 1
-    #response = requests.get(url_new)
-    ## 2
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs, {'headers':header})
-    
-    ### with headers
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    ## 1
-    response = requests.get(url_new, {'headers':header})
-    ## 2
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs, {'headers':header})
-
-    print(response)
-        
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
-        if table_:
-            element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
-            for i in range(0,2):
-                new_row = []
-                if i%2 == 0:
-                    ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
-                    price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
-                    if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
-                        pass
-                    else:
-                        print(price_)
-                        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                        new_row.append(ticket_name_ + Item_url_)
-                        new_row.append(float(price_))
-                        new_row.append(subclass_)
-                        new_row.append(division_)
-                        new_row.append("Intercity Buses")
-                        list_.loc[len(list_)] = new_row
-            
-def results_parga(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, {'headers':header})
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_ = soup.find_all('span', {'class':'productPriceStore'})
-        price_ = element_[1].text.replace("€","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Parga")
-        list_.loc[len(list_)] = new_row
-
-def results_evdokia_jewellery(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers = header)
-    print(response)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        price_soup = soup.find('p', class_='price')
-        price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
-        price_ = price_element.text.replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Evdokia Jewellery")
-        list_.loc[len(list_)] = new_row
-
-def results_centroptical(u):
-    
-    response = requests.get(Item_url_, headers = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0"})
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        price_element = soup.find('p', class_ = 'price')
-        bdi_element = price_element.find('bdi')
-        price_ = bdi_element.text.replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Centroptical")
-        list_.loc[len(list_)] = new_row
-
-def results_premier(u):
-    
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache',
-        'Origin': 'https://premierlaundry.com.cy',
-        'Connection': 'keep-alive',
-        'Referer': 'https://premierlaundry.com.cy/',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'cross-site',}
-
-    params = { }
-    json_data = {'email': 'kendeas123@gmail.com', 'password': 'Kendeas',}
-    response = requests.post('https://cleancloudapp.com/webapp/public/api/auth/login/16130', params=params, headers=headers, json=json_data,)
-    data = response.json()
-    user_id = data['id']
-    token = data['token']
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache',
-        'X-CC-User': str(user_id), 
-        'X-CC-Token': token, 
-        'Origin': 'https://premierlaundry.com.cy',
-        'Connection': 'keep-alive',
-        'Referer': 'https://premierlaundry.com.cy/',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'cross-site',}
-
-    params = {'ccascv': '0.20327901592645015',}
-    json_data = {'priceListId': 0,}
-    response = requests.post('https://cleancloudapp.com/webapp/public/api/store/products', params=params, headers=headers, json=json_data,)
-    all_data_products = response.json()
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        products = all_data_products['Products']
-        names = [item['name'] for item in products]
-        price = [item["price"] for item in products]
-        for i in range(len(names)):
-            if name_ == names[i]:
-                new_row.append(datetime.today().strftime("%Y-%m-%d"))
-                new_row.append(names[i])
-                new_row.append(float(price[i]))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Premier Laundry")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_cyprus_transport(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers = header)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        wrapper = soup.find_all('tbody')[0]
-        data = []
-        for row in wrapper.find_all('tr'):
-            row_data = []
-            for cell in row.find_all(['td', 'th']):
-                row_data.append(cell.get_text().strip())
-            data.append(row_data)
-        df1 = pd.DataFrame(data)
-        df1.columns = ['Ticket type', 'Paper Ticket (CASH)', 'Plastic ANONYMOUS Card', 'Plastic PERSONALISED Motion Bus Card - Normal Charge', 'Plastic PERSONALISED Motion Bus Card - Beneficiaries of 50%' ]
-        df1 = df1.drop(0)
-        df1 = df1.drop(1)
-        df1 = df1.drop(6)
-        df1 = df1.set_index('Ticket type')
-        new_list = []
-        
-        for column in df1.columns:  
-            for index in df1.index:
-                value = df1.loc[index, column]
-                new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass': 'Passenger transport by bus and coach', 'Division': 'TRANSPORT', 'Retailer': 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
-                new_list.append(new_row)
-                
-        df2 = pd.DataFrame.from_records(new_list)
-        df_cy_transport = df2[df2["Price"] != '-']
-        df_cy_transport['Price'] = df_cy_transport['Price'].str.replace('€', '').replace('Αρχική τιμή ', '')
-        df_cy_transport['Price'] = df_cy_transport['Price'].astype(float)
-        df_cy_transport.reset_index(drop = True, inplace = True)
-
-        for index, row in df_cy_transport.iterrows():
-            if row['Name'] == name_:
-                list_.loc[len(list_)] = row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_musicavenue(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, {'headers':header})
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        new_row.append(datetime.today().strftime("%Y-%m-%d"))
-        name = soup.find('h1', class_ = 'product-title')
-        new_row.append(name_)
-        price_ = soup.find_all("bdi")[1].text.replace("€", "").replace(",", "")
-        print(price_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Musicavenue")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_max_7_taxi(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, {'headers':header})
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        table_ = soup.find('table', {"class" :'tbl',"style":"width: 100%;","border":"1","frame":"void","cellspacing":"1","cellpadding":"3","align":"center"})
-        table_ = table_.text
-        if "Initial charge" in name_:
-            pattern = r'Initial charge\s+([\d,]+)\s+([\d,]+)'
-        if "Fare per Km" in name_:
-            pattern = r'Fare per Km\s+([\d,]+)\s+([\d,]+)'  
-        matches = re.findall(pattern, table_)
-        charges_ = [float(charge.replace(',', '.')) for charge in matches[0]]
-        
-        for i in range(0,2):
-            if i == 0:
-                add_ = "Fixed"
-            if i == 1:
-                add_ = "Variable"
-            new_row = []
-            new_row.append(datetime.today().strftime("%Y-%m-%d"))
-            new_row.append(name_ + add_)
-            print(float(charges_[i]))
-            new_row.append(float(charges_[i]))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Max 7 Taxi") 
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_costastheodorou(u):
-    
-    response = requests.get(Item_url_)
-
-    if (response.status_code != 200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_name = soup.find_all("p", {"class":"price"})
-        price_ = element_name[0].text.replace("€","").split('\xa0')[0]
-        print(price_)
-        new_row.append(datetime.today().strftime("%Y-%m-%d"))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Costas Theodorou")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_leroymerlin(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, {'headers':header})
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if response.status_code != 200 or ("Η σελίδα που αναζητάτε δεν βρέθηκε." in soup.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        element_ = soup.find_all("span",{"class":"priceBigMain"})
-        price_ = element_[0].text.replace("€","").replace(" ","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.today().strftime("%Y-%m-%d"))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Leroy Merlin") 
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_stock_center(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-
-    if (response.status_code != 200) or ("Το όχημα αυτό δεν είναι πλέον διαθέσιμο" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_price_ = soup.find_all("div",{"class":"price"})
-        price_ = element_price_[0].text.replace("Τιμή μετρητοίς","").replace(" ","").replace("\t","").replace("\r","").replace("\n","").replace(".","").replace("€","")
-        
-        # Extract only the number
-        match = re.search(r'\d+', price_)
-        if match:
-            price_ = int(match.group())
-            print(price_)
-        
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Stock Center")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_cheapbasket(u):
-    
-    url = "https://cheapbasket.com.cy/product/" + Item_url_
-    response = requests.get(url)
-    
-    if (response.status_code != 200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        if ("New Products" in soup.get_text()):
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
-            element_price = element_[0].find_all("span", {"class":"woocommerce-Price-amount amount"})
-            price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Cheap Basket")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_opacy(u):
-    
-    url_ = "https://opa.cy/product/" + Item_url_
-    response = requests.get(url_)
-    
-    if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        element_ = soup.find_all("span",{"class":"product-span price"})
-        price_ = element_[0].text.replace("Price: €","")
-        print(price_)
-        if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Opa")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Opa")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_piatsa_gourounaki(u):
     
@@ -3154,48 +3197,6 @@ def results_christos_grill_seafood(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
 
-def results_public(u):
-        
-    ###  without headers 
-    ## 1 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    ## 2 
-    #response = requests.get(Item_url_)
-
-    ### with headers 
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs, {'headers':header})
-    ## 2 
-    #response = requests.get(Item_url_, headers = header) 
-
-    print(response)
-    
-    if (response.status_code != 200) : 
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        data = response.json()
-        price_ = data["prices"][0]["salePrice"] #OR "listPrice"
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)  
-        new_row.append("Public")
-        list_.loc[len(list_)] = new_row
-        list_["Name"] = list_["Name"].apply(lambda x:x)
-
 #Initialization of the scraping/processing time
 start_time = time.time()
 
@@ -3215,7 +3216,7 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
-    #if retailer_=="SupermarketCy":
+    #if retailer_=="SupermarketCy": #*Run only locally
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
     #    results_metro(u)
@@ -3235,15 +3236,15 @@ for u in range(0, len(urls)):
         results_leroymerlin(u)   
     elif retailer_=="IKEA":
         results_ikea(u)
-    #elif retailer_=="Stephanis":
+    #elif retailer_=="Stephanis": #*Run only locally
     #    results_stephanis(u)
-    #elif retailer_=="Public":
+    #elif retailer_=="Public": #*Run only locally
     #    results_public(u)
     elif retailer_=="Electroline":
         results_electroline(u)
     elif retailer_=="CYTA":
         results_cyta(u)
-    #elif retailer_=="Cablenet":
+    #elif retailer_=="Cablenet": #*Run only locally
     #    results_cablenet(u)  
     elif retailer_=="Primetel": 
         results_primetel(u)    
@@ -3259,7 +3260,7 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
-    elif retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons*
+    elif retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons
         results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
         results_lensescy(u)    
@@ -3281,11 +3282,11 @@ for u in range(0, len(urls)):
         results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
-    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
         results_water(u)
-    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): Nicosia is diactivated since it banned access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/) 
+    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/sewage/sewer-fees/) 
         results_sewerage(u)    
-    #elif retailer_=="MotoRace": #deactivated in 21/10/2025 (run only locally) and banned access in 07/11/2025 (don't run neither locally) through a 'verifying you are human' check
+    #elif retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
     #    results_moto_race(u)
     elif retailer_=="AWOL":
         results_awol(u)    
@@ -3319,11 +3320,11 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="Piatsa Gourounaki":
         results_piatsa_gourounaki(u)
-    #elif retailer_=="Pagkratios": #*deactivated in 16/11/25 due to maintenance reasons
+    #elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons
     #    results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
-    #elif retailer_=="Intercity Buses":
+    #elif retailer_=="Intercity Buses": #*Run only locally
     #    results_intercity_buses(u)  
     elif retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
