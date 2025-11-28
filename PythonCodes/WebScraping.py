@@ -2957,7 +2957,7 @@ def results_pydixa(u):
 
 def results_ithaki(u):
     
-    pdf_ithaki = "PDFs/ithaki-2024.pdf"
+    pdf_ithaki = "PDFs/ithaki-2025.pdf"
 
     with pdfplumber.open(pdf_ithaki) as pdf:
         first_page = pdf.pages[5]
