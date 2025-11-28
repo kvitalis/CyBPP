@@ -20,8 +20,8 @@ Name,Subclass,Url,Division,Retailer
 Πάγιο ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Δικαίωμα Συντήρησης ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Κυβικά ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
-Πάγιο ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
-Κυβικά ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
+Πάγιο ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
+Κυβικά ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
 Πάγιο ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
 Δικαίωμα Συντήρησης ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
 Κυβικά ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
@@ -1255,6 +1255,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
