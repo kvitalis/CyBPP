@@ -2913,7 +2913,7 @@ def results_meze(u):
     
 def results_pydixa(u):
     
-    pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
+    pdf_pixida = "PDFs/Pixida-Nic-En-2025-May.pdf"
     response = requests.get(Item_url_)
     print(response)
     '''
