@@ -3777,6 +3777,17 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Larnaca") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+
+#Pagkratios Tavern Paphos (https://www.pagkratios.com/menu/	--> https://pagkratios.com)
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("Meat Meze for 2 persons - Paphos")
+new_row.append(float(25))
+new_row.append("Restaurants, cafes and dancing establishments")
+new_row.append("RESTAURANTS AND HOTELS")
+new_row.append("Pagkratios") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 '''
 
 #Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025 
@@ -3818,17 +3829,6 @@ new_row.append(float(0.55))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Nicosia") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Pagkratios Tavern Paphos (https://www.pagkratios.com/menu/	--> https://pagkratios.com)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Meat Meze for 2 persons - Paphos")
-new_row.append(float(25))
-new_row.append("Restaurants, cafes and dancing establishments")
-new_row.append("RESTAURANTS AND HOTELS")
-new_row.append("Pagkratios") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
