@@ -3143,7 +3143,7 @@ def results_pagkratios(u):
     
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, "html.parser")
-        elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
+        elemenet_2 = soup.find_all("span", {"class":"woocommerce-Price-amount amount"})
         price_ = elemenet_2[1].text.replace("€","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -3320,8 +3320,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="Piatsa Gourounaki":
         results_piatsa_gourounaki(u)
-    #elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons
-    #    results_pagkratios(u)
+    elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
+        results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
     #elif retailer_=="Intercity Buses": #*Run only locally
