@@ -3092,7 +3092,7 @@ def results_piatsa_gourounaki(u):
     '''
     
 def results_pagkratios(u):
-
+    '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(bs, {'headers':header})
@@ -3101,6 +3101,23 @@ def results_pagkratios(u):
         soup = BeautifulSoup(response.content, "html.parser")
         elemenet_2 = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
         price_ = elemenet_2[1].text.replace("€","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Pagkratios")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    '''
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers=header)
+    
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all("span", {"class":"price_item"})
+        price_ = element_[0].text.replace("€","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
