@@ -3337,8 +3337,8 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="Piatsa Gourounaki":
         results_piatsa_gourounaki(u)
-   # elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
-   #     results_pagkratios(u)
+    elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
+        results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
     #elif retailer_=="Intercity Buses": #*Run only locally
