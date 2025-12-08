@@ -264,7 +264,7 @@ for u in range(0, len(urls)):
         results_alphamega(u)  
     #elif retailer_ == "SupermarketCy":
         #results_supermarketcy(u)      
-    elif retailer_ == "Cheap Basket": #*Deactivated in 14/11/2025 since it changed the structure of its products URLs. Activated again in 08/12/2025.
+    elif retailer_ == "Cheap Basket": #*Deactivated in 11/11/2025 since it changed the structure of its products URLs. Activated again in 08/12/2025.
         results_cheapbasket(u)  
     elif retailer_ == "Opa":
         results_opacy(u)
