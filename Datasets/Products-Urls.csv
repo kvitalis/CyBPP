@@ -20,17 +20,17 @@ Name,Subclass,Url,Division,Retailer
 Πάγιο ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Δικαίωμα Συντήρησης ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Κυβικά ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
-Πάγιο ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
-Κυβικά ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
 Πάγιο ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
 Δικαίωμα Συντήρησης ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
 Κυβικά ανά μήνα,Water supply,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Limassol
-Ετήσιο Τέλος,Sewage collection,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
-Τέλος Χρήσης,Sewage collection,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
-Ετήσιο Τέλος,Sewage collection,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
-Τέλος Χρήσης,Sewage collection,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+Πάγιο ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
+Κυβικά ανά μήνα,Water supply,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
 Ετήσιο Τέλος,Sewage collection,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
 Τέλος Χρήσης,Sewage collection,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Larnaca
+Ετήσιο Τέλος,Sewage collection,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+Τέλος Χρήσης,Sewage collection,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Limassol
+Ετήσιο Τέλος,Sewage collection,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+Τέλος Χρήσης,Sewage collection,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
 Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,https://www.akentia.com/vision-optics-55-hydrogel-fakoi-myopias-miniaioi-6tmx,HEALTH,LensesCY
 Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,https://www.akentia.com/bausch-lomb-soflens-59-fakoi-myopias-miniaioi-6tmx-3,HEALTH,LensesCY
 Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,https://www.akentia.com/vision-optics-dayvue-biomoist-fakoi-myopias-imerisioi-30tmx,HEALTH,LensesCY
@@ -1256,6 +1256,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
