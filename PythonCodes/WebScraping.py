@@ -3307,8 +3307,8 @@ for u in range(0, len(urls)):
     #    results_moto_race(u)
     elif retailer_=="AWOL":
         results_awol(u)    
-    elif retailer_=="Toyota":
-        results_toyota(u)    
+    #elif retailer_=="Toyota": #*Deactivated in 10/12/25 due to scraping error
+    #    results_toyota(u)    
     elif retailer_=="Nissan":
         results_nissan(u)
     elif retailer_=="Stock Center":
