@@ -3299,9 +3299,9 @@ for u in range(0, len(urls)):
         results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
-    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
         results_water(u)
-    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/sewage/sewer-fees/) 
+    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol") or (retailer_=="Sewerage Board of Nicosia"): #*Nicosia is diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/sewage/sewer-fees/) 
         results_sewerage(u)    
     #elif retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
     #    results_moto_race(u)
