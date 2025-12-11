@@ -1233,13 +1233,13 @@ def results_primetel(u):
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 
         # Internet access provision services 
-        elif  (name_=="Fiber Premium Extra & 200Mbps") | (name_=="Fiber Premium & 200Mbps") :
+        elif  (name_=="Fiber Family & 200Mbps") | (name_=="Fiber Entertainment & 200Mbps") :
 
             element_ = soup.find_all("div", {"class":"price_tv_pack"})
             
-            if name_ == "Fiber Premium Extra & 200Mbps" :
-                    text_1 = element_[1].text
-                    match = re.search(r'€\d+\ / month', text_1)
+            if name_ == "Fiber Family & 200Mbps" :
+                    text_3 = element_[3].text
+                    match = re.search(r'€\d+\.\d+\ / month', text_3)
                     if match:
                         price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
                     print(price_)    
@@ -1252,9 +1252,9 @@ def results_primetel(u):
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
             
-            if name_ == "Fiber Premium & 200Mbps" :
-                    text_2 = element_[2].text
-                    match = re.search(r'€\d+\ / month', text_2)
+            if name_ == "Fiber Entertainment & 200Mbps" :
+                    text_4 = element_[4].text
+                    match = re.search(r'€\d+\.\d+\ / month', text_4)
                     if match:
                         price_ = match.group(0).replace('€','').replace(' ','').replace('/','').replace('month','')
                     print(price_)    
@@ -1265,7 +1265,7 @@ def results_primetel(u):
                     new_row.append(division_)
                     new_row.append("Primetel")
                     list_.loc[len(list_)] = new_row
-                    list_['Name'] = list_['Name'].apply(lambda x:x)   
+                    list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_cablenet(u):
 
