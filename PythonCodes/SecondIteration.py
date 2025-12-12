@@ -767,8 +767,8 @@ def results_cablenet(u):
     #    response = client.get(Item_url_)
 
     print(response)
-    
-    if response.status_code != 200:
+
+    if response.status_code != 200 :
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -776,37 +776,34 @@ def results_cablenet(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    
     else:
-        
         soup = BeautifulSoup(response.content, "html.parser")
         
         # Internet access provision services
-        if (name_=="Purple Internet 200Mbps") | (name_=="Purple Internet 300Mbps") : 
-            element_soup = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"}) 
-            if name_=="Purple Internet 200Mbps":
-                price_ = element_soup[2].text.replace('€','').replace('/μήνα','')
-            if name_=="Purple Internet 300Mbps":
-                price_ = element_soup[4].text.replace('€','').replace('/μήνα','') 
-        
-        # Bundled telecommunication services
-        elif (name_=="5G Unlimited") | (name_=="5G Unlimited Max"):
-            element_soup = soup.find_all("p", {"class":"elementor-heading-title elementor-size-default"})
-            if name_ == "5G Unlimited":
-                price_ = float(element_soup[2].text.replace("€","").replace("/μήνα",""))
-            if name_ == "5G Unlimited Max":
-                price_ = float(element_soup[8].text.replace("€","").replace("/μήνα",""))
-        
-        else: 
+        if (name_=="GigaMax 1000M") | (name_=="Super 300M") : 
+            element_soup = soup.find_all("span", {"class":"service-price"})
+            if name_=="GigaMax 1000M":
+                price_ = element_soup[3].text.replace('€','')
+            if name_=="Super 300M":
+                price_ = element_soup[0].text.replace('€','') 
             
-        # Wired/Wireless telephone services	
+        # Bundled telecommunication services
+        elif (name_=="5G Unlimited") | (name_=="5G Unlimited Max") :
+            element_soup = soup.find_all("span", {"class":"service-price"})
+            if name_ == "5G Unlimited":
+                price_ = float(element_soup[0].text.replace("€",""))
+            if name_ == "5G Unlimited Max":
+                price_ = float(element_soup[0].text.replace("€",""))
+            
+        else:
+        # Wired/Wireless telephone services
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text == name_:
                     price_ = element_name[28].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
                 if i.text == name_:
                     price_ = element_name[33].text.replace("€","").replace(" ","").replace("/","").replace("30","").replace("''","")
-        
+                    
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -816,7 +813,7 @@ def results_cablenet(u):
         new_row.append("Cablenet")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
-
+        
 def results_CyMinistryEducation(u):
     '''
     ## PREVIOUS VERSION (2024-25)
