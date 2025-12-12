@@ -71,8 +71,8 @@ Calls to other providers landline,Wired telephone services,https://primetel.com.
 Calls to other providers mobile,Wireless telephone services,https://primetel.com.cy/telephony-services,COMMUNICATION,Primetel
 Cablenet Mobile Service,Wireless telephone services,https://cablenet.com.cy/postpaid-charge-rates/,COMMUNICATION,Cablenet
 Cablenet Fixed Service,Wired telephone services,https://cablenet.com.cy/postpaid-charge-rates/,COMMUNICATION,Cablenet
-GigaMax 1000M,Internet access provision services,https://cablenet.com.cy/internet/?,COMMUNICATION,Cablenet
-Super 300M,Internet access provision services,https://cablenet.com.cy/internet/?,COMMUNICATION,Cablenet
+GigaMax 1000M,Internet access provision services,https://cablenet.com.cy/order/?bundle=gigamax-1000m-6-months-free,COMMUNICATION,Cablenet
+Super 300M,Internet access provision services,https://cablenet.com.cy/order/?bundle=super-300m,COMMUNICATION,Cablenet
 5G Unlimited,Bundled telecommunication services,https://cablenet.com.cy/order/?bundle=5g-unlimited,COMMUNICATION,Cablenet
 5G Unlimited Max,Bundled telecommunication services,https://cablenet.com.cy/order/?bundle=5g-unlimited-max,COMMUNICATION,Cablenet
 "Wash, Dry and Fold - up to 5kg",Cleaning of clothing,https://premierlaundry.com.cy/,CLOTHING AND FOOTWEAR,Premier Laundry
@@ -1256,6 +1256,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
