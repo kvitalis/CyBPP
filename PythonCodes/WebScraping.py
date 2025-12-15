@@ -1801,6 +1801,9 @@ def results_rio(u):
                         
 def results_EUC(u):
     '''
+    #Scrape the tuition fees from the PDF-URL
+    response = requests.get(Item_url_)
+    print(response)
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     list_euc = []
     imax = 4 # *be careful to set this value correctly when each new year's tuition fees are published* 
@@ -1813,9 +1816,7 @@ def results_EUC(u):
             list_euc.append(word)
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
     '''
-    response = requests.get(Item_url_)
-    print(response)
-    
+    #Scrape the tuition fees from the PDF
     pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
     amounts = []
     price_1 = 0
