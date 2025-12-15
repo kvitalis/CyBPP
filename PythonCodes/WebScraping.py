@@ -1801,7 +1801,7 @@ def results_rio(u):
                         
 def results_EUC(u):
     '''
-    #Scrape the tuition fees from the PDF-URL
+    #Scrape the tuition fees from the URL-PDF
     response = requests.get(Item_url_)
     print(response)
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
