@@ -3297,7 +3297,7 @@ for u in range(0, len(urls)):
         results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
         results_water(u)
-    elif (retailer_=="Sewerage Board of Nicosia") or (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"):
+    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol") or (retailer_=="Sewerage Board of Nicosia"):
         results_sewerage(u)    
     elif retailer_=="MotoRace":
         results_moto_race(u)
@@ -3803,7 +3803,6 @@ new_row.append("RESTAURANTS AND HOTELS")
 new_row.append("Pagkratios") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
 
 #Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025 
 new_row=[]
@@ -3846,6 +3845,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+'''
 
 #===============================================================================
 
