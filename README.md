@@ -100,7 +100,7 @@ According to the representativeness of each product and its retailer within the 
 
 35. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
 
-36. Pagkratios Traditional Tavern https://restaurantguru.com/Pagkratios-Mezedopolio-Miliou/menu
+36. Pagkratios Traditional Tavern https://pagkratios.com
 
 37. Parga Book Center https://www.parga.com.cy/
 
