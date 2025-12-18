@@ -1696,7 +1696,7 @@ def results_CERA(u):
 
 def results_water(u):
     
-    ### *Note*: EOA Nicosia banned access in 17/10/2025 and permitted again in 17/12/2025 (https://ndlgo.org.cy/water-supply/water-fees-wbn/)
+    ### *Note*: EOA Nicosia banned access in 17/10/2025 (https://ndlgo.org.cy/water-supply/water-fees-wbn/)
     if "Nicosia" in retailer_:
         city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2055,7 +2055,7 @@ def results_sewerage(u):
     
     values = 0
 
-    ### *Note*: EOA Nicosia banned access in 17/10/2025 and permitted again in 17/12/2025 (https://ndlgo.org.cy/sewage/sewer-fees/)
+    ### *Note*: EOA Nicosia banned access in 17/10/2025 (https://ndlgo.org.cy/sewage/sewer-fees/)
     if "Nicosia" in retailer_:
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
@@ -3803,8 +3803,9 @@ new_row.append("RESTAURANTS AND HOTELS")
 new_row.append("Pagkratios") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
+'''
 
-#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025 and permitted again in 17-12-2025
+#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -3825,7 +3826,7 @@ new_row.append("Water Board of Nicosia")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Sewerage Board of Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025 and permitted again in 17-12-2025
+#Sewerage Board of Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Nicosia")
@@ -3845,7 +3846,6 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage Board of Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
 
 #===============================================================================
 
