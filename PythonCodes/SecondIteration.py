@@ -3034,9 +3034,6 @@ def results_mageirisses(u):
     #pdf_url = "https://oimageirisses.com/wp-content/uploads/assets/menu-gr.pdf"
     pdf_mageirisses = "PDFs/Mageirisses-Menu-Dec2025.pdf"
         
-    with open(pdf_mageirisses, "wb") as f:
-        f.write(response.content)
-        
     reader = PdfReader(pdf_mageirisses)
     all_text = ""
     
