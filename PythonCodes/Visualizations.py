@@ -98,8 +98,8 @@ plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', c
 #========================================================================================================================
 
 #Current date
-current_date = '2025-11-27'
-#current_date = datetime.today().strftime("%Y-%m-%d")
+current_date = datetime.today().strftime("%Y-%m-%d")
+#current_date = '2025-11-27' #*add manually the date of the last Thursday of the month
 
 #Read data
 df_monthly = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
