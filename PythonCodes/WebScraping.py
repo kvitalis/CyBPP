@@ -3073,6 +3073,45 @@ def results_flames(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
+def results_mageirisses(u):
+    
+    #pdf_url = "https://oimageirisses.com/wp-content/uploads/assets/menu-gr.pdf"
+    pdf_mageirisses = "PDFs/Mageirisses-Menu-Dec2025.pdf"
+        
+    with open(pdf_mageirisses, "wb") as f:
+        f.write(response.content)
+        
+    reader = PdfReader(pdf_mageirisses)
+    all_text = ""
+    
+    for page in reader.pages:
+        page_text = page.extract_text()
+        if page_text:
+            all_text += page_text + "\n"
+        
+    pattern = r"Μικρός\s+Μεζές\s+([0-9]+,[0-9]{2})"
+    match = re.search(pattern, all_text)
+        
+    if match:
+        value = match.group(1)
+        price_ = float(value.replace(',','.'))
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Mageirisses")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
+    else:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
 def results_piatsa_gourounaki(u):
     
     pdf_path = "PDFs/Piatsa_JUN2025.pdf"
