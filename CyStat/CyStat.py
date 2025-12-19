@@ -377,7 +377,8 @@ holiday_list_= ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01
 # if the first Thursday of the month is a public holiday, the code runs on the next (i.e. second) Thursday 
 holiday_list_2 = ['2026-01-08', '2026-10-08', '2027-04-08', '2031-05-08', '2032-01-08', '2032-04-08'] 
 
-current_date = datetime.now().strftime("%Y-%m-%d")
+#current_date = datetime.now().strftime("%Y-%m-%d")
+current_date = '2025-10-02' #set manually the date 
 
 ## Note: Kendeas deactivated the following two code lines because of his above changes regarding public holidays
 #is_first_thursday(current_date)  #activate if the first Thursday of the month is NOT a public holiday 
