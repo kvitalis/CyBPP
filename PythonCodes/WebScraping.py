@@ -3333,8 +3333,10 @@ for u in range(0, len(urls)):
         results_ithaki(u)
     elif retailer_=="Flames":
         results_flames(u)
-    elif retailer_=="Piatsa Gourounaki":
-        results_piatsa_gourounaki(u)
+    elif retailer_=="Mageirisses":
+        results_mageirisses(u)    
+    #elif retailer_=="Piatsa Gourounaki": #*replaced with Mageirisses in 19/12/25 because the scraping of its new menu is not feasible
+    #    results_piatsa_gourounaki(u)
     elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
         results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
