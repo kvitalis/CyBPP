@@ -19,10 +19,10 @@ raw_data_25q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q1.csv", parse_dates
 raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-#26/12/2026: raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
 # Concatenate/combine by rows the quarterly subsets into a full raw data set
-raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3 , raw_data_25q4 #,raw_data_26q1
+raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3, raw_data_25q4, raw_data_26q1
                      ], axis=0) 
 #raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
@@ -303,10 +303,10 @@ while today_p <= end_date:
     raw_data_25q2 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q2.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_25q3 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
     raw_data_25q4 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2025Q4.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
-    #raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
+    raw_data_26q1 = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
     # Concatenate/combine by rows the quarterly subsets into a full raw data set:
-    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3, raw_data_25q4 #,raw_data_26q1
+    raw_data = pd.concat([raw_data_24q3, raw_data_24q4, raw_data_25q1, raw_data_25q2, raw_data_25q3, raw_data_25q4, raw_data_26q1
                          ], axis=0) 
     #raw_data = pd.read_csv("Datasets/Raw-Data/Raw-Data-2024Q3.csv", parse_dates=['Date'], date_parser=lambda x:pd.to_datetime(x, format='%Y-%m-%d'))
 
@@ -391,33 +391,33 @@ while today_p <= end_date:
             limassol_count = 1
             
     sew_price_= (larnaca_ + nicosia_ + limassol_) / (larnaca_count + nicosia_count + limassol_count)
-    new_row=[]
+    new_row = []
     new_row.append("Sewage collection")
     new_row.append(sew_price_)
     group_df.loc[len(group_df)] = new_row
     group_df['Subclass'] = group_df['Subclass'].apply(lambda x:x)
     
     # ECOICOP weights and weighted average prices per Subclass:
-    df_1 = pd.merge(group_df, weight_, on='Subclass')
+    df_1 = pd.merge(group_df, weight_, on = 'Subclass')
     df_1["Weight_Price_Subclass"] = df_1["Price"] * df_1["Weight"]
     
     df_2 = df_1.groupby("Subclass").sum()
-    df_2.reset_index(inplace=True)
+    df_2.reset_index(inplace = True)
     
     df_3 = pd.merge(df_2, weight_, on='Subclass')
-    df_3 = df_3[["Subclass","Division_x","Price","Weight_Price_Subclass","Weight_x"]]
-    df_3.rename(columns={'Weight_x': 'Weight','Division_x':'Division'}, inplace=True)
+    df_3 = df_3[["Subclass", "Division_x", "Price", "Weight_Price_Subclass", "Weight_x"]]
+    df_3.rename(columns = {'Weight_x':'Weight', 'Division_x':'Division'}, inplace = True)
     
     # Weighted average price per Division
     df_4 = df_3.groupby("Division").sum()
     df_4.reset_index(inplace=True)
-    df_4.rename(columns={'Weight_Price_Subclass': 'Weight_Price_Division_today'}, inplace=True)
+    df_4.rename(columns={'Weight_Price_Subclass':'Weight_Price_Division_today'}, inplace=True)
     
     # Daily CPI per Division 
     df_5 = pd.merge(index_, df_4, on='Division')
     df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_Index"], 4)
     df_5 = df_5[["Division","CPI Division","Weight_Price_Division_today"]]
-    df_5.rename(columns={'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace=True)
+    df_5.rename(columns={'Weight_Price_Division_today':'Weight_Price_Division'}, inplace=True)
     df_5["Date"] = today_f
     
     cols = list(df_5.columns)
@@ -453,14 +453,14 @@ while today_p <= end_date:
     CPI_general = round(df_10["New"].sum(), 4)
     
     # Create a new list and add information
-    new_row=[]
+    new_row = []
     new_row.append(today_f)
     new_row.append(CPI_general)
     new_row.append(None)
     
     # General CPI Inflation
     df_11 = pd.DataFrame([new_row], columns=['Date', 'CPI General', 'Inflation (%)'])
-    df_12 = pd.concat([df_daily_general, df_11],ignore_index=True)
+    df_12 = pd.concat([df_daily_general, df_11], ignore_index=True)
     df_12['Inflation (%)'] = 100 * (df_12['CPI General'] - df_12['CPI General'].shift(1)) / df_12['CPI General'].shift(1)
     df_12.to_csv("Results/Daily/Daily-CPI-General-Inflation.csv", index=False)
     
