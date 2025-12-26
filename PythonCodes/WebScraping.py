@@ -3297,8 +3297,8 @@ for u in range(0, len(urls)):
         results_cyta(u)
     #elif retailer_=="Cablenet": #*Run only locally
     #    results_cablenet(u)  
-    elif retailer_=="Primetel": 
-        results_primetel(u)    
+   # elif retailer_=="Primetel": 
+    #    results_primetel(u)    
     elif retailer_=="Epic":
         results_epic(u)
     elif retailer_=="Athlokinisi":
