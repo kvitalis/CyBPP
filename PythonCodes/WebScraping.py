@@ -3342,8 +3342,8 @@ for u in range(0, len(urls)):
         results_Marks_Spencer(u)    
     elif retailer_=="Bwell Pharmacy":
         results_bwell_pharmacy(u)
-    #elif retailer_=="Novella": #*deactivated in 27/12/2025
-    #    results_novella(u) 
+    elif retailer_=="Novella": #*deactivated in 27/12/2025 and activated in 03/01/26
+        results_novella(u) 
     elif retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons
         results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
