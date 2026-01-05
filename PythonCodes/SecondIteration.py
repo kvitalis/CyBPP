@@ -1338,63 +1338,28 @@ def results_novella(u):
             
         if name_ == "Services, LADIES CUT" :
             price_ = prices_list[0].text.replace('€',"").replace(',','.')
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Novella")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
           
         elif name_ == "Services, MEN'S CUT" :
             price_ = prices_list[3].text.replace('€',"").replace(',','.')
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Novella")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x) 
             
         elif name_ == "Services, CHILDREN'S CUT" :
-            price_ = prices_list[4].text.replace('€',"").replace(',','.')
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Novella")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)     
+            price_ = prices_list[4].text.replace('€',"").replace(',','.')     
          
         elif name_ == "Student Offers, LADIES CUT" :
             price_ = prices_list[27].text.replace('€',"").replace(',','.')
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Novella")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
           
         elif name_ == "Student Offers, MEN'S CUT" :
             price_ = prices_list[28].text.replace('€',"").replace(',','.')
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Novella")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x) 
+        
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Novella")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x) 
             
 def results_numbeo(u):
     
