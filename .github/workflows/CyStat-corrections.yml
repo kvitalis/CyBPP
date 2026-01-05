@@ -7,16 +7,16 @@ name: cystat-corrections
 run-name: CyStat's corrections
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-on:
-  schedule:
-    - cron: "48 21 * * *" #UTC time
-
 #on:
-#  pull_request:
-#    # Sequence of patterns matched against refs/heads
-#    branches:
-#      - cystat-corrections
-#      - cystat-corrections
+#  schedule:
+#    - cron: "48 21 * * *" #UTC time
+
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - cystat-corrections
+      - cystat-corrections
 
 jobs:
   getdataandrefreshmap:
