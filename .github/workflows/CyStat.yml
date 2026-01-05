@@ -11,6 +11,13 @@ on:
   schedule:
     - cron: "31 10 * * 4" #UTC time and weekday (1=Monday,..., 4=Thursday)
 
+#on:
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - cystat
+#      - cystat
+
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
