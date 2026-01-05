@@ -1,15 +1,15 @@
-# Workflow for the CyStat's results
+# Workflow for the CyStat's corrections
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
-name: cystat
+name: cystat-corrections
 
 # Workflow's description
-run-name: CyStat's results
+run-name: CyStat's corrections
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "31 10 * * 4" #UTC time and weekday (1=Monday,..., 4=Thursday)
+    - cron: "48 21 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
@@ -34,12 +34,12 @@ jobs:
           pip install python-docx
           pip install babel
       
-      - name: Run CyStat.py
+      - name: Run CyStat-corrections.py
         run: |
-          python CyStat/CyStat.py
+          python CyStat/CyStat-corrections.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "CyStat's results completed"
+          git commit -m "CyStat's corrections completed"
           git push origin HEAD:main
