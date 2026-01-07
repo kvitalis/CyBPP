@@ -54,97 +54,105 @@ According to the representativeness of each product and its retailer within the 
 
 12. Cyprus Public Transport https://www.publictransport.com.cy/
 
-13. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
+13. Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal
 
-14. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EL/regulatedactivities/supply/tariffs/Pages/supply-tariffs.aspx
+14. Douce et Belle Hair & Beauty Studio https://douce-et-belle.com/ 
 
-15. Electroline	https://electroline.com.cy/ 
+15. Electricity Authority of Cyprus (EAC) https://www.eac.com.cy/EL/regulatedactivities/supply/tariffs/Pages/supply-tariffs.aspx
 
-16. Epic https://www.epic.com.cy/en/page/start/home 
+16. Electroline	https://electroline.com.cy/ 
 
-17. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
+17. Epic https://www.epic.com.cy/en/page/start/home 
 
-18. Evdokia Jewellery https://evdokiajewellery.com/
+18. European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf
 
-19. E-Wholesale https://www.ewsale.com/
+19. Evdokia Jewellery https://evdokiajewellery.com/
 
-20. Famous Sports https://www.famousports.com/en 
+20. E-Wholesale https://www.ewsale.com/
 
-21. Flames Restaurant and Bar https://flamesrestaurantbar.com/
+21. Famous Sports https://www.famousports.com/en 
+
+22. Flames Restaurant and Bar https://flamesrestaurantbar.com/
     
-22. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Jackoson, Petrolina, Shell, Staroil, Total Plus) https://www.fueldaddy.com.cy/en through the Consumer Protection Service https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
+23. FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Jackoson, Petrolina, Shell, Staroil, Total Plus) https://www.fueldaddy.com.cy/en through the Consumer Protection Service https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
 
-23. IKEA https://www.ikea.com.cy/
+24. Hairspray https://hairspray.com.cy/ 
 
-24. Intercity Buses https://intercity-buses.com/en/
+25. IKEA https://www.ikea.com.cy/
 
-25. Ithaki Garden https://www.tripadvisor.com.gr/Restaurant_Review-g190379-d7269566-Reviews-Ithaki_Garden-Larnaca_Larnaka_District.html
+26. Intercity Buses https://intercity-buses.com/en/
 
-26. Lenses CY https://www.lensescy.com/
+27. Ithaki Garden https://www.tripadvisor.com.gr/Restaurant_Review-g190379-d7269566-Reviews-Ithaki_Garden-Larnaca_Larnaka_District.html
 
-27. Leroy Merlin https://www.leroymerlin.com.cy/gr/  
+28. Lenses CY https://www.lensescy.com/
 
-28. Marks & Spencer	https://www.marksandspencer.com/cy/
+29. Leroy Merlin https://www.leroymerlin.com.cy/gr/
 
-29. Max 7 Taxi https://www.max7taxi.com/
+30. Magda's Hair Boutique https://magdashairboutique.com/ 
 
-30. MEZE Taverna Restaurant https://www.mezetaverna.com/
+31. Marks & Spencer	https://www.marksandspencer.com/cy/
+
+32. Max 7 Taxi https://www.max7taxi.com/
+
+33. Meze Taverna Restaurant https://www.mezetaverna.com/
     
-31. Moto Race https://www.motorace.com.cy/
+34. Moto Race https://www.motorace.com.cy/
 
-32. Music Avenue https://www.musicavenue.com.cy/  
+35. Music Avenue https://www.musicavenue.com.cy/  
 
-33. Nissan https://www.nissan.com.cy/ 
+36. Nissan https://www.nissan.com.cy/ 
 
-34. Novella Hair Mode https://novella.com.cy/ 
+37. Novella Hair Mode https://novella.com.cy/ 
 
-35. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
+38. NUMBEO https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
 
-36. Oi Mageirisses https://oimageirisses.com/ 
+39. Oi Mageirisses https://oimageirisses.com/ 
 
-37. Pagkratios Traditional Tavern https://pagkratios.com
+40. Pagkratios Traditional Tavern https://pagkratios.com
 
-38. Parga Book Center https://www.parga.com.cy/
+41. Parga Book Center https://www.parga.com.cy/
 
-39. Piatsa Gourounaki https://piatsaexpress.com/menu/ 
+42. Piatsa Gourounaki https://piatsaexpress.com/menu/ 
 
-40. Premier Laundry Services Ltd https://premierlaundry.com.cy/#/ 
+43. Premier Laundry Services Ltd https://premierlaundry.com.cy/#/ 
 
-41. Primetel https://primetel.com.cy/en
+44. Primetel https://primetel.com.cy/en
 
-42. Public https://www.public.cy/ 
+45. Public https://www.public.cy/ 
 
-43. Pyxida Fish Tavern https://pyxidafishtavern.com/
+46. Pyxida Fish Tavern https://pyxidafishtavern.com/
 
-44. Rio Cinemas http://www.riocinemas.com.cy/ 
+47. Rio Cinemas http://www.riocinemas.com.cy/ 
 
-45. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
+48. Sewerage Board of Limassol-Amathus (SBLA) https://eoalemesos.org.cy/el/fees
 
-46. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
+49. Sewerage Board of Nicosia (SBN) https://ndlgo.org.cy/sewage/sewer-fees/ 
 
-47. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
+50. Sewerage and Drainage Board of Larnaca (LSDB) https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/
 
-48. Stephanis https://www.stephanis.com.cy/en
+51. Stephanis https://www.stephanis.com.cy/en
 
-49. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/ 
+52. Stock Center -- The Used Cars Experts https://www.stock-center.com.cy/
 
-50. SupermarketCy https://www.supermarketcy.com.cy/ 
+53. Studio 37 For Hair https://www.studio37forhair.com/  
 
-51. The CYgar Shop https://www.thecygarshop.com/ 
+54. SupermarketCy https://www.supermarketcy.com.cy/ 
 
-52. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
+55. The CYgar Shop https://www.thecygarshop.com/ 
 
-53. Toyota https://www.toyota.com.cy/
+56. The Royal Cigars https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
 
-54. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
+57. Toyota https://www.toyota.com.cy/
 
-55. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/water-fees-wbn/
+58. Vassos Psarolimano https://www.tripadvisor.com.gr/Restaurant_Review-g262055-d1101684-Reviews-Vassos_Psarolimano-Ayia_Napa_Famagusta_District.html
 
-56. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
+59. Water Board of Nicosia (WBN) https://ndlgo.org.cy/water-supply/water-fees-wbn/
+
+60. Water Board of Larnaca (LWB) https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/
     
-57. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
+61. Water Board of Limassol (WBL) https://eoalemesos.org.cy/el/fees 
 
-58. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
+62. Wolt (Costa Coffee, Starbucks, Caffè Nero, Pizza Hut, McDonald’s, Ocean Basket, KFC) https://wolt.com/en/cyp 
 
 ## GitHub Actions
 
