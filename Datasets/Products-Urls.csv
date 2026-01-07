@@ -986,7 +986,7 @@ Lemons1kg,Fresh or chilled vegetables other than potatoes and other tubers,lemon
 Κολοκάσι1kg,Fresh or chilled vegetables other than potatoes and other tubers,kolokasi-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Μπρόκολο1kg,Fresh or chilled vegetables other than potatoes and other tubers,mprokolo-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Κουνουπίδι1kg,Fresh or chilled vegetables other than potatoes and other tubers,kounoupidi-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-Potatoes1kg,Potatoes,patates-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+PotatoesNewSeason1kg,Potatoes,patates-kypriakes-neas-sodeias-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 FreezelandΠατάτες1kg,Potatoes,freezeland-patates-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 MccainTraditionΠατάτες1kg,Potatoes,mccain-tradition-patates-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜπανάνεςΕισαγωγής1kg,Fresh or chilled fruit,mpananes-eisagogis-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1121,7 +1121,7 @@ SensiSoftZigZagPreCutΒαμβάκι150g,"Articles for personal hygiene and welln
 ListerineFreshBurst250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",listerine-fresh-burst-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 GarnierSkinActiveMoistureBombTissueMask1Τεμ28g,"Articles for personal hygiene and wellness, esoteric products and beauty products",garnier-skin-active-moisture-bomb-tissue-mask-1tem-28g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 GarnierSkinActiveAloeRefreshingGelWashForNormal/CombinationSkin150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",garnier-skin-active-aloe-refreshing-gel-wash-gia-kanonikesmiktes-epidermides-150ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-DermomedFreschezzaWhiteMuskShowerGel650ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dermomed-freschezza-white-musk-afroloutro-650ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+DermomedSensualitaArganShowerGel650ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dermomed-sensualita-argan-afroloutro-650ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 AquafreshFresh&Minty2x75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",aquafresh-fresh-minty-2x75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 SensodyneRepair&ProtectCoolMint75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",sensodyne-repair-protect-cool-mint-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 DettolSoftOnSkinSootheLavender&VioletBlossomHandWash250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",dettol-soft-on-skin-soothe-lavender-violet-blossom-kremosapouno-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
@@ -1218,7 +1218,7 @@ NounouFrisogrowPlus+4800g,Baby food,nounou-frisogrow-plus-4-800g-1,FOOD AND NON-
 ComfortGoldBlueberries&PurpleOrchidΜαλακτικό2L,Cleaning and maintenance products,comfort-gold-blueberries-purple-orchid-malaktiko-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 ComfortGoldLilies&WildBerriesFabricSoftener4L,Cleaning and maintenance products,comfort-gold-lilies-wild-berries-malaktiko-rouchon-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 ComfortPureFabricSoftener2L,Cleaning and maintenance products,comfort-pure-malaktiko-rouchon-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
-ComfortPureFabricSoftener4L,Cleaning and maintenance products,comfort-pure-malaktiko-rouchon-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+ComfortFlowerFabricSoftener4L,Cleaning and maintenance products,comfort-flower-malaktiko-rouchon-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 SouplineActiveFreshSeaBreezeFabricSoftener1.2L,Cleaning and maintenance products,soupline-active-fresh-thalassini-avra-sympyknomeno-malaktiko-12l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 LenorLaCollectionBlissConcentrateFabricSoftener55Washes1.155L,Cleaning and maintenance products,lenor-la-collection-bliss-sympyknomeno-malaktiko-55-plyseis-1155l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
 ArielColorTouchOfLenorFreshnessLiquid70Washes3.850L,Cleaning and maintenance products,ariel-color-touch-of-lenor-freshness-ygro-70-plyseis-3850l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
@@ -1274,6 +1274,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
