@@ -1360,7 +1360,177 @@ def results_novella(u):
         new_row.append("Novella")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x) 
-            
+
+def results_hairspray(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers=header)
+    print(response)
+    soup = BeautifulSoup(response.content, "html.parser")
+ 
+    if response.status_code != 200 :
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        table_rows = soup.find_all("tr")
+        
+        if name_ == "Womens Cut":
+            text_ = table_rows[1].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Kids Boy Haircut 6-10 year":
+            text_ = table_rows[4].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Kids Girl Haircut 6-10 year":
+            text_ = table_rows[5].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Mens Hair Cut":
+            text_ = table_rows[6].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+        
+        print(price_) 
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Hairspray")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x) 
+
+def results_studio37(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers=header)
+    print(response)
+    soup = BeautifulSoup(response.content, "html.parser")
+ 
+    if response.status_code != 200 :
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        table_rows = soup.find_all("tr")
+        
+        if name_ == "Women's Cut & Blowdry":
+            text_ = table_rows[0].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Men's Cut":
+            text_ = table_rows[3].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Boy's Cut":
+            text_ = table_rows[4].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+
+        elif name_ == "Girl's Cut":
+            text_ = table_rows[5].get_text(strip=True)
+            price_ = re.findall(r"€(\d+)", text_)[0]
+        
+        print(price_) 
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Studio 37 For Hair")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x) 
+        
+def results_magdas(u):
+    
+    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    response = requests.get(Item_url_, headers=header)
+    print(response)
+    soup = BeautifulSoup(response.content, "html.parser")
+ 
+    if response.status_code != 200 :
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        element = soup.find_all("div", {"class":"et_pb_text_inner"})
+        text_prices = element[9].get_text(strip=True)
+        prices = re.findall(r"(\d+)€", text_prices)
+        
+        if name_ == "Women's wet cut":
+            price_ = prices[0]
+
+        elif name_ == "Girls cut":
+            price_ = prices[2]
+
+        elif name_ == "Men's cut":
+            price_ = prices[3]
+
+        elif name_ == "Boys cut":
+            price_ = prices[4]
+        
+        print(price_) 
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Magdas Hair Boutique")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)         
+
+def results_douce_et_belle(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    soup = BeautifulSoup(response.content, "html.parser")
+ 
+    if response.status_code != 200 :
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    
+    else:
+        element_soup = soup.find_all("span", {"class":"mkdf-bsl-price"})
+        
+        if name_ == "Women haircut only":
+            price_ = element_soup[0].text.replace("from ","").replace("€","")
+
+        elif name_ == "Men haircut":
+            price_ = element_soup[1].text.replace("€","")
+
+        elif name_ == "Children haircut":
+            price_ = element_soup[2].text.replace("€","")
+        
+        print(price_) 
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Douce et Belle")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)  
+
 def results_numbeo(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -3307,6 +3477,14 @@ for u in range(0, len(urls)):
         results_bwell_pharmacy(u)
     elif retailer_=="Novella":
         results_novella(u) 
+    elif retailer_=="Hairspray":
+        results_hairspray(u)
+    elif retailer_=="Studio 37 For Hair":
+        results_studio37(u) 
+    elif retailer_=="Magdas Hair Boutique":
+        results_magdas(u)
+    elif retailer_=="Douce et Belle":
+        results_douce_et_belle(u)    
     elif retailer_=="Evdokia Jewellery":
         results_evdokia_jewellery(u)
     elif retailer_=="LensesCY":
