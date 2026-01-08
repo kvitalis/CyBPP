@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-
+'''
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2025-07-31'
 
@@ -286,8 +286,8 @@ else:
 # If you want to re-calculate everything between two specific dates, then run the following while-loop :
 ########################################################################################################################################################################################
 
-start_date = datetime.strptime("2026-01-02", "%Y-%m-%d")
-end_date = datetime.strptime("2026-01-07", "%Y-%m-%d")
+start_date = datetime.strptime("2025-12-17", "%Y-%m-%d")
+end_date = datetime.strptime("2026-01-08", "%Y-%m-%d")
 
 today_p = start_date
 
@@ -564,4 +564,3 @@ while today_p <= end_date:
         pass
     today_p += timedelta(days=1)
 ####################################################    End of while-loop    ################################################################################################################
-'''
