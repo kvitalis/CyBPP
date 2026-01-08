@@ -10,7 +10,7 @@ from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
 # Important function
-def cystat(last_results, num_days):
+def cystat(last_results):
        
     # Main part of the web scraping 
     url_new = "https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
@@ -24,7 +24,7 @@ def cystat(last_results, num_days):
     current_date = current_date.strftime("%Y-%m-%d")
     if isinstance(current_date, str):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
-    correction_day = current_date - timedelta(days=num_days)
+    correction_day = current_date - timedelta(days=7)
     
     current_month = correction_day.month
     current_year = correction_day.year
@@ -357,7 +357,7 @@ def is_first_thursday(date):
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
         first_thursday = date - timedelta(days=7)
         last_results = first_thursday.strftime("%Y-%m-%d")
-        cystat(last_results,7)
+        cystat(last_results)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
         pass 
@@ -369,7 +369,7 @@ def is_second_thursday(date):
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
     last_results = second_thursday.strftime("%Y-%m-%d")
-    cystat(last_results , 8)
+    cystat(last_results )
 
 # dates of first Thursdays per month which correspond to public holidays
 holiday_list_= ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01-01', '2032-04-01']
@@ -384,7 +384,10 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 #is_second_thursday(current_date) #activate if the first Thursday of the month is a public holiday 
 
 if current_date in holiday_list_2:
-    is_second_thursday(current_date) #activate if the first Thursday of the month is a public holiday 
+    current_date_dt = datetime.now()
+    current_date_dt = current_date_dt.strftime("%Y-%m-%d")
+    current_date = (current_date_dt - timedelta(days=7)).strftime("%Y-%m-%d")
+    is_second_thursday(current_date)
 elif current_date in holiday_list_:
     print("TODAY IS THE FIRST THURSDAY OF THE MONTH BUT IS HOLIDAY LEAVE")
 else:
