@@ -24,7 +24,8 @@ def cystat(last_results):
     current_date = current_date.strftime("%Y-%m-%d")
     if isinstance(current_date, str):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
-    correction_day = current_date - timedelta(days=7)
+        correction_day = current_date - timedelta(days=7)
+        correction_day = "2025-12-25"
     
     current_month = correction_day.month
     current_year = correction_day.year
