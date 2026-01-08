@@ -385,7 +385,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 if current_date in holiday_list_2:
     current_date_dt = datetime.now()
-    current_date_dt = current_date_dt.strftime("%Y-%m-%d")
+    current_date_dt = datetime.strptime(current_date_dt, "%Y-%m-%d") 
     current_date = (current_date_dt - timedelta(days=7)).strftime("%Y-%m-%d")
     is_second_thursday(current_date)
 elif current_date in holiday_list_:
