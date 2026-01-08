@@ -384,9 +384,10 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 #is_second_thursday(current_date) #activate if the first Thursday of the month is a public holiday 
 
 if current_date in holiday_list_2:
-    current_date_dt = datetime.now()
-    current_date_dt = datetime.strptime(current_date_dt, "%Y-%m-%d") 
-    current_date = (current_date_dt - timedelta(days=7)).strftime("%Y-%m-%d")
+    #current_date_dt = datetime.now()
+    #current_date_dt = datetime.strptime(current_date_dt, "%Y-%m-%d") 
+    #current_date = (current_date_dt - timedelta(days=7)).strftime("%Y-%m-%d")
+    current_date = "2026-01-01"
     is_second_thursday(current_date)
 elif current_date in holiday_list_:
     print("TODAY IS THE FIRST THURSDAY OF THE MONTH BUT IS HOLIDAY LEAVE")
