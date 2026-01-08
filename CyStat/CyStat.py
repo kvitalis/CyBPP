@@ -24,9 +24,12 @@ def cystat(last_results):
     current_date = current_date.strftime("%Y-%m-%d")
     if isinstance(current_date, str):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
-        correction_day = current_date - timedelta(days=7)
-        correction_day = "2025-12-25"
+    correction_day = current_date - timedelta(days=7)
     
+    correction_day = "2025-12-25"
+    correction_day = datetime.strptime(correction_day, "%Y-%m-%d")
+    correction_day = correction_day - timedelta(days=7)
+
     current_month = correction_day.month
     current_year = correction_day.year
     current_day = correction_day.day
@@ -54,7 +57,7 @@ def cystat(last_results):
                     percentage_value = match.group(1)
                     if percentage_value==_date_:
                         corrent_jj=jj
-
+                               
     # Identify the correct document for the current month
     anchors = element_1[int(corrent_jj)].find_all('a')
     hrefs = [a.get('href') for a in anchors]
