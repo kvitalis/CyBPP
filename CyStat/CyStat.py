@@ -10,7 +10,7 @@ from babel.dates import format_date
 from datetime import date, timedelta , datetime
 
 # Important function
-def cystat(last_results):
+def cystat(last_results, num_days):
        
     # Main part of the web scraping 
     url_new = "https://www.cystat.gov.cy/el/SubthemeStatistics?id=47"
@@ -24,7 +24,7 @@ def cystat(last_results):
     current_date = current_date.strftime("%Y-%m-%d")
     if isinstance(current_date, str):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
-    correction_day = current_date - timedelta(days=7)
+    correction_day = current_date - timedelta(days=num_days)
     
     current_month = correction_day.month
     current_year = correction_day.year
@@ -350,7 +350,7 @@ def cystat(last_results):
            plt.savefig(path_, dpi=300)
            plt.show()
 
-def is_first_thursday(date):
+def is_first_thursday(date, 7):
     date = datetime.strptime(date, "%Y-%m-%d")
     #date = '2025-10-02' #set manually the date 
     weekday = date.weekday()
@@ -369,7 +369,7 @@ def is_second_thursday(date):
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
     last_results = second_thursday.strftime("%Y-%m-%d")
-    cystat(last_results)
+    cystat(last_results , 8)
 
 # dates of first Thursdays per month which correspond to public holidays
 holiday_list_= ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01-01', '2032-04-01']
