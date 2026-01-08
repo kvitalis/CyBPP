@@ -350,14 +350,14 @@ def cystat(last_results, num_days):
            plt.savefig(path_, dpi=300)
            plt.show()
 
-def is_first_thursday(date, 7):
+def is_first_thursday(date):
     date = datetime.strptime(date, "%Y-%m-%d")
     #date = '2025-10-02' #set manually the date 
     weekday = date.weekday()
     if weekday == 3 and date.month != (date - timedelta(days=7)).month:
         first_thursday = date - timedelta(days=7)
         last_results = first_thursday.strftime("%Y-%m-%d")
-        cystat(last_results)
+        cystat(last_results,7)
     else:
         print("TODAY IS NOT THE FIRST THURSDAY OF THE MONTH")
         pass 
