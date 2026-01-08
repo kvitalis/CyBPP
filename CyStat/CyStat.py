@@ -369,6 +369,7 @@ def is_second_thursday(date):
     first_thursday = first_day + timedelta(days = days_to_thursday)
     second_thursday = first_thursday + timedelta(days=7)
     last_results = second_thursday.strftime("%Y-%m-%d")
+    last_results = "2026-01-01"
     cystat(last_results )
 
 # dates of first Thursdays per month which correspond to public holidays
@@ -387,7 +388,6 @@ if current_date in holiday_list_2:
     #current_date_dt = datetime.now()
     #current_date_dt = datetime.strptime(current_date_dt, "%Y-%m-%d") 
     #current_date = (current_date_dt - timedelta(days=7)).strftime("%Y-%m-%d")
-    current_date = "2026-01-01"
     is_second_thursday(current_date)
 elif current_date in holiday_list_:
     print("TODAY IS THE FIRST THURSDAY OF THE MONTH BUT IS HOLIDAY LEAVE")
