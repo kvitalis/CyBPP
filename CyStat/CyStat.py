@@ -17,7 +17,7 @@ def cystat(last_results):
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    element_1 = soup.find_all("div",{"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
+    element_1 = soup.find_all("div", {"class":"col-12 col-md-12 col-lg-6 col-xl-6"})
     
     # Calculation of the month
     current_date = datetime.now()
@@ -27,42 +27,42 @@ def cystat(last_results):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
     correction_day = current_date - timedelta(days=7)
        
-    current_month = correction_day.month
     current_year = correction_day.year
+    current_month = correction_day.month
     current_day = correction_day.day
     
     date = datetime(current_year, current_month, current_day)
     date_ = format_date(date, 'MMMM', locale='el')
 
     # Fix the month
-    if (current_month==6) or (current_month==7):
-        _date_=date_[:4]
-    elif (current_month==5):
-        _date_="Μάιος"
+    if (current_month == 6) or (current_month == 7):
+        _date_ = date_[:4]
+    elif (current_month == 5):
+        _date_ = "Μάιος"
     else:
-        _date_=date_[:3]
+        _date_ = date_[:3]
     
     #*NOTE*: Change manually when the first Thursday of the month is a public holiday
     #_date_="Απρ" 
     
     #Specify the index of website
-    for jj in range(0,len(element_1)):
+    for jj in range(0, len(element_1)):
         if "Δείκτης Τιμών Καταναλωτή - Πληθωρισμός" in element_1[jj].text:
             if _date_ in element_1[jj].text:
                 match = re.search(r'%\s*(\S+)', element_1[jj].text)
                 if match:
                     percentage_value = match.group(1)
-                    if percentage_value==_date_:
-                        corrent_jj=jj
+                    if percentage_value == _date_:
+                        current_jj = jj
                                
     # Identify the correct document for the current month
-    anchors = element_1[int(corrent_jj)].find_all('a')
+    anchors = element_1[int(current_jj)].find_all('a')
     hrefs = [a.get('href') for a in anchors]
     for href in hrefs:
         url_href = href
 
     # Main part of the documents
-    url_months = "https://www.cystat.gov.cy/el"+url_href
+    url_months = "https://www.cystat.gov.cy/el" + url_href
     bs = BeautifulSoup(url_months, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -80,10 +80,10 @@ def cystat(last_results):
     
     ## *IMPORTANT NOTE* : Remember to change manually the Consumer_Price_Index_year every new year !!!
     if response.status_code == 200:
-        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx', 'wb') as file:
+        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-' + str(current_month) + '.docx', 'wb') as file:
             file.write(response.content)
         
-    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-'+str(current_month)+'.docx')
+    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-' + str(current_month) + '.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
@@ -100,7 +100,7 @@ def cystat(last_results):
     if match:
         print("OK")
         cpi_month = match.groups()
-        cpi_month = float(cpi_month[1].replace(",","."))
+        cpi_month = float(cpi_month[1].replace(",", "."))
         cpi_month = round(cpi_month, 2)
         
         # Identify the monthly General CPI
@@ -109,12 +109,12 @@ def cystat(last_results):
         date_to_find = last_results
         ## date_to_find = "2025-12-25" #manually add the date of the last Thursday of the month 
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
-        values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
-        values_12 = round(values_12, 2)
+        values_general = float(monthly_gen_cpi.loc[index, "CPI General"])
+        values_general = round(values_general, 2)
         
         # Rebase the General CPI
         rebase_offline = (cpi_month*100) / float(117.72)
-        rebase_online = (values_12*100) / float(77.89)
+        rebase_online = (values_general*100) / float(77.89)
 
         df_new_empty_ = pd.DataFrame()
         
@@ -123,17 +123,18 @@ def cystat(last_results):
         general_cpi = pd.read_csv("CyStat/General-CPI-Offline-VS-Online.csv")
         
         df_new_empty_.loc[0,"Period"] = correction_day.strftime("%Y-%m")
-        df_new_empty_.loc[0,"Official (2015=100)"] = round(float(cpi_month),2)
-        df_new_empty_.loc[0,"Online (27/06/2024=77.89)"] = values_12
-        df_new_empty_.loc[0,"Official (27/06/2024=100)"] = round(rebase_offline,2)
-        df_new_empty_.loc[0,"Online (27/06/2024=100)"] = round(rebase_online,2)
+        df_new_empty_.loc[0,"Official (2015=100)"] = round(float(cpi_month), 2)
+        df_new_empty_.loc[0,"Online (27/06/2024=77.89)"] = values_general
+        df_new_empty_.loc[0,"Official (27/06/2024=100)"] = round(rebase_offline, 2)
+        df_new_empty_.loc[0,"Online (27/06/2024=100)"] = round(rebase_online, 2)
         df_new_empty_.loc[0,"Official Inflation (%)"] = None
         df_new_empty_.loc[0,"Online Inflation (%)"] = None
 
         df_tables = pd.concat([general_cpi, df_new_empty_], ignore_index=True)
-        df_tables.loc[len(df_tables)-1,"Official Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Official (2015=100)"] - df_tables.loc[len(df_tables)-2,"Official (2015=100)"]) / df_tables.loc[len(df_tables)-2,"Official (2015=100)"],2)
-        df_tables.loc[len(df_tables)-1,"Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1,"Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2,"Online (27/06/2024=77.89)"],2)
-        df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv",index=False)
+        df_tables.loc[len(df_tables)-1, "Official Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1, "Official (2015=100)"] - df_tables.loc[len(df_tables)-2, "Official (2015=100)"]) / df_tables.loc[len(df_tables)-2, "Official (2015=100)"], 2)
+        df_tables.loc[len(df_tables)-1, "Online Inflation (%)"] = round(100 * (df_tables.loc[len(df_tables)-1, "Online (27/06/2024=77.89)"] - df_tables.loc[len(df_tables)-2, "Online (27/06/2024=77.89)"]) / df_tables.loc[len(df_tables)-2, "Online (27/06/2024=77.89)"], 2)
+        
+        df_tables.to_csv("CyStat/General-CPI-Offline-VS-Online.csv", index=False)
 
     # Offline/Official CPI per Division
     division_cpi = pd.read_csv("CyStat/Division-CPI-Offline-VS-Online.csv")
@@ -167,18 +168,18 @@ def cystat(last_results):
                    "MISCELLANEOUS GOODS AND SERVICES"   
                   ]
     
-    for i in range(0,len(pattern_list)):
+    for i in range(0, len(pattern_list)):
         match_ = re.search(pattern_list[i], doc_text)
-        if (i!=4 or i!=7): 
+        if (i != 4 or i != 7): 
             if match_:
                 print(i)
                 values_after_gd = match_.groups()
-                division_ = values_after_gd[1].replace(",",".")
+                division_ = values_after_gd[1].replace(",", ".")
         else:
             if match_:
                 print(i)
                 values_after_gd = match_.groups(2)
-                division_ = values_after_gd[1].replace(",",".")
+                division_ = values_after_gd[1].replace(",", ".")
        
         new_row = []
         correction_day = current_date - timedelta(days=7)
@@ -199,7 +200,7 @@ def cystat(last_results):
         df_2 = float(current_df[current_df["Division"] == unique_]["Official CPI"])
         official_change = ((df_2 - df_1)/df_1) * 100  #change (%) of CPI per Division 
     
-        index_list = current_df[current_df["Division"]==unique_]["Official CPI"].index.tolist()
+        index_list = current_df[current_df["Division"] == unique_]["Official CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         division_cpi.loc[float_index_list, "Official Monthly Change (%)"] = round(official_change,2)
     
@@ -211,9 +212,9 @@ def cystat(last_results):
     
     for i in range(0,len(unique_values)):
         indices = division_cpi[division_cpi["Division"] == unique_values[i].strip()].index
-        values_1234 = daily_cpi_online[daily_cpi_online["Division"] == unique_values[i]]["CPI Division"]
-        print(values_1234.values[0])
-        division_cpi.loc[indices[-1],"Online CPI"] = values_1234.values[0]
+        values_division = daily_cpi_online[daily_cpi_online["Division"] == unique_values[i]]["CPI Division"]
+        print(values_division.values[0])
+        division_cpi.loc[indices[-1],"Online CPI"] = values_division.values[0]
 
     prior_df = division_cpi[len(division_cpi)-24:len(division_cpi)-12]
     current_df = division_cpi[len(division_cpi)-12:len(division_cpi)]
@@ -224,7 +225,7 @@ def cystat(last_results):
         df_4 = float(current_df[current_df["Division"] == unique_]["Online CPI"])
         online_change = ( (df_4 - df_3) / df_3 ) * 100  #change (%) of CPI per Division 
 
-        index_list = current_df[current_df["Division"]==unique_]["Online CPI"].index.tolist()
+        index_list = current_df[current_df["Division"] == unique_]["Online CPI"].index.tolist()
         float_index_list = [int(i) for i in index_list]
         division_cpi.loc[float_index_list, "Online Monthly Change (%)"] = round(online_change,2)
 
@@ -330,7 +331,7 @@ def cystat(last_results):
            division_name = division_1["Division"].iloc[0]
            division_1["Date"] = pd.to_datetime(division_1["Period"], format="%Y-%m")
            
-           plt.figure(figsize=(10, 6))
+           plt.figure(figsize = (10, 6))
            plt.plot(division_1 ["Date"], division_1["Official Monthly Change (%)"], marker="o", color="blue", label="Official")
            plt.plot(division_1 ["Date"], division_1["Online Monthly Change (%)"], marker="o", color="red", label="Online")
                   
@@ -373,7 +374,7 @@ def is_second_thursday(date):
     cystat(last_results )
 
 # dates of first Thursdays per month which correspond to public holidays
-holiday_list_= ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01-01', '2032-04-01']
+holiday_list_1 = ['2026-01-01', '2026-10-01', '2027-04-01', '2031-05-01', '2032-01-01', '2032-04-01']
 
 # if the first Thursday of the month is a public holiday, the code runs on the next (i.e. second) Thursday 
 holiday_list_2 = ['2026-01-08', '2026-10-08', '2027-04-08', '2031-05-08', '2032-01-08', '2032-04-08'] 
@@ -386,7 +387,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 if current_date in holiday_list_2:
     is_second_thursday(current_date)
-elif current_date in holiday_list_:
+elif current_date in holiday_list_1:
     print("TODAY IS THE FIRST THURSDAY OF THE MONTH BUT IS HOLIDAY LEAVE")
 else:
     is_first_thursday(current_date)
