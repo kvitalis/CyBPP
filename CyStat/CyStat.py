@@ -22,8 +22,7 @@ def cystat(last_results):
     # Calculation of the month
     current_date = datetime.now()
     current_date = current_date.strftime("%Y-%m-%d")
-    current_date = "2026-01-01"
-       
+
     if isinstance(current_date, str):
         current_date = datetime.strptime(current_date, "%Y-%m-%d")
     correction_day = current_date - timedelta(days=7)
@@ -108,7 +107,7 @@ def cystat(last_results):
         monthly_gen_cpi = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
-        date_to_find = "2025-12-25" #manually add the date of the last Thursday of the month 
+        ## date_to_find = "2025-12-25" #manually add the date of the last Thursday of the month 
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
         values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
         values_12 = round(values_12, 2)
