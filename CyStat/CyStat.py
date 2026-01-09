@@ -108,7 +108,7 @@ def cystat(last_results):
         monthly_gen_cpi = pd.read_csv("Results/Monthly/Monthly-CPI-General-Inflation.csv")
         monthly_gen_cpi['Date'] = pd.to_datetime(monthly_gen_cpi['Date'])
         date_to_find = last_results
-        #date_to_find = "2025-04-24" #manually add the date of the last Thursday of the month 
+        date_to_find = "2025-12-25" #manually add the date of the last Thursday of the month 
         index = monthly_gen_cpi.index[monthly_gen_cpi['Date'] == date_to_find].tolist()
         values_12 = float(monthly_gen_cpi.loc[index,"CPI General"])
         values_12 = round(values_12, 2)
