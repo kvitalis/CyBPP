@@ -219,6 +219,8 @@ OFTAST Πιάτο,"Glassware, crystal-ware, ceramic ware and chinaware",https://
 OFTAST Μπολ,"Glassware, crystal-ware, ceramic ware and chinaware",https://www.ikea.com.cy/proioda/oftast-mpol/80258915/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 "MOPSIG μαχαιροπίρουνα, σετ 16 τεμ.","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/mopsig-maxairopiroyna-set-16-tem-/00343003/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 "ANNONS Σκεύη μαγειρικής, σετ 3 τεμ.","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/annons-skeyi-mageirikis-set-3-tem-/90207402/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+"HÄGRANDE μπρίκι, 700 ml","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/hagrande-mpriki-700-ml/00485059/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
+"MIDDAGSMAT κατσαρόλα με καπάκι, 2 l","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/middagsmat-katsarola-me-kapaki-2-l/10463702/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 "BARLAST επιτραπέζιο φωτιστικό, 31 cm",Lighting equipment,https://www.ikea.com.cy/proioda/barlast-epitrapezio-fwtistiko-31-cm/80504563/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 RESTAD φωτιστικό οροφής,Lighting equipment,https://www.ikea.com.cy/proioda/restad-fwtistiko-orofis/00449250/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 TAGARP φωτιστικό δαπέδου/διαβάσματος,Lighting equipment,https://www.ikea.com.cy/proioda/tagarp-fwtistiko-dapedoy-diabasmatos/40486392/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
@@ -231,8 +233,6 @@ IKEA PS 2002 Ποτιστήρι,Garden products,https://www.ikea.com.cy/proioda/
 "UTSADD μπολ για κατοικίδια, 11 cm",Products for pets,https://www.ikea.com.cy/proioda/utsadd-mpol-gia-katoikidia-11-cm/10569204/,RECREATION AND CULTURE,IKEA
 UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,https://www.ikea.com.cy/proioda/utsadd-loytrino-paixnidi-gia-skylo/10570877/,RECREATION AND CULTURE,IKEA
 UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets,https://www.ikea.com.cy/proioda/utsadd-loytrino-paixnidi-gia-skylo/30570876/,RECREATION AND CULTURE,IKEA
-"HÄGRANDE μπρίκι, 700 ml","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/hagrande-mpriki-700-ml/00485059/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
-"MIDDAGSMAT κατσαρόλα με καπάκι, 2 l","Cutlery, flatware and silverware",https://www.ikea.com.cy/proioda/middagsmat-katsarola-me-kapaki-2-l/10463702/,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",IKEA
 BOSCH KGN36NLEA Full No Frost 305 Lt Metal Look Ψυγειοκαταψύκτης,"Refrigerators, freezers and fridge-freezers",https://www.public.cy/public/v1/mm/productPage?sku=1693788&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
 LG GFE41PZGSZ Combo Thor 324 Lt Inox Καταψύκτης Όρθιος,"Refrigerators, freezers and fridge-freezers",https://www.public.cy/public/v1/mm/productPage?sku=1673637&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
 LG GTBV44SWBKD No Frost 461 Lt Λευκό Δίπορτο Ψυγείο,"Refrigerators, freezers and fridge-freezers",https://www.public.cy/public/v1/mm/productPage?sku=1928050&locale=el,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",Public
@@ -1275,6 +1275,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
