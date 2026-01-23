@@ -15,7 +15,7 @@ Name,Subclass,Url,Division,Retailer
 Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%ce%94%ce%b9%ce%b1%cf%84%ce%af%ce%bc%ce%b7%cf%83%ce%b7%20%ce%9f%ce%b9%ce%ba%ce%b9%ce%b1%ce%ba%ce%ae_14-7-25.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%ce%94%ce%b9%ce%b1%cf%84%ce%af%ce%bc%ce%b7%cf%83%ce%b7%20%ce%9f%ce%b9%ce%ba%ce%b9%ce%b1%ce%ba%ce%ae_14-7-25.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 Κόστος Προμήθειας,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%ce%94%ce%b9%ce%b1%cf%84%ce%af%ce%bc%ce%b7%cf%83%ce%b7%20%ce%9f%ce%b9%ce%ba%ce%b9%ce%b1%ce%ba%ce%ae_14-7-25.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-Αναπροσαρμογή τιμής καυσίμου από ΑΠΕ και Συμβατική Παραγωγή - Χ.Τ.,Electricity,https://www.cera.org.cy/Templates/00001/data/katanalotes/ilektrismos/Times%20Ilektrismou/ekthesi_2024-12.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Cyprus Energy Regulatory Authority
+Διατίμηση Χονδρικής Δ-Χ,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%ce%94%ce%b9%ce%b1%cf%84%ce%af%ce%bc%ce%b7%cf%83%ce%b7%20%ce%9f%ce%b9%ce%ba%ce%b9%ce%b1%ce%ba%ce%ae_14-7-25.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 Πάγιο ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Δικαίωμα Συντήρησης ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
 Κυβικά ανά μήνα,Water supply,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Larnaca
@@ -1275,6 +1275,7 @@ Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketC
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+
 
 
 
