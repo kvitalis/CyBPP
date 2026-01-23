@@ -3507,8 +3507,8 @@ for u in range(0, len(urls)):
         results_CyPost(u)
     elif retailer_=="AHK":
         results_AHK(u)
-    elif retailer_=="Cyprus Energy Regulatory Authority":
-        results_CERA(u)
+    #elif retailer_=="Cyprus Energy Regulatory Authority": #*deactivated in 23/01/2026 because of no updates 
+    #    results_CERA(u)
     elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol"): #or (retailer_=="Water Board of Nicosia"): #*Nicosia was deactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
         results_water(u)
     elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol"): #or (retailer_=="Sewerage Board of Nicosia"): #*Nicosia was diactivated since it banned access in 17/10/25 (https://ndlgo.org.cy/sewage/sewer-fees/) 
