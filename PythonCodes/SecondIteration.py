@@ -1780,15 +1780,15 @@ def results_AHK(u):
                     price_ = float(match.group(0).replace(",","."))
             else:
                 price_ = float(match.group(0).replace(",",".")) / 100 #convert to euros   
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(price_)
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("AHK")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+            print(price_)
+            new_row.append(datetime.now().strftime('%Y-%m-%d'))
+            new_row.append(name_)
+            new_row.append(price_)
+            new_row.append(subclass_)
+            new_row.append(division_)
+            new_row.append("AHK")
+            list_.loc[len(list_)] = new_row
+            list_['Name'] = list_['Name'].apply(lambda x:x)
         else:
             website_false.append(name_)
             website_false.append(subclass_)
