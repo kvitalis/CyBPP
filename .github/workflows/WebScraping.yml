@@ -12,11 +12,11 @@ on:
     - cron: "37 11 * * *" #UTC time
 
 #on:
-  #pull_request:
-  #  # Sequence of patterns matched against refs/heads
-  #  branches:
-  #    - web-scraping
-  #    - web-scraping
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - web-scraping
+#      - web-scraping
     
 jobs:
   getdataandrefreshmap:
