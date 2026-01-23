@@ -12,11 +12,11 @@ on:
     - cron: "41 12 * * *" #UTC time
 
 #on:
-  #pull_request:
-  #  # Sequence of patterns matched against refs/heads
-  #  branches:
-  #    - second-iteration
-  #    - second-iteration   
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - second-iteration
+#      - second-iteration   
 
 jobs:
   getdataandrefreshmap:
