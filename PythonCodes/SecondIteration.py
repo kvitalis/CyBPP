@@ -1778,8 +1778,8 @@ def results_AHK(u):
             match = re.search(r'\d+,\d+', ken)
             if "Προμήθειας" in ken:
                     price_ = float(match.group(0).replace(",","."))
-                else:
-                    price_ = float(match.group(0).replace(",",".")) / 100 #convert to euros   
+            else:
+                price_ = float(match.group(0).replace(",",".")) / 100 #convert to euros   
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
@@ -1789,14 +1789,14 @@ def results_AHK(u):
                 new_row.append("AHK")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+        else:
+            website_false.append(name_)
+            website_false.append(subclass_)
+            website_false.append(Item_url_)
+            website_false.append(division_)
+            website_false.append(retailer_)
+            daily_errors.loc[len(daily_errors)] = website_false
+            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_CERA(u):
     '''
