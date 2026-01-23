@@ -11,7 +11,7 @@ on:
   schedule:
     - cron: "53 09 * * *" #UTC time
 
-  #on:
+#on:
   #pull_request:
   #  # Sequence of patterns matched against refs/heads
   #  branches:
