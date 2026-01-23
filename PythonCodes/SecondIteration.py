@@ -1776,11 +1776,10 @@ def results_AHK(u):
         if name_ in line:
             ken = line.strip()
             match = re.search(r'\d+,\d+', ken)
-            if match:     
-                if "για" in ken:
-                    price_ = float(match.group(0).replace(",","."))/100
+            if "Προμήθειας" in ken:
+                    price_ = float(match.group(0).replace(",","."))
                 else:
-                    price_ = float(match.group(0).replace(",","."))   
+                    price_ = float(match.group(0).replace(",",".")) / 100 #convert to euros   
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
