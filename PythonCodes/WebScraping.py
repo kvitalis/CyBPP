@@ -2273,7 +2273,7 @@ def results_CyPost(u):
 def results_AHK(u):
     '''
     response = requests.get(Item_url_)
-    pdf_AHK = "PDFs/AHK_Mar2024.pdf"
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -2284,6 +2284,7 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
+        pdf_AHK = "PDFs/AHK_Mar2024.pdf"
         with open(pdf_AHK, "wb") as f:
             f.write(response.content)
         with open(pdf_AHK, "rb") as f:
