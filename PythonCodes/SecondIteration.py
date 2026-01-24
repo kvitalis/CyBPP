@@ -1743,8 +1743,8 @@ def results_rio(u):
 def results_AHK(u):
     '''
     response = requests.get(Item_url_)
-    pdf_AHK = "PDFs/AHK_Mar2024.pdf"
-    
+    print(response)
+        
     if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1754,6 +1754,7 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
+        pdf_AHK = "PDFs/AHK_Mar2024.pdf"
         with open(pdf_AHK, "wb") as f:
             f.write(response.content)
         with open(pdf_AHK, "rb") as f:
@@ -1777,7 +1778,7 @@ def results_AHK(u):
             ken = line.strip()
             match = re.search(r'\d+,\d+', ken)
             if "Προμήθειας" in ken:
-                    price_ = float(match.group(0).replace(",","."))
+                price_ = float(match.group(0).replace(",","."))
             else:
                 price_ = float(match.group(0).replace(",",".")) / 100 #convert to euros   
             print(price_)
