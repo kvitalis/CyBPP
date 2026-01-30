@@ -1,23 +1,23 @@
-# Workflow for the 2nd scraping iteration process
+# Workflow for the 3rd scraping iteration process
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
-name: second-iteration
+name: third-iteration
 
 # Workflow's description
-run-name: Scrape the products in daily errors and store raw data 
+run-name: Scrape the products in daily errors (2nd iteration) and store raw data 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: '01 09 * * *' #UTC time
+    - cron: '11 10 * * *' #UTC time
   #workflow_dispatch: # Allows manual testing
   
 #on:
 #  pull_request:
 #    # Sequence of patterns matched against refs/heads
 #    branches:
-#      - second-iteration
-#      - second-iteration   
+#      - third-iteration
+#      - third-iteration   
 
 jobs:
   getdataandrefreshmap:
@@ -38,12 +38,12 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Run SecondIteration.py
+      - name: Run ThirdIteration.py
         run: |
-          python PythonCodes/SecondIteration.py
+          python PythonCodes/ThirdIteration.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "2nd scraping iteration completed"
+          git commit -m "3rd scraping iteration completed"
           git push origin HEAD:main
