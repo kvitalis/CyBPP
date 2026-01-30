@@ -3559,6 +3559,7 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", index=False, header=True)
 
+# Export/Save the unscraped data (daily errors of 3rd iteration)
 monthly_errors = pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"] = datetime.now().strftime('%Y-%m-%d')
 combined_monthly = pd.concat([monthly_errors, daily_errors], axis=0)
