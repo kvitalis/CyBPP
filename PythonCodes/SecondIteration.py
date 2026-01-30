@@ -4064,7 +4064,7 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("Datasets/Raw-Data/Raw-Data-2026Q1.csv", index=False, header=True)
 
-## The following lines are deactivated in 30/01/2026 because we created a 3rd iteration process:
+## The following lines are deactivated in 30/01/2026 because we created a 3rd iteration process for scraping issues about Fuel Daddy:
 #monthly_errors = pd.read_csv("Datasets/Monthly-Scraping-Errors.csv")
 #daily_errors["Date"] = datetime.now().strftime('%Y-%m-%d')
 #combined_monthly = pd.concat([monthly_errors, daily_errors], axis=0)
