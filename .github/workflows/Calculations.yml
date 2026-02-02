@@ -6,8 +6,8 @@ name: calculations
 # Workflow's description
 run-name: Perform calculations and store results 
 
- Function to schedule the time (UTC), day, month, and year of the workflow process
-#on:
+#Function to schedule the time (UTC), day, month, and year of the workflow process
+on:
   schedule:
     - cron: "12 17 * * *" #UTC time
 
