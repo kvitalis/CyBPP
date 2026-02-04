@@ -1003,8 +1003,8 @@ MccainTraditionΠατάτες1kg,Potatoes,mccain-tradition-patates-1kg,FOOD AND 
 ΜπανάνεςΚυπριακές1kg,Fresh or chilled fruit,mpananes-kypriakes-1kg-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΑχλάδιαConference1kg,Fresh or chilled fruit,achladia-conference-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 Ακτινίδια1kg,Fresh or chilled fruit,aktinidia-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-BgwΚατεψυγμένεςΦράουλες500g,Fresh or chilled fruit,bgw-katepsygmenes-fraoules-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-BgwΚατεψυγμέναΦρούταΔάσους500g,Fresh or chilled fruit,bgw-katepsygmena-frouta-dasous-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BgwFrozenStrawberries500g,Fresh or chilled fruit,bgw-katepsygmenes-fraoules-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+BgwFrozenBlackberry500g,Fresh or chilled fruit,bgw-katepsygmena-vatomoura-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΜάναΓάλαΖαχαρούχο397g,Preserved milk,mana-gala-zacharoucho-397g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 MulikFullCreamΓάλαΣοκολάτα500ml,Preserved milk,mulik-full-cream-gala-sokolata-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 KokoOriginalCoconutMilk1L,Preserved milk,koko-original-rofima-karydas-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1021,7 +1021,7 @@ OatlyBaristaOatDrink500ml,Preserved milk,oatly-barista-rofima-vromis-500ml,FOOD 
 ZitaΣτραγγιστό1kg,Yoghurt,zita-straggisto-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ZitaΣτραγγιστόΆπαχο0%1kg,Yoghurt,zita-straggisto-apacho-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΧαραλαμπίδηςΚρίστηςΣτραγγάτοΆπαχο0%1kg,Yoghurt,charalampidis-kristis-straggato-apacho-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-ΑλάμπραΠρόβειοΓιαούρτιΗΓιαγιά700g,Yoghurt,alampra-proveio-giaourti-i-giagia-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+ToAgrinoSheepYogurt700g,Yoghurt,to-agrino-proveio-giaourti-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 LurpakSaltedButter250g,Butter,lurpak-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 KerrygoldSaltedButter250g,Butter,kerrygold-alatismeno-voutyro-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 LurpakSoftUnsaltedButter225g,Butter,lurpak-soft-analato-voutyro-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1088,8 +1088,8 @@ SalmonFresh1kg,Frozen fish,solomos-freskos-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,
 ΚαλαμάριΚαθαρισμένο1kg,Fresh or chilled fish,kalamari-katharismeno-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 TrataTunaInWater2X160g,Other preserved or processed fish and seafood-based preparations,trata-tonos-se-nero-2ch160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 TrataTunaInOliveOil2X160g,Other preserved or processed fish and seafood-based preparations,trata-tonos-se-elaiolado-2ch160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-SevycoTunaMeatInWater4X200g,Other preserved or processed fish and seafood-based preparations,sevyco-tonos-se-nero-4x200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-SevycoRozeTunaMeatInSoyaOil4X200g,Other preserved or processed fish and seafood-based preparations,sevyco-roze-tonos-se-sogielaio-4x200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+SevycoWhiteTunaChunksInSoyabeanOil4X185g,Other preserved or processed fish and seafood-based preparations,sevyco-aspros-tonos-se-sogielaio-4x185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+SevycoRozeTunaMeatInSoyaOil4X185g,Other preserved or processed fish and seafood-based preparations,sevyco-roze-tonos-se-sogielaio-4x185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 RioMareΤόνοςΣεΕλαιόλαδο2x160g,Other preserved or processed fish and seafood-based preparations,rio-mare-tonos-se-elaiolado-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 RioMareTunaMeatInWater2x160g,Other preserved or processed fish and seafood-based preparations,rio-mare-tonos-se-nero-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 ΚαμήλαΣαρδελάκιαΣεΗλιανθέλαιο120g,"Dried, smoked or salted fish and seafood",kamila-sardelakia-se-ilianthelaio-120g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1168,8 +1168,8 @@ CocaColaZero8X330ml,Soft drinks,coca-cola-zero-8x330ml,FOOD AND NON-ALCOHOLIC BE
 Pepsi8X330ml,Soft drinks,pepsi-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 SchweppesΣόδα6X330ml,Soft drinks,schweppes-soda-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 7UpZeroSugar8X330ml,Soft drinks,7up-zero-sugar-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-JordanDentalSticksCleanBetweenRegular40Τεμ,Non-electrical appliances,jordan-dental-sticks-clean-between-regular-40tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
-ColgateProGumHealthΟδοντικόΝήμα50m,Non-electrical appliances,colgate-pro-gum-health-odontiko-nima-50m,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+OralBEssentialDentalFloss50m,Non-electrical appliances,oral-b-odontiko-nima-50m,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+ColgateProGumHealthDentalFloss50m,Non-electrical appliances,colgate-pro-gum-health-odontiko-nima-50m,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 JordanExpertCleanToothbrushMedium1Pc,Non-electrical appliances,jordan-expert-clean-odontovourtsa-medium-1tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 OralBStarWarsToothbrushJunior6-12YearsSoft1Pc,Non-electrical appliances,oral-b-odontovourtsa-junior-star-wars-6-12-chronon-soft-1tem,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
 KeanOrangeJuice1L,Fruit and vegetable juices,kean-chymos-portokali-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1273,30 +1273,5 @@ SimbaSpecialPackChunkies4x100g,Products for pets,simba-special-pack-mpoukies-4x1
 TatrapetFantasiaCuttlefishBoneForSingingBirds1Pc,Products for pets,tatrapet-fantasia-osta-soupias-gia-poulia-pou-tragoudoun-1tem,RECREATION AND CULTURE,SupermarketCy
 Leon6X500ml,Lager beer,leon-6x500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Κεο6X330ml,Lager beer,keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-StellaArtois6X330ml,Lager beer,stella-artois-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+StellaArtois6X330ml,Lager beer,stella-artois-6x330ml-1,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
 Carlsberg8X330ml,Lager beer,carlsberg-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
