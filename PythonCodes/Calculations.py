@@ -286,7 +286,7 @@ else:
 # If you want to re-calculate everything between two specific dates, then run the following while-loop :
 ########################################################################################################################################################################################
 
-start_date = datetime.strptime("2026-01-16", "%Y-%m-%d")
+start_date = datetime.strptime("2025-12-26", "%Y-%m-%d")
 end_date = datetime.strptime("2026-02-05", "%Y-%m-%d")
 
 today_p = start_date
