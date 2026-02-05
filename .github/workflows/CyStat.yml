@@ -9,7 +9,7 @@ run-name: CyStat's results
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 #on:
 #  schedule:
-#    - cron: "31 14 * * 4" #UTC time and weekday (1=Monday,..., 4=Thursday)
+#    - cron: "31 20 * * 4" #UTC time and weekday (1=Monday,..., 4=Thursday)
 
 on:
   pull_request:
