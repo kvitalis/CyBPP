@@ -80,10 +80,10 @@ def cystat(last_results):
     
     ## *IMPORTANT NOTE* : Remember to change manually the Consumer_Price_Index_year every new year !!!
     if response.status_code == 200:
-        with open('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-' + str(current_month) + '.docx', 'wb') as file:
+        with open('CyStat/Consumer_Price_Index_2026/Consumer_Price_Index-' + str(current_month) + '.docx', 'wb') as file:
             file.write(response.content)
         
-    doc = Document('CyStat/Consumer_Price_Index_2025/Consumer_Price_Index-' + str(current_month) + '.docx')
+    doc = Document('CyStat/Consumer_Price_Index_2026/Consumer_Price_Index-' + str(current_month) + '.docx')
     doc_text = ""
     for table in doc.tables:
         for row in table.rows:
