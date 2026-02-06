@@ -34,7 +34,7 @@ df_daily_general = pd.read_csv("Results/Daily/Daily-CPI-General-Inflation.csv")
 df_daily_division = pd.read_csv("Results/Daily/Daily-CPI-Division.csv")
 df_daily_subclass_division = pd.read_csv("Results/Daily/Daily-CPI-Subclass-Division.csv")
 
-weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
+weight_ = pd.read_csv("Datasets/ECOICOP-Weights-Cystat.csv")
 index_ = pd.read_csv("Datasets/Reference-Values.csv")
 
 # DIVISION CPI
@@ -319,7 +319,7 @@ while today_p <= end_date:
     df_daily_division = pd.read_csv("Results/Daily/Daily-CPI-Division.csv")
     df_daily_subclass_division = pd.read_csv("Results/Daily/Daily-CPI-Subclass-Division.csv")
     
-    weight_ = pd.read_csv("Datasets/Weights-Cystat.csv")
+    weight_ = pd.read_csv("Datasets/ECOICOP-Weights-Cystat.csv")
     index_ = pd.read_csv("Datasets/Reference-Values.csv")
     
     # DIVISION CPI:
